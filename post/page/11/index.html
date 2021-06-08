@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://gam0022.net/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://gam0022.net/css/academicons.min.css">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
-    <link rel="stylesheet" href="https://gam0022.net/css/hugo-academic.css?2021-05-06">
+    <link rel="stylesheet" href="https://gam0022.net/css/hugo-academic.css?2021-05-30">
     
 
     
@@ -111,6 +111,65 @@
 <div class="container">
 
     
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/09/06/install-octave-on-mac-os-x/" itemprop="url">GNU Octave を Mac OS Xにインストールする</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2012-09-06 19:27:00 &#43;0900 JST" itemprop="datePublished">2012-09-06</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/mac-os-x">Mac OS X</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/moutain-lion">Moutain Lion</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/homebrew">homebrew</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/octave">Octave</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                大学の数値計算法・数理アルゴリズムなどの授業でMatlabを使わないといけないのですが、 Matlabを買うお金がなかったので、代替ソフトとしてGNU OctaveをMac OS Xに入れました。
+けっこうハマりどころが多かったのでメモします。
+GNU Octaveについて wikipediaからの抜粋です。
+ GNU Octaveとは、MATLABと互換性を持ったフリーな数値解析ソフトウェアであり、GNUで開発している。 MATLABとの互換性を主に目指しており、MATLABの機能の多くをOctaveも持っている。また MATLAB のために書かれたプログラムも修正せずに動作するものが多い。
+ GNU Octave
+Mountain Lion にしたらHomebrewがおかしくなった人はこれ Mountain Lion にしたら、Homebrewがおかしくなった人は、まず次のリンクを参考にしてFixしましょう。
+Get Mountain Lion and Homebrew to Be Happy
+HomebrewでOctaveを入れる # リポジトリ追加 brew tap free/open # updateしないとうまくいかなかった brew update # OctaveのコンパイルにFortranのコンパイラが必要 brew install gfortran # ようやくOctaveがコンパイルできる brew install octave  plotとかでグラフを描けるようにする Octave自体には、グラフの描画機能はなく、gnuplotに依存しているのでgnuplotを入れます。
+brew install gnuplot  次に、GNUTERMという環境変数を設定します。</p>
+
+<h1 id="bash-profile-export-gnuterm-x11-次にsource-bash-profileをするかログインし直せばoctaveでplotなどからグラフを描画できるようになります">~/.bash_profile export GNUTERM=x11  次にsource ~/.bash_profileをするかログインし直せばOctaveでplotなどからグラフを描画できるようになります。</h1>
+
+<p>ちなみに、GNUTERMを設定しないとこういう感じのエラーになります。
+octave :1&gt; plot(x) gnuplot&gt; set terminal aqua enhanced title &quot;Figure 1&quot; size 560 420 font &quot;*,6&quot; ^ line 0: unknown or ambiguous terminal type; type just &lsquo;set terminal&rsquo; for a list  MacのターミナルからOctaveを使うための設定
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2012/09/06/install-octave-on-mac-os-x/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
@@ -692,86 +751,6 @@ wineやinkscapeといった、X Window Systemを必要とするアプリケー�
         </div>
         <p class="read-more">
             <a href="https://gam0022.net/blog/2012/08/04/x11-is-not-bundled-on-mountain-lion/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/08/01/installed-applications-on-os-x/" itemprop="url">Macを使い始めて最初に入れたアプリケーションたち</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2012-08-01 11:17:00 &#43;0900 JST" itemprop="datePublished">2012-08-01</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/mac-os-x">Mac OS X</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/lion">Lion</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                Mac Book Airを使い出してから、1週間を経過しました。
-まともにMacを使ったことがなかったのですが、1週間でかなり慣れました。
-ひとまず、1週間の間にインストールしたソフトをまとめてみます。
-こんなのも便利だよというのがあれば教えてください。
-Google日本語入力 ことえりは正直に言って、残念なIMEでした。
-Windows時代にもお世話になり、Ubuntu時代にもMozc(goolge日本語入力のOSS版)を使っていたので、もちろんMacでも導入しました。
-KeyRemap4 MacBook Mac界隈では有名なキーリマッパーらしいです。
-Xmodmapでキーリマップすることを早々に諦めて正解でした。
-このソフトのすごい点は、xmlファイルを編集することで、独自のリマップ設定を作ることが可能なので、自由度がすごく高いことです。
-ひとまず、「英数」キーを日本語入力と英数入力のトグル、「かな」キーをdeleteに割り当てました。
-LockTight Macでは、なぜかスクリーンロックを行うショートカットが存在しないようなので、 仕方なく導入しました。
-物理アカウントハックされたら困りますからね。
-CheatSheet コマンドキーを長押しすることで、現在割り当てられているショートカットを表にして表示してくれるという有り難いユーティリティです。
-私のように、Macを使い出したばかりの人にとっては神アプリでした。
-Google Chrome ブラウザはChromeを最近使ってます。
-環境の移行もgoogleアカウントがあれば終わるので楽ですからね。
-Googleに依存しすぎて怖いｗ
-DropBox なんかかんだで便利ですよね。
-muCommander 2カラムのファイラーが欲しくなったので入れました。
-Finderが使いにくという人はぜひ。
-Picasa Googleの写真編集・管理ソフトです。
-なんだかんだで使いやすいです。
-Linux版が開発中止になってしまったので、Ubuntuでは使えなくて苦労しました。
-RDC(Remote Desktop Connection) MacからWindowsにリモートデスクトップするためのソフトです。
-学校のWindowsマシンをホストにする予定でしたが、節電中でまだ使えてません。ワロタ。
-SimpleCap スクリーンショットするためのソフトです。
-使い勝手がいいです。
-Skype Linux版のUIが微妙すぎたので、Mac版はけっこうまともに見えます。
-YoyuFukurou Twitterクライアントです。
-TwitterはWeb派ですが、時々使います。
-Magican Macシステム用の最適化ユーティリティソフトです。
-128GBのSSDでは容量が足りなくなることは明らかなので入れました。
-重複ファイル検索などは便利ですが、開発用のパソコンで使うのはリスキーな気がしてまだ使ってません()
-開発用 Xcode4.4 入れました。
-ちなにみ、Xcode4.4からgccを入れるのはお勧めしません。代案として、次で紹介するosx-gcc-installerを使ったほうが良かったと思いました。
-なお、Xcodeからgccを入れるためには、Xcodeをインストールしたあと、
-Xcode-&gt; Preferences-&gt; Downloads から、Command Line Tools をインストールすればよいです。
-osx-gcc-installer 最終的にはこのインストーラでgccを入れました。特に問題は起きていません。
-FileZilla 有名なFTPクライアントです。Macでもちゃんと使えました。
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2012/08/01/installed-applications-on-os-x/" class="btn btn-primary btn-outline">
                 Read more
             </a>
         </p>

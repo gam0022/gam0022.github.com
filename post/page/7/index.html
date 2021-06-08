@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://gam0022.net/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://gam0022.net/css/academicons.min.css">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
-    <link rel="stylesheet" href="https://gam0022.net/css/hugo-academic.css?2021-05-06">
+    <link rel="stylesheet" href="https://gam0022.net/css/hugo-academic.css?2021-05-30">
     
 
     
@@ -111,6 +111,75 @@
 <div class="container">
 
     
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/10/31/trick-or-treat/" itemprop="url">いろんな言語で Trick or Treat</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2013-10-31 23:59:00 &#43;0900 JST" itemprop="datePublished">2013-10-31</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%8d%e3%82%bf">ネタ</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/programming">Programming</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/ruby">Ruby</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                いろんな言語で Trick or Treat してみました。</p>
+
+<p>Java</p>
+
+<pre><code class="language-java">if(!treat) trick();
+</code></pre>
+
+<p>C#</p>
+
+<pre><code class="language-csharp">if(!Treat) Trick();
+</code></pre>
+
+<p>Python</p>
+
+<pre><code class="language-python">if not treat:
+    self.trick();
+</code></pre>
+
+<p>Ruby</p>
+
+<pre><code class="language-ruby">trick unless treat?
+</code></pre>
+
+<p>結論: <strong>Ruby が一番シンプル</strong></p>
+
+<p>
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2013/10/31/trick-or-treat/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
@@ -672,66 +741,6 @@ db.execute(&quot;insert into table(time, data) values (:time, :data)&quot;, h)
         </div>
         <p class="read-more">
             <a href="https://gam0022.net/blog/2013/09/16/sqlite3-memo/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/08/26/programming-challenges-3/" itemprop="url">Programming Challenges 3</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2013-08-26 21:34:00 &#43;0900 JST" itemprop="datePublished">2013-08-26</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/uva-online-judge">Uva Online Judge</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/%e7%ab%b6%e6%8a%80%e3%83%97%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%9f%e3%83%b3%e3%82%b0">競技プログラミング</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                Uva Online Judgeで解いた問題を適当に解説します。</p>
-
-<p>3ということで、<a href="/blog/2013/07/09/programming-challenges-2/">前回</a>と<a href="/blog/2013/06/06/programming-challenges-1/">前々回</a>の続きです。</p>
-
-<h1 id="10018-reverse-and-add">10018 Reverse and Add</h1>
-
-<p><a href="http://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=959">10018 - Reverse and Add</a></p>
-
-<p>$n = 入力 + reverse(入力)$ を計算、回文だったらその値を返す。
-回分でなければ、$ 入力 = n $ として回文になるまえ繰り返す問題だった。</p>
-
-<p>ここで言う回分というのは、<code>12321</code>のような整数のこと。</p>
-
-<p>問題文に <code>&quot;palindrome that is not greater than 4,294,967,295. &quot;</code>
-とあったので、<code>BigNumber</code> を使う必要は特に無く、<code>unsigned long long int</code> で対応できた。</p>
-
-<p>ごく普通に、<code>回文を返す関数</code>と<code>回分かどうかを判定する関数</code>を実装して、問題を解いた。</p>
-
-<p>
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2013/08/26/programming-challenges-3/" class="btn btn-primary btn-outline">
                 Read more
             </a>
         </p>
