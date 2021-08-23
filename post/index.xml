@@ -361,16 +361,16 @@
 &lt;ul&gt;
 &lt;li&gt;ZoomやMeet上でカメラのON/OFFで治るので致命的ではない&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;画角（視野角）が78°
+&lt;li&gt;画角（視野角）が78°は広すぎる
 
 &lt;ul&gt;
-&lt;li&gt;広すぎて部屋全体が写りやすい&lt;/li&gt;
+&lt;li&gt;部屋全体が写りやすい&lt;/li&gt;
+&lt;li&gt;ZoomやMeetのバーチャル背景が実装されてからはそこまで気にならない&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;付属アプリのLogicool Captureの使い勝手は微妙
 
 &lt;ul&gt;
 &lt;li&gt;画角が広すぎる場合はトリミング等ができる&lt;/li&gt;
-&lt;li&gt;ZoomやMeetのバーチャル背景があるので、個人的には使用しなかった&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -395,10 +395,14 @@
 &lt;ul&gt;
 &lt;li&gt;体感できるレベルの遅延がある&lt;/li&gt;
 &lt;li&gt;マイクを有効にすると顕著に音質が劣化する&lt;/li&gt;
-&lt;li&gt;そもそもbluetoothの仕様上、帯域が狭いのでどうしようもなさそう&lt;/li&gt;
-&lt;li&gt;色んなbluetoothのレシバーを購入したが改善しなかった&lt;/li&gt;
+&lt;li&gt;Bluetoothの仕様上、帯域が狭いので仕方がない可能性&lt;/li&gt;
+&lt;li&gt;色んなBluetoothのレシバーを購入したが改善しなかった&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;これらの問題がすべて解決したので、初手でこれを買えばよかった…&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;これらの問題がすべて解決したので、初手でこれを買えばよかった…&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Bluetoothはトラブルが多いので、今後は避ける予定&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;マイクも問題ない
 
