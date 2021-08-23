@@ -114,6 +114,77 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/07/09/programming-challenges-2/" itemprop="url">Programming Challenges 2</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2013-07-09 07:00:00 &#43;0900 JST" itemprop="datePublished">2013-07-09</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e7%ab%b6%e6%8a%80%e3%83%97%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%9f%e3%83%b3%e3%82%b0">競技プログラミング</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/uva-online-judge">Uva Online Judge</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                Uva Online Judgeで解いた問題を適当に解説します。</p>
+
+<p>2ということで、<a href="/blog/2013/06/06/programming-challenges-1/">前回</a>の続きです。</p>
+
+<h1 id="where-s-waldorf">Where&rsquo;s Waldorf?</h1>
+
+<h2 id="問題">問題</h2>
+
+<p><a href="http://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=31&amp;page=show_problem&amp;problem=951">10010 - Where&rsquo;s Waldorf?</a></p>
+
+<dl>
+<dt>問題</dt>
+<dd>MxNの広さの2次元の行列から単語を検索する問題。</dd>
+<dd>単語は、上、下、左、右、右上、左上、右下、左下の8通りの並び方がある。(縦読みや横読み的な)</dd>
+<dd>また、大文字と小文字は区別しない。</dd>
+<dt>入力</dt>
+<dd>書くのが面倒なので省略。</dd>
+<dt>出力</dt>
+<dd>見つけた単語の1文字目の座標</dd>
+</dl>
+
+<h2 id="解説">解説</h2>
+
+<p>特にアルゴリズムの工夫のしようもないので、総当りで解く。
+ちょっとした工夫としては、1文字目を見つけた次に最後の文字から照合すると、
+文字の座標的にありえないケースを早々に飛ばすことができる。</p>
+
+<p>大文字と小文字を区別しないので、入力を読み取るときにどちらかに統一する。</p>
+
+<p>
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2013/07/09/programming-challenges-2/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/06/22/tkbcsmt/" itemprop="url">つくばC#勉強会(tkbcsmt)に参加</a></h3>
         
 
@@ -680,174 +751,6 @@ DynamicForward 1080
         </div>
         <p class="read-more">
             <a href="https://gam0022.net/blog/2013/03/21/dynamic-forward/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/03/12/computer-graphics/" itemprop="url">コンピュータグラフィックス基礎の成果報告</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2013-03-12 23:28:00 &#43;0900 JST" itemprop="datePublished">2013-03-12</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/study">study</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                
-
-<p>久々の更新です。</p>
-
-<p>早いもので大学2年の授業が終わって春休みになってしまいました。</p>
-
-<p>3学期には、<a href="http://www.coins.tsukuba.ac.jp/syllabus/GB13704.html">コンピュータグラフィックス基礎</a>という授業を履修したのですが、
-今学期で一番楽しい授業だったなーと思うので振り返ってみます。</p>
-
-<p>基本的にはOpenGLを使って色々しました。</p>
-
-<p>特に力を入れた課題などを紹介します。</p>
-
-<p>ソースコードなどはすべて<a href="https://github.com/gam0022/computer-graphics/">github</a>にあるので、
-気になる人はぜひ見てね!</p>
-
-<h1 id="課題3-asteroids">課題3 ASTEROIDS</h1>
-
-<p>OpenGLを使ってアニメーションを作るという課題があったので、
-全方位シューティングゲームを作ってみました。</p>
-
-<p>技術的な点だと、自機、隕石、弾の3つは、慣性移動、衝突判定、描画などは共通の処理でできるので、
-この3つを<code>object</code>という構造体1つで管理して、同じような処理を何度も書かないようにしました。</p>
-
-<p><img src="/images/posts/2013-03-12-computer-graphics/3/title.png" alt="title画面" /></p>
-
-<!-- more -->
-
-<p><img src="/images/posts/2013-03-12-computer-graphics/3/playing.png" alt="プレイ中" /></p>
-
-<p><img src="/images/posts/2013-03-12-computer-graphics/3/gameover.png" alt="ゲームオーバー" /></p>
-
-<h1 id="課題4-立体の展開図">課題4 立体の展開図</h1>
-
-<p>OpenGLの回転と平行移動を駆使して、立体の展開図のアニメーションを作りました。</p>
-
-<p>まずは立方体の展開図。</p>
-
-<p><img src="/images/posts/2013-03-12-computer-graphics/4/img1_1.png" alt="立方体-1" />
-<img src="/images/posts/2013-03-12-computer-graphics/4/img1_2.png" alt="立方体-2" />
-<img src="/images/posts/2013-03-12-computer-graphics/4/img1_3.png" alt="立方体-3" /></p>
-
-<p>正12面体となると、座標の計算が大変でしたが、気合で実装しました。</p>
-
-<p><img src="/images/posts/2013-03-12-computer-graphics/4/img2_1.png" alt="正12面体-1" />
-<img src="/images/posts/2013-03-12-computer-graphics/4/img2_2.png" alt="正12面体-2" />
-<img src="/images/posts/2013-03-12-computer-graphics/4/img2_3.png" alt="正12面体-3" />
-<img src="/images/posts/2013-03-12-computer-graphics/4/img2_4.png" alt="正12面体-4" /></p>
-
-<h1 id="課題5-ベジエ曲線">課題5 ベジエ曲線</h1>
-
-<p>マウスで制御点を入力してベジエ曲線を描く課題です。</p>
-
-<p>定義式をプログラムにするだけの簡単なお仕事でした。</p>
-
-<p><img src="/images/posts/2013-03-12-computer-graphics/5/img1.png" alt="制御点が３次のベジエ曲線" /></p>
-
-<p>オプションとして3次元バージョンにも挑戦しました。</p>
-
-<p><img src="/images/posts/2013-03-12-computer-graphics/5/img2.png" alt="制御点が３次のベジエ曲線の3次元" /></p>
-
-<h1 id="課題7-objファイルで立体を表現">課題7 OBJファイルで立体を表現</h1>
-
-<p>OBJファイルという、頂点と面の2つの情報で立体を表す立体図形のフォーマットがあるのですが、
-このOBJファイルを出力するプログラムを作りました。</p>
-
-<p>ちなみに、OBJファイルを描画するプログラムは先生の方で用意してくれました。</p>
-
-<p>球体は普通にやると頂点部分で例外処理があって面倒ですが、頂点部分に複数の頂点がくるようにして楽しました。</p>
-
-<p><img src="/images/posts/2013-03-12-computer-graphics/7/sphere.png" alt="球体" /></p>
-
-<p>Wikipediaにトーラスの式があるので、それを参考にして作りました。</p>
-
-<p>球の課題の式の定義部分を変更するだけで、できたので楽でした。</p>
-
-<p><img src="/images/posts/2013-03-12-computer-graphics/7/torus.png" alt="トーラス" /></p>
-
-<p>3角関数で半径を変化させて、適当な回転体を作りました。</p>
-
-<p><img src="/images/posts/2013-03-12-computer-graphics/7/revolution_1.png" alt="回転体" /></p>
-
-<p>また、マウスで入力した線から任意の回転体を作ったりしました。</p>
-
-<p><img src="/images/posts/2013-03-12-computer-graphics/7/ufo.png" alt="UFO" />
-<img src="/images/posts/2013-03-12-computer-graphics/7/koma.png" alt="コマ" />
-<img src="/images/posts/2013-03-12-computer-graphics/7/cup.png" alt="グラス" />
-<img src="/images/posts/2013-03-12-computer-graphics/7/hoge.png" alt="hoge" /></p>
-
-<p>また、マウスで線を描くときに下から上に線を引くと、面が裏返るので、それを利用してプリンみたいなのも作りました。</p>
-
-<p><img src="/images/posts/2013-03-12-computer-graphics/7/pudding.png" alt="プリン" /></p>
-
-<h1 id="課題9-レイトレーシング">課題9 レイトレーシング</h1>
-
-<p>レイトレーシングをやりました。</p>
-
-<p>普通にやるとつまらないので、いろいろ工夫しました。</p>
-
-<ul>
-<li>レイを再帰的に計算して、ピカピカに</li>
-<li>3x3でアンチエイリアス</li>
-<li>色は乱数でRGBを求めると鮮やかにならないので、HSVで計算</li>
-<li>Zbuffer的な概念を取り入れて、球が床に食い込んでも重なっても大丈夫なように</li>
-</ul>
-
-<p><img src="/images/posts/2013-03-12-computer-graphics/9/img3-1.png" alt="レイトレーシング1" />
-<img src="/images/posts/2013-03-12-computer-graphics/9/img3-2.png" alt="レイトレーシング2" />
-<img src="/images/posts/2013-03-12-computer-graphics/9/img3-3.png" alt="レイトレーシング3" />
-<img src="/images/posts/2013-03-12-computer-graphics/9/img3-4.png" alt="レイトレーシング4" />
-<img src="/images/posts/2013-03-12-computer-graphics/9/img3-5.png" alt="レイトレーシング5" />
-<img src="/images/posts/2013-03-12-computer-graphics/9/img4-1.png" alt="レイトレーシング6" /></p>
-
-<h1 id="課題10-布のシュミレーション">課題10 布のシュミレーション</h1>
-
-<p>Mass-Spring モデルによる簡易的な布の物理シミュレーションをしました。</p>
-
-<p><img src="/images/posts/2013-03-12-computer-graphics/10/img1.png" alt="布のシュミレーション" /></p>
-
-<p>球体との衝突判定を追加してみたのが次です。</p>
-
-<p><img src="/images/posts/2013-03-12-computer-graphics/10/img2.png" alt="布のシュミレーション(球との衝突)" /></p>
-
-<h1 id="まとめ">まとめ</h1>
-
-<p>こうして振り返ると、かなり色々な課題に挑戦しましたが、どれも楽しかったです。</p>
-
-<p>CGを自分の研究としてもいいなーとか思ってしまいました。</p>
-
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2013/03/12/computer-graphics/" class="btn btn-primary btn-outline">
                 Read more
             </a>
         </p>

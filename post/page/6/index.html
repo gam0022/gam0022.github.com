@@ -114,6 +114,57 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2014/05/08/enumerator-and-enumerator-lazy/" itemprop="url">EnumeratorとEnumerator::Lazyの違い</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2014-05-08 08:51:00 &#43;0900 JST" itemprop="datePublished">2014-05-08</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/ruby">Ruby</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                はじめに Ruby 2.0では、Enumerable#lazy というメソッドと、その返り値である Enumerator::Lazy が導入されました。
+この記事では、Enumerable#lazy と Enumerator::Lazy によって無限リストをmapできることを紹介します。
+また、Enumerator と Enumerator::Lazy の本質的な違いを説明します。
+遅延リストとは 遅延リストですが、Haskell などの一部の関数型言語では一般的に使われているもので、 遅延評価といって、値が必要になるまで計算しないことによって、無限に続くリストも扱うことができるというものです。
+無限リストをmapする 普通にやってみるとダメ 次のような無限リスト(無限の長さを持つ Range オブジェクト )を map する式[1]を考えてみます。
+この式は実行が終わりません。
+[1] pry(main)&gt; (1..Float::INFINITY).map{|n| n*2}.first(5) # =&gt; (実行が終わらない&hellip;)  [1]の式のmap では、Enumerable#map が呼ばれます。
+Enumerable#map は配列Arrayを返り値とするメソッドなので、無限の長さの配列を作ろうとして、処理が終わらなくなります。
+lazy を付けてみると動く Enumerable#lazy を使って、次の式[2]ように無限リストを map によって処理することができます。
+[2] pry(main)&gt; (1..Float::INFINITY).lazy.map{|n| n*2}.first(5) # =&gt; [2, 4, 6, 8, 10]  [2]の式のmap では、Enumerator::Lazy#map が呼ばれます。
+Enumerable#lazy は リスト(Array,Rangeなど)を 遅延リスト Enumerator::Lazy に変換するメソッドです。
+Enumerator::Lazy#map も Enumerator::Lazy を返すメソッドです。
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2014/05/08/enumerator-and-enumerator-lazy/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2014/04/21/latexit/" itemprop="url">Keynoteで綺麗な数式を使う</a></h3>
         
 
@@ -546,52 +597,6 @@ COJTのソフトウェアコースを受講しようと考えている人へ向�
         </div>
         <p class="read-more">
             <a href="https://gam0022.net/blog/2013/12/01/inter-hack-u-2013/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/11/14/daigoroubot-was-suspended-on-twitter/" itemprop="url">大五郎botがTwitterで凍結された</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2013-11-14 21:29:00 &#43;0900 JST" itemprop="datePublished">2013-11-14</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/twitter">Twitter</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/%e5%a4%a7%e4%ba%94%e9%83%8ebot">大五郎bot</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                10/25に<a href="https://twitter.com/daigoroubot">大五郎bot</a>がTwitter上で凍結されました。</p>
-
-<blockquote class="twitter-tweet"><p>大五郎Botが凍結されてくそウケるｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗ <a href="http://t.co/wsVWZim7OC">pic.twitter.com/wsVWZim7OC</a></p>&mdash; がむ (@gam0022) <a href="https://twitter.com/gam0022/statuses/393730346518196224">October 25, 2013</a></blockquote>
-
-<p>
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2013/11/14/daigoroubot-was-suspended-on-twitter/" class="btn btn-primary btn-outline">
                 Read more
             </a>
         </p>
