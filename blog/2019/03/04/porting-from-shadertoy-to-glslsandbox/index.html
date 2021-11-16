@@ -29,7 +29,9 @@
 
     
         <meta property="og:type" content="article">
-        <meta property="og:description" content="ShadertoyのコードをGLSL Sandboxに一発で移植するコードを思いつきました。
+        <meta property="og:description" content="2021-11-16 backbufferとマウスの対応
+
+ShadertoyのコードをGLSL Sandboxに一発で移植するコードを思いつきました。
 
 以下のコードをShadertoyのコードの先頭にコピペするだけで、元のコードには一切手を加えずにGLSL Sandbox用のコードに変換できます。
 
@@ -40,10 +42,13 @@ precision highp float;
 uniform vec2 resolution;
 uniform float time;
 uniform vec2 mouse;
+uniform sampler2D backbuffer;
 
 #define iResolution resolution
 #define iTime time
-#define iMouse mouse
+#define iMouse (vec4(mouse, 0.5, 0.5) * resolution.xyxy)
+#define iChannel0 backbuffer
+#define texture texture2D
 
 void mainImage(out vec4 fragColor, in vec2 fragCoord);
 
@@ -205,7 +210,9 @@ Shadertoyのマルチパスやテクスチャ機能をつかったShaderの移�
 
 
         <div class="article-style" itemprop="articleBody">
-            <p><a href="https://www.shadertoy.com/">Shadertoy</a>のコードを<a href="http://glslsandbox.com/">GLSL Sandbox</a>に一発で移植するコードを思いつきました。</p>
+            <p>2021-11-16 backbufferとマウスの対応</p>
+
+<p><a href="https://www.shadertoy.com/">Shadertoy</a>のコードを<a href="http://glslsandbox.com/">GLSL Sandbox</a>に一発で移植するコードを思いつきました。</p>
 
 <p>以下のコードをShadertoyのコードの先頭にコピペするだけで、元のコードには一切手を加えずにGLSL Sandbox用のコードに変換できます。</p>
 
@@ -216,10 +223,13 @@ precision highp float;
 uniform vec2 resolution;
 uniform float time;
 uniform vec2 mouse;
+uniform sampler2D backbuffer;
 
 #define iResolution resolution
 #define iTime time
-#define iMouse mouse
+#define iMouse (vec4(mouse, 0.5, 0.5) * resolution.xyxy)
+#define iChannel0 backbuffer
+#define texture texture2D
 
 void mainImage(out vec4 fragColor, in vec2 fragCoord);
 

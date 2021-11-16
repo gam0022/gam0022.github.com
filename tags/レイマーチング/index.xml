@@ -1846,7 +1846,9 @@ SDFテクスチャをフェッチするUVをこのように時間でclampする�
       <pubDate>Mon, 04 Mar 2019 09:01:07 +0900</pubDate>
       
       <guid>https://gam0022.net/blog/2019/03/04/porting-from-shadertoy-to-glslsandbox/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://www.shadertoy.com/&#34;&gt;Shadertoy&lt;/a&gt;のコードを&lt;a href=&#34;http://glslsandbox.com/&#34;&gt;GLSL Sandbox&lt;/a&gt;に一発で移植するコードを思いつきました。&lt;/p&gt;
+      <description>&lt;p&gt;2021-11-16 backbufferとマウスの対応&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.shadertoy.com/&#34;&gt;Shadertoy&lt;/a&gt;のコードを&lt;a href=&#34;http://glslsandbox.com/&#34;&gt;GLSL Sandbox&lt;/a&gt;に一発で移植するコードを思いつきました。&lt;/p&gt;
 
 &lt;p&gt;以下のコードをShadertoyのコードの先頭にコピペするだけで、元のコードには一切手を加えずにGLSL Sandbox用のコードに変換できます。&lt;/p&gt;
 
@@ -1857,10 +1859,13 @@ precision highp float;
 uniform vec2 resolution;
 uniform float time;
 uniform vec2 mouse;
+uniform sampler2D backbuffer;
 
 #define iResolution resolution
 #define iTime time
-#define iMouse mouse
+#define iMouse (vec4(mouse, 0.5, 0.5) * resolution.xyxy)
+#define iChannel0 backbuffer
+#define texture texture2D
 
 void mainImage(out vec4 fragColor, in vec2 fragCoord);
 
