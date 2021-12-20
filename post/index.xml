@@ -58,7 +58,7 @@
 
 &lt;h2 id=&#34;glslシェーダーだけで映像をつくる&#34;&gt;GLSLシェーダーだけで映像をつくる&lt;/h2&gt;
 
-&lt;p&gt;そもそもGLSLシェーダー、つまり &lt;strong&gt;プログラミングのソースコードだけで映像をつくる&lt;/strong&gt; 行程を一般的には想像しずらいかもしれません。&lt;/p&gt;
+&lt;p&gt;そもそもGLSLシェーダー、つまり &lt;strong&gt;プログラミングのソースコードだけで映像をつくる&lt;/strong&gt; 行程を一般的には想像しづらいかもしれません。&lt;/p&gt;
 
 &lt;p&gt;まずは次の図を見ていただけると、具体的にイメージを掴めるかもしれません。
 GLSLのコードからコメントや改行・空白文字を取り除き、処理の内容で色分けしました。&lt;/p&gt;
@@ -133,7 +133,7 @@ opUnion(m, sdBox(p, vec3(a * 1.7, H, 0.24)), SOL, roughness, 0.0);
 float h = 0.1 * floor(2. * sin(p.x)) + 0.2 * floor(sin(2. * p.z));
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;sinから滑らかなカーブを得て、それをfloorで階段状に離散化いるだけです。&lt;/p&gt;
+&lt;p&gt;sinから滑らかなカーブを得て、それをfloorで階段状に離散化しているだけです。&lt;/p&gt;
 
 &lt;p&gt;pは事前にabs(p.x)により左右ミラーしています。&lt;/p&gt;
 
@@ -372,12 +372,14 @@ else TL(beat, 4. * 14.) setCamera(vec4(600, 481. + 10. * t, 600, 59), 3.);
 自分のシェーダーが巨大なスクリーンに映し出されたとき、オーディエンスの歓声が聞こえて本当に嬉しかったです。
 この体験がなければデモシーンやシェーダーを続けていないような気がします。勇気を出してエントリーして良かったと本当に思います。&lt;/p&gt;
 
-&lt;p&gt;デモを1本完成させるのは本当に大変ですが、GLSL Graphics Compoなら気軽に参加できることがメリットだと思います。
-気軽に参加できる数少ないコンポですが、近年のGLSL Graphics Compoのレベルはインフレを続けて、上位勢はかなりガチな作品を出してくるなという印象があります。&lt;/p&gt;
+&lt;p&gt;デモを1本完成させるのは本当に大変ですが、GLSL Graphics Compoなら気軽に参加できることがメリットだと思います。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://nanka.hateblo.jp/entry/2018/12/13/080322&#34;&gt;Traveler 2&lt;/a&gt;やAlien Spaceshipのような短いグラフィックスではなく長尺のデモっぽい作品をGLSL Graphics Compoを出すことで、もし他の参加者が萎縮してしまったらとても不本意な気持ちです。&lt;/p&gt;
+&lt;p&gt;気軽に参加できる数少ないコンポですが、近年のGLSL Graphics Compoのレベルはインフレを続けて、上位勢はかなりガチな作品を出してくるなという印象があります。&lt;/p&gt;
 
-&lt;p&gt;個人的にはGLSL Graphics Compoは順位や周りを気にせず、どんどんエントリーする人が増えたら嬉しいです。&lt;/p&gt;
+&lt;p&gt;本来のGLSL Graphics Compoは数秒から10秒程度の短いグラフィックス作品の部門だと少なくとも自分は認識しています。
+&lt;a href=&#34;https://nanka.hateblo.jp/entry/2018/12/13/080322&#34;&gt;Traveler 2&lt;/a&gt;やAlien Spaceshipのような長尺のデモっぽい作品をGLSL Graphics Compoが増えることで、もし他の参加者が萎縮してしまったらとても不本意な気持ちです。&lt;/p&gt;
+
+&lt;p&gt;自分が言うのは変かもしれませんが、個人的にはGLSL Graphics Compoは順位や周りを気にせず、1晩クオリティのシェーダーでも構わないので、どんどんエントリーする人が増えたら嬉しいです。&lt;/p&gt;
 
 &lt;h2 id=&#34;オンラインパーティの体験&#34;&gt;オンラインパーティの体験&lt;/h2&gt;
 
@@ -385,7 +387,7 @@ else TL(beat, 4. * 14.) setCamera(vec4(600, 481. + 10. * t, 600, 59), 3.);
 
 &lt;p&gt;TDFのオーガナイザーの方々の努力のおかげで、実際のデモパーティにかなり近い体験を再現できていたのではないかと思います。&lt;/p&gt;
 
-&lt;p&gt;Day2のYouTubeの視聴回数が3000回を超えているので、例年のオフラインパーティよりもたくさんの人に見てもらたといったオンラインのメリットも感じました。&lt;/p&gt;
+&lt;p&gt;Day2のYouTubeの視聴回数が3000回を超えているので、例年のオフラインパーティよりもたくさんの人に見てもらえたなど、オンラインのメリットも感じました。&lt;/p&gt;
 
 &lt;div class=&#34;movie-wrap&#34;&gt;
 &lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/2s9KfMn1J9M&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
@@ -424,7 +426,8 @@ else TL(beat, 4. * 14.) setCamera(vec4(600, 481. + 10. * t, 600, 59), 3.);
 
 &lt;ul&gt;
 &lt;li&gt;音楽を作る能力と余裕があれば、IntroとしてPC Demo Compoに出したかったが、間に合わなかった&lt;/li&gt;
-&lt;li&gt;来年は音楽もやりたい（毎年言っている気もする）&lt;/li&gt;
+&lt;li&gt;sadakkeyさん多忙&lt;/li&gt;
+&lt;li&gt;来年は音楽も勉強したい（毎年言っている気もする）&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;計画的にデモを作りたい
 
