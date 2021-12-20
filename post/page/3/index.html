@@ -114,6 +114,105 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2018/12/12/tdf2018/" itemprop="url">Tokyo Demo Fest 2018のDemo Compo優勝作品の解説（グラフィック編）</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2018-12-12 09:49:52 &#43;0900 JST" itemprop="datePublished">2018-12-12</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/event">event</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/cg">CG</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%9e%e3%83%bc%e3%83%81%e3%83%b3%e3%82%b0">レイマーチング</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/tokyodemofest">TokyoDemoFest</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/unity">Unity</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                これは<a href="http://qiita.com/advent-calendar/2018/klab">KLab Engineer Advent Calendar 2018</a>の12日目の記事です。</p>
+
+<hr />
+
+<p>12月1日～12月2日に秋葉原で開催された<a href="http://tokyodemofest.jp/2018/">Tokyo Demo Fest 2018</a>（以下、TDF）に参加しました。</p>
+
+<p>TDFは、日本国内で唯一のデモパーティです。
+コンピュータを用いて作成された楽曲や映像作品をデモと呼び、
+デモに関心のある人々が一堂に会してコンペティションを行ったり、技術を共有したりといったイベントをデモパーティと呼びます。</p>
+
+<p>今年のTDFでは、さだきちさん（<a href="https://twitter.com/sadakkey">@sadakkey</a>）とチームを組み、『WORMHOLE』（映像：gam0022 / サウンド：sadakkey）という作品を発表しました。</p>
+
+<p><a href="/images/posts/2018-12-12-tdf2018/tdf2018_collage_original.jpg"><img src="/images/posts/2018-12-12-tdf2018/tdf2018_collage.jpg" alt="WORMHOLE by gam0022 &amp; sadakkey" /></a></p>
+
+<p>Windows実行ファイル形式のデモ作品のコンペティションであるCombined Demo Compoにて、<a href="http://tokyodemofest.jp/2018/results.txt">本作品が1位</a>に選ばれました！</p>
+
+<p>この記事では『WORMHOLE』の映像制作技術について解説します。
+ソースコードを公開していますので、ご興味のある方はそちらもご確認いただければと思います（スターください！）。</p>
+
+<ul>
+<li><a href="https://github.com/gam0022/unity-demoscene">https://github.com/gam0022/unity-demoscene</a></li>
+</ul>
+
+<p>サウンド編についてはさだきちさんが解説されています。あわせてご覧ください！</p>
+
+<ul>
+<li><a href="http://klabgames.creative.blog.jp.klab.com/archives/14415590.html">Tokyo Demo Fest2018のDemo Compo優勝作品の解説〜サウンド編〜 : KLabGames Creative Blog</a></li>
+</ul>
+
+<h1 id="作品の概要">作品の概要</h1>
+
+<p>「ワームホールによる空間移動」をコンセプトとして、
+不思議な球体がワームホールを介して非現実なデジタル空間と水平線の広がる自然空間を行き来する映像を制作しました。</p>
+
+<div class="movie-wrap">
+<iframe width="1920" height="1080" src="https://www.youtube.com/embed/NMNJV-Pbqtk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<p>不思議な球体がトンネルを進んでいくと、周囲を明滅する光がだんだんとモノクロからカラフルに変わっていきます。
+トンネルの最奥にあるワームホールへ近づくほど明滅はだんだんと激しくなっていき、ホワイトアウトとともにワームホールを越えると、球体は海上に出現します。
+その後、球体はじわじわと歪んでいき、戦闘機へと形を変えます。</p>
+
+<p>変形中の不思議な球体の上には、私が尊敬するデモシーナーの名前を表示しました。
+これはグリーティングと呼ばれるデモシーンにおける慣習です。</p>
+
+<p>戦闘機はパーティクルを放ちながら海上を進み、パーティクルが一瞬だけTDFのロゴを形作ります。
+そして戦闘機は元の球体に変形し、突如現れたワームホールに吸い込まれるようにして冒頭のトンネルのシーンに戻っていきます。</p>
+
+<p>実装ならびに制作にはUnityを利用しました。
+詳細は後述しますが、Timeline, TextMeshPro, Chinemachine, PostProcessingStack v2といったUnity 2018.2の新機能も活用しています。</p>
+
+<p>
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2018/12/12/tdf2018/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2018/09/25/rtcamp6-part2/" itemprop="url">レイトレ合宿6 参加報告 後編（当日編）</a></h3>
         
 
@@ -703,60 +802,6 @@ OpneVZのリソース情報は <code>/proc/user_beancounters</code> から確認
         </div>
         <p class="read-more">
             <a href="https://gam0022.net/blog/2017/11/14/move-from-serversman-to-conoha/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2017/10/30/isucon7q/" itemprop="url">ISUCON7予選で81位でした</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2017-10-30 08:00:00 &#43;0900 JST" itemprop="datePublished">2017-10-30</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/isucon">ISUCON</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/event">event</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                会社の同期（<a href="https://twitter.com/kanetaaaaa">@kanetaaaaa</a>）とチーム「アロマゲドン」を結成して、ISUCON7予選に参加しました。
-ISUCONは、お題となるWebサービスに対して、決められたレギュレーションの中で高速化を図るチューニングバトルです。</p>
-
-<p>チーム名のアロマゲドンは、TVアニメ『プリパラ』に登場する白玉みかんさんと黒須あろまさんの2人組アイドルユニットの名前をお借りしました。
-本チームでは、白玉みかんさん役を私が、黒須あろまさん役をkanetaaaaaさん（以下、あろま）が務めました。</p>
-
-<p>予選結果は、<a href="http://isucon.net/archives/50961437.html">407チーム中81位で、最終スコアは46,461</a>でした。
-アプリのチューニングはある程度はできたのですが、<code>GET /icons</code>の帯域問題に対処できなかったのが敗因でした。
-来年の予選突破に向けて、反省と感想を残そうと思います。</p>
-
-<p><img src="/images/posts/2017-10-23-isucon7q/score.png" alt="score遷移" /></p>
-
-<p>
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2017/10/30/isucon7q/" class="btn btn-primary btn-outline">
                 Read more
             </a>
         </p>

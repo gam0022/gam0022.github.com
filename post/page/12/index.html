@@ -114,6 +114,76 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/08/06/how-to-use-cocot/" itemprop="url">cocotで文字コードが異なるマシンにsshする</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2012-08-06 11:18:00 &#43;0900 JST" itemprop="datePublished">2012-08-06</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/ssh">ssh</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/coins">coins</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/cocot">cocot</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/mac-os-x">Mac OS X</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                <p>私が所属している情報科学類(略称coins)では、24時間いつでもsshできるiMacがあるのですが、文字エンコーディングはEUC-JPです。</p>
+
+<p>一方で私のノートPCの文字エンコーディングはUTF-8なので、
+普通にsshすると文字化けしてひどいことになってしまいます。</p>
+
+<p>cocotという端末(tty)とプロセスの間に割り込んで、文字コード変換を行うツールがあるので、これを使うことで文字化けが解消します。</p>
+
+<p>OS Xを使っていれば、cocotは普通にhomebrewからインストールできます。</p>
+
+<pre><code class="language-bash">brew install cocot # cocotをインストールする
+</code></pre>
+
+<p>UTF-8環境からEUC-JP環境にsshする場合、次のようにすればいいです。</p>
+
+<pre><code class="language-bash"># cocot -t コンソール側の文字コード -p プロセス側の文字コード -- 使いたいコマンド
+cocot -t UTF-8 -p EUC-JP -- ssh coins
+</code></pre>
+
+<p>頻繁にsshする場合、次のようにエイリアスを作ればいいかと思います。
+うーむ。エイリアス名は検討の余地がありそうです。(汗)</p>
+
+<pre><code class="language-bash">alias sshe='cocot -t UTF-8 -p EUC-JP -- ssh' #EUC-JP環境にsshする
+sshe coins
+</code></pre>
+
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2012/08/06/how-to-use-cocot/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/08/04/x11-is-not-bundled-on-mountain-lion/" itemprop="url">Mountain Lionにアップデートしたら、X11が消えた件</a></h3>
         
 
@@ -722,65 +792,6 @@ Disqus Commentsでコメントをできるようにできるので、簡単に�
     </div>
     <hr>
     
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/07/21/hello/" itemprop="url">Octopressはじめました!</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2012-07-21 17:39:00 &#43;0900 JST" itemprop="datePublished">2012-07-21</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/octopress">Octopress</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/diary">Diary</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                <p>どうもこんにちは！</p>
-
-<p>私は情報系の大学生をしている「がむ」というものです。</p>
-
-<p>高校生までは、こっちのほうで<a href="http://gmr.blog.shinobi.jp/">ブログ</a>を書いていたのですが、
-更新が面倒になってしまい、放置して1年以上経ってしまいました…</p>
-
-<p>技術ネタをどこかにアウトプットしたいというの欲求はあるので、旧ブログに書いても良かったのですが
-せっかくなので、少しギークっぽい方法でブログを作ってみたくなりました。</p>
-
-<p>最近はRuby弄りに夢中なので、Rails製のCMSの<a href="http://octopress.org/">Octopress</a>というものがあると知り、試してみることにしました。</p>
-
-<p>ターミナル上からブログの更新が完結するというのは新鮮ですし、Markdown形式で記事を書けるのも嬉しいです。</p>
-
-<p>また、Rubyで書いてあるので実装を追いやすいですし、使っている人が少ないという未開拓な感じがいいですね。</p>
-
-<p>Octopressを気に入ったら、このブログを私の技術的なメモとして活用していきたいなと思っています。</p>
-
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2012/07/21/hello/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
 
     
 <nav>
@@ -788,6 +799,8 @@ Disqus Commentsでコメントをできるようにできるので、簡単に�
         
         <li><a href="https://gam0022.net//post/page/11/">« Previous</a></li>
         
+        
+        <li><a href="https://gam0022.net//post/page/13/">Next »</a></li>
         
     </ul>
 </nav>

@@ -114,6 +114,71 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/09/16/canvas-memo/" itemprop="url">Canvasでハマった点まとめ</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2013-09-16 14:05:00 &#43;0900 JST" itemprop="datePublished">2013-09-16</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/canvas">Canvas</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/html5">HTML5</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/javascript">JavaScript</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/chrome">Chrome</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                <a href="http://gam0022.net/app/tmg/">Twitter名刺ジェネレータ</a>を作るにあたって、
+Canvas を使ったので、勉強になったことを適当にメモします。</p>
+
+<p>関連記事</p>
+
+<ul>
+<li><a href="/blog/2013/09/16/sqlite3-memo/">SQlite3でハマった点まとめ</a></li>
+</ul>
+
+<h1 id="canvas-todataurl-の注意点">canvas#toDataURL() の注意点</h1>
+
+<p><a href="http://www.html5.jp/canvas/ref/HTMLCanvasElement/toDataURL.html"><code>canvas#toDataURL()</code></a> の注意点なのですが、
+一度でもクロスドメインで読み込んだファイルを描画した canvas に対して使うと、
+<code>Uncaught SecurityError: An attempt was made to break through the security policy of the user agent.</code> というエラーがでます。</p>
+
+<p>クロスドメインで取得した<code>Image</code>を引数にしても、<a href="http://www.html5.jp/canvas/ref/method/drawImage.html"><code>context#drawImage()</code></a>は成功するので、すこし気が付きにくいと思いました。</p>
+
+<p>Chrome バージョン 29.0.1547.65 で確認しました。</p>
+
+<p>
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2013/09/16/canvas-memo/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/09/16/sqlite3-memo/" itemprop="url">SQLite3でハマった点まとめ</a></h3>
         
 
@@ -660,67 +725,6 @@ brew install opencv
         </div>
         <p class="read-more">
             <a href="https://gam0022.net/blog/2013/08/01/github-markdown/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/07/11/javascript-memo/" itemprop="url">JavaScriptのメモ</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2013-07-11 05:58:00 &#43;0900 JST" itemprop="datePublished">2013-07-11</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/javascript">JavaScript</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/cojt">COJT</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                最近、COJTという授業でWebGLとHTML5、JavaScriptなどを駆使して、3Dを使ったカバンの商品カタログのような物体を生成しています。
-JavaScriptなどについて色々調べているので、有益そうなことをメモします。
-とりあえず、動くようになったので、公開用のURLを晒しておきます。
-COJT用の何か
-実は、開発方法が色々とアレなのですが、ここでは深く言わないことにします。
-JavaScriptそのものについて 私のようにクラスベースオブジェクト指向の言語から入った人間にとっては、 JavaScriptのプロトタイプベースオブジェクト指向はなかなか馴染みにくいものでした。
-そういう人は、以下のサイトなどから、JavaScriptのOOPについて学習するのが良いと思います。
- 最強オブジェクト指向言語 JavaScript 再入門！ slideshare JavaScriptでオブジェクト指向プログラミング @IT  イーズ・アウト について COJT用の何かをみてもらえれば分かると思うのですが、棚の回転やパネルのポップアップの動きが 等速ではなく、動きの終わりに減速するようになっていると思います。
-動きの終わりに減速する動きを「イーズ・アウト」と呼ぶそうです。
-イーズ・アウトは重要で、フレーム数が限られた描画でも滑らかに動きに見せることができます。
-ぶっちゃけ、COJTで学んだ一番のことと言うと、イーズ・アウトという単語を覚えたことな気がします。
-イーズ・アウトの実現方法は色々とあると思いますが、私は次の関数で実装することにしました。
-{% math%} f(t) = 1 - exp(-6t) {% endmath %}
-tは時間で、tを0〜1の間で変化させると、f(t)が良い感じにイーズアウトする物体の座標になります。
-この式は、次のサイトから知りました。
-指数関数を使ったお手軽イーズ・アウト
-spinrfの実装 JavaScriptには、spinrfがないので、自分で実装するか、誰かが作った実装を使う必要があります。
-単純な用途なら、この実装で十分だと思いました。
-連載：jQuery逆引きリファレンス：第5回 コア編 (11&frasl;13) @IT より
-// sprintf(&lsquo;{0}は{1}&rsquo;, &lsquo;猫&rsquo;, &lsquo;うろうろ&rsquo;); =&gt; &lsquo;猫はうろうろ&rsquo; sprintf = function(format) { // 第2引数以降を順に処理 for (var i = 1; i &lt; arguments.length; i++) { // 正規表現でプレイスホルダと対応する引数の値を置換処理 var reg = new RegExp(&rsquo;\{&rsquo; + (i - 1) + &lsquo;\}&lsquo;, &lsquo;g&rsquo;); format = format.
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2013/07/11/javascript-memo/" class="btn btn-primary btn-outline">
                 Read more
             </a>
         </p>

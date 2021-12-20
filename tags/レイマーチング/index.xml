@@ -10,6 +10,424 @@
     <atom:link href="/tags/%E3%83%AC%E3%82%A4%E3%83%9E%E3%83%BC%E3%83%81%E3%83%B3%E3%82%B0/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Tokyo Demo Fest 2021のGLSL Graphics Compo優勝作品の解説</title>
+      <link>https://gam0022.net/blog/2021/12/20/tdf2021-glsl/</link>
+      <pubDate>Mon, 20 Dec 2021 12:00:00 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2021/12/20/tdf2021-glsl/</guid>
+      <description>&lt;p&gt;これは&lt;a href=&#34;http://qiita.com/advent-calendar/2021/klab&#34;&gt;KLab Engineer Advent Calendar 2021&lt;/a&gt;の20日目の記事です。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;12月11日～12日にオンラインで開催された&lt;a href=&#34;https://tokyodemofest.jp/&#34;&gt;Tokyo Demo Fest 2021&lt;/a&gt;（以下、TDF）に参加しました。&lt;/p&gt;
+
+&lt;p&gt;TDFは、日本国内で唯一のデモパーティです。
+リアルタイムに映像や音楽を生成するプログラムを「デモ」と言い、デモを鑑賞したり完成度を競ったりして楽しむイベントを「デモパーティ」と言います。
+「デモシーン」はデモやデモパーティを中心としたコンピューターのサブカルチャーです。&lt;/p&gt;
+
+&lt;p&gt;今年のTDFでは、『Alien Spaceship』という作品を発表しました。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/_F0Pxq7TKqs&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Released &amp;quot;Alien Spaceship&amp;quot; at GLSL Graphics compo, &lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; 2021&lt;br&gt;&lt;br&gt;It&amp;#39;s running on &lt;a href=&#34;https://twitter.com/hashtag/GLSLSandbox?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSLSandbox&lt;/a&gt; &lt;br&gt;Only 1Pass Shader! No post-effects used&lt;a href=&#34;https://twitter.com/hashtag/GLSLSandbox?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSLSandbox&lt;/a&gt; で動作します。&lt;br&gt;1パスのシェーダーのみの制約で実装しており、ポストエフェクトは未使用です。 &lt;a href=&#34;https://t.co/lJBQQjjHMR&#34;&gt;pic.twitter.com/lJBQQjjHMR&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1469977106612649985?ref_src=twsrc%5Etfw&#34;&gt;December 12, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/_F0Pxq7TKqs&#34;&gt;YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.shadertoy.com/view/fl3SRB&#34;&gt;Shadertoy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.pouet.net/prod.php?which=90438&#34;&gt;Pouet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://glslsandbox.com/e#77788.0&#34;&gt;GLSL Sandbox&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;TDFのGLSL Graphics Compoにて、&lt;a href=&#34;https://tokyodemofest.jp/tdf2021-results.txt&#34;&gt;本作品が1位&lt;/a&gt;に選ばれました！&lt;/p&gt;
+
+&lt;p&gt;この記事では『Alien Spaceship』の利用技術と制作の裏側について解説します。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;glsl-graphics-compoとは&#34;&gt;GLSL Graphics Compoとは？&lt;/h1&gt;
+
+&lt;p&gt;デモシーンの文化に馴染みのない方に向けて、簡単にGLSL Graphics Compoの概要や制約について説明します。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://glslsandbox.com/&#34;&gt;GLSL sandbox&lt;/a&gt;はWeb上でGLSLのフラグメントシェーダーを編集・実行できるWebGLで実装されたサービスです。作品を公開したり共有もできます。&lt;/p&gt;
+
+&lt;p&gt;GLSL Graphics CompoはGLSL Sandbox上で動作するGLSLのシェーダーによるグラフィックスを競うコンポです。
+コンポはコンペティションの意味で、参加者投票によって順位が決まります。&lt;/p&gt;
+
+&lt;h2 id=&#34;glslシェーダーだけで映像をつくる&#34;&gt;GLSLシェーダーだけで映像をつくる&lt;/h2&gt;
+
+&lt;p&gt;そもそもGLSLシェーダー、つまり &lt;strong&gt;プログラミングのソースコードだけで映像をつくる&lt;/strong&gt; 行程を一般的には想像しずらいかもしれません。&lt;/p&gt;
+
+&lt;p&gt;まずは次の図を見ていただけると、具体的にイメージを掴めるかもしれません。
+GLSLのコードからコメントや改行・空白文字を取り除き、処理の内容で色分けしました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/minify-text.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/minify-text.png&#34; alt=&#34;GLSLのコードの処理&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;この7756文字のGLSLのシェーダーに映像のすべてが実装されています。&lt;/p&gt;
+
+&lt;p&gt;見てのとおり &lt;strong&gt;シーンのモデリング、ライティング、カメラワーク、演出のシーケンスがすべて含まれています。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;変数名や関数名を1文字に短縮したり、デバッグ用のコードの削除はしていないので、まだまだ文字数を削る余地はあります。
+今回は文字数をそこまで意識してコーディングせずに、可読性を重視しました。&lt;/p&gt;
+
+&lt;p&gt;GLSL sandboxでは音楽を再生できないので、YouTubeの音楽は後付けです。Shadertoy標準楽曲「Most Geometric Person」を使わせていただきました。&lt;/p&gt;
+
+&lt;h2 id=&#34;レイマーチング&#34;&gt;レイマーチング&lt;/h2&gt;
+
+&lt;p&gt;GLSL sandbox用のGLSLのフラグメントシェーダーで記述できるのは、フルスクリーンのMeshを描画する2D処理のみです。&lt;/p&gt;
+
+&lt;p&gt;入力は描画対象のピクセルの座標、出力はピクセルの画素値の単純な2D処理です。
+また、時間やマウス座標を入力にすることで、アニメーションもできます。&lt;/p&gt;
+
+&lt;p&gt;3Dを描画するためには、GLSLコードの中に3Dのカメラや3Dのシーンの形状を定義する必要があります。&lt;/p&gt;
+
+&lt;p&gt;2DのGLSLのシェーダーで3D空間を描画するためのテクニックとして、レイマーチングがよく使われます。&lt;/p&gt;
+
+&lt;p&gt;レイマーチングは、距離関数の長さだけひたすらレイを進める処理をくり返し、距離関数が0になったら衝突したと判定する単純なアルゴリズムです。
+つまり、レイトレーシングの交差判定のアルゴリズムのひとつです。
+レイマーチングは、描画する形状を距離関数という数式によってプロシージャルに定義できるため、3Dのモデリングなしに3Dシーンを描画できます。&lt;/p&gt;
+
+&lt;p&gt;レイマーチングの詳細については、過去に勉強会のスライドや書籍で紹介しています。&lt;/p&gt;
+
+&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/rS2j757JUrqeWL&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;//www.slideshare.net/shohosoda9/threejs-58238484&#34; title=&#34;シェーダだけで世界を創る！three.jsによるレイマーチング&#34; target=&#34;_blank&#34;&gt;シェーダだけで世界を創る！three.jsによるレイマーチング&lt;/a&gt; &lt;/strong&gt; de &lt;strong&gt;&lt;a href=&#34;https://www.slideshare.net/shohosoda9&#34; target=&#34;_blank&#34;&gt;Sho Hosoda&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;
+
+&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B097GBR2N3&amp;linkId=ad2164f51c3a4574701f9097c0eb7fde&#34;&gt;&lt;/iframe&gt;
+
+&lt;h1 id=&#34;alien-spaceshipの技術解説&#34;&gt;Alien Spaceshipの技術解説&lt;/h1&gt;
+
+&lt;p&gt;前置きが長くなりましたが、ここからレイマーチング経験者に向けた技術解説をします。&lt;/p&gt;
+
+&lt;p&gt;技術的なポイントとしては次の3点だと考えています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;宇宙船の船内のような具体的な対象を目指したモデリング&lt;/li&gt;
+&lt;li&gt;リアルタイムなグローバルイルミネーションのあるライティング&lt;/li&gt;
+&lt;li&gt;長尺のタイムラインのシーケンス&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;モデリング&#34;&gt;モデリング&lt;/h2&gt;
+
+&lt;p&gt;全編を通してプリミティブとしてはBoxとSphere（卵）の2種類しか使っていません。&lt;/p&gt;
+
+&lt;h3 id=&#34;前半のhallwayシーン&#34;&gt;前半のHallwayシーン&lt;/h3&gt;
+
+&lt;p&gt;壁の光る部分はBoxをSkewしたり、床はBoxにDisplacement Mapでディテールを加えています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/party1164.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/party1164.jpg&#34; alt=&#34;party1164.jpg&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;壁のskew&#34;&gt;壁のSkew&lt;/h4&gt;
+
+&lt;p&gt;壁の &lt;strong&gt;く&lt;/strong&gt; の字の折り曲がった形状には、BoxをSkewで変形させています。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;p.x -= W - 0.5 * abs(p.y);// Skewで変形
+opUnion(m, sdBox(p, vec3(a * 1.7, H, 0.24)), SOL, roughness, 0.0);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;床のdisplacement-map&#34;&gt;床のDisplacement Map&lt;/h4&gt;
+
+&lt;p&gt;床のDisplacement Mapは次のような数式で実装しています。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;// hをsdBoxの第2引数のサイズに加算すると、Displacement Mapになる
+float h = 0.1 * floor(2. * sin(p.x)) + 0.2 * floor(sin(2. * p.z));
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;sinから滑らかなカーブを得て、それをfloorで階段状に離散化いるだけです。&lt;/p&gt;
+
+&lt;p&gt;pは事前にabs(p.x)により左右ミラーしています。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/floor_graph.png&#34; alt=&#34;床の断面&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;扉の台形波&#34;&gt;扉の台形波&lt;/h4&gt;
+
+&lt;p&gt;扉の台形のギザギザの関数は&lt;a href=&#34;https://twitter.com/kanetaaaaa&#34;&gt;kaneta先生&lt;/a&gt;のコードをお借りしました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.shadertoy.com/view/3dd3WB&#34;&gt;Energy Lab by kaneta&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;float smoothPulse(float start, float end, float period, float smoothness, float t) {
+    float h = abs(end - start) * 0.5;
+    t = mod(t, period);
+    return smoothstep(start, start + h * smoothness, t) - smoothstep(end - h * smoothness, end, t);
+}
+
+float y(float x) {
+    return smoothPulse(0.0, 0.6, 1.0, 0.5, x);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/smoothPulse.png&#34; alt=&#34;扉の台形波&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;床のEmissiveや扉を開けたときのEmissiveの模様のパターンもsmoothPulse関数を用いました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/party2085.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/party2085.jpg&#34; alt=&#34;party2085.jpg&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/smoothPulsePattern.png&#34; alt=&#34;smoothPulsePattern.png&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;// Floor Emissive Pattern
+float py = smoothPulse(0.0, 0.6, 1.0, 0.5, 0.25 * p.y);
+float emi = smoothPulse(0.2, 0.25, 1.0, 0.5, py + p.x / 2.0);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Shadertoyに簡単なサンプルを用意しました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.shadertoy.com/view/7ttXWf&#34;&gt;smoothPulse Pattern&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;hallwayシーンまとめ&#34;&gt;Hallwayシーンまとめ&lt;/h4&gt;
+
+&lt;p&gt;天井についても、係数を調整しながら箱を並べることで、狙った形状をモデリングしていきました。
+特殊なことは何もしていませんが、sdBoxの評価回数が増えると負荷が高くなるので、なるべくsdBoxの数を減らすように意識しました。
+レイマーチングでは、座標をmodで繰り返すと特定の軸に対して無限にオブジェクトを配置できます（opRep）。
+前述の左右のミラー化もsdBoxの評価回数を減らすための工夫のひとつです。&lt;/p&gt;
+
+&lt;p&gt;ほぼopRepとSkewとDisplacement Mapのテクニックの繰り返しで地道にモデリングしているだけです。&lt;/p&gt;
+
+&lt;h3 id=&#34;後半のalienの巣のシーン&#34;&gt;後半のAlienの巣のシーン&lt;/h3&gt;
+
+&lt;p&gt;IFS（Iterated Function Systems）をつかっています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/party6370.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/party6370.jpg&#34; alt=&#34;party6370.jpg&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/party7186.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/party7186.jpg&#34; alt=&#34;party7186.jpg&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;IFSでは狙った形をモデリングすることは困難なので、パラメーターを延々と調整しながら、理想的な見た目になるまで試行錯誤を繰り返しました。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;// IFSのパラメーター
+vec4 ifs = vec4(875, 482, 197, 545) / vec2(1200, 675).xyxy;
+
+// IFSでモデリング
+p = pos;
+p -= vec3(0, H, 16. * 3.5);
+
+for (int i = 0; i &amp;lt; 5; i++) {
+    p = abs(p) - ifs.w;
+    rot(p.xz, -4. * ifs.x);
+    p = abs(p) - ifs.z;
+    rot(p.xy, -4. * ifs.y);
+}
+
+opUnion(m, sdEgg(p, 0.1), SOL, 0.0, 0.0);
+opUnion(m, sdBox(p, vec2(1, 0.01).xyy), SOL, roughness, 0.0);
+opUnion(m, sdBox(p - vec2(0.001, 0).yxy, vec2(1, 0.01).xyy), VOL, 2.4 * saturate(cos(beatTau / 2. + 10. * p.x)), 2.4);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;ライティング-グローバルイルミネーション&#34;&gt;ライティング（グローバルイルミネーション）&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/party1895.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/party1895.jpg&#34; alt=&#34;party1895.jpg&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;全編を通してグローバルイルミネーション（GI）や、少しラフな反射（roughness = 0.05くらい）をしています。&lt;/p&gt;
+
+&lt;p&gt;グラフィックスエンジニアなら性癖に刺さるポイントだと思います。&lt;/p&gt;
+
+&lt;p&gt;GIをリアルタイムに計算するのは技術的にはとても難しい課題です。&lt;/p&gt;
+
+&lt;p&gt;今回は&lt;a href=&#34;https://twitter.com/Virgill74&#34;&gt;Virgillさん&lt;/a&gt;が開発したMadtracingを用いてGIを計算しました。&lt;/p&gt;
+
+&lt;p&gt;Madtracingは&lt;a href=&#34;https://www.pouet.net/prod.php?which=77102&#34;&gt;End of time by Alcatraz &amp;amp; Altair&lt;/a&gt;というデモで使われた手法です。&lt;/p&gt;
+
+&lt;p&gt;Madtracing解説用のシェーダーがShadertoyに公開されています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.shadertoy.com/view/Xt3cWS&#34;&gt;EOT - Grid scene by Virgill&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;パストレーシングと同じように表面のroughnessに応じてセカンダリレイを飛ばしてGIを計算します。&lt;/p&gt;
+
+&lt;p&gt;通常のパストレーシングでは物体の表面にヒットしてからセカンダリレイを複数回飛ばすと思いますが、
+Madtracingではレイマーチングのステップ中にセカンダリレイを近傍のオブジェクトのroughnessに応じて飛ばします。&lt;/p&gt;
+
+&lt;p&gt;これによってボリューム感やBloom感のあるライティングを実現できます。その代償として、少々負荷が高い印象です。&lt;/p&gt;
+
+&lt;p&gt;今回のデモでは、Madtracingを自分の使いやすい形に少しだけフォークして利用しました。&lt;/p&gt;
+
+&lt;p&gt;まず、マテリアルのフォーマット（map関数の返り値）を以下のように定義しました。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;vec4 m = vec4(1, VOL, 0, 0);
+// x: Distance
+// y: MaterialType (VOL or SOL)
+// z: Roughness in (0-1), Emissive when z&amp;gt;1
+// w: ColorPalette
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;MadtracingからAA処理を削除して、AA処理はプライマリレイの生成に移動しました。これで少し負荷削減とシンプル化ができました。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;// Ref. EOT - Grid scene by Virgill
+// https://www.shadertoy.com/view/Xt3cWS
+void madtracer(vec3 ro1, vec3 rd1, float seed) {
+    scol = vec3(0);
+    float t = 0., t2 = 0.;
+    vec4 m1, m2;
+    vec3 rd2, ro2, nor2;
+    for (int i = 0; i &amp;lt; 160; i++) {
+        m1 = map(ro1 + rd1 * t);
+        // t += m1.y == VOL ? 0.25 * abs(m1.x) + 0.0008 : 0.25 * m1.x;
+        t += 0.25 * mix(abs(m1.x) + 0.0032, m1.x, m1.y);
+        ro2 = ro1 + rd1 * t;
+        nor2 = normal(ro2);
+        rd2 = mix(reflect(rd1, nor2), hashHs(nor2, vec3(seed, i, iTime)), saturate(m1.z));
+        m2 = map(ro2 + rd2 * t2);
+        // t2 += m2.y == VOL ? 0.25 * abs(m2.x) : 0.25 * m2.x;
+        t2 += 0.25 * mix(abs(m2.x), m2.x, m2.y);
+        scol += .007 * (pal(m2) * step(1., m2.z) + pal(m1) * step(1., m1.z));
+
+        // force disable unroll for WebGL 1.0
+        if (t &amp;lt; -1.) break;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;絶対に実行されないbreak-によるコンパイル時間削減&#34;&gt;「絶対に実行されないbreak」によるコンパイル時間削減&lt;/h3&gt;
+
+&lt;p&gt;madtracer関数に、謎の &lt;code&gt;if (t &amp;lt; -1.) break;&lt;/code&gt; があることに気がついたでしょうか？&lt;/p&gt;
+
+&lt;p&gt;tはレイの進んだ距離で、絶対にマイナス値にはなりません。つまり絶対に実行されないbreak処理です。
+普通に考えれば不要な処理ですが、これはGLSLコンパイル時間削減のハックです。&lt;/p&gt;
+
+&lt;p&gt;breakを追加することで、GLSLコンパイラによってforがunrollされずにloopとして処理されて、コンパイル時間を大きく削減できます。&lt;/p&gt;
+
+&lt;p&gt;ChromeデフォルトのWebGLのANGLE有効時にはかなり効果的で、自分の環境ではコンパイル時間を32.9秒から1.7秒に削減できました。&lt;/p&gt;
+
+&lt;p&gt;コンポ提出当日はずっとコンパイル時間の削減に工数を費やしていて、提出2.5時間前くらいに気がついたので、もっと早く気がついていればという気持ちです。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; が終わったので、&lt;br&gt;コンパイル時間を32.9秒から1.7秒に削減する&lt;br&gt;「絶対に実行されないbreak」の実例を貼っておきます。&lt;br&gt;&lt;br&gt;breakを追加することで、GLSLコンパイラによってforがunrollされずにloopに処理されて、コンパイル時間を大きく削減できます。&lt;a href=&#34;https://t.co/SC7A9WAkll&#34;&gt;https://t.co/SC7A9WAkll&lt;/a&gt; &lt;a href=&#34;https://t.co/XRakPPq0TU&#34;&gt;pic.twitter.com/XRakPPq0TU&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1470408956866883584?ref_src=twsrc%5Etfw&#34;&gt;December 13, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;同様のテクニックとして、&lt;code&gt;N + min(0, iFrame)&lt;/code&gt; をループ回数にする手法があります。&lt;a href=&#34;https://twitter.com/AruGL&#34;&gt;Danilさん&lt;/a&gt;に教えていただきました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;maybe you know usual trick with loop N+min(0,iFrame) it also can speedup compiling&lt;a href=&#34;https://t.co/XPfP9CZms0&#34;&gt;https://t.co/XPfP9CZms0&lt;/a&gt;&lt;/p&gt;&amp;mdash; Danil (@AruGL) &lt;a href=&#34;https://twitter.com/AruGL/status/1466751715038879755?ref_src=twsrc%5Etfw&#34;&gt;December 3, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;コードにすると、こういう感じです。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;for(int i = 0; i &amp;lt; 160 + min(0, iFrame); i++) {
+    // ループ中の処理
+    // ...
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ShadertoyなどのWebGL2.0環境であれば、この方法で同じコンパイル時間削減の効果を得られます。&lt;/p&gt;
+
+&lt;p&gt;WebGL1.0の場合はダイナミックループをサポートしていないので、WebGL1.0で動くGLSLSandboxでは &lt;code&gt;N + min(0, iFrame)&lt;/code&gt; のハックは使えません。&lt;/p&gt;
+
+&lt;p&gt;GLSLSandbox用なら、&lt;code&gt;絶対に実行されないbreak&lt;/code&gt; のハックを使うと良いでしょう。&lt;/p&gt;
+
+&lt;h2 id=&#34;タイムラインのシーケンス&#34;&gt;タイムラインのシーケンス&lt;/h2&gt;
+
+&lt;p&gt;タイムラインのシーケンス管理のために次の簡単なマクロを実装しました。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;// Timeline
+float prevEndTime = 0., t = 0.;
+#define TL(beat, end) if (t = beat - prevEndTime, beat &amp;lt; (prevEndTime = end))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;使い方は簡単で、TLの引数に現在時刻と境界値（区間の終了タイミング）を指定します。
+単位は区別していないので、時間単位でもビート単にでも統一されていてばOKです。&lt;/p&gt;
+
+&lt;p&gt;グローバル変数tに現在区間の相対的な時間が自動的に設定されるため、処理をスッキリと書けます。&lt;/p&gt;
+
+&lt;p&gt;ifの条件の中にカンマを複数の式を書けるのは今回はじめて知りました。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;// カメラワーク制御の実装例
+TL(beat, 4. * 8.) setCamera(vec4(600, 250. + t * 3., 600, 243. - t * 6.), 3.);//    0ビート から 4 * 8ビート目 までの処理
+else TL(beat, 4. * 10.) setCamera(vec4(600, 307, 600, 44. + t * 4.), 3.);//         4 * 8ビート  から 4 * 10ビート目 までの処理
+else TL(beat, 4. * 12.) setCamera(vec4(494, 322, 695, 216), 2.4 + 0.2 * t);//       4 * 10ビート から 4 * 12ビート目 までの処理
+else TL(beat, 4. * 14.) setCamera(vec4(600, 481. + 10. * t, 600, 59), 3.);//        4 * 12ビート から 4 * 14ビート目 までの処理
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;今回はカットごとにカメラを完全に切り替えていたので、このような仕組みでうまくカメラワークを実装できました。&lt;/p&gt;
+
+&lt;h2 id=&#34;おわりに&#34;&gt;おわりに&lt;/h2&gt;
+
+&lt;p&gt;kanetaさんのsmoothPulse関数や、VirgillさんのMadtracing以外にも、数え切れないほどたくさんの解説記事とシェーダーを参考にしたり、たくさんの作品に影響を受けました。
+たくさんの方々に感謝します。ありがとうございました！&lt;/p&gt;
+
+&lt;h1 id=&#34;感想&#34;&gt;感想&lt;/h1&gt;
+
+&lt;p&gt;ここからは技術的なこと以外のポエムをつらつらと書きます。&lt;/p&gt;
+
+&lt;h2 id=&#34;glsl-graphics-compo初優勝&#34;&gt;GLSL Graphics Compo初優勝！&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/blog/2018/12/12/tdf2018/&#34;&gt;2018年のPC Demo Compo&lt;/a&gt;に引き続き、Tokyo Demo Festでのコンポ優勝は2回目です。&lt;/p&gt;
+
+&lt;p&gt;これまでGLSL Graphics Compoはずっと3位で、なかなか優勝できなかったので、ようやく心残りを解消できました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;GLSL Graphics compo 1位のトロフィーを受け取りました🏆&lt;br&gt;&lt;br&gt;今年のトロフィーは例年よりもずっと重厚感があります。&lt;br&gt;&lt;br&gt;副賞の光るキーボードもありがとうございました。&lt;br&gt;家にある光るキーボードは3台目ですが、大切にします🙏&lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://t.co/vC3ce68i7S&#34;&gt;pic.twitter.com/vC3ce68i7S&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1472229449433481220?ref_src=twsrc%5Etfw&#34;&gt;December 18, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;トロフィーの素材や厚みが例年よりも高級感があって、個人的にもなんだか嬉しい気持ちです（笑）。&lt;/p&gt;
+
+&lt;p&gt;GUNCY&amp;rsquo;Sさんによる副賞のRazer BlackWidow V3 Green Switchもありがとうございます。&lt;/p&gt;
+
+&lt;h2 id=&#34;tdfの参加者が増えて欲しい&#34;&gt;TDFの参加者が増えて欲しい&lt;/h2&gt;
+
+&lt;p&gt;GLSL Graphics CompoはTDF独自のコンポで、海外のパーティでは見たことのない形式ですが、個人的にはとても好きです。&lt;/p&gt;
+
+&lt;p&gt;2016年のTDFに初参加したとき、一晩でGLSLSandboxのシェーダーを書いて、GLSL Graphics Compoにエントリーした記憶は今でも鮮明に覚えています。
+自分のシェーダーが巨大なスクリーンに映し出されたとき、オーディエンスの歓声が聞こえて本当に嬉しかったです。
+この体験がなければデモシーンやシェーダーを続けていないような気がします。勇気を出してエントリーして良かったと本当に思います。&lt;/p&gt;
+
+&lt;p&gt;デモを1本完成させるのは本当に大変ですが、GLSL Graphics Compoなら気軽に参加できることがメリットだと思います。
+気軽に参加できる数少ないコンポですが、近年のGLSL Graphics Compoのレベルはインフレを続けて、上位勢はかなりガチな作品を出してくるなという印象があります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://nanka.hateblo.jp/entry/2018/12/13/080322&#34;&gt;Traveler 2&lt;/a&gt;やAlien Spaceshipのような短いグラフィックスではなく長尺のデモっぽい作品をGLSL Graphics Compoを出すことで、もし他の参加者が萎縮してしまったらとても不本意な気持ちです。&lt;/p&gt;
+
+&lt;p&gt;個人的にはGLSL Graphics Compoは順位や周りを気にせず、どんどんエントリーする人が増えたら嬉しいです。&lt;/p&gt;
+
+&lt;h2 id=&#34;オンラインパーティの体験&#34;&gt;オンラインパーティの体験&lt;/h2&gt;
+
+&lt;p&gt;今回のTDF初のオンライン開催でした。&lt;/p&gt;
+
+&lt;p&gt;TDFのオーガナイザーの方々の努力のおかげで、実際のデモパーティにかなり近い体験を再現できていたのではないかと思います。&lt;/p&gt;
+
+&lt;p&gt;Day2のYouTubeの視聴回数が3000回を超えているので、例年のオフラインパーティよりもたくさんの人に見てもらたといったオンラインのメリットも感じました。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/2s9KfMn1J9M&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/bp37xTVNRrM&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;ですが、やはり正直に言うと「オンラインだと物足りないなぁ…」というのが正直な感想でした。
+とくにオーディエンスの反応や会場の熱気を直接感じられないのはとても寂しかったです。またオフラインでデモパーティできる日が本当に待ち遠しいです。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;またオフラインでデモパーティできる日が待ち遠しい… &lt;a href=&#34;https://t.co/WsyEHySE28&#34;&gt;https://t.co/WsyEHySE28&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1470764587834568715?ref_src=twsrc%5Etfw&#34;&gt;December 14, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;shader-showdown&#34;&gt;Shader Showdown&lt;/h2&gt;
+
+&lt;p&gt;TDF初の試みであるShader Showdownは本当に激熱でした。&lt;/p&gt;
+
+&lt;p&gt;とくに決勝戦の &lt;a href=&#34;https://twitter.com/phi16_&#34;&gt;phi16&lt;/a&gt; vs. &lt;a href=&#34;https://twitter.com/kamoshika_vrc&#34;&gt;Kamoshika&lt;/a&gt; の戦いは一生忘れないくらい印象に残りました。&lt;/p&gt;
+
+&lt;p&gt;Shader Showdownについては、また別の記事で書きたいと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;TokyoDemoFestのShader Showdownは、世界的なDemoparty「Revision」と同じレギュレーションで開催します。&lt;br&gt;試合の放映はパーティー当日12/11-12となります。乞うご期待……！ &lt;a href=&#34;https://t.co/IlVue5npWz&#34;&gt;pic.twitter.com/IlVue5npWz&lt;/a&gt;&lt;/p&gt;&amp;mdash; Tokyo Demo Fest 2021 (2021/12/11-12) (@TokyoDemoFest) &lt;a href=&#34;https://twitter.com/TokyoDemoFest/status/1452275618997886976?ref_src=twsrc%5Etfw&#34;&gt;October 24, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;その他&#34;&gt;その他&lt;/h1&gt;
+
+&lt;p&gt;本編では言及しなかったけれども一応書いておきたいことを箇条書きでつらつら書きます。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;今年のTDFでは、KLabはゴールドスポンサーとして協賛
+
+&lt;ul&gt;
+&lt;li&gt;協賛できて良かった&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;なぜGLSL Graphics Compoに出したの？
+
+&lt;ul&gt;
+&lt;li&gt;音楽を作る能力と余裕があれば、IntroとしてPC Demo Compoに出したかったが、間に合わなかった&lt;/li&gt;
+&lt;li&gt;来年は音楽もやりたい（毎年言っている気もする）&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;計画的にデモを作りたい
+
+&lt;ul&gt;
+&lt;li&gt;TDF直後には、他の人や作品に感化されて、溢れるモチベーションとやる気があるはずなのに&lt;/li&gt;
+&lt;li&gt;結局毎年締切ギリギリまで着手できない&lt;/li&gt;
+&lt;li&gt;だんだん徹夜もつらくなってきた&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
       <title>メガデモ勉強会2021で発表しました</title>
       <link>https://gam0022.net/blog/2021/02/15/demoscene-study-session/</link>
       <pubDate>Mon, 15 Feb 2021 13:26:18 +0900</pubDate>
@@ -3030,235 +3448,6 @@ intersection.reflectance = f0 + (1.0 - f0) * pow(1.0 + ray.direction.y, 5.0);
 
 &lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E6%AD%A3%E8%A7%A3%E3%81%99%E3%82%8B%E3%82%AB%E3%83%89?src=hash&#34;&gt;#正解するカド&lt;/a&gt; の「カド」を &lt;a href=&#34;https://twitter.com/hashtag/WebGL?src=hash&#34;&gt;#WebGL&lt;/a&gt; のレイマーチングでリアルタイムに描画しました！いい感じに仕上がったので、徹夜した甲斐がありました！今晩の最終話が楽しみです！ &lt;a href=&#34;https://twitter.com/hashtag/threejs?src=hash&#34;&gt;#threejs&lt;/a&gt;&lt;a href=&#34;https://t.co/pMRREywdyy&#34;&gt;https://t.co/pMRREywdyy&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/880562345990275072&#34;&gt;2017年6月29日&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>距離関数のfold（折りたたみ）による形状設計</title>
-      <link>https://gam0022.net/blog/2017/03/02/raymarching-fold/</link>
-      <pubDate>Thu, 02 Mar 2017 23:24:26 +0900</pubDate>
-      
-      <guid>https://gam0022.net/blog/2017/03/02/raymarching-fold/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://www.slideshare.net/shohosoda9/threejs-58238484&#34;&gt;レイマーチング（別名 Sphere Tracing）&lt;/a&gt;とは、距離関数と呼ばれる数式で定義したシーンに対して、レイの衝突判定を行って絵を出す手法です。&lt;/p&gt;
-
-&lt;p&gt;この距離関数に対し、fold（折りたたみ）の操作を行うと、万華鏡のような美しい形状や、フラクタルのような複雑な形状の設計が可能です。&lt;/p&gt;
-
-&lt;p&gt;先日のTokyoDemoFest2017でも、このfoldを用いた作品を投稿しました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://gam0022.net/blog/2017/02/24/tdf2017/&#34;&gt;#TokyoDemoFest 2017 の GLSL Graphics Compo で3位入賞！ | gam0022.net&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://gam0022.net/webgl/#raymarching_tdf2017&#34;&gt;Fusioned Bismuth | gam0022.net&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.shadertoy.com/view/Msscz7&#34;&gt;Fusioned Bismuth | Shadertoy&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;この記事では、距離関数のfoldについて、解説していきます。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;2dのfold&#34;&gt;2Dのfold&lt;/h1&gt;
-
-&lt;p&gt;分かりやすさのために、まずは2Dの例から説明します。&lt;/p&gt;
-
-&lt;p&gt;2Dのfoldの分かりやすい例は「鏡文字」です。&lt;/p&gt;
-
-&lt;p&gt;アルファベットのGをY軸中心に折りたたんだ鏡文字の2Dシェーダのサンプルを作りました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://glslsandbox.com/e#38938.1&#34;&gt;Gの鏡文字のシェーダ | GLSL sandbox&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2017-02-24-tdf2017/mirror2.png&#34; alt=&#34;Gの鏡文字&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;このようなY軸中心のfold(Y軸中心 == X方向へのfold)は、単純にxを絶対値することにより実現できます。&lt;/p&gt;
-
-&lt;p&gt;絶対値をとることで、Xの負の方向の領域が正の方向の領域と一致して鏡文字になります。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;vec2 foldX(vec2 p) {
-    p.x = abs(p.x);
-    return p;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;foldXの使用方法です。距離関数の引数pにfoldXを適用すればOKです。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;p = foldX(p);// Y軸方向を中心に空間(p)を折りたたむ
-p -= vec2(0.4, 0.0);// 右方向に平行移動
-float color = sign(dCharG(p));// 距離関数の符号で色分け
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;3dのfold&#34;&gt;3Dのfold&lt;/h1&gt;
-
-&lt;p&gt;次は3Dのfoldです。&lt;/p&gt;
-
-&lt;p&gt;このように箱をZ軸に時計回りに回転させたものをYZ平面にfoldすると、距離関数としては1つの箱なのに、左右2つに枝分かれさせることができます。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2017-02-24-tdf2017/fold-1.png&#34; alt=&#34;YZ平面にfoldしたBox&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;前の例では2DだったのでY軸に対するfoldでしたが、今回は3DなのでYZ平面に対するfoldになっています。
-foldの中心が軸から面になりましたが、処理的には2Dと変わりません。
-foldXの中身も一緒で、引数と返り値の型がvec2からvec3になったことが変更点です。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;vec3 foldX(vec3 p) {
-    p.x = abs(p.x);
-    return p;
-}
-
-mat2 rotate(float a) {
-    float s = sin(a),c = cos(a);
-    return mat2(c, s, -s, c);
-}
-
-float dTree(vec3 p) {
-    vec3 size = vec3(0.1, 1.0, 0.1);
-    float d = sdBox(p, size);
-    p = foldX(p);
-    p.y -= 0.1;
-    p.xy *= rotate(-1.2);
-    d = min(d, sdBox(p, size));
-    return d;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;再帰的なfold&#34;&gt;再帰的なfold&lt;/h1&gt;
-
-&lt;p&gt;このfoldを再帰的に適用すると、フラクタル図形ができます。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2017-02-24-tdf2017/fold-2.png&#34; alt=&#34;再帰的なfold&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;これがGLSLの距離関数です。&lt;/p&gt;
-
-&lt;p&gt;ループの末尾でpを更新することで、再帰的にfoldを適用しています。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;float dTree(vec3 p) {
-    float scale = 0.8;
-    vec3 size = vec3(0.1, 1.0, 0.1);
-    float d = sdBox(p, size);
-    for (int i = 0; i &amp;lt; 7; i++) {
-        vec3 q = foldX(p);
-        q.y -= size.y;
-        q.xy *= rotate(-0.5);
-        d = min(d, sdBox(p, size));
-        p = q;
-        size *= scale;
-    }
-    return d;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;通常、フラクタル図形を表現するためには再帰関数が必要ですが、距離関数を用いればループで十分表現できるというのが興味深いポイントですね。
-たとえば、&lt;code&gt;dTree&lt;/code&gt; の中には、sdBoxがたったの2回しか登場していません。再帰的に &lt;code&gt;foldX&lt;/code&gt; を適用することで、Boxを無数に複製しています。&lt;/p&gt;
-
-&lt;h1 id=&#34;回転のfold&#34;&gt;回転のfold&lt;/h1&gt;
-
-&lt;p&gt;これまでは面に対するfoldを扱いましたが、特定の軸を中心に回転させたfoldも考えられます。&lt;/p&gt;
-
-&lt;p&gt;回転のfoldは&lt;a href=&#34;https://twitter.com/gaziya5&#34;&gt;@gaziya5&lt;/a&gt;さんの&lt;a href=&#34;https://www.shadertoy.com/view/Mlf3Wj&#34;&gt;DE used folding&lt;/a&gt;からお借りしました。&lt;/p&gt;
-
-&lt;p&gt;dTreeの木のような形をうまく調整し、Z軸方向に6回転させるfoldを適用すると「Fusioned Bismuth」に登場した雪の結晶のような形状を得られます。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2017-02-24-tdf2017/snow.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2017-02-24-tdf2017/snow.png&#34; alt=&#34;Fusioned Bismuth - 雪の結晶&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;mat2 rotate(in float a) {
-    float s = sin(a), c = cos(a);
-    return mat2(c, s, -s, c);
-}
-
-// https://www.shadertoy.com/view/Mlf3Wj
-vec2 foldRotate(in vec2 p, in float s) {
-    float a = PI / s - atan(p.x, p.y);
-    float n = PI2 / s;
-    a = floor(a / n) * n;
-    p *= rotate(a);
-    return p;
-}
-
-float dTree(vec3 p) {
-    float scale = 0.6 * saturate(1.5 * sin(0.05 * time));
-    float width = mix(0.3 * scale, 0.0, saturate(p.y));
-    vec3 size = vec3(width, 1.0, width);
-    float d = sdBox(p, size);
-    for (int i = 0; i &amp;lt; 10; i++) {
-        vec3 q = p;
-        q.x = abs(q.x);
-        q.y -= 0.5 * size.y;
-        q.xy *= rotate(-1.2);
-        d = min(d, sdBox(p, size));
-        p = q;
-        size *= scale;
-    }
-    return d;
-}
-
-float dSnowCrystal(inout vec3 p) {
-    p.xy = foldRotate(p.xy, 6.0);
-    return dTree(p);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;回転のfoldの別例&#34;&gt;回転のfoldの別例&lt;/h2&gt;
-
-&lt;p&gt;この &lt;code&gt;foldRotate&lt;/code&gt; はUFO風の形状にも利用しています。
-たった4つのBoxに&lt;code&gt;mod&lt;/code&gt; や &lt;code&gt;foldRotate&lt;/code&gt; を適用しただけなのに、それなりに雰囲気を出すことができたと思っています。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2017-02-24-tdf2017/ufo.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2017-02-24-tdf2017/ufo.png&#34; alt=&#34;Fusioned Bismuth - UFO風の形状&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#define opRep(p, interval) (mod(p, interval) - 0.5 * interval)
-#define opRepLimit(p, interval, limit) (mod(clamp(p, -limit, limit), interval) - 0.5 * interval)
-
-float dWing(in vec3 p) {
-    float t = time;
-    float l = length(p.xz);
-    float fusion = gauss(time * 2.0);
-
-    float a = 0.1 + 0.06 * (1.0 + sin(PI * t + l));
-    float b = min(0.2 * t, 10.0) * gauss(l) + 0.1 * fusion * hWave(p.xz, t);
-    p.y += -b + 15.0;
-
-    vec3 p1 = p;
-    p1.xz = opRepLimit(p.xz, 1.0, 20.0);
-
-    vec3 p2 = p;
-    p2 = opRep(p, 0.5);
-
-    float d =   sdBox(p1, vec3(0.2 + a * 3.0, 12.0 - a,       0.2 + a));
-    d = min(d,  sdBox(p1, vec3(0.4 - a,       13.0 - 4.0 * a, 0.1 + a)));
-    d = max(d, -sdBox(p1, vec3(0.3 - a,       14.0 - 4.0 * a, a)));
-    d = max(d, -sdBox(p2, vec3(0.8 * a, 1.0 - a, 0.8 * a)));
-    return d;
-}
-
-float dUfo(inout vec3 p) {
-    float t = max(time * 0.5, 1.0);
-    float t1 = floor(t);
-    float t2 = t1 + easeInOutCubic(t - t1);
-
-    p.xz = foldRotate(p.xz, min(t2, 10.0));
-    p.z -= 0.5;
-
-    float d = dWing(p);
-    return d;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;一般化されたfold&#34;&gt;一般化されたfold&lt;/h1&gt;
-
-&lt;p&gt;任意の法線 &lt;code&gt;n&lt;/code&gt; を持った面に対する一般化されたfoldがSyntopiaに紹介されています。興味のある方は、見てみると良いでしょう。&lt;/p&gt;
-
-&lt;p&gt;absによるfoldでは、座標軸に垂直な特殊な平面に限定されていましたが、これで自由な向きにfoldができます！&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.hvidtfeldts.net/index.php/2011/08/distance-estimated-3d-fractals-iii-folding-space/&#34;&gt;Distance Estimated 3D Fractals (III): Folding Space&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;p -= 2.0 * min(0.0, dot(p, n)) * n;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;まとめ&#34;&gt;まとめ&lt;/h1&gt;
-
-&lt;p&gt;距離関数のfoldについて、実例を踏まえて紹介しました。&lt;/p&gt;
-
-&lt;p&gt;foldは直感的に理解することが難しく、使いこなすのも大変ですが、かなり強力なテクニックだと思います！&lt;/p&gt;
-
-&lt;p&gt;もしこの記事がお役に立てたのなら幸いです。&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -114,6 +114,104 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/03/21/dynamic-forward/" itemprop="url">coinsの環境を使ってDynamic Forward</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2013-03-21 11:17:00 &#43;0900 JST" itemprop="datePublished">2013-03-21</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/mac-os-x">Mac OS X</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/coins">coins</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                
+
+<p>Twinsなど学内向けのサイトにアクセスするためにLocalForwardを使っている人が多いようですが、
+DynamicForwardの方が汎用性が高くて便利なのに、使っている人が少ないような印象を受けるので紹介します。</p>
+
+<p>この記事の説明はあまり分かりやすくないので、単純に学外からTwinsを使いたいだけであれば、
+次の記事を参考にすれば良いと思います。</p>
+
+<p><a href="http://shkh.hatenablog.com/entry/2011/11/22/231233">MacでTWINSを学外から使う</a></p>
+
+<h1 id="接続の方法">接続の方法</h1>
+
+<h2 id="1-sshの設定をする">1.sshの設定をする</h2>
+
+<p>まず、<code>~/.ssh/config</code>を次のようにします。</p>
+
+<pre><code class="language-bash"># .ssh/config
+Host coins coins-p
+HostName www.coins.tsukuba.ac.jp
+User sxxxxxxx
+
+Host *-p
+DynamicForward 1080
+</code></pre>
+
+<p>上のように設定すると、</p>
+
+<ul>
+<li>普通にsshしたいだけならば、<code>ssh coins</code></li>
+<li>DynamicForwardしたいなら、<code>ssh coins-p</code></li>
+</ul>
+
+<p>となって捗ります。</p>
+
+<p>このように、*(アスタリスク)を使って設定を書くと、
+重複してサーバ名などの設定を書かないで済むというちょっとしたテクニックを使っています。</p>
+
+<h2 id="2-sokcsプロキシを使う">2.SOKCSプロキシを使う</h2>
+
+<p>この設定だと、<code>ssh coins-p</code>をしたときに、ローカルホストの1080番ポートにSOKCSプロキシサーバを割り当てると、
+学内向けのサイトも普通に見れるようになります。</p>
+
+<p>SOKCSプロキシの設定は Mac OS X (山ライオン)ならば、<code>ネットワーク環境設定</code>から下のスクリーンショットを参考にして行なってください。</p>
+
+<p>他の環境の人はググって調べてください。</p>
+
+<p><img src="/images/posts/2013-03-21-dynamic-forward.png" alt="SOKCSプロキシの設定" /></p>
+
+<h1 id="切断するとき">切断するとき</h1>
+
+<p>切断するときは、次の2つの両方の作業をしてください。</p>
+
+<ul>
+<li>sshの接続を切る。</li>
+<li>プロキシの設定を無効にする。</li>
+</ul>
+
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2013/03/21/dynamic-forward/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/03/12/computer-graphics/" itemprop="url">コンピュータグラフィックス基礎の成果報告</a></h3>
         
 
@@ -700,72 +798,6 @@ alias java='java -Dfile.encoding=UTF-8'
         </div>
         <p class="read-more">
             <a href="https://gam0022.net/blog/2012/12/19/javac/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/12/11/hsp-contest2012/" itemprop="url">HSPプログラミングコンテスト2012で秀和システム賞を受賞</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2012-12-11 12:42:00 &#43;0900 JST" itemprop="datePublished">2012-12-11</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/hsp">HSP</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                <p>HSPプログラミングコンテスト2012で秀和システム賞を受賞しました。</p>
-
-<p><a href="http://hsp.tv/contest2012/cntst_fresult.html#313">HSPプログラムコンテスト2012　入賞作品詳細</a></p>
-
-<p>入賞作品名はSoar(ソアー)で、女の子を落下しないように操作して、ひたすら上を目指すシンプルなゲームです。</p>
-
-<p>去年はこのコンテストに参加しなかったので、2年ぶりの参加でした。</p>
-
-<p>今年は<a href="http://www.ustream.tv/recorded/27086650">コンテストTV</a>などでも
-取り上げて貰えたので嬉しかったです。</p>
-
-<p>(開発期間が本当に3日くらいだったので、)不具合などを修正したら、
-ソースコードなどもGitHubなどに公開する予定です。</p>
-
-<p>技術的な点だと、キャラクターの移動の計算に速度を使ったり、
-床の移動に三角関数を用いたりして、滑らかな動きを実現しました。</p>
-
-<p>久しぶりにHSPを触りましたが、やっぱりこのくらいの規模のゲームを
-サクッと作るにはとても便利な言語ですね。</p>
-
-<p>最近ではJavaScriptに変換できたり、
-スマートフォン上にも簡単に移植できるようになっているようなので、
-期待が高まります。</p>
-
-<p>コンテストの主催者の方、審査員の方、協賛の方、Soarを遊んで下さった方、
-関係者さんに感謝です。来年も参加したいと思います。</p>
-
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2012/12/11/hsp-contest2012/" class="btn btn-primary btn-outline">
                 Read more
             </a>
         </p>
