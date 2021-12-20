@@ -374,6 +374,13 @@ float emi = smoothPulse(0.2, 0.25, 1.0, 0.5, py + p.x / 2.0);
 
 <p>ほぼopRepとSkewとDisplacement Mapのテクニックの繰り返しで地道にモデリングしているだけです。</p>
 
+<p>ライティングの問題とモデリングの問題を切り分けるためにシンプルなレイマーチングの描画モードも用意しました。</p>
+
+<p>よく見ると強引にSkewとDisplacement Mapをしたためにアーティファクトが発生しているので、今後の課題にしたいですね。
+最終的なライティングでは暗い箇所で目立ちにくいのが幸いでした。</p>
+
+<p><a href="/images/posts/2021-12-20-tdf2021-glsl-compo/debug-scene.png"><img src="/images/posts/2021-12-20-tdf2021-glsl-compo/debug-scene.png" alt="debug-scene.png" /></a></p>
+
 <h3 id="後半のalienの巣のシーン">後半のAlienの巣のシーン</h3>
 
 <p>IFS（Iterated Function Systems）をつかっています。</p>
