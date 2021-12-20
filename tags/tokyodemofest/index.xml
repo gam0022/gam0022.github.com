@@ -187,8 +187,8 @@ float emi = smoothPulse(0.2, 0.25, 1.0, 0.5, py + p.x / 2.0);
 
 &lt;p&gt;ライティングの問題とモデリングの問題を切り分けるためにシンプルなレイマーチングの描画モードも用意しました。&lt;/p&gt;
 
-&lt;p&gt;よく見ると強引にSkewとDisplacement Mapをしたためにアーティファクトが発生しているので、今後の課題にしたいですね。
-最終的なライティングでは暗い箇所で目立ちにくいのが幸いでした。&lt;/p&gt;
+&lt;p&gt;よく見ると強引にSkewとDisplacement Mapをしたために、よく見るとアーティファクトが発生しています。
+最終的なライティングでは暗い箇所となってほとんど目立たなかったので、今回はそのままにしました。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/debug-scene.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/debug-scene.png&#34; alt=&#34;debug-scene.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -365,6 +365,8 @@ else TL(beat, 4. * 14.) setCamera(vec4(600, 481. + 10. * t, 600, 59), 3.);
 &lt;p&gt;&lt;a href=&#34;https://gam0022.net/blog/2018/12/12/tdf2018/&#34;&gt;2018年のPC Demo Compo&lt;/a&gt;に引き続き、Tokyo Demo Festでのコンポ優勝は2回目です。&lt;/p&gt;
 
 &lt;p&gt;これまでGLSL Graphics Compoはずっと3位で、なかなか優勝できなかったので、ようやく心残りを解消できました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;I won the GLSL Graphics compo at &lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; 2021!&lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; 2021 の GLSL Graphics compo で優勝しました！めちゃくちゃ嬉しいです！&lt;br&gt;&lt;br&gt;&amp;quot;Alien Spaceship&amp;quot; by &lt;a href=&#34;https://twitter.com/gam0022?ref_src=twsrc%5Etfw&#34;&gt;@gam0022&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://t.co/KQaQo1NI0R&#34;&gt;pic.twitter.com/KQaQo1NI0R&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1469994430950445057?ref_src=twsrc%5Etfw&#34;&gt;December 12, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;GLSL Graphics compo 1位のトロフィーを受け取りました🏆&lt;br&gt;&lt;br&gt;今年のトロフィーは例年よりもずっと重厚感があります。&lt;br&gt;&lt;br&gt;副賞の光るキーボードもありがとうございました。&lt;br&gt;家にある光るキーボードは3台目ですが、大切にします🙏&lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://t.co/vC3ce68i7S&#34;&gt;pic.twitter.com/vC3ce68i7S&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1472229449433481220?ref_src=twsrc%5Etfw&#34;&gt;December 18, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
