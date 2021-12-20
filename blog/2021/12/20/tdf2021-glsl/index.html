@@ -331,7 +331,9 @@ float h = 0.1 * floor(2. * sin(p.x)) + 0.2 * floor(sin(2. * p.z));
 
 <p>扉の台形のギザギザの関数は<a href="https://twitter.com/kanetaaaaa">kaneta先生</a>のコードをお借りしました。</p>
 
-<p><a href="https://www.shadertoy.com/view/3dd3WB">Energy Lab by kaneta</a></p>
+<ul>
+<li><a href="https://www.shadertoy.com/view/3dd3WB">Energy Lab by kaneta</a></li>
+</ul>
 
 <pre><code class="language-c">float smoothPulse(float start, float end, float period, float smoothness, float t) {
     float h = abs(end - start) * 0.5;
@@ -624,7 +626,87 @@ else TL(beat, 4. * 14.) setCamera(vec4(600, 481. + 10. * t, 600, 59), 3.);
 <li>結局毎年締切ギリギリまで着手できない</li>
 <li>だんだん徹夜もつらくなってきた</li>
 </ul></li>
+<li>着想点
+
+<ul>
+<li>グローバルイルミネーションをやりたかった</li>
+<li><a href="https://blog.magnum.graphics/guest-posts/area-lights-with-ltcs/">Area Lights with LTCs</a>も調査はした
+
+<ul>
+<li>BRDFなどに依存したルックアップテーブルが必要で、1Pass実装にフォールバックが不可能っぽいので諦めた</li>
+</ul></li>
+</ul></li>
 </ul>
+
+<h1 id="作業日記">作業日記</h1>
+
+<p>ネタ供養🙏です。</p>
+
+<h2 id="2021-11-07">2021-11-07</h2>
+
+<p><a href="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-07-v1-1.png"><img src="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-07-v1-1.png" alt="2021-11-07-v1-1.png" /></a></p>
+
+<h2 id="2021-11-16">2021-11-16</h2>
+
+<p><a href="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-16-v1-1.png"><img src="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-16-v1-1.png" alt="2021-11-16-v1-1.png" /></a></p>
+
+<p><a href="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-16-v1-2.png"><img src="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-16-v1-2.png" alt="2021-11-16-v1-2.png" /></a></p>
+
+<p><a href="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-16-v1-3.png"><img src="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-16-v1-3.png" alt="2021-11-16-v1-3.png" /></a></p>
+
+<p>この頃はIFSを弄っていた。</p>
+
+<h2 id="2021-11-17">2021-11-17</h2>
+
+<p><a href="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-17-v1-1.png"><img src="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-17-v1-1.png" alt="2021-11-17-v1-1.png" /></a></p>
+
+<p><a href="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-17-v1-2.png"><img src="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-17-v1-2.png" alt="2021-11-17-v1-2.png" /></a></p>
+
+<h2 id="2021-11-18">2021-11-18</h2>
+
+<p><a href="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-18-v1-1.png"><img src="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-18-v1-1.png" alt="2021-11-18-v1-1.png" /></a></p>
+
+<p><a href="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-18-v2-1.png"><img src="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-18-v2-1.png" alt="2021-11-18-v2-1.png" /></a></p>
+
+<h2 id="2021-11-19">2021-11-19</h2>
+
+<p><a href="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-19-v1-1.png"><img src="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-19-v1-1.png" alt="2021-11-19-v1-1.png" /></a></p>
+
+<p>ボロノイでザラザラとした床にする案</p>
+
+<p><a href="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-19-v1-2.png"><img src="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-19-v1-2.png" alt="2021-11-19-v1-2.png" /></a></p>
+
+<p><a href="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-19-v1-3.png"><img src="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-19-v1-3.png" alt="2021-11-19-v1-3.png" /></a></p>
+
+<p><a href="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-19-v1-4.png"><img src="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-19-v1-4.png" alt="2021-11-19-v1-4.png" /></a></p>
+
+<h2 id="2021-11-20">2021-11-20</h2>
+
+<p><a href="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-20-v1-1.png"><img src="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-20-v1-1.png" alt="2021-11-20-v1-1.png" /></a></p>
+
+<h2 id="2021-11-21">2021-11-21</h2>
+
+<p><a href="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-21-v1-1.png"><img src="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-21-v1-1.png" alt="2021-11-21-v1-1.png" /></a></p>
+
+<p><a href="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-21-v1-2.png"><img src="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-21-v1-2.png" alt="2021-11-21-v1-2.png" /></a></p>
+
+<p><a href="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-21-v2-1.png"><img src="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-21-v2-1.png" alt="2021-11-21-v2-1.png" /></a></p>
+
+<h2 id="2021-11-22">2021-11-22</h2>
+
+<p><a href="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-22-v1-1.png"><img src="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-22-v1-1.png" alt="2021-11-22-v1-1.png" /></a></p>
+
+<p><a href="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-22-v2-1.png"><img src="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-22-v2-1.png" alt="2021-11-22-v2-1.png" /></a></p>
+
+<h2 id="2021-12-02">2021-12-02</h2>
+
+<p><a href="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-12-02-v1-1.png"><img src="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-12-02-v1-1.png" alt="2021-12-02-v1-1.png" /></a></p>
+
+<p><a href="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-12-02-v2-1.png"><img src="/images/posts/2021-12-20-tdf2021-glsl-compo/2021-12-02-v2-1.png" alt="2021-12-02-v2-1.png" /></a></p>
+
+<h2 id="2021-12-03">2021-12-03</h2>
+
+<p>締切当日はコンパイル時間の削減をがんばっていた。</p>
                 </div>
 
             </article>
@@ -1208,6 +1290,19 @@ else TL(beat, 4. * 14.) setCamera(vec4(600, 481. + 10. * t, 600, 59), 3.);
 <li><a href="#shader-showdown">Shader Showdown</a></li>
 </ul></li>
 <li><a href="#その他">その他</a></li>
+<li><a href="#作業日記">作業日記</a>
+<ul>
+<li><a href="#2021-11-07">2021-11-07</a></li>
+<li><a href="#2021-11-16">2021-11-16</a></li>
+<li><a href="#2021-11-17">2021-11-17</a></li>
+<li><a href="#2021-11-18">2021-11-18</a></li>
+<li><a href="#2021-11-19">2021-11-19</a></li>
+<li><a href="#2021-11-20">2021-11-20</a></li>
+<li><a href="#2021-11-21">2021-11-21</a></li>
+<li><a href="#2021-11-22">2021-11-22</a></li>
+<li><a href="#2021-12-02">2021-12-02</a></li>
+<li><a href="#2021-12-03">2021-12-03</a></li>
+</ul></li>
 </ul>
 </nav>
         </div>

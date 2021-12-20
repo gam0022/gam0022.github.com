@@ -143,7 +143,9 @@ float h = 0.1 * floor(2. * sin(p.x)) + 0.2 * floor(sin(2. * p.z));
 
 &lt;p&gt;扉の台形のギザギザの関数は&lt;a href=&#34;https://twitter.com/kanetaaaaa&#34;&gt;kaneta先生&lt;/a&gt;のコードをお借りしました。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://www.shadertoy.com/view/3dd3WB&#34;&gt;Energy Lab by kaneta&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.shadertoy.com/view/3dd3WB&#34;&gt;Energy Lab by kaneta&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;float smoothPulse(float start, float end, float period, float smoothness, float t) {
     float h = abs(end - start) * 0.5;
@@ -436,7 +438,87 @@ else TL(beat, 4. * 14.) setCamera(vec4(600, 481. + 10. * t, 600, 59), 3.);
 &lt;li&gt;結局毎年締切ギリギリまで着手できない&lt;/li&gt;
 &lt;li&gt;だんだん徹夜もつらくなってきた&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;li&gt;着想点
+
+&lt;ul&gt;
+&lt;li&gt;グローバルイルミネーションをやりたかった&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.magnum.graphics/guest-posts/area-lights-with-ltcs/&#34;&gt;Area Lights with LTCs&lt;/a&gt;も調査はした
+
+&lt;ul&gt;
+&lt;li&gt;BRDFなどに依存したルックアップテーブルが必要で、1Pass実装にフォールバックが不可能っぽいので諦めた&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;作業日記&#34;&gt;作業日記&lt;/h1&gt;
+
+&lt;p&gt;ネタ供養🙏です。&lt;/p&gt;
+
+&lt;h2 id=&#34;2021-11-07&#34;&gt;2021-11-07&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-07-v1-1.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-07-v1-1.png&#34; alt=&#34;2021-11-07-v1-1.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;2021-11-16&#34;&gt;2021-11-16&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-16-v1-1.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-16-v1-1.png&#34; alt=&#34;2021-11-16-v1-1.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-16-v1-2.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-16-v1-2.png&#34; alt=&#34;2021-11-16-v1-2.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-16-v1-3.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-16-v1-3.png&#34; alt=&#34;2021-11-16-v1-3.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;この頃はIFSを弄っていた。&lt;/p&gt;
+
+&lt;h2 id=&#34;2021-11-17&#34;&gt;2021-11-17&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-17-v1-1.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-17-v1-1.png&#34; alt=&#34;2021-11-17-v1-1.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-17-v1-2.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-17-v1-2.png&#34; alt=&#34;2021-11-17-v1-2.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;2021-11-18&#34;&gt;2021-11-18&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-18-v1-1.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-18-v1-1.png&#34; alt=&#34;2021-11-18-v1-1.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-18-v2-1.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-18-v2-1.png&#34; alt=&#34;2021-11-18-v2-1.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;2021-11-19&#34;&gt;2021-11-19&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-19-v1-1.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-19-v1-1.png&#34; alt=&#34;2021-11-19-v1-1.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ボロノイでザラザラとした床にする案&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-19-v1-2.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-19-v1-2.png&#34; alt=&#34;2021-11-19-v1-2.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-19-v1-3.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-19-v1-3.png&#34; alt=&#34;2021-11-19-v1-3.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-19-v1-4.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-19-v1-4.png&#34; alt=&#34;2021-11-19-v1-4.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;2021-11-20&#34;&gt;2021-11-20&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-20-v1-1.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-20-v1-1.png&#34; alt=&#34;2021-11-20-v1-1.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;2021-11-21&#34;&gt;2021-11-21&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-21-v1-1.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-21-v1-1.png&#34; alt=&#34;2021-11-21-v1-1.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-21-v1-2.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-21-v1-2.png&#34; alt=&#34;2021-11-21-v1-2.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-21-v2-1.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-21-v2-1.png&#34; alt=&#34;2021-11-21-v2-1.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;2021-11-22&#34;&gt;2021-11-22&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-22-v1-1.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-22-v1-1.png&#34; alt=&#34;2021-11-22-v1-1.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-22-v2-1.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-11-22-v2-1.png&#34; alt=&#34;2021-11-22-v2-1.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;2021-12-02&#34;&gt;2021-12-02&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-12-02-v1-1.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-12-02-v1-1.png&#34; alt=&#34;2021-12-02-v1-1.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-12-02-v2-1.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-20-tdf2021-glsl-compo/2021-12-02-v2-1.png&#34; alt=&#34;2021-12-02-v2-1.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;2021-12-03&#34;&gt;2021-12-03&lt;/h2&gt;
+
+&lt;p&gt;締切当日はコンパイル時間の削減をがんばっていた。&lt;/p&gt;</description>
     </item>
     
     <item>
