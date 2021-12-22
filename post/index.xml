@@ -16,7 +16,13 @@
       <pubDate>Thu, 23 Dec 2021 10:00:00 +0900</pubDate>
       
       <guid>https://gam0022.net/blog/2021/12/23/unity-urp-billboard-shader/</guid>
-      <description>&lt;p&gt;こんな感じのY軸のビルボードをC#スクリプトを使わずに、シェーダーだけで実装しました。&lt;/p&gt;
+      <description>&lt;p&gt;これは&lt;a href=&#34;https://qiita.com/advent-calendar/2021/unity&#34;&gt;Unity Advent Calendar 2021&lt;/a&gt;の23日目の記事です。&lt;/p&gt;
+
+&lt;p&gt;前日は&lt;a href=&#34;https://twitter.com/UnagiHuman&#34;&gt;@UnagiHuman&lt;/a&gt;さんの&lt;a href=&#34;https://qiita.com/UnagiHuman/items/7db6c75adea0d5862acf&#34;&gt;「Unityの新MeshAPIでMeshColliderをリアルタイム変形させる」&lt;/a&gt;でした。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;こんな感じのY軸のビルボードをC#スクリプトを使わずに、シェーダーだけで実装しました。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-23-unity-urp-billboard-shader/Unity-URP-Billboard-trim.gif&#34; alt=&#34;Y軸ビルボード&#34; /&gt;&lt;/p&gt;
 
