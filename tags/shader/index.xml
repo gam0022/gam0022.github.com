@@ -27,6 +27,16 @@
 
 &lt;p&gt;GitHubリポジトリ: &lt;a href=&#34;https://github.com/gam0022/unity-urp-shader&#34;&gt;gam0022/unity-urp-shader&lt;/a&gt;&lt;/p&gt;
 
+&lt;h1 id=&#34;要約&#34;&gt;要約&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;シェーダーだけでY軸ビルボード&lt;/li&gt;
+&lt;li&gt;UnityのURP対応&lt;/li&gt;
+&lt;li&gt;回転行列を生成するアプローチなので、プラットフォーム間の違い（Zの方向やUVの上下など）による問題が起きない&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;前回の記事との違い&#34;&gt;前回の記事との違い&lt;/h1&gt;
+
 &lt;p&gt;この記事は&lt;a href=&#34;https://gam0022.net/blog/2019/07/23/unity-y-axis-billboard-shader/&#34;&gt;以前の記事&lt;/a&gt;の改訂版です。&lt;/p&gt;
 
 &lt;ul&gt;
@@ -35,13 +45,6 @@
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;この記事の要約&#34;&gt;この記事の要約&lt;/h1&gt;
-
-&lt;ol&gt;
-&lt;li&gt;頂点シェーダーでうまく回転をすれば（適切な回転行列を生成すれば）、ビルボード処理ができる&lt;/li&gt;
-&lt;li&gt;回転行列を生成するアプローチでビルボード処理を実装すれば、プラットフォームの差異を考えなくて良い&lt;/li&gt;
-&lt;/ol&gt;
 
 &lt;h1 id=&#34;シェーダーで実装するメリット&#34;&gt;シェーダーで実装するメリット&lt;/h1&gt;
 
@@ -565,7 +568,17 @@ cbuffer PixelShaderSettings {
       <pubDate>Tue, 23 Jul 2019 09:30:09 +0900</pubDate>
       
       <guid>https://gam0022.net/blog/2019/07/23/unity-y-axis-billboard-shader/</guid>
-      <description>&lt;p&gt;こんな感じのY軸のビルボードをC#スクリプトを使わずに、シェーダーだけで実装しました（Unity 2018.3.12f1）。&lt;/p&gt;
+      <description>&lt;h1 id=&#34;改訂版の記事を書きました-2021-12-23&#34;&gt;改訂版の記事を書きました（2021-12-23）&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;この記事の方法は古いので、改訂版を参考にしてください。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gam0022.net/blog/2021/12/23/unity-urp-billboard-shader/&#34;&gt;[Unity][URP] Y軸ビルボードシェーダー | gam0022.net&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;こんな感じのY軸のビルボードをC#スクリプトを使わずに、シェーダーだけで実装しました（Unity 2018.3.12f1）。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-07-22-unity-y-axis-billboard-shader/billboard_y_axis.gif&#34; alt=&#34;Y軸ビルボード&#34; /&gt;&lt;/p&gt;
 
