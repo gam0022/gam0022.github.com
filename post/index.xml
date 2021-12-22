@@ -7,8 +7,256 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>&amp;copy; 2021 gam0022</copyright>
-    <lastBuildDate>Mon, 20 Dec 2021 12:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 23 Dec 2021 10:00:00 +0900</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>[Unity][URP] Y軸ビルボードシェーダー</title>
+      <link>https://gam0022.net/blog/2021/12/23/unity-urp-billboard-shader/</link>
+      <pubDate>Thu, 23 Dec 2021 10:00:00 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2021/12/23/unity-urp-billboard-shader/</guid>
+      <description>&lt;p&gt;こんな感じのY軸のビルボードをC#スクリプトを使わずに、シェーダーだけで実装しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-23-unity-urp-billboard-shader/Unity-URP-Billboard-trim.gif&#34; alt=&#34;Y軸ビルボード&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;GitHubリポジトリ: &lt;a href=&#34;https://github.com/gam0022/unity-urp-shader&#34;&gt;gam0022/unity-urp-shader&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;この記事は&lt;a href=&#34;https://gam0022.net/blog/2019/07/23/unity-y-axis-billboard-shader/&#34;&gt;以前の記事&lt;/a&gt;の改訂版です。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;URP（Universal Render Pipeline）に対応&lt;/li&gt;
+&lt;li&gt;ビルボード処理のアプローチを改良（プラットフォーム依存をなくす）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;この記事の要約&#34;&gt;この記事の要約&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;頂点シェーダーでうまく回転をすれば（適切な回転行列を生成すれば）、ビルボード処理ができる&lt;/li&gt;
+&lt;li&gt;回転行列を生成するアプローチでビルボード処理を実装すれば、プラットフォームの差異を考えなくて良い&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;シェーダーで実装するメリット&#34;&gt;シェーダーで実装するメリット&lt;/h1&gt;
+
+&lt;p&gt;シェーダーでビルボードを計算するメリットはたくさんあります。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;C#スクリプトが不要でシェーダーだけで動作する
+
+&lt;ul&gt;
+&lt;li&gt;シェーダーのポータビリティは高い！&lt;/li&gt;
+&lt;li&gt;かつてのVRCのようにユーザスクリプトが書けない環境でも使える&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;シーンビュー上でも動作する&lt;/li&gt;
+&lt;li&gt;GPU（頂点シェーダー）でビルボード計算ができる
+
+&lt;ul&gt;
+&lt;li&gt;ビルボード計算のためのCPU負荷が0&lt;/li&gt;
+&lt;li&gt;板ポリの頂点数は4なので、頂点シェーダーで多少重い処理をしても、GPU負荷への影響はわずか&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;シェーダーのコード-全体&#34;&gt;シェーダーのコード（全体）&lt;/h1&gt;
+
+&lt;p&gt;最終的なシェーダーのコードはこちらです。&lt;/p&gt;
+
+&lt;p&gt;単体で動作するので、コピペして使えます。MITライセンスです。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;// URP-Unlit-Billboard Shader by @gam0022 (MIT Licence)
+// https://gam0022.net//blog/2021/12/23/unity-urp-billboard-shader/
+Shader &amp;quot;Universal Render Pipeline/Unlit-Billboard&amp;quot;
+{
+    Properties
+    {
+        _BaseMap (&amp;quot;Base Map&amp;quot;, 2D) = &amp;quot;white&amp;quot; { }
+        _BaseColor (&amp;quot;Base Color&amp;quot;, Color) = (1, 1, 1, 1)
+        _Cutoff (&amp;quot;Alpha Cutoff&amp;quot;, Range(0, 1)) = 0.5
+    }
+
+    SubShader
+    {
+        Tags {
+            &amp;quot;RenderPipeline&amp;quot; = &amp;quot;UniversalPipeline&amp;quot;
+            &amp;quot;RenderType&amp;quot; = &amp;quot;TransparentCutout&amp;quot;
+            &amp;quot;Queue&amp;quot; = &amp;quot;AlphaTest&amp;quot;
+            &amp;quot;IgnoreProjector&amp;quot; = &amp;quot;True&amp;quot;
+        }
+
+        Pass
+        {
+            Tags { &amp;quot;LightMode&amp;quot; = &amp;quot;UniversalForward&amp;quot; }
+
+            HLSLPROGRAM
+
+            #pragma vertex vert
+            #pragma fragment frag
+
+            #include &amp;quot;Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl&amp;quot;
+
+            struct Attributes
+            {
+                float4 positionOS: POSITION;
+                float2 uv: TEXCOORD0;
+            };
+
+            struct Varyings
+            {
+                float4 positionHCS: SV_POSITION;
+                float2 uv: TEXCOORD0;
+            };
+
+            sampler2D _BaseMap;
+
+            CBUFFER_START(UnityPerMaterial)
+            float4 _BaseMap_ST;
+            half4 _BaseColor;
+            half _Cutoff;
+            CBUFFER_END
+
+            Varyings vert(Attributes IN)
+            {
+                Varyings OUT;
+
+                // 回転行列を生成してビルボード処理をします
+                float3 yup = float3(0.0, 1.0, 0.0);
+                float3 up = mul((float3x3)unity_ObjectToWorld, yup);
+
+                float3 worldPos = unity_ObjectToWorld._m03_m13_m23;
+                float3 toCamera = _WorldSpaceCameraPos - worldPos;
+                float3 right = normalize(cross(toCamera, up));
+                float3 forward = normalize(cross(up, right));
+
+                float4x4 mat = {
+                    1, 0, 0, 0,
+                    0, 1, 0, 0,
+                    0, 0, 1, 0,
+                    0, 0, 0, 1,
+                };
+                mat._m00_m10_m20 = right;
+                mat._m01_m11_m21 = up;
+                mat._m02_m12_m22 = forward;
+                mat._m03_m13_m23 = worldPos;
+
+                float4 vertex = float4(IN.positionOS.xyz, 1);
+                vertex = mul(mat, vertex);
+                OUT.positionHCS = mul(UNITY_MATRIX_VP, vertex);
+
+                OUT.uv = TRANSFORM_TEX(IN.uv, _BaseMap);
+                return OUT;
+            }
+
+            half4 frag(Varyings IN): SV_Target
+            {
+                half4 base = tex2D(_BaseMap, IN.uv);
+                clip(base.a - _Cutoff);
+                return base * _BaseColor;
+            }
+            ENDHLSL
+
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;解説&#34;&gt;解説&lt;/h1&gt;
+
+&lt;h2 id=&#34;前回の記事-ビュー変換をスキップ-の欠点&#34;&gt;前回の記事（ビュー変換をスキップ）の欠点&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/blog/2019/07/23/unity-y-axis-billboard-shader/&#34;&gt;以前の記事&lt;/a&gt;では、カメラのビュー行列の変換をスキップすることで、ビルボード処理を実装していました。&lt;/p&gt;
+
+&lt;p&gt;Unityではプラットフォーム間の違い（Zの方向やUVの上下など）をビュー行列でうまく吸収する設計になっており、ビュー行列の変換をスキップするとプラットフォームの対応を自力で行う必要が出てきて、かなり面倒でした。
+面倒なだけならまだいいのですが、将来的に新しいプラットフォームが増えた時などにシェーダーの修正が必要になる可能性もあり、このアプローチは筋が良くないな、と記事の公開後に思っていました。&lt;/p&gt;
+
+&lt;p&gt;この記事で紹介する &lt;strong&gt;回転行列を生成するアプローチ&lt;/strong&gt; では、そのような面倒な問題が起きません。&lt;/p&gt;
+
+&lt;h2 id=&#34;回転行列を生成するアプローチ&#34;&gt;回転行列を生成するアプローチ&lt;/h2&gt;
+
+&lt;p&gt;Unityが生成するモデル行列を使わずに、頂点シェーダーの中でうまく回転行列を生成することで、ビルボード処理を実現します。&lt;/p&gt;
+
+&lt;p&gt;シェーダーからビルボード処理を抜き出して、できるだけコメントを入れました。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;// 回転行列を生成してビルボード処理をします
+
+// Y-UPベクトル
+float3 yup = float3(0.0, 1.0, 0.0);
+
+// Y軸の基底ベクトル
+float3 up = mul((float3x3)unity_ObjectToWorld, yup);
+
+// オブジェクトのワールド座標
+float3 worldPos = unity_ObjectToWorld._m03_m13_m23;
+
+// オブジェクトからカメラに向かうベクトル
+float3 toCamera = _WorldSpaceCameraPos - worldPos;
+
+// X軸の基底ベクトル
+float3 right = normalize(cross(toCamera, up));
+
+// Z軸の基底ベクトル
+float3 forward = normalize(cross(up, right));
+
+// 各基底ベクトルを並べて回転行列を生成
+// （厳密には平行移動も含んでいるので姿勢行列）
+float4x4 mat = {
+    1, 0, 0, 0,
+    0, 1, 0, 0,
+    0, 0, 1, 0,
+    0, 0, 0, 1,
+};
+mat._m00_m10_m20 = right;//     X軸の基底ベクトル
+mat._m01_m11_m21 = up;//        Y軸の基底ベクトル
+mat._m02_m12_m22 = forward;//   Z軸の基底ベクトル
+mat._m03_m13_m23 = worldPos;//  平行移動のベクトル
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これは超重要情報ですが、 &lt;strong&gt;回転後の空間の基底ベクトルを並べた行列が回転行列になります。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;これだけ覚えておけば、回転だけでなく、拡大縮小やSkew（せん断）の行列は自然に導出できます。&lt;/p&gt;
+
+&lt;p&gt;知らなかった人はぜひ覚えておきましょう。CEDECで同じ話を2回くらいしています（&lt;a href=&#34;https://www.klab.com/jp/blog/creative/2020/cedec2020.html&#34;&gt;2020&lt;/a&gt;と&lt;a href=&#34;https://www.klab.com/jp/blog/tech/2021/cedec-kyushu-2021-online-3d.html&#34;&gt;2021&lt;/a&gt;）。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-23-unity-urp-billboard-shader/kec2-1.png&#34; alt=&#34;基底ベクトルをイメージすればOK&#34; /&gt;
+&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-23-unity-urp-billboard-shader/kec2-2.png&#34; alt=&#34;回転ベクトル1&#34; /&gt;
+&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-23-unity-urp-billboard-shader/kec2-3.png&#34; alt=&#34;回転ベクトル2&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;srp-batcher&#34;&gt;SRP Batcher&lt;/h2&gt;
+
+&lt;p&gt;URP（SRP）からSRP Batcherというドローコールバッチング（厳密にはローコールの数を減らすわけではなく、ドローコール間のGPUの設定コストを削減）の仕組みが導入されました。&lt;/p&gt;
+
+&lt;p&gt;以前のビルドインレンダーパイプラインのドローコールバッチングではMeshが結合されるので、ビルボードのように特殊な頂点変換をするシェーダーでは考慮が必要で、けっこう面倒でした。&lt;/p&gt;
+
+&lt;p&gt;SRP BatcherはMeshを結合しないので、頂点変換で特別な考慮をしなくてもシェーダーが動くようになりました！めでたい🎉&lt;/p&gt;
+
+&lt;p&gt;今回のシェーダーをフレームデバッガーで確認すると、ちゃんとSRP Batcherで描画されているのが分かります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-23-unity-urp-billboard-shader/frame-debugger.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-23-unity-urp-billboard-shader/frame-debugger.png&#34; alt=&#34;SRP Batcher&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;SRP Batcherについては、以下の記事が詳しいです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.unity.com/ja/technology/srp-batcher-speed-up-your-rendering&#34;&gt;SRP Batcher：レンダリングをスピードアップ | Unity Blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;リンク&#34;&gt;リンク&lt;/h1&gt;
+
+&lt;p&gt;参考にさせていただきました。ありがとうございます。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;URP対応（SRP Batcherも対応👍）
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://light11.hatenadiary.com/entry/2021/07/29/194213&#34;&gt;【Unity】URP用のシェーダの書き方が旧パイプラインと微妙に違ってややこしいのでまとめた - LIGHT11&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;利用したテクスチャ素材
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.pngall.com/tree-png/download/23754&#34;&gt;Tree PNG Clipart Background&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.deviantart.com/fabooguy/art/Dirt-Ground-Texture-Tileable-2048x2048-441212191&#34;&gt;Dirt/Ground Texture [Tileable | 2048x2048]&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     
     <item>
       <title>Tokyo Demo Fest 2021のGLSL Graphics Compo優勝作品の解説</title>
@@ -4051,325 +4299,6 @@ Shader &amp;quot;Unlit/Billboard&amp;quot;
 &lt;li&gt;&lt;a href=&#34;https://www.deviantart.com/fabooguy/art/Dirt-Ground-Texture-Tileable-2048x2048-441212191&#34;&gt;Dirt/Ground Texture [Tileable | 2048x2048]&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Unity×レイマーチングによる映像制作の実践手法</title>
-      <link>https://gam0022.net/blog/2019/06/25/unity-raymarching/</link>
-      <pubDate>Tue, 25 Jun 2019 09:00:00 +0900</pubDate>
-      
-      <guid>https://gam0022.net/blog/2019/06/25/unity-raymarching/</guid>
-      <description>&lt;p&gt;6/19に開催された&lt;a href=&#34;https://techplay.jp/event/733454&#34;&gt;UnityエンジニアによるShader勉強会！&lt;/a&gt;で「Unity×レイマーチングによる映像制作の実践手法」という発表をしました。&lt;/p&gt;
-
-&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;daf8218b7458460087137b6f23e938b3&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
-
-&lt;p&gt;この記事は、発表内容をブログ向けに編集・要約したものになります。スライドだけでは伝わりにくい箇所を文章でフォローしました。&lt;/p&gt;
-
-&lt;p&gt;発表当日の様子は前回の記事にまとめました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://gam0022.net/blog/2019/06/20/klab-tech-meetup4/&#34;&gt;UnityエンジニアによるShader勉強会！に登壇しました | gam0022.net&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;発表の題材-wormhole&#34;&gt;発表の題材『WORMHOLE』&lt;/h1&gt;
-
-&lt;p&gt;TokyoDemoFest2018で発表した『WORMHOLE』という映像作品を題材とした発表です。&lt;/p&gt;
-
-&lt;p&gt;WORMHOLEの映像はUnityと&lt;a href=&#34;https://www.slideshare.net/shohosoda9/threejs-58238484&#34;&gt;レイマーチング&lt;/a&gt;を組み合わせて制作しました。&lt;/p&gt;
-
-&lt;p&gt;以下の記事で利用したテクニックは既に解説していましたが、今回は &lt;strong&gt;汎用的に役立ちそうなテクニック&lt;/strong&gt; に焦点を絞って、前回は説明しきれなかった部分を掘り下げて解説しました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://gam0022.net/blog/2018/12/12/tdf2018/&#34;&gt;Tokyo Demo Fest 2018のDemo Compo優勝作品の解説（グラフィック編） | gam0022.net&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;今回の発表では &lt;strong&gt;「形状」「質感」「演出」&lt;/strong&gt; の3つをテーマとして、WORMHOLEに用いたテクニックの解説を行いました。&lt;/p&gt;
-
-&lt;h1 id=&#34;形状-モデリング&#34;&gt;形状（モデリング）&lt;/h1&gt;
-
-&lt;p&gt;1つ目のテーマは &lt;strong&gt;「形状」&lt;/strong&gt; です。&lt;/p&gt;
-
-&lt;p&gt;CGの世界では、形状を決める作業をモデリングと呼びます。
-複雑なトンネルの形状を40行ほどの距離関数でモデリングする方法を解説しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-06-20-klab-tech-meetup4/klab_tech_meetup.011.jpeg&#34; alt=&#34;トンネルの距離関数の設計アプローチ&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;トンネルは既存のフラクタル図形をアレンジして設計しました。
-IFSと呼ばれる手法でMengerSpongeと呼ばれる有名なフラクタル図形を定義（図の左）して、IFSのパラメータを変化によって形状をアレンジ（図の中央）し、さらにfoldRotateという操作を加えるとトンネルの形状（図の右）が完成します。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-06-20-klab-tech-meetup4/klab_tech_meetup.012.jpeg&#34; alt=&#34;IFS（Iterated function system）とは&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;IFS&lt;/strong&gt; は自身の縮小コピーを重ね合わせることでフラクタル図形を作るテクニックです。
-IFSはIterated Function Systemの略で、その名前の通りforループの中で、fold、拡大や縮小、平行移動といった操作を繰り返して距離関数をつくります。
-forループで空間を操作してから、最後にBoxの距離関数を return します。&lt;/p&gt;
-
-&lt;p&gt;ループの中でスケールと位置を変化させながら空間を折りたたみをして、Boxが出現する座標空間を再帰的に繰り返すことで、Boxを再帰的に配置するイメージです。&lt;/p&gt;
-
-&lt;p&gt;foldの部分はかなり難解なので、1行ずつコメントアウトしながら変化を確認すると理解が深まると思います。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-06-20-klab-tech-meetup4/klab_tech_meetup.013.jpeg&#34; alt=&#34;IFS（Iterated function system）のアレンジ&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;この関数では平行移動はOffset、拡大縮小はScaleという名前のパラメータにしました。&lt;/p&gt;
-
-&lt;p&gt;このOffsetとScaleを変化させることで、フラクタル図形をアレンジできます。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-06-20-klab-tech-meetup4/klab_tech_meetup.014.jpeg&#34; alt=&#34;foldRotateとは&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;foldRotate&lt;/strong&gt; （別名: &lt;strong&gt;polarMod&lt;/strong&gt; ）はある軸を中心として一定の角度で回転しながら空間を折りたたみする操作です。
-この回転の角度を変化させると、任意の図形を多角形の柱のような形に変形できます。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;三角柱を作りたいときは、360° を N = 3 で割った θ = 120° ずつ回転します。&lt;/li&gt;
-&lt;li&gt;元の形が立方体なので、N = 4 のときは変化がありませんが、元の図形の4分の1が繰り返されています。&lt;/li&gt;
-&lt;li&gt;N = 6 にすれば6角柱ができます。&lt;/li&gt;
-&lt;li&gt;N = 8 にすれば8角柱になります。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;WORMHOLEのトンネルには8角柱のfoldRotateを利用しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-06-20-klab-tech-meetup4/klab_tech_meetup.018.jpeg&#34; alt=&#34;最終的なコード&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;ここまで使ったIFSによるMengerSpongeの距離関数とfoldRotateを組み合わせた最終的な距離関数のコードがこちらです。
-なんと、わずか40行のコードで複雑な形状を定義できました！
-非常に短いコードだけで複雑なモデリングができるのが距離関数の強みです。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;float3 _MengerOffset;
-float _MengerScale;
-float _MengerFold;
-
-// IFSによるMengerSpongeの距離関数
-float dMenger(float3 z0, float3 offset, float scale) {
-    float4 z = float4(z0, 1.0);
-    for (int n = 0; n &amp;lt; 4; n++) {
-        z = abs(z);
-
-        if (z.x &amp;lt; z.y) z.xy = z.yx;
-        if (z.x &amp;lt; z.z) z.xz = z.zx;
-        if (z.y &amp;lt; z.z) z.yz = z.zy;
-
-        z *= scale;
-        z.xyz -= offset * (scale - 1.0);
-
-        if (z.z &amp;lt; -0.5 * offset.z * (scale - 1.0))
-            z.z += offset.z * (scale - 1.0);
-    }
-    return (length(max(abs(z.xyz) - float3(1.0, 1.0, 1.0), 0.0)) - 0.05) / z.w;
-}
-
-// 2Dの回転行列の生成
-float2x2 rotate(in float a) {
-    float s = sin(a), c = cos(a);
-    return float2x2(c, s, -s, c);
-}
-
-// 回転のfold
-// https://www.shadertoy.com/view/Mlf3Wj
-float2 foldRotate(in float2 p, in float s) {
-    float a = PI / s - atan2(p.x, p.y);
-    float n = PI2 / s;
-    a = floor(a / n) * n;
-    p = mul(rotate(a), p);
-    return p;
-}
-
-// 最終的な距離関数
-inline float DistanceFunction(float3 pos) {
-    // 回転foldの適用
-    pos.yx = foldRotate(pos.yx, _MengerFold);
-
-    return dMenger(pos, _MengerOffset, _MengerScale);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;シェーダー全体: &lt;a href=&#34;https://github.com/gam0022/unity-demoscene/blob/master/Assets/Demoscene/Projects/2019-06-02-KLabTechMeetup4/Tunel.shader&#34;&gt;Tunel.shader&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;距離関数のfoldについてブログ記事を書いたので、もっと詳しく知りたい方はご覧ください。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://gam0022.net/blog/2017/03/02/raymarching-fold/&#34;&gt;距離関数のfold（折りたたみ）による形状設計 | gam0022.net&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;質感-ライティング&#34;&gt;質感（ライティング）&lt;/h1&gt;
-
-&lt;p&gt;2つ目のテーマは &lt;strong&gt;「質感」&lt;/strong&gt; です。&lt;/p&gt;
-
-&lt;p&gt;CGの世界では、質感はライティング処理によって計算されます。
-WORMHOLEではディファードレンダリングを採用しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-06-20-klab-tech-meetup4/klab_tech_meetup.021.jpeg&#34; alt=&#34;ディファードレンダリングを採用&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;ディファードレンダリングは2つのパスでシーンを描画するレンダリング手法です。&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;G-Bufferパス&lt;/strong&gt; でNormalやDepthなどのライティングに必要な情報を詰め込んだGバッファを生成します。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Lightingパス&lt;/strong&gt; でGバッファの情報を元にライティングを計算して、最終的なレンダリング結果を生成します。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;これがディファードレンダリングの流れです。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-06-20-klab-tech-meetup4/klab_tech_meetup.022.jpeg&#34; alt=&#34;ディファードレンダリングを採用した3つの理由&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;ディファードレンダリングを採用した理由は3つあります。&lt;/p&gt;
-
-&lt;p&gt;1つ目の理由は &lt;strong&gt;距離関数とポリゴンが混在したシーンであっても一貫したライティングができる&lt;/strong&gt; 点です。レイマーチングの結果をGバッファに書き込む &lt;strong&gt;G-Bufferパス&lt;/strong&gt; のシェーダーを実装すれば、Gバッファ上では距離関数もポリゴンもどちらもスクリーンスペースの2Dのデータとなり、両者を区別する必要がないので、一貫したライティングができます。
-&lt;a href=&#34;https://twitter.com/hecomi&#34;&gt;@hecomi&lt;/a&gt;さんが開発している&lt;a href=&#34;https://github.com/hecomi/uRaymarching&#34;&gt;uRaymarching&lt;/a&gt;というレイマーチング用のシェーダーのテンプレートを用いると、このようなシェーダーを少ない手間で書くことができます。
-WORMHOLEでもuRaymarchingを利用しています。&lt;/p&gt;
-
-&lt;p&gt;2つ目の理由は、Unityが標準で用意している &lt;strong&gt;Lightingパス&lt;/strong&gt; を利用することで、自分でライティング処理を実装しなくてもUnityの全種類の光源やReflectionProbeに対応できる点です。
-もしフォワードレンダリングでレイマーチングをする場合にはライティング処理を自力で実装する必要があるので、ライティング処理を実装しなくて済むのはディファードレンダリングの強みと言えると思います。&lt;/p&gt;
-
-&lt;p&gt;3つ目の理由は、ディファードレンダリングの特性上、光源が数が多いシーンであっても現実的な処理負荷でライティングを計算できる点です。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-06-20-klab-tech-meetup4/klab_tech_meetup.023.jpeg&#34; alt=&#34;ディファードレンダリングのライティングをカスタマイズ&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;一方でディファードレンダリングにはデメリットもあります。
-シーン全体を同じ &lt;strong&gt;Lightingパス&lt;/strong&gt; で処理するということは、
-裏を返すとマテリアルごとのライティングのカスタマイズが難しくなります。&lt;/p&gt;
-
-&lt;p&gt;このような場合、StencilやGバッファにマテリアルIDの情報を埋め込んで、
-Lightingパスの中でマテリアルを判定してライティングを切り替えることが正攻法となりますが、Lightingパスの修正となると、プロジェクト全体への影響も大きいですし、手間もかかってしまいます。&lt;/p&gt;
-
-&lt;p&gt;WORMHOLEではEmissiveを活用してこの問題を解決しました。
-Emissiveは自発光（自分が放つ光の強さ）のパラメーターですが、Emissive以外のパラメータを0にすると、Emissiveの色がそのまま最終的なピクセルの色として画面に出力されます。
-この性質を利用して、独自のライティング結果をEmissiveに書き込むことで、自由にライティングをカスタマイズできます。&lt;/p&gt;
-
-&lt;h1 id=&#34;演出-テキストのアニメーション&#34;&gt;演出（テキストのアニメーション）&lt;/h1&gt;
-
-&lt;p&gt;3つ目のテーマは &lt;strong&gt;「演出」&lt;/strong&gt; です。&lt;/p&gt;
-
-&lt;p&gt;演出と言ってもたくさんの要素があると思いますが、今回の発表ではテキストのアニメーション演出をシェーダーで実装する話をします。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-06-20-klab-tech-meetup4/klab_tech_meetup.028.jpeg&#34; alt=&#34;TextMeshProとは？&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;TextMeshProはSDFをつかって高品質にフォントをレンダリングするためのAssetです。&lt;/p&gt;
-
-&lt;p&gt;SDFはSigned Distance Fieldのことで、左のように文字の輪郭までの距離を画素値にした画像です。
-SDFを使うとフォントを拡大してもジャギが目立たないため、フォントのレンダリングに適しています。&lt;/p&gt;
-
-&lt;p&gt;また、勘の良い方はお気づきかと思いますが、SDFはレイマーチングの距離関数と全く同じ概念です。
-距離関数の入力が3Dなのか2Dなのかというのと、コードで表現されるか、テクスチャで表現されるかという違いはありますが、本質的には同じものです。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-06-20-klab-tech-meetup4/klab_tech_meetup_p29.gif&#34; alt=&#34;TextMeshProの描画の仕組み&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;TextMeshProの描画の仕組みについて説明します。&lt;/p&gt;
-
-&lt;p&gt;まずCPUで1文字ずつMeshを生成します。
-オレンジ色で示されたTextMeshProの文字をワイヤーフレーム表示を見ると、1文字ずつMeshが存在することが分かります。&lt;/p&gt;
-
-&lt;p&gt;SDFテクスチャのUV情報はMeshの頂点データとして埋め込まれています。
-次にこのMeshを描画するフラグメントシェーダーをつかってSDFテクスチャをフェッチしてフォントの内外判定をしてフォントをレンダリングします。&lt;/p&gt;
-
-&lt;p&gt;このように TextMeshProではシェーダーをつかってフォントをレンダリングしています。&lt;/p&gt;
-
-&lt;p&gt;つまり、 &lt;strong&gt;シェーダーを書けば、TextMeshProのレンダリングを 自由にカスタマイズできます！&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-06-20-klab-tech-meetup4/klab_tech_meetup.031.jpeg&#34; alt=&#34;TextMeshProのシェーダーのカスタマイズ方法&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;TextMeshProのシェーダーのカスタマイズ方法を紹介します。&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;TextMeshProのシェーダーをコピーします。どのシェーダーをコピーしても良いのですが、Mobileと書いてあるものは実装がシンプルなのでオススメです。&lt;/li&gt;
-&lt;li&gt;好きなようにシェーダーをカスタマイズします。色を決定する部分や、SDFテクスチャをフェッチする部分を改造するのが良いかと思います。&lt;/li&gt;
-&lt;li&gt;TextMeshProのインスペクタから改造したシェーダーを設定すれば、完了です。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-06-20-klab-tech-meetup4/klab_tech_meetup_p32.gif&#34; alt=&#34;TextMeshProのシェーダーのカスタマイズ例1&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;TextMeshProのシェーダーのカスタマイズ例を2つ紹介します。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;【左】色を決定する部分のシェーダーを書き換えて、sin関数で模様と動きをつけて、ブラウン管風のエフェクトと追加しました。&lt;/li&gt;
-&lt;li&gt;【右】2種類のSDFテクスチャをブレンドすることで、平成と令和をモーフィングさせました。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-06-20-klab-tech-meetup4/klab_tech_meetup_p33.gif&#34; alt=&#34;TextMeshProのシェーダーのカスタマイズ例2&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;これはWORMHOLEのオープニング部分のエフェクトです。文字をパラパラと出現させたり消失させたりしています。&lt;/p&gt;
-
-&lt;p&gt;これがシェーダーの差分のコードです。
-SDFテクスチャをフェッチするUVをこのように時間でclampすることで、フォントを引き伸ばす効果を加えました。
-わずか3行くらいの差分ですが、面白いエフェクトができたかなと思います。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-diff&#34;&gt;        // PIXEL SHADER
-        fixed4 PixShader(pixel_t input) : SV_Target
-        {
--           half d = tex2D(_MainTex, input.texcoord0.xy).a * input.param.x;
-+           half2 uv = input.texcoord0.xy;
-+           uv.y = clamp(uv.y, 0.0, 0.5 + 0.5 * sin(_Time.y));
-+           half d = tex2D(_MainTex, uv).a * input.param.x;
-            half4 c = input.faceColor * saturate(d - input.param.w);
-
-        #ifdef OUTLINE_ON
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;TextMeshProとカスタムシェーダーを組み合わせる方法についてはQiitaに記事を投稿しているので、詳しく知りたい方は、こちらをご覧ください。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://qiita.com/gam0022/items/f3b7a3e9821a67a5b0f3&#34;&gt;[Unity] カスタムシェーダーでTextMeshProに独創的な演出を加える | Qiita&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;番外編-unity-timelineを活用した演出&#34;&gt;番外編: Unity Timelineを活用した演出&lt;/h2&gt;
-
-&lt;p&gt;番外編のテキスト以外の演出の話として、Unity Timelineの活用についても紹介しました。&lt;/p&gt;
-
-&lt;p&gt;シェーダーだけでなくUnity Timelineも利用することで、演出制作の効率を高めました。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-06-20-klab-tech-meetup4/klab_tech_meetup.037.jpeg&#34; alt=&#34;Unity Timelineの活用&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;オレンジ色の枠で囲まれているのがTimeline Windowです。&lt;/p&gt;
-
-&lt;p&gt;演出の品質を高めるためには、演出の試行錯誤のイテレーションが必要です。
-このイテレーションを高速に回すために、リアルタイムに編集結果をプレビューできる点や、自由に再生時間をシークできる点が本当に良かったです。&lt;/p&gt;
-
-&lt;p&gt;Timelineの主な利用箇所です。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Animation Track
-
-&lt;ul&gt;
-&lt;li&gt;レイマーチング用のマテリアルのパラメータ制御&lt;/li&gt;
-&lt;li&gt;ポストエフェクト用のマテリアルのパラメータ制御&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;TextMeshPro専用のCustom Track
-
-&lt;ul&gt;
-&lt;li&gt;TextMeshProのテキストを書き換えは標準のTrackでは実現できなかったので、Timelineのカスタムトラックを自作して実現しました。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Chinemachine Track
-
-&lt;ul&gt;
-&lt;li&gt;カメラワークにはChinemachineというAssetのトラックを利用しました。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-06-20-klab-tech-meetup4/klab_tech_meetup.041.jpeg&#34; alt=&#34;演出のまとめ&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;シェーダーが不得意な（数式で表現しにくい）演出はTimelineも活用することで、効率的に演出を制作しました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;規則的な（数式で表現ができる）動きはシェーダーが得意
-
-&lt;ul&gt;
-&lt;li&gt;音楽のBPMに合わせてチカチカ点滅させるのは、シェーダーが適しています。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;不規則な（数式で表現しにくい）動きはTimelineが得意
-
-&lt;ul&gt;
-&lt;li&gt;カメラワークはTimelineを利用したほうが効率的に演出が作れると思います。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;まとめ&#34;&gt;まとめ&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-06-20-klab-tech-meetup4/klab_tech_meetup_p35.gif&#34; alt=&#34;まとめ&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;リアルな質感も、複雑な形状も、カッコいい演出も、どれもシェーダーで実現できます。&lt;/p&gt;
-
-&lt;p&gt;短いコードだけで多彩な表現ができるため、映像作成においては &lt;strong&gt;シェーダーは最強の道具&lt;/strong&gt; だと言えるでしょう。&lt;/p&gt;</description>
     </item>
     
   </channel>

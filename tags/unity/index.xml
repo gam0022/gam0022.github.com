@@ -10,6 +10,254 @@
     <atom:link href="/tags/unity/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>[Unity][URP] Y軸ビルボードシェーダー</title>
+      <link>https://gam0022.net/blog/2021/12/23/unity-urp-billboard-shader/</link>
+      <pubDate>Thu, 23 Dec 2021 10:00:00 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2021/12/23/unity-urp-billboard-shader/</guid>
+      <description>&lt;p&gt;こんな感じのY軸のビルボードをC#スクリプトを使わずに、シェーダーだけで実装しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-23-unity-urp-billboard-shader/Unity-URP-Billboard-trim.gif&#34; alt=&#34;Y軸ビルボード&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;GitHubリポジトリ: &lt;a href=&#34;https://github.com/gam0022/unity-urp-shader&#34;&gt;gam0022/unity-urp-shader&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;この記事は&lt;a href=&#34;https://gam0022.net/blog/2019/07/23/unity-y-axis-billboard-shader/&#34;&gt;以前の記事&lt;/a&gt;の改訂版です。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;URP（Universal Render Pipeline）に対応&lt;/li&gt;
+&lt;li&gt;ビルボード処理のアプローチを改良（プラットフォーム依存をなくす）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;この記事の要約&#34;&gt;この記事の要約&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;頂点シェーダーでうまく回転をすれば（適切な回転行列を生成すれば）、ビルボード処理ができる&lt;/li&gt;
+&lt;li&gt;回転行列を生成するアプローチでビルボード処理を実装すれば、プラットフォームの差異を考えなくて良い&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;シェーダーで実装するメリット&#34;&gt;シェーダーで実装するメリット&lt;/h1&gt;
+
+&lt;p&gt;シェーダーでビルボードを計算するメリットはたくさんあります。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;C#スクリプトが不要でシェーダーだけで動作する
+
+&lt;ul&gt;
+&lt;li&gt;シェーダーのポータビリティは高い！&lt;/li&gt;
+&lt;li&gt;かつてのVRCのようにユーザスクリプトが書けない環境でも使える&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;シーンビュー上でも動作する&lt;/li&gt;
+&lt;li&gt;GPU（頂点シェーダー）でビルボード計算ができる
+
+&lt;ul&gt;
+&lt;li&gt;ビルボード計算のためのCPU負荷が0&lt;/li&gt;
+&lt;li&gt;板ポリの頂点数は4なので、頂点シェーダーで多少重い処理をしても、GPU負荷への影響はわずか&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;シェーダーのコード-全体&#34;&gt;シェーダーのコード（全体）&lt;/h1&gt;
+
+&lt;p&gt;最終的なシェーダーのコードはこちらです。&lt;/p&gt;
+
+&lt;p&gt;単体で動作するので、コピペして使えます。MITライセンスです。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;// URP-Unlit-Billboard Shader by @gam0022 (MIT Licence)
+// https://gam0022.net//blog/2021/12/23/unity-urp-billboard-shader/
+Shader &amp;quot;Universal Render Pipeline/Unlit-Billboard&amp;quot;
+{
+    Properties
+    {
+        _BaseMap (&amp;quot;Base Map&amp;quot;, 2D) = &amp;quot;white&amp;quot; { }
+        _BaseColor (&amp;quot;Base Color&amp;quot;, Color) = (1, 1, 1, 1)
+        _Cutoff (&amp;quot;Alpha Cutoff&amp;quot;, Range(0, 1)) = 0.5
+    }
+
+    SubShader
+    {
+        Tags {
+            &amp;quot;RenderPipeline&amp;quot; = &amp;quot;UniversalPipeline&amp;quot;
+            &amp;quot;RenderType&amp;quot; = &amp;quot;TransparentCutout&amp;quot;
+            &amp;quot;Queue&amp;quot; = &amp;quot;AlphaTest&amp;quot;
+            &amp;quot;IgnoreProjector&amp;quot; = &amp;quot;True&amp;quot;
+        }
+
+        Pass
+        {
+            Tags { &amp;quot;LightMode&amp;quot; = &amp;quot;UniversalForward&amp;quot; }
+
+            HLSLPROGRAM
+
+            #pragma vertex vert
+            #pragma fragment frag
+
+            #include &amp;quot;Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl&amp;quot;
+
+            struct Attributes
+            {
+                float4 positionOS: POSITION;
+                float2 uv: TEXCOORD0;
+            };
+
+            struct Varyings
+            {
+                float4 positionHCS: SV_POSITION;
+                float2 uv: TEXCOORD0;
+            };
+
+            sampler2D _BaseMap;
+
+            CBUFFER_START(UnityPerMaterial)
+            float4 _BaseMap_ST;
+            half4 _BaseColor;
+            half _Cutoff;
+            CBUFFER_END
+
+            Varyings vert(Attributes IN)
+            {
+                Varyings OUT;
+
+                // 回転行列を生成してビルボード処理をします
+                float3 yup = float3(0.0, 1.0, 0.0);
+                float3 up = mul((float3x3)unity_ObjectToWorld, yup);
+
+                float3 worldPos = unity_ObjectToWorld._m03_m13_m23;
+                float3 toCamera = _WorldSpaceCameraPos - worldPos;
+                float3 right = normalize(cross(toCamera, up));
+                float3 forward = normalize(cross(up, right));
+
+                float4x4 mat = {
+                    1, 0, 0, 0,
+                    0, 1, 0, 0,
+                    0, 0, 1, 0,
+                    0, 0, 0, 1,
+                };
+                mat._m00_m10_m20 = right;
+                mat._m01_m11_m21 = up;
+                mat._m02_m12_m22 = forward;
+                mat._m03_m13_m23 = worldPos;
+
+                float4 vertex = float4(IN.positionOS.xyz, 1);
+                vertex = mul(mat, vertex);
+                OUT.positionHCS = mul(UNITY_MATRIX_VP, vertex);
+
+                OUT.uv = TRANSFORM_TEX(IN.uv, _BaseMap);
+                return OUT;
+            }
+
+            half4 frag(Varyings IN): SV_Target
+            {
+                half4 base = tex2D(_BaseMap, IN.uv);
+                clip(base.a - _Cutoff);
+                return base * _BaseColor;
+            }
+            ENDHLSL
+
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;解説&#34;&gt;解説&lt;/h1&gt;
+
+&lt;h2 id=&#34;前回の記事-ビュー変換をスキップ-の欠点&#34;&gt;前回の記事（ビュー変換をスキップ）の欠点&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/blog/2019/07/23/unity-y-axis-billboard-shader/&#34;&gt;以前の記事&lt;/a&gt;では、カメラのビュー行列の変換をスキップすることで、ビルボード処理を実装していました。&lt;/p&gt;
+
+&lt;p&gt;Unityではプラットフォーム間の違い（Zの方向やUVの上下など）をビュー行列でうまく吸収する設計になっており、ビュー行列の変換をスキップするとプラットフォームの対応を自力で行う必要が出てきて、かなり面倒でした。
+面倒なだけならまだいいのですが、将来的に新しいプラットフォームが増えた時などにシェーダーの修正が必要になる可能性もあり、このアプローチは筋が良くないな、と記事の公開後に思っていました。&lt;/p&gt;
+
+&lt;p&gt;この記事で紹介する &lt;strong&gt;回転行列を生成するアプローチ&lt;/strong&gt; では、そのような面倒な問題が起きません。&lt;/p&gt;
+
+&lt;h2 id=&#34;回転行列を生成するアプローチ&#34;&gt;回転行列を生成するアプローチ&lt;/h2&gt;
+
+&lt;p&gt;Unityが生成するモデル行列を使わずに、頂点シェーダーの中でうまく回転行列を生成することで、ビルボード処理を実現します。&lt;/p&gt;
+
+&lt;p&gt;シェーダーからビルボード処理を抜き出して、できるだけコメントを入れました。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;// 回転行列を生成してビルボード処理をします
+
+// Y-UPベクトル
+float3 yup = float3(0.0, 1.0, 0.0);
+
+// Y軸の基底ベクトル
+float3 up = mul((float3x3)unity_ObjectToWorld, yup);
+
+// オブジェクトのワールド座標
+float3 worldPos = unity_ObjectToWorld._m03_m13_m23;
+
+// オブジェクトからカメラに向かうベクトル
+float3 toCamera = _WorldSpaceCameraPos - worldPos;
+
+// X軸の基底ベクトル
+float3 right = normalize(cross(toCamera, up));
+
+// Z軸の基底ベクトル
+float3 forward = normalize(cross(up, right));
+
+// 各基底ベクトルを並べて回転行列を生成
+// （厳密には平行移動も含んでいるので姿勢行列）
+float4x4 mat = {
+    1, 0, 0, 0,
+    0, 1, 0, 0,
+    0, 0, 1, 0,
+    0, 0, 0, 1,
+};
+mat._m00_m10_m20 = right;//     X軸の基底ベクトル
+mat._m01_m11_m21 = up;//        Y軸の基底ベクトル
+mat._m02_m12_m22 = forward;//   Z軸の基底ベクトル
+mat._m03_m13_m23 = worldPos;//  平行移動のベクトル
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これは超重要情報ですが、 &lt;strong&gt;回転後の空間の基底ベクトルを並べた行列が回転行列になります。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;これだけ覚えておけば、回転だけでなく、拡大縮小やSkew（せん断）の行列は自然に導出できます。&lt;/p&gt;
+
+&lt;p&gt;知らなかった人はぜひ覚えておきましょう。CEDECで同じ話を2回くらいしています（&lt;a href=&#34;https://www.klab.com/jp/blog/creative/2020/cedec2020.html&#34;&gt;2020&lt;/a&gt;と&lt;a href=&#34;https://www.klab.com/jp/blog/tech/2021/cedec-kyushu-2021-online-3d.html&#34;&gt;2021&lt;/a&gt;）。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-23-unity-urp-billboard-shader/kec2-1.png&#34; alt=&#34;基底ベクトルをイメージすればOK&#34; /&gt;
+&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-23-unity-urp-billboard-shader/kec2-2.png&#34; alt=&#34;回転ベクトル1&#34; /&gt;
+&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-23-unity-urp-billboard-shader/kec2-3.png&#34; alt=&#34;回転ベクトル2&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;srp-batcher&#34;&gt;SRP Batcher&lt;/h2&gt;
+
+&lt;p&gt;URP（SRP）からSRP Batcherというドローコールバッチング（厳密にはローコールの数を減らすわけではなく、ドローコール間のGPUの設定コストを削減）の仕組みが導入されました。&lt;/p&gt;
+
+&lt;p&gt;以前のビルドインレンダーパイプラインのドローコールバッチングではMeshが結合されるので、ビルボードのように特殊な頂点変換をするシェーダーでは考慮が必要で、けっこう面倒でした。&lt;/p&gt;
+
+&lt;p&gt;SRP BatcherはMeshを結合しないので、頂点変換で特別な考慮をしなくてもシェーダーが動くようになりました！めでたい🎉&lt;/p&gt;
+
+&lt;p&gt;今回のシェーダーをフレームデバッガーで確認すると、ちゃんとSRP Batcherで描画されているのが分かります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-23-unity-urp-billboard-shader/frame-debugger.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-23-unity-urp-billboard-shader/frame-debugger.png&#34; alt=&#34;SRP Batcher&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;SRP Batcherについては、以下の記事が詳しいです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.unity.com/ja/technology/srp-batcher-speed-up-your-rendering&#34;&gt;SRP Batcher：レンダリングをスピードアップ | Unity Blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;リンク&#34;&gt;リンク&lt;/h1&gt;
+
+&lt;p&gt;参考にさせていただきました。ありがとうございます。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;URP対応（SRP Batcherも対応👍）
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://light11.hatenadiary.com/entry/2021/07/29/194213&#34;&gt;【Unity】URP用のシェーダの書き方が旧パイプラインと微妙に違ってややこしいのでまとめた - LIGHT11&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;利用したテクスチャ素材
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.pngall.com/tree-png/download/23754&#34;&gt;Tree PNG Clipart Background&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.deviantart.com/fabooguy/art/Dirt-Ground-Texture-Tileable-2048x2048-441212191&#34;&gt;Dirt/Ground Texture [Tileable | 2048x2048]&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
       <title>『Unityゲーム プログラミング・バイブル 2nd Generation』のレイマーチングとTimelineの章を執筆しました</title>
       <link>https://gam0022.net/blog/2021/06/08/unity-bible2/</link>
       <pubDate>Tue, 08 Jun 2021 10:30:19 +0900</pubDate>

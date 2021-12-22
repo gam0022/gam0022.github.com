@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme" content="hugo-academic">
+    <meta name="generator" content="Hugo 0.17" />
+    <meta name="author" content="@gam0022">
+    <meta name="description" content="ソフトウェアエンジニア">
+
+    <link rel="stylesheet" href="https://gam0022.net/css/highlight.min.css">
+    <link rel="stylesheet" href="https://gam0022.net/css/bootstrap.custom.css">
+    <link rel="stylesheet" href="https://gam0022.net/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://gam0022.net/css/academicons.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+    <link rel="stylesheet" href="https://gam0022.net/css/hugo-academic.css?2021-05-30">
+    
+
+    
+    <link rel="alternate" href="https://gam0022.net/index.xml" type="application/rss+xml" title="gam0022.net">
+    <link rel="feed" href="https://gam0022.net/index.xml" type="application/rss+xml" title="gam0022.net">
+    
+    <link rel="shortcut icon" href="https://gam0022.net/img/favicon.png" type="image/png">
+    
+
+    <title>[Unity][URP] Y軸ビルボードシェーダー | gam0022.net</title>
+
+    
+        <meta property="og:type" content="article">
+        <meta property="og:description" content="こんな感じのY軸のビルボードをC#スクリプトを使わずに、シェーダーだけで実装しました。
+
+
+
+GitHubリポジトリ: gam0022/unity-urp-shader
+
+この記事は以前の記事の改訂版です。
+
+
+URP（Universal Render Pipeline）に対応
+ビルボード処理のアプローチを改良（プラットフォーム依存をなくす）
+
+
+">
+    
+
+    
+        <meta property="og:image" content="https://gam0022.net/images/posts/2021-12-23-unity-urp-billboard-shader/Unity-URP-Billboard-trim.gif">
+        <meta name="twitter:card" content="summary_large_image">
+    
+
+    <meta property="fb:app_id" content="413045302370371">
+    <meta property="og:title" content="[Unity][URP] Y軸ビルボードシェーダー | gam0022.net">
+    <meta property="og:url" content="https://gam0022.net/blog/2021/12/23/unity-urp-billboard-shader/">
+
+    <meta name="twitter:site" content="@gam0022">
+
+    <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'ja'}</script>
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents">
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.7";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <script>
+    (function() {
+      var cx = '014076568914435119268:lp0lsoyv6uk';
+      var gcse = document.createElement('script');
+      gcse.type = 'text/javascript';
+      gcse.async = true;
+      gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(gcse, s);
+    })();
+  </script>
+
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+    <div class="container">
+
+        
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://gam0022.net/">gam0022.net</a>
+        </div>
+
+        
+        <div class="collapse navbar-collapse" id="#navbar-collapse-1">
+
+            
+            <ul class="nav navbar-nav navbar-left">
+                
+                <li class="nav-item"><a href="https://gam0022.net/#top"><i class='fa fa-home'></i> Home</a></li>
+                
+                <li class="nav-item"><a href="https://gam0022.net/post/"><i class='fa fa-pencil-square-o'></i> Post</a></li>
+                
+                <li class="nav-item"><a href="https://gam0022.net/works"><i class='fa fa-photo'></i> Work</a></li>
+                
+            </ul>
+
+            
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item google-search-item"><gcse:searchbox-only></gcse:searchbox-only>
+</li>
+                
+                <li class="nav-item"><a href="https://gam0022.net/webgl/#raymarching_reflect"><i class='fa fa-flask'></i> WebGL</a></li>
+                
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-9">
+            <article class="article" itemscope itemtype="http://schema.org/Article">
+
+                
+
+                <h3 class="article-title" itemprop="name">[Unity][URP] Y軸ビルボードシェーダー</h3>
+                
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2021-12-23 10:00:00 &#43;0900 JST" itemprop="datePublished">2021-12-23</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/unity">Unity</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/shader">Shader</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/cg">CG</a>
+        
+    </span>
+    
+    
+
+    
+        
+
+<div class="share-box">
+    <div class="share_wrap">
+        <div class="share_button">
+            <a href="http://b.hatena.ne.jp/entry/https://gam0022.net/blog/2021/12/23/unity-urp-billboard-shader/" class="hatena-bookmark-button" data-hatena-bookmark-title="[Unity][URP] Y軸ビルボードシェーダー" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+        </div>
+        <div class="share_button">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://gam0022.net/blog/2021/12/23/unity-urp-billboard-shader/" data-text="[Unity][URP] Y軸ビルボードシェーダー" data-via="gam0022">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+        <div class="share_button">
+            <div class="g-plus" data-action="share" data-annotation="none"></div>
+        </div>
+        <div class="share_button">
+            <div class="fb-like" data-href="https://gam0022.net/blog/2021/12/23/unity-urp-billboard-shader/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+        </div>
+        <div class="share_button">
+          <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a><script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+        </div>
+    </div>
+</div>
+
+
+    
+
+</div>
+
+
+                <div class="article-style" itemprop="articleBody">
+                    <p>こんな感じのY軸のビルボードをC#スクリプトを使わずに、シェーダーだけで実装しました。</p>
+
+<p><img src="/images/posts/2021-12-23-unity-urp-billboard-shader/Unity-URP-Billboard-trim.gif" alt="Y軸ビルボード" /></p>
+
+<p>GitHubリポジトリ: <a href="https://github.com/gam0022/unity-urp-shader">gam0022/unity-urp-shader</a></p>
+
+<p>この記事は<a href="/blog/2019/07/23/unity-y-axis-billboard-shader/">以前の記事</a>の改訂版です。</p>
+
+<ul>
+<li>URP（Universal Render Pipeline）に対応</li>
+<li>ビルボード処理のアプローチを改良（プラットフォーム依存をなくす）</li>
+</ul>
+
+<p></p>
+
+<h1 id="この記事の要約">この記事の要約</h1>
+
+<ol>
+<li>頂点シェーダーでうまく回転をすれば（適切な回転行列を生成すれば）、ビルボード処理ができる</li>
+<li>回転行列を生成するアプローチでビルボード処理を実装すれば、プラットフォームの差異を考えなくて良い</li>
+</ol>
+
+<h1 id="シェーダーで実装するメリット">シェーダーで実装するメリット</h1>
+
+<p>シェーダーでビルボードを計算するメリットはたくさんあります。</p>
+
+<ul>
+<li>C#スクリプトが不要でシェーダーだけで動作する
+
+<ul>
+<li>シェーダーのポータビリティは高い！</li>
+<li>かつてのVRCのようにユーザスクリプトが書けない環境でも使える</li>
+</ul></li>
+<li>シーンビュー上でも動作する</li>
+<li>GPU（頂点シェーダー）でビルボード計算ができる
+
+<ul>
+<li>ビルボード計算のためのCPU負荷が0</li>
+<li>板ポリの頂点数は4なので、頂点シェーダーで多少重い処理をしても、GPU負荷への影響はわずか</li>
+</ul></li>
+</ul>
+
+<h1 id="シェーダーのコード-全体">シェーダーのコード（全体）</h1>
+
+<p>最終的なシェーダーのコードはこちらです。</p>
+
+<p>単体で動作するので、コピペして使えます。MITライセンスです。</p>
+
+<pre><code class="language-c">// URP-Unlit-Billboard Shader by @gam0022 (MIT Licence)
+// https://gam0022.net//blog/2021/12/23/unity-urp-billboard-shader/
+Shader &quot;Universal Render Pipeline/Unlit-Billboard&quot;
+{
+    Properties
+    {
+        _BaseMap (&quot;Base Map&quot;, 2D) = &quot;white&quot; { }
+        _BaseColor (&quot;Base Color&quot;, Color) = (1, 1, 1, 1)
+        _Cutoff (&quot;Alpha Cutoff&quot;, Range(0, 1)) = 0.5
+    }
+
+    SubShader
+    {
+        Tags {
+            &quot;RenderPipeline&quot; = &quot;UniversalPipeline&quot;
+            &quot;RenderType&quot; = &quot;TransparentCutout&quot;
+            &quot;Queue&quot; = &quot;AlphaTest&quot;
+            &quot;IgnoreProjector&quot; = &quot;True&quot;
+        }
+
+        Pass
+        {
+            Tags { &quot;LightMode&quot; = &quot;UniversalForward&quot; }
+
+            HLSLPROGRAM
+
+            #pragma vertex vert
+            #pragma fragment frag
+
+            #include &quot;Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl&quot;
+
+            struct Attributes
+            {
+                float4 positionOS: POSITION;
+                float2 uv: TEXCOORD0;
+            };
+
+            struct Varyings
+            {
+                float4 positionHCS: SV_POSITION;
+                float2 uv: TEXCOORD0;
+            };
+
+            sampler2D _BaseMap;
+
+            CBUFFER_START(UnityPerMaterial)
+            float4 _BaseMap_ST;
+            half4 _BaseColor;
+            half _Cutoff;
+            CBUFFER_END
+
+            Varyings vert(Attributes IN)
+            {
+                Varyings OUT;
+
+                // 回転行列を生成してビルボード処理をします
+                float3 yup = float3(0.0, 1.0, 0.0);
+                float3 up = mul((float3x3)unity_ObjectToWorld, yup);
+
+                float3 worldPos = unity_ObjectToWorld._m03_m13_m23;
+                float3 toCamera = _WorldSpaceCameraPos - worldPos;
+                float3 right = normalize(cross(toCamera, up));
+                float3 forward = normalize(cross(up, right));
+
+                float4x4 mat = {
+                    1, 0, 0, 0,
+                    0, 1, 0, 0,
+                    0, 0, 1, 0,
+                    0, 0, 0, 1,
+                };
+                mat._m00_m10_m20 = right;
+                mat._m01_m11_m21 = up;
+                mat._m02_m12_m22 = forward;
+                mat._m03_m13_m23 = worldPos;
+
+                float4 vertex = float4(IN.positionOS.xyz, 1);
+                vertex = mul(mat, vertex);
+                OUT.positionHCS = mul(UNITY_MATRIX_VP, vertex);
+
+                OUT.uv = TRANSFORM_TEX(IN.uv, _BaseMap);
+                return OUT;
+            }
+
+            half4 frag(Varyings IN): SV_Target
+            {
+                half4 base = tex2D(_BaseMap, IN.uv);
+                clip(base.a - _Cutoff);
+                return base * _BaseColor;
+            }
+            ENDHLSL
+
+        }
+    }
+}
+</code></pre>
+
+<h1 id="解説">解説</h1>
+
+<h2 id="前回の記事-ビュー変換をスキップ-の欠点">前回の記事（ビュー変換をスキップ）の欠点</h2>
+
+<p><a href="/blog/2019/07/23/unity-y-axis-billboard-shader/">以前の記事</a>では、カメラのビュー行列の変換をスキップすることで、ビルボード処理を実装していました。</p>
+
+<p>Unityではプラットフォーム間の違い（Zの方向やUVの上下など）をビュー行列でうまく吸収する設計になっており、ビュー行列の変換をスキップするとプラットフォームの対応を自力で行う必要が出てきて、かなり面倒でした。
+面倒なだけならまだいいのですが、将来的に新しいプラットフォームが増えた時などにシェーダーの修正が必要になる可能性もあり、このアプローチは筋が良くないな、と記事の公開後に思っていました。</p>
+
+<p>この記事で紹介する <strong>回転行列を生成するアプローチ</strong> では、そのような面倒な問題が起きません。</p>
+
+<h2 id="回転行列を生成するアプローチ">回転行列を生成するアプローチ</h2>
+
+<p>Unityが生成するモデル行列を使わずに、頂点シェーダーの中でうまく回転行列を生成することで、ビルボード処理を実現します。</p>
+
+<p>シェーダーからビルボード処理を抜き出して、できるだけコメントを入れました。</p>
+
+<pre><code class="language-c">// 回転行列を生成してビルボード処理をします
+
+// Y-UPベクトル
+float3 yup = float3(0.0, 1.0, 0.0);
+
+// Y軸の基底ベクトル
+float3 up = mul((float3x3)unity_ObjectToWorld, yup);
+
+// オブジェクトのワールド座標
+float3 worldPos = unity_ObjectToWorld._m03_m13_m23;
+
+// オブジェクトからカメラに向かうベクトル
+float3 toCamera = _WorldSpaceCameraPos - worldPos;
+
+// X軸の基底ベクトル
+float3 right = normalize(cross(toCamera, up));
+
+// Z軸の基底ベクトル
+float3 forward = normalize(cross(up, right));
+
+// 各基底ベクトルを並べて回転行列を生成
+// （厳密には平行移動も含んでいるので姿勢行列）
+float4x4 mat = {
+    1, 0, 0, 0,
+    0, 1, 0, 0,
+    0, 0, 1, 0,
+    0, 0, 0, 1,
+};
+mat._m00_m10_m20 = right;//     X軸の基底ベクトル
+mat._m01_m11_m21 = up;//        Y軸の基底ベクトル
+mat._m02_m12_m22 = forward;//   Z軸の基底ベクトル
+mat._m03_m13_m23 = worldPos;//  平行移動のベクトル
+</code></pre>
+
+<p>これは超重要情報ですが、 <strong>回転後の空間の基底ベクトルを並べた行列が回転行列になります。</strong></p>
+
+<p>これだけ覚えておけば、回転だけでなく、拡大縮小やSkew（せん断）の行列は自然に導出できます。</p>
+
+<p>知らなかった人はぜひ覚えておきましょう。CEDECで同じ話を2回くらいしています（<a href="https://www.klab.com/jp/blog/creative/2020/cedec2020.html">2020</a>と<a href="https://www.klab.com/jp/blog/tech/2021/cedec-kyushu-2021-online-3d.html">2021</a>）。</p>
+
+<p><img src="/images/posts/2021-12-23-unity-urp-billboard-shader/kec2-1.png" alt="基底ベクトルをイメージすればOK" />
+<img src="/images/posts/2021-12-23-unity-urp-billboard-shader/kec2-2.png" alt="回転ベクトル1" />
+<img src="/images/posts/2021-12-23-unity-urp-billboard-shader/kec2-3.png" alt="回転ベクトル2" /></p>
+
+<h2 id="srp-batcher">SRP Batcher</h2>
+
+<p>URP（SRP）からSRP Batcherというドローコールバッチング（厳密にはローコールの数を減らすわけではなく、ドローコール間のGPUの設定コストを削減）の仕組みが導入されました。</p>
+
+<p>以前のビルドインレンダーパイプラインのドローコールバッチングではMeshが結合されるので、ビルボードのように特殊な頂点変換をするシェーダーでは考慮が必要で、けっこう面倒でした。</p>
+
+<p>SRP BatcherはMeshを結合しないので、頂点変換で特別な考慮をしなくてもシェーダーが動くようになりました！めでたい🎉</p>
+
+<p>今回のシェーダーをフレームデバッガーで確認すると、ちゃんとSRP Batcherで描画されているのが分かります。</p>
+
+<p><a href="/images/posts/2021-12-23-unity-urp-billboard-shader/frame-debugger.png"><img src="/images/posts/2021-12-23-unity-urp-billboard-shader/frame-debugger.png" alt="SRP Batcher" /></a></p>
+
+<p>SRP Batcherについては、以下の記事が詳しいです。</p>
+
+<ul>
+<li><a href="https://blog.unity.com/ja/technology/srp-batcher-speed-up-your-rendering">SRP Batcher：レンダリングをスピードアップ | Unity Blog</a></li>
+</ul>
+
+<h1 id="リンク">リンク</h1>
+
+<p>参考にさせていただきました。ありがとうございます。</p>
+
+<ul>
+<li>URP対応（SRP Batcherも対応👍）
+
+<ul>
+<li><a href="https://light11.hatenadiary.com/entry/2021/07/29/194213">【Unity】URP用のシェーダの書き方が旧パイプラインと微妙に違ってややこしいのでまとめた - LIGHT11</a></li>
+</ul></li>
+<li>利用したテクスチャ素材
+
+<ul>
+<li><a href="http://www.pngall.com/tree-png/download/23754">Tree PNG Clipart Background</a></li>
+<li><a href="https://www.deviantart.com/fabooguy/art/Dirt-Ground-Texture-Tileable-2048x2048-441212191">Dirt/Ground Texture [Tileable | 2048x2048]</a></li>
+</ul></li>
+</ul>
+                </div>
+
+            </article>
+
+            
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2021-12-23 10:00:00 &#43;0900 JST" itemprop="datePublished">2021-12-23</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/unity">Unity</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/shader">Shader</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/cg">CG</a>
+        
+    </span>
+    
+    
+
+    
+        
+
+<div class="share-box">
+    <div class="share_wrap">
+        <div class="share_button">
+            <a href="http://b.hatena.ne.jp/entry/https://gam0022.net/blog/2021/12/23/unity-urp-billboard-shader/" class="hatena-bookmark-button" data-hatena-bookmark-title="[Unity][URP] Y軸ビルボードシェーダー" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+        </div>
+        <div class="share_button">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://gam0022.net/blog/2021/12/23/unity-urp-billboard-shader/" data-text="[Unity][URP] Y軸ビルボードシェーダー" data-via="gam0022">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+        <div class="share_button">
+            <div class="g-plus" data-action="share" data-annotation="none"></div>
+        </div>
+        <div class="share_button">
+            <div class="fb-like" data-href="https://gam0022.net/blog/2021/12/23/unity-urp-billboard-shader/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+        </div>
+        <div class="share_button">
+          <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a><script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+        </div>
+    </div>
+</div>
+
+
+    
+
+</div>
+
+            <nav>
+    <ul class="pager">
+        
+        <li class="previous"><a href="https://gam0022.net/blog/2021/12/20/tdf2021-glsl/"><span aria-hidden="true">&larr;</span> Tokyo Demo Fest 2021のGLSL Graphics Compo優勝作品の解説</a></li>
+        
+
+        
+    </ul>
+</nav>
+
+            
+<section id="comments">
+    <div id="disqus_thread">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'gam0022-net';
+    var disqus_identifier = 'https:\/\/gam0022.net\/blog\/2021\/12\/23\/unity-urp-billboard-shader\/';
+    var disqus_title = '[Unity][URP] Y軸ビルボードシェーダー';
+    var disqus_url = 'https:\/\/gam0022.net\/blog\/2021\/12\/23\/unity-urp-billboard-shader\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+</section>
+
+
+            <div class="row">
+    <h4 class="blog-title"><img src="/img/gam0022_splash.png" class="icon"> gam0022.net's Tag Cloud</h4>
+    <ul class="category-list">
+    <div class="widget tagcloud">
+        
+        <a href="https://gam0022.net/tags/apache" style="font-size: 12px;">apache(1)</a>
+        
+        <a href="https://gam0022.net/tags/ascii" style="font-size: 12px;">ascii(1)</a>
+        
+        <a href="https://gam0022.net/tags/bootstrap" style="font-size: 12px;">bootstrap(2)</a>
+        
+        <a href="https://gam0022.net/tags/c" style="font-size: 12px;">c#(1)</a>
+        
+        <a href="https://gam0022.net/tags/c&#43;&#43;" style="font-size: 12px;">c&#43;&#43;(1)</a>
+        
+        <a href="https://gam0022.net/tags/canvas" style="font-size: 12px;">canvas(1)</a>
+        
+        <a href="https://gam0022.net/tags/cg" style="font-size: 12px;">cg(27)</a>
+        
+        <a href="https://gam0022.net/tags/cgi" style="font-size: 12px;">cgi(2)</a>
+        
+        <a href="https://gam0022.net/tags/chrome" style="font-size: 12px;">chrome(1)</a>
+        
+        <a href="https://gam0022.net/tags/cocot" style="font-size: 12px;">cocot(1)</a>
+        
+        <a href="https://gam0022.net/tags/coffeescript" style="font-size: 12px;">coffeescript(1)</a>
+        
+        <a href="https://gam0022.net/tags/coins" style="font-size: 12px;">coins(3)</a>
+        
+        <a href="https://gam0022.net/tags/cojt" style="font-size: 12px;">cojt(4)</a>
+        
+        <a href="https://gam0022.net/tags/conoha" style="font-size: 12px;">conoha(2)</a>
+        
+        <a href="https://gam0022.net/tags/contest" style="font-size: 12px;">contest(1)</a>
+        
+        <a href="https://gam0022.net/tags/css" style="font-size: 12px;">css(1)</a>
+        
+        <a href="https://gam0022.net/tags/cuda" style="font-size: 12px;">cuda(1)</a>
+        
+        <a href="https://gam0022.net/tags/daigoroubot" style="font-size: 12px;">daigoroubot(1)</a>
+        
+        <a href="https://gam0022.net/tags/demo" style="font-size: 12px;">demo(1)</a>
+        
+        <a href="https://gam0022.net/tags/develop" style="font-size: 12px;">develop(1)</a>
+        
+        <a href="https://gam0022.net/tags/diary" style="font-size: 12px;">diary(5)</a>
+        
+        <a href="https://gam0022.net/tags/eclipse" style="font-size: 12px;">eclipse(3)</a>
+        
+        <a href="https://gam0022.net/tags/emscripten" style="font-size: 12px;">emscripten(1)</a>
+        
+        <a href="https://gam0022.net/tags/encoding" style="font-size: 12px;">encoding(1)</a>
+        
+        <a href="https://gam0022.net/tags/event" style="font-size: 12px;">event(20)</a>
+        
+        <a href="https://gam0022.net/tags/gcc" style="font-size: 12px;">gcc(1)</a>
+        
+        <a href="https://gam0022.net/tags/gem" style="font-size: 12px;">gem(3)</a>
+        
+        <a href="https://gam0022.net/tags/git" style="font-size: 12px;">git(2)</a>
+        
+        <a href="https://gam0022.net/tags/github" style="font-size: 12px;">github(2)</a>
+        
+        <a href="https://gam0022.net/tags/glsl" style="font-size: 12px;">glsl(10)</a>
+        
+        <a href="https://gam0022.net/tags/glsl-snadbox" style="font-size: 12px;">glsl-snadbox(1)</a>
+        
+        <a href="https://gam0022.net/tags/gnuplot" style="font-size: 12px;">gnuplot(1)</a>
+        
+        <a href="https://gam0022.net/tags/gpu" style="font-size: 12px;">gpu(1)</a>
+        
+        <a href="https://gam0022.net/tags/heroku" style="font-size: 12px;">heroku(1)</a>
+        
+        <a href="https://gam0022.net/tags/hlsl" style="font-size: 12px;">hlsl(1)</a>
+        
+        <a href="https://gam0022.net/tags/homebrew" style="font-size: 12px;">homebrew(2)</a>
+        
+        <a href="https://gam0022.net/tags/houdini" style="font-size: 12px;">houdini(2)</a>
+        
+        <a href="https://gam0022.net/tags/hsp" style="font-size: 12px;">hsp(1)</a>
+        
+        <a href="https://gam0022.net/tags/html5" style="font-size: 12px;">html5(2)</a>
+        
+        <a href="https://gam0022.net/tags/http2" style="font-size: 12px;">http2(1)</a>
+        
+        <a href="https://gam0022.net/tags/https" style="font-size: 12px;">https(1)</a>
+        
+        <a href="https://gam0022.net/tags/hugo" style="font-size: 12px;">hugo(1)</a>
+        
+        <a href="https://gam0022.net/tags/isucon" style="font-size: 12px;">isucon(2)</a>
+        
+        <a href="https://gam0022.net/tags/iterm2" style="font-size: 12px;">iterm2(1)</a>
+        
+        <a href="https://gam0022.net/tags/java" style="font-size: 12px;">java(2)</a>
+        
+        <a href="https://gam0022.net/tags/javascript" style="font-size: 12px;">javascript(8)</a>
+        
+        <a href="https://gam0022.net/tags/keynote" style="font-size: 12px;">keynote(1)</a>
+        
+        <a href="https://gam0022.net/tags/kramdown" style="font-size: 12px;">kramdown(1)</a>
+        
+        <a href="https://gam0022.net/tags/latex" style="font-size: 12px;">latex(3)</a>
+        
+        <a href="https://gam0022.net/tags/lion" style="font-size: 12px;">lion(3)</a>
+        
+        <a href="https://gam0022.net/tags/llvm-gcc" style="font-size: 12px;">llvm-gcc(1)</a>
+        
+        <a href="https://gam0022.net/tags/mac-os-x" style="font-size: 12px;">mac-os-x(18)</a>
+        
+        <a href="https://gam0022.net/tags/markdown" style="font-size: 12px;">markdown(2)</a>
+        
+        <a href="https://gam0022.net/tags/mecab" style="font-size: 12px;">mecab(1)</a>
+        
+        <a href="https://gam0022.net/tags/mountain-lion" style="font-size: 12px;">mountain-lion(1)</a>
+        
+        <a href="https://gam0022.net/tags/moutain-lion" style="font-size: 12px;">moutain-lion(1)</a>
+        
+        <a href="https://gam0022.net/tags/neort" style="font-size: 12px;">neort(1)</a>
+        
+        <a href="https://gam0022.net/tags/nginx" style="font-size: 12px;">nginx(1)</a>
+        
+        <a href="https://gam0022.net/tags/ocaml" style="font-size: 12px;">ocaml(1)</a>
+        
+        <a href="https://gam0022.net/tags/octave" style="font-size: 12px;">octave(1)</a>
+        
+        <a href="https://gam0022.net/tags/octopress" style="font-size: 12px;">octopress(13)</a>
+        
+        <a href="https://gam0022.net/tags/opencv" style="font-size: 12px;">opencv(1)</a>
+        
+        <a href="https://gam0022.net/tags/optix" style="font-size: 12px;">optix(2)</a>
+        
+        <a href="https://gam0022.net/tags/passenger" style="font-size: 12px;">passenger(1)</a>
+        
+        <a href="https://gam0022.net/tags/programming" style="font-size: 12px;">programming(1)</a>
+        
+        <a href="https://gam0022.net/tags/rails" style="font-size: 12px;">rails(2)</a>
+        
+        <a href="https://gam0022.net/tags/rails4" style="font-size: 12px;">rails4(1)</a>
+        
+        <a href="https://gam0022.net/tags/raymarching" style="font-size: 12px;">raymarching(2)</a>
+        
+        <a href="https://gam0022.net/tags/revision" style="font-size: 12px;">revision(2)</a>
+        
+        <a href="https://gam0022.net/tags/rsync" style="font-size: 12px;">rsync(2)</a>
+        
+        <a href="https://gam0022.net/tags/ruby" style="font-size: 12px;">ruby(17)</a>
+        
+        <a href="https://gam0022.net/tags/ruby-c-extension" style="font-size: 12px;">ruby-c-extension(3)</a>
+        
+        <a href="https://gam0022.net/tags/ruby-on-rails" style="font-size: 12px;">ruby-on-rails(1)</a>
+        
+        <a href="https://gam0022.net/tags/rubygems" style="font-size: 12px;">rubygems(1)</a>
+        
+        <a href="https://gam0022.net/tags/rust" style="font-size: 12px;">rust(3)</a>
+        
+        <a href="https://gam0022.net/tags/rvm" style="font-size: 12px;">rvm(1)</a>
+        
+        <a href="https://gam0022.net/tags/sass/scss" style="font-size: 12px;">sass/scss(1)</a>
+        
+        <a href="https://gam0022.net/tags/serversmanvps" style="font-size: 12px;">serversmanvps(3)</a>
+        
+        <a href="https://gam0022.net/tags/shader" style="font-size: 12px;">shader(4)</a>
+        
+        <a href="https://gam0022.net/tags/shadertoy" style="font-size: 12px;">shadertoy(1)</a>
+        
+        <a href="https://gam0022.net/tags/slide" style="font-size: 12px;">slide(4)</a>
+        
+        <a href="https://gam0022.net/tags/sqlite3" style="font-size: 12px;">sqlite3(1)</a>
+        
+        <a href="https://gam0022.net/tags/ssh" style="font-size: 12px;">ssh(1)</a>
+        
+        <a href="https://gam0022.net/tags/study" style="font-size: 12px;">study(3)</a>
+        
+        <a href="https://gam0022.net/tags/techbooster" style="font-size: 12px;">techbooster(1)</a>
+        
+        <a href="https://gam0022.net/tags/terminal.app" style="font-size: 12px;">terminal.app(1)</a>
+        
+        <a href="https://gam0022.net/tags/textmeshpro" style="font-size: 12px;">textmeshpro(1)</a>
+        
+        <a href="https://gam0022.net/tags/theme" style="font-size: 12px;">theme(1)</a>
+        
+        <a href="https://gam0022.net/tags/three.js" style="font-size: 12px;">three.js(2)</a>
+        
+        <a href="https://gam0022.net/tags/tips" style="font-size: 12px;">tips(1)</a>
+        
+        <a href="https://gam0022.net/tags/tokyodemofest" style="font-size: 12px;">tokyodemofest(9)</a>
+        
+        <a href="https://gam0022.net/tags/trouble" style="font-size: 12px;">trouble(1)</a>
+        
+        <a href="https://gam0022.net/tags/twincal" style="font-size: 12px;">twincal(1)</a>
+        
+        <a href="https://gam0022.net/tags/twitter" style="font-size: 12px;">twitter(1)</a>
+        
+        <a href="https://gam0022.net/tags/typescript" style="font-size: 12px;">typescript(2)</a>
+        
+        <a href="https://gam0022.net/tags/ubuntu" style="font-size: 12px;">ubuntu(2)</a>
+        
+        <a href="https://gam0022.net/tags/unity" style="font-size: 12px;">unity(9)</a>
+        
+        <a href="https://gam0022.net/tags/utf-8-mac" style="font-size: 12px;">utf-8-mac(1)</a>
+        
+        <a href="https://gam0022.net/tags/uva-online-judge" style="font-size: 12px;">uva-online-judge(3)</a>
+        
+        <a href="https://gam0022.net/tags/vim" style="font-size: 12px;">vim(1)</a>
+        
+        <a href="https://gam0022.net/tags/vps" style="font-size: 12px;">vps(2)</a>
+        
+        <a href="https://gam0022.net/tags/vscode" style="font-size: 12px;">vscode(1)</a>
+        
+        <a href="https://gam0022.net/tags/web" style="font-size: 12px;">web(1)</a>
+        
+        <a href="https://gam0022.net/tags/webgl" style="font-size: 12px;">webgl(10)</a>
+        
+        <a href="https://gam0022.net/tags/webrick" style="font-size: 12px;">webrick(1)</a>
+        
+        <a href="https://gam0022.net/tags/windows-terminal" style="font-size: 12px;">windows-terminal(1)</a>
+        
+        <a href="https://gam0022.net/tags/x11" style="font-size: 12px;">x11(1)</a>
+        
+        <a href="https://gam0022.net/tags/x86" style="font-size: 12px;">x86(1)</a>
+        
+        <a href="https://gam0022.net/tags/xcode" style="font-size: 12px;">xcode(2)</a>
+        
+        <a href="https://gam0022.net/tags/zsh" style="font-size: 12px;">zsh(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%a2%e3%82%bb%e3%83%b3%e3%83%96%e3%83%a9" style="font-size: 12px;">アセンブラ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%a2%e3%83%95%e3%82%a3%e3%83%aa%e3%82%a8%e3%82%a4%e3%83%88" style="font-size: 12px;">アフィリエイト(2)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%b3%e3%83%9f%e3%82%b1" style="font-size: 12px;">コミケ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%b4" style="font-size: 12px;">ゴ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%b7%e3%82%a7%e3%83%bc%e3%83%80%e3%83%bc" style="font-size: 12px;">シェーダー(3)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%89%e3%83%a1%e3%82%a4%e3%83%b3" style="font-size: 12px;">ドメイン(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%8d%e3%82%bf" style="font-size: 12px;">ネタ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%91%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%b3%e3%82%b0" style="font-size: 12px;">パストレーシング(6)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%96%e3%83%ad%e3%82%b0%e9%81%8b%e5%96%b6" style="font-size: 12px;">ブログ運営(3)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%9a%e3%83%bc%e3%83%91%e3%83%bc%e3%82%af%e3%83%a9%e3%83%95%e3%83%88" style="font-size: 12px;">ペーパークラフト(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%9c%e3%83%bc%e3%83%b3%e3%83%87%e3%82%b8%e3%82%bf%e3%83%ab" style="font-size: 12px;">ボーンデジタル(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%aa%e3%83%a2%e3%83%bc%e3%83%88%e3%83%af%e3%83%bc%e3%82%af" style="font-size: 12px;">リモートワーク(2)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%b3%e3%82%b0" style="font-size: 12px;">レイトレーシング(5)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%88%e3%83%ac%e5%90%88%e5%ae%bf" style="font-size: 12px;">レイトレ合宿(5)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%9e%e3%83%bc%e3%83%81%e3%83%b3%e3%82%b0" style="font-size: 12px;">レイマーチング(18)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%87%ba%e7%89%88" style="font-size: 12px;">出版(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%8b%89%e5%bc%b7%e4%bc%9a" style="font-size: 12px;">勉強会(7)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%95%86%e5%93%81%e3%83%ac%e3%83%93%e3%83%a5%e3%83%bc" style="font-size: 12px;">商品レビュー(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%a4%a7%e4%ba%94%e9%83%8ebot" style="font-size: 12px;">大五郎bot(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%ae%a3%e4%bc%9d" style="font-size: 12px;">宣伝(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%b0%8f%e3%83%8d%e3%82%bf" style="font-size: 12px;">小ネタ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%8a%80%e8%a1%93%e6%9b%b8%e5%85%b8" style="font-size: 12px;">技術書典(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%97%a5%e6%9c%ac%e8%aa%9e" style="font-size: 12px;">日本語(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%97%a5%e8%a8%98" style="font-size: 12px;">日記(2)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%9b%b8%e7%b1%8d" style="font-size: 12px;">書籍(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%9c%ac" style="font-size: 12px;">本(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%a9%9f%e6%a2%b0%e8%aa%9e%e5%ba%8f%e8%ab%96" style="font-size: 12px;">機械語序論(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e7%99%ba%e8%a1%a8%e8%b3%87%e6%96%99" style="font-size: 12px;">発表資料(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e7%99%bb%e5%a3%87" style="font-size: 12px;">登壇(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e7%a0%94%e7%a9%b6" style="font-size: 12px;">研究(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e7%ab%b6%e6%8a%80%e3%83%97%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%9f%e3%83%b3%e3%82%b0" style="font-size: 12px;">競技プログラミング(4)</a>
+        
+        <a href="https://gam0022.net/tags/%e8%b2%b7%e3%81%a3%e3%81%a6%e8%89%af%e3%81%8b%e3%81%a3%e3%81%9f%e3%82%82%e3%81%ae" style="font-size: 12px;">買って良かったもの(2)</a>
+        
+    </div>
+</ul>
+
+</div>
+
+
+
+
+
+
+<div class="row">
+    <div class="col section-heading">
+        <h1>Recent Posts</h1>
+        <p>最新記事</p>
+        <div class="col-md-12">
+  <div class="row">
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2021/12/23/unity-urp-billboard-shader/" itemprop="url">[Unity][URP] Y軸ビルボードシェーダー</a></h3>
+      
+      <a href="https://gam0022.net/blog/2021/12/23/unity-urp-billboard-shader/">
+        <img src="https://gam0022.net///images/posts/2021-12-23-unity-urp-billboard-shader/Unity-URP-Billboard-trim.gif" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2021/12/20/tdf2021-glsl/" itemprop="url">Tokyo Demo Fest 2021のGLSL Graphics Compo優勝作品の解説</a></h3>
+      
+      <a href="https://gam0022.net/blog/2021/12/20/tdf2021-glsl/">
+        <img src="https://gam0022.net///images/posts/2021-12-20-tdf2021-glsl-compo/party1164.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2021/08/23/best-buy/" itemprop="url">リモートワーク「買って良かったモノ・買って失敗したモノ」</a></h3>
+      
+      <a href="https://gam0022.net/blog/2021/08/23/best-buy/">
+        <img src="https://gam0022.net///images/posts/2021-08-23-best-buy/desk_16_9.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2021/06/08/unity-bible2/" itemprop="url">『Unityゲーム プログラミング・バイブル 2nd Generation』のレイマーチングとTimelineの章を執筆しました</a></h3>
+      
+      <a href="https://gam0022.net/blog/2021/06/08/unity-bible2/">
+        <img src="https://gam0022.net///images/posts/2021-05-27-unity-bible2/Collage_Fotor.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2021/05/06/onamae-com-to-google-domain/" itemprop="url">お名前.comからGoogleドメインに乗り換えました（2021版）</a></h3>
+      
+      <a href="https://gam0022.net/blog/2021/05/06/onamae-com-to-google-domain/">
+        <img src="https://gam0022.net///images/posts/2021-05-05-onamae-com-to-google-domain/transfer.png" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2021/03/08/raymarching-in-windows-terminal/" itemprop="url">Windows Terminalの背景でレイマーチング</a></h3>
+      
+      <a href="https://gam0022.net/blog/2021/03/08/raymarching-in-windows-terminal/">
+        <img src="https://gam0022.net///images/posts/2021-02-26-raymarching-in-windows-terminal/raymarching-in-windows-terminal.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2021/02/15/demoscene-study-session/" itemprop="url">メガデモ勉強会2021で発表しました</a></h3>
+      
+      <a href="https://gam0022.net/blog/2021/02/15/demoscene-study-session/">
+        <img src="https://gam0022.net///images/posts/2021-02-15-demoscene-study-session/20210214_demoscene.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2020/09/17/kec2/" itemprop="url">第2回 KLab Expert Camp「テーマ：シェーダー」のメンターをしました</a></h3>
+      
+      <a href="https://gam0022.net/blog/2020/09/17/kec2/">
+        <img src="https://gam0022.net///images/posts/2020-09-14-kec2/name-card.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2020/09/13/cgworld-vol266/" itemprop="url">CGWORLD vol.266（2020年10月号）に「デモシーンを支えるプロシージャル技術」という記事を寄稿しました</a></h3>
+      
+      <a href="https://gam0022.net/blog/2020/09/13/cgworld-vol266/">
+        <img src="https://gam0022.net///images/posts/2020-09-13-cgworld-vol266/Collage_Fotor.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+  </div>
+
+  <div class="read-more">
+    <a href="/post" class="btn btn-primary btn-outline">Read more</a>
+  </div>
+</div>
+    </div>
+</div>
+
+            <footer class="site-footer">
+    <div class="container">
+        <p class="powered-by">
+
+            &copy; 2021 gam0022 &middot; 
+
+            Powered by the <a href="https://github.com/gam0022/hugo-academic" target="_blank">Customized Academic theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+            <span class="pull-right"><a href="#" id="back_to_top"><span class="button_icon"><i class="fa fa-chevron-up fa-2x" aria-hidden="true"></i></span></a></span>
+
+        </p>
+    </div>
+</footer>
+
+                    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+        <script src="https://gam0022.net/js/jquery-1.12.3.min.js"></script>
+        <script src="https://gam0022.net/js/bootstrap.custom.js"></script>
+        <script src="https://gam0022.net/js/hugo-academic.js"></script>
+        
+
+        <script>
+            
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-84469205-1', 'auto');
+            ga('send', 'pageview');
+
+             
+            var links = document.querySelectorAll('a');
+            Array.prototype.map.call(links, function(item) {
+                if (item.host != document.location.host) {
+                    item.addEventListener('click', function() {
+                        var action = item.getAttribute('data-action') || 'follow';
+                        ga('send', 'event', 'outbound', action, item.href);
+                    });
+                }
+            });
+            
+
+            $(document).ready(function() {
+                $("#TableOfContents").addClass("bs-docs-sidebar affix");
+                $("#TableOfContents ul").addClass("nav nav-stacked");
+            });
+        </script>
+
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        
+        
+
+    </body>
+</html>
+
+        </div>
+        <div class="col-md-3">
+            <nav id="TableOfContents">
+<ul>
+<li><a href="#この記事の要約">この記事の要約</a></li>
+<li><a href="#シェーダーで実装するメリット">シェーダーで実装するメリット</a></li>
+<li><a href="#シェーダーのコード-全体">シェーダーのコード（全体）</a></li>
+<li><a href="#解説">解説</a>
+<ul>
+<li><a href="#前回の記事-ビュー変換をスキップ-の欠点">前回の記事（ビュー変換をスキップ）の欠点</a></li>
+<li><a href="#回転行列を生成するアプローチ">回転行列を生成するアプローチ</a></li>
+<li><a href="#srp-batcher">SRP Batcher</a></li>
+</ul></li>
+<li><a href="#リンク">リンク</a></li>
+</ul>
+</nav>
+        </div>
+    </div>
+    
+</div>

@@ -114,6 +114,53 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/08/01/github-markdown/" itemprop="url">GitHubのMarkdownでListをNest</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2013-08-01 22:31:00 &#43;0900 JST" itemprop="datePublished">2013-08-01</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/github">GitHub</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/markdown">Markdown</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                <p>GitHubでリストや順序リストをネストするときは、インデントをスペース4つにする必要があるみたいです。</p>
+
+<p>そうしないと、うまくネストできませんでした。</p>
+
+<p>例: <a href="https://github.com/gam0022/shelf/blob/master/README.md">https://github.com/gam0022/shelf/blob/master/README.md</a></p>
+
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2013/08/01/github-markdown/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/07/11/javascript-memo/" itemprop="url">JavaScriptのメモ</a></h3>
         
 
@@ -612,108 +659,6 @@ Macで使うとSpotlightと干渉して使えません。</p>
         </div>
         <p class="read-more">
             <a href="https://gam0022.net/blog/2013/04/23/eclipse-content-assist/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/04/22/diary/" itemprop="url">近状報告</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2013-04-22 22:13:00 &#43;0900 JST" itemprop="datePublished">2013-04-22</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/diary">Diary</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                
-
-<p>近状報告です。</p>
-
-<p>早いもので大学生活も3年目に突入してしまいました。とりあえず最近についてダラダラ書きます。</p>
-
-<h1 id="twincalを2学期制に対応">TwinCalを2学期制に対応。</h1>
-
-<p><a href="http://gam0022.net/app/twincal/">TwinCal</a>を2学期制に対応しました。</p>
-
-<p>新Twinsにも履修情報をCSV出力する機能があるのですが、いざCSV出力してみると、
-科目番号しか出力されない仕様だったので、対応を諦めていました。</p>
-
-<p>しかし、kDBの履修データをを使うことで新Twinsへの対応することができました。</p>
-
-<ol>
-<li><a href="https://kdb.tsukuba.ac.jp/">kDB</a>には履修データがある。</li>
-<li>kDBは科目一覧のCSV出力機能がある。</li>
-</ol>
-
-<p>まず、kDBの2013年度の履修データをCSV出力して、SQlite3のデーブル化しました。</p>
-
-<p>全ての履修データをCSV出力したところ、5.3MBくらいある巨大なファイルが吐き出されました。</p>
-
-<p>しかも、変なCSVだったのでRuby標準ライブラリのCSVではパースできませんでした。</p>
-
-<p>最終的には、ダウンロードしたCSVをOpenOfficeで開いて保存することで、なんとかなりました。</p>
-
-<p>また、「実施学期」と「曜時限」のフォーマットがフリーダムなので、これをパースするのに苦労しました。</p>
-
-<h1 id="cojt">COJT</h1>
-
-<p>情報科学類では主専攻実験の替わりに<a href="http://inf.tsukuba.ac.jp/ET-COJT/">COJT</a>という授業をとれるのですが、
-COJTのソフトウェアコースを受講することになりました。</p>
-
-<p>COJTをとった理由は以下のようなものです。</p>
-
-<ul>
-<li>バイト先の先輩が勧めていた。</li>
-<li>1年間、専用の机をゲットできる。</li>
-<li>オープニングセレモニーなどで、豪華な食事を少ないお金や無料で食べることができる！</li>
-<li>企業が協賛しているので、個人ではできないようなお金のかかる実験もできる。</li>
-<li>面白そう。</li>
-</ul>
-
-<p>成果発表もあったりと普通の主専攻実験よりハードな気もしますが、やるからには頑張りたいと思います。</p>
-
-<h1 id="早期卒業">早期卒業</h1>
-
-<p>情報科学類では、以下の条件を満たすと早期卒業できる可能性があるそうなのですが、
-その条件を満たしていたようです。</p>
-
-<ul>
-<li>卒業要件科目を85単位以上履修</li>
-<li>成績が上位10％以内</li>
-</ul>
-
-<p>しかし、卒業研究とCOJTを並行して行いながら単位をとるのは難しそうだったので、早期卒業は諦めました。完。</p>
-
-<h1 id="メタルギアライジング">メタルギアライジング</h1>
-
-<p>実におもしろい。</p>
-
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2013/04/22/diary/" class="btn btn-primary btn-outline">
                 Read more
             </a>
         </p>
