@@ -221,15 +221,15 @@ UnityのURP対応
 <li>C#スクリプトが不要でシェーダーだけで動作する
 
 <ul>
-<li>シェーダーのポータビリティは高い！</li>
-<li>かつてのVRCのようにユーザスクリプトが書けない環境でも使える</li>
+<li>シェーダーのポータビリティは高い</li>
+<li>昔のVRCのようにユーザスクリプトが書けない環境でも使える</li>
 </ul></li>
 <li>シーンビュー上でも動作する</li>
 <li>GPU（頂点シェーダー）でビルボード計算ができる
 
 <ul>
-<li>ビルボード計算のためのCPU負荷が0</li>
-<li>板ポリの頂点数は4なので、頂点シェーダーで多少重い処理をしても、GPU負荷への影響はわずか</li>
+<li>ビルボード計算のためのCPU負荷は0</li>
+<li>板ポリの頂点数は4なので、頂点シェーダーでビルボード処理をしても、GPU負荷はかなり軽い</li>
 </ul></li>
 </ul>
 
@@ -339,7 +339,7 @@ Shader &quot;Universal Render Pipeline/Unlit-Billboard&quot;
 
 <h2 id="前回の記事との違い">前回の記事との違い</h2>
 
-<p>この記事は<a href="/blog/2019/07/23/unity-y-axis-billboard-shader/">前回の記事（[Unity] Y軸ビルボードシェーダーの実装と解説）</a>の改訂版です。以下のような違いがあります。</p>
+<p>この記事は前回の記事<a href="/blog/2019/07/23/unity-y-axis-billboard-shader/">[Unity] Y軸ビルボードシェーダーの実装と解説</a>の改訂版です。以下のような違いがあります。</p>
 
 <ul>
 <li>URP（Universal Render Pipeline）に対応</li>
@@ -348,26 +348,27 @@ Shader &quot;Universal Render Pipeline/Unlit-Billboard&quot;
 
 <h3 id="前回の記事-ビュー変換をスキップ-の欠点">前回の記事（ビュー変換をスキップ）の欠点</h3>
 
-<p>以前の記事では、カメラのビュー行列の変換をスキップすることで、ビルボード処理を実装していました。</p>
+<p>前回の記事では、カメラのビュー行列の変換をスキップすることで、ビルボード処理を実装していました。</p>
 
 <p>Unityではプラットフォーム間の違い（Zの方向やUVの上下など）をビュー行列とプロジェクション行列でうまく吸収する設計になっており、ビュー行列の変換をスキップするとプラットフォームの対応を自力で行う必要が出てきて、かなり面倒でした。
-面倒なだけならまだいいのですが、将来的に新しいプラットフォームが増えた時などにシェーダーの修正が必要になる可能性もあり、このアプローチは筋が良くないな、と記事の公開後に思っていました。</p>
+将来的に新しいプラットフォームが増えた時などにシェーダーの修正が必要になる可能性もあり、このアプローチは筋が良くないな、と記事の公開後に思っていました。</p>
 
-<p>この記事で紹介する <strong>回転行列を生成するアプローチ</strong> では、そのような面倒な問題が起きません。</p>
+<p>今回紹介する <strong>回転行列を生成するアプローチ</strong> では、そのようなプラットフォーム依存の問題が起きません。</p>
 
 <h2 id="回転行列を生成するアプローチ">回転行列を生成するアプローチ</h2>
 
-<p>Unityが生成するモデル行列を使わずに、頂点シェーダーの中でうまく回転行列を生成することで、ビルボード処理を実現します。</p>
+<p>Unityが生成するモデル行列を使わずに、頂点シェーダーの中でうまく回転行列を生成することで、常にカメラ側を向くようにMeshを回転させてビルボード処理を実現します。</p>
 
 <p>シェーダーからビルボード処理を抜き出して、できるだけコメントを入れました。</p>
 
 <pre><code class="language-c">// 回転行列を生成してビルボード処理をします
+// 常にカメラ側を向くようにMeshを回転させます
 
 // Y-UPベクトル
 float3 yup = float3(0.0, 1.0, 0.0);
 
 // up = Y軸の基底ベクトル
-// オブジェクトのTransformの回転を考慮する
+// オブジェクトのTransformの回転を考慮
 float3 up = mul((float3x3)unity_ObjectToWorld, yup);
 
 // オブジェクトのワールド座標
@@ -377,12 +378,12 @@ float3 worldPos = unity_ObjectToWorld._m03_m13_m23;
 float3 toCamera = _WorldSpaceCameraPos - worldPos;
 
 // right = X軸の基底ベクトル
-// 前半の項 : rightはtoCameraとupの両方に直交するので、crossから計算できる
+// 前半の項 : rightはtoCameraとupの両方に直交するので、crossから計算
 // 後半の項 : オブジェクトのTransformのX方向のスケールを考慮
 float3 right = normalize(cross(toCamera, up)) * length(unity_ObjectToWorld._m00_m10_m20);
 
 // forward = Z軸の基底ベクトル
-// 前半の項 : forwardはupとrightの両方に直交するので、crossから計算できる
+// 前半の項 : forwardはupとrightの両方に直交するので、crossから計算
 // 後半の項 : オブジェクトのTransformのZ方向のスケールを考慮
 float3 forward = normalize(cross(up, right)) * length(unity_ObjectToWorld._m02_m12_m22);
 
