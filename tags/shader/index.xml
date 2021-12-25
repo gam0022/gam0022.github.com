@@ -61,7 +61,7 @@
 
 &lt;p&gt;最終的なシェーダーのコードはこちらです。&lt;/p&gt;
 
-&lt;p&gt;単体で動作するので、コピペして使えます。MITライセンスです。&lt;/p&gt;
+&lt;p&gt;単体で動作するので、コピペして使えます。&lt;a href=&#34;https://github.com/gam0022/unity-urp-shader/blob/master/LICENSE&#34;&gt;MITライセンス&lt;/a&gt;です。&lt;/p&gt;
 
 &lt;p&gt;ファイル名: &lt;a href=&#34;https://github.com/gam0022/unity-urp-shader/blob/master/Assets/URP-Shaders/Billboard/Shaders/Unlit-Billboard.shader&#34;&gt;&lt;code&gt;Unlit-Billboard.shader&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
 
