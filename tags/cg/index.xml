@@ -10,6 +10,166 @@
     <atom:link href="/tags/cg/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Tokyo Demo Fest 2021のShaderShowdownに参加しました</title>
+      <link>https://gam0022.net/blog/2021/12/31/tdf2021-shader-showdown/</link>
+      <pubDate>Fri, 31 Dec 2021 00:00:00 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2021/12/31/tdf2021-shader-showdown/</guid>
+      <description>&lt;p&gt;12月11日～12日にオンラインで開催された&lt;a href=&#34;https://tokyodemofest.jp/&#34;&gt;Tokyo Demo Fest 2021&lt;/a&gt;（以下、TDF）に参加しました。&lt;/p&gt;
+
+&lt;p&gt;TDFは、日本国内で唯一のデモパーティです。
+リアルタイムに映像や音楽を生成するプログラムを「デモ」と言い、デモを鑑賞したり完成度を競ったりして楽しむイベントを「デモパーティ」と言います。
+「デモシーン」はデモやデモパーティを中心としたコンピューターのサブカルチャーです。&lt;/p&gt;
+
+&lt;p&gt;TDFのShaderShowdownというイベントに競技者として参加しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-31-tdf2021-shader-showdown/Collage_Fotor_v3.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-31-tdf2021-shader-showdown/Collage_Fotor_v3.jpg&#34; alt=&#34;Collage_Fotor_v3&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;また、TDFのGLSL Graphics Compoにも参加したので、こちらは別記事にまとめました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog/2021/12/20/tdf2021-glsl/&#34;&gt;Tokyo Demo Fest 2021のGLSL Graphics Compo優勝作品の解説 | gam0022.net&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;shadershowdownとは&#34;&gt;ShaderShowdownとは&lt;/h1&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;TokyoDemoFestのShader Showdownは、世界的なDemoparty「Revision」と同じレギュレーションで開催します。&lt;br&gt;試合の放映はパーティー当日12/11-12となります。乞うご期待……！ &lt;a href=&#34;https://t.co/IlVue5npWz&#34;&gt;pic.twitter.com/IlVue5npWz&lt;/a&gt;&lt;/p&gt;&amp;mdash; Tokyo Demo Fest 2021 (2021/12/11-12) (@TokyoDemoFest) &lt;a href=&#34;https://twitter.com/TokyoDemoFest/status/1452275618997886976?ref_src=twsrc%5Etfw&#34;&gt;October 24, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;ShaderShowdownとは25分間でシェーダーを書き、どちらの作品が良いかを決める競技です。&lt;/p&gt;
+
+&lt;p&gt;試合中は、一切のドキュメントの参照ができません。当然ながら必要な関数はすべて試合中に実装しないいけません。&lt;/p&gt;
+
+&lt;p&gt;1対1のトーナメント形式で開催され、試合の勝敗は観衆（ビジター）の投票によって決定します。今回は私を含めた8人でトーナメントを行いました。&lt;/p&gt;
+
+&lt;p&gt;対戦はGLSLのライブコーディングで行われます。&lt;a href=&#34;https://github.com/TheNuSan/Bonzomatic/releases/tag/v11&#34;&gt;Bonzomatic&lt;/a&gt;というアプリを利用し、対戦者の書いているコードやカーソルの位置が共有されます。&lt;/p&gt;
+
+&lt;p&gt;ビジターは対戦者が25分の制限時間の中でどのような戦略とアイデアをもってコードを書いていくかをすぐ隣でみているかのように体験できます。&lt;/p&gt;
+
+&lt;p&gt;詳しいGLSLライブコーディングの知識がなくても楽しめるよう、TDFでは対戦者がどのようなコードを書いているかのリアルタイムな解説があります。&lt;/p&gt;
+
+&lt;h1 id=&#34;ライブコーディングした作品解説&#34;&gt;ライブコーディングした作品解説&lt;/h1&gt;
+
+&lt;p&gt;今回のTDFでライブコーディングした作品を簡単に解説します。&lt;/p&gt;
+
+&lt;p&gt;TDFのShaderShowdownの全作品は&lt;a href=&#34;https://livecode.demozoo.org/party_series/174.html&#34;&gt;livecode.demozoo.org&lt;/a&gt;にもアーカイブされています。&lt;/p&gt;
+
+&lt;h2 id=&#34;lightning-tunnel-quarter-final&#34;&gt;Lightning Tunnel | Quarter-Final&lt;/h2&gt;
+
+&lt;p&gt;準々決勝（Quarter-Final）の作品です。&lt;/p&gt;
+
+&lt;p&gt;稲妻が轟くトンネルをイメージして作りました。&lt;/p&gt;
+
+&lt;p&gt;ボリュームレンダリングをしてBloom感を出しています。ボリュームレンダリングの実装が雑なのでアーティファクトが発生しているのですが、むしろ雷の荒々しい感じが再現できて良かったです。&lt;/p&gt;
+
+&lt;p&gt;時間が余ったのでカメラのFoVのアニメーションをしたのですが、ちょっとワープっぽい効果になりました。&lt;/p&gt;
+
+&lt;p&gt;モデリングはIFSでやっています。IFSで狙った形状を出すことは困難なので、パラメーターは事前に調整をして暗記しておきました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;25分でライブコーディングしたシェーダーです。&lt;br&gt;&lt;br&gt;This shader was coded in 25 minutes.&lt;br&gt;&lt;br&gt;Shader showdown quarter-final at &lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Bonzomatic?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Bonzomatic&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/LiveCoding?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#LiveCoding&lt;/a&gt; &lt;a href=&#34;https://t.co/WTw7tHVsbk&#34;&gt;pic.twitter.com/WTw7tHVsbk&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1469562828831195140?ref_src=twsrc%5Etfw&#34;&gt;December 11, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.shadertoy.com/view/sl3XWM&#34;&gt;Shadertoy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://neort.io/art/c6qm3ls3p9f3hsje6360&#34;&gt;NEORT&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;YouTubeのアーカイブ（Day1の2:15頃）です。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/2s9KfMn1J9M?start=8114&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;vj-feat-niko-14-semi-final&#34;&gt;VJ feat. Niko_14 | Semi-Final&lt;/h2&gt;
+
+&lt;p&gt;準決勝（Semi-Final）の作品です。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/himazin917&#34;&gt;Niko_14&lt;/a&gt;さんの音楽がとても素晴らしかったので、音楽に合わせたVJを挑戦しました。&lt;/p&gt;
+
+&lt;p&gt;試合の前日に自分の試合の音楽担当はNiko_14さんと聞いたので、VJをする決意をしました。&lt;/p&gt;
+
+&lt;p&gt;VJっぽい絵を狙ったことが無かったのですが、ほぼ狙い通りのバキバキな感じにできたので良かったです。
+シェーダーの構成としてはQuarter-Finalとほぼ同じで、IFSとボリュームレンダリングの組み合わせです。
+IFSのパラメーターは適当だったのですが、ちゃんと狙い通りの絵になったので良かったです。&lt;/p&gt;
+
+&lt;p&gt;色はFFT（音楽の周波数ごとのボリューム）に対応していて、低音が赤、中音が緑、高音が青に対応しています。
+キックの音が支配的だったので、キックに合わせて赤～ピンクっぽいビームが発生しています。&lt;/p&gt;
+
+&lt;p&gt;Twitterの動画の4秒頃のように、音が切り替わるタイミングでサウンドリアクティブになっているのが分かりやすいと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;25分でライブコーディングしたシェーダーです。&lt;br&gt;かっこいい音楽は &lt;a href=&#34;https://twitter.com/himazin917?ref_src=twsrc%5Etfw&#34;&gt;@himazin917&lt;/a&gt; さん制作です！&lt;br&gt;&lt;br&gt;This shader was coded in 25 minutes.&lt;br&gt;Sound by &lt;a href=&#34;https://twitter.com/himazin917?ref_src=twsrc%5Etfw&#34;&gt;@himazin917&lt;/a&gt;&lt;br&gt;&lt;br&gt;Shader showdown semi-final at &lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Bonzomatic?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Bonzomatic&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/LiveCoding?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#LiveCoding&lt;/a&gt; &lt;a href=&#34;https://t.co/HzUpd9le3t&#34;&gt;pic.twitter.com/HzUpd9le3t&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1469924900257562627?ref_src=twsrc%5Etfw&#34;&gt;December 12, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.shadertoy.com/view/NttSRS&#34;&gt;Shadertoy&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ShadertoyのSoundcloud連携が機能していないため、音楽はNiko_14さんのものではなく、仮です。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;YouTubeのアーカイブ（Day2の1:41頃）です。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/bp37xTVNRrM?start=6086&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Semi-Finalでは&lt;a href=&#34;https://twitter.com/kamoshika_vrc&#34;&gt;Kamoshika&lt;/a&gt;さんに負けてしまったのですが、試合後のコメントによると反射の処理には&lt;a href=&#34;https://gam0022.net/blog/2021/06/08/unity-bible2/&#34;&gt;『Unityゲーム プログラミング・バイブル 2nd Generation』の自分の章&lt;/a&gt;を参考にしてくださったそうで、めちゃくちゃありがてぇ🙏となりました。&lt;/p&gt;
+
+&lt;p&gt;Jugem-Tさんも実況による盛り上げありがとうございました！&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;凄い画同士の殴り合いの中BGMもライブコーディングで生成してる(Niko_14氏)とんでもない光景になっててヤバい&lt;br&gt;&lt;br&gt;Shader Showdown準決勝 gam0022氏 vs Kamoshika氏&lt;br&gt;[LIVE]Tokyo Demo Fest 2021 Day2 &lt;a href=&#34;https://t.co/648ZNFJTxk&#34;&gt;https://t.co/648ZNFJTxk&lt;/a&gt; &lt;a href=&#34;https://twitter.com/YouTube?ref_src=twsrc%5Etfw&#34;&gt;@YouTube&lt;/a&gt;より &lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://t.co/atG6c8hWiK&#34;&gt;pic.twitter.com/atG6c8hWiK&lt;/a&gt;&lt;/p&gt;&amp;mdash; Jugem-T 𓆡作業中 (@Jugem_T) &lt;a href=&#34;https://twitter.com/Jugem_T/status/1469892859503734787?ref_src=twsrc%5Etfw&#34;&gt;December 12, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;感想&#34;&gt;感想&lt;/h1&gt;
+
+&lt;p&gt;大変でしたが、楽しかったです。&lt;/p&gt;
+
+&lt;p&gt;こんなにレベルの高い戦いになるとは思っておらず、みんな凄すぎてちょっと心が折れそうでした。&lt;/p&gt;
+
+&lt;p&gt;とくにFinal（決勝）の&lt;a href=&#34;https://twitter.com/kamoshika_vrc&#34;&gt;Kamoshika&lt;/a&gt; vs &lt;a href=&#34;https://twitter.com/phi16_&#34;&gt;phi16&lt;/a&gt; の戦いは感動しました。&lt;/p&gt;
+
+&lt;p&gt;Kamoshikaさんは蝶、phi16さんはライブゲームと、両者とも &amp;ldquo;生命&amp;rdquo; を誕生させていました。偶然にもテーマが一致していてちょっと面白かったです。&lt;/p&gt;
+
+&lt;p&gt;とにかく実装量がえげつなく、これをライブコーディングでやるんだ…と驚かされました。
+競技者として参加したことで、25分間でこの量をミスなく実装する困難さは痛いほど理解していたので、なおさら驚かされました。&lt;/p&gt;
+
+&lt;p&gt;両者ともミスなく作品を仕上げており、まさに決勝戦に相応しい素晴らしい戦いを見せていただきました🙏&lt;/p&gt;
+
+&lt;p&gt;世界レベルの実力者の方々と戦えて本当に光栄でした！ありがとうございます！&lt;/p&gt;
+
+&lt;p&gt;Kamoshikaさん&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;25 minutes live coding at Shader Showdown Final.&lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/LiveCoding?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#LiveCoding&lt;/a&gt; &lt;a href=&#34;https://t.co/WeVq82f50E&#34;&gt;pic.twitter.com/WeVq82f50E&lt;/a&gt;&lt;/p&gt;&amp;mdash; Kamoshika (@kamoshika_vrc) &lt;a href=&#34;https://twitter.com/kamoshika_vrc/status/1470360600517971970?ref_src=twsrc%5Etfw&#34;&gt;December 13, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;phi16さん&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;und&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://t.co/qluYGj653s&#34;&gt;pic.twitter.com/qluYGj653s&lt;/a&gt;&lt;/p&gt;&amp;mdash; phi16 (@phi16&lt;em&gt;) &amp;lt;a href=&amp;ldquo;&lt;a href=&#34;https://twitter.com/phi16&#34;&gt;https://twitter.com/phi16&lt;/a&gt;&lt;/em&gt;/status/1470104161320849409?ref_src=twsrc%5Etfw&amp;rdquo;&amp;gt;December 12, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;記録 TDF2021 ShaderShowdown &lt;a href=&#34;https://t.co/mMcSoYwh5U&#34;&gt;https://t.co/mMcSoYwh5U&lt;/a&gt;&lt;/p&gt;&amp;mdash; phi16 (@phi16&lt;em&gt;) &amp;lt;a href=&amp;ldquo;&lt;a href=&#34;https://twitter.com/phi16&#34;&gt;https://twitter.com/phi16&lt;/a&gt;&lt;/em&gt;/status/1470415119708753921?ref_src=twsrc%5Etfw&amp;rdquo;&amp;gt;December 13, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;YouTubeのアーカイブ（Day2の4:27頃）&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/bp37xTVNRrM?t=16030&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;おつかれさまでした！&lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://t.co/h2yXCGGBYa&#34;&gt;pic.twitter.com/h2yXCGGBYa&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1469999619409350657?ref_src=twsrc%5Etfw&#34;&gt;December 12, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;練習&#34;&gt;練習&lt;/h1&gt;
+
+&lt;p&gt;ライブコーディングの練習中の作品です。&lt;/p&gt;
+
+&lt;p&gt;Quarter-FinalのIFS+ボリュームレンダリングのアプローチは練習中に決めました。&lt;/p&gt;
+
+&lt;p&gt;トンネルのIFSのモデリングもよく見ると面影が残っています。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;情報量を追加（エンコード耐久テスト）&lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Raymarching?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Raymarching&lt;/a&gt; &lt;a href=&#34;https://t.co/uBg43zGOk6&#34;&gt;pic.twitter.com/uBg43zGOk6&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1453405601971666944?ref_src=twsrc%5Etfw&#34;&gt;October 27, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Diamond Variation 🔷 &lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Raymarching?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Raymarching&lt;/a&gt; &lt;a href=&#34;https://t.co/IAEhBgdW5s&#34;&gt;pic.twitter.com/IAEhBgdW5s&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1453768374312263683?ref_src=twsrc%5Etfw&#34;&gt;October 28, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/Shadertoy?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shadertoy&lt;/a&gt; にポートしました。&lt;br&gt;&lt;br&gt;&amp;quot;Diamond Tunnel&amp;quot; by gam0022&lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt;&lt;a href=&#34;https://t.co/oyyz8mop2x&#34;&gt;https://t.co/oyyz8mop2x&lt;/a&gt; &lt;a href=&#34;https://t.co/DXnqCAKY1Z&#34;&gt;pic.twitter.com/DXnqCAKY1Z&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1476576224768331776?ref_src=twsrc%5Etfw&#34;&gt;December 30, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>[Unity][URP] Y軸ビルボードシェーダー</title>
       <link>https://gam0022.net/blog/2021/12/23/unity-urp-billboard-shader/</link>
       <pubDate>Thu, 23 Dec 2021 10:00:00 +0900</pubDate>
@@ -3607,399 +3767,6 @@ High Definition Render Pipeline（HDRP）とレイマーチングを組み合わ
 &lt;/ul&gt;
 
 &lt;p&gt;作品の感想をYouTubeやpouet.netでいただけると泣いて喜びます。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>レイトレ合宿6 参加報告 後編（当日編）</title>
-      <link>https://gam0022.net/blog/2018/09/25/rtcamp6-part2/</link>
-      <pubDate>Tue, 25 Sep 2018 09:08:08 +0900</pubDate>
-      
-      <guid>https://gam0022.net/blog/2018/09/25/rtcamp6-part2/</guid>
-      <description>&lt;p&gt;記事が長くなってしまったので、準備編と当日編の2つの記事に分けました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://sites.google.com/site/raytracingcamp6/&#34;&gt;レイトレ合宿6&lt;/a&gt;の概要や自作レンダラーの紹介や取り組んだことについては前編に詳しく紹介させていただきました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://gam0022.net/blog/2018/09/18/rtcamp6-part1/&#34;&gt;レイトレ合宿6 参加報告 前編（準備編） | gam0022.net&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;この記事では後編（当日編）として合宿当日の様子について振り返ります。
-主に参加者との交流や神津島観光やレクリエーションの様子について書いていきます。
-現地の雰囲気が少しでも伝われば幸いです。&lt;/p&gt;
-
-&lt;p&gt;また、他の参加者のレポートも合わせてお読みいただくと、内容を補完できると思います。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://xyz600.hatenablog.com/entry/2018/09/08/001206&#34;&gt;レイトレ合宿6 参加記 - xyz600’s diary&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://shutosg.hatenadiary.com/entry/2018/09/07/013329&#34;&gt;レイトレ合宿6 参加レポート - shuto_log.aep&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://project-asura.com/blog/archives/4406&#34;&gt;レイトレ合宿6に参加しました。 &amp;#8211; ☆PROJECT　ASURA☆&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://ushiostarfish.hatenablog.com/entry/2018/09/09/201129&#34;&gt;レイトレ合宿６に行ってきました - ushiostarfish’s diary&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://c5h12.hatenablog.com/entry/2018/09/09/225500&#34;&gt;レイトレ合宿6に行ってきました - Pentanium Blog?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;合宿当日の様子&#34;&gt;合宿当日の様子&lt;/h1&gt;
-
-&lt;p&gt;バタバタしながらもなんとかレンダラーを提出して合宿当日を迎えることができました。&lt;/p&gt;
-
-&lt;p&gt;寝坊すると代替の交通手段が確保できない可能性が高かったので、合宿前日はなるべく早く退社して、帰宅後はすぐに寝ました。
-早寝が功を奏してなんとか起床に成功しました。&lt;/p&gt;
-
-&lt;h2 id=&#34;東京-神津島の移動&#34;&gt;東京〜神津島の移動&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.central-air.co.jp/aircraft.html&#34;&gt;乗員19名の小さなプロペラ機&lt;/a&gt;で移動しました✈&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;最前席にきた！ &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/DOJqQwBFhJ&#34;&gt;pic.twitter.com/DOJqQwBFhJ&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1035704588685402113?ref_src=twsrc%5Etfw&#34;&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;und&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/g5Rm6LrejH&#34;&gt;pic.twitter.com/g5Rm6LrejH&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1035724383199748104?ref_src=twsrc%5Etfw&#34;&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ボリュームレンダリングのサンプル &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/vuEUwgqgmv&#34;&gt;pic.twitter.com/vuEUwgqgmv&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1035758402478063616?ref_src=twsrc%5Etfw&#34;&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;台風の影響で欠便にならないかヒヤヒヤしていたのですが、結果的には天候に恵まれました。
-さらに大型飛行機よりも低空飛行だったので、景色を楽しむことができました！&lt;/p&gt;
-
-&lt;p&gt;最前列の席だったので、座席のすぐ隣がプロペラで迫力満点でした！&lt;/p&gt;
-
-&lt;p&gt;ちなみに自分以外の参加者はみんな船で移動したらしく、周りに知らない人しかおらずひとり寂しかったです😢&lt;/p&gt;
-
-&lt;p&gt;おおよそ一時間くらいで神津島に到着しました！&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;I&amp;#39;m at 神津島 in 神津島村, 東京都 &lt;a href=&#34;https://t.co/hh3q4cPWSz&#34;&gt;https://t.co/hh3q4cPWSz&lt;/a&gt; &lt;a href=&#34;https://t.co/9juUdNb3MA&#34;&gt;pic.twitter.com/9juUdNb3MA&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1035719096753692672?ref_src=twsrc%5Etfw&#34;&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;飛行機からの神津島の様子です（機内モードでの撮影）。&lt;/p&gt;
-
-&lt;p&gt;海の青さが深くて綺麗でした🌊&lt;/p&gt;
-
-&lt;p&gt;東京と違って空気も綺麗で、体に降り注ぐレイ（太陽光）も力強く感じました⚡&lt;/p&gt;
-
-&lt;h2 id=&#34;ホテルへ移動&#34;&gt;ホテルへ移動&lt;/h2&gt;
-
-&lt;p&gt;空港から出ると、ホテルの送迎バスが到着していて、ここでやっと他の合宿参加者と合流できました👪&lt;/p&gt;
-
-&lt;p&gt;バスを手配してくださった主催者のqさんに感謝です。&lt;/p&gt;
-
-&lt;h2 id=&#34;温泉&#34;&gt;温泉&lt;/h2&gt;
-
-&lt;p&gt;ホテルに荷物を預けて、神津島温泉保養センターという温泉に行きました♨&lt;/p&gt;
-
-&lt;p&gt;移動はレンタル自転車を利用しました🚴🚴🚴&lt;/p&gt;
-
-&lt;p&gt;移動の途中で&lt;a href=&#34;https://twitter.com/xyz600600&#34;&gt;xyz600600&lt;/a&gt;さんにお会いできたので、Rust談義をしました。
-xyz600600さんもRustでレンダラーを開発されていて、私の去年のレンダラーのソースコードを参考にしていただけたそうです。
-主にRustの苦労話で盛り上がりました。&lt;/p&gt;
-
-&lt;p&gt;水着を着用すると入れる露天風呂があって、すぐ隣が海になっていて開放感あふれる感じでした。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;I&amp;#39;m at 神津島温泉保養センター in Kōzushima Mura, 東京都 &lt;a href=&#34;https://t.co/oWQXbqQJRQ&#34;&gt;https://t.co/oWQXbqQJRQ&lt;/a&gt; &lt;a href=&#34;https://t.co/5lRUI0AmAV&#34;&gt;pic.twitter.com/5lRUI0AmAV&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1035755871148625921?ref_src=twsrc%5Etfw&#34;&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;神津島アクアスロン大会&#34;&gt;神津島アクアスロン大会&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://vill.kouzushima.tokyo.jp/today/2018/09/post-501.html&#34;&gt;第７回　神津島アクアスロン大会&lt;/a&gt;がやってました🏊🏃🏄🏅&lt;/p&gt;
-
-&lt;p&gt;ちなみにアクアスロンで道が一時的に封鎖されるため、タイミングによっては温泉から帰ってこれなくなるところでした😨&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;アクアスロンしてる！ &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; (@ 浜の家 in 神津島村, 東京都) &lt;a href=&#34;https://t.co/2byOXZAfmR&#34;&gt;https://t.co/2byOXZAfmR&lt;/a&gt; &lt;a href=&#34;https://t.co/E8egjFLy7L&#34;&gt;pic.twitter.com/E8egjFLy7L&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1035756231590375424?ref_src=twsrc%5Etfw&#34;&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;レイトレ合宿&#34;&gt;レイトレ合宿&lt;/h2&gt;
-
-&lt;p&gt;温泉から会議室に徒歩で移動して、いよいよレイトレ合宿のメインイベントが始まりました。&lt;/p&gt;
-
-&lt;h3 id=&#34;シークレットイベント1-レイトレ検定&#34;&gt;シークレットイベント1: レイトレ検定&lt;/h3&gt;
-
-&lt;p&gt;会議室に入るといきなり「レイトレ検定」と書かれた問題用紙が参加者に配られ、抜き打ちのレイトレ検定試験が始まりました。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;レイトレ検定 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/Jjgv2SYcsK&#34;&gt;pic.twitter.com/Jjgv2SYcsK&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1035771130114539521?ref_src=twsrc%5Etfw&#34;&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;レイトレ検定ムズイんですけど！ &lt;a href=&#34;https://t.co/UwFNkLOgYf&#34;&gt;pic.twitter.com/UwFNkLOgYf&lt;/a&gt;&lt;/p&gt;&amp;mdash; ハガ (@hagat) &lt;a href=&#34;https://twitter.com/hagat/status/1035771876662890496?ref_src=twsrc%5Etfw&#34;&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;レイトレに関する偉人の顔写真を選ぶ問題、サンプリング結果から対応する手法を答える問題、
-レンダリング結果から対応するレンダリング手法を選ぶ問題、
-コーネルボックスを手描きする問題など癖のある問題が多く、非常に楽しませていただきました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://drive.google.com/file/d/1KRrojV5XF8htxInNeLTKmZBltyy4GKKR/view?usp=sharing&#34;&gt;問題&lt;/a&gt;と&lt;a href=&#34;https://drive.google.com/file/d/1RTHSCY3sL6238W7-CiPvQYZaGbIClXFx/view&#34;&gt;解答&lt;/a&gt;は&lt;a href=&#34;https://sites.google.com/site/raytracingcamp6/&#34;&gt;レイトレ合宿6の公式サイト&lt;/a&gt;から閲覧可能なので、ぜひ見てください！&lt;/p&gt;
-
-&lt;p&gt;なお、自分は100点中73点、19人中11位、偏差値は49.5と参加者の中では平均的な結果でした😐
-第二回目のレイトレ検定があればもっと良い成績を取れるように頑張りたいです💪&lt;/p&gt;
-
-&lt;h3 id=&#34;シークレットイベント2-三葉レイちゃんの応援動画&#34;&gt;シークレットイベント2: 三葉レイちゃんの応援動画&lt;/h3&gt;
-
-&lt;p&gt;CG技術系Vtuberの&lt;a href=&#34;https://twitter.com/mitsuba_rei&#34;&gt;三葉レイちゃん&lt;/a&gt;から応援の動画をいただきました☘😍
-レイトレのやる気が湧いてきました。ありがとうございます！
-なお、動画は参加者のみの限定公開だそうです！つまり参加者限定特典です🤤&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; に三つ葉レイちゃん（&lt;a href=&#34;https://twitter.com/mitsuba_rei?ref_src=twsrc%5Etfw&#34;&gt;@mitsuba_rei&lt;/a&gt; ）が特別参加！ &lt;br&gt;※コラ画像ではないです &lt;a href=&#34;https://t.co/6AddQoErWP&#34;&gt;pic.twitter.com/6AddQoErWP&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1036171064915554304?ref_src=twsrc%5Etfw&#34;&gt;2018年9月2日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;セミナー&#34;&gt;セミナー&lt;/h3&gt;
-
-&lt;p&gt;今年は2名がセミナーで発表してくださいました。&lt;/p&gt;
-
-&lt;h4 id=&#34;実装してきたこと-これからやってみたいこと-by-zin&#34;&gt;実装してきたこと、これからやってみたいこと by Zin&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://twitter.com/ZinTwitt&#34;&gt;Zin&lt;/a&gt;さんはAMDで&lt;a href=&#34;https://www.amd.com/ja/technologies/radeon-prorender&#34;&gt;Radeon ProRender&lt;/a&gt;を開発されている方で、プロダクションレンダラーにおけるテストの手法等の貴重なお話を聞くことができました。&lt;/p&gt;
-
-&lt;p&gt;DCCツールのインテグレーションやレンダラーのテストなどのやりたいとは思っているものの踏み出せていない領域の話だったので、興味深く聞かせていただきました。&lt;/p&gt;
-
-&lt;p&gt;発表の途中でちょくちょくRadeon ProRenderの宣伝が入っているのが面白かったです。&lt;/p&gt;
-
-&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;ad4601a67e0e4d65b9fd48a6e7cb95c6&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-
-&lt;h4 id=&#34;volume-rendering-方程式から大気散乱モデルを導く-by-ishiyama&#34;&gt;Volume Rendering 方程式から大気散乱モデルを導く by ishiyama&lt;/h4&gt;
-
-&lt;p&gt;ishiyamaさんは今回が合宿へ初参加ということながらセミナーをしてくださいました！&lt;/p&gt;
-
-&lt;p&gt;Volume Rendering 方程式をちゃんと調べたことがなかったので勉強になりました。&lt;/p&gt;
-
-&lt;p&gt;現地では発光輝度に吸収係数がかかるのは何故かという話題で盛り上がっていました。
-そもそも発光するボリュームってなんだろう？と思いましたが、炎などが該当するんでしょうかね。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/k-ishiyama/rt6_advent_calendar5/blob/master/doc/rt6_slide.pdf&#34;&gt;Volume Rendering 方程式から大気散乱モデルを導く&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;レンダラープレゼン大会&#34;&gt;レンダラープレゼン大会&lt;/h3&gt;
-
-&lt;p&gt;いよいよレイトレ合宿のメインイベントである自作のレンダラーのプレゼン大会が始まりました。&lt;/p&gt;
-
-&lt;p&gt;ちなみに最終提出のレンダリング結果はここで初めて見ることになります。かなり心臓に悪いシステムですね。
-私は想定通りのレンダリング結果が出力されていて、ほっとしました😌&lt;/p&gt;
-
-&lt;p&gt;発表順も当日まで分からないのですが、今年はまさかのトップバッターだったので少々焦りました。
-3倍速の高速化（Rustのバージョンを上げただけ）はウケたようなので良かったです。
-Bunnyのワイヤーフレーム化もHoudiniの標準ノードで簡単に実現できるのですが、興味をもってくださった人がいて良かったです。&lt;/p&gt;
-
-&lt;p&gt;レイトレ合宿では参加者同士の投票によって順位を決定し、最終日に結果発表と表彰式が行われます。&lt;/p&gt;
-
-&lt;p&gt;今年は過去最大の19人がレンダラーを提出されていました。&lt;/p&gt;
-
-&lt;h4 id=&#34;上位陣の発表&#34;&gt;上位陣の発表&lt;/h4&gt;
-
-&lt;p&gt;上位陣は今年もレベルが非常に高かったですね。&lt;/p&gt;
-
-&lt;p&gt;1位のShockerさんはOptixを利用したGPU実装のレンダラーで参加されていました（&lt;a href=&#34;https://speakerdeck.com/shocker_0x15/renderer-introduction-ray-tracing-camp-6&#34;&gt;発表資料&lt;/a&gt;）。
-去年までGPU搭載のインスタンスは利用できなかったのですが、今年からGPUインスタンスが解禁されたのが背景にあります。
-GPU実装だからといって機能は妥協したくないということで、シーングラフ、任意形状の光源、多様かつ複雑なマテリアル（UE4 BRDF等）、
-MISなどFull-Featured Path Tracerに相応しい機能を詰め込まれていました！&lt;/p&gt;
-
-&lt;p&gt;2位のshinjiさんは個人で&lt;a href=&#34;https://github.com/shinjiogaki/redqueen&#34;&gt;Redqueen&lt;/a&gt;レンダラーを開発しており、
-仕事では&lt;a href=&#34;https://www.solidangle.com/&#34;&gt;Solid AngleでArnold Renderer&lt;/a&gt;を開発している凄い方です。
-プロシージャルに生成した熱帯雨林のシーンが見事でした。
-雨の表現は実際に雨粒がGeometryとして存在していて、遠くが白く霞むフォグの表現も大量の水滴によって自然に生じているそうです。
-圧倒的なポリゴンの物量なのにどうやってこの速度を実現できているのか不思議でした。
-他の参加者が発表の中でArnoldの速度に勝てないよという声が漏れる中、
-shinjiさんは発表の中でArnoldに勝てるケースを示しながら圧倒的な &lt;em&gt;強さ&lt;/em&gt; を見せつけられました。&lt;/p&gt;
-
-&lt;p&gt;3位のUshioさんも私と同じくHoudiniでアセットを作成されていました。
-私はHoudiniで作ったジオメトリをobjでメッシュを書き出しただけなので、シーン上の配置はハードコーディングしていたのですが、
-UshioさんはAlembicでHoudiniとレンダラーのデータの橋渡しを行い、Houdini上でシーン作成の完結を実現されていました👏
-さらに衝突判定にIntelの&lt;a href=&#34;https://embree.github.io/&#34;&gt;Embree&lt;/a&gt;を利用されていました。
-Embreeのパフォーマンスは相当高いという意見が参加者内でも一致していたので、使ってみたい気持ちが強くなってきました。
-Velvetのマテリアルをつかった美しい布の見た目も印象的でした。&lt;/p&gt;
-
-&lt;p&gt;4位のholeさんはボリュームレダリングとプロシージャルなシーン生成をされていました。
-プロシージャルに生成された床の模様がカッコよかったです。
-高速化についてはボリュームレンダリングに頻出の &lt;code&gt;pow, exp, log&lt;/code&gt; を &lt;a href=&#34;https://github.com/herumi/fmath&#34;&gt;fmath&lt;/a&gt;で置き換えることが効果的だったそうです。&lt;/p&gt;
-
-&lt;p&gt;5位のPerimさんPerimさんはCGの分野で大活躍されている研究者で&lt;a href=&#34;http://lightmetrica.org/h-otsu/project/inverse/&#34;&gt;ファーストオーサーの論文&lt;/a&gt;がSIGGRAPH 2017にアクセプトもされています。
-あいにくPerimさんは海外出張中だったため、本人に替わってqさんがプレゼンを行いました。
-&lt;a href=&#34;https://github.com/hi2p-perim/minpt&#34;&gt;minpt&lt;/a&gt;というわずか300行のC++で実用的なレンダラーを開発されており、
-そのminptに機能を追加して今回の作品をつくったそうです。&lt;/p&gt;
-
-&lt;h4 id=&#34;dccツールとの連携&#34;&gt;DCCツールとの連携&lt;/h4&gt;
-
-&lt;p&gt;今年はDCCの連携を行った方が多い印象でした。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Houdini は Ushio さん&lt;/li&gt;
-&lt;li&gt;Maya は yopio さん
-
-&lt;ul&gt;
-&lt;li&gt;Mayaのプラグインを開発して、Mayaからの直接レンダリングを実現したそうです&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://speakerdeck.com/yopio/reitorehe-su-6o&#34;&gt;発表資料&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Blender は Zin さん&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;心をこめて手作業でシーン情報をハードコーディングするのは単純に大変ですし、
-シーンの完成度を向上することも難しいので、DCCツール連携の重要性は高まっていると感じます。&lt;/p&gt;
-
-&lt;p&gt;もちろんshinjiさんやholeさんのように一貫してプロシージャルなシーン生成に倒すアプローチも良いと思いますが、
-意図的にシーンをレイアウトしたいのであれば、DCCツール連携が賢い解決策だと個人的には感じました。&lt;/p&gt;
-
-&lt;h4 id=&#34;初回参加者の方々が強い&#34;&gt;初回参加者の方々が強い&lt;/h4&gt;
-
-&lt;p&gt;また、初回参加者の方々が強いのも印象的でした。&lt;/p&gt;
-
-&lt;p&gt;mizutoriさんはCG分野を研究されている学生で、BSSRDF（表面下化散乱）やNEEやMIS（ただしバグのため未使用）など、比較的難しいことに挑戦されていました。&lt;/p&gt;
-
-&lt;p&gt;yamaguchiさんも同じ研究室の学生で、諸事情により最終的にはパストレーシングで提出したものの、
-フォトンマッピング系の手法（具体的な手法の名前はメモし忘れました）も試していたようで、凄いと思いました。&lt;/p&gt;
-
-&lt;p&gt;shutoさんは元々C++の経験が無かったそうなのですが、
-一ヶ月という短い期間でC++の習得からBVHなど高速化を含んだパストレまでされていて、習得速度が早くて凄いと思いました。&lt;/p&gt;
-
-&lt;p&gt;xyz600600さんはRustを習得しつつ、かなり色々やられていて本当にすごいと思いました。
-NEEやMISはもちろんのこと、 同じジオメトリを位置やマテリアルを変えて大量に出すオブジェクトのClone（所謂インスタンシング）までされていました。&lt;/p&gt;
-
-&lt;p&gt;ishiyamaさんはボリュームレンダリングのGPU実装に挑戦し、さらにセミナーで発表までされていました。&lt;/p&gt;
-
-&lt;h4 id=&#34;独自テーマで挑戦していて凄い&#34;&gt;独自テーマで挑戦していて凄い&lt;/h4&gt;
-
-&lt;p&gt;常連メンバーも相変わらず強くて、それぞれ独自のテーマで挑戦されていて面白かったです。&lt;/p&gt;
-
-&lt;p&gt;qさんはレイトレ合宿の主催者のひとりで、光源が大量にあるシーンに挑戦されていました。&lt;/p&gt;
-
-&lt;p&gt;pheemaさんは環境マップの重点サンプリングに挑戦されていました。
-個人的にも実装したいテーマだったので参考文献の&lt;a href=&#34;http://web.cs.wpi.edu/~emmanuel/courses/cs563/S07/projects/envsample.pdf&#34;&gt;Monte Carlo Rendering with Natural Illumination&lt;/a&gt;の紹介が助かりました。&lt;/p&gt;
-
-&lt;p&gt;tabochanさんは磨りガラスの中に光源があるというレンダラー殺しの難易度の高いシーンに挑戦されていました。&lt;/p&gt;
-
-&lt;p&gt;tatsyさんは普通のパストレーシングでは面白くないということで、
-今年もパストレーシング以外の最新のレンダリング手法（具体的な名前をメモし忘れました）に挑戦されていました。&lt;/p&gt;
-
-&lt;p&gt;pocolさんは動画部門に挑戦されていました。
-動画部門は去年から新しくできた部門なのですが、1フレームあたりにかけられる時間が15秒弱になってしまいます。
-そんなハードモードの動画部門に果敢に挑戦されていました。&lt;/p&gt;
-
-&lt;p&gt;pentanさんはglTF（Khronosが提唱する新しい3Dデータフォーマット）に対応されていました。
-また、Swiftというあまりレイトレ業界では一般的ではない言語を選択されていたので、自力で解決しないといけない問題でおそらく苦労されたのではないかと予想します。
-私も去年からRustで参加しましたが、レイトレ向けのパフォーマンスの高いライブラリを自力で見つける必要があったり、
-並列化やレイトレに使うようなデータ構造の定義であまり参考にできる情報が無くて、地味に時間が取られて苦しみました。&lt;/p&gt;
-
-&lt;h2 id=&#34;夕食&#34;&gt;夕食&lt;/h2&gt;
-
-&lt;p&gt;レンダラープレゼン大会の後はホテルに戻って夕食を食べました。&lt;/p&gt;
-
-&lt;p&gt;ホテルの料理は最高に美味しくてボリュームも満点で大変満足でした。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ご飯 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/CCVReBZvAw&#34;&gt;pic.twitter.com/CCVReBZvAw&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1035822780489449472?ref_src=twsrc%5Etfw&#34;&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;花火大会&#34;&gt;花火大会&lt;/h2&gt;
-
-&lt;p&gt;夕食を食べたあとはホテル近くの海岸で花火をしました。&lt;/p&gt;
-
-&lt;p&gt;Ushioさんが買ってきてくれた花火と運営の方々が買ってきてくれた花火を合わせて、遊びきれないくらい大量の花火で遊びました🎆🎇&lt;/p&gt;
-
-&lt;p&gt;手持ちの花火から打ち上げ式の花火まで様々な種類の花火で遊びました🔥💣💥📛&lt;/p&gt;
-
-&lt;p&gt;海岸の風が強くロウソクの炎が消えてしまうというトラブルにも見舞われましたが、
-流体や物理に強い参加者のおかげでなんとかなりました！&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;平成最後の夏 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/jSeeuqNlgt&#34;&gt;pic.twitter.com/jSeeuqNlgt&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1036014799384064002?ref_src=twsrc%5Etfw&#34;&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;残念ながらまともな写真が残っていませんが、平成最後の夏の花火を大いに楽しみました。&lt;/p&gt;
-
-&lt;p&gt;離島ということもあり、人口的な明かりがほぼ無いので、夜は真っ暗でした。
-もし晴れていれば星が綺麗に見えたのでしょうが、あいにく空が曇っていたのが残念です。&lt;/p&gt;
-
-&lt;h2 id=&#34;朝食&#34;&gt;朝食&lt;/h2&gt;
-
-&lt;p&gt;早起きして朝の温泉に浸かった後に朝食を食べました。&lt;/p&gt;
-
-&lt;p&gt;自分の普段の食生活は崩壊しているので、久々の健康的な朝食に感動しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;朝食 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/dMFiJzGywr&#34;&gt;pic.twitter.com/dMFiJzGywr&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1036019373524185089?ref_src=twsrc%5Etfw&#34;&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;授賞式&#34;&gt;授賞式&lt;/h2&gt;
-
-&lt;p&gt;合宿の最終日の朝にはレイトレ合宿の授賞式が行われました。&lt;/p&gt;
-
-&lt;p&gt;まずは光線追跡技術大賞2018 (日本レイトレーシング協会)の発表が行われました。
-今年から新しく設けられた賞でMicrosoft DirectX Raytracingが見事入賞に輝きました！
-レイトレ合宿にMicrosoftの関係者がいなかったので、なぜかAMDのZinさんが賞を受け取ることになりました。&lt;/p&gt;
-
-&lt;p&gt;次にレイトレ検定の結果発表が行われました。
-成績が優秀な順に答案用紙が返却されるので、成績が下位な人たちには残酷なシステムでした…&lt;/p&gt;
-
-&lt;p&gt;そして最後はレイトレ合宿の成績発表が行われました。
-単なる順位発表ではなく、なんと順位に応じて賞品も授与されます。
-私の今年の賞品はレンズ豆でした。後で美味しくいただきます。
-ちなみにWikipediaによると、光学用途で使われる「レンズ」の語源は、このレンズマメであり、
-当初作成された凸レンズがレンズマメの形状に似ていたことからこの名前が付いたそうです。&lt;/p&gt;
-
-&lt;p&gt;なお見事上位に入賞すればレンズキット等の豪華賞品をゲットできます！&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;レイトレ合宿6で提出した作品と拡大したものです。&lt;br&gt;レンズキットをいただきました。&lt;br&gt;運営の皆さまありがとうございました。&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/MNzT2lzl7r&#34;&gt;pic.twitter.com/MNzT2lzl7r&lt;/a&gt;&lt;/p&gt;&amp;mdash; shinji ogaki (@redqueenrender) &lt;a href=&#34;https://twitter.com/redqueenrender/status/1036182395181879296?ref_src=twsrc%5Etfw&#34;&gt;2018年9月2日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;また最下位になると幼児👶向けのプログラミングの絵本が貰えます！
-まったくネタに事欠かない合宿ですね。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;コーデングは赤ちゃんレベルだけど謎の認定を授かった &lt;a href=&#34;https://t.co/8mKLLk3Oyx&#34;&gt;pic.twitter.com/8mKLLk3Oyx&lt;/a&gt;&lt;/p&gt;&amp;mdash; Pentan (@c5h12) &lt;a href=&#34;https://twitter.com/c5h12/status/1036034085074788353?ref_src=twsrc%5Etfw&#34;&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;レイ-トレーサー&#34;&gt;レイ・トレーサー&lt;/h3&gt;
-
-&lt;p&gt;6位の賞品はPlayStation1本体とPlayStation1ソフトの&lt;a href=&#34;https://amzn.to/2Q0tb4y&#34;&gt;レイ・トレーサー&lt;/a&gt;のセットでした。&lt;/p&gt;
-
-&lt;p&gt;主催のqさんに授与されたのですが、自分は要らないということで、xyz600さんに譲渡されることになりました。&lt;/p&gt;
-
-&lt;p&gt;xyz600さんとホテルの部屋が一緒だったので、少しだけ遊ばせてもらいました🎮&lt;/p&gt;
-
-&lt;p&gt;レーシングゲームかと思いきや、まさかの敵の車に体当たりして破壊するゲームでした☠💥🚗&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;亜空間にワープしてしまった😱 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/MIkMjR2eV9&#34;&gt;pic.twitter.com/MIkMjR2eV9&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1036035766755852288?ref_src=twsrc%5Etfw&#34;&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;遊んでいる途中に描画がバグってホラーのようになってしまいました。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;レイトレーシング完全に理解した &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF6?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿6&lt;/a&gt; &lt;a href=&#34;https://t.co/1vUnG1UxEn&#34;&gt;pic.twitter.com/1vUnG1UxEn&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yuichi Sayama (@xyz600600) &lt;a href=&#34;https://twitter.com/xyz600600/status/1036916836858642432?ref_src=twsrc%5Etfw&#34;&gt;2018年9月4日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;xyz600さんは最終的には全クリされたようで凄いです！ちなみに私は1面のボスすら倒せませんでした…&lt;/p&gt;
-
-&lt;h2 id=&#34;東京までの移動&#34;&gt;東京までの移動&lt;/h2&gt;
-
-&lt;p&gt;飛行機の予約競争に敗北したので、帰りは大型船で移動しました⛴&lt;/p&gt;
-
-&lt;p&gt;飛行機なら1時間ほどで移動できますが、大型船は9時間くらいかかります。
-暇すぎたのでプログラミングなどの作業に挑戦しましたが、船の揺れがつよくて吐き気に耐えながらの作業になりました。
-インターネットも使えないので事前に&lt;a href=&#34;http://graphics.stanford.edu/papers/veach_thesis/&#34;&gt;Veachの論文&lt;/a&gt;やShockerさんの記事やスライドをローカルにダウンロードしておきました。&lt;/p&gt;
-
-&lt;p&gt;途中で運良くyopioさんと合流できたので、一緒に船の中を散策したり、食堂でご飯を食べたりして過ごしました。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;大型船で帰ります &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/OB5uvZLfEs&#34;&gt;pic.twitter.com/OB5uvZLfEs&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1036048102950494208?ref_src=twsrc%5Etfw&#34;&gt;2018年9月2日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;まとめ&#34;&gt;まとめ&lt;/h1&gt;
-
-&lt;p&gt;私は今年で3回目の参加になりますが、改めてレイトレ合宿は素晴らしいイベントだと思いました。&lt;/p&gt;
-
-&lt;p&gt;毎年すこしずつルールが進化しているので、毎年新しい技術や知見を得ることができます。
-今年の例を挙げると、GPUレンダラーや論理64コアを以上のWindows環境を扱う際の知見を得ることができました。
-その他にも自作でレンダラーを開発する過程や試行錯誤のうちに得られた知見が数多くありました。&lt;/p&gt;
-
-&lt;p&gt;また、レイトレについて日本語で調べると、ほぼ確実にレイトレ合宿の関係者の文献に辿り着きます。
-理解できなかった点や疑問点を直接著者に聞けるというのは凄い特権だと感じました。
-さらにグラフィック分野の凄い方々の成果やお話をたくさん聞けてモチベーションも上がりました。
-しかも今年はレイトレ検定や三葉レイちゃんの応援動画など楽しい企画が盛りだくさんでした。
-来年もぜひ参加したいです！&lt;/p&gt;
-
-&lt;p&gt;レイトレ合宿を運営・企画してくださったqさんとholeさん、レイトレ合宿の参加者のみなさん、本当にありがとうございました！&lt;/p&gt;
-
-&lt;h1 id=&#34;おまけ-制作の過程-当日の様子&#34;&gt;おまけ：制作の過程＋当日の様子&lt;/h1&gt;
-
-&lt;p&gt;レイトレ合宿6に関連する自分のツイートをモーメントにまとめました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://twitter.com/i/moments/1039136971442941953&#34;&gt;レイトレ合宿6 | twitter&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--
-&lt;a class=&#34;twitter-moment&#34; href=&#34;https://twitter.com/i/moments/1039136971442941953?ref_src=twsrc%5Etfw&#34;&gt;レイトレ合宿6&lt;/a&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
---&gt;</description>
     </item>
     
   </channel>

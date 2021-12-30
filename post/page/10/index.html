@@ -114,6 +114,63 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/04/23/eclipse-content-assist/" itemprop="url">Eclipseのコード補完のショートカットを変更する</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2013-04-23 17:31:00 &#43;0900 JST" itemprop="datePublished">2013-04-23</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/eclipse">Eclipse</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/mac-os-x">Mac OS X</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                <p>Eclipseのコード補完のショートカットは<code>C-space</code>なのですが、
+Macで使うとSpotlightと干渉して使えません。</p>
+
+<p>だったら、ショートカットのキーバインドを変更しましょう!</p>
+
+<p><img src="/images/posts/2013-04-23-eclipse-content-assist.png" alt="Eclipseの設定画面" /></p>
+
+<p>設定方法はメニューバーから<code>Eclipse/環境設定/General/Keys</code>です。</p>
+
+<p>ほとんどのキーバインドをここから設定できるので、
+<code>content assist</code>の項目を見つけて設定します。</p>
+
+<p>私の場合はコード補完を<code>C-space</code>ではなく<code>Tab</code>に割り当てることにしました。</p>
+
+<p>理由は、Visual Studioと同じショートカットの方が捗りそうだからです。</p>
+
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2013/04/23/eclipse-content-assist/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/04/22/diary/" itemprop="url">近状報告</a></h3>
         
 
@@ -784,64 +841,6 @@ set datafile separator &quot;,&quot; set size square set xr[40:60] set yr[40:60]
         </div>
         <p class="read-more">
             <a href="https://gam0022.net/blog/2012/12/31/gnuplot-tips/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/12/26/x86-addressing-mode/" itemprop="url">x86のアドレッシングモードでハマった</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2012-12-26 23:05:00 &#43;0900 JST" itemprop="datePublished">2012-12-26</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/x86">X86</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%82%a2%e3%82%bb%e3%83%b3%e3%83%96%e3%83%a9">アセンブラ</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/%e6%a9%9f%e6%a2%b0%e8%aa%9e%e5%ba%8f%e8%ab%96">機械語序論</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                なぜx86 大学の機械語序論という授業でx86(x86_64ではない)でアセンブラを書いています。
-x86のアドレッシングモードが難しかったので復習を兼ねてまとめます。
-やりたかったこと 授業でfib(10)を求めてebxに格納する課題がありました。
-方針としては、aというシンボルのデータ領域を、アドレッシングモードを使って配列のように扱い、 フィボナッチ数列を計算することにしました。
-わかりやすくRubyで書くとこんな方針です。</p>
-
-<h1 id="fib-rb-a-1-1-0-0-0-0-0-0-0-0-0-8-each-i-a-i-2-a-i-1-a-i-puts-a-10-アセンブラでa-i-2-やa-i-1-を参照する必要があったので-アドレッシングモードを利用したいと思ったわけです">fib.rb a = <a href="0..8">1, 1, 0, 0, 0, 0, 0, 0, 0, 0</a>.each {|i| a[i+2] = a[i+1] + a[i]} puts a[10]  アセンブラでa[i+2]やa[i+1]を参照する必要があったので、 アドレッシングモードを利用したいと思ったわけです。</h1>
-
-<p>x86のアドレッシングモード 授業の資料によると、x86 では、以下のアドレッシングができるそうです。
-BASE+(INDEX*SCALE)+DISPLACEMENT   DISPLACEMENT: アドレス、もしくはベースレジスタからのオフセットを示す。定数。 BASE: ベースレジスタ INDEX: インデックスレジスタ、配列の添え字のようなもの SCALE: 2,4,8 のいずれか。配列要素のサイズを指定する。  そして、これを次のように記述するらしいです。
-DISPLACEMENT(BASE, INDEX, SCALE)  注意点 ここがポイントなのですが、
-アドレッシングモードを利用するときには必ず型を守らなくてはいけません。
-特に、 BASEをレジスタにするのを忘れて エラーになるケースが多いような気がします。
-コンパイラはjunk errorとか適当なエラーメッセージしか出してくれないので、 何がいけないのか分からずに苦労しました。
- DISPLACEMENTには定数を指定する。 BASEとINDEXにはレジスタを指定する。 DISPLACEMENTはバイト単位(long型の配列なら、添字*4を指定する)。  これらを踏まえると、%eaxにインデックス、%ecxに配列arrayの先頭アドレスを格納したとき、 array[%eax+2]を参照するためには、次のようにする必要がありました。
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2012/12/26/x86-addressing-mode/" class="btn btn-primary btn-outline">
                 Read more
             </a>
         </p>

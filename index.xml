@@ -7,8 +7,168 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>&amp;copy; 2021 gam0022</copyright>
-    <lastBuildDate>Thu, 23 Dec 2021 10:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 31 Dec 2021 00:00:00 +0900</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Tokyo Demo Fest 2021のShaderShowdownに参加しました</title>
+      <link>https://gam0022.net/blog/2021/12/31/tdf2021-shader-showdown/</link>
+      <pubDate>Fri, 31 Dec 2021 00:00:00 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2021/12/31/tdf2021-shader-showdown/</guid>
+      <description>&lt;p&gt;12月11日～12日にオンラインで開催された&lt;a href=&#34;https://tokyodemofest.jp/&#34;&gt;Tokyo Demo Fest 2021&lt;/a&gt;（以下、TDF）に参加しました。&lt;/p&gt;
+
+&lt;p&gt;TDFは、日本国内で唯一のデモパーティです。
+リアルタイムに映像や音楽を生成するプログラムを「デモ」と言い、デモを鑑賞したり完成度を競ったりして楽しむイベントを「デモパーティ」と言います。
+「デモシーン」はデモやデモパーティを中心としたコンピューターのサブカルチャーです。&lt;/p&gt;
+
+&lt;p&gt;TDFのShaderShowdownというイベントに競技者として参加しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-31-tdf2021-shader-showdown/Collage_Fotor_v3.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-31-tdf2021-shader-showdown/Collage_Fotor_v3.jpg&#34; alt=&#34;Collage_Fotor_v3&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;また、TDFのGLSL Graphics Compoにも参加したので、こちらは別記事にまとめました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog/2021/12/20/tdf2021-glsl/&#34;&gt;Tokyo Demo Fest 2021のGLSL Graphics Compo優勝作品の解説 | gam0022.net&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;shadershowdownとは&#34;&gt;ShaderShowdownとは&lt;/h1&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;TokyoDemoFestのShader Showdownは、世界的なDemoparty「Revision」と同じレギュレーションで開催します。&lt;br&gt;試合の放映はパーティー当日12/11-12となります。乞うご期待……！ &lt;a href=&#34;https://t.co/IlVue5npWz&#34;&gt;pic.twitter.com/IlVue5npWz&lt;/a&gt;&lt;/p&gt;&amp;mdash; Tokyo Demo Fest 2021 (2021/12/11-12) (@TokyoDemoFest) &lt;a href=&#34;https://twitter.com/TokyoDemoFest/status/1452275618997886976?ref_src=twsrc%5Etfw&#34;&gt;October 24, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;ShaderShowdownとは25分間でシェーダーを書き、どちらの作品が良いかを決める競技です。&lt;/p&gt;
+
+&lt;p&gt;試合中は、一切のドキュメントの参照ができません。当然ながら必要な関数はすべて試合中に実装しないいけません。&lt;/p&gt;
+
+&lt;p&gt;1対1のトーナメント形式で開催され、試合の勝敗は観衆（ビジター）の投票によって決定します。今回は私を含めた8人でトーナメントを行いました。&lt;/p&gt;
+
+&lt;p&gt;対戦はGLSLのライブコーディングで行われます。&lt;a href=&#34;https://github.com/TheNuSan/Bonzomatic/releases/tag/v11&#34;&gt;Bonzomatic&lt;/a&gt;というアプリを利用し、対戦者の書いているコードやカーソルの位置が共有されます。&lt;/p&gt;
+
+&lt;p&gt;ビジターは対戦者が25分の制限時間の中でどのような戦略とアイデアをもってコードを書いていくかをすぐ隣でみているかのように体験できます。&lt;/p&gt;
+
+&lt;p&gt;詳しいGLSLライブコーディングの知識がなくても楽しめるよう、TDFでは対戦者がどのようなコードを書いているかのリアルタイムな解説があります。&lt;/p&gt;
+
+&lt;h1 id=&#34;ライブコーディングした作品解説&#34;&gt;ライブコーディングした作品解説&lt;/h1&gt;
+
+&lt;p&gt;今回のTDFでライブコーディングした作品を簡単に解説します。&lt;/p&gt;
+
+&lt;p&gt;TDFのShaderShowdownの全作品は&lt;a href=&#34;https://livecode.demozoo.org/party_series/174.html&#34;&gt;livecode.demozoo.org&lt;/a&gt;にもアーカイブされています。&lt;/p&gt;
+
+&lt;h2 id=&#34;lightning-tunnel-quarter-final&#34;&gt;Lightning Tunnel | Quarter-Final&lt;/h2&gt;
+
+&lt;p&gt;準々決勝（Quarter-Final）の作品です。&lt;/p&gt;
+
+&lt;p&gt;稲妻が轟くトンネルをイメージして作りました。&lt;/p&gt;
+
+&lt;p&gt;ボリュームレンダリングをしてBloom感を出しています。ボリュームレンダリングの実装が雑なのでアーティファクトが発生しているのですが、むしろ雷の荒々しい感じが再現できて良かったです。&lt;/p&gt;
+
+&lt;p&gt;時間が余ったのでカメラのFoVのアニメーションをしたのですが、ちょっとワープっぽい効果になりました。&lt;/p&gt;
+
+&lt;p&gt;モデリングはIFSでやっています。IFSで狙った形状を出すことは困難なので、パラメーターは事前に調整をして暗記しておきました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;25分でライブコーディングしたシェーダーです。&lt;br&gt;&lt;br&gt;This shader was coded in 25 minutes.&lt;br&gt;&lt;br&gt;Shader showdown quarter-final at &lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Bonzomatic?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Bonzomatic&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/LiveCoding?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#LiveCoding&lt;/a&gt; &lt;a href=&#34;https://t.co/WTw7tHVsbk&#34;&gt;pic.twitter.com/WTw7tHVsbk&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1469562828831195140?ref_src=twsrc%5Etfw&#34;&gt;December 11, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.shadertoy.com/view/sl3XWM&#34;&gt;Shadertoy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://neort.io/art/c6qm3ls3p9f3hsje6360&#34;&gt;NEORT&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;YouTubeのアーカイブ（Day1の2:15頃）です。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/2s9KfMn1J9M?start=8114&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;vj-feat-niko-14-semi-final&#34;&gt;VJ feat. Niko_14 | Semi-Final&lt;/h2&gt;
+
+&lt;p&gt;準決勝（Semi-Final）の作品です。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/himazin917&#34;&gt;Niko_14&lt;/a&gt;さんの音楽がとても素晴らしかったので、音楽に合わせたVJを挑戦しました。&lt;/p&gt;
+
+&lt;p&gt;試合の前日に自分の試合の音楽担当はNiko_14さんと聞いたので、VJをする決意をしました。&lt;/p&gt;
+
+&lt;p&gt;VJっぽい絵を狙ったことが無かったのですが、ほぼ狙い通りのバキバキな感じにできたので良かったです。
+シェーダーの構成としてはQuarter-Finalとほぼ同じで、IFSとボリュームレンダリングの組み合わせです。
+IFSのパラメーターは適当だったのですが、ちゃんと狙い通りの絵になったので良かったです。&lt;/p&gt;
+
+&lt;p&gt;色はFFT（音楽の周波数ごとのボリューム）に対応していて、低音が赤、中音が緑、高音が青に対応しています。
+キックの音が支配的だったので、キックに合わせて赤～ピンクっぽいビームが発生しています。&lt;/p&gt;
+
+&lt;p&gt;Twitterの動画の4秒頃のように、音が切り替わるタイミングでサウンドリアクティブになっているのが分かりやすいと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;25分でライブコーディングしたシェーダーです。&lt;br&gt;かっこいい音楽は &lt;a href=&#34;https://twitter.com/himazin917?ref_src=twsrc%5Etfw&#34;&gt;@himazin917&lt;/a&gt; さん制作です！&lt;br&gt;&lt;br&gt;This shader was coded in 25 minutes.&lt;br&gt;Sound by &lt;a href=&#34;https://twitter.com/himazin917?ref_src=twsrc%5Etfw&#34;&gt;@himazin917&lt;/a&gt;&lt;br&gt;&lt;br&gt;Shader showdown semi-final at &lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Bonzomatic?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Bonzomatic&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/LiveCoding?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#LiveCoding&lt;/a&gt; &lt;a href=&#34;https://t.co/HzUpd9le3t&#34;&gt;pic.twitter.com/HzUpd9le3t&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1469924900257562627?ref_src=twsrc%5Etfw&#34;&gt;December 12, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.shadertoy.com/view/NttSRS&#34;&gt;Shadertoy&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ShadertoyのSoundcloud連携が機能していないため、音楽はNiko_14さんのものではなく、仮です。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;YouTubeのアーカイブ（Day2の1:41頃）です。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/bp37xTVNRrM?start=6086&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Semi-Finalでは&lt;a href=&#34;https://twitter.com/kamoshika_vrc&#34;&gt;Kamoshika&lt;/a&gt;さんに負けてしまったのですが、試合後のコメントによると反射の処理には&lt;a href=&#34;https://gam0022.net/blog/2021/06/08/unity-bible2/&#34;&gt;『Unityゲーム プログラミング・バイブル 2nd Generation』の自分の章&lt;/a&gt;を参考にしてくださったそうで、めちゃくちゃありがてぇ🙏となりました。&lt;/p&gt;
+
+&lt;p&gt;Jugem-Tさんも実況による盛り上げありがとうございました！&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;凄い画同士の殴り合いの中BGMもライブコーディングで生成してる(Niko_14氏)とんでもない光景になっててヤバい&lt;br&gt;&lt;br&gt;Shader Showdown準決勝 gam0022氏 vs Kamoshika氏&lt;br&gt;[LIVE]Tokyo Demo Fest 2021 Day2 &lt;a href=&#34;https://t.co/648ZNFJTxk&#34;&gt;https://t.co/648ZNFJTxk&lt;/a&gt; &lt;a href=&#34;https://twitter.com/YouTube?ref_src=twsrc%5Etfw&#34;&gt;@YouTube&lt;/a&gt;より &lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://t.co/atG6c8hWiK&#34;&gt;pic.twitter.com/atG6c8hWiK&lt;/a&gt;&lt;/p&gt;&amp;mdash; Jugem-T 𓆡作業中 (@Jugem_T) &lt;a href=&#34;https://twitter.com/Jugem_T/status/1469892859503734787?ref_src=twsrc%5Etfw&#34;&gt;December 12, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;感想&#34;&gt;感想&lt;/h1&gt;
+
+&lt;p&gt;大変でしたが、楽しかったです。&lt;/p&gt;
+
+&lt;p&gt;こんなにレベルの高い戦いになるとは思っておらず、みんな凄すぎてちょっと心が折れそうでした。&lt;/p&gt;
+
+&lt;p&gt;とくにFinal（決勝）の&lt;a href=&#34;https://twitter.com/kamoshika_vrc&#34;&gt;Kamoshika&lt;/a&gt; vs &lt;a href=&#34;https://twitter.com/phi16_&#34;&gt;phi16&lt;/a&gt; の戦いは感動しました。&lt;/p&gt;
+
+&lt;p&gt;Kamoshikaさんは蝶、phi16さんはライブゲームと、両者とも &amp;ldquo;生命&amp;rdquo; を誕生させていました。偶然にもテーマが一致していてちょっと面白かったです。&lt;/p&gt;
+
+&lt;p&gt;とにかく実装量がえげつなく、これをライブコーディングでやるんだ…と驚かされました。
+競技者として参加したことで、25分間でこの量をミスなく実装する困難さは痛いほど理解していたので、なおさら驚かされました。&lt;/p&gt;
+
+&lt;p&gt;両者ともミスなく作品を仕上げており、まさに決勝戦に相応しい素晴らしい戦いを見せていただきました🙏&lt;/p&gt;
+
+&lt;p&gt;世界レベルの実力者の方々と戦えて本当に光栄でした！ありがとうございます！&lt;/p&gt;
+
+&lt;p&gt;Kamoshikaさん&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;25 minutes live coding at Shader Showdown Final.&lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/LiveCoding?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#LiveCoding&lt;/a&gt; &lt;a href=&#34;https://t.co/WeVq82f50E&#34;&gt;pic.twitter.com/WeVq82f50E&lt;/a&gt;&lt;/p&gt;&amp;mdash; Kamoshika (@kamoshika_vrc) &lt;a href=&#34;https://twitter.com/kamoshika_vrc/status/1470360600517971970?ref_src=twsrc%5Etfw&#34;&gt;December 13, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;phi16さん&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;und&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://t.co/qluYGj653s&#34;&gt;pic.twitter.com/qluYGj653s&lt;/a&gt;&lt;/p&gt;&amp;mdash; phi16 (@phi16&lt;em&gt;) &amp;lt;a href=&amp;ldquo;&lt;a href=&#34;https://twitter.com/phi16&#34;&gt;https://twitter.com/phi16&lt;/a&gt;&lt;/em&gt;/status/1470104161320849409?ref_src=twsrc%5Etfw&amp;rdquo;&amp;gt;December 12, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;記録 TDF2021 ShaderShowdown &lt;a href=&#34;https://t.co/mMcSoYwh5U&#34;&gt;https://t.co/mMcSoYwh5U&lt;/a&gt;&lt;/p&gt;&amp;mdash; phi16 (@phi16&lt;em&gt;) &amp;lt;a href=&amp;ldquo;&lt;a href=&#34;https://twitter.com/phi16&#34;&gt;https://twitter.com/phi16&lt;/a&gt;&lt;/em&gt;/status/1470415119708753921?ref_src=twsrc%5Etfw&amp;rdquo;&amp;gt;December 13, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;YouTubeのアーカイブ（Day2の4:27頃）&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/bp37xTVNRrM?t=16030&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;おつかれさまでした！&lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://t.co/h2yXCGGBYa&#34;&gt;pic.twitter.com/h2yXCGGBYa&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1469999619409350657?ref_src=twsrc%5Etfw&#34;&gt;December 12, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;練習&#34;&gt;練習&lt;/h1&gt;
+
+&lt;p&gt;ライブコーディングの練習中の作品です。&lt;/p&gt;
+
+&lt;p&gt;Quarter-FinalのIFS+ボリュームレンダリングのアプローチは練習中に決めました。&lt;/p&gt;
+
+&lt;p&gt;トンネルのIFSのモデリングもよく見ると面影が残っています。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;情報量を追加（エンコード耐久テスト）&lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Raymarching?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Raymarching&lt;/a&gt; &lt;a href=&#34;https://t.co/uBg43zGOk6&#34;&gt;pic.twitter.com/uBg43zGOk6&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1453405601971666944?ref_src=twsrc%5Etfw&#34;&gt;October 27, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Diamond Variation 🔷 &lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Raymarching?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Raymarching&lt;/a&gt; &lt;a href=&#34;https://t.co/IAEhBgdW5s&#34;&gt;pic.twitter.com/IAEhBgdW5s&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1453768374312263683?ref_src=twsrc%5Etfw&#34;&gt;October 28, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/Shadertoy?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shadertoy&lt;/a&gt; にポートしました。&lt;br&gt;&lt;br&gt;&amp;quot;Diamond Tunnel&amp;quot; by gam0022&lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt;&lt;a href=&#34;https://t.co/oyyz8mop2x&#34;&gt;https://t.co/oyyz8mop2x&lt;/a&gt; &lt;a href=&#34;https://t.co/DXnqCAKY1Z&#34;&gt;pic.twitter.com/DXnqCAKY1Z&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1476576224768331776?ref_src=twsrc%5Etfw&#34;&gt;December 30, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>[Unity][URP] Y軸ビルボードシェーダー</title>
@@ -3988,396 +4148,6 @@ Now change it as you like.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://memo.render.jp/optix&#34;&gt;optix - uimac実装メモ&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://docs.nvidia.com/gameworks/content/gameworkslibrary/optix/optix_quickstart.htm&#34;&gt;OptiX QuickStart（公式チュートリアル）&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>[Unity] Y軸ビルボードシェーダーの実装と解説</title>
-      <link>https://gam0022.net/blog/2019/07/23/unity-y-axis-billboard-shader/</link>
-      <pubDate>Tue, 23 Jul 2019 09:30:09 +0900</pubDate>
-      
-      <guid>https://gam0022.net/blog/2019/07/23/unity-y-axis-billboard-shader/</guid>
-      <description>&lt;h1 id=&#34;改訂版の記事を書きました-2021-12-23&#34;&gt;改訂版の記事を書きました（2021-12-23）&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;この記事の方法は古いので、改訂版を参考にしてください。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://gam0022.net/blog/2021/12/23/unity-urp-billboard-shader/&#34;&gt;[Unity][URP] Y軸ビルボードシェーダー | gam0022.net&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;こんな感じのY軸のビルボードをC#スクリプトを使わずに、シェーダーだけで実装しました（Unity 2018.3.12f1）。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-07-22-unity-y-axis-billboard-shader/billboard_y_axis.gif&#34; alt=&#34;Y軸ビルボード&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;GitHubリポジトリ: &lt;a href=&#34;https://github.com/gam0022/unity-legacy-render-pipeline-experiments/blob/master/Assets/Experiments/Billboard/Billboard.shader#L51-L82&#34;&gt;gam0022/unity-legacy-render-pipeline-experiments/blob/master/Assets/Experiments/Billboard&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;この記事の要約&#34;&gt;この記事の要約&lt;/h1&gt;
-
-&lt;ol&gt;
-&lt;li&gt;頂点シェーダーでView行列の回転（カメラに応じた回転）をスキップすれば、ビルボードができる&lt;/li&gt;
-&lt;li&gt;Unityは左手系座標だが、 &lt;strong&gt;View空間では右手系座標&lt;/strong&gt; なので、View変換をスキップするときには自前でZの符号を反転する必要がある&lt;/li&gt;
-&lt;li&gt;Y軸のビルボードが必要なら、View行列から回転行列のY軸成分のみを抽出した行列を作れば良い&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&#34;シェーダーで実装するメリット&#34;&gt;シェーダーで実装するメリット&lt;/h1&gt;
-
-&lt;p&gt;シェーダーでビルボードを計算するメリットはたくさんあります。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;VRChatなどユーザのC#スクリプトが使えない環境でも動作する&lt;/li&gt;
-&lt;li&gt;シーンビュー上でも動作する&lt;/li&gt;
-&lt;li&gt;GPU（頂点シェーダー）でビルボード計算ができる
-
-&lt;ul&gt;
-&lt;li&gt;ビルボード計算のためのCPU負荷が全くかからない&lt;/li&gt;
-&lt;li&gt;板ポリの頂点数は4なので、頂点シェーダーで多少重い処理をしても、GPU負荷への影響はわずか&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;シェーダーのコード-全体&#34;&gt;シェーダーのコード（全体）&lt;/h1&gt;
-
-&lt;p&gt;最終的なシェーダーのコードはこちらです。&lt;/p&gt;
-
-&lt;p&gt;単体で動作しますので、コピペしてお使いいただけます。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;// Unity Y-Axis Billboard Shader by @gam0022
-// https://gam0022.net/blog/2019/07/23/unity-y-axis-billboard-shader/
-Shader &amp;quot;Unlit/Billboard&amp;quot;
-{
-    Properties
-    {
-        _MainTex (&amp;quot;Texture&amp;quot;, 2D) = &amp;quot;white&amp;quot; {}
-        [KeywordEnum(OFF, ALL_AXIS, Y_AXIS)] _BILLBOARD(&amp;quot;Billboard Mode&amp;quot;, Float) = 2
-        _Cutoff (&amp;quot;Alpha Cutoff&amp;quot;, Range(0, 1)) = 0.5
-    }
-    SubShader
-    {
-        Tags{ &amp;quot;Queue&amp;quot; = &amp;quot;AlphaTest&amp;quot; &amp;quot;RenderType&amp;quot; = &amp;quot;TransparentCutout&amp;quot;
-                &amp;quot;IgnoreProjector&amp;quot; = &amp;quot;True&amp;quot; &amp;quot;DisableBatching&amp;quot; = &amp;quot;True&amp;quot; }
-
-        Pass
-        {
-            CGPROGRAM
-            #pragma vertex vert
-            #pragma fragment frag
-            // make fog work
-            #pragma multi_compile_fog
-
-            #include &amp;quot;UnityCG.cginc&amp;quot;
-            #pragma multi_compile _BILLBOARD_OFF _BILLBOARD_ALL_AXIS _BILLBOARD_Y_AXIS
-
-            struct appdata
-            {
-                float4 vertex : POSITION;
-                float2 uv : TEXCOORD0;
-            };
-
-            struct v2f
-            {
-                float2 uv : TEXCOORD0;
-                UNITY_FOG_COORDS(1)
-                float4 vertex : SV_POSITION;
-            };
-
-            sampler2D _MainTex;
-            float4 _MainTex_ST;
-            
-            float _Cutoff;
-
-            v2f vert (appdata v)
-            {
-                v2f o;
-
-                #if _BILLBOARD_OFF
-                {
-                    // ビルボードなしの通常の座標変換
-                    o.vertex = UnityObjectToClipPos(v.vertex);
-                }
-                #elif _BILLBOARD_ALL_AXIS
-                {                   
-                    // Meshの原点をModelView変換
-                    float3 viewPos = UnityObjectToViewPos(float3(0, 0, 0));
-                    
-                    // スケールと回転（平行移動なし）だけModel変換して、View変換はスキップ
-                    float3 scaleRotatePos = mul((float3x3)unity_ObjectToWorld, v.vertex);
-                    
-                    // scaleRotatePosを右手系に変換して、viewPosに加算
-                    // 本来はView変換で暗黙的にZが反転されているので、
-                    // View変換をスキップする場合は明示的にZを反転する必要がある
-                    viewPos += float3(scaleRotatePos.xy, -scaleRotatePos.z);
-                    
-                    o.vertex = mul(UNITY_MATRIX_P, float4(viewPos, 1));
-                }
-                #elif _BILLBOARD_Y_AXIS
-                {
-                    // Meshの原点をModelView変換
-                    float3 viewPos = UnityObjectToViewPos(float3(0, 0, 0));
-                    
-                    // スケールと回転（平行移動なし）だけModel変換して、View変換はスキップ
-                    float3 scaleRotatePos = mul((float3x3)unity_ObjectToWorld, v.vertex);                
-                    
-                    // View行列から回転行列のY軸成分のみを抽出
-                    float3x3 ViewRotateY = float3x3(
-                        1, UNITY_MATRIX_V._m01, 0,
-                        0, UNITY_MATRIX_V._m11, 0,
-                        0, UNITY_MATRIX_V._m21, -1// Zの符号を反転して右手系に変換
-                    );
-                    viewPos += mul(ViewRotateY, scaleRotatePos);
-                    
-                    o.vertex = mul(UNITY_MATRIX_P, float4(viewPos, 1));
-                }
-                #endif
-
-                o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-                UNITY_TRANSFER_FOG(o,o.vertex);
-                return o;
-            }
-
-            fixed4 frag (v2f i) : SV_Target
-            {
-                // sample the texture
-                fixed4 col = tex2D(_MainTex, i.uv);
-                clip(col.a - _Cutoff);
-                
-                // apply fog
-                UNITY_APPLY_FOG(i.fogCoord, col);
-                return col;
-            }
-            ENDCG
-        }
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&#34;ビルボードのモードについて&#34;&gt;ビルボードのモードについて&lt;/h2&gt;
-
-&lt;p&gt;このようにビルボードのモードをインスペクタで選択できます。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-07-22-unity-y-axis-billboard-shader/shader_inspector.png&#34; alt=&#34;シェーダーのインスペクタ&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;それぞれの結果を並べました。&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;OFF: ビルボードなし&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;ALL_AXIS: 通常のビルボード&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;Y_AXIS: Y軸のビルボード&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-07-22-unity-y-axis-billboard-shader/billboard_off.gif&#34; alt=&#34;ビルボードなし&#34; /&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-07-22-unity-y-axis-billboard-shader/billboard_all_axis.gif&#34; alt=&#34;ビルボードあり&#34; /&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-07-22-unity-y-axis-billboard-shader/billboard_y_axis.gif&#34; alt=&#34;Y軸ビルボード&#34; /&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;通常の描画&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;上から見たときの違和感が大きい&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;上から見たときの違和感を緩和できる&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h1 id=&#34;コードの解説&#34;&gt;コードの解説&lt;/h1&gt;
-
-&lt;p&gt;ここから、本題であるシェーダーの解説を行います。&lt;/p&gt;
-
-&lt;h2 id=&#34;通常のビルボード&#34;&gt;通常のビルボード&lt;/h2&gt;
-
-&lt;p&gt;通常のビルボードの頂点シェーダーの処理を抜粋しました。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;#elif _BILLBOARD_ALL_AXIS
-{                   
-    // ①Meshの原点をModelView変換
-    float3 viewPos = UnityObjectToViewPos(float3(0, 0, 0));
-    
-    // ②スケールと回転（平行移動なし）だけModel変換して、View変換はスキップ
-    float3 scaleRotatePos = mul((float3x3)unity_ObjectToWorld, v.vertex);
-    
-    // ③scaleRotatePosを右手系に変換して、viewPosに加算
-    // 本来はView変換で暗黙的にZが反転されているので、
-    // View変換をスキップする場合は明示的にZを反転する必要がある
-    viewPos += float3(scaleRotatePos.xy, -scaleRotatePos.z);
-    
-    // ④最後にプロジェクション変換
-    o.vertex = mul(UNITY_MATRIX_P, float4(viewPos, 1));
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;①について&#34;&gt;①について&lt;/h3&gt;
-
-&lt;p&gt;記事の冒頭で&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;1.頂点シェーダーでView行列の回転（カメラに応じた回転）をスキップすれば、ビルボードができる&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;と書きましたが、厳密にはMeshの原点だけはView変換を行います。&lt;/p&gt;
-
-&lt;p&gt;原点は回転の影響を受けないので、普通にModelView変換することで平行移動のみ適応できます。&lt;/p&gt;
-
-&lt;h3 id=&#34;②について&#34;&gt;②について&lt;/h3&gt;
-
-&lt;p&gt;Model行列よる平行移動は①で処理しているので、スケールと回転だけを各頂点に適応します。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;(float3x3)unity_ObjectToWorld&lt;/code&gt; のように &lt;code&gt;float3x3&lt;/code&gt; でキャストすることで、平行移動の行列の成分を捨てることができます。&lt;/p&gt;
-
-&lt;p&gt;列ベクトルの場合は4行目に平行移動の情報が入っていますが、キャストによって4列目の成分が消えるため、平行移動の成分が消えます。&lt;/p&gt;
-
-&lt;h3 id=&#34;③について&#34;&gt;③について&lt;/h3&gt;
-
-&lt;p&gt;①で&lt;code&gt;viewPos&lt;/code&gt; には原点のView空間の座標を代入しましたが、これに②で生成した各頂点の座標を加算しています。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;float3(scaleRotatePos.xy, -scaleRotatePos.z)&lt;/code&gt; のようにZ成分だけ符号を反転しているのは、冒頭の&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;2.Unityは左手系座標だが、 &lt;strong&gt;View空間では右手系座標&lt;/strong&gt; なので、View変換をスキップするときには自前でZの符号を反転する必要がある&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;という理由によるものです。&lt;/p&gt;
-
-&lt;p&gt;左手系座標ではZ軸とカメラのforwardベクトルが同じ向きですが、右手系座標では反対向きになります。&lt;/p&gt;
-
-&lt;p&gt;私はこのUnityの仕様を知らずに、かなり悩んでしまいました…&lt;/p&gt;
-
-&lt;p&gt;私がネットで見つけたUnityのビルボードのシェーダーの実装のほとんどはZを反転する処理が抜けていました。
-そのため、Box等の厚みのあるMeshに用いると、Cullingが反転して背面ポリゴンが描画される不具合がありました。&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;Z反転なし&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;Z反転あり&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-07-22-unity-y-axis-billboard-shader/z_reverse_off.png&#34; alt=&#34;Z反転なし&#34; /&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-07-22-unity-y-axis-billboard-shader/z_reverse_on.png&#34; alt=&#34;Z反転あり&#34; /&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;NG: Cullingが反転して背面ポリゴンが描画されている&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;OK: 正常に表面ポリゴンが描画されている&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&#34;④について&#34;&gt;④について&lt;/h3&gt;
-
-&lt;p&gt;View座標にプロジェクション行列を乗算すると、最終的なクリッピング座標を計算できます（定形処理）。&lt;/p&gt;
-
-&lt;h2 id=&#34;y軸のビルボード&#34;&gt;Y軸のビルボード&lt;/h2&gt;
-
-&lt;p&gt;Y軸のビルボードの頂点シェーダーの処理を抜粋しました。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;#elif _BILLBOARD_Y_AXIS
-{
-    // ①Meshの原点をModelView変換
-    float3 viewPos = UnityObjectToViewPos(float3(0, 0, 0));
-    
-    // ②スケールと回転（平行移動なし）だけModel変換して、View変換はスキップ
-    float3 scaleRotatePos = mul((float3x3)unity_ObjectToWorld, v.vertex);                
-    
-    // ③View行列からY軸の回転だけ抽出した行列を生成
-    float3x3 ViewRotateY = float3x3(
-        1, UNITY_MATRIX_V._m01, 0,
-        0, UNITY_MATRIX_V._m11, 0,
-        0, UNITY_MATRIX_V._m21, -1// Zの符号を反転して右手系に変換
-    );
-    viewPos += mul(ViewRotateY, scaleRotatePos);
-    
-    // ④最後にプロジェクション変換
-    o.vertex = mul(UNITY_MATRIX_P, float4(viewPos, 1));
-}
-#endif
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;①②④について&#34;&gt;①②④について&lt;/h3&gt;
-
-&lt;p&gt;①②④については、通常のビルボードと全く同じ処理なので、説明を割愛します。&lt;/p&gt;
-
-&lt;h3 id=&#34;③について-1&#34;&gt;③について&lt;/h3&gt;
-
-&lt;p&gt;③の &lt;code&gt;ViewRotateY&lt;/code&gt; は冒頭で説明したこの行列です。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;3.Y軸のビルボードが必要なら、View行列から回転行列のY軸成分のみを抽出した行列を作れば良い&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;View行列から回転行列のY軸成分だけ抽出して、X軸とZ軸は変換しないようにしています。&lt;/p&gt;
-
-&lt;p&gt;通常のビルボードと同様に、View空間では右手系座標とするために、3行3列目には -1 を指定しています。&lt;/p&gt;
-
-&lt;h1 id=&#34;感想&#34;&gt;感想&lt;/h1&gt;
-
-&lt;p&gt;ビルボードくらいサクッと実装できると思いきや、View空間が右手系座標になっているとは夢にも思わず、すこし苦戦しました。&lt;/p&gt;
-
-&lt;p&gt;そこで動作原理を解説した日本語の記事を探したものの、ほとんど見当たらなかったため、今回筆を執った次第です。&lt;/p&gt;
-
-&lt;p&gt;なるべく丁寧に解説したつもりでしたが、分かりにくい点や間違いがあればコメントやTwitterで教えてください。&lt;/p&gt;
-
-&lt;p&gt;ちなみに今回の方法だとドローコールバッチングができないため、次回はドローコールを減らす解決策を紹介するかもしれません。&lt;/p&gt;
-
-&lt;h1 id=&#34;参考資料&#34;&gt;参考資料&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Unity公式リファレンス
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.unity3d.com/ja/current/Manual//SL-BuiltinFunctions.html&#34;&gt;ビルトインシェーダーヘルパー機能&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.unity3d.com/ja/current/Manual/SL-UnityShaderVariables.html&#34;&gt;ビルトインのシェーダー変数&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.unity3d.com/ja/current/ScriptReference/Camera-worldToCameraMatrix.html&#34;&gt;Camera.worldToCameraMatrix&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ポイント: Note that camera space matches OpenGL convention: camera&amp;rsquo;s forward is the negative Z axis. This is different from Unity&amp;rsquo;s convention, where forward is the positive Z axis.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://edom18.hateblo.jp/entry/2019/01/04/153205&#34;&gt;Unityの行列の扱いとベクトルのオーダー周りについてまとめておく&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ポイント: UnityのC#は「列オーダー」。でもシェーダは「行オーダー」&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://logicalbeat.jp/blog/929/&#34;&gt;【Unity】【数学】Unityでのビュー＆プロジェクション行列とプラットフォームの関係&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ポイント: UnityのScene上は左手座標系が原則だが、シェーダ内の行列（UNITY_MATRIX_V）では右手座標系になっているという情報がある。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://marupeke296.com/DXG_No72_ViewProjInfo.html&#34;&gt;その72 ビュー・射影変換行列が持つ情報を抜き出そう&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Model行列・View行列・Projection行列の各成分が何だったか忘れたときに参考になります&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;既存のビルボードのシェーダー実装
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://gist.github.com/kaiware007/8ebad2d28638ff83b6b74970a4f70c9a#file-billboard-shader-L47-L50&#34;&gt;Simple Billboard shader for Unity&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;NOTE: Cullingの不具合あり&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/Unity3D/comments/ahqbod/a_billboard_sprite_shader_in_only_one_axis/eeieb6q/&#34;&gt;A billboard sprite shader in only one axis&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;NOTE: 逆行列（転置行列）でViewのXZの回転を打ち消すアプローチなので、計算に無駄がある&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;利用したテクスチャ素材
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.pngall.com/tree-png/download/23754&#34;&gt;Tree PNG Clipart Background&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.deviantart.com/fabooguy/art/Dirt-Ground-Texture-Tileable-2048x2048-441212191&#34;&gt;Dirt/Ground Texture [Tileable | 2048x2048]&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     

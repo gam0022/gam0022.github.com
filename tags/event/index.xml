@@ -10,6 +10,166 @@
     <atom:link href="/tags/event/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Tokyo Demo Fest 2021のShaderShowdownに参加しました</title>
+      <link>https://gam0022.net/blog/2021/12/31/tdf2021-shader-showdown/</link>
+      <pubDate>Fri, 31 Dec 2021 00:00:00 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2021/12/31/tdf2021-shader-showdown/</guid>
+      <description>&lt;p&gt;12月11日～12日にオンラインで開催された&lt;a href=&#34;https://tokyodemofest.jp/&#34;&gt;Tokyo Demo Fest 2021&lt;/a&gt;（以下、TDF）に参加しました。&lt;/p&gt;
+
+&lt;p&gt;TDFは、日本国内で唯一のデモパーティです。
+リアルタイムに映像や音楽を生成するプログラムを「デモ」と言い、デモを鑑賞したり完成度を競ったりして楽しむイベントを「デモパーティ」と言います。
+「デモシーン」はデモやデモパーティを中心としたコンピューターのサブカルチャーです。&lt;/p&gt;
+
+&lt;p&gt;TDFのShaderShowdownというイベントに競技者として参加しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-31-tdf2021-shader-showdown/Collage_Fotor_v3.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-31-tdf2021-shader-showdown/Collage_Fotor_v3.jpg&#34; alt=&#34;Collage_Fotor_v3&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;また、TDFのGLSL Graphics Compoにも参加したので、こちらは別記事にまとめました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog/2021/12/20/tdf2021-glsl/&#34;&gt;Tokyo Demo Fest 2021のGLSL Graphics Compo優勝作品の解説 | gam0022.net&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;shadershowdownとは&#34;&gt;ShaderShowdownとは&lt;/h1&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;TokyoDemoFestのShader Showdownは、世界的なDemoparty「Revision」と同じレギュレーションで開催します。&lt;br&gt;試合の放映はパーティー当日12/11-12となります。乞うご期待……！ &lt;a href=&#34;https://t.co/IlVue5npWz&#34;&gt;pic.twitter.com/IlVue5npWz&lt;/a&gt;&lt;/p&gt;&amp;mdash; Tokyo Demo Fest 2021 (2021/12/11-12) (@TokyoDemoFest) &lt;a href=&#34;https://twitter.com/TokyoDemoFest/status/1452275618997886976?ref_src=twsrc%5Etfw&#34;&gt;October 24, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;ShaderShowdownとは25分間でシェーダーを書き、どちらの作品が良いかを決める競技です。&lt;/p&gt;
+
+&lt;p&gt;試合中は、一切のドキュメントの参照ができません。当然ながら必要な関数はすべて試合中に実装しないいけません。&lt;/p&gt;
+
+&lt;p&gt;1対1のトーナメント形式で開催され、試合の勝敗は観衆（ビジター）の投票によって決定します。今回は私を含めた8人でトーナメントを行いました。&lt;/p&gt;
+
+&lt;p&gt;対戦はGLSLのライブコーディングで行われます。&lt;a href=&#34;https://github.com/TheNuSan/Bonzomatic/releases/tag/v11&#34;&gt;Bonzomatic&lt;/a&gt;というアプリを利用し、対戦者の書いているコードやカーソルの位置が共有されます。&lt;/p&gt;
+
+&lt;p&gt;ビジターは対戦者が25分の制限時間の中でどのような戦略とアイデアをもってコードを書いていくかをすぐ隣でみているかのように体験できます。&lt;/p&gt;
+
+&lt;p&gt;詳しいGLSLライブコーディングの知識がなくても楽しめるよう、TDFでは対戦者がどのようなコードを書いているかのリアルタイムな解説があります。&lt;/p&gt;
+
+&lt;h1 id=&#34;ライブコーディングした作品解説&#34;&gt;ライブコーディングした作品解説&lt;/h1&gt;
+
+&lt;p&gt;今回のTDFでライブコーディングした作品を簡単に解説します。&lt;/p&gt;
+
+&lt;p&gt;TDFのShaderShowdownの全作品は&lt;a href=&#34;https://livecode.demozoo.org/party_series/174.html&#34;&gt;livecode.demozoo.org&lt;/a&gt;にもアーカイブされています。&lt;/p&gt;
+
+&lt;h2 id=&#34;lightning-tunnel-quarter-final&#34;&gt;Lightning Tunnel | Quarter-Final&lt;/h2&gt;
+
+&lt;p&gt;準々決勝（Quarter-Final）の作品です。&lt;/p&gt;
+
+&lt;p&gt;稲妻が轟くトンネルをイメージして作りました。&lt;/p&gt;
+
+&lt;p&gt;ボリュームレンダリングをしてBloom感を出しています。ボリュームレンダリングの実装が雑なのでアーティファクトが発生しているのですが、むしろ雷の荒々しい感じが再現できて良かったです。&lt;/p&gt;
+
+&lt;p&gt;時間が余ったのでカメラのFoVのアニメーションをしたのですが、ちょっとワープっぽい効果になりました。&lt;/p&gt;
+
+&lt;p&gt;モデリングはIFSでやっています。IFSで狙った形状を出すことは困難なので、パラメーターは事前に調整をして暗記しておきました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;25分でライブコーディングしたシェーダーです。&lt;br&gt;&lt;br&gt;This shader was coded in 25 minutes.&lt;br&gt;&lt;br&gt;Shader showdown quarter-final at &lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Bonzomatic?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Bonzomatic&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/LiveCoding?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#LiveCoding&lt;/a&gt; &lt;a href=&#34;https://t.co/WTw7tHVsbk&#34;&gt;pic.twitter.com/WTw7tHVsbk&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1469562828831195140?ref_src=twsrc%5Etfw&#34;&gt;December 11, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.shadertoy.com/view/sl3XWM&#34;&gt;Shadertoy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://neort.io/art/c6qm3ls3p9f3hsje6360&#34;&gt;NEORT&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;YouTubeのアーカイブ（Day1の2:15頃）です。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/2s9KfMn1J9M?start=8114&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;vj-feat-niko-14-semi-final&#34;&gt;VJ feat. Niko_14 | Semi-Final&lt;/h2&gt;
+
+&lt;p&gt;準決勝（Semi-Final）の作品です。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/himazin917&#34;&gt;Niko_14&lt;/a&gt;さんの音楽がとても素晴らしかったので、音楽に合わせたVJを挑戦しました。&lt;/p&gt;
+
+&lt;p&gt;試合の前日に自分の試合の音楽担当はNiko_14さんと聞いたので、VJをする決意をしました。&lt;/p&gt;
+
+&lt;p&gt;VJっぽい絵を狙ったことが無かったのですが、ほぼ狙い通りのバキバキな感じにできたので良かったです。
+シェーダーの構成としてはQuarter-Finalとほぼ同じで、IFSとボリュームレンダリングの組み合わせです。
+IFSのパラメーターは適当だったのですが、ちゃんと狙い通りの絵になったので良かったです。&lt;/p&gt;
+
+&lt;p&gt;色はFFT（音楽の周波数ごとのボリューム）に対応していて、低音が赤、中音が緑、高音が青に対応しています。
+キックの音が支配的だったので、キックに合わせて赤～ピンクっぽいビームが発生しています。&lt;/p&gt;
+
+&lt;p&gt;Twitterの動画の4秒頃のように、音が切り替わるタイミングでサウンドリアクティブになっているのが分かりやすいと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;25分でライブコーディングしたシェーダーです。&lt;br&gt;かっこいい音楽は &lt;a href=&#34;https://twitter.com/himazin917?ref_src=twsrc%5Etfw&#34;&gt;@himazin917&lt;/a&gt; さん制作です！&lt;br&gt;&lt;br&gt;This shader was coded in 25 minutes.&lt;br&gt;Sound by &lt;a href=&#34;https://twitter.com/himazin917?ref_src=twsrc%5Etfw&#34;&gt;@himazin917&lt;/a&gt;&lt;br&gt;&lt;br&gt;Shader showdown semi-final at &lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Bonzomatic?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Bonzomatic&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/LiveCoding?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#LiveCoding&lt;/a&gt; &lt;a href=&#34;https://t.co/HzUpd9le3t&#34;&gt;pic.twitter.com/HzUpd9le3t&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1469924900257562627?ref_src=twsrc%5Etfw&#34;&gt;December 12, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.shadertoy.com/view/NttSRS&#34;&gt;Shadertoy&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ShadertoyのSoundcloud連携が機能していないため、音楽はNiko_14さんのものではなく、仮です。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;YouTubeのアーカイブ（Day2の1:41頃）です。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/bp37xTVNRrM?start=6086&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Semi-Finalでは&lt;a href=&#34;https://twitter.com/kamoshika_vrc&#34;&gt;Kamoshika&lt;/a&gt;さんに負けてしまったのですが、試合後のコメントによると反射の処理には&lt;a href=&#34;https://gam0022.net/blog/2021/06/08/unity-bible2/&#34;&gt;『Unityゲーム プログラミング・バイブル 2nd Generation』の自分の章&lt;/a&gt;を参考にしてくださったそうで、めちゃくちゃありがてぇ🙏となりました。&lt;/p&gt;
+
+&lt;p&gt;Jugem-Tさんも実況による盛り上げありがとうございました！&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;凄い画同士の殴り合いの中BGMもライブコーディングで生成してる(Niko_14氏)とんでもない光景になっててヤバい&lt;br&gt;&lt;br&gt;Shader Showdown準決勝 gam0022氏 vs Kamoshika氏&lt;br&gt;[LIVE]Tokyo Demo Fest 2021 Day2 &lt;a href=&#34;https://t.co/648ZNFJTxk&#34;&gt;https://t.co/648ZNFJTxk&lt;/a&gt; &lt;a href=&#34;https://twitter.com/YouTube?ref_src=twsrc%5Etfw&#34;&gt;@YouTube&lt;/a&gt;より &lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://t.co/atG6c8hWiK&#34;&gt;pic.twitter.com/atG6c8hWiK&lt;/a&gt;&lt;/p&gt;&amp;mdash; Jugem-T 𓆡作業中 (@Jugem_T) &lt;a href=&#34;https://twitter.com/Jugem_T/status/1469892859503734787?ref_src=twsrc%5Etfw&#34;&gt;December 12, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;感想&#34;&gt;感想&lt;/h1&gt;
+
+&lt;p&gt;大変でしたが、楽しかったです。&lt;/p&gt;
+
+&lt;p&gt;こんなにレベルの高い戦いになるとは思っておらず、みんな凄すぎてちょっと心が折れそうでした。&lt;/p&gt;
+
+&lt;p&gt;とくにFinal（決勝）の&lt;a href=&#34;https://twitter.com/kamoshika_vrc&#34;&gt;Kamoshika&lt;/a&gt; vs &lt;a href=&#34;https://twitter.com/phi16_&#34;&gt;phi16&lt;/a&gt; の戦いは感動しました。&lt;/p&gt;
+
+&lt;p&gt;Kamoshikaさんは蝶、phi16さんはライブゲームと、両者とも &amp;ldquo;生命&amp;rdquo; を誕生させていました。偶然にもテーマが一致していてちょっと面白かったです。&lt;/p&gt;
+
+&lt;p&gt;とにかく実装量がえげつなく、これをライブコーディングでやるんだ…と驚かされました。
+競技者として参加したことで、25分間でこの量をミスなく実装する困難さは痛いほど理解していたので、なおさら驚かされました。&lt;/p&gt;
+
+&lt;p&gt;両者ともミスなく作品を仕上げており、まさに決勝戦に相応しい素晴らしい戦いを見せていただきました🙏&lt;/p&gt;
+
+&lt;p&gt;世界レベルの実力者の方々と戦えて本当に光栄でした！ありがとうございます！&lt;/p&gt;
+
+&lt;p&gt;Kamoshikaさん&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;25 minutes live coding at Shader Showdown Final.&lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/LiveCoding?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#LiveCoding&lt;/a&gt; &lt;a href=&#34;https://t.co/WeVq82f50E&#34;&gt;pic.twitter.com/WeVq82f50E&lt;/a&gt;&lt;/p&gt;&amp;mdash; Kamoshika (@kamoshika_vrc) &lt;a href=&#34;https://twitter.com/kamoshika_vrc/status/1470360600517971970?ref_src=twsrc%5Etfw&#34;&gt;December 13, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;phi16さん&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;und&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://t.co/qluYGj653s&#34;&gt;pic.twitter.com/qluYGj653s&lt;/a&gt;&lt;/p&gt;&amp;mdash; phi16 (@phi16&lt;em&gt;) &amp;lt;a href=&amp;ldquo;&lt;a href=&#34;https://twitter.com/phi16&#34;&gt;https://twitter.com/phi16&lt;/a&gt;&lt;/em&gt;/status/1470104161320849409?ref_src=twsrc%5Etfw&amp;rdquo;&amp;gt;December 12, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;記録 TDF2021 ShaderShowdown &lt;a href=&#34;https://t.co/mMcSoYwh5U&#34;&gt;https://t.co/mMcSoYwh5U&lt;/a&gt;&lt;/p&gt;&amp;mdash; phi16 (@phi16&lt;em&gt;) &amp;lt;a href=&amp;ldquo;&lt;a href=&#34;https://twitter.com/phi16&#34;&gt;https://twitter.com/phi16&lt;/a&gt;&lt;/em&gt;/status/1470415119708753921?ref_src=twsrc%5Etfw&amp;rdquo;&amp;gt;December 13, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;YouTubeのアーカイブ（Day2の4:27頃）&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/bp37xTVNRrM?t=16030&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;おつかれさまでした！&lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://t.co/h2yXCGGBYa&#34;&gt;pic.twitter.com/h2yXCGGBYa&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1469999619409350657?ref_src=twsrc%5Etfw&#34;&gt;December 12, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;練習&#34;&gt;練習&lt;/h1&gt;
+
+&lt;p&gt;ライブコーディングの練習中の作品です。&lt;/p&gt;
+
+&lt;p&gt;Quarter-FinalのIFS+ボリュームレンダリングのアプローチは練習中に決めました。&lt;/p&gt;
+
+&lt;p&gt;トンネルのIFSのモデリングもよく見ると面影が残っています。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;情報量を追加（エンコード耐久テスト）&lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Raymarching?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Raymarching&lt;/a&gt; &lt;a href=&#34;https://t.co/uBg43zGOk6&#34;&gt;pic.twitter.com/uBg43zGOk6&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1453405601971666944?ref_src=twsrc%5Etfw&#34;&gt;October 27, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Diamond Variation 🔷 &lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Raymarching?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Raymarching&lt;/a&gt; &lt;a href=&#34;https://t.co/IAEhBgdW5s&#34;&gt;pic.twitter.com/IAEhBgdW5s&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1453768374312263683?ref_src=twsrc%5Etfw&#34;&gt;October 28, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/Shadertoy?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shadertoy&lt;/a&gt; にポートしました。&lt;br&gt;&lt;br&gt;&amp;quot;Diamond Tunnel&amp;quot; by gam0022&lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt;&lt;a href=&#34;https://t.co/oyyz8mop2x&#34;&gt;https://t.co/oyyz8mop2x&lt;/a&gt; &lt;a href=&#34;https://t.co/DXnqCAKY1Z&#34;&gt;pic.twitter.com/DXnqCAKY1Z&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1476576224768331776?ref_src=twsrc%5Etfw&#34;&gt;December 30, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Tokyo Demo Fest 2021のGLSL Graphics Compo優勝作品の解説</title>
       <link>https://gam0022.net/blog/2021/12/20/tdf2021-glsl/</link>
       <pubDate>Mon, 20 Dec 2021 12:00:00 +0900</pubDate>
@@ -3198,321 +3358,6 @@ i_saintさんが&lt;a href=&#34;https://t.co/4lr7GbTnFc&#34;&gt;&amp;ldquo;2nd s
 &lt;p&gt;興味の近い人と交流するのって、最高に楽しいですね！&lt;/p&gt;
 
 &lt;p&gt;来年も参加するので、よろしくお願いしますm(_ _)m&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>全くの素人がISUCON5本戦に参加しました</title>
-      <link>https://gam0022.net/blog/2015/11/08/isucon/</link>
-      <pubDate>Sun, 08 Nov 2015 18:21:00 +0900</pubDate>
-      
-      <guid>https://gam0022.net/blog/2015/11/08/isucon/</guid>
-      <description>&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
-
-&lt;p&gt;ISUCON5の本戦に @methane さん、@koki_cheese さん、私(@gam0022)の3人で、チーム名 lily white として参加しました。
-結果は fail (サーバの再起動のテストで失格しため、スコア無し)でした。&lt;/p&gt;
-
-&lt;p&gt;ISUCONとは、お題となるWebサービスを限界まで高速化を図るチューニングバトルです。
-私は今回のISUCONに参加するまで、インフラもパフォーマンス・チューニングも経験のない全くの素人でした。
-自分の実力では本戦出場は絶対に不可能でしたので、本戦まで連れていってくださったチームのみなさんには本当に感謝しています。&lt;/p&gt;
-
-&lt;p&gt;ISUCONの攻略に関する有益な情報は、既に他のブログに多くのエントリーがあると思いますので、
-本記事では全くの素人がどんなふうにISUCONに参加したのかを振り返っていこうかと思います。
-予選+本戦を振り返るため、長文になります。すみません。
-チーム全体での参加の様子は、@methane さんのブログで紹介されています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://dsas.blog.klab.org/archives/isucon5-qual-methane.html&#34;&gt;ISUCON5 予選通過しました (@methane編)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://dsas.blog.klab.org/archives/isucon5-final.html&#34;&gt;ISUCON 5 決勝戦で負けてきました&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;参加のきっかけは、会社の先輩でスーパーエンジニアの @methane さんがISUCONに興味のある新人を募集していたことでした。
-インフラやパフォーマンス・チューニングを学習する良い機会になりそうだと考えて、参加を決意しました。
-また、大学生の @koki_cheese さんが ISUCON メンバーを募集していたので、
-@methane さんが自チームに引き入れ、チーム lily white が結成されました。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;予選&#34;&gt;予選&lt;/h1&gt;
-
-&lt;p&gt;まずは予選に関して、練習でやったこと、当日やったこと、後日やったことを振り返ります。&lt;/p&gt;
-
-&lt;h2 id=&#34;予選にむけての準備&#34;&gt;予選にむけての準備&lt;/h2&gt;
-
-&lt;p&gt;リーダの @methane さんにアドバイスをいただきながら、私と @koki_cheese さんは練習と対策を行っていきました。&lt;/p&gt;
-
-&lt;p&gt;事前に、&lt;a href=&#34;https://cloud.google.com/?hl=ja&#34;&gt;GCP(Google Cloud Platform)&lt;/a&gt;上で
-予選が実施されるというアナウンスがあったため、練習にはGCP環境を使用しました。
-ちなみに、ISUCON 参加チームには1年間有効な100ドル分のGCPクーポンが配布されます。&lt;/p&gt;
-
-&lt;p&gt;また、去年開催された ISUCON4 の予選はAWS上で実施されましたが、
-ISUCON運営チームが ISUCON5 の練習用に
-ISUCON4 の予選の&lt;a href=&#34;http://isucon.net/archives/45253058.html#5_1&#34;&gt;GCPのイメージ&lt;/a&gt;を配布してくださいました。
-まずは、このイメージを使って ISUCON の雰囲気をつかんでいきました。&lt;/p&gt;
-
-&lt;p&gt;ISUCON4の予選はのお題は「いすこん銀行」というログイン機能だけの非常にシンプルなWebアプリでした。
-@methane さんにプロファイリングの方法などを教わりながら、次のようなことをしました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;GCP自体の使い方の練習&lt;/li&gt;
-&lt;li&gt;以下のコマンドやツールを使った、プロファイリングの練習
-
-&lt;ul&gt;
-&lt;li&gt;@methane さん作の &lt;a href=&#34;https://github.com/KLab/myprofiler&#34;&gt;myprofiler&lt;/a&gt; という MySQL のプロファイラ&lt;/li&gt;
-&lt;li&gt;@methane さん作の Nginxのアクセスログを集計して、ページごとのレスポンスや通信量を調べるスクリプト&lt;/li&gt;
-&lt;li&gt;dstat という色々なリソース状況を見るためのコマンド&lt;/li&gt;
-&lt;li&gt;top というプロセスごとの CPUやメモリの状況を調べるコマンド&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Go言語のアプリとMySQLをTCPではなく、UNIXドメインソケットで繋ぐ練習&lt;/li&gt;
-&lt;li&gt;Nginxで静的ファイルを返す設定をする練習&lt;/li&gt;
-&lt;li&gt;DBのオンメモリ作戦にチャレンジ（自分の実装力とアプリの挙動の把握力が低すぎてハマったので、当日はオンメモリは止めることにしました）&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;また、チームとしてGoを選択することは決まっていたのに、私はGoが全くの未経験だったので、
-&lt;a href=&#34;http://go-tour-jp.appspot.com/#1&#34;&gt;A Tour of Go&lt;/a&gt;を一通り目を通してGoに慣れておきました。&lt;/p&gt;
-
-&lt;p&gt;strace/pprof についても教えてもらっていましたが、これらの練習は手を付けられませんでした。&lt;/p&gt;
-
-&lt;h2 id=&#34;予選の当日&#34;&gt;予選の当日&lt;/h2&gt;
-
-&lt;p&gt;ISUCON5の予選のお題は「ISUXI」という某SNS風のアプリでした。
-また、SQLのチューニングだけでもギリギリ予選突破できるような問題となっていました。&lt;/p&gt;
-
-&lt;p&gt;基本的にISUCONはチーム戦ですが、私たちのチームでは個人でそれぞれチューニングを行ない、
-最高スコアのインスタンスを提出する作戦でいきました。&lt;/p&gt;
-
-&lt;p&gt;私のベストスコアは2000程度で、予選通過ボーダーラインの13898を大きく下回る結果となってしまいました。
-チームとしては、@methane さん1人の力で予選を突破する結果となりました。&lt;/p&gt;
-
-&lt;h3 id=&#34;ボトルネックの調査&#34;&gt;ボトルネックの調査&lt;/h3&gt;
-
-&lt;p&gt;まず、myprofiler でクエリをプロファイリングしたところ、&lt;code&gt;relations&lt;/code&gt;というテーブルが何度も参照されていることが分かりました。&lt;/p&gt;
-
-&lt;p&gt;また、&lt;code&gt;entries&lt;/code&gt;と&lt;code&gt;comments&lt;/code&gt;というテーブルでは、body というカラムの1行目がタイトルとなっていて、
-アプリ側で1行目を取り出して、2行目以降は捨てるような処理となっており、
-かなり無駄な FETCH が発生していることが分かりました。&lt;/p&gt;
-
-&lt;p&gt;そして、いくつかのテンプレートで、&lt;code&gt;users&lt;/code&gt;テーブルをSELECTしていて、
-いわゆる「N+1」問題になっているというところまでは分かりました。&lt;/p&gt;
-
-&lt;h3 id=&#34;対策&#34;&gt;対策&lt;/h3&gt;
-
-&lt;p&gt;まず最初に、Go言語のアプリとMySQLをTCPではなく、UNIXドメインソケットで繋ぐところをやりました。&lt;/p&gt;
-
-&lt;p&gt;body カラムの問題については、対応が大変そうだったので、後回しにしました。&lt;/p&gt;
-
-&lt;p&gt;予選マニュアルをよく読むと、
-「ユーザはすべてメールアドレスとパスワードでログインしますが、データベースにデフォルトで登録されているユーザは全て、パスワードはアカウント名と同じです。」
-とあり、追加分のユーザのデータについてもこのルールを満たしていることが分かったので、
-初期実装のハッシュ値の計算などを消して、メールアドレスのアカウント名だけを切り出して、パスワードとの単純な文字列の一致で行うようにしました。&lt;/p&gt;
-
-&lt;p&gt;この変更を加えた後もベンチマークは正常にパスしましたが、結果的にはこの変更は悪手でした。
-ログインの処理はベンチマーク中で数回しか行われおらず、
-スコア的には誤差くらいの意味しか無かったので、他のことに時間を使ったほうが有意義でした。&lt;/p&gt;
-
-&lt;p&gt;この後は、ずっとSQLチューニングをしていました。
-INDEXを貼ったり消してEXPLAIN結果の変化を見たり、地道に「N+1」になっている箇所を潰したりしました。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;ralations&lt;/code&gt;というテーブルが&lt;code&gt;user&lt;/code&gt;同士の友達関係を保持しており、
-&lt;code&gt;isFriend()&lt;/code&gt;という関数でユーザ同士の友達関係のチェックをするために、次のSQLのクエリを使っていました。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;SELECT COUNT(1) AS cnt FROM relations WHERE (one = ? AND another = ?) OR (one = ? AND another = ?)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;このアプリでは友達関係は両方向で、
-初期データセット全ての&lt;code&gt;relations&lt;/code&gt;のレコードについて、
-one と another を入れ替えた対応するレコードが存在していそうなことを確認して、次のように書き換えました。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;SELECT COUNT(1) AS cnt FROM relations WHERE (one = ? AND another = ?)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;元のクエリでもそこまで処理が重いわけではありません。
-しかし、理由は後から分かりましたが、&lt;code&gt;isFriend()&lt;/code&gt;関数はトップページを1回表示するごとに2000回以上呼ばれていたので、それなりに効果がありました。&lt;/p&gt;
-
-&lt;p&gt;友達の人数を取得するために友達の&lt;code&gt;uesrs&lt;/code&gt;を全件FETCHしてGo側で配列の要素数を数えているのを、SQLの&lt;code&gt;COUNT&lt;/code&gt;で置き換えるなどしました。&lt;/p&gt;
-
-&lt;p&gt;ここまですると、友だちの最新の日記エントリ10件を返す部分がボトルネックになってきました。
-最初の実装だと、最新のエントリ1000件を全件取得して、上の&lt;code&gt;isFriend()&lt;/code&gt;関数を呼んで友達のエントリーだけをフィルターしていました。
-そのため、&lt;code&gt;isFriend()&lt;/code&gt;関数が大量に呼ばれていたわけです。
-ここが最大のボトルネックなのは察したので、残りの全ての時間をかけてここを潰す作戦にしました。&lt;/p&gt;
-
-&lt;p&gt;このようなケースだったら、&lt;code&gt;IN&lt;/code&gt;句を使うことで友達の&lt;code&gt;user_id&lt;/code&gt;でフィルターできるという知識くらいはかろうじてありました。
-単純に&lt;code&gt;IN&lt;/code&gt;句の中にサブクエリを書くように書き換えたところ、スコアが大きく下がりました。
-適当に書いたサブクエリがうまく最適化されていないのが原因でした。&lt;/p&gt;
-
-&lt;p&gt;サブクエリの中身を別の独立したSQLして分離するか、&lt;code&gt;EXISTS&lt;/code&gt;や&lt;code&gt;INNER JOIN&lt;/code&gt;で置き換えれば良かったのですが、
-予選時にはそれらの知識が無かったので、間違った方向に試行錯誤して、時間切れになりました。&lt;/p&gt;
-
-&lt;p&gt;そして、2000程度の予選通過ボーダーラインを大きく下回るしょぼいスコアでフィニッシュしました。&lt;/p&gt;
-
-&lt;h2 id=&#34;予選のリベンジ&#34;&gt;予選のリベンジ&lt;/h2&gt;
-
-&lt;p&gt;とても予選が悔しかったので、&lt;a href=&#34;https://github.com/gam0022/isucon5q-retry&#34;&gt;MySQLのクエリチューニングとインフラの設定だけで予選ボーダーを超える練習&lt;/a&gt;をしました。
-本当に基本的なSQLチューニングしかできませんでしたが、
-最終的には17000くらいスコアが出て、なんとか予選のボーダーは超えました。&lt;/p&gt;
-
-&lt;h3 id=&#34;クエリチューニング&#34;&gt;クエリチューニング&lt;/h3&gt;
-
-&lt;p&gt;例の友だちの日記エントリについては、
-&lt;a href=&#34;http://www.geocities.jp/mickindex/database/db_optimize.html&#34;&gt;SQLを速くするぞ&lt;/a&gt;や
-&lt;a href=&#34;http://nippondanji.blogspot.jp/2009/03/mysql_25.html&#34;&gt;なぜMySQLのサブクエリは遅いのか。&lt;/a&gt;という記事を参考にして、
-&lt;code&gt;IN&lt;/code&gt;句ではなく、&lt;code&gt;EXIST&lt;/code&gt;句に置き換えたところ、サブクエリが最適化されるようになりました。
-さらに &lt;code&gt;INNER JOIN&lt;/code&gt; に置き換えてみましたが、これはあまり効果がありませんでした。&lt;/p&gt;
-
-&lt;p&gt;全く同じような方法で、最新の友達のコメント10件も&lt;code&gt;EXISTS&lt;/code&gt;に置き換えると、10000点は超えるようになりました。&lt;/p&gt;
-
-&lt;p&gt;予選当日に潰しそこねた「N+1」を全て殲滅すると、&lt;code&gt;isFriend()&lt;/code&gt;関数の呼び出しは1箇所だけになりました。&lt;/p&gt;
-
-&lt;p&gt;あまりネタバレを見ないでリベンジしていたのですが、足あとに関しては自分では良い対策が考えつかず、
-&lt;a href=&#34;http://isucon.net/archives/45627361.html&#34;&gt;公式の解説&lt;/a&gt;の鮮やかなREPLACEとテーブルの置き換えをそのまま行いました。&lt;/p&gt;
-
-&lt;p&gt;クライアントでこのようなクエリを投げて、
-body カラムの問題については、&lt;code&gt;entries.body&lt;/code&gt; の1行目を &lt;code&gt;entries.title&lt;/code&gt; に入れるスキーマの変更をしました。
-あとはクエリを適正に書き換えることで、body の無駄な FETCH が減らすことができます。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;ALTER TABLE entries ADD COLUMN ( title VARCHAR(80) );
-UPDATE entries SET title = SUBSTRING_INDEX(body,&amp;quot;\n&amp;quot;,1);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;圧縮テーブル&#34;&gt;圧縮テーブル&lt;/h3&gt;
-
-&lt;p&gt;今回はDBのサイズが巨大でメモリに載りきらないので、圧縮テーブルを試しました。
-まずは、&lt;code&gt;my.cnf&lt;/code&gt; で ファイルフォーマットを Barracuda にして、&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;[mysqld]
-innodb_file_format = Barracuda
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;クラアントでこうすると、既存テーブルも圧縮テーブルにできます。意外と簡単です。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;ALTER TABLE entries row_format = compressed;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;ウォームアップ&#34;&gt;ウォームアップ&lt;/h3&gt;
-
-&lt;p&gt;正しいウォームアップ方法は今も分かっていませんが、
-&lt;code&gt;innodb_buffer_pool_dump&lt;/code&gt; を有効にするだけでも、再起動直後のスコアはかなり効果がありました。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;[mysqld]
-innodb_buffer_pool_dump_at_shutdown = 1
-innodb_buffer_pool_load_at_startup = 1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;本戦&#34;&gt;本戦&lt;/h1&gt;
-
-&lt;p&gt;本戦の練習やっこと、当日やったことを振り返ります。&lt;/p&gt;
-
-&lt;h2 id=&#34;本戦にむけての準備&#34;&gt;本戦にむけての準備&lt;/h2&gt;
-
-&lt;p&gt;本戦の役割分担としては、環境設定などの下回り的な部分、オペレーション、MySQLのクエリチューニング、&lt;br /&gt;
-リグレッションテストをすることになったので、これらを中心に練習しました。&lt;/p&gt;
-
-&lt;h3 id=&#34;クエリチューニング-1&#34;&gt;クエリチューニング&lt;/h3&gt;
-
-&lt;p&gt;上で紹介した予選のリベンジを通して、基本的なクエリチューニングを学んでおきました。
-また、MySQLのプロファイリングについては、
-&lt;a href=&#34;http://nippondanji.blogspot.jp/2009/02/mysql.html&#34;&gt;プロファイリングで快適MySQLチューニング生活&lt;/a&gt;や
-&lt;a href=&#34;http://nippondanji.blogspot.jp/2009/03/mysqlexplain.html&#34;&gt;MySQLのEXPLAINを徹底解説!!&lt;/a&gt;、
-&lt;a href=&#34;http://ameblo.jp/principia-ca/entry-11923272810.html&#34;&gt;MySQL初心者に贈るインデックスチューニングのポイントまとめ2014&lt;/a&gt;
-などの記事を読みながら練習しました。&lt;/p&gt;
-
-&lt;p&gt;その他にも、&lt;code&gt;my.cnf&lt;/code&gt;の読みこまれる順序や、設定ファイルの基本的なパラメータの勉強、
-スキーマの変更のためのALTER系のクエリの使い方などを一通り予習しておきました。&lt;/p&gt;
-
-&lt;h3 id=&#34;nginx&#34;&gt;Nginx&lt;/h3&gt;
-
-&lt;p&gt;予選リベンジでやった以上のことは実践できませんでしたが、
-&lt;a href=&#34;http://www.amazon.co.jp/dp/4873116457&#34;&gt;マスタリングNginx&lt;/a&gt;という本を読んでおきました。&lt;/p&gt;
-
-&lt;h3 id=&#34;オペレーション&#34;&gt;オペレーション&lt;/h3&gt;
-
-&lt;p&gt;sshの環境設定、DBや設定のバックアップ、プロファイリング用のログを取るなどの最低限の練習はしました。&lt;/p&gt;
-
-&lt;p&gt;気休め程度に、当日の環境構築のチートシートは用意しておきました。&lt;/p&gt;
-
-&lt;p&gt;あとは、Nginxの再起動無しにログファイルを別のファイルに退避するコマンドなどを用意して、
-プロファイリング用のコマンドを当日コピーすればすぐ使えるように、ビルド済のバイナルファイルをまとめておきました。&lt;/p&gt;
-
-&lt;h3 id=&#34;リグレッションテスト&#34;&gt;リグレッションテスト&lt;/h3&gt;
-
-&lt;p&gt;予選ではベンチマークのキューの待ち時間が長いため、気軽にテストをできる状況では無かったです。
-そのため、簡易的なリグレッションテストをしようということになりました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/buger/gor&#34;&gt;gor&lt;/a&gt;というツールを使うと、
-ヘッダーなどを含めてHTTPのリクエストをキャプチャできるので、
-この結果を見ながら&lt;a href=&#34;https://github.com/gam0022/isucon5q-regtest&#34;&gt;簡易的なリグレッションテスト&lt;/a&gt;を行うRubyのスクリプトを書く練習などをしました。&lt;/p&gt;
-
-&lt;h2 id=&#34;本戦の当日&#34;&gt;本戦の当日&lt;/h2&gt;
-
-&lt;p&gt;本戦のテーマはマイクロサービスとなっていて、
-外部APIにリクエストを送り、その結果をまとめてユーザに返す「AirISU」というサービスでした。&lt;/p&gt;
-
-&lt;p&gt;スコアを上げるためには、APIへのリクエストを並列化したり、適切にレスポンスをキャッシュしたりする必要がありました。
-このあたりのチームの攻略方法については、@methane さんの&lt;a href=&#34;http://dsas.blog.klab.org/archives/isucon5-final.html&#34;&gt;記事&lt;/a&gt;に詳細があります。&lt;/p&gt;
-
-&lt;p&gt;本戦で私がやったことを振り返ります。&lt;/p&gt;
-
-&lt;p&gt;まずは事前の打ち合わせ通り、sshの環境設定を行いました。
-本戦ではマシンが3台構成で、初期状態ではパスワード認証だけができる状態でした。
-全員分の公開鍵も用意してあり、準備万端かと思いきや、ローカルから各マシンにはsshができるのに、
-マシン同士のsshができずに時間を無駄にしてしまいました。&lt;/p&gt;
-
-&lt;p&gt;@koki_cheese さんが &lt;code&gt;/etc/hosts.deny&lt;/code&gt;が原因であることを付け止めてくださり、
-&lt;code&gt;/etc/hosts.allow&lt;/code&gt;を&lt;code&gt;sshd: ALL&lt;/code&gt;に書き変えて対処しました。
-基本的な設定だったことに加え、適切に調べればすぐに分かるような問題だっただけに情けなかったです。
-事前の作戦では、プロファイリングやGoへのアプリの実装の切り替え・初回ベンチ・プロファイリング用のログの取得は自分の役割だったのですが、
-上記のsshの設定で手間取っている間に、2人に代わりにやっていただきました。&lt;/p&gt;
-
-&lt;p&gt;その後は、設定ファイルをバージョン管理したり、
-ログインシェルが sh だったので、bash に切り替えたり、
-事前に用意したコマンドをサーバに配置してパスを通したり、
-リーダの指示に従って、Nginx 周りの設定を行なっていました。&lt;/p&gt;
-
-&lt;p&gt;Nginxでの静的ファイルの配信は予選でもやっていたので問題無かったのですが、
-gzip_static の設定は gzip コマンドの &lt;code&gt;-k&lt;/code&gt; オプションを知らずに時間を無駄にしてしまいました。&lt;/p&gt;
-
-&lt;p&gt;他にも、&lt;code&gt;include mime.types;&lt;/code&gt;を追加したところ、Nginx が再起動しなくなってしまい、
-service コマンド経由で再起動するとエラーメッセージが標準出力されずに、fail としか出力されず、時間を無駄にしました。
-冷静に考えると、Nginxのエラーログを先に見れば、すぐに解決する問題でした。&lt;/p&gt;
-
-&lt;p&gt;このような初歩的な知識が無く、エラーログを読むなどの基本的なトラブルシューティングができずに、
-チームには迷惑をかけてしまいました。&lt;/p&gt;
-
-&lt;p&gt;MySQL のクエリチューニングの練習を一番練習していたのですが、本戦は MySQL ではなく postgress でした。
-しかも、クエリは非常に単純で、データ量も少ないのでボトルネックでは無さそうでした。
-2人がDBのオンメモリ化を進めていたので、結局DBのチューニングはスルーしました。
-一応、&lt;code&gt;pg_dump&lt;/code&gt; で初期データとスキーマのバックアップはとっておきましたが、最後まで使いませんでした。
-後から考えると、もう少しスキーマをじっくりと眺めて、インデックスだけでも適切に貼っていたりすれば、
-初動のスコアなら少しは貢献できたかもしれなかったです。&lt;/p&gt;
-
-&lt;p&gt;リグレッションテストについても、一部のレスポンスが外部APIに依存していてベンチマーク毎に結果が変わってしまうこと、
-予選よりもキューに空きがあってベンチマークを投げやすかったことなどがあって、
-リグレッションテスト自体の必要性が薄れてしまったので、作りかけで破棄しました。&lt;/p&gt;
-
-&lt;h2 id=&#34;後日やったこと&#34;&gt;後日やったこと&lt;/h2&gt;
-
-&lt;p&gt;&lt;code&gt;/etc/hosts.allow&lt;/code&gt;を&lt;code&gt;sshd: ALL&lt;/code&gt;に書き変えた結果、
-本戦後3日くらいまでは自宅からも本戦のマシンにアクセスできる状態になっていたので、
-API を叩いたり、当日は把握できなかったアプリの挙動を確認たりしていました。&lt;/p&gt;
-
-&lt;p&gt;公式の GCP のイメージが公開されたら、きちんと復習したいと思っています。&lt;/p&gt;
-
-&lt;h1 id=&#34;まとめ&#34;&gt;まとめ&lt;/h1&gt;
-
-&lt;p&gt;ISUCON5 にチーム lily white のメンバーとして参加し、
-初参加ながら本戦出場を始めとして多くの貴重な機会を得ることができました。
-私個人としては、予選・本戦ともに、初歩的な知識や事前練習が不足していたこと、
-エラーログを読むなどの基本的なトラブルシューティングができなかったことで、
-チームのメンバーには迷惑をかけてしまいました。&lt;/p&gt;
-
-&lt;p&gt;結果的には、不完全燃焼でしたが、インフラやパフォーマンス・チューニングを勉強する良いきっかけになったと思います。
-また、社内のすごい先輩に直々に指導してもらい、意欲的な学生に出会えて、良い刺激を受けました。&lt;/p&gt;
-
-&lt;p&gt;来年もISUCONが開催されるのであれば、またリベンジするつもりです。
-それまでに、自分の力で予選突破できる程度には、頑張って実力をつけたいです。&lt;/p&gt;
-
-&lt;p&gt;最後に、ISUCONの運営チームの方々に深く感謝します。
-問題の作成やインフラの提供に加えて、GCPの無料クーポンの配布や過去の問題のイメージの準備など、練習の環境までサポートしていただきました。
-楽しいコンテストを、どうもありがとうございました。&lt;/p&gt;</description>
     </item>
     
   </channel>
