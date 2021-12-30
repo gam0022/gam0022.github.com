@@ -84,9 +84,9 @@
 
 &lt;p&gt;準決勝（Semi-Final）の作品です。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://twitter.com/himazin917&#34;&gt;Niko_14&lt;/a&gt;さんの音楽がとても素晴らしかったので、音楽に合わせたVJを挑戦しました。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/himazin917&#34;&gt;Niko_14&lt;/a&gt;さんの音楽がとても素晴らしかったので、音楽と同期したVJに挑戦しました。&lt;/p&gt;
 
-&lt;p&gt;試合の前日に自分の試合の音楽担当はNiko_14さんと聞いたので、VJをする決意をしました。&lt;/p&gt;
+&lt;p&gt;試合の前日に自分の試合の音楽担当はNiko_14さんと聞いたので、そのタイミングでVJをする決意をしました。&lt;/p&gt;
 
 &lt;p&gt;VJっぽい絵を狙ったことが無かったのですが、ほぼ狙い通りのバキバキな感じにできたので良かったです。
 シェーダーの構成としてはQuarter-Finalとほぼ同じで、IFSとボリュームレンダリングの組み合わせです。
@@ -95,7 +95,7 @@ IFSのパラメーターは適当だったのですが、ちゃんと狙い通�
 &lt;p&gt;色はFFT（音楽の周波数ごとのボリューム）に対応していて、低音が赤、中音が緑、高音が青に対応しています。
 キックの音が支配的だったので、キックに合わせて赤～ピンクっぽいビームが発生しています。&lt;/p&gt;
 
-&lt;p&gt;Twitterの動画の4秒頃のように、音が切り替わるタイミングでサウンドリアクティブになっているのが分かりやすいと思います。&lt;/p&gt;
+&lt;p&gt;Twitterの動画の4秒頃のように、音が切り替わるタイミングでサウンドリアクティブになっているのが分かりやすいと思います。ぜひ音声をONにして再生してください！&lt;/p&gt;
 
 &lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;25分でライブコーディングしたシェーダーです。&lt;br&gt;かっこいい音楽は &lt;a href=&#34;https://twitter.com/himazin917?ref_src=twsrc%5Etfw&#34;&gt;@himazin917&lt;/a&gt; さん制作です！&lt;br&gt;&lt;br&gt;This shader was coded in 25 minutes.&lt;br&gt;Sound by &lt;a href=&#34;https://twitter.com/himazin917?ref_src=twsrc%5Etfw&#34;&gt;@himazin917&lt;/a&gt;&lt;br&gt;&lt;br&gt;Shader showdown semi-final at &lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Bonzomatic?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Bonzomatic&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/LiveCoding?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#LiveCoding&lt;/a&gt; &lt;a href=&#34;https://t.co/HzUpd9le3t&#34;&gt;pic.twitter.com/HzUpd9le3t&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1469924900257562627?ref_src=twsrc%5Etfw&#34;&gt;December 12, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
@@ -113,6 +113,8 @@ IFSのパラメーターは適当だったのですが、ちゃんと狙い通�
 &lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/bp37xTVNRrM?start=6086&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 
+&lt;p&gt;VJっぽいバキバキとした絵の方向性やFFTを用いたサウンドリアクティブなシェーダーはこれまで挑戦したことのないジャンルだったので、新しい方向性を模索する良い経験になりました。&lt;/p&gt;
+
 &lt;p&gt;Semi-Finalでは&lt;a href=&#34;https://twitter.com/kamoshika_vrc&#34;&gt;Kamoshika&lt;/a&gt;さんに負けてしまったのですが、試合後のコメントによると反射の処理には&lt;a href=&#34;https://gam0022.net/blog/2021/06/08/unity-bible2/&#34;&gt;『Unityゲーム プログラミング・バイブル 2nd Generation』の自分の章&lt;/a&gt;を参考にしてくださったそうで、めちゃくちゃありがてぇ🙏となりました。&lt;/p&gt;
 
 &lt;p&gt;Jugem-Tさんも実況による盛り上げありがとうございました！&lt;/p&gt;
@@ -123,16 +125,19 @@ IFSのパラメーターは適当だったのですが、ちゃんと狙い通�
 
 &lt;p&gt;大変でしたが、楽しかったです。&lt;/p&gt;
 
-&lt;p&gt;こんなにレベルの高い戦いになるとは思っておらず、みんな凄すぎてちょっと心が折れそうでした。&lt;/p&gt;
+&lt;p&gt;25分でできる範囲はかなり限られてくるので、詰め込める要素を取捨選択して、ミスをしないように実装するのは思っていたより難しく感じました。
+距離関数も普段はコピペしているので暗記も大変でした。回転行列くらいは導出できるのですが、sdBoxは導出していたら時間がまったく足りません。&lt;/p&gt;
 
-&lt;p&gt;とくにFinal（決勝）の&lt;a href=&#34;https://twitter.com/kamoshika_vrc&#34;&gt;Kamoshika&lt;/a&gt; vs &lt;a href=&#34;https://twitter.com/phi16_&#34;&gt;phi16&lt;/a&gt; の戦いは感動しました。&lt;/p&gt;
+&lt;p&gt;正直に言うと、まさかここまでレベルの高い戦いになるとは思っておらず、参加者のみなさんが凄すぎてちょっと心が折れそうでした。&lt;/p&gt;
+
+&lt;p&gt;とくにFinal（決勝）の&lt;a href=&#34;https://twitter.com/kamoshika_vrc&#34;&gt;Kamoshika&lt;/a&gt; vs &lt;a href=&#34;https://twitter.com/phi16_&#34;&gt;phi16&lt;/a&gt; の戦いは印象深かったです。&lt;/p&gt;
 
 &lt;p&gt;Kamoshikaさんは蝶、phi16さんはライブゲームと、両者とも &amp;ldquo;生命&amp;rdquo; を誕生させていました。偶然にもテーマが一致していてちょっと面白かったです。&lt;/p&gt;
 
 &lt;p&gt;とにかく実装量がえげつなく、これをライブコーディングでやるんだ…と驚かされました。
 競技者として参加したことで、25分間でこの量をミスなく実装する困難さは痛いほど理解していたので、なおさら驚かされました。&lt;/p&gt;
 
-&lt;p&gt;両者ともミスなく作品を仕上げており、まさに決勝戦に相応しい素晴らしい戦いを見せていただきました🙏&lt;/p&gt;
+&lt;p&gt;両者ともミスなく作品を仕上げており、まさに決勝戦に相応しい素晴らしい戦いを見せていただきました🙏心の底から感動しました。&lt;/p&gt;
 
 &lt;p&gt;世界レベルの実力者の方々と戦えて本当に光栄でした！ありがとうございます！&lt;/p&gt;
 
