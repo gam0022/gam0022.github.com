@@ -10,7 +10,7 @@
     <atom:link href="/tags/%E3%83%AC%E3%82%A4%E3%83%9E%E3%83%BC%E3%83%81%E3%83%B3%E3%82%B0/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Tokyo Demo Fest 2021のShaderShowdownに参加しました</title>
+      <title>Tokyo Demo Fest 2021のShader Showdownに参加しました</title>
       <link>https://gam0022.net/blog/2021/12/31/tdf2021-shader-showdown/</link>
       <pubDate>Fri, 31 Dec 2021 00:00:00 +0900</pubDate>
       
@@ -21,7 +21,7 @@
 リアルタイムに映像や音楽を生成するプログラムを「デモ」と言い、デモを鑑賞したり完成度を競ったりして楽しむイベントを「デモパーティ」と言います。
 「デモシーン」はデモやデモパーティを中心としたコンピューターのサブカルチャーです。&lt;/p&gt;
 
-&lt;p&gt;TDFのShaderShowdownというイベントに競技者として参加しました。&lt;/p&gt;
+&lt;p&gt;TDFのShader Showdownというイベントに競技者として参加しました。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-31-tdf2021-shader-showdown/Collage_Fotor_v3.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-31-tdf2021-shader-showdown/Collage_Fotor_v3.jpg&#34; alt=&#34;Collage_Fotor_v3&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -33,11 +33,11 @@
 &lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog/2021/12/20/tdf2021-glsl/&#34;&gt;Tokyo Demo Fest 2021のGLSL Graphics Compo優勝作品の解説 | gam0022.net&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&#34;shadershowdownとは&#34;&gt;ShaderShowdownとは&lt;/h1&gt;
+&lt;h1 id=&#34;shader-showdownとは&#34;&gt;Shader Showdownとは&lt;/h1&gt;
 
 &lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;TokyoDemoFestのShader Showdownは、世界的なDemoparty「Revision」と同じレギュレーションで開催します。&lt;br&gt;試合の放映はパーティー当日12/11-12となります。乞うご期待……！ &lt;a href=&#34;https://t.co/IlVue5npWz&#34;&gt;pic.twitter.com/IlVue5npWz&lt;/a&gt;&lt;/p&gt;&amp;mdash; Tokyo Demo Fest 2021 (2021/12/11-12) (@TokyoDemoFest) &lt;a href=&#34;https://twitter.com/TokyoDemoFest/status/1452275618997886976?ref_src=twsrc%5Etfw&#34;&gt;October 24, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;ShaderShowdownとは25分間でシェーダーを書き、どちらの作品が良いかを決める競技です。&lt;/p&gt;
+&lt;p&gt;Shader Showdownとは25分間でシェーダーを書き、どちらの作品が良いかを決める競技です。&lt;/p&gt;
 
 &lt;p&gt;試合中は、一切のドキュメントの参照ができません。当然ながら必要な関数はすべて試合中に実装しないいけません。&lt;/p&gt;
 
@@ -53,7 +53,7 @@
 
 &lt;p&gt;今回のTDFでライブコーディングした作品を簡単に解説します。&lt;/p&gt;
 
-&lt;p&gt;TDFのShaderShowdownの全作品は&lt;a href=&#34;https://livecode.demozoo.org/party_series/174.html&#34;&gt;livecode.demozoo.org&lt;/a&gt;にもアーカイブされています。&lt;/p&gt;
+&lt;p&gt;TDFのShader Showdownの全作品は&lt;a href=&#34;https://livecode.demozoo.org/party_series/174.html&#34;&gt;livecode.demozoo.org&lt;/a&gt;にもアーカイブされています。&lt;/p&gt;
 
 &lt;h2 id=&#34;lightning-tunnel-quarter-final&#34;&gt;Lightning Tunnel | Quarter-Final&lt;/h2&gt;
 
