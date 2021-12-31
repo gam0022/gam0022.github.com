@@ -161,6 +161,9 @@ IFSのパラメーターは適当だったのですが、ちゃんと狙い通�
 
 &lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;おつかれさまでした！&lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://t.co/h2yXCGGBYa&#34;&gt;pic.twitter.com/h2yXCGGBYa&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1469999619409350657?ref_src=twsrc%5Etfw&#34;&gt;December 12, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
+&lt;p&gt;さいごに、関係者のみなさんに感謝を申し上げます。
+TDFのオーガナイザーの方々、Shader Showdownで対戦してくださったgyaboさん、norargsさん、Kamoshikaさん、0b5vrさん、phi16さん、sp4ghetさん、gazさん、実況のamagiさん、doxasさん、hiraiさんmurasaqiさん、音楽を担当したNiko_14さん、寝る前さん、h0ffman1さん、アーカイブ関連でpsenoghさん、Zavieさん、応援してくださった観戦者みなさん、本当にありがとうございました！&lt;/p&gt;
+
 &lt;h1 id=&#34;練習&#34;&gt;練習&lt;/h1&gt;
 
 &lt;p&gt;ライブコーディングの練習中の作品です。&lt;/p&gt;
@@ -585,9 +588,18 @@ else TL(beat, 4. * 14.) setCamera(vec4(600, 481. + 10. * t, 600, 59), 3.);
 
 &lt;p&gt;とくに決勝戦の &lt;a href=&#34;https://twitter.com/phi16_&#34;&gt;phi16&lt;/a&gt; vs. &lt;a href=&#34;https://twitter.com/kamoshika_vrc&#34;&gt;Kamoshika&lt;/a&gt; の戦いは一生忘れないくらい印象に残りました。&lt;/p&gt;
 
-&lt;p&gt;Shader Showdownについては、また別の記事で書きたいと思います。&lt;/p&gt;
+&lt;p&gt;Shader Showdownについては、別の記事に書きました（12/31）。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gam0022.net/blog/2021/12/31/tdf2021-shader-showdown/&#34;&gt;Tokyo Demo Fest 2021のShader Showdownに参加しました | gam0022.net&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;TokyoDemoFestのShader Showdownは、世界的なDemoparty「Revision」と同じレギュレーションで開催します。&lt;br&gt;試合の放映はパーティー当日12/11-12となります。乞うご期待……！ &lt;a href=&#34;https://t.co/IlVue5npWz&#34;&gt;pic.twitter.com/IlVue5npWz&lt;/a&gt;&lt;/p&gt;&amp;mdash; Tokyo Demo Fest 2021 (2021/12/11-12) (@TokyoDemoFest) &lt;a href=&#34;https://twitter.com/TokyoDemoFest/status/1452275618997886976?ref_src=twsrc%5Etfw&#34;&gt;October 24, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;おわりに-1&#34;&gt;おわりに&lt;/h2&gt;
+
+&lt;p&gt;さいごに、関係者のみなさんに感謝を申し上げます。
+TDFのオーガナイザーの方々、エントリーしてくださったみなさん、YouTubeで視聴してくださったみなさん、応援してくださった方々、ありがとうございました！&lt;/p&gt;
 
 &lt;h1 id=&#34;その他&#34;&gt;その他&lt;/h1&gt;
 
