@@ -43,7 +43,14 @@
 
 &lt;p&gt;1対1のトーナメント形式で開催され、試合の勝敗は観衆（ビジター）の投票によって決定します。今回は私を含めた8人でトーナメントを行いました。&lt;/p&gt;
 
-&lt;p&gt;対戦はGLSLのライブコーディングで行われます。&lt;a href=&#34;https://github.com/TheNuSan/Bonzomatic/releases/tag/v11&#34;&gt;Bonzomatic&lt;/a&gt;というアプリを利用し、対戦者の書いているコードやカーソルの位置が共有されます。&lt;/p&gt;
+&lt;p&gt;対戦はGLSLのライブコーディングで行われます。&lt;a href=&#34;https://github.com/TheNuSan/Bonzomatic/releases/tag/v11&#34;&gt;Bonzomatic&lt;/a&gt;というアプリを利用し、対戦者の書いているコードやカーソルの位置が共有されます。
+Bonzomaticはシェーダーのライブコーディング専用のアプリです。&lt;/p&gt;
+
+&lt;p&gt;次の初期状態のサイケなトンネルはBonzomaticのデフォルトのシェーダーです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-31-tdf2021-shader-showdown/bonzomatic-default.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-31-tdf2021-shader-showdown/bonzomatic-default.jpg&#34; alt=&#34;bonzomaticの初期状態&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;極座標による疑似3Dのシェーダーで汎用性に乏しいため、自分を含めてほどんどの競技者はまず初期状態のコードはコメントアウトするか消します。本当に無からシェーダーを書いています。&lt;/p&gt;
 
 &lt;p&gt;ビジターは対戦者が25分の制限時間の中でどのような戦略とアイデアをもってコードを書いていくかをすぐ隣でみているかのように体験できます。&lt;/p&gt;
 
