@@ -114,6 +114,51 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/05/23/bettertouchtool/" itemprop="url">BetterTouchToolが便利</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2013-05-23 11:14:00 &#43;0900 JST" itemprop="datePublished">2013-05-23</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/mac-os-x">Mac OS X</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                <p>最近、<a href="http://www.boastr.de/">BetterTouchTool</a>というソフトを入れたのですが、便利でした。</p>
+
+<p>Macだとウィンドウをスナップする機能がないので困っていたのですが、これで解決しました。</p>
+
+<p>有料版のBTT Remoteでは、iPadやiPhoneを、Macのキーボード・トラックパッドにできるようです。</p>
+
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2013/05/23/bettertouchtool/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/04/23/eclipse-content-assist/" itemprop="url">Eclipseのコード補完のショートカットを変更する</a></h3>
         
 
@@ -794,53 +839,6 @@ h1レベルの見出しに正規表現でアンカーリンクをつけるよう
         </div>
         <p class="read-more">
             <a href="https://gam0022.net/blog/2013/01/23/eclipse-console-encoding/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/12/31/gnuplot-tips/" itemprop="url">gnuplotでCSVファイルを読み込む方法とmultiplotの注意点</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2012-12-31 17:02:00 &#43;0900 JST" itemprop="datePublished">2012-12-31</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/gnuplot">gnuplot</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                シュミレーション物理とかいう授業で、 座標のデータ(天体の膨張のシュミレーションらしい)をCSV形式に出力して それをエクセルで分散図として表示する課題があったのですが、 あえてgnuplotでやってみました。
-gnuplotでCSVファイルを読み込む方法 通常、gnuplotではスペースで区切ったデータしか読み取れませんが、 次のように設定すれば、CSV形式のファイルもplotできます。
-set datafile separator &quot;,&quot;  次のようにすれば、TSV形式でも読み取れると思います。
-set datafile separator &quot;\t&quot;  multiplotの注意点 multiplotを使えば、複数のグラフを並んで表示できます。 MatLabのsubplotのような機能です。 便利な機能なのですが、グラフをファイルに出力するときに注意点があります。
-次のように、set multiplotを使う前に、set outを使ってください。
-set terminal postscript eps set out &quot;img1.eps&quot; set multiplot layout 1,2 replot  さもないと、次のようなエラーになってしまいます。
-set out &quot;img1.eps&quot; ^ &quot;plot&quot;, line 9: you can&rsquo;t change the output in multiplot mode  まとめ 以上のことを踏まえて正しくgnuplotを使いましょう。
-set datafile separator &quot;,&quot; set size square set xr[40:60] set yr[40:60] set terminal postscript eps set out &quot;img1.
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2012/12/31/gnuplot-tips/" class="btn btn-primary btn-outline">
                 Read more
             </a>
         </p>

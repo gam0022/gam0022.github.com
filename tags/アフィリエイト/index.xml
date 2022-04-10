@@ -10,6 +10,110 @@
     <atom:link href="/tags/%E3%82%A2%E3%83%95%E3%82%A3%E3%83%AA%E3%82%A8%E3%82%A4%E3%83%88/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>WH-1000XM3からWH-1000XM4に乗り換えた</title>
+      <link>https://gam0022.net/blog/2022/04/10/2022-04-10-wh-1000xm4/</link>
+      <pubDate>Sun, 10 Apr 2022 21:37:00 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2022/04/10/2022-04-10-wh-1000xm4/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://amzn.to/37BfZAX&#34;&gt;WH-1000XM3&lt;/a&gt;から&lt;a href=&#34;https://amzn.to/3reEuuG&#34;&gt;WH-1000XM4&lt;/a&gt;に乗り換えてから半年ほど経過したので、感想を書きます。&lt;/p&gt;
+
+&lt;p&gt;結論から言うと、 &lt;strong&gt;マルチペアリングが便利&lt;/strong&gt; だったので、乗り換えて大正解でした。&lt;/p&gt;
+
+&lt;p&gt;現在WH-1000XM3を使っているけど、WH-1000XM4に乗り換えようとしている方、WH-1000XM3 vs WH-1000XM4で悩んでいる方はぜひ参考にしてください。&lt;/p&gt;
+
+&lt;p&gt;WH-1000XM3は2019年2月、WH-1000XM4は2021年11月に購入しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-04-10-wh-1000xm4/compare.jpg&#34; alt=&#34;WH-1000XM3とWH-1000XM4&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;見た目は完全に同じで、後述の近接センサーの有無くらいしか外見上の違いはありません。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;my new gear&amp;hellip; &lt;a href=&#34;https://t.co/8PlziGlzha&#34;&gt;pic.twitter.com/8PlziGlzha&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1461969208959401986?ref_src=twsrc%5Etfw&#34;&gt;November 20, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;マルチペアリングは大正義&#34;&gt;マルチペアリングは大正義&lt;/h2&gt;
+
+&lt;p&gt;WH-1000XM3は同時に1台の機器にしか接続できなかったので、PCとiPhoneの2台で使うには毎回Bluetoothの接続の切り替えが必要でした。&lt;/p&gt;
+
+&lt;p&gt;私の場合は、自宅ではPC、外出時にiPhoneという使い方をしています。PCの方でBluetooth接続を切断してから、iPhoneでBluetoothの接続をやりなおすという手順が必要でした。めちゃくちゃ煩わしいです。&lt;/p&gt;
+
+&lt;p&gt;WH-1000XM4ではマルチポイントによって同時に2台まで接続できます。
+注意点としては音を再生できるのは1台の機器だけです。
+PCで音楽再生を止めて、iPhoneで音楽を再生すれば、iPhoneのみから音が再生されます。
+1台からしか流れないとしてもBluetoothの再接続が不要になったという点が本当に素晴らしいです。&lt;/p&gt;
+
+&lt;p&gt;詳細は公式ページを参照してくいださい。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://helpguide.sony.net/mdr/wh1000xm4/v1/ja/contents/TP0002935898.html&#34;&gt;WH-1000XM4 | ヘルプガイド | 2台の機器と同時に接続する（マルチポイント接続）&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;3台目の接続をしようとすると、2台目のデバイスの接続が上書きされる挙動になります。
+以前はBluetoothの接続を切断しないと新たに接続ができなかったので、上書きできるようになっただけでも大きなメリットに感じました。&lt;/p&gt;
+
+&lt;h2 id=&#34;近接センサーがイヤーパッドカバーと干渉する問題&#34;&gt;近接センサーがイヤーパッドカバーと干渉する問題&lt;/h2&gt;
+
+&lt;p&gt;近接センサーによってヘッドフォンを頭から外した時に自動的に再生を一時停止する機能も搭載されました。&lt;/p&gt;
+
+&lt;p&gt;個人的に絶対に必要というほどでもないですが、ちょっと便利な機能でした。&lt;/p&gt;
+
+&lt;p&gt;この機能はSONY公式のHeadphones Connectアプリから「ヘッドフォンを外したら音楽を一時停止」でON/OFFが可能です。&lt;/p&gt;
+
+&lt;p&gt;近接センサーのデメリットとして、イヤーパッドカバーと干渉してしまうという問題が発生しました。&lt;/p&gt;
+
+&lt;p&gt;設定でOFFにすればいいのですが、ONにした状態でも&lt;a href=&#34;https://amzn.to/3O4eEDQ&#34;&gt;EarTouch 2（M55）&lt;/a&gt;というイヤーパッドカバーであれば干渉が起きませんでした。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-04-10-wh-1000xm4/ng.jpg&#34; alt=&#34;干渉するイヤーパッドカバー&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;通常のイヤーパッドカバーだと、左耳の近接センサーを覆ってしまうため、干渉します。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-04-10-wh-1000xm4/EarTouch2-1.jpg&#34; alt=&#34;EarTouch2のパッケージを空けた様子&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;EarTouch2のパッケージを空けた様子です。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-04-10-wh-1000xm4/EarTouch2-2.jpg&#34; alt=&#34;EarTouch2を装着した様子&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;EarTouch2を装着した様子です。&lt;/p&gt;
+
+&lt;p&gt;イヤーパッドと完全に密着するので、半年利用して近接センサーと干渉することは一度もありませんでした。&lt;/p&gt;
+
+&lt;p&gt;EarTouch2にはサイズが複数ある点には注意してください。WH-1000XM4に装着するのであれば &lt;strong&gt;「2-M55」&lt;/strong&gt; を必ず選んでくださいね。&lt;/p&gt;
+
+&lt;iframe sandbox=&#34;allow-popups allow-scripts allow-modals allow-forms allow-same-origin&#34; style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B0948XC4VY&amp;linkId=dc3499299002f4bca3bf85e9953ebc74&#34;&gt;&lt;/iframe&gt;
+
+&lt;iframe sandbox=&#34;allow-popups allow-scripts allow-modals allow-forms allow-same-origin&#34; style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B08F2866Q3&amp;linkId=49fb740e6d3212c880baafe7e2fc5660&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;完全に密着しているので、耳が圧迫されて痛くなることもないのも良かったです。&lt;/p&gt;
+
+&lt;p&gt;イヤーパッドカバーを装着することで、皮脂や汗を防いで、衛生的に長く利用できいるので大満足です。
+半年ほど利用して本体のイヤーパッド部分への汚れや匂いは完全に防ぐことができました。&lt;/p&gt;
+
+&lt;p&gt;さら頭頂部と接する皮の部分の皮脂がつかないように、このカバーも併用しています。サイズ感がぴったりなのでオススメできます。&lt;/p&gt;
+
+&lt;iframe sandbox=&#34;allow-popups allow-scripts allow-modals allow-forms allow-same-origin&#34; style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B06XKL5YZ6&amp;linkId=51ba0a690dae2cd91e46bd9d103b1cae&#34;&gt;&lt;/iframe&gt;
+
+&lt;h2 id=&#34;音質-ノイズキャンセリング性能&#34;&gt;音質・ノイズキャンセリング性能&lt;/h2&gt;
+
+&lt;p&gt;音質・ノイズキャンセリング性能については、個人的にはあまり進化を感じませんでした。&lt;/p&gt;
+
+&lt;p&gt;ノイズキャンセリング性能については、WH-1000XM3の時点で十分に完成されていたので、まったく不満はありません。&lt;/p&gt;
+
+&lt;p&gt;Bluetooth接続なので、秒単位の遅延は発生しています。音ゲーなどをプレイするのは難しいでしょう。&lt;/p&gt;
+
+&lt;p&gt;PCにヘッドセットとしてマイクありで接続すると、WH-1000XM3と同様に音質は完全にゴミになります。&lt;/p&gt;
+
+&lt;p&gt;このあたりはBluetoothのコーデックの限界なのかなと思って諦めています。&lt;/p&gt;
+
+&lt;p&gt;なお、WH-1000XM4ではaptX/aptX HD未対応とのことです。この点はWH-1000XM3よりも退化しているようですね。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://iyusuke.net/wh1000xm4-aptx-aptxhd/&#34;&gt;【Weekly小噺】WH-1000XM4がLDACとAACのみでaptX/aptX HDに対応しなかったわけ | iyusuke -YusukeMiyamotoのブログ-&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+
+&lt;p&gt;PCと携帯のように2台以上の端末で使う需要があるなら、WH-1000XM4のマルチペアリング接続は大きなメリットがあるので、WH-1000XM3から乗り換えを検討しても良いと思いました。&lt;/p&gt;
+
+&lt;p&gt;執筆時点ではWH-1000XM3とWH-1000XM4の差額は7000円ほどですが、毎日の接続の切り替えの手間を考えれば、差額に見合うだけの価値があると思います。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>リモートワーク「買って良かったモノ・買って失敗したモノ」</title>
       <link>https://gam0022.net/blog/2021/08/23/best-buy/</link>
       <pubDate>Mon, 23 Aug 2021 13:50:00 +0900</pubDate>

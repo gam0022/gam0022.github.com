@@ -114,6 +114,52 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/12/26/gem-memo/" itemprop="url">Rubyのgemのメモ</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2013-12-26 10:46:00 &#43;0900 JST" itemprop="datePublished">2013-12-26</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/ruby">Ruby</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/gem">Gem</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                gem関連に関してメモを残します。
+.gem ファイルを展開してパッケージの中身を見る .gem ファイルを展開してパッケージの中身を見る方法を紹介します。
+gem unpackはgemをインストールしたくないけど、単に中身を見たいときなどに役に立ちます。
+gem unpack xxx.gem のように使います。
+[~/Downloads]$ gem unpack unicode_math-1.2.0.gem Unpacked gem: &lsquo;/Users/gam0022/Downloads/unicode_math-1.2.0&rsquo; [~/Downloads]$ [~/Downloads]$ tree unicode_math-1.2.0 unicode_math-1.2.0 ├── Gemfile ├── LICENSE.txt ├── README.md ├── Rakefile ├── lib │ ├── unicode_math │ │ ├── constants.rb │ │ ├── division.rb │ │ ├── exponents.rb │ │ ├── fractions.rb │ │ ├── multiplication.rb │ │ ├── roots.rb │ │ ├── set.rb │ │ ├── sigma.rb │ │ └── trigonometry.
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2013/12/26/gem-memo/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/12/14/studentappcontest2013/" itemprop="url">学生のためのアプリ開発コンテストに参加</a></h3>
         
 
@@ -581,54 +627,6 @@ Railsのサーバ環境を作るのは難しいというイメージがありま
         </div>
         <p class="read-more">
             <a href="https://gam0022.net/blog/2013/10/14/diary/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/09/28/speed-up-octopress-site-generation/" itemprop="url">Octopressのpreviewを高速化する</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2013-09-28 16:04:00 &#43;0900 JST" itemprop="datePublished">2013-09-28</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/octopress">Octopress</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                <h1 id="octopressの記事の生成が遅い">Octopressの記事の生成が遅い</h1>
-
-<p>Octopressを使ってから一年以上が経ちました。</p>
-
-<p>記事の数に比例して、<code>rake generate</code> がアホみたいに遅くなって、耐えられないレベルになってきました。</p>
-
-<p>今日は、<code>rake isolate</code> と <code>rake integrate</code> を使うことでOctopressの記事の生成を高速化するテクニックを紹介します。</p>
-
-<p>
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2013/09/28/speed-up-octopress-site-generation/" class="btn btn-primary btn-outline">
                 Read more
             </a>
         </p>

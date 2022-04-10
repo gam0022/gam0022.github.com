@@ -7,8 +7,112 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>&amp;copy; 2021 gam0022</copyright>
-    <lastBuildDate>Fri, 31 Dec 2021 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 10 Apr 2022 21:37:00 +0900</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>WH-1000XM3からWH-1000XM4に乗り換えた</title>
+      <link>https://gam0022.net/blog/2022/04/10/2022-04-10-wh-1000xm4/</link>
+      <pubDate>Sun, 10 Apr 2022 21:37:00 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2022/04/10/2022-04-10-wh-1000xm4/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://amzn.to/37BfZAX&#34;&gt;WH-1000XM3&lt;/a&gt;から&lt;a href=&#34;https://amzn.to/3reEuuG&#34;&gt;WH-1000XM4&lt;/a&gt;に乗り換えてから半年ほど経過したので、感想を書きます。&lt;/p&gt;
+
+&lt;p&gt;結論から言うと、 &lt;strong&gt;マルチペアリングが便利&lt;/strong&gt; だったので、乗り換えて大正解でした。&lt;/p&gt;
+
+&lt;p&gt;現在WH-1000XM3を使っているけど、WH-1000XM4に乗り換えようとしている方、WH-1000XM3 vs WH-1000XM4で悩んでいる方はぜひ参考にしてください。&lt;/p&gt;
+
+&lt;p&gt;WH-1000XM3は2019年2月、WH-1000XM4は2021年11月に購入しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-04-10-wh-1000xm4/compare.jpg&#34; alt=&#34;WH-1000XM3とWH-1000XM4&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;見た目は完全に同じで、後述の近接センサーの有無くらいしか外見上の違いはありません。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;my new gear&amp;hellip; &lt;a href=&#34;https://t.co/8PlziGlzha&#34;&gt;pic.twitter.com/8PlziGlzha&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1461969208959401986?ref_src=twsrc%5Etfw&#34;&gt;November 20, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;マルチペアリングは大正義&#34;&gt;マルチペアリングは大正義&lt;/h2&gt;
+
+&lt;p&gt;WH-1000XM3は同時に1台の機器にしか接続できなかったので、PCとiPhoneの2台で使うには毎回Bluetoothの接続の切り替えが必要でした。&lt;/p&gt;
+
+&lt;p&gt;私の場合は、自宅ではPC、外出時にiPhoneという使い方をしています。PCの方でBluetooth接続を切断してから、iPhoneでBluetoothの接続をやりなおすという手順が必要でした。めちゃくちゃ煩わしいです。&lt;/p&gt;
+
+&lt;p&gt;WH-1000XM4ではマルチポイントによって同時に2台まで接続できます。
+注意点としては音を再生できるのは1台の機器だけです。
+PCで音楽再生を止めて、iPhoneで音楽を再生すれば、iPhoneのみから音が再生されます。
+1台からしか流れないとしてもBluetoothの再接続が不要になったという点が本当に素晴らしいです。&lt;/p&gt;
+
+&lt;p&gt;詳細は公式ページを参照してくいださい。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://helpguide.sony.net/mdr/wh1000xm4/v1/ja/contents/TP0002935898.html&#34;&gt;WH-1000XM4 | ヘルプガイド | 2台の機器と同時に接続する（マルチポイント接続）&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;3台目の接続をしようとすると、2台目のデバイスの接続が上書きされる挙動になります。
+以前はBluetoothの接続を切断しないと新たに接続ができなかったので、上書きできるようになっただけでも大きなメリットに感じました。&lt;/p&gt;
+
+&lt;h2 id=&#34;近接センサーがイヤーパッドカバーと干渉する問題&#34;&gt;近接センサーがイヤーパッドカバーと干渉する問題&lt;/h2&gt;
+
+&lt;p&gt;近接センサーによってヘッドフォンを頭から外した時に自動的に再生を一時停止する機能も搭載されました。&lt;/p&gt;
+
+&lt;p&gt;個人的に絶対に必要というほどでもないですが、ちょっと便利な機能でした。&lt;/p&gt;
+
+&lt;p&gt;この機能はSONY公式のHeadphones Connectアプリから「ヘッドフォンを外したら音楽を一時停止」でON/OFFが可能です。&lt;/p&gt;
+
+&lt;p&gt;近接センサーのデメリットとして、イヤーパッドカバーと干渉してしまうという問題が発生しました。&lt;/p&gt;
+
+&lt;p&gt;設定でOFFにすればいいのですが、ONにした状態でも&lt;a href=&#34;https://amzn.to/3O4eEDQ&#34;&gt;EarTouch 2（M55）&lt;/a&gt;というイヤーパッドカバーであれば干渉が起きませんでした。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-04-10-wh-1000xm4/ng.jpg&#34; alt=&#34;干渉するイヤーパッドカバー&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;通常のイヤーパッドカバーだと、左耳の近接センサーを覆ってしまうため、干渉します。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-04-10-wh-1000xm4/EarTouch2-1.jpg&#34; alt=&#34;EarTouch2のパッケージを空けた様子&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;EarTouch2のパッケージを空けた様子です。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-04-10-wh-1000xm4/EarTouch2-2.jpg&#34; alt=&#34;EarTouch2を装着した様子&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;EarTouch2を装着した様子です。&lt;/p&gt;
+
+&lt;p&gt;イヤーパッドと完全に密着するので、半年利用して近接センサーと干渉することは一度もありませんでした。&lt;/p&gt;
+
+&lt;p&gt;EarTouch2にはサイズが複数ある点には注意してください。WH-1000XM4に装着するのであれば &lt;strong&gt;「2-M55」&lt;/strong&gt; を必ず選んでくださいね。&lt;/p&gt;
+
+&lt;iframe sandbox=&#34;allow-popups allow-scripts allow-modals allow-forms allow-same-origin&#34; style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B0948XC4VY&amp;linkId=dc3499299002f4bca3bf85e9953ebc74&#34;&gt;&lt;/iframe&gt;
+
+&lt;iframe sandbox=&#34;allow-popups allow-scripts allow-modals allow-forms allow-same-origin&#34; style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B08F2866Q3&amp;linkId=49fb740e6d3212c880baafe7e2fc5660&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;完全に密着しているので、耳が圧迫されて痛くなることもないのも良かったです。&lt;/p&gt;
+
+&lt;p&gt;イヤーパッドカバーを装着することで、皮脂や汗を防いで、衛生的に長く利用できいるので大満足です。
+半年ほど利用して本体のイヤーパッド部分への汚れや匂いは完全に防ぐことができました。&lt;/p&gt;
+
+&lt;p&gt;さら頭頂部と接する皮の部分の皮脂がつかないように、このカバーも併用しています。サイズ感がぴったりなのでオススメできます。&lt;/p&gt;
+
+&lt;iframe sandbox=&#34;allow-popups allow-scripts allow-modals allow-forms allow-same-origin&#34; style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B06XKL5YZ6&amp;linkId=51ba0a690dae2cd91e46bd9d103b1cae&#34;&gt;&lt;/iframe&gt;
+
+&lt;h2 id=&#34;音質-ノイズキャンセリング性能&#34;&gt;音質・ノイズキャンセリング性能&lt;/h2&gt;
+
+&lt;p&gt;音質・ノイズキャンセリング性能については、個人的にはあまり進化を感じませんでした。&lt;/p&gt;
+
+&lt;p&gt;ノイズキャンセリング性能については、WH-1000XM3の時点で十分に完成されていたので、まったく不満はありません。&lt;/p&gt;
+
+&lt;p&gt;Bluetooth接続なので、秒単位の遅延は発生しています。音ゲーなどをプレイするのは難しいでしょう。&lt;/p&gt;
+
+&lt;p&gt;PCにヘッドセットとしてマイクありで接続すると、WH-1000XM3と同様に音質は完全にゴミになります。&lt;/p&gt;
+
+&lt;p&gt;このあたりはBluetoothのコーデックの限界なのかなと思って諦めています。&lt;/p&gt;
+
+&lt;p&gt;なお、WH-1000XM4ではaptX/aptX HD未対応とのことです。この点はWH-1000XM3よりも退化しているようですね。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://iyusuke.net/wh1000xm4-aptx-aptxhd/&#34;&gt;【Weekly小噺】WH-1000XM4がLDACとAACのみでaptX/aptX HDに対応しなかったわけ | iyusuke -YusukeMiyamotoのブログ-&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+
+&lt;p&gt;PCと携帯のように2台以上の端末で使う需要があるなら、WH-1000XM4のマルチペアリング接続は大きなメリットがあるので、WH-1000XM3から乗り換えを検討しても良いと思いました。&lt;/p&gt;
+
+&lt;p&gt;執筆時点ではWH-1000XM3とWH-1000XM4の差額は7000円ほどですが、毎日の接続の切り替えの手間を考えれば、差額に見合うだけの価値があると思います。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Tokyo Demo Fest 2021のShader Showdownに参加しました</title>
@@ -3893,301 +3997,6 @@ DCCツールから直接シーンを出力する形式だと、距離関数の�
 &lt;p&gt;レイトレ合宿は自身の成長や糧となる機会を与えてくれる、とても良い合宿勉強会だなと改めて感じました。&lt;/p&gt;
 
 &lt;p&gt;レイトレ合宿を毎年主催してくださっている&lt;a href=&#34;https://twitter.com/q_cinnamon&#34;&gt;q&lt;/a&gt;さんと&lt;a href=&#34;https://twitter.com/h013&#34;&gt;hole&lt;/a&gt;さん、その他の参加者のみなさん、本当にありがとうございました！&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>NVIDIA® OptiX上で『レイマーチング×パストレーシング』による物理ベースレンダラーを実装した</title>
-      <link>https://gam0022.net/blog/2019/08/05/optix-raymarching-pathtracing/</link>
-      <pubDate>Mon, 05 Aug 2019 12:10:23 +0900</pubDate>
-      
-      <guid>https://gam0022.net/blog/2019/08/05/optix-raymarching-pathtracing/</guid>
-      <description>&lt;p&gt;これは&lt;a href=&#34;https://sites.google.com/site/raytracingcamp7/&#34;&gt;レイトレ合宿7&lt;/a&gt;アドベントカレンダーの記事です。&lt;/p&gt;
-
-&lt;p&gt;NVIDIA® OptiX上で『レイマーチング×パストレーシング』による物理ベースレンダラーを開発しました。&lt;/p&gt;
-
-&lt;p&gt;レイとオブジェクトの交差判定をレイマーチングで行い、ライティングをパストレーシングをするという、レイマーチングとパストレーシングのハイブリッドなレンダリングを実現しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;NVIDIA® OptiX上で&lt;br&gt;『レイマーチング×パストレーシング』&lt;br&gt;を実装できた😉 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/FKbuHiXqmP&#34;&gt;pic.twitter.com/FKbuHiXqmP&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1155489034354843649?ref_src=twsrc%5Etfw&#34;&gt;July 28, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;実装の方針&#34;&gt;実装の方針&lt;/h1&gt;
-
-&lt;p&gt;Optixは、CUDA基盤上で動作する、NVIDIA製のGPUレイトレーシング用フレームワークです。&lt;/p&gt;
-
-&lt;p&gt;Optixではユーザ独自のプリミティブを定義できるため、この機能をつかってレイマーチングで衝突判定を行う距離関数のプリミティブを定義しました。&lt;/p&gt;
-
-&lt;p&gt;独自のプリミティブの定義に必要なProgram（Optix用語でPTXアセンブリにコンパイルされたCUDA C関数を指す）は次の2つです。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Bounding Box&lt;/li&gt;
-&lt;li&gt;Intersection&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Optixの公式サンプルプロジェクトに optixPathtracing（パストレーシングの実装例）があったので、これにレイマーチングのプリミティブを追加する形で実装しました。&lt;/p&gt;
-
-&lt;p&gt;パストレーシングの処理はサンプルコードの実装そのまま利用させていただきました。&lt;/p&gt;
-
-&lt;h2 id=&#34;bounding-box&#34;&gt;Bounding Box&lt;/h2&gt;
-
-&lt;p&gt;Bounding Boxを定義するProgramです。&lt;/p&gt;
-
-&lt;p&gt;レイマーチングのオブジェクトのBounding BoxはC++側から値を渡すようにしました。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;rtDeclareVariable&lt;/code&gt; でCPUからGPUへ送るバッファの宣言（GLSLのunifromと同じ）ができます。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;#include &amp;lt;optix_world.h&amp;gt;
-
-rtDeclareVariable(float3, center, , );
-rtDeclareVariable(float3, size, , );
-
-RT_PROGRAM void bounds(int, float result[6])
-{
-    optix::Aabb* aabb = (optix::Aabb*)result;
-    aabb-&amp;gt;m_min = center - size;
-    aabb-&amp;gt;m_max = center + size;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;intersection&#34;&gt;Intersection&lt;/h2&gt;
-
-&lt;p&gt;衝突判定をするProgramです。&lt;/p&gt;
-
-&lt;p&gt;ごくごく普通のレイマーチングです。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;rtDeclareVariable(int, lgt_instance, , ) = {0};
-rtDeclareVariable(float3, texcoord, attribute texcoord, );
-rtDeclareVariable(int, lgt_idx, attribute lgt_idx, );
-
-RT_PROGRAM void intersect(int primIdx)
-{
-    const float EPS = 1e-2;
-    float t = 0.0, d = 1e100;
-    float3 p = ray.origin;
-
-    for (int i = 0; i &amp;lt; 50; i++)
-    {
-        d = map(p);
-        t += d;
-        p = ray.origin + t * ray.direction;
-        if (abs(d) &amp;lt; EPS)
-        {
-            break;
-        }
-    }
-
-    if (abs(d) &amp;lt; EPS &amp;amp;&amp;amp; rtPotentialIntersection(t))
-    {
-        shading_normal = geometric_normal = calcNormal(p, map);
-        texcoord = make_float3(p.x, p.y, 0);
-        lgt_idx = lgt_instance;
-        rtReportIntersection(0);
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;法線計算&#34;&gt;法線計算&lt;/h3&gt;
-
-&lt;p&gt;法線計算は四面体によるアプローチを用いました。&lt;/p&gt;
-
-&lt;p&gt;通常は6回の距離関数の評価が必要なところ、4回の評価だけで法線を計算できます。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://iquilezles.org/www/articles/normalsSDF/normalsSDF.htm&#34;&gt;normals for an SDF | http://iquilezles.org&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://setchi.hatenablog.com/entry/2018/12/17/095532&#34;&gt;#TokyoDemoFest 2018 の GLSL Graphics Compo で2位入賞しました - setchi’s blog&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;map関数を差し替え可能にするためにマクロをつかって実装しました。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;const float EPS_N = 1e-4;
-#define calcNormal(p, dFunc) normalize(\
-    make_float3( EPS_N, -EPS_N, -EPS_N) * dFunc(p + make_float3( EPS_N, -EPS_N, -EPS_N)) + \
-    make_float3(-EPS_N, -EPS_N,  EPS_N) * dFunc(p + make_float3(-EPS_N, -EPS_N,  EPS_N)) + \
-    make_float3(-EPS_N,  EPS_N, -EPS_N) * dFunc(p + make_float3(-EPS_N,  EPS_N, -EPS_N)) + \
-    make_float3( EPS_N,  EPS_N,  EPS_N) * dFunc(p + make_float3( EPS_N,  EPS_N,  EPS_N)))
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;距離関数&#34;&gt;距離関数&lt;/h3&gt;
-
-&lt;p&gt;以前にブログで紹介したIFSによるMengerSpongeの距離関数をCUDA Cに移植しました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://gam0022.net/blog/2019/06/25/unity-raymarching/&#34;&gt;Unity×レイマーチングによる映像制作の実践手法 | gam0022.net&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Swizzle Operationを手動展開するのがしんどかったです…&lt;/p&gt;
-
-&lt;p&gt;ベクトル版のabsやmaxは自分で定義すれば解決しますが、Swizzle OperationをCUDA C上で再現する方法は私には分かりませんでした。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;CUDA C言語、absやmaxにベクトル型のオーバーロードが無いし、Swizzle Operationも無いからストレスで発狂して精神が崩壊した🤬🤪🤮 &lt;a href=&#34;https://t.co/mRPmQTTcsb&#34;&gt;pic.twitter.com/mRPmQTTcsb&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1155465784807657472?ref_src=twsrc%5Etfw&#34;&gt;July 28, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;float dMenger(float3 z0, float3 offset, float scale) {
-    float4 z = make_float4(z0, 1.0);
-    for (int n = 0; n &amp;lt; 4; n++) {
-        // z = abs(z);
-        z.x = abs(z.x);
-        z.y = abs(z.y);
-        z.z = abs(z.z);
-        z.w = abs(z.w);
-
-        // if (z.x &amp;lt; z.y) z.xy = z.yx;
-        if (z.x &amp;lt; z.y)
-        {
-            float x = z.x;
-            z.x = z.y;
-            z.y = x;
-        }
-
-        // if (z.x &amp;lt; z.z) z.xz = z.zx;
-        if (z.x &amp;lt; z.z)
-        {
-            float x = z.x;
-            z.x = z.z;
-            z.z = x;
-        }
-
-        // if (z.y &amp;lt; z.z) z.yz = z.zy;
-        if (z.y &amp;lt; z.z)
-        {
-            float y = z.y;
-            z.y = z.z;
-            z.z = y;
-        }
-
-        z *= scale;
-        // z.xyz -= offset * (scale - 1.0);
-        z.x -= offset.x * (scale - 1.0);
-        z.y -= offset.y * (scale - 1.0);
-        z.z -= offset.z * (scale - 1.0);
-
-        if (z.z &amp;lt; -0.5 * offset.z * (scale - 1.0))
-            z.z += offset.z * (scale - 1.0);
-    }
-    // return (length(max(abs(z.xyz) - make_float3(1.0, 1.0, 1.0), 0.0)) - 0.05) / z.w;
-    return (length(make_float3(max(abs(z.x) - 1.0, 0.0), max(abs(z.y) - 1.0, 0.0), max(abs(z.z) - 1.0, 0.0))) - 0.05) / z.w;
-}
-
-float map(float3 p)
-{
-    float scale = 100;
-    return dMenger((p - center) / scale, make_float3(1, 1, 1), 3.1) * scale;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;c-からprogramの利用&#34;&gt;C++からProgramの利用&lt;/h2&gt;
-
-&lt;p&gt;Programを利用するには以下のようなC++のコードを書けばOKです。&lt;/p&gt;
-
-&lt;p&gt;ProgramとGPUに送る情報のバッファを指定しているだけです。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;Context        context = 0;
-Program        pgram_raymarching_intersection = 0;
-Program        pgram_raymarching_bounding_box = 0;
-
-// レイマーチングのオブジェクトの GeometryInstance を生成します
-GeometryInstance createRaymrachingObject(
-    const float3&amp;amp; center,
-    const float3&amp;amp; size)
-{
-    Geometry raymarching = context-&amp;gt;createGeometry();
-    raymarching-&amp;gt;setPrimitiveCount(1u);
-    raymarching-&amp;gt;setIntersectionProgram(pgram_raymarching_intersection);
-    raymarching-&amp;gt;setBoundingBoxProgram(pgram_raymarching_bounding_box);
-
-    raymarching[&amp;quot;center&amp;quot;]-&amp;gt;setFloat(center);
-    raymarching[&amp;quot;size&amp;quot;]-&amp;gt;setFloat(size);
-
-    GeometryInstance gi = context-&amp;gt;createGeometryInstance();
-    gi-&amp;gt;setGeometry(raymarching);
-    return gi;
-}
-
-// ジオメトリのセットアップをします
-// ※レイマーチングに直接関係ないコードは省略しています
-void loadGeometry()
-{
-    // Set up Raymarching programs
-    const char *ptx = sutil::getPtxString( SAMPLE_NAME, &amp;quot;optixRaymarching.cu&amp;quot; );
-    pgram_raymarching_bounding_box = context-&amp;gt;createProgramFromPTXString( ptx, &amp;quot;bounds&amp;quot; );
-    pgram_raymarching_intersection = context-&amp;gt;createProgramFromPTXString( ptx, &amp;quot;intersect&amp;quot; );
-
-    // create geometry instances
-    std::vector&amp;lt;GeometryInstance&amp;gt; gis;
-
-    // Raymarcing
-    gis.push_back(createRaymrachingObject(
-        make_float3(278.0f, 120.0f, 278.0f),
-        make_float3(100.0f, 100.0f, 100.0f)));
-    setMaterial(gis.back(), diffuse, &amp;quot;diffuse_color&amp;quot;, white);
-
-    // Create geometry group
-    GeometryGroup geometry_group = context-&amp;gt;createGeometryGroup(gis.begin(), gis.end());
-    geometry_group-&amp;gt;setAcceleration( context-&amp;gt;createAcceleration( &amp;quot;Trbvh&amp;quot; ) );
-    context[&amp;quot;top_object&amp;quot;]-&amp;gt;set( geometry_group );
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;optixの環境構築-windows&#34;&gt;Optixの環境構築（Windows）&lt;/h1&gt;
-
-&lt;p&gt;OptixのWindows用の環境構築の流れは&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;必要なツールを事前にインストール&lt;/li&gt;
-&lt;li&gt;CamkeでVisualStudioのソリューションファイルを生成&lt;/li&gt;
-&lt;li&gt;VisualStudioでビルド&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;という感じでした。&lt;/p&gt;
-
-&lt;p&gt;morishigeさんのQiitaの記事が大変参考になりました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://qiita.com/morishige/items/d4a99c88b925ac31ff3d&#34;&gt;Nvidia OptiX 入門（環境構築編）&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;CmakeとOptixとCUDAのバージョンの組み合わせが肝のようで、Cmakeのバージョンを変えながら何回かトライしたところ、この組み合わせでCmakeビルドに成功しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;✍️ &lt;br&gt;CUDA 10.1&lt;br&gt;OptiX SDK 6.0.0&lt;br&gt;Visual Studio 2017&lt;br&gt;Cmake 3.8.2&lt;br&gt;&lt;br&gt;freeglut / GLFW / GLEW は Nuget の最新版をインストール&lt;a href=&#34;https://t.co/OtsR6bnxmk&#34;&gt;https://t.co/OtsR6bnxmk&lt;/a&gt;&lt;br&gt;&lt;br&gt;Cmakeの設定はスクショ通り &lt;a href=&#34;https://t.co/cpBM4y2Vy1&#34;&gt;pic.twitter.com/cpBM4y2Vy1&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1150906026528391168?ref_src=twsrc%5Etfw&#34;&gt;July 15, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;CmakeでVisual Studioのバージョンを選択する際、誤って64bit版ではなく32bit版を選択してしまい、Cmake自体は成功するもののソリューションがビルドできないことがありました。&lt;/p&gt;
-
-&lt;p&gt;Cmakeの過去のバージョンはGitHubからインストールできます。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/Kitware/CMake/releases&#34;&gt;Releases · Kitware/CMake&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;サンプルコードの改造&#34;&gt;サンプルコードの改造&lt;/h2&gt;
-
-&lt;p&gt;サンプルコードの改造方法はNVIDIA Developer Forumsにあります。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://devtalk.nvidia.com/default/topic/1049151/optix/how-can-i-modify-a-simple-example-/&#34;&gt;How can I modify a simple example? - NVIDIA Developer Forums&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Adding a new example is very simple:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Copy one of the optixIntro_01 (this is effectively optixHello) to optixIntro_10 folders,&lt;/li&gt;
-&lt;li&gt;rename it,&lt;/li&gt;
-&lt;li&gt;rename the project name in its copied CMakeLists.txt,&lt;/li&gt;
-&lt;li&gt;add your new subdirectory in the CMakeLists.txt one folder above,&lt;/li&gt;
-&lt;li&gt;rebuild the solution with CMake GUI. Done.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Your new project appears and would do the same thing as the example you copied it from.
-Now change it as you like.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&#34;参考資料&#34;&gt;参考資料&lt;/h1&gt;
-
-&lt;p&gt;以下の記事が大変参考になりました。ありがとうございます。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://memo.render.jp/optix&#34;&gt;optix - uimac実装メモ&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.nvidia.com/gameworks/content/gameworkslibrary/optix/optix_quickstart.htm&#34;&gt;OptiX QuickStart（公式チュートリアル）&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
     </item>
     
   </channel>
