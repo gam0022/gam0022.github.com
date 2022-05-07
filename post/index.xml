@@ -50,8 +50,8 @@ HTMLやCSSなどの静的ファイルをGitHubのリポジトリにコミット�
 &lt;li&gt;リポジトリ2つ構成（こっちを採用！！）
 
 &lt;ul&gt;
-&lt;li&gt;Hugoのマークダウンなどのソース用のリポジトリ&lt;/li&gt;
-&lt;li&gt;HugoのHTMLなどの生成物用のリポジトリ&lt;/li&gt;
+&lt;li&gt;Hugoのプロジェクト（記事のマークダウンやHugoテンプレートなど）用のリポジトリ&lt;/li&gt;
+&lt;li&gt;Hugoの生成物（HTMLやCSSなどの公開する静的公開用コンテンツ）用のリポジトリ&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
