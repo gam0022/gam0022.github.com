@@ -10,6 +10,174 @@
     <atom:link href="/tags/web/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>HugoをGitHub Pagesで公開する</title>
+      <link>https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/</link>
+      <pubDate>Sat, 07 May 2022 20:05:08 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/</guid>
+      <description>&lt;p&gt;本サイトのホスト先をConoHa VPSからGitHub Pagesに乗り換えました。&lt;/p&gt;
+
+&lt;p&gt;実は去年の5月に乗り換えていて、1年ほど運用して方針が固まったので記事にしました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-05-07-hugo-on-github-pages/thumbnail.png&#34; alt=&#34;Hugo on GitHub Pages&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;vps-github-pagesの移行理由&#34;&gt;VPS→GitHub Pagesの移行理由&lt;/h2&gt;
+
+&lt;p&gt;お金です。費用の削減が目的です。&lt;/p&gt;
+
+&lt;p&gt;ConoHa VPSは月額1000円ほどの固定費がかかっていましたが、GitHub Pagesは無料です。&lt;/p&gt;
+
+&lt;p&gt;また、VPSだと急にブログにアクセスが増えた場合にスケールしずらい・費用がかかるなどの懸念もありました。&lt;/p&gt;
+
+&lt;h2 id=&#34;hugoをgithub-pagesにホスティングする&#34;&gt;HugoをGitHub Pagesにホスティングする&lt;/h2&gt;
+
+&lt;p&gt;GitHub Pagesは、GitHubが静的ウェブページのためのウェブホスティングサービスです。
+HTMLやCSSなどの静的ファイルをGitHubのリポジトリにコミットすることで静的サイトを公開できます。&lt;/p&gt;
+
+&lt;p&gt;さらに特定のブランチやディレクトリをサイトのルートとして指定できます。&lt;/p&gt;
+
+&lt;p&gt;ディレクトリ指定を考慮すると、大きく分けて2つのリポジトリ構成が考えられます。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;リポジトリ1つ構成
+
+&lt;ul&gt;
+&lt;li&gt;Hugoのpublicディレクトリ以下を公開する設定&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;リポジトリ2つ構成
+
+&lt;ul&gt;
+&lt;li&gt;Hugoのマークダウンなどのソース用のリポジトリ + HugoのHTMLなどの生成物でリポジトリを分ける&lt;/li&gt;
+&lt;li&gt;こっちを採用！！&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;私は2.のリポジトリ2つ構成に落ち着きました。&lt;/p&gt;
+
+&lt;p&gt;1.の方がシンプルですが、コミットの差分が多くなってしまい、文章校正などがやりずらいと思ったからです。&lt;/p&gt;
+
+&lt;p&gt;具体的には以下の2つのリポジトリ構成にしました。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gam0022/gam0022.github.com-source-hugo&#34;&gt;https://github.com/gam0022/gam0022.github.com-source-hugo&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Hugoのマークダウンなどのソース用のリポジトリ&lt;/li&gt;
+&lt;li&gt;2. のリポジトリをsubmodule化&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gam0022/gam0022.github.com&#34;&gt;https://github.com/gam0022/gam0022.github.com&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HugoのHTMLなどの生成物でリポジトリ&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;2リポジトリ構成ではコミットが面倒という問題がありました。&lt;/p&gt;
+
+&lt;p&gt;そこで簡単な.batを書いて、バッチを叩くだけで自動的に2リポジトリのcommitとpushができるようにしました。
+Windowsを利用している人は参考にしてください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/gam0022/gam0022.github.com-source-hugo/blob/master/deploy.bat&#34;&gt;deploy.bat&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bat&#34;&gt;:: コミットメッセージ
+set msg=&amp;quot;Build %date% %time%&amp;quot;
+
+pushd public
+
+:: publicディレクトリを掃除
+git fetch -p
+git checkout -B master origin/master
+
+popd
+
+:: HTMLを生成
+hugo.exe
+
+pushd public
+
+:: HTML生成物をコミット
+git add .
+git commit -m %msg%
+git push origin HEAD
+
+popd
+
+:: ソースをコミット
+git add .
+git commit -m %msg%
+git push origin HEAD
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;カスタムドメインとssl化&#34;&gt;カスタムドメインとSSL化&lt;/h2&gt;
+
+&lt;p&gt;現在は独自ドメインのSSL化も簡単にできます。以前はCloudFlare等のCDNが必要でしたが、現在はCDNも不要です。&lt;/p&gt;
+
+&lt;p&gt;設定は2つだけです。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;GitHub側の設定&lt;/li&gt;
+&lt;li&gt;ドメインの管理ページ側のAレコード・CNAMEの設定&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;この記事の情報が古くなっている可能性もあるので、最新の情報は公式マニュアルも参照してください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://docs.github.com/ja/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site&#34;&gt;GitHub Pages サイトのカスタムドメインを管理する&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;github側の設定&#34;&gt;GitHub側の設定&lt;/h3&gt;
+
+&lt;p&gt;リポジトリの &lt;code&gt;Settings &amp;gt; Pages &amp;gt; Custom domain&lt;/code&gt; からカスタムドメインを指定できます。&lt;/p&gt;
+
+&lt;p&gt;SSL証明書の更新まで自動的にGitHub Pages側でやってくれるので、本当にこれだけしかやることがないです。&lt;/p&gt;
+
+&lt;p&gt;SSL化したい場合には、 &lt;code&gt;Enforce HTTPS&lt;/code&gt; にチェックします。&lt;/p&gt;
+
+&lt;p&gt;マニュアルにも書かれていますが、DNSやHTTPSの変更が伝播するには、最大24時間かかるそうです。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-05-07-hugo-on-github-pages/github-custom-domain.png&#34; alt=&#34;GitHub側の設定&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;ドメインの管理ページ側のaレコード-cnameの設定&#34;&gt;ドメインの管理ページ側のAレコード・CNAMEの設定&lt;/h3&gt;
+
+&lt;p&gt;CNAMEとAレコードを設定して問題なく運用できています。&lt;/p&gt;
+
+&lt;p&gt;筆者はあまりネットワークに詳しくないので、間違っていたら教えてください。&lt;/p&gt;
+
+&lt;p&gt;Aレコード&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;CNAME&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gam0022.github.io.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-05-07-hugo-on-github-pages/google-domain.png&#34; alt=&#34;Google Domain&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+
+&lt;p&gt;Hugoのホスト先をVPSからGitHub Pagesに移行して固定費削減できました。&lt;/p&gt;
+
+&lt;p&gt;VPSではrsyncで即時に反映されていたのが、GitHub Pagesにしてから反映に数分かかるなど細かい不満はありますが、無料で使えているので許容範囲かなと思っています。&lt;/p&gt;
+
+&lt;p&gt;はてなブログなどのブログサービスへの移行も検討したことも過去にありますが、特定のサービスに依存したくないという考えから現在の構成に落ち着いています。&lt;/p&gt;
+
+&lt;p&gt;企業やサービスの寿命を考えると、10年後や20年後まで存続しているのか分からないので、特定の企業やサービスにロックインしたくありません。&lt;/p&gt;
+
+&lt;p&gt;その点で静的CMS + 適当なサービスにホスティング安全性では最強だと考えています。&lt;/p&gt;
+
+&lt;p&gt;もしGitHub Pagesがサービス終了したとしても、その時はまたVPSにホスティングすれば良いだけです。&lt;/p&gt;
+
+&lt;p&gt;完全に余談ですが、ドメインは10年更新にしているので、筆者が死亡したとしてもしばらくサイトは消えないと思います。&lt;/p&gt;
+
+&lt;p&gt;それでは！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>お名前.comからGoogleドメインに乗り換えました（2021版）</title>
       <link>https://gam0022.net/blog/2021/05/06/onamae-com-to-google-domain/</link>
       <pubDate>Thu, 06 May 2021 02:00:00 +0900</pubDate>
