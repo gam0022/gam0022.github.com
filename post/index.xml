@@ -30,7 +30,7 @@
 
 &lt;p&gt;ConoHa VPSは月額1000円ほどの固定費がかかっていましたが、GitHub Pagesは無料です。&lt;/p&gt;
 
-&lt;p&gt;また、VPSだと急にブログにアクセスが増えた場合にスケールしずらい・費用がかかるなどの懸念もありました。&lt;/p&gt;
+&lt;p&gt;また、VPSだと急にブログにアクセスが増えた場合にスケールしづらい・費用がかかるなどの懸念もありました。&lt;/p&gt;
 
 &lt;h2 id=&#34;hugoをgithub-pagesにホスティングする&#34;&gt;HugoをGitHub Pagesにホスティングする&lt;/h2&gt;
 
@@ -47,17 +47,17 @@ HTMLやCSSなどの静的ファイルをGitHubのリポジトリにコミット�
 &lt;ul&gt;
 &lt;li&gt;Hugoのpublicディレクトリ以下を公開する設定&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;リポジトリ2つ構成
+&lt;li&gt;リポジトリ2つ構成（こっちを採用！！）
 
 &lt;ul&gt;
-&lt;li&gt;Hugoのマークダウンなどのソース用のリポジトリ + HugoのHTMLなどの生成物でリポジトリを分ける&lt;/li&gt;
-&lt;li&gt;こっちを採用！！&lt;/li&gt;
+&lt;li&gt;Hugoのマークダウンなどのソース用のリポジトリ&lt;/li&gt;
+&lt;li&gt;HugoのHTMLなどの生成物用のリポジトリ&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;私は2.のリポジトリ2つ構成に落ち着きました。&lt;/p&gt;
 
-&lt;p&gt;1.の方がシンプルですが、コミットの差分が多くなってしまい、文章校正などがやりずらいと思ったからです。&lt;/p&gt;
+&lt;p&gt;1.の方がシンプルですが、コミットの差分が多くなってしまい、文章校正などがやりづらいと思ったからです。&lt;/p&gt;
 
 &lt;p&gt;具体的には以下の2つのリポジトリ構成にしました。&lt;/p&gt;
 
@@ -71,7 +71,7 @@ HTMLやCSSなどの静的ファイルをGitHubのリポジトリにコミット�
 &lt;li&gt;&lt;a href=&#34;https://github.com/gam0022/gam0022.github.com&#34;&gt;https://github.com/gam0022/gam0022.github.com&lt;/a&gt;
 
 &lt;ul&gt;
-&lt;li&gt;HugoのHTMLなどの生成物でリポジトリ&lt;/li&gt;
+&lt;li&gt;HugoのHTMLなどの生成物用のリポジトリ&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
