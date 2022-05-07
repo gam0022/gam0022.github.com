@@ -55,7 +55,7 @@ HTMLやCSSなどの静的ファイルをGitHubのリポジトリにコミット�
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;私は2.のリポジトリ2つ構成に落ち着きました。&lt;/p&gt;
+&lt;p&gt;最終的に2.のリポジトリ2つ構成に落ち着きました。&lt;/p&gt;
 
 &lt;p&gt;1.の方がシンプルですが、コミットの差分が多くなってしまい、文章校正などがやりづらいと思ったからです。&lt;/p&gt;
 
@@ -65,13 +65,13 @@ HTMLやCSSなどの静的ファイルをGitHubのリポジトリにコミット�
 &lt;li&gt;&lt;a href=&#34;https://github.com/gam0022/gam0022.github.com-source-hugo&#34;&gt;https://github.com/gam0022/gam0022.github.com-source-hugo&lt;/a&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Hugoのマークダウンなどのソース用のリポジトリ&lt;/li&gt;
-&lt;li&gt;2. のリポジトリをsubmodule化&lt;/li&gt;
+&lt;li&gt;Hugoのプロジェクト（記事のマークダウンやHugoテンプレートなど）のリポジトリ&lt;/li&gt;
+&lt;li&gt;2. のリポジトリをsubmoduleとして参照&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/gam0022/gam0022.github.com&#34;&gt;https://github.com/gam0022/gam0022.github.com&lt;/a&gt;
 
 &lt;ul&gt;
-&lt;li&gt;HugoのHTMLなどの生成物用のリポジトリ&lt;/li&gt;
+&lt;li&gt;Hugoの生成物（HTMLやCSSなどの公開用の静的コンテンツ）のリポジトリ&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
