@@ -79,7 +79,7 @@ float midi(int ccNumber) {
 
 &lt;h3 id=&#34;midi関数の使用例&#34;&gt;midi関数の使用例&lt;/h3&gt;
 
-&lt;p&gt;midi関数は&lt;a href=&#34;https://www.g200kg.com/jp/docs/dic/controlchange.html&#34;&gt;コントロールチェンジ番号&lt;/a&gt;を受け取って、対応する値を0-1の範囲で返します。&lt;/p&gt;
+&lt;p&gt;midi関数は&lt;a href=&#34;https://www.g200kg.com/jp/docs/dic/controlchange.html&#34;&gt;コントロールチェンジ番号&lt;/a&gt;を受け取って、対応する値を [0-1] の範囲で返します。テクスチャなので [0-1] です。&lt;/p&gt;
 
 &lt;p&gt;IFSのイテレーションなどにmidi関数を使えば、冒頭の動画のようにIFSの幾何学形状をMIDIコンで制御できます！&lt;/p&gt;
 
