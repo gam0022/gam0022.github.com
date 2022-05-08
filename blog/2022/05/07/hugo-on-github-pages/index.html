@@ -25,7 +25,7 @@
     <link rel="shortcut icon" href="https://gam0022.net/img/favicon.png" type="image/png">
     
 
-    <title>HugoをGitHub Pagesで公開する | gam0022.net</title>
+    <title>HugoをGitHub Pagesで公開し、2リポジトリ構成の管理を楽にする方法 | gam0022.net</title>
 
     
         <meta property="og:type" content="article">
@@ -44,7 +44,7 @@
     
 
     <meta property="fb:app_id" content="413045302370371">
-    <meta property="og:title" content="HugoをGitHub Pagesで公開する | gam0022.net">
+    <meta property="og:title" content="HugoをGitHub Pagesで公開し、2リポジトリ構成の管理を楽にする方法 | gam0022.net">
     <meta property="og:url" content="https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/">
 
     <meta name="twitter:site" content="@gam0022">
@@ -132,7 +132,7 @@
 
                 
 
-                <h3 class="article-title" itemprop="name">HugoをGitHub Pagesで公開する</h3>
+                <h3 class="article-title" itemprop="name">HugoをGitHub Pagesで公開し、2リポジトリ構成の管理を楽にする方法</h3>
                 
 
 <div class="article-metadata">
@@ -165,10 +165,10 @@
 <div class="share-box">
     <div class="share_wrap">
         <div class="share_button">
-            <a href="http://b.hatena.ne.jp/entry/https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/" class="hatena-bookmark-button" data-hatena-bookmark-title="HugoをGitHub Pagesで公開する" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+            <a href="http://b.hatena.ne.jp/entry/https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/" class="hatena-bookmark-button" data-hatena-bookmark-title="HugoをGitHub Pagesで公開し、2リポジトリ構成の管理を楽にする方法" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
         </div>
         <div class="share_button">
-            <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/" data-text="HugoをGitHub Pagesで公開する" data-via="gam0022">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/" data-text="HugoをGitHub Pagesで公開し、2リポジトリ構成の管理を楽にする方法" data-via="gam0022">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         </div>
         <div class="share_button">
             <div class="g-plus" data-action="share" data-annotation="none"></div>
@@ -197,7 +197,7 @@
 
 <p></p>
 
-<h2 id="vps-github-pagesの移行理由">VPS→GitHub Pagesの移行理由</h2>
+<h1 id="vps-github-pagesの移行理由">VPS→GitHub Pagesの移行理由</h1>
 
 <p>お金です。費用の削減が目的です。</p>
 
@@ -205,12 +205,14 @@
 
 <p>また、VPSだと急にブログにアクセスが増えた場合にスケールしづらい・費用がかかるなどの懸念もありました。</p>
 
-<h2 id="hugoをgithub-pagesにホスティングする">HugoをGitHub Pagesにホスティングする</h2>
+<h1 id="hugoをgithub-pagesにホスティングする">HugoをGitHub Pagesにホスティングする</h1>
 
 <p>GitHub Pagesは、GitHubが静的ウェブページのためのウェブホスティングサービスです。
 HTMLやCSSなどの静的ファイルをGitHubのリポジトリにコミットすることで静的サイトを公開できます。</p>
 
-<p>さらに特定のブランチやディレクトリをサイトのルートとして指定できます。</p>
+<h2 id="2リポジトリ構成とは">2リポジトリ構成とは</h2>
+
+<p>GitHub Pagesでは、特定のブランチやディレクトリをサイトのルートとして指定できます。</p>
 
 <p>ディレクトリ指定を考慮すると、大きく分けて2つのリポジトリ構成が考えられます。</p>
 
@@ -248,6 +250,8 @@ HTMLやCSSなどの静的ファイルをGitHubのリポジトリにコミット�
 </ul></li>
 </ol>
 
+<h2 id="2リポジトリ構成のcommitをバッチで自動化">2リポジトリ構成のcommitをバッチで自動化</h2>
+
 <p>2リポジトリ構成ではコミットが面倒という問題がありました。</p>
 
 <p>そこで簡単な.batを書いて、バッチを叩くだけで自動的に2リポジトリのcommitとpushができるようにしました。
@@ -284,11 +288,11 @@ git commit -m %msg%
 git push origin HEAD
 </code></pre>
 
-<h2 id="カスタムドメインとssl化">カスタムドメインとSSL化</h2>
+<h1 id="カスタムドメインとssl化">カスタムドメインとSSL化</h1>
 
 <p>現在は独自ドメインのSSL化も簡単にできます。以前はCloudFlare等のCDNが必要でしたが、現在はCDNも不要です。</p>
 
-<p>設定は2つだけです。</p>
+<p>独自ドメインのSSL化に必要な設定は2つだけです。</p>
 
 <ol>
 <li>GitHub側の設定</li>
@@ -299,7 +303,7 @@ git push origin HEAD
 
 <p><a href="https://docs.github.com/ja/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">GitHub Pages サイトのカスタムドメインを管理する</a></p>
 
-<h3 id="github側の設定">GitHub側の設定</h3>
+<h2 id="github側の設定">GitHub側の設定</h2>
 
 <p>リポジトリの <code>Settings &gt; Pages &gt; Custom domain</code> からカスタムドメインを指定できます。</p>
 
@@ -311,7 +315,7 @@ git push origin HEAD
 
 <p><img src="/images/posts/2022-05-07-hugo-on-github-pages/github-custom-domain.png" alt="GitHub側の設定" /></p>
 
-<h3 id="ドメインの管理ページ側のaレコード-cnameの設定">ドメインの管理ページ側のAレコード・CNAMEの設定</h3>
+<h2 id="ドメインの管理ページ側のaレコード-cnameの設定">ドメインの管理ページ側のAレコード・CNAMEの設定</h2>
 
 <p>CNAMEとAレコードを設定して問題なく運用できています。</p>
 
@@ -332,11 +336,13 @@ git push origin HEAD
 
 <p><img src="/images/posts/2022-05-07-hugo-on-github-pages/google-domain.png" alt="Google Domain" /></p>
 
-<h2 id="まとめ">まとめ</h2>
+<h1 id="まとめ">まとめ</h1>
 
 <p>Hugoのホスト先をVPSからGitHub Pagesに移行して固定費削減できました。</p>
 
 <p>VPSではrsyncで即時に反映されていたのが、GitHub Pagesにしてから反映に数分かかるなど細かい不満はありますが、無料で使えているので許容範囲かなと思っています。</p>
+
+<h2 id="静的cms-ホスティングサービスを選ぶ理由">静的CMS＋ホスティングサービスを選ぶ理由</h2>
 
 <p>はてなブログなどのブログサービスへの移行も検討したことも過去にありますが、特定のサービスに依存したくないという考えから現在の構成に落ち着いています。</p>
 
@@ -385,10 +391,10 @@ git push origin HEAD
 <div class="share-box">
     <div class="share_wrap">
         <div class="share_button">
-            <a href="http://b.hatena.ne.jp/entry/https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/" class="hatena-bookmark-button" data-hatena-bookmark-title="HugoをGitHub Pagesで公開する" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+            <a href="http://b.hatena.ne.jp/entry/https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/" class="hatena-bookmark-button" data-hatena-bookmark-title="HugoをGitHub Pagesで公開し、2リポジトリ構成の管理を楽にする方法" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
         </div>
         <div class="share_button">
-            <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/" data-text="HugoをGitHub Pagesで公開する" data-via="gam0022">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/" data-text="HugoをGitHub Pagesで公開し、2リポジトリ構成の管理を楽にする方法" data-via="gam0022">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         </div>
         <div class="share_button">
             <div class="g-plus" data-action="share" data-annotation="none"></div>
@@ -424,7 +430,7 @@ git push origin HEAD
 <script type="text/javascript">
     var disqus_shortname = 'gam0022-net';
     var disqus_identifier = 'https:\/\/gam0022.net\/blog\/2022\/05\/07\/hugo-on-github-pages\/';
-    var disqus_title = 'HugoをGitHub Pagesで公開する';
+    var disqus_title = 'HugoをGitHub Pagesで公開し、2リポジトリ構成の管理を楽にする方法';
     var disqus_url = 'https:\/\/gam0022.net\/blog\/2022\/05\/07\/hugo-on-github-pages\/';
 
     (function() {
@@ -752,7 +758,7 @@ git push origin HEAD
   <div class="row">
     
     <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
-      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/" itemprop="url">HugoをGitHub Pagesで公開する</a></h3>
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/" itemprop="url">HugoをGitHub Pagesで公開し、2リポジトリ構成の管理を楽にする方法</a></h3>
       
       <a href="https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/">
         <img src="https://gam0022.net///images/posts/2022-05-07-hugo-on-github-pages/thumbnail.png" class="article-banner" itemprop="image">
@@ -903,16 +909,20 @@ git push origin HEAD
         <div class="col-md-3">
             <nav id="TableOfContents">
 <ul>
-<li>
-<ul>
 <li><a href="#vps-github-pagesの移行理由">VPS→GitHub Pagesの移行理由</a></li>
-<li><a href="#hugoをgithub-pagesにホスティングする">HugoをGitHub Pagesにホスティングする</a></li>
+<li><a href="#hugoをgithub-pagesにホスティングする">HugoをGitHub Pagesにホスティングする</a>
+<ul>
+<li><a href="#2リポジトリ構成とは">2リポジトリ構成とは</a></li>
+<li><a href="#2リポジトリ構成のcommitをバッチで自動化">2リポジトリ構成のcommitをバッチで自動化</a></li>
+</ul></li>
 <li><a href="#カスタムドメインとssl化">カスタムドメインとSSL化</a>
 <ul>
 <li><a href="#github側の設定">GitHub側の設定</a></li>
 <li><a href="#ドメインの管理ページ側のaレコード-cnameの設定">ドメインの管理ページ側のAレコード・CNAMEの設定</a></li>
 </ul></li>
-<li><a href="#まとめ">まとめ</a></li>
+<li><a href="#まとめ">まとめ</a>
+<ul>
+<li><a href="#静的cms-ホスティングサービスを選ぶ理由">静的CMS＋ホスティングサービスを選ぶ理由</a></li>
 </ul></li>
 </ul>
 </nav>
