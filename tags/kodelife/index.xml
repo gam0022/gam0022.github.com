@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gam0022.net</title>
+    <link>https://gam0022.net/tags/kodelife/index.xml</link>
+    <description>Recent content on gam0022.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>jp</language>
+    <copyright>&amp;copy; 2021 gam0022</copyright>
+    <atom:link href="/tags/kodelife/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>KodeLifeでMIDIコンを使うのがとても簡単だった</title>
+      <link>https://gam0022.net/blog/2022/05/08/kodelife-midi/</link>
+      <pubDate>Sun, 08 May 2022 21:56:23 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2022/05/08/kodelife-midi/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://hexler.net/kodelife&#34;&gt;KodeLife&lt;/a&gt;でMIDIコンを使うのがとても簡単でした。こんな感じにVJっぽいことが気軽にできます。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ht&#34; dir=&#34;ltr&#34;&gt;KORG nanoKONTROL2 + KodeLife &lt;a href=&#34;https://t.co/UqFQqYUFHa&#34;&gt;pic.twitter.com/UqFQqYUFHa&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1487783819730059264?ref_src=twsrc%5Etfw&#34;&gt;January 30, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;このシェーダーは&lt;a href=&#34;https://gam0022.net/blog/2021/12/31/tdf2021-shader-showdown/&#34;&gt;Tokyo Demo Fest 2021のShader Showdown&lt;/a&gt;をKodeLife向けに少し修正したものです。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;kodelifeとは&#34;&gt;KodeLifeとは&lt;/h1&gt;
+
+&lt;p&gt;リアルタイムにシェーダーのライブコーディングをするためのソフトです。&lt;/p&gt;
+
+&lt;p&gt;Mac / Windows / Linux / iOS / Androidなど幅広いプラットフォームに対応しています。&lt;/p&gt;
+
+&lt;h1 id=&#34;kodelifeでmidiコンを使うまでの手順&#34;&gt;KodeLifeでMIDIコンを使うまでの手順&lt;/h1&gt;
+
+&lt;p&gt;公式マニュアルの&lt;a href=&#34;https://hexler.net/kodelife/manual/parameters-built-in&#34;&gt;Parameters · Built-In&lt;/a&gt;を見れば解決なのですが、KodeLifeまったく使ったことのない人向けに画像付きで手順をまとめました。&lt;/p&gt;
+
+&lt;h2 id=&#34;1-新規プロジェクトを作成&#34;&gt;1. 新規プロジェクトを作成&lt;/h2&gt;
+
+&lt;p&gt;まずはKodeLifeを起動して新規プロジェクトを作成します。&lt;/p&gt;
+
+&lt;h2 id=&#34;2-midi-channelを追加&#34;&gt;2. MIDI Channelを追加&lt;/h2&gt;
+
+&lt;p&gt;MIDIコントローラーの入力を受けるけるために、プロパティにMIDI Channelを追加します。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Project &amp;gt; Parameters &amp;gt; ＋ボタン &amp;gt; Built-in &amp;gt; Input &amp;gt; MIDI Channel&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-05-08-kodelife-midi/add-midi-channel.png&#34; alt=&#34;MIDI Channelを追加&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;追加するとこうなります。MIDI Channelの設定はデフォルトのままでOKです。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-05-08-kodelife-midi/midi-channel.png&#34; alt=&#34;MIDI Channelの設定&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;デフォルトの状態だとMIDIの入力が32x32のテクスチャとしてサンプリング可能になります。&lt;/p&gt;
+
+&lt;h2 id=&#34;3-midi-channelをシェーダーからサンプリング&#34;&gt;3. MIDI Channelをシェーダーからサンプリング&lt;/h2&gt;
+
+&lt;h3 id=&#34;midi入力を受け取るmidi関数を定義&#34;&gt;midi入力を受け取るmidi関数を定義&lt;/h3&gt;
+
+&lt;p&gt;前述のとおり、MIDIの入力が32x32のテクスチャとしてサンプリング可能になります。&lt;/p&gt;
+
+&lt;p&gt;まずテクスチャのサンプラーを定義します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;uniform sampler2D midi1;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;そして、こんな感じの関数midiを定義します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;ivec2 midiCoord(int offset)
+{
+    int x = offset % 32;
+    int y = offset / 32;
+    return ivec2(x,y);
+}
+
+float midi(int ccNumber) {
+    return texture(midi1, vec2((1./32.) * midiCoord(3 * 127 + ccNumber))).r;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;midi関数の使用例&#34;&gt;midi関数の使用例&lt;/h3&gt;
+
+&lt;p&gt;関数midiは&lt;a href=&#34;https://www.g200kg.com/jp/docs/dic/controlchange.html&#34;&gt;コントロールチェンジ番号&lt;/a&gt;を受け取って、対応する値を0-1の範囲で返します。&lt;/p&gt;
+
+&lt;p&gt;IFSのイテレーションなどにmidi関数を使えば、冒頭の動画のようにIFSの幾何学形状をMIDIコンで制御できます！&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;vec4 map(vec3 p) {
+    vec3 pos = p;
+    p = mod(p, 1.) - 0.5;
+    vec4 m = vec4(1, 1, 1, 1);
+
+    float s = 1.;
+    for (int i = 0; i &amp;lt; 10 * midi(0); i++) {// MIDIコンでIFSのイテレーションを制御
+        p = abs(p) - 0.5;
+        rot(p.xy, -0.5);
+        p = abs(p) - 0.4;
+        rot(p.yz, -0.1);
+
+        float a = 1.0 + midi(1);// MIDIコンでIFSのスケールを制御
+        p *= a;
+        s *= a;
+    }
+
+    U(m, sdBox(p, vec3(0.5, 0.05, 0.05)) / s, 1., 1., 0.);
+    U(m, sdBox(p, vec3(0.5 + 0.5 * (cos(TAU * time * 0 / 4.)), 0.06, 0.05)) / s, 0., 0.1, 0.5);
+    U(m, sdBox(p, vec3(0.2, 0.6, 0.1)) / s, 0., saturate(cos(TAU * (time + pos.z / 8.))), -0.5);
+
+    return m;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;シェーダーの全文は&lt;a href=&#34;https://gist.github.com/gam0022/23fc2128753495f88b6824e1dd134168&#34;&gt;gist&lt;/a&gt;にあります。&lt;/p&gt;
+
+&lt;h1 id=&#34;まとめ&#34;&gt;まとめ&lt;/h1&gt;
+
+&lt;p&gt;KodeLifeではMIDIコンを簡単に使えて素敵！という小ネタでした。&lt;/p&gt;
+
+&lt;p&gt;ちなみに使ったMIDIコンは&lt;a href=&#34;https://amzn.to/39LN12C&#34;&gt;KORG nanoKONTROL2&lt;/a&gt;です。&lt;/p&gt;
+
+&lt;iframe sandbox=&#34;allow-popups allow-scripts allow-modals allow-forms allow-same-origin&#34; style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B004M8UZS8&amp;linkId=8165ff008f7ff356a2d6382883941aca&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;せっかくMIDIコンを買ったのに、とくにVJする機会もないので置物になってます。誰かVJに誘ってください。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

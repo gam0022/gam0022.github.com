@@ -7,8 +7,119 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>&amp;copy; 2021 gam0022</copyright>
-    <lastBuildDate>Sat, 07 May 2022 20:05:08 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 08 May 2022 21:56:23 +0900</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>KodeLifeでMIDIコンを使うのがとても簡単だった</title>
+      <link>https://gam0022.net/blog/2022/05/08/kodelife-midi/</link>
+      <pubDate>Sun, 08 May 2022 21:56:23 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2022/05/08/kodelife-midi/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://hexler.net/kodelife&#34;&gt;KodeLife&lt;/a&gt;でMIDIコンを使うのがとても簡単でした。こんな感じにVJっぽいことが気軽にできます。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ht&#34; dir=&#34;ltr&#34;&gt;KORG nanoKONTROL2 + KodeLife &lt;a href=&#34;https://t.co/UqFQqYUFHa&#34;&gt;pic.twitter.com/UqFQqYUFHa&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1487783819730059264?ref_src=twsrc%5Etfw&#34;&gt;January 30, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;このシェーダーは&lt;a href=&#34;https://gam0022.net/blog/2021/12/31/tdf2021-shader-showdown/&#34;&gt;Tokyo Demo Fest 2021のShader Showdown&lt;/a&gt;をKodeLife向けに少し修正したものです。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;kodelifeとは&#34;&gt;KodeLifeとは&lt;/h1&gt;
+
+&lt;p&gt;リアルタイムにシェーダーのライブコーディングをするためのソフトです。&lt;/p&gt;
+
+&lt;p&gt;Mac / Windows / Linux / iOS / Androidなど幅広いプラットフォームに対応しています。&lt;/p&gt;
+
+&lt;h1 id=&#34;kodelifeでmidiコンを使うまでの手順&#34;&gt;KodeLifeでMIDIコンを使うまでの手順&lt;/h1&gt;
+
+&lt;p&gt;公式マニュアルの&lt;a href=&#34;https://hexler.net/kodelife/manual/parameters-built-in&#34;&gt;Parameters · Built-In&lt;/a&gt;を見れば解決なのですが、KodeLifeまったく使ったことのない人向けに画像付きで手順をまとめました。&lt;/p&gt;
+
+&lt;h2 id=&#34;1-新規プロジェクトを作成&#34;&gt;1. 新規プロジェクトを作成&lt;/h2&gt;
+
+&lt;p&gt;まずはKodeLifeを起動して新規プロジェクトを作成します。&lt;/p&gt;
+
+&lt;h2 id=&#34;2-midi-channelを追加&#34;&gt;2. MIDI Channelを追加&lt;/h2&gt;
+
+&lt;p&gt;MIDIコントローラーの入力を受けるけるために、プロパティにMIDI Channelを追加します。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Project &amp;gt; Parameters &amp;gt; ＋ボタン &amp;gt; Built-in &amp;gt; Input &amp;gt; MIDI Channel&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-05-08-kodelife-midi/add-midi-channel.png&#34; alt=&#34;MIDI Channelを追加&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;追加するとこうなります。MIDI Channelの設定はデフォルトのままでOKです。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-05-08-kodelife-midi/midi-channel.png&#34; alt=&#34;MIDI Channelの設定&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;デフォルトの状態だとMIDIの入力が32x32のテクスチャとしてサンプリング可能になります。&lt;/p&gt;
+
+&lt;h2 id=&#34;3-midi-channelをシェーダーからサンプリング&#34;&gt;3. MIDI Channelをシェーダーからサンプリング&lt;/h2&gt;
+
+&lt;h3 id=&#34;midi入力を受け取るmidi関数を定義&#34;&gt;midi入力を受け取るmidi関数を定義&lt;/h3&gt;
+
+&lt;p&gt;前述のとおり、MIDIの入力が32x32のテクスチャとしてサンプリング可能になります。&lt;/p&gt;
+
+&lt;p&gt;まずテクスチャのサンプラーを定義します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;uniform sampler2D midi1;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;そして、こんな感じの関数midiを定義します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;ivec2 midiCoord(int offset)
+{
+    int x = offset % 32;
+    int y = offset / 32;
+    return ivec2(x,y);
+}
+
+float midi(int ccNumber) {
+    return texture(midi1, vec2((1./32.) * midiCoord(3 * 127 + ccNumber))).r;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;midi関数の使用例&#34;&gt;midi関数の使用例&lt;/h3&gt;
+
+&lt;p&gt;関数midiは&lt;a href=&#34;https://www.g200kg.com/jp/docs/dic/controlchange.html&#34;&gt;コントロールチェンジ番号&lt;/a&gt;を受け取って、対応する値を0-1の範囲で返します。&lt;/p&gt;
+
+&lt;p&gt;IFSのイテレーションなどにmidi関数を使えば、冒頭の動画のようにIFSの幾何学形状をMIDIコンで制御できます！&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;vec4 map(vec3 p) {
+    vec3 pos = p;
+    p = mod(p, 1.) - 0.5;
+    vec4 m = vec4(1, 1, 1, 1);
+
+    float s = 1.;
+    for (int i = 0; i &amp;lt; 10 * midi(0); i++) {// MIDIコンでIFSのイテレーションを制御
+        p = abs(p) - 0.5;
+        rot(p.xy, -0.5);
+        p = abs(p) - 0.4;
+        rot(p.yz, -0.1);
+
+        float a = 1.0 + midi(1);// MIDIコンでIFSのスケールを制御
+        p *= a;
+        s *= a;
+    }
+
+    U(m, sdBox(p, vec3(0.5, 0.05, 0.05)) / s, 1., 1., 0.);
+    U(m, sdBox(p, vec3(0.5 + 0.5 * (cos(TAU * time * 0 / 4.)), 0.06, 0.05)) / s, 0., 0.1, 0.5);
+    U(m, sdBox(p, vec3(0.2, 0.6, 0.1)) / s, 0., saturate(cos(TAU * (time + pos.z / 8.))), -0.5);
+
+    return m;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;シェーダーの全文は&lt;a href=&#34;https://gist.github.com/gam0022/23fc2128753495f88b6824e1dd134168&#34;&gt;gist&lt;/a&gt;にあります。&lt;/p&gt;
+
+&lt;h1 id=&#34;まとめ&#34;&gt;まとめ&lt;/h1&gt;
+
+&lt;p&gt;KodeLifeではMIDIコンを簡単に使えて素敵！という小ネタでした。&lt;/p&gt;
+
+&lt;p&gt;ちなみに使ったMIDIコンは&lt;a href=&#34;https://amzn.to/39LN12C&#34;&gt;KORG nanoKONTROL2&lt;/a&gt;です。&lt;/p&gt;
+
+&lt;iframe sandbox=&#34;allow-popups allow-scripts allow-modals allow-forms allow-same-origin&#34; style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B004M8UZS8&amp;linkId=8165ff008f7ff356a2d6382883941aca&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;せっかくMIDIコンを買ったのに、とくにVJする機会もないので置物になってます。誰かVJに誘ってください。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>HugoをGitHub Pagesで公開し、2リポジトリ構成の管理を楽にする方法</title>
@@ -3780,84 +3891,6 @@ int[MAX_BEAT_LEN * NOTE_VDIV] tmpIndexes;
 &lt;p&gt;机やモニター、モニターアーム、マウス、キーボードは作業スタイルに依存すると思うので、参考程度でお願いします。&lt;/p&gt;
 
 &lt;p&gt;自分だけかもしれませんが、一部をワイヤレスにすると、すべてをワイヤレスに統一したい欲求が出てくるので、ご注意ください。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>近未来教育フォーラム2019でシェーダーライブコーディングをしました</title>
-      <link>https://gam0022.net/blog/2019/11/29/dhw/</link>
-      <pubDate>Fri, 29 Nov 2019 10:36:17 +0900</pubDate>
-      
-      <guid>https://gam0022.net/blog/2019/11/29/dhw/</guid>
-      <description>&lt;p&gt;2019/11/28にデジタルハリウッド大学で開催された&lt;a href=&#34;https://www.dhw.co.jp/forum/program.html&#34;&gt;近未来教育フォーラム&lt;/a&gt;の
-「The Real Time Live &amp;amp; Reception リアルタイムグラフィックスの世界とVTuberが牽引する新たな人類」というイベントに登壇しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://twitter.com/FL1NE&#34;&gt;@FL1NE&lt;/a&gt;さんと一緒にデモシーンについて話しました。
-私は簡単なシェーダーライブコーディングをしながらプログラミングによる形状のモデリングについて解説しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://twitter.com/o_ob/status/1200067621799903238&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-11-29-dhw/live_coding_init.jpg&#34; alt=&#34;シェーダーライブコーディング（初期）&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://twitter.com/songofsaya_/status/1199999036964474886&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-11-29-dhw/live_coding.jpg&#34; alt=&#34;シェーダーライブコーディング（完成）&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;レポート-2020-05-09追記&#34;&gt;レポート（2020/05/09追記）&lt;/h2&gt;
-
-&lt;p&gt;当日の様子のレポートが公開されました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.dhw.co.jp/forum/report/report01.html&#34;&gt;近未来教育フォーラム2019 -In Real Time- 公演レポート&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;シェーダーライブコーディングによる作品&#34;&gt;シェーダーライブコーディングによる作品&lt;/h2&gt;
-
-&lt;p&gt;WORMHOLEの前半に登場したフラクタルによる複雑な形状のトンネルのモデリングについてライブコーディングしながら解説しました。&lt;/p&gt;
-
-&lt;p&gt;通常の3DCGでは、ツールでモデリングした3Dモデルを読み込んで表示すると思いますが、デモシーンの一部の部門には容量制限があるので、
-WORMHOLEではシェーダーによるプログラミングによってプロシージャルにモデリングを行いました。&lt;/p&gt;
-
-&lt;p&gt;発表時間が限られていたので、ハラハラ・ドキドキでしたが、なんとか意図通りの形になって良かったです。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;WORMHOLEの前半に登場したフラクタルによる複雑な形状のトンネルのモデリングについてライブコーディングしながら解説しました。&lt;a href=&#34;https://twitter.com/hashtag/DHW?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DHW&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1200006025878749184?ref_src=twsrc%5Etfw&#34;&gt;November 28, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Gam師のレイマーチング始まってる。 &lt;a href=&#34;https://t.co/MHLrFmbLpL&#34;&gt;pic.twitter.com/MHLrFmbLpL&lt;/a&gt;&lt;/p&gt;&amp;mdash; さやちゃんぐbot (@songofsaya_) &lt;a href=&#34;https://twitter.com/songofsaya__/status/1199999036964474886?ref_src=twsrc%5Etfw&#34;&gt;November 28, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;動画&#34;&gt;動画&lt;/h3&gt;
-
-&lt;p&gt;YouTube配信のアーカイブが残っています。&lt;/p&gt;
-
-&lt;p&gt;34:46〜が自分のシェーダーライブコーディングでした。&lt;/p&gt;
-
-&lt;div class=&#34;movie-wrap&#34;&gt;
-&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/j0yRASXFvlQ?start=2086&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&#34;songofsaya-さんによる解説&#34;&gt;songofsaya_ さんによる解説&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://twitter.com/songofsaya_&#34;&gt;@songofsaya_&lt;/a&gt; さんがTwitterで解説をしてくださっていました。ありがとうございます！&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;四角形のパイプと書いたけど、再帰性があるからおそらくメンガーだろうなーと思っていたらメンガーでした。&lt;br&gt;そしてGam師ならではのfoldRotateが登場します。これがKanetaaaaa神だとpmodと名前が変わります。 &lt;a href=&#34;https://t.co/VFqKT2jVoq&#34;&gt;pic.twitter.com/VFqKT2jVoq&lt;/a&gt;&lt;/p&gt;&amp;mdash; さやちゃんぐbot (@songofsaya_) &lt;a href=&#34;https://twitter.com/songofsaya__/status/1200008658916007938?ref_src=twsrc%5Etfw&#34;&gt;November 28, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Gam師ならではのfoldRotateが登場します。これがKanetaaaaa神だとpmodと名前が変わります&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;正解です！&lt;/p&gt;
-
-&lt;h2 id=&#34;発表資料&#34;&gt;発表資料&lt;/h2&gt;
-
-&lt;p&gt;発表資料はFL1NEさんが作ってくれました。自分はライブコーディングのところを担当しました。&lt;/p&gt;
-
-&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;b3019de333a449a481ff2df647d2d098&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-
-&lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;
-
-&lt;p&gt;当日は&lt;a href=&#34;https://www.sli.do/&#34;&gt;sli.do&lt;/a&gt;で来場者の声がリアルタイムに見えるようになっていました。&lt;/p&gt;
-
-&lt;p&gt;sli.doや懇親会で、メガデモとシェーダーについて「楽しそう！」「自分でも作ってみたい」といった好意的な感想をいただけました！&lt;/p&gt;
-
-&lt;p&gt;シェーダやレイマーチングや3DCGに少しでも興味を持っていただけたのなら嬉しい限りです。ありがとうございました！&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;メガデモとシェーダーについて&lt;br&gt;「楽しそう！」「自分でも作ってみたい」&lt;br&gt;といった好意的な感想をいただけて嬉しい限りです☺️&lt;a href=&#34;https://twitter.com/hashtag/DHW?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DHW&lt;/a&gt; &lt;a href=&#34;https://t.co/BCkGVOiAdv&#34;&gt;pic.twitter.com/BCkGVOiAdv&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1200068188043501568?ref_src=twsrc%5Etfw&#34;&gt;November 28, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
