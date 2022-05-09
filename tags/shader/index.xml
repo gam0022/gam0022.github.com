@@ -39,7 +39,7 @@
 
 &lt;h2 id=&#34;2-midi-channelを追加&#34;&gt;2. MIDI Channelを追加&lt;/h2&gt;
 
-&lt;p&gt;MIDIコントローラーの入力を受けるけるために、プロパティにMIDI Channelを追加します。&lt;/p&gt;
+&lt;p&gt;MIDIコントローラーの入力を受けるけるために、パラメーターのリストにMIDI Channelを追加します。&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;Project &amp;gt; Parameters &amp;gt; ＋ボタン &amp;gt; Built-in &amp;gt; Input &amp;gt; MIDI Channel&lt;/code&gt;&lt;/p&gt;
 
