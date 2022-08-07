@@ -27,7 +27,7 @@
 
 &lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raymarching_i4_s256_l300.png&#34; alt=&#34;レイマーチング 深度4 300ステップ&#34; /&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;計測サマリー&#34;&gt;計測サマリー&lt;/h1&gt;
+&lt;h1 id=&#34;計測結果のサマリー&#34;&gt;計測結果のサマリー&lt;/h1&gt;
 
 &lt;p&gt;&lt;strong&gt;先に結果から発表すると、なんとレイマーチングはレイキャスティングの15～20倍くらい遅いようでした。&lt;/strong&gt;&lt;/p&gt;
 
