@@ -51,18 +51,18 @@
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;レイマーチング&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;8.85388&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9.00077&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9.14309&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9.29724&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8.85388秒 &lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raymarching_i1_s256.png&#34; alt=&#34;レイマーチング 深度1&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;9.00077秒 &lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raymarching_i2_s256.png&#34; alt=&#34;レイマーチング 深度2&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;9.14309秒 &lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raymarching_i3_s256.png&#34; alt=&#34;レイマーチング 深度3&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;9.29724秒 &lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raymarching_i4_s256.png&#34; alt=&#34;レイマーチング 深度4&#34; /&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;レイキャスティング&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.445493&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.466056&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.50258&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.602458&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.445493秒 &lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raycast_i1_s256.png&#34; alt=&#34;レイキャスティング 深度1&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.466056秒 &lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raycast_i2_s256.png&#34; alt=&#34;レイキャスティング 深度2&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.50258秒 &lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raycast_i3_s256.png&#34; alt=&#34;レイキャスティング 深度3&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.602458秒 &lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raycast_i4_s256.png&#34; alt=&#34;レイキャスティング 深度4&#34; /&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -112,7 +112,7 @@
 
 &lt;h2 id=&#34;レイマーチング&#34;&gt;レイマーチング&lt;/h2&gt;
 
-&lt;p&gt;レイマーチングは繰り返しの計算で数値的に距離関数で定義されたオブジェクトとの衝突判定をする手法で、Sphere Tracingとも呼ばれます。&lt;/p&gt;
+&lt;p&gt;レイマーチングは繰り返しの計算で数値的な衝突判定の手法で、Sphere Tracingとも呼ばれます。&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;レイマーチングの最大ステップ回数（マーチングループのループ数）は100&lt;/li&gt;
@@ -143,12 +143,18 @@
 &lt;li&gt;Houdiniからobjで出力して自作のレンダラーで読み込み
 
 &lt;ul&gt;
-&lt;li&gt;OptiX7ではobjのローダーが無かったので自作…&lt;/li&gt;
+&lt;li&gt;OptiX7.xではobjのローダーが無かったので自作…&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;OptiXのビルトインの機能で衝突判定
+
+&lt;ul&gt;
 &lt;li&gt;OptiX上では三角ポリゴンの集合として表現&lt;/li&gt;
-&lt;li&gt;OptiXのビルトインの機能で衝突判定&lt;/li&gt;
-&lt;li&gt;OptiXの機能でGAS（Geometry acceleration structure）を構築&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;OptiXの機能でGAS（Geometry acceleration structure）を構築
+
+&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;RTコアによるレイトレーシングのハードウェアアクセラレーションあり&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;フラクタルの再帰回数を自由に増やせるようになった。&lt;br&gt;HoudiniのTOPs Feedback Loopの良い使用例ですね。 &lt;a href=&#34;https://t.co/yTR60S5vgC&#34;&gt;https://t.co/yTR60S5vgC&lt;/a&gt; &lt;a href=&#34;https://t.co/OifBfoTCFa&#34;&gt;pic.twitter.com/OifBfoTCFa&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1556203400257503232?ref_src=twsrc%5Etfw&#34;&gt;August 7, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
@@ -253,7 +259,7 @@
 
 &lt;h2 id=&#34;レンダリング結果&#34;&gt;レンダリング結果&lt;/h2&gt;
 
-&lt;p&gt;レンダリング結果です。&lt;/p&gt;
+&lt;p&gt;大きなサイズのレンダリング結果です。&lt;/p&gt;
 
 &lt;p&gt;異なるアルゴリズムでモデリングしているので、ジオメトリーは完全一致ではありません。&lt;/p&gt;
 

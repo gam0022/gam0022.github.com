@@ -65,18 +65,18 @@
 
 
 レイマーチング
-8.85388
-9.00077
-9.14309
-9.29724
+8.85388秒 
+9.00077秒 
+9.14309秒 
+9.29724秒 
 
 
 
 レイキャスティング
-0.445493
-0.466056
-0.50258
-0.602458
+0.445493秒 
+0.466056秒 
+0.50258秒 
+0.602458秒 
 
 
 
@@ -172,14 +172,12 @@
 
 <div class="container">
     
-    <div class="row">
-        <div class="col-md-9">
-            <article class="article" itemscope itemtype="http://schema.org/Article">
+    <article class="article" itemscope itemtype="http://schema.org/Article">
 
-                
+        
 
-                <h3 class="article-title" itemprop="name">速度比較！レイマーチングvsレイキャスティング</h3>
-                
+        <h3 class="article-title" itemprop="name">速度比較！レイマーチングvsレイキャスティング</h3>
+        
 
 <div class="article-metadata">
 
@@ -242,8 +240,8 @@
 </div>
 
 
-                <div class="article-style" itemprop="articleBody">
-                    <p>これは<a href="https://sites.google.com/view/raytracingcamp8">レイトレ合宿8</a>のアドベントカレンダーです。</p>
+        <div class="article-style" itemprop="articleBody">
+            <p>これは<a href="https://sites.google.com/view/raytracingcamp8">レイトレ合宿8</a>のアドベントカレンダーです。</p>
 
 <p>レイマーチングはレイキャスティングと比べて遅いと感じていましたが、なるべく同じ条件で計測した場合に実際どのくらい差があるのか比較してみました。</p>
 
@@ -279,18 +277,18 @@
 <tbody>
 <tr>
 <td align="left">レイマーチング</td>
-<td align="right">8.85388</td>
-<td align="right">9.00077</td>
-<td align="right">9.14309</td>
-<td align="right">9.29724</td>
+<td align="right">8.85388秒 <img src="/images/posts/2022-08-08-raymarching-vs-raycasting/raymarching_i1_s256.png" alt="レイマーチング 深度1" /></td>
+<td align="right">9.00077秒 <img src="/images/posts/2022-08-08-raymarching-vs-raycasting/raymarching_i2_s256.png" alt="レイマーチング 深度2" /></td>
+<td align="right">9.14309秒 <img src="/images/posts/2022-08-08-raymarching-vs-raycasting/raymarching_i3_s256.png" alt="レイマーチング 深度3" /></td>
+<td align="right">9.29724秒 <img src="/images/posts/2022-08-08-raymarching-vs-raycasting/raymarching_i4_s256.png" alt="レイマーチング 深度4" /></td>
 </tr>
 
 <tr>
 <td align="left">レイキャスティング</td>
-<td align="right">0.445493</td>
-<td align="right">0.466056</td>
-<td align="right">0.50258</td>
-<td align="right">0.602458</td>
+<td align="right">0.445493秒 <img src="/images/posts/2022-08-08-raymarching-vs-raycasting/raycast_i1_s256.png" alt="レイキャスティング 深度1" /></td>
+<td align="right">0.466056秒 <img src="/images/posts/2022-08-08-raymarching-vs-raycasting/raycast_i2_s256.png" alt="レイキャスティング 深度2" /></td>
+<td align="right">0.50258秒 <img src="/images/posts/2022-08-08-raymarching-vs-raycasting/raycast_i3_s256.png" alt="レイキャスティング 深度3" /></td>
+<td align="right">0.602458秒 <img src="/images/posts/2022-08-08-raymarching-vs-raycasting/raycast_i4_s256.png" alt="レイキャスティング 深度4" /></td>
 </tr>
 </tbody>
 </table>
@@ -340,7 +338,7 @@
 
 <h2 id="レイマーチング">レイマーチング</h2>
 
-<p>レイマーチングは繰り返しの計算で数値的に距離関数で定義されたオブジェクトとの衝突判定をする手法で、Sphere Tracingとも呼ばれます。</p>
+<p>レイマーチングは繰り返しの計算で数値的な衝突判定の手法で、Sphere Tracingとも呼ばれます。</p>
 
 <ul>
 <li>レイマーチングの最大ステップ回数（マーチングループのループ数）は100</li>
@@ -371,12 +369,18 @@
 <li>Houdiniからobjで出力して自作のレンダラーで読み込み
 
 <ul>
-<li>OptiX7ではobjのローダーが無かったので自作…</li>
+<li>OptiX7.xではobjのローダーが無かったので自作…</li>
 </ul></li>
+<li>OptiXのビルトインの機能で衝突判定
+
+<ul>
 <li>OptiX上では三角ポリゴンの集合として表現</li>
-<li>OptiXのビルトインの機能で衝突判定</li>
-<li>OptiXの機能でGAS（Geometry acceleration structure）を構築</li>
+</ul></li>
+<li>OptiXの機能でGAS（Geometry acceleration structure）を構築
+
+<ul>
 <li><strong>RTコアによるレイトレーシングのハードウェアアクセラレーションあり</strong></li>
+</ul></li>
 </ul>
 
 <p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">フラクタルの再帰回数を自由に増やせるようになった。<br>HoudiniのTOPs Feedback Loopの良い使用例ですね。 <a href="https://t.co/yTR60S5vgC">https://t.co/yTR60S5vgC</a> <a href="https://t.co/OifBfoTCFa">pic.twitter.com/OifBfoTCFa</a></p>&mdash; がむ (@gam0022) <a href="https://twitter.com/gam0022/status/1556203400257503232?ref_src=twsrc%5Etfw">August 7, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
@@ -481,7 +485,7 @@
 
 <h2 id="レンダリング結果">レンダリング結果</h2>
 
-<p>レンダリング結果です。</p>
+<p>大きなサイズのレンダリング結果です。</p>
 
 <p>異なるアルゴリズムでモデリングしているので、ジオメトリーは完全一致ではありません。</p>
 
@@ -577,11 +581,11 @@ IFSやMod Repetitionと乱数の組み合わせによる非連続な距離関数
 <h1 id="まとめ">まとめ</h1>
 
 <p>レイマーチングはめちゃくちゃ遅いので、レイトレ合宿のようにレンダリング時間がシビアなら悪手かもしれません。</p>
-                </div>
+        </div>
 
-            </article>
+    </article>
 
-            
+    
 
 <div class="article-metadata">
 
@@ -643,7 +647,7 @@ IFSやMod Repetitionと乱数の組み合わせによる非連続な距離関数
 
 </div>
 
-            <nav>
+    <nav>
     <ul class="pager">
         
         <li class="previous"><a href="https://gam0022.net/blog/2022/05/08/kodelife-midi/"><span aria-hidden="true">&larr;</span> KodeLifeでMIDIコンを使うのがとても簡単だった</a></li>
@@ -653,7 +657,7 @@ IFSやMod Repetitionと乱数の組み合わせによる非連続な距離関数
     </ul>
 </nav>
 
-            
+    
 <section id="comments">
     <div id="disqus_thread">
         <div id="disqus_thread"></div>
@@ -675,7 +679,7 @@ IFSやMod Repetitionと乱数の組み合わせによる非連続な距離関数
 </section>
 
 
-            <div class="row">
+    <div class="row">
     <h4 class="blog-title"><img src="/img/gam0022_splash.png" class="icon"> gam0022.net's Tag Cloud</h4>
     <ul class="category-list">
     <div class="widget tagcloud">
@@ -1081,7 +1085,7 @@ IFSやMod Repetitionと乱数の組み合わせによる非連続な距離関数
     </div>
 </div>
 
-            <footer class="site-footer">
+    <footer class="site-footer">
     <div class="container">
         <p class="powered-by">
 
@@ -1095,7 +1099,7 @@ IFSやMod Repetitionと乱数の組み合わせによる非連続な距離関数
     </div>
 </footer>
 
-                    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
         <script src="https://gam0022.net/js/jquery-1.12.3.min.js"></script>
         <script src="https://gam0022.net/js/bootstrap.custom.js"></script>
@@ -1139,40 +1143,5 @@ IFSやMod Repetitionと乱数の組み合わせによる非連続な距離関数
     </body>
 </html>
 
-        </div>
-        <div class="col-md-3">
-            <nav id="TableOfContents">
-<ul>
-<li><a href="#検証内容の概要">検証内容の概要</a></li>
-<li><a href="#計測結果のサマリー">計測結果のサマリー</a></li>
-<li><a href="#検証内容の詳細">検証内容の詳細</a>
-<ul>
-<li><a href="#検証pcのスペック">検証PCのスペック</a></li>
-<li><a href="#共通条件">共通条件</a></li>
-<li><a href="#レイマーチング">レイマーチング</a></li>
-<li><a href="#レイキャスティング">レイキャスティング</a></li>
-</ul></li>
-<li><a href="#結果詳細">結果詳細</a>
-<ul>
-<li><a href="#レンダリング時間">レンダリング時間</a></li>
-<li><a href="#レンダリング時間以外">レンダリング時間以外</a></li>
-<li><a href="#レンダリング結果">レンダリング結果</a>
-<ul>
-<li><a href="#レイマーチング-深度1">レイマーチング 深度1</a></li>
-<li><a href="#レイマーチング-深度2">レイマーチング 深度2</a></li>
-<li><a href="#レイマーチング-深度3">レイマーチング 深度3</a></li>
-<li><a href="#レイマーチング-深度4">レイマーチング 深度4</a></li>
-<li><a href="#レイキャスティング-深度1">レイキャスティング 深度1</a></li>
-<li><a href="#レイキャスティング-深度2">レイキャスティング 深度2</a></li>
-<li><a href="#レイキャスティング-深度3">レイキャスティング 深度3</a></li>
-<li><a href="#レイキャスティング-深度4">レイキャスティング 深度4</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#レイマーチングの高速化手法">レイマーチングの高速化手法</a></li>
-<li><a href="#まとめ">まとめ</a></li>
-</ul>
-</nav>
-        </div>
-    </div>
     
 </div>
