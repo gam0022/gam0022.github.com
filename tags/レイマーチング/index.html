@@ -124,6 +124,112 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/" itemprop="url">速度比較！レイマーチングvsレイキャスティング</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2022-08-08 02:12:50 &#43;0900 JST" itemprop="datePublished">2022-08-08</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/cg">CG</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%b3%e3%82%b0">レイトレーシング</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%91%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%b3%e3%82%b0">パストレーシング</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/optix">OptiX</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%9e%e3%83%bc%e3%83%81%e3%83%b3%e3%82%b0">レイマーチング</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/cuda">CUDA</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/gpu">GPU</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%88%e3%83%ac%e5%90%88%e5%ae%bf">レイトレ合宿</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                これは<a href="https://sites.google.com/view/raytracingcamp8">レイトレ合宿8</a>のアドベントカレンダーです。</p>
+
+<p>レイマーチングはレイキャスティングと比べて遅いと感じていましたが、なるべく同じ条件で計測した場合に実際どのくらい差があるのか比較してみました。</p>
+
+<h1 id="検証内容の概要">検証内容の概要</h1>
+
+<p>メンガーのスポンジをレイマーチングとレイキャスティングでそれぞれ交差判定を実装し、フラクタルの深度を1～4に変化しながら計測しました。</p>
+
+<p>次の画像はレイマーチングによる深度4のメンガーのスポンジです。</p>
+
+<p><img src="/images/posts/2022-08-08-raymarching-vs-raycasting/raymarching_i4_s256_l300.png" alt="レイマーチング 深度4 300ステップ" /></p>
+
+<h1 id="計測サマリー">計測サマリー</h1>
+
+<p><strong>先に結果から発表すると、なんとレイマーチングはレイキャスティングの15～20倍くらい遅いようでした。</strong></p>
+
+<p>ここまで遅いなんてショック😨…</p>
+
+<p><img src="/images/posts/2022-08-08-raymarching-vs-raycasting/result_graph.png" alt="計測結果の棒グラフ" /></p>
+
+<p>256サンプリング時のレンダリング時間（秒）</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">フラクタルの深度</th>
+<th align="right">1</th>
+<th align="right">2</th>
+<th align="right">3</th>
+<th align="right">4</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">レイマーチング</td>
+<td align="right">8.85388</td>
+<td align="right">9.00077</td>
+<td align="right">9.14309</td>
+<td align="right">9.29724</td>
+</tr>
+
+<tr>
+<td align="left">レイキャスティング</td>
+<td align="right">0.445493</td>
+<td align="right">0.466056</td>
+<td align="right">0.50258</td>
+<td align="right">0.602458</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2021/12/31/tdf2021-shader-showdown/" itemprop="url">Tokyo Demo Fest 2021のShader Showdownに参加しました</a></h3>
         
 
@@ -686,60 +792,6 @@
         </div>
         <p class="read-more">
             <a href="https://gam0022.net/blog/2019/06/25/unity-raymarching/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2019/06/20/klab-tech-meetup4/" itemprop="url">UnityエンジニアによるShader勉強会！に登壇しました</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2019-06-20 10:04:11 &#43;0900 JST" itemprop="datePublished">2019-06-20</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/event">event</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/cg">CG</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/slide">Slide</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%9e%e3%83%bc%e3%83%81%e3%83%b3%e3%82%b0">レイマーチング</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/tokyodemofest">TokyoDemoFest</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/unity">Unity</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                6/19に開催された<a href="https://techplay.jp/event/733454">UnityエンジニアによるShader勉強会！</a>で「Unity×レイマーチングによる映像制作の実践手法」という発表をしました。</p>
-
-<script async class="speakerdeck-embed" data-id="daf8218b7458460087137b6f23e938b3" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
-
-<p>
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2019/06/20/klab-tech-meetup4/" class="btn btn-primary btn-outline">
                 Read more
             </a>
         </p>

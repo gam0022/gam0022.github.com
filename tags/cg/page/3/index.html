@@ -124,6 +124,95 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2017/12/11/get-ray-from-camera-matrix/" itemprop="url">カメラ行列からレイトレ用のレイを生成する</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2017-12-11 10:12:08 &#43;0900 JST" itemprop="datePublished">2017-12-11</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/three.js">three.js</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/webgl">WebGL</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/cg">CG</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                これは<a href="https://qiita.com/advent-calendar/2017/klab">KLab Advent Calendar 2017</a>の11日目の記事です。</p>
+
+<h1 id="はじめに">はじめに</h1>
+
+<p>先日、three.jsの<a href="https://threejs.org/examples">examples（公式サンプル集）</a>で紹介されている<a href="https://threejs.org/examples/#webgl_raymarching_reflect">「raymarching / reflect」</a>に関して、2つのPRを送ってマージされました。</p>
+
+<ul>
+<li><a href="https://github.com/mrdoob/three.js/pull/12792">Improve raymarching example by gam0022 · Pull Request #12792 · mrdoob/three.js</a></li>
+<li><a href="https://github.com/mrdoob/three.js/pull/12801">Improve raymarching example v2 by gam0022 · Pull Request #12801 · mrdoob/three.js</a></li>
+</ul>
+
+<p>内部的なリファクタリングですので、目に見える変化はまったくありません。</p>
+
+<p>レイトレーシングやレイマーチングでは、レイを生成する処理が必要です。
+そのレイの生成処理を改良しました。
+上記のPRでは、カメラ行列（モデル行列 + プロジェクション行列の逆行列）からレイの生成するリファクタリングを行いました。</p>
+
+<p>レイの生成方法というのはとても奥深いテーマで、さまざまな実装方法があります。
+この記事では、今回のPRに至るまでの試行錯誤をまとめたいと思います。</p>
+
+<h1 id="raymarching-reflect-とは">raymarching / reflect とは</h1>
+
+<p>「raymarching / reflect」は、three.jsによるレイマーチングのGLSL（GPU）実装の技術デモです。</p>
+
+<p>無数のオブジェクトの描画はレイマーチングが得意とする表現です。
+レイマーチングでは距離関数を利用してシーンの形状を定義します。
+距離関数にmod関数を適用すると、同じ形状を無限に繰り返す repetition を実現できます。</p>
+
+<p><img src="/images/posts/2017-12-11-get-ray-from-camera-matrix/reflect.png" alt="three.jsによるレイマーチングのGLSL（GPU）実装の技術デモ: reflect" /></p>
+
+<p>私が2年前に実装して、three.jsのexamplesに取り込んでいただきました。その時のPRはこちらです。</p>
+
+<ul>
+<li><a href="https://github.com/mrdoob/three.js/pull/7860">Added raymarching reflect example. by gam0022 · Pull Request #7860 · mrdoob/three.js</a></li>
+<li><a href="https://github.com/mrdoob/three.js/pull/7863">[WIP] Fix raymarching reflect by gam0022 · Pull Request #7863 · mrdoob/three.js</a></li>
+</ul>
+
+<p>解説記事もあるので、もしご興味があればあわせてお読みください。</p>
+
+<ul>
+<li><a href="https://qiita.com/gam0022/items/03699a07e4a4b5f2d41f">これがGPUの力！Three.jsによる“リアルタイム”なレイトレーシング</a></li>
+</ul>
+
+<p>要するに、2年前に自分で作った作品を今になって改良しました。</p>
+
+<p>
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2017/12/11/get-ray-from-camera-matrix/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2017/10/02/rtcamp5/" itemprop="url">レイトレ合宿5‽に参加して、Rustでパストレーシングを実装しました！</a></h3>
         
 

@@ -124,6 +124,71 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/02/05/header-anchor/" itemprop="url">Octopressの見出しにアンカーリンクをつけるように改造</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2013-02-05 14:30:00 &#43;0900 JST" itemprop="datePublished">2013-02-05</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/octopress">Octopress</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                
+
+<p>タイトルの通りなのですが、h1レベルの見出しにアンカーリンクをつけるようにOctopressを改造しました。</p>
+
+<p>``の19行目を次のように修正して、
+h1レベルの見出しに正規表現でアンカーリンクをつけるようにしました。</p>
+
+<pre><code class="language-diff"># plugins/octopress_filters.rb
+@@ -16,7 +16,7 @@ module OctopressFilters
+   end
+   def post_filter(input)
+     input = unwrap(input)
+-    RubyPants.new(input).to_html
++    RubyPants.new(input).to_html.gsub(/&lt;h1&gt;([^&lt;].*[^&gt;])&lt;\/h1&gt;/, '&lt;h1&gt;&lt;a name=&quot;\1&quot; href=&quot;#\1&quot;&gt;\1&lt;/a&gt;&lt;/h1&gt;')
+   end
+ end
+</code></pre>
+
+<p>修正するべき場所がここで本当に良いのか微妙ですが、とりあえず思った通りに動いているので良しとします。</p>
+
+<p>以下、見出しのテスト</p>
+
+<h1 id="見出し1">見出し1</h1>
+
+<h1 id="見出し2">見出し2</h1>
+
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2013/02/05/header-anchor/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/01/24/eclipse-formatter/" itemprop="url">Eclipseのformatterの設定の方法をいつも忘れてしまうので</a></h3>
         
 
@@ -738,71 +803,6 @@ CGIで長いURIを発行すると、RequestURITooLargeというエラーにな�
         </div>
         <p class="read-more">
             <a href="https://gam0022.net/blog/2012/08/25/preview-ruby-cgi-using-webrick/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/08/22/twincal/" itemprop="url">Twinsに登録した時間割をGoogleカレンダーやiCalにインポートするWebサービス「TwinCal」を作った</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2012-08-22 12:47:00 &#43;0900 JST" itemprop="datePublished">2012-08-22</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/ruby">Ruby</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/twincal">TwinCal</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                <p>Rubyで何かWebアプリを作ってみたかったので、
-Twinsに登録した時間割をGoogleカレンダーやiCalにインポートするWebサービス「TwinCal」を作ってみました。</p>
-
-<p><a href="http://gam0022.net/app/twincal/">TwinCal</a></p>
-
-<p>筑波大学生以外にも分かるように説明すると、筑波大学にはTwinsという履修の登録をするWebのシステムがあり、
-Twinsでは時間割をCSV出力する機能があるので、そのCSVをiCalender形式に変換して、
-GoogleカレンダーやiCalにインポートをサポートするWebアプリを作りました。</p>
-
-<p>来年、Twinsが改修されるらしいので、半年後には使えなくなると思います。</p>
-
-<p>バイトでPHPを使ってWebアプリを開発した経験はありましたが、個人でWebアプリを作ったのは初めてでした。</p>
-
-<p>気を使ったこととして、ビューの部分はerb(railsでも使われているアレ)を使い、MVCを意識して作りました。</p>
-
-<p>最近流行りのbootstrapやjQueryなどを使ったのですが、この2つを使ったのは正解でした。
-これらのおかげでロジック部分に集中することができ、かなりサクサク作業することができました。</p>
-
-<p>このアプリを作ろうと思い立ったのは12日で、14日には公開できるような状態になりました。</p>
-
-<p>あまり使ってくれている人はいないようですが、bootstrapとhtml5で遊べたことだけでもよい経験となりました。</p>
-
-<p>今回のことで学んだテクニックがいくつかあるので、後ほど記事にしたいです。</p>
-
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2012/08/22/twincal/" class="btn btn-primary btn-outline">
                 Read more
             </a>
         </p>

@@ -124,6 +124,112 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/" itemprop="url">速度比較！レイマーチングvsレイキャスティング</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2022-08-08 02:12:50 &#43;0900 JST" itemprop="datePublished">2022-08-08</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/cg">CG</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%b3%e3%82%b0">レイトレーシング</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%91%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%b3%e3%82%b0">パストレーシング</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/optix">OptiX</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%9e%e3%83%bc%e3%83%81%e3%83%b3%e3%82%b0">レイマーチング</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/cuda">CUDA</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/gpu">GPU</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%88%e3%83%ac%e5%90%88%e5%ae%bf">レイトレ合宿</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                これは<a href="https://sites.google.com/view/raytracingcamp8">レイトレ合宿8</a>のアドベントカレンダーです。</p>
+
+<p>レイマーチングはレイキャスティングと比べて遅いと感じていましたが、なるべく同じ条件で計測した場合に実際どのくらい差があるのか比較してみました。</p>
+
+<h1 id="検証内容の概要">検証内容の概要</h1>
+
+<p>メンガーのスポンジをレイマーチングとレイキャスティングでそれぞれ交差判定を実装し、フラクタルの深度を1～4に変化しながら計測しました。</p>
+
+<p>次の画像はレイマーチングによる深度4のメンガーのスポンジです。</p>
+
+<p><img src="/images/posts/2022-08-08-raymarching-vs-raycasting/raymarching_i4_s256_l300.png" alt="レイマーチング 深度4 300ステップ" /></p>
+
+<h1 id="計測サマリー">計測サマリー</h1>
+
+<p><strong>先に結果から発表すると、なんとレイマーチングはレイキャスティングの15～20倍くらい遅いようでした。</strong></p>
+
+<p>ここまで遅いなんてショック😨…</p>
+
+<p><img src="/images/posts/2022-08-08-raymarching-vs-raycasting/result_graph.png" alt="計測結果の棒グラフ" /></p>
+
+<p>256サンプリング時のレンダリング時間（秒）</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">フラクタルの深度</th>
+<th align="right">1</th>
+<th align="right">2</th>
+<th align="right">3</th>
+<th align="right">4</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">レイマーチング</td>
+<td align="right">8.85388</td>
+<td align="right">9.00077</td>
+<td align="right">9.14309</td>
+<td align="right">9.29724</td>
+</tr>
+
+<tr>
+<td align="left">レイキャスティング</td>
+<td align="right">0.445493</td>
+<td align="right">0.466056</td>
+<td align="right">0.50258</td>
+<td align="right">0.602458</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2022/05/08/kodelife-midi/" itemprop="url">KodeLifeでMIDIコンを使うのがとても簡単だった</a></h3>
         
 
@@ -716,60 +822,6 @@
         </div>
         <p class="read-more">
             <a href="https://gam0022.net/blog/2021/05/06/onamae-com-to-google-domain/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2021/03/08/raymarching-in-windows-terminal/" itemprop="url">Windows Terminalの背景でレイマーチング</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2021-03-08 01:00:00 &#43;0900 JST" itemprop="datePublished">2021-03-08</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/raymarching">Raymarching</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/windows-terminal">Windows Terminal</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/hlsl">HLSL</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/shader">Shader</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%82%b7%e3%82%a7%e3%83%bc%e3%83%80%e3%83%bc">シェーダー</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                <a href="/images/posts/2021-02-26-raymarching-in-windows-terminal/raymarching-in-windows-terminal.png"><img src="/images/posts/2021-02-26-raymarching-in-windows-terminal/raymarching-in-windows-terminal.jpg" alt="Raymarching in Windows Terminal" /></a></p>
-
-<p>Windows Terminal 1.6から任意のHLSLのPixel Shadersを実行できるようになったので、Windows Terminalの背景でレイマーチングを実行してみました。</p>
-
-<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">Raymarching in Windows Terminal<br><br>Windows Terminal 1.6 から任意の Pixel Shaders を実行できるようになったので、Windows Terminal の背景でレイマーチングを実行してみた🎉 これは楽しすぎる🤣 <a href="https://t.co/WX2JqUZtuL">pic.twitter.com/WX2JqUZtuL</a></p>&mdash; がむ (@gam0022) <a href="https://twitter.com/gam0022/status/1361485111473045505?ref_src=twsrc%5Etfw">February 16, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-
-<p>
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2021/03/08/raymarching-in-windows-terminal/" class="btn btn-primary btn-outline">
                 Read more
             </a>
         </p>

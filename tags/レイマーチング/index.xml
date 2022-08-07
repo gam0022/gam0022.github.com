@@ -10,6 +10,344 @@
     <atom:link href="/tags/%E3%83%AC%E3%82%A4%E3%83%9E%E3%83%BC%E3%83%81%E3%83%B3%E3%82%B0/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>速度比較！レイマーチングvsレイキャスティング</title>
+      <link>https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/</link>
+      <pubDate>Mon, 08 Aug 2022 02:12:50 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/</guid>
+      <description>&lt;p&gt;これは&lt;a href=&#34;https://sites.google.com/view/raytracingcamp8&#34;&gt;レイトレ合宿8&lt;/a&gt;のアドベントカレンダーです。&lt;/p&gt;
+
+&lt;p&gt;レイマーチングはレイキャスティングと比べて遅いと感じていましたが、なるべく同じ条件で計測した場合に実際どのくらい差があるのか比較してみました。&lt;/p&gt;
+
+&lt;h1 id=&#34;検証内容の概要&#34;&gt;検証内容の概要&lt;/h1&gt;
+
+&lt;p&gt;メンガーのスポンジをレイマーチングとレイキャスティングでそれぞれ交差判定を実装し、フラクタルの深度を1～4に変化しながら計測しました。&lt;/p&gt;
+
+&lt;p&gt;次の画像はレイマーチングによる深度4のメンガーのスポンジです。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raymarching_i4_s256_l300.png&#34; alt=&#34;レイマーチング 深度4 300ステップ&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;計測サマリー&#34;&gt;計測サマリー&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;先に結果から発表すると、なんとレイマーチングはレイキャスティングの15～20倍くらい遅いようでした。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;ここまで遅いなんてショック😨…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/result_graph.png&#34; alt=&#34;計測結果の棒グラフ&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;256サンプリング時のレンダリング時間（秒）&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;フラクタルの深度&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;1&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;2&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;3&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;4&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;レイマーチング&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8.85388&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;9.00077&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;9.14309&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;9.29724&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;レイキャスティング&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.445493&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.466056&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.50258&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.602458&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;検証内容の詳細&#34;&gt;検証内容の詳細&lt;/h1&gt;
+
+&lt;h2 id=&#34;検証pcのスペック&#34;&gt;検証PCのスペック&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;OS: Windows 11&lt;/li&gt;
+&lt;li&gt;CPU: Core i7-12700K&lt;/li&gt;
+&lt;li&gt;GPU: GeForce RTX 3080&lt;/li&gt;
+&lt;li&gt;メモリ: 64GB (3200MHz)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;このピカピカ光るPCで検証しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;my new gear&amp;hellip; &lt;a href=&#34;https://t.co/eS2MbH7OKc&#34;&gt;pic.twitter.com/eS2MbH7OKc&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1546700194305437696?ref_src=twsrc%5Etfw&#34;&gt;July 12, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;共通条件&#34;&gt;共通条件&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;レンダラーはNVIDIA OptiX 7.5上で実装&lt;/li&gt;
+&lt;li&gt;256サンプリングする時間を計測
+
+&lt;ul&gt;
+&lt;li&gt;1回のoptixLaunchで256サンプリング&lt;/li&gt;
+&lt;li&gt;Ray generationプログラム（CUDAの関数）の中で256回ループ&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;出力解像度は1920x1080&lt;/li&gt;
+&lt;li&gt;計測時間の詳細
+
+&lt;ul&gt;
+&lt;li&gt;シーンの初期化やBVHの構築は含まない&lt;/li&gt;
+&lt;li&gt;optixLaunchの実行時間を計測&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;シェーディングはパストレーシング
+
+&lt;ul&gt;
+&lt;li&gt;マテリアルは拡散反射のみ&lt;/li&gt;
+&lt;li&gt;NEEやMISはしないシンプルなパストレーシング&lt;/li&gt;
+&lt;li&gt;反射の最大震度は5&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;レイマーチング&#34;&gt;レイマーチング&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;レイマーチングの最大ステップ回数（マーチングループのループ数）は100&lt;/li&gt;
+&lt;li&gt;Intersectionプログラム（CUDAの関数）としてレイマーチングを実装
+
+&lt;ul&gt;
+&lt;li&gt;詳細は&lt;a href=&#34;https://gam0022.net/blog/2019/08/05/optix-raymarching-pathtracing/&#34;&gt;過去の記事&lt;/a&gt;を参照&lt;/li&gt;
+&lt;li&gt;Optix6の内容なので、Optix7対応のために実装を多少修正&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;高速化のためにカメラからレイは飛ばさずに、バウンディングボックスからレイを飛ばす
+
+&lt;ul&gt;
+&lt;li&gt;バウンディングボックスは最適になるようにギリギリに設定&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;レイキャスティング&#34;&gt;レイキャスティング&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;メンガースポンジはHoudiniでモデリング
+
+&lt;ul&gt;
+&lt;li&gt;詳細は&lt;a href=&#34;https://gam0022.net/blog/2018/06/08/houdini/&#34;&gt;過去の記事&lt;/a&gt;を参照&lt;/li&gt;
+&lt;li&gt;フラクタルの深度を指定可能にアップデート（ツイート参照）&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Houdiniからobjで出力して自作のレンダラーで読み込み
+
+&lt;ul&gt;
+&lt;li&gt;OptiX7ではobjのローダーが無かったので自作…&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;OptiX上では三角ポリゴンの集合として表現&lt;/li&gt;
+&lt;li&gt;OptiXのビルトインの機能で衝突判定&lt;/li&gt;
+&lt;li&gt;OptiXの機能でGAS（Geometry acceleration structure）を構築&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RTコアによるレイトレーシングのハードウェアアクセラレーションあり&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;フラクタルの再帰回数を自由に増やせるようになった。&lt;br&gt;HoudiniのTOPs Feedback Loopの良い使用例ですね。 &lt;a href=&#34;https://t.co/yTR60S5vgC&#34;&gt;https://t.co/yTR60S5vgC&lt;/a&gt; &lt;a href=&#34;https://t.co/OifBfoTCFa&#34;&gt;pic.twitter.com/OifBfoTCFa&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1556203400257503232?ref_src=twsrc%5Etfw&#34;&gt;August 7, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;結果詳細&#34;&gt;結果詳細&lt;/h1&gt;
+
+&lt;p&gt;改めて計測結果を見てみましょう。&lt;/p&gt;
+
+&lt;h2 id=&#34;レンダリング時間&#34;&gt;レンダリング時間&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/result_graph.png&#34; alt=&#34;計測結果の棒グラフ&#34; /&gt;&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;フラクタルの深度&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;1&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;2&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;3&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;4&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;レイマーチング&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8.85388&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;9.00077&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;9.14309&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;9.29724&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;レイキャスティング&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.445493&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.466056&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.50258&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.602458&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;レンダリング時間以外&#34;&gt;レンダリング時間以外&lt;/h2&gt;
+
+&lt;p&gt;レンダリング時間以外のデータです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;GAS（Geometry Acceleration Structure）の構築時間（秒）
+
+&lt;ul&gt;
+&lt;li&gt;レイキャスティングのみの結果&lt;/li&gt;
+&lt;li&gt;レイマーチングではAABBはできてもBVHを構築できない&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ポリゴンの頂点数&lt;/li&gt;
+&lt;li&gt;レイマーチングがレイキャスティングの何倍の時間がかかっているか&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;フラクタルの深度&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;1&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;2&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;3&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;4&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;GASの構築時間（秒）&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0008289&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0010064&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0030907&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0135217&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;ポリゴンの頂点数&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;480&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;9600&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;192000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3840000&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;倍率（Raymarching / Raycasting）&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;19.87434146&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;19.31263625&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;18.19230769&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;15.4321795&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;GASの構築は思ったより速いんですね。380万頂点でも0.01秒で完了しているのは驚きです。&lt;/p&gt;
+
+&lt;p&gt;ポリゴンの頂点数は指数で増加しても描画時間は大きく変わらないので、Acceleration Structureは本当に偉大ですね🙏&lt;/p&gt;
+
+&lt;p&gt;倍率について、フラクタルの深度が増えればレイマーチングの方が有利だと予想していましたが、予想通りにその傾向はありました。
+ですが、思ったよりも差が縮まらないんだというのが率直な感想です。&lt;/p&gt;
+
+&lt;h2 id=&#34;レンダリング結果&#34;&gt;レンダリング結果&lt;/h2&gt;
+
+&lt;p&gt;レンダリング結果です。&lt;/p&gt;
+
+&lt;p&gt;異なるアルゴリズムでモデリングしているので、ジオメトリーは完全一致ではありません。&lt;/p&gt;
+
+&lt;p&gt;記事を書いている途中で発覚しましたが、レイマーチングのステップ回数100では上部の法線とレイの角度が急な箇所でエラーが起きていました。
+サムネの画像ではステップ回数300で再レンダリングして15.7267秒でした。&lt;/p&gt;
+
+&lt;h3 id=&#34;レイマーチング-深度1&#34;&gt;レイマーチング 深度1&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raymarching_i1_s256.png&#34; alt=&#34;レイマーチング 深度1&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;レイマーチング-深度2&#34;&gt;レイマーチング 深度2&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raymarching_i2_s256.png&#34; alt=&#34;レイマーチング 深度2&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;レイマーチング-深度3&#34;&gt;レイマーチング 深度3&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raymarching_i3_s256.png&#34; alt=&#34;レイマーチング 深度3&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;レイマーチング-深度4&#34;&gt;レイマーチング 深度4&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raymarching_i4_s256.png&#34; alt=&#34;レイマーチング 深度4&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;レイキャスティング-深度1&#34;&gt;レイキャスティング 深度1&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raycast_i1_s256.png&#34; alt=&#34;レイキャスティング 深度1&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;レイキャスティング-深度2&#34;&gt;レイキャスティング 深度2&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raycast_i2_s256.png&#34; alt=&#34;レイキャスティング 深度2&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;レイキャスティング-深度3&#34;&gt;レイキャスティング 深度3&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raycast_i3_s256.png&#34; alt=&#34;レイキャスティング 深度3&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;レイキャスティング-深度4&#34;&gt;レイキャスティング 深度4&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raycast_i4_s256.png&#34; alt=&#34;レイキャスティング 深度4&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;レイマーチングの高速化手法&#34;&gt;レイマーチングの高速化手法&lt;/h1&gt;
+
+&lt;p&gt;レイマーチングの高速化手法を軽く調べてみました。&lt;/p&gt;
+
+&lt;p&gt;EnhancedSphereTracingやAccelerating Sphere Tracingはレイマーチングのステップを少し大きく調整してステップ数を減らす手法です。
+IFSやMod Repetitionと乱数の組み合わせによる非連続な距離関数だとうまくいかない気もしていますが、ちゃんと試したことはないので分かりません。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;EnhancedSphereTracing [Benjamin Keinert 2014]
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://erleuchtet.org/~cupe/permanent/enhanced_sphere_tracing.pdf&#34;&gt;論文&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://qiita.com/Hirai0827/items/eddcb73a1976c3088b88&#34;&gt;日本語解説 by @lucknknock さん&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Accelerating Sphere Tracing [Csaba Bálint 2018]
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.researchgate.net/publication/331547302_Accelerating_Sphere_Tracing&#34;&gt;論文&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://qiita.com/Hirai0827/items/e05e13f343357d648b1b&#34;&gt;日本語解説 by @lucknknock さん&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Cone Marchingは非連続な距離関数でもおそらく適用できそうです。
+低解像度でDepthを計算しておいて、高解像度でDepthを引き継いでレイマーチングをすることで、トータルで距離関数の評価回数をかなり削減できます。
+しかし、プライマリレイにしか適用できないため、パストレーシングでは効果が低そうです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.fulcrum-demo.org/wp-content/uploads/2012/04/Cone_Marching_Mandelbox_by_Seven_Fulcrum_LongVersion.pdf&#34;&gt;Cone_Marching_Mandelbox_by_Seven_Fulcrum&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jp.gamesindustry.biz/article/1803/18032802/&#34;&gt;［GDC 2018］Cone Marching法で描くフラクタルVRの世界「CORAL」&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;このあたりはよく読んでいません。自分のための備忘録です。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A Geometric Method for Accelerated Sphere Tracing of Implicit Surfaces [Csaba Bálint 2021]
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://cyber.bibl.u-szeged.hu/index.php/actcybern/article/view/4203&#34;&gt;論文&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;後で読む&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Real-Time Rendering of Complex Fractals
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://link.springer.com/chapter/10.1007/978-1-4842-7185-8_33&#34;&gt;リンク&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Real-Time Renderingの章らしいが、単なるレイマーチングの紹介かもしれない&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Area Lights in Signed Distance Function Scenes
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://diglib.eg.org/bitstream/handle/10.2312/egs20191021/085-088.pdf?sequence=1&amp;amp;isAllowed=y&#34;&gt;論文&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;衝突判定ではないが気になるのでメモ&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;まとめ&#34;&gt;まとめ&lt;/h1&gt;
+
+&lt;p&gt;レイマーチングはめちゃくちゃ遅いので、レイトレ合宿のようにレンダリング時間がシビアなら悪手かもしれません。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Tokyo Demo Fest 2021のShader Showdownに参加しました</title>
       <link>https://gam0022.net/blog/2021/12/31/tdf2021-shader-showdown/</link>
       <pubDate>Fri, 31 Dec 2021 00:00:00 +0900</pubDate>
@@ -3253,291 +3591,6 @@ sin波や矩形波といった単純な波形をベースにして、本物の�
 &lt;p&gt;メガデモ制作のモチベーションが高まってきたので、今年の10〜11月のTDFに向けて頑張りたいです！&lt;/p&gt;
 
 &lt;p&gt;運営の方々、発表者の方々、会場を提供していただいたさくらインターネット様、ご参加いただいた方々、ありがとうございました！&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Unityでメガデモ制作に挑戦（uRaymarchingとTimelineを試す）</title>
-      <link>https://gam0022.net/blog/2017/12/25/unity-demoscene/</link>
-      <pubDate>Mon, 25 Dec 2017 09:30:11 +0900</pubDate>
-      
-      <guid>https://gam0022.net/blog/2017/12/25/unity-demoscene/</guid>
-      <description>&lt;p&gt;これは &lt;a href=&#34;https://qiita.com/advent-calendar/2017/unity2&#34;&gt;Unity #2 Advent Calendar 2017&lt;/a&gt; 21日目の記事です。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://ja.wikipedia.org/wiki/%E3%83%87%E3%83%A2%E3%82%B7%E3%83%BC%E3%83%B3&#34;&gt;デモシーン&lt;/a&gt;界隈では、美しいCGアニメーションをリアルタイムに生成するプログラムを「デモ」と呼びます。&lt;/p&gt;
-
-&lt;p&gt;今回はUnityを使ったデモの制作に初挑戦しました。
-13秒の短い無音の動画です。&lt;/p&gt;
-
-&lt;iframe width=&#34;720&#34; height=&#34;405&#34; src=&#34;https://www.youtube.com/embed/BZGO5xXuPj8&#34; frameborder=&#34;0&#34; gesture=&#34;media&#34; allow=&#34;encrypted-media&#34; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;!--
-[![THE GLOW](/images/posts/2017-12-21-unity-demoscene/cut1.jpg)](/images/posts/2017-12-21-unity-demoscene/cut1.jpg)
---&gt;
-
-&lt;h1 id=&#34;作品の解説&#34;&gt;作品の解説&lt;/h1&gt;
-
-&lt;p&gt;「レイマーチングで動的に生成したモデル」と「ポリゴンメッシュのモデル」を混在させた作品です。
-ロボットは通常の3Dモデルですが、床や柱のモデルはレイマーチングでプロシージャルに生成しました。&lt;/p&gt;
-
-&lt;p&gt;レイマーチングにはuRaymarchingというAssetを利用しました。&lt;/p&gt;
-
-&lt;p&gt;映像作品と相性が良さそうなので、Unity2017のTimelineも利用しました。&lt;/p&gt;
-
-&lt;p&gt;今回は試作という意味から、uRaymarchingとTimelineの他にも様々なアセットを試しました。
-色々と試行錯誤をしたので、この記事ではそのノウハウを共有したいと思います。&lt;/p&gt;
-
-&lt;p&gt;Unityのバージョンは執筆時点の最新版である2017.2.1f1を用いました。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;uraymarchingによるレイマーチング&#34;&gt;uRaymarchingによるレイマーチング&lt;/h2&gt;
-
-&lt;p&gt;uRaymarchingはレイマーチングのシェーダの作成をサポートするシェーダ群とエディタ拡張です。
-開発者は&lt;a href=&#34;https://twitter.com/hecomi&#34;&gt;@hecomi&lt;/a&gt;さんです。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/hecomi/uRaymarching&#34;&gt;uRaymarching | GitHub&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://tips.hecomi.com/entry/2016/10/11/225541&#34;&gt;Unity でレイマーチングするシェーダを簡単に作成できるツールを作ってみた&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;uRaymarchingではDefferedシェーディングを採用しており、レイマーチングのシェーダはGバッファに対して結果を書き込みます。
-そのため、今回のようにレイマーチングとポリゴンのモデルが混在したシーンであっても、一貫したシェーディングを実現できました！&lt;/p&gt;
-
-&lt;p&gt;レイマーチングの衝突判定などの共通処理は、uRaymarchingが提供する共通のシェーダが肩代わりしてくれます。
-uRaymarchingの利用者は、レイマーチングの距離関数の定義とGバッファの書き込みの処理だけに集中できるため、開発効率が向上しました。&lt;/p&gt;
-
-&lt;p&gt;具体的な使い方を簡単に説明しますと、まずはuRaymarchingのエディタ拡張でレイマーチングシェーダの雛形を作成します。
-次に雛形シェーダの2つの関数をカスタマイズすれば、独自のレイマーチングシェーダをお手軽に作成できました。&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;距離関数の定義を&lt;code&gt;DistanceFunction&lt;/code&gt;関数に記述&lt;/li&gt;
-&lt;li&gt;Gバッファへの書き込み処理を&lt;code&gt;PostEffect&lt;/code&gt;関数に記述&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;uRaymarchingのチュートリアル動画です。&lt;/p&gt;
-
-&lt;iframe width=&#34;720&#34; height=&#34;540&#34; src=&#34;//www.youtube.com/embed/AppyVflAagc?wmode=transparent&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;h3 id=&#34;距離関数の設計&#34;&gt;距離関数の設計&lt;/h3&gt;
-
-&lt;p&gt;Boxの組み合わせだけでシーンを構成しました。
-床はBoxを敷き詰めているのは見た目通りだと思いますが、柱もBoxの組み合わせで作っています！&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/blog/2017/03/02/raymarching-fold/&#34;&gt;距離関数のfoldの記事&lt;/a&gt;で紹介した回転のfoldを利用して、
-Boxから上から見たときに多角形になる柱を生成しました。&lt;/p&gt;
-
-&lt;p&gt;単純なBoxの形状だけでも、時間経過で形状が変化する面白い形ができたと思っています。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2017-12-21-unity-demoscene/distance-function.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2017-12-21-unity-demoscene/distance-function.jpg&#34; alt=&#34;柱の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;床がランダムな順番に光る演出&#34;&gt;床がランダムな順番に光る演出&lt;/h3&gt;
-
-&lt;p&gt;床をランダムに光らせる演出は自分でも気に入っています。&lt;/p&gt;
-
-&lt;p&gt;この演出はお手軽な方法で実装できました！&lt;/p&gt;
-
-&lt;p&gt;まずは、Y座標に応じて光るように、Gバッファに書き出すemissionを設定します。
-光らせるY座標の位置は時間でアニメーションさせます。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;float4 _SlideEmission;
-
-inline void PostEffect(RaymarchInfo ray, inout PostEffectOutput o)
-{
-    float a = frac(4.0 * ray.endPos.y - 2.0 * _Time.x - 0.5);
-    float width = 0.04;
-    o.emission = _SlideEmission * abs(sin(PI * 12.0 * _Time.x)) * step(a, width) * ((a + 0.5 * width) / width);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;次に、床のブロックの高さの動きをランダムに設定します。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;float dFloor(float3 pos)
-{
-    float3 p = pos;
-    p.xz = Repeat(p.xz, 0.5);
-    p.y += 1 + 0.1 * sin(36.0 * _Time.x + 2.0 * Rand(floor(2.0 * pos.xz)));
-    return sdBox(p, float3(0.2, 0.2, 0.2));
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;これだけで、床をにランダムに光らせる演出の完成です！&lt;/p&gt;
-
-&lt;p&gt;床の高さがバラバラになっているので、等高線で光らせるとタイミングが微妙にずれて、いい感じにバラバラのタイミングで光ります！&lt;/p&gt;
-
-&lt;h3 id=&#34;uraymarchingのトラブルシューティング&#34;&gt;uRaymarchingのトラブルシューティング&lt;/h3&gt;
-
-&lt;p&gt;2点だけつまずいたポイントがあったので、後学のためにメモを残しておきます。&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;ShaderTemplates で Direct GBuffer を選択すると、影が落ちない（Shadow Caster が動作しない）
-
-&lt;ul&gt;
-&lt;li&gt;これはUnityの仕様に原因があるらしく、hecomiさんの記事にも書いてありました&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;プロジェクトの設定で &lt;code&gt;metalEditorSupport: 0&lt;/code&gt; にしないと、Macで動作しない
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/gam0022/unity-demoscene/commit/47f19613bbc032bef1b8b35b9b972f3f9983debc&#34;&gt;修正のコミット&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;timelineとの連携&#34;&gt;Timelineとの連携&lt;/h2&gt;
-
-&lt;p&gt;Unity2017のTimeline機能でカメラワークやロボットの動き、UI上のテキストなどの演出の制御をしました。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2017-12-21-unity-demoscene/timeline.jpg&#34; alt=&#34;timeline&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;カメラワーク&#34;&gt;カメラワーク&lt;/h3&gt;
-
-&lt;p&gt;Timelineからゲームオブジェクトを操作する2つの方法があります。&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;Playables&lt;/code&gt;を実装・利用する方法
-
-&lt;ul&gt;
-&lt;li&gt;APIは複雑で、気軽に使うのは難しい&lt;/li&gt;
-&lt;li&gt;作り込めば何でもできる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ITimeControl&lt;/code&gt;を継承したコンポーネントを実装・利用する方法
-
-&lt;ul&gt;
-&lt;li&gt;APIは単純で、気軽に使える&lt;/li&gt;
-&lt;li&gt;できることが少ない（クリップの現在時間しか受け取れない）&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;カメラワークの制御をどちらで行うのか悩みましたが、最終的には以下の理由で&lt;code&gt;ITimeControl&lt;/code&gt;に決めました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;とりあえずカメラを動かすだけなら、&lt;code&gt;ITimeControl&lt;/code&gt;が手っ取り早いと感じた&lt;/li&gt;
-&lt;li&gt;カメラワークを汎用的な&lt;code&gt;Playables&lt;/code&gt;に落とし込む時間もスキルも足りなかった&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;とりあえずカメラワークを&lt;code&gt;ITimeControl&lt;/code&gt;で実装することはできましたが、
-&lt;code&gt;ITimeControl&lt;/code&gt;では再生時間の情報しか受け取れず、クリップごとにパラメータを持たすことすらできません。
-三角関数などを駆使してカメラのtransformを操作して、無理やりカメラワークを実装しましたが、
-&lt;a href=&#34;https://github.com/gam0022/unity-demoscene/blob/bdb84d7517b812f742363c971174d9435cea0cb2/Assets/Demoscene/TheGlow/TheGlowCameraWork.cs&#34;&gt;職人芸すぎてメンテナンスが困難なコード&lt;/a&gt;になりました。&lt;/p&gt;
-
-&lt;p&gt;今回は満足するものはできなかったので、次回はこれらの方法でカメラワークに再挑戦したいです。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.assetstore.unity3d.com/jp/#!/content/95266&#34;&gt;Default Playables&lt;/a&gt;
-に含まれているTimeline Playable Wizardを使えば、&lt;code&gt;Playables&lt;/code&gt;の雛形コードを作成できるそうなので、これを利用して独自&lt;code&gt;Playables&lt;/code&gt;の実装に再挑戦する&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://tsubakit1.hateblo.jp/entry/2017/06/15/225504&#34;&gt;Cinemachine&lt;/a&gt;というUnity公式のカメラワークを作るための&lt;code&gt;Playables&lt;/code&gt;を利用する&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;ロボットの動き&#34;&gt;ロボットの動き&lt;/h3&gt;
-
-&lt;p&gt;ロボットに&lt;code&gt;Animator&lt;/code&gt;コンポーネントをアタッチすれば、普通に&lt;code&gt;Animation Track&lt;/code&gt;でクリップを再生できました。&lt;/p&gt;
-
-&lt;p&gt;2つの&lt;code&gt;Animation Track&lt;/code&gt;のクリップを重ねるように配置すると、モーションのブレンドができるので、
-待機モーションから走るモーションへのブレンドはこれを利用しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Animation Track&lt;/code&gt;の中に作成できる&lt;code&gt;Override Track&lt;/code&gt;でキャラクターの移動を実現しました。
-&lt;code&gt;Override Track&lt;/code&gt;ではパラメータのアニメーションのカーブを直接編集できます。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2017-12-21-unity-demoscene/timeline-animation.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2017-12-21-unity-demoscene/timeline-animation.png&#34; alt=&#34;Animation Trackによるロボットの制御&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;テキスト&#34;&gt;テキスト&lt;/h3&gt;
-
-&lt;p&gt;後半のタイトル文字には&lt;a href=&#34;https://www.assetstore.unity3d.com/jp/#!/content/84126&#34;&gt;TextMesh Pro&lt;/a&gt;を使用しました。
-Timelineとの連携は、Activation Trackを使って実現しています。
-1文字ずつ表示する部分は、TextMesh ProのサンプルのTextConsoleSimulatorクラスを使って制御しています。
-しかし、このクラスはTimelineは考慮されておらず、通常再生時と録画時とで表示速度がずれる問題が残りました。
-将来的には独自の&lt;code&gt;Playables&lt;/code&gt;を実装して、これらの問題を解決したいです。&lt;/p&gt;
-
-&lt;h3 id=&#34;パーティクル&#34;&gt;パーティクル&lt;/h3&gt;
-
-&lt;p&gt;ロボットの足元の火花には、&lt;a href=&#34;https://www.assetstore.unity3d.com/jp/#!/content/73777&#34;&gt;Unity Particle Pack&lt;/a&gt;
-に含まれている「ElectricalSparksEffect」を使用しました。
-Timelineとの連携は、Activation Trackを使って実現しています。&lt;/p&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
-&lt;h3 id=&#34;ポストエフェクト&#34;&gt;ポストエフェクト&lt;/h3&gt;
-
-&lt;p&gt;ポストエフェクトには、&lt;a href=&#34;https://github.com/Unity-Technologies/PostProcessing&#34;&gt;Post-processing Stack v2&lt;/a&gt;を利用しました。&lt;/p&gt;
-
-&lt;p&gt;以下のポストエフェクトを利用しました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Fog
-
-&lt;ul&gt;
-&lt;li&gt;レイマーチングでは遠景にエイリアシングが発生して汚くなる弱点があるので、Fogで遠景を暗くしました&lt;/li&gt;
-&lt;li&gt;現実でも距離の二乗に比例して光が減衰するので、Fogで現実感が増します&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Bloom
-
-&lt;ul&gt;
-&lt;li&gt;Bloomは明るい光源からの光が周囲に漏れるように見える効果です&lt;/li&gt;
-&lt;li&gt;今回はemissionを多用したシーンなので、Bloomが効果的に機能しました&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Ambient Occlusion
-
-&lt;ul&gt;
-&lt;li&gt;AOで大域照明感を出しました&lt;/li&gt;
-&lt;li&gt;暗いシーンなので、違いは分かりにくいかもしれませんね&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;ポストエフェクトの有無で比較画像を用意しました。
-左がポストエフェクトOFF、右がポストエフェクトONです。
-違いが一目瞭然ですね！&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2017-12-21-unity-demoscene/postprocessing.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2017-12-21-unity-demoscene/postprocessing.jpg&#34; alt=&#34;ポストエフェクトの有無で比較&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;3d素材&#34;&gt;3D素材&lt;/h3&gt;
-
-&lt;p&gt;ロボットの3Dモデルは&lt;a href=&#34;https://www.assetstore.unity3d.com/jp/#!/content/4696&#34;&gt;Space Robot Kyle&lt;/a&gt;を使わせていただきました。&lt;/p&gt;
-
-&lt;p&gt;モーションは&lt;a href=&#34;http://unity-chan.com/download/releaseNote.php?id=UnityChan&#34;&gt;ユニティちゃん 3Dモデルデータ&lt;/a&gt;を利用しました。&lt;/p&gt;
-
-&lt;h3 id=&#34;動画撮影&#34;&gt;動画撮影&lt;/h3&gt;
-
-&lt;p&gt;冒頭のYouTubeの動画は、&lt;a href=&#34;https://github.com/Unity-Technologies/GenericFrameRecorder&#34;&gt;Unity Recorder&lt;/a&gt;を使って撮影しました。
-このアセットは、Unityの画面を録画し、動画として保存してくれます。
-固定フレームレートに対応しているので、非力なPCでも撮影が可能です。&lt;/p&gt;
-
-&lt;p&gt;Unity Recorderには、Timelineとの連携機能もありました。
-Recorder trackをタイムラインに追加すると、エディター再生時に自動で録画ができます。&lt;/p&gt;
-
-&lt;p&gt;注意点として、&lt;a href=&#34;https://github.com/Unity-Technologies/GenericFrameRecorder/issues/11&#34;&gt;v0.1ではUIが録画できないという不具合&lt;/a&gt;がありました。
-&lt;a href=&#34;https://github.com/Unity-Technologies/GenericFrameRecorder/releases&#34;&gt;GitHubのReleases&lt;/a&gt;から、v0.2（現時点の最新版）をダウンロードすることで解決できました。&lt;/p&gt;
-
-&lt;h1 id=&#34;感想&#34;&gt;感想&lt;/h1&gt;
-
-&lt;p&gt;Unityを上手に利用すれば効率的にデモ作成できると感じました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;便利なAssetがたくさん提供されている&lt;/li&gt;
-&lt;li&gt;リアルタイムに見た目を確認しながら、シェーダのパラメータを調整できる
-
-&lt;ul&gt;
-&lt;li&gt;シェーダ（ShaderLab）に数行コードを足すだけで、インスペクタにパラメータを露出できる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;リアルタイムに見た目を確認しながら、シェーダやスクリプトを編集できる
-
-&lt;ul&gt;
-&lt;li&gt;Unityに標準搭載されているホットリロード機能によって、シーンの再生中でもシェーダやスクリプトの変更が反映できる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--
-まだUnityを使いこなせていない感があるので、もっとUnityの経験値を貯めたいです。
---&gt;
-
-&lt;h1 id=&#34;ソースコード&#34;&gt;ソースコード&lt;/h1&gt;
-
-&lt;p&gt;UnityのプロジェクトをGitHubで公開しています。スターが欲しいです。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/gam0022/unity-demoscene&#34;&gt;Unity Demoscene | GitHub&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;今回のデモ用のファイルは&lt;a href=&#34;https://github.com/gam0022/unity-demoscene/tree/master/Assets/Demoscene/TheGlow&#34;&gt;&lt;code&gt;Assets/Demoscene/TheGlow&lt;/code&gt;&lt;/a&gt;のディレクトリにあります。&lt;/p&gt;</description>
     </item>
     
   </channel>

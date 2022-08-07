@@ -124,6 +124,71 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/08/22/twincal/" itemprop="url">Twinsに登録した時間割をGoogleカレンダーやiCalにインポートするWebサービス「TwinCal」を作った</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2012-08-22 12:47:00 &#43;0900 JST" itemprop="datePublished">2012-08-22</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/ruby">Ruby</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/twincal">TwinCal</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                <p>Rubyで何かWebアプリを作ってみたかったので、
+Twinsに登録した時間割をGoogleカレンダーやiCalにインポートするWebサービス「TwinCal」を作ってみました。</p>
+
+<p><a href="http://gam0022.net/app/twincal/">TwinCal</a></p>
+
+<p>筑波大学生以外にも分かるように説明すると、筑波大学にはTwinsという履修の登録をするWebのシステムがあり、
+Twinsでは時間割をCSV出力する機能があるので、そのCSVをiCalender形式に変換して、
+GoogleカレンダーやiCalにインポートをサポートするWebアプリを作りました。</p>
+
+<p>来年、Twinsが改修されるらしいので、半年後には使えなくなると思います。</p>
+
+<p>バイトでPHPを使ってWebアプリを開発した経験はありましたが、個人でWebアプリを作ったのは初めてでした。</p>
+
+<p>気を使ったこととして、ビューの部分はerb(railsでも使われているアレ)を使い、MVCを意識して作りました。</p>
+
+<p>最近流行りのbootstrapやjQueryなどを使ったのですが、この2つを使ったのは正解でした。
+これらのおかげでロジック部分に集中することができ、かなりサクサク作業することができました。</p>
+
+<p>このアプリを作ろうと思い立ったのは12日で、14日には公開できるような状態になりました。</p>
+
+<p>あまり使ってくれている人はいないようですが、bootstrapとhtml5で遊べたことだけでもよい経験となりました。</p>
+
+<p>今回のことで学んだテクニックがいくつかあるので、後ほど記事にしたいです。</p>
+
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2012/08/22/twincal/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/08/20/run-daigoroubot/" itemprop="url">大五郎bot(@daigoroubot)を動かすためのメモ</a></h3>
         
 
@@ -657,70 +722,6 @@ FileZilla 有名なFTPクライアントです。Macでもちゃんと使えま�
         </div>
         <p class="read-more">
             <a href="https://gam0022.net/blog/2012/07/29/switch-within-the-app-mac/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/" itemprop="url">Linux(Ubuntu)からOS Xへ開発環境を移すときにしたこと</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2012-07-28 00:01:00 &#43;0900 JST" itemprop="datePublished">2012-07-28</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/mac-os-x">Mac OS X</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/lion">Lion</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/terminal.app">Terminal.app</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/vim">vim</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/homebrew">homebrew</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/git">git</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                とりあえず次のような感じになりました。
- ターミナル :Terminal.app エディタ :vim パッケージ管理システム :homebrew バージョン管理システム :git  Mac初心者が躓かないように、この順番で作業すればうまくいくという順番で紹介していきます。
-Terminal.app Terminal.appはMacOSに標準で入っている端末です。
-最終的にはこんな感じになりました。
-外観を変える 外観を変えるために、環境設定 &gt; 設定でProという設定を使うことにしました。
-フォントをMonaco 13pt.にして、テキストをアンチエイリアス処理を有効にしました。
-.bash&#95;profile を設定する これまでの常識では、~/.bashrcに書いた設定が端末の起動時に読み込まれるものと思っていたのですが、 macの場合は~/.bashrcは無効になっており、ログイン時だけ~/.bash_profileが読み込まれるようです。
-要するにMacのTerminalの設定は~/.bash_profileに書けばいいということです。
-設定の反映が必要であれば$ source ~/.bash_profileを実行すればいいことなので、 ログイン時でも端末起動時でもそれほど影響はないです。
-前の環境の.bashrcは禍々しくて見せられませんが、.bash_profileをこんな感じで書いていきます。</p>
-
-<h1 id="パスの設定とか-export-path-path-home-bin-便利なエイリアスとか-alias-ll-ls-alf-alias-l-ls-alias-emacs-vim-lsに色を付ける-gt-http-jmblog-jp-archives-307-export-clicolor-1-export-lscolors-dxgxcxdxcxegedabagacad-プロンプトも色を付ける-ps1-033-36m-u-h-033-33m-w-033-36m-033-0m-exitでタブやウィンドウを閉じるようにする-なぜかデフォルトではexitしても画面が残ってしまうので-設定を変えます">パスの設定とか export PATH=$PATH:$HOME/bin # 便利なエイリアスとか alias ll=&lsquo;ls -alF&rsquo; alias l=&lsquo;ls&rsquo; alias emacs=&lsquo;vim&rsquo; # lsに色を付ける =&gt; <a href="http://jmblog.jp/archives/307">http://jmblog.jp/archives/307</a> export CLICOLOR=1 export LSCOLORS=DxGxcxdxCxegedabagacad # プロンプトも色を付ける PS1=&rsquo;[\033[36m][\u@\h:[\033[33m]\w[\033[36m]][\033[0m] \$ &lsquo;  exitでタブやウィンドウを閉じるようにする なぜかデフォルトではexitしても画面が残ってしまうので、設定を変えます。</h1>
-
-<p>~/Library/Preferences/com.apple.Terminal.plistのRoot &gt; Window Settings &gt; (任意のテーマ) &gt; shellExitActionの値を1(Number)に変更します。
-Mac OSXでTerminalをexitしたら閉じるようにする方法を参考しました。
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/" class="btn btn-primary btn-outline">
                 Read more
             </a>
         </p>
