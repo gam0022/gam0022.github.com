@@ -106,7 +106,7 @@
 &lt;ul&gt;
 &lt;li&gt;マテリアルは拡散反射のみ&lt;/li&gt;
 &lt;li&gt;NEEやMISはしないシンプルなパストレーシング&lt;/li&gt;
-&lt;li&gt;反射の最大震度は5&lt;/li&gt;
+&lt;li&gt;反射の最大深度は5&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
