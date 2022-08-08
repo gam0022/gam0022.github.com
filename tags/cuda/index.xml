@@ -108,11 +108,17 @@
 &lt;li&gt;NEEやMISはしないシンプルなパストレーシング&lt;/li&gt;
 &lt;li&gt;反射の最大深度は5&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;シーン全体で2つのGAS
+
+&lt;ul&gt;
+&lt;li&gt;床（巨大なカスタムプリミティブのSphere）のGASが1つ&lt;/li&gt;
+&lt;li&gt;メンガーのスポンジのGASが1つ&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;レイマーチング&#34;&gt;レイマーチング&lt;/h2&gt;
 
-&lt;p&gt;レイマーチングは繰り返しの計算で数値的な衝突判定の手法で、Sphere Tracingとも呼ばれます。&lt;/p&gt;
+&lt;p&gt;レイマーチングは繰り返しの計算によって数値的に衝突判定を解く手法で、Sphere Tracingとも呼ばれます。&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;レイマーチングの最大ステップ回数（マーチングループのループ数）は100&lt;/li&gt;
@@ -122,10 +128,11 @@
 &lt;li&gt;詳細は&lt;a href=&#34;https://gam0022.net/blog/2019/08/05/optix-raymarching-pathtracing/&#34;&gt;過去の記事&lt;/a&gt;を参照&lt;/li&gt;
 &lt;li&gt;Optix6の内容なので、Optix7対応のために実装を多少修正&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;高速化のためにカメラからレイは飛ばさずに、バウンディングボックスからレイを飛ばす
+&lt;li&gt;高速化のためにカメラからレイは飛ばさずに、バウンディングボックス（AABB）からレイを飛ばす
 
 &lt;ul&gt;
-&lt;li&gt;バウンディングボックスは最適になるようにギリギリに設定&lt;/li&gt;
+&lt;li&gt;AABBは最適になるようにギリギリに設定&lt;/li&gt;
+&lt;li&gt;カスタムプリミティブ全体で1つのAABB&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -264,7 +271,7 @@
 &lt;p&gt;異なるアルゴリズムでモデリングしているので、ジオメトリーは完全一致ではありません。&lt;/p&gt;
 
 &lt;p&gt;記事を書いている途中で発覚しましたが、レイマーチングのステップ回数100では上部の法線とレイの角度が急な箇所でエラーが起きていました。
-サムネの画像ではステップ回数300で再レンダリングして15.7267秒でした。&lt;/p&gt;
+サムネではステップ回数300に増やして再レンダリングして15.7267秒でした。&lt;/p&gt;
 
 &lt;h3 id=&#34;レイマーチング-深度1&#34;&gt;レイマーチング 深度1&lt;/h3&gt;
 
