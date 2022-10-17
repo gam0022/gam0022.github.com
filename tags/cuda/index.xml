@@ -193,7 +193,7 @@ roughnessなどひたすら微調整して、最終的に気に入るルック�
 
 &lt;p&gt;AWSの上限緩和申請（4vCPU）は時間がかかる場合もあるので、提出直前にやるのは良くなかったです。&lt;/p&gt;
 
-&lt;p&gt;他の参加者からはすぐに申請が通ったという声も聞いたので、担当者ガチャに外れただけの可能性はあります。&lt;/p&gt;
+&lt;p&gt;他の参加者からはすぐに申請が通ったという声も聞いたので、自分だけ担当者ガチャに外れただけの可能性はあります。&lt;/p&gt;
 
 &lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;AWSの上限緩和申請(4vCPU)、1週間くらいかかったな&lt;br&gt;&lt;br&gt;申請: 2022/08/23 1:49&lt;br&gt;承認: 2022/08/29 10:37&lt;br&gt;&lt;br&gt;もっと事前にやっておくべきだった…&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1564068725212360704?ref_src=twsrc%5Etfw&#34;&gt;August 29, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
@@ -214,6 +214,8 @@ roughnessなどひたすら微調整して、最終的に気に入るルック�
 &lt;p&gt;口頭での説明が前提の発表なので、資料だけでは分かりにくいと思いますが、雰囲気だけでも伝わればと思います。&lt;/p&gt;
 
 &lt;h1 id=&#34;印象に残った作品&#34;&gt;印象に残った作品&lt;/h1&gt;
+
+&lt;p&gt;どの作品も工夫があって面白かったのですが、その中でも個人的にかなり印象に残った作品をピックアップしました。&lt;/p&gt;
 
 &lt;p&gt;たた (@8picoz) さんがRust 100%のGPUレンダラーを開発していて、前々回のレイトレ合宿までは私もRustを使っていたということもあり、個人的にとても参考にしたいと思いました。
 Vulkanのレイトレーシング機能をつかっていて、VulkanではSPIR-Vというシェーダーの中間コードの仕組みが使えるようになっているので、任意の言語でシェーダーを実装できるようになりました。
@@ -302,6 +304,9 @@ SPIR-Vをつかうことで、GPUコードもRustで実装をしたそうです�
 &lt;p&gt;土～夢 ごはんカフェ 琉球ガラス村店（ドーム）
 食器がおしゃれ
 &lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-12.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-12.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;本戦の景品です。組み立て式の時計でした。グリニッチ天文台で購入したものだそうです。
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/gift.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/gift.jpg&#34; alt=&#34;景品&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;!--
 
