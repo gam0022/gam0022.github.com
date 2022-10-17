@@ -10,6 +10,311 @@
     <atom:link href="/tags/%E3%83%91%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%B3%E3%82%B0/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>レイトレ合宿8参加レポート</title>
+      <link>https://gam0022.net/blog/2022/10/17/rtcamp8/</link>
+      <pubDate>Mon, 17 Oct 2022 10:00:00 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2022/10/17/rtcamp8/</guid>
+      <description>&lt;p&gt;9月2日(金)～9月4日(日)に沖縄本島で開催された&lt;a href=&#34;https://sites.google.com/view/raytracingcamp8/&#34;&gt;レイトレ合宿8&lt;/a&gt;に参加しました。&lt;/p&gt;
+
+&lt;p&gt;自作のレンダラーでこんな動画を &lt;strong&gt;10分の制限時間&lt;/strong&gt; でレンダリングして5位をいただきました！&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/c7JqEpaR658&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;レイマーチングとポリゴンをハイブリッドに描画できる単方向パストレーシングのレンダラーをOptiXで開発して16人中7位でした。&lt;br&gt;&lt;br&gt;レンダリング時間は10分（1フレーム2秒）だったので、&lt;br&gt;NEEやMISなどサンプリングの高速化も行いました。&lt;br&gt;&lt;br&gt;動画は本戦で実際に出力されたファイルです。&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/LDgKL7gLsY&#34;&gt;pic.twitter.com/LDgKL7gLsY&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1566269176314220544?ref_src=twsrc%5Etfw&#34;&gt;September 4, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;コロナの影響もあり、3年ぶりのレイトレ合宿でした…！&lt;/p&gt;
+
+&lt;p&gt;台風11号がちょうど沖縄に直撃してしまい、天候には恵まれなかったのは残念でしたが、とても充実した合宿でした。&lt;/p&gt;
+
+&lt;p&gt;合宿の様子や雰囲気を詳しく知りたい方は、Ki_NaN_komotiさんのブログ記事がオススメです。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;２週間ぐらい経ちましたがレイトレ合宿の参加レポートを書きました&lt;br&gt;&lt;br&gt;レンダラー開発記とレイトレ合宿の様子を書いています&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt;&lt;a href=&#34;https://t.co/Fhtvuz9n2H&#34;&gt;https://t.co/Fhtvuz9n2H&lt;/a&gt;&lt;/p&gt;&amp;mdash; Ki_NaN_komoti (@Kinakomoti2357) &lt;a href=&#34;https://twitter.com/Kinakomoti2357/status/1571122433763184640?ref_src=twsrc%5Etfw&#34;&gt;September 17, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;本戦用のレンダラーの解説&#34;&gt;本戦用のレンダラーの解説&lt;/h1&gt;
+
+&lt;p&gt;こちらが本戦のプレゼン資料です。&lt;/p&gt;
+
+&lt;div class=&#34;google-slide-wrap&#34;&gt;
+&lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vTTvbJ3UILqFymar8yG4VOomRdeJzfeS8zoehGZruGQCmq8A2cQ4rru3WYfZdi3xRD4PkE3yamqRHjt/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;1440&#34; height=&#34;839&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;GitHubに&lt;a href=&#34;https://github.com/gam0022/redflash_rtcamp8&#34;&gt;リポジトリ&lt;/a&gt;も公開しています。急いで実装したので品質は低いです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/blog/2019/09/18/rtcamp7/&#34;&gt;前回のレイトレ合宿7&lt;/a&gt;で開発したRedflashというレンダラーを動画に対応させました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/slide_p2.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/slide_p2.png&#34; alt=&#34;スライド 基本機能&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;前回までにこれらの基本的な機能は実装していました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;単方向のパストレーシング&lt;/li&gt;
+&lt;li&gt;Disney BRDF&lt;/li&gt;
+&lt;li&gt;NEE&lt;/li&gt;
+&lt;li&gt;MIS&lt;/li&gt;
+&lt;li&gt;レイマーチングの衝突判定（OptiXのカスタムプリミティブとして実装）&lt;/li&gt;
+&lt;li&gt;ACES Filmic Tone Mapping&lt;/li&gt;
+&lt;li&gt;Deep Learning Denoising（ディープラーニングによるデノイザー、OptiXを使えば簡単に利用できる）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;今年から静止画部門が廃止されたので、動画部門への対応を行いました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;アニメーション（シーンの動的な更新）&lt;/li&gt;
+&lt;li&gt;動画のための画像の連番出力&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;レンダラーの出力設定&#34;&gt;レンダラーの出力設定&lt;/h2&gt;
+
+&lt;p&gt;出力解像度の高さ・フレーム数の多さは、分かりやすくアピールポイントになるので、ギリギリを攻めました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;解像度は1920x1080&lt;/li&gt;
+&lt;li&gt;フレーム数は300（30FPS * 10秒）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;制限時間は10分（600秒）なので、1フレームあたりの時間は2秒でした。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;長さは3秒以上10秒以下&lt;/code&gt; というレギュレーションだったので、上限の10秒にしました。&lt;/p&gt;
+
+&lt;p&gt;パストレーシングの場合はゆったりしたアニメーションの方が映えそうなので、60FPSではなく30FPSにしました。
+普通のPCのモニターのリフレッシュレートは60Hzだと思うので、24FPSなど中途半端なのは選択肢から除外していました。&lt;/p&gt;
+
+&lt;p&gt;PNGの保存（エンコード＋ファイル保存）と、レンダリングは別スレッドで並列実行するようにしました。
+解像度は2160pにするとPNGのエンコード時間がレンダリングよりもボトルネックになるので1080pを選びました。&lt;/p&gt;
+
+&lt;p&gt;前回のレイトレ合宿7の本戦の静止画部門では、1フレームに60秒使えました。
+使える時間が30分の1まで急激に短くなったのは大変でした。&lt;/p&gt;
+
+&lt;p&gt;さらに実行環境（AWSのEC2インスタンス）も大幅にスペックダウンしていたのも痛手でした。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;p3.16xlarge（レイトレ合宿7）&lt;/li&gt;
+&lt;li&gt;g4dn.xlarge（レイトレ合宿8）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;g4dn.xlargeではRTコアが使えるようになったようですが、レイマーチングが主なので自分の場合は恩恵があまりありませんでした…&lt;/p&gt;
+
+&lt;h2 id=&#34;optixのバージョンについて&#34;&gt;OptiXのバージョンについて&lt;/h2&gt;
+
+&lt;p&gt;今回は最新のOptiX7でレンダラーを実装しようと思ったのですが、最終的には前回と同じOptiX6で提出しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/&#34;&gt;アドベントカレンダー&lt;/a&gt;ではOptiX7で実装をしていました。&lt;/p&gt;
+
+&lt;p&gt;OptiX7ではなぜかポリゴンとレイマーチングのプリミティブを混在するとパフォーマンスが異常に悪化する問題が発生してしまい、これを解決する方法が見つからず、提出まで時間もなかったので諦めてOptiX6を採用しました。&lt;/p&gt;
+
+&lt;p&gt;もしパフォーマンスの問題を解決できたとしても、OptiX7はかなり低レイヤーのAPIになっていたので、何かしらのラッパーを開発しないと使うのは大変に思いました。セットアップするだけでもかなり大量のコードの実装が必要でした。&lt;/p&gt;
+
+&lt;h2 id=&#34;アニメーション要素&#34;&gt;アニメーション要素&lt;/h2&gt;
+
+&lt;p&gt;10秒の尺に3種類のアニメーション要素を詰め込みました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ライトのアニメーション&lt;/li&gt;
+&lt;li&gt;レイマーチングのパラメーターのアニメーション&lt;/li&gt;
+&lt;li&gt;マテリアルのアニメーション&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;動画の内容もそれぞれのアニメーションの要素を1つ1つ紹介するような感じにしました。&lt;/p&gt;
+
+&lt;h3 id=&#34;ライトのアニメーション&#34;&gt;ライトのアニメーション&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/light_animation_960.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/light_animation_960.gif&#34; alt=&#34;ライトのアニメーション&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;2つのポイントライトをアニメーションしました。&lt;/p&gt;
+
+&lt;p&gt;OptiX6系では以下のようにmarkDirtyしてからlaunchすることでアクセラレーション構造を更新できました。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;light_group-&amp;gt;getAcceleration()-&amp;gt;markDirty();
+light_group-&amp;gt;getContext()-&amp;gt;launch(0, 0, 0);
+
+top_group_light-&amp;gt;getAcceleration()-&amp;gt;markDirty();
+top_group_light-&amp;gt;getContext()-&amp;gt;launch(0, 0, 0);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;シーン内のプリミティブの数が少ないので、このあたりは工夫しなくてもパフォーマンス上の問題はありませんでした。&lt;/p&gt;
+
+&lt;p&gt;NEE用にライトの情報の構造体の配列（ComputeShaderのStructuredBufferのようなもの）を渡しているので、これも毎フレーム更新が必要でした。&lt;/p&gt;
+
+&lt;h3 id=&#34;レイマーチングのパラメーターのアニメーション&#34;&gt;レイマーチングのパラメーターのアニメーション&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/raymarching-animation_960.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/raymarching-animation_960.gif&#34; alt=&#34;レイマーチングのパラメーターのアニメーション&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;せっかくレイマーチングでフラクタル（Mandelboxの軽量版）を描画しているので、フラクタルのパラメーターをアニメーションさせてみました。&lt;/p&gt;
+
+&lt;p&gt;CUDAでtimeを受け取るようにして、timeを元にパラメーターをアニメーションしているだけなので、とても簡単に実装できました。&lt;/p&gt;
+
+&lt;h3 id=&#34;マテリアルのアニメーション&#34;&gt;マテリアルのアニメーション&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/menger_960.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/menger_960.gif&#34; alt=&#34;マテリアルのアニメーション&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;マテリアルのパラメーターをアニメーション可能にして、ここではEmissiveをアニメーションさせるようにしました。&lt;/p&gt;
+
+&lt;p&gt;Emissiveのアニメーションが映えるように、MengerSpongeにしました。平面が多いので光の反射が綺麗に見せられるかなと思ってこうなりました。
+roughnessなどひたすら微調整して、最終的に気に入るルックにできました。&lt;/p&gt;
+
+&lt;p&gt;実装的にはマテリアルのパラメーターを更新する専用のCallable Program（OptiX用語で関数ポインターのようなもの）を定義しました。&lt;/p&gt;
+
+&lt;p&gt;CUDAの関数で好き勝手にアニメーションできるようにしました。&lt;/p&gt;
+
+&lt;h2 id=&#34;アダプティブなeps&#34;&gt;アダプティブなeps&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/zoom-out_960.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/zoom-out_960.gif&#34; alt=&#34;ズームアウト&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;前回のレイトレ合宿に引き続き、今回もアダプティブなeps計算をしています。&lt;/p&gt;
+
+&lt;p&gt;カメラからの距離に応じてレイマーチングの衝突判定につかうepsを変化させることで、実質的なLODのようなことをしています。&lt;/p&gt;
+
+&lt;p&gt;カメラ距離が変化してもちょうど良い感じのディテールでフラクタルを描画することができました。&lt;/p&gt;
+
+&lt;h2 id=&#34;デバッグ機能&#34;&gt;デバッグ機能&lt;/h2&gt;
+
+&lt;h3 id=&#34;wasd機能&#34;&gt;WASD機能&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/wasd-v1.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/wasd-v1.gif&#34; alt=&#34;WASD機能&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;いい感じのカメラアングルを探るためにWASDでカメラを移動できるようにしました。&lt;/p&gt;
+
+&lt;p&gt;余談ですが、Unityのシーンビューの右クリックでも同じようなことができます。Unityでカメラワークを実装するときもこの機能をよく活用しています。&lt;/p&gt;
+
+&lt;h3 id=&#34;デバッグ用のレンダラー&#34;&gt;デバッグ用のレンダラー&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/redflash_debug_render.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/redflash_debug_render.gif&#34; alt=&#34;デバッグ用のレンダラー&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;パストレーシングで描画すると処理が重くてフレーム落ちするのでアニメーションの確認には適しません。&lt;/p&gt;
+
+&lt;p&gt;アニメーションをリアルタイムに確認できるように、レンダリングの品質を落としたデバッグ用のレンダラーも実装しました。&lt;/p&gt;
+
+&lt;h2 id=&#34;awsの上限緩和申請は早めにやろう&#34;&gt;AWSの上限緩和申請は早めにやろう&lt;/h2&gt;
+
+&lt;p&gt;AWSの上限緩和申請（4vCPU）は時間がかかる場合もあるので、提出直前にやるのは良くなかったです。&lt;/p&gt;
+
+&lt;p&gt;他の参加者からはすぐに申請が通ったという声も聞いたので、担当者ガチャに外れただけの可能性はあります。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;AWSの上限緩和申請(4vCPU)、1週間くらいかかったな&lt;br&gt;&lt;br&gt;申請: 2022/08/23 1:49&lt;br&gt;承認: 2022/08/29 10:37&lt;br&gt;&lt;br&gt;もっと事前にやっておくべきだった…&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1564068725212360704?ref_src=twsrc%5Etfw&#34;&gt;August 29, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;セミナー資料&#34;&gt;セミナー資料&lt;/h1&gt;
+
+&lt;p&gt;レイトレ合宿ではセミナーも行われます。&lt;/p&gt;
+
+&lt;p&gt;今年は参加者全員で発表を行ったので、朝から晩までたくさんのセミナーを聞くことができました。&lt;/p&gt;
+
+&lt;div class=&#34;google-slide-wrap&#34;&gt;
+&lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vSdZQILhwkXvTsW024mmgc5V0G0sdFY2CQ1a5GtN953__e5drmPzBqVqr1qin2EtZOelzu6cl9IT9M2/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;1440&#34; height=&#34;839&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;私は「レイマーチングのすすめ」という発表をしました。&lt;/p&gt;
+
+&lt;p&gt;過去資料を参照しながら、レイマーチングについて個人的に意外だと感じる部分や、Shadertoyなどで使わているテクニックについて、広く浅く紹介しました。&lt;/p&gt;
+
+&lt;p&gt;口頭での説明が前提の発表なので、資料だけでは分かりにくいと思いますが、雰囲気だけでも伝わればと思います。&lt;/p&gt;
+
+&lt;h1 id=&#34;印象に残った作品&#34;&gt;印象に残った作品&lt;/h1&gt;
+
+&lt;p&gt;たた (@8picoz) さんがRust 100%のGPUレンダラーを開発していて、前々回のレイトレ合宿までは私もRustを使っていたということもあり、個人的にとても参考にしたいと思いました。
+Vulkanのレイトレーシング機能をつかっていて、VulkanではSPIR-Vというシェーダーの中間コードの仕組みが使えるようになっているので、任意の言語でシェーダーを実装できるようになりました。
+SPIR-Vをつかうことで、GPUコードもRustで実装をしたそうです。すごい良さそう！&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;こんな感じの動画をレンダリングして11位でした！ &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/aSEekYHQgr&#34;&gt;pic.twitter.com/aSEekYHQgr&lt;/a&gt;&lt;/p&gt;&amp;mdash; たた (@8picoz) &lt;a href=&#34;https://twitter.com/8picoz/status/1566239120065982465?ref_src=twsrc%5Etfw&#34;&gt;September 4, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;うしお (@ushiostarfish) さんはNeRFで絵を出していました。
+既存の機械学習のライブラリを使わずに、CUDAでスクラッチ実装したとのことだったので、個人的にとても驚きした。
+学習のための写真も自分で苦労して撮影したという裏話も聞けて良かったです。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;一発ネタのNeRFで、もはやレイトレなのか分からなくなってきましたが、思いのほか反響があってよかったです！&lt;br&gt;実装と解説スライドなどこちらにあります&lt;a href=&#34;https://t.co/YdeNXrIYBF&#34;&gt;https://t.co/YdeNXrIYBF&lt;/a&gt;&lt;br&gt;&lt;br&gt;運営の皆さま、今年も大変お疲れ様でございました！大変充実したイベントをありがとうございました！&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt;&lt;/p&gt;&amp;mdash; うしお (@ushiostarfish) &lt;a href=&#34;https://twitter.com/ushiostarfish/status/1568187460596953093?ref_src=twsrc%5Etfw&#34;&gt;September 9, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Shocker (@Shocker_0x15) さんのNeural Radiance Cachingをボリュームに適用して高速化をしていました。
+他の参加者と差別化できていて、結果も綺麗ですごいと思いました。機械学習の波がレイトレ合宿にも来ているのを感じました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;3年ぶりの &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; 8でMulti-scatteringな雲の動画をレンダリングして1位を頂きました！&lt;br&gt;普通にやると重すぎて間に合わないのでNeural Radiance Cachingをボリュームに適用して高速化しました。&lt;br&gt;&lt;br&gt;レンダラー紹介スライド&lt;a href=&#34;https://t.co/ry4W70XcgI&#34;&gt;https://t.co/ry4W70XcgI&lt;/a&gt; &lt;a href=&#34;https://t.co/82OFf5rYue&#34;&gt;pic.twitter.com/82OFf5rYue&lt;/a&gt;&lt;/p&gt;&amp;mdash; Shocker (@Shocker_0x15) &lt;a href=&#34;https://twitter.com/Shocker_0x15/status/1566267613440684033?ref_src=twsrc%5Etfw&#34;&gt;September 4, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;hole (@h013) はゴールベースコースティクスを実装していました。分散の発生する処理がほとんどなく、Deterministicに結果が決まるそうで、ノイズがまったくないめちゃくちゃ綺麗な結果でした。
+他の参加者と違うアプローチで差別化ができていて、結果もめちゃくちゃ綺麗でいいなと思いました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;レイトレ合宿終わりました。皆さんありがとうござました！&lt;br&gt;&lt;br&gt;僕はコースティクスを実装し、こんな感じの動画をレンダリングして４位でした。 &lt;br&gt;&lt;br&gt; &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/NbHutC9KtB&#34;&gt;pic.twitter.com/NbHutC9KtB&lt;/a&gt;&lt;/p&gt;&amp;mdash; hole (@h013) &lt;a href=&#34;https://twitter.com/h013/status/1566238238959759361?ref_src=twsrc%5Etfw&#34;&gt;September 4, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Shinji Ogaki (@ShinjiOgaki) さんはCPUレンダラーかつデノイズしないという条件で、ノイズがまったくない綺麗な絵を出していて、圧倒的な実装力の違いを見せつけられました。強者の風格をとても感じる作品でした。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;記事はまる一日で3000くらい閲覧があったようなので、合宿に興味がある人が多いのかも？&lt;br&gt;せっかくなので、少し尺の長い動画を載せておきます。&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/generative?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#generative&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/creativecoding?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#creativecoding&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/processing?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#processing&lt;/a&gt; &lt;a href=&#34;https://t.co/RqMLxaUIMX&#34;&gt;pic.twitter.com/RqMLxaUIMX&lt;/a&gt;&lt;/p&gt;&amp;mdash; Shinji Ogaki (@ShinjiOgaki) &lt;a href=&#34;https://twitter.com/ShinjiOgaki/status/1566909271043817472?ref_src=twsrc%5Etfw&#34;&gt;September 5, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;感想&#34;&gt;感想&lt;/h1&gt;
+
+&lt;p&gt;年々と制限時間が短くなっているのに、ほとんどの参加者はノイズのない綺麗なレンダリング結果を出していて、参加者のレベルがどんどんインフレしているのを感じました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/time-limit.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/time-limit.png&#34; alt=&#34;レイトレ合宿の時間制限の遷移&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;もはやノイズの少ない絵を出すだけでは差別化が難しいので、ユニークな切り口で勝負してくるハイレベルな戦いでした。&lt;/p&gt;
+
+&lt;p&gt;今年のセミナーは参加者全員で発表しました。参加者のバックグラウンドもさまざまだったので、いろんな分野の興味深い話や深い話を聞くことができて楽しかったです。&lt;/p&gt;
+
+&lt;p&gt;レイトレ合宿を運営の方々、その他の参加者のみなさん、本当にありがとうございました！&lt;/p&gt;
+
+&lt;h1 id=&#34;写真コーナー&#34;&gt;写真コーナー&lt;/h1&gt;
+
+&lt;p&gt;天候には恵まれませんでしたが、ホテルがめちゃくちゃ豪華だったり、美味しいご飯を食べたりして沖縄を満喫しました。&lt;/p&gt;
+
+&lt;p&gt;写真から雰囲気が少しでも伝われば幸いです。&lt;/p&gt;
+
+&lt;p&gt;ホテルは棟ごと貸し切りをしました！まるでレンダリング用のシーンのようにピカピカなお部屋でした！すごい！&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-1.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-1.jpg&#34; alt=&#34;ホテルの様子&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-2.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-2.jpg&#34; alt=&#34;ホテルの様子&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-3.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-3.jpg&#34; alt=&#34;ホテルの様子&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-4.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-4.jpg&#34; alt=&#34;ホテルの様子&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-5.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-5.jpg&#34; alt=&#34;ホテルの様子&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-6.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-6.jpg&#34; alt=&#34;ホテルの様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;沖縄の料理なども堪能しました。合宿自体は2泊でしたが、個人的に延泊して4泊したので料理の写真が多くなっています。&lt;/p&gt;
+
+&lt;p&gt;しまぶた屋　地酒の飲み比べ
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-1.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-1.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;海ぶどう　茶碗蒸し
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-2.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-2.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;なかゆくい　ハブ酒
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-3.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-3.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;なかゆくい　マンゴーのかき氷
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-4.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-4.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;アメリカ食堂
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-5.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-5.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;タコライスcafe きじむなぁ
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-6.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-6.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;琉球ダイニング 桃香
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-7.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-7.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;沖縄のブルーシールアイスクリーム BLUE SEAL
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-8.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-8.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-9.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-9.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ステーキハウス88
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-10.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-10.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-11.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-11.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;土～夢 ごはんカフェ 琉球ガラス村店（ドーム）
+食器がおしゃれ
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-12.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-12.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;!--
+
+# 関連商品
+
+レンダラー名の由来となった楽曲です。プリパラを見てください。
+
+&lt;iframe sandbox=&#34;allow-popups allow-scripts allow-modals allow-forms allow-same-origin&#34; style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B06Y3Z1PTK&amp;linkId=e1fef8b2771937a4232c7850b5dca2da&#34;&gt;&lt;/iframe&gt;
+
+--&gt;</description>
+    </item>
+    
+    <item>
       <title>速度比較！レイマーチングvsレイキャスティング</title>
       <link>https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/</link>
       <pubDate>Mon, 08 Aug 2022 02:12:50 +0900</pubDate>

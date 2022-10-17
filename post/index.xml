@@ -7,8 +7,313 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>&amp;copy; 2021 gam0022</copyright>
-    <lastBuildDate>Mon, 08 Aug 2022 02:12:50 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 17 Oct 2022 10:00:00 +0900</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>レイトレ合宿8参加レポート</title>
+      <link>https://gam0022.net/blog/2022/10/17/rtcamp8/</link>
+      <pubDate>Mon, 17 Oct 2022 10:00:00 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2022/10/17/rtcamp8/</guid>
+      <description>&lt;p&gt;9月2日(金)～9月4日(日)に沖縄本島で開催された&lt;a href=&#34;https://sites.google.com/view/raytracingcamp8/&#34;&gt;レイトレ合宿8&lt;/a&gt;に参加しました。&lt;/p&gt;
+
+&lt;p&gt;自作のレンダラーでこんな動画を &lt;strong&gt;10分の制限時間&lt;/strong&gt; でレンダリングして5位をいただきました！&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/c7JqEpaR658&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;レイマーチングとポリゴンをハイブリッドに描画できる単方向パストレーシングのレンダラーをOptiXで開発して16人中7位でした。&lt;br&gt;&lt;br&gt;レンダリング時間は10分（1フレーム2秒）だったので、&lt;br&gt;NEEやMISなどサンプリングの高速化も行いました。&lt;br&gt;&lt;br&gt;動画は本戦で実際に出力されたファイルです。&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/LDgKL7gLsY&#34;&gt;pic.twitter.com/LDgKL7gLsY&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1566269176314220544?ref_src=twsrc%5Etfw&#34;&gt;September 4, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;コロナの影響もあり、3年ぶりのレイトレ合宿でした…！&lt;/p&gt;
+
+&lt;p&gt;台風11号がちょうど沖縄に直撃してしまい、天候には恵まれなかったのは残念でしたが、とても充実した合宿でした。&lt;/p&gt;
+
+&lt;p&gt;合宿の様子や雰囲気を詳しく知りたい方は、Ki_NaN_komotiさんのブログ記事がオススメです。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;２週間ぐらい経ちましたがレイトレ合宿の参加レポートを書きました&lt;br&gt;&lt;br&gt;レンダラー開発記とレイトレ合宿の様子を書いています&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt;&lt;a href=&#34;https://t.co/Fhtvuz9n2H&#34;&gt;https://t.co/Fhtvuz9n2H&lt;/a&gt;&lt;/p&gt;&amp;mdash; Ki_NaN_komoti (@Kinakomoti2357) &lt;a href=&#34;https://twitter.com/Kinakomoti2357/status/1571122433763184640?ref_src=twsrc%5Etfw&#34;&gt;September 17, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;本戦用のレンダラーの解説&#34;&gt;本戦用のレンダラーの解説&lt;/h1&gt;
+
+&lt;p&gt;こちらが本戦のプレゼン資料です。&lt;/p&gt;
+
+&lt;div class=&#34;google-slide-wrap&#34;&gt;
+&lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vTTvbJ3UILqFymar8yG4VOomRdeJzfeS8zoehGZruGQCmq8A2cQ4rru3WYfZdi3xRD4PkE3yamqRHjt/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;1440&#34; height=&#34;839&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;GitHubに&lt;a href=&#34;https://github.com/gam0022/redflash_rtcamp8&#34;&gt;リポジトリ&lt;/a&gt;も公開しています。急いで実装したので品質は低いです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/blog/2019/09/18/rtcamp7/&#34;&gt;前回のレイトレ合宿7&lt;/a&gt;で開発したRedflashというレンダラーを動画に対応させました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/slide_p2.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/slide_p2.png&#34; alt=&#34;スライド 基本機能&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;前回までにこれらの基本的な機能は実装していました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;単方向のパストレーシング&lt;/li&gt;
+&lt;li&gt;Disney BRDF&lt;/li&gt;
+&lt;li&gt;NEE&lt;/li&gt;
+&lt;li&gt;MIS&lt;/li&gt;
+&lt;li&gt;レイマーチングの衝突判定（OptiXのカスタムプリミティブとして実装）&lt;/li&gt;
+&lt;li&gt;ACES Filmic Tone Mapping&lt;/li&gt;
+&lt;li&gt;Deep Learning Denoising（ディープラーニングによるデノイザー、OptiXを使えば簡単に利用できる）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;今年から静止画部門が廃止されたので、動画部門への対応を行いました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;アニメーション（シーンの動的な更新）&lt;/li&gt;
+&lt;li&gt;動画のための画像の連番出力&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;レンダラーの出力設定&#34;&gt;レンダラーの出力設定&lt;/h2&gt;
+
+&lt;p&gt;出力解像度の高さ・フレーム数の多さは、分かりやすくアピールポイントになるので、ギリギリを攻めました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;解像度は1920x1080&lt;/li&gt;
+&lt;li&gt;フレーム数は300（30FPS * 10秒）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;制限時間は10分（600秒）なので、1フレームあたりの時間は2秒でした。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;長さは3秒以上10秒以下&lt;/code&gt; というレギュレーションだったので、上限の10秒にしました。&lt;/p&gt;
+
+&lt;p&gt;パストレーシングの場合はゆったりしたアニメーションの方が映えそうなので、60FPSではなく30FPSにしました。
+普通のPCのモニターのリフレッシュレートは60Hzだと思うので、24FPSなど中途半端なのは選択肢から除外していました。&lt;/p&gt;
+
+&lt;p&gt;PNGの保存（エンコード＋ファイル保存）と、レンダリングは別スレッドで並列実行するようにしました。
+解像度は2160pにするとPNGのエンコード時間がレンダリングよりもボトルネックになるので1080pを選びました。&lt;/p&gt;
+
+&lt;p&gt;前回のレイトレ合宿7の本戦の静止画部門では、1フレームに60秒使えました。
+使える時間が30分の1まで急激に短くなったのは大変でした。&lt;/p&gt;
+
+&lt;p&gt;さらに実行環境（AWSのEC2インスタンス）も大幅にスペックダウンしていたのも痛手でした。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;p3.16xlarge（レイトレ合宿7）&lt;/li&gt;
+&lt;li&gt;g4dn.xlarge（レイトレ合宿8）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;g4dn.xlargeではRTコアが使えるようになったようですが、レイマーチングが主なので自分の場合は恩恵があまりありませんでした…&lt;/p&gt;
+
+&lt;h2 id=&#34;optixのバージョンについて&#34;&gt;OptiXのバージョンについて&lt;/h2&gt;
+
+&lt;p&gt;今回は最新のOptiX7でレンダラーを実装しようと思ったのですが、最終的には前回と同じOptiX6で提出しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/&#34;&gt;アドベントカレンダー&lt;/a&gt;ではOptiX7で実装をしていました。&lt;/p&gt;
+
+&lt;p&gt;OptiX7ではなぜかポリゴンとレイマーチングのプリミティブを混在するとパフォーマンスが異常に悪化する問題が発生してしまい、これを解決する方法が見つからず、提出まで時間もなかったので諦めてOptiX6を採用しました。&lt;/p&gt;
+
+&lt;p&gt;もしパフォーマンスの問題を解決できたとしても、OptiX7はかなり低レイヤーのAPIになっていたので、何かしらのラッパーを開発しないと使うのは大変に思いました。セットアップするだけでもかなり大量のコードの実装が必要でした。&lt;/p&gt;
+
+&lt;h2 id=&#34;アニメーション要素&#34;&gt;アニメーション要素&lt;/h2&gt;
+
+&lt;p&gt;10秒の尺に3種類のアニメーション要素を詰め込みました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ライトのアニメーション&lt;/li&gt;
+&lt;li&gt;レイマーチングのパラメーターのアニメーション&lt;/li&gt;
+&lt;li&gt;マテリアルのアニメーション&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;動画の内容もそれぞれのアニメーションの要素を1つ1つ紹介するような感じにしました。&lt;/p&gt;
+
+&lt;h3 id=&#34;ライトのアニメーション&#34;&gt;ライトのアニメーション&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/light_animation_960.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/light_animation_960.gif&#34; alt=&#34;ライトのアニメーション&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;2つのポイントライトをアニメーションしました。&lt;/p&gt;
+
+&lt;p&gt;OptiX6系では以下のようにmarkDirtyしてからlaunchすることでアクセラレーション構造を更新できました。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;light_group-&amp;gt;getAcceleration()-&amp;gt;markDirty();
+light_group-&amp;gt;getContext()-&amp;gt;launch(0, 0, 0);
+
+top_group_light-&amp;gt;getAcceleration()-&amp;gt;markDirty();
+top_group_light-&amp;gt;getContext()-&amp;gt;launch(0, 0, 0);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;シーン内のプリミティブの数が少ないので、このあたりは工夫しなくてもパフォーマンス上の問題はありませんでした。&lt;/p&gt;
+
+&lt;p&gt;NEE用にライトの情報の構造体の配列（ComputeShaderのStructuredBufferのようなもの）を渡しているので、これも毎フレーム更新が必要でした。&lt;/p&gt;
+
+&lt;h3 id=&#34;レイマーチングのパラメーターのアニメーション&#34;&gt;レイマーチングのパラメーターのアニメーション&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/raymarching-animation_960.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/raymarching-animation_960.gif&#34; alt=&#34;レイマーチングのパラメーターのアニメーション&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;せっかくレイマーチングでフラクタル（Mandelboxの軽量版）を描画しているので、フラクタルのパラメーターをアニメーションさせてみました。&lt;/p&gt;
+
+&lt;p&gt;CUDAでtimeを受け取るようにして、timeを元にパラメーターをアニメーションしているだけなので、とても簡単に実装できました。&lt;/p&gt;
+
+&lt;h3 id=&#34;マテリアルのアニメーション&#34;&gt;マテリアルのアニメーション&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/menger_960.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/menger_960.gif&#34; alt=&#34;マテリアルのアニメーション&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;マテリアルのパラメーターをアニメーション可能にして、ここではEmissiveをアニメーションさせるようにしました。&lt;/p&gt;
+
+&lt;p&gt;Emissiveのアニメーションが映えるように、MengerSpongeにしました。平面が多いので光の反射が綺麗に見せられるかなと思ってこうなりました。
+roughnessなどひたすら微調整して、最終的に気に入るルックにできました。&lt;/p&gt;
+
+&lt;p&gt;実装的にはマテリアルのパラメーターを更新する専用のCallable Program（OptiX用語で関数ポインターのようなもの）を定義しました。&lt;/p&gt;
+
+&lt;p&gt;CUDAの関数で好き勝手にアニメーションできるようにしました。&lt;/p&gt;
+
+&lt;h2 id=&#34;アダプティブなeps&#34;&gt;アダプティブなeps&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/zoom-out_960.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/zoom-out_960.gif&#34; alt=&#34;ズームアウト&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;前回のレイトレ合宿に引き続き、今回もアダプティブなeps計算をしています。&lt;/p&gt;
+
+&lt;p&gt;カメラからの距離に応じてレイマーチングの衝突判定につかうepsを変化させることで、実質的なLODのようなことをしています。&lt;/p&gt;
+
+&lt;p&gt;カメラ距離が変化してもちょうど良い感じのディテールでフラクタルを描画することができました。&lt;/p&gt;
+
+&lt;h2 id=&#34;デバッグ機能&#34;&gt;デバッグ機能&lt;/h2&gt;
+
+&lt;h3 id=&#34;wasd機能&#34;&gt;WASD機能&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/wasd-v1.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/wasd-v1.gif&#34; alt=&#34;WASD機能&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;いい感じのカメラアングルを探るためにWASDでカメラを移動できるようにしました。&lt;/p&gt;
+
+&lt;p&gt;余談ですが、Unityのシーンビューの右クリックでも同じようなことができます。Unityでカメラワークを実装するときもこの機能をよく活用しています。&lt;/p&gt;
+
+&lt;h3 id=&#34;デバッグ用のレンダラー&#34;&gt;デバッグ用のレンダラー&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/redflash_debug_render.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/redflash_debug_render.gif&#34; alt=&#34;デバッグ用のレンダラー&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;パストレーシングで描画すると処理が重くてフレーム落ちするのでアニメーションの確認には適しません。&lt;/p&gt;
+
+&lt;p&gt;アニメーションをリアルタイムに確認できるように、レンダリングの品質を落としたデバッグ用のレンダラーも実装しました。&lt;/p&gt;
+
+&lt;h2 id=&#34;awsの上限緩和申請は早めにやろう&#34;&gt;AWSの上限緩和申請は早めにやろう&lt;/h2&gt;
+
+&lt;p&gt;AWSの上限緩和申請（4vCPU）は時間がかかる場合もあるので、提出直前にやるのは良くなかったです。&lt;/p&gt;
+
+&lt;p&gt;他の参加者からはすぐに申請が通ったという声も聞いたので、担当者ガチャに外れただけの可能性はあります。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;AWSの上限緩和申請(4vCPU)、1週間くらいかかったな&lt;br&gt;&lt;br&gt;申請: 2022/08/23 1:49&lt;br&gt;承認: 2022/08/29 10:37&lt;br&gt;&lt;br&gt;もっと事前にやっておくべきだった…&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1564068725212360704?ref_src=twsrc%5Etfw&#34;&gt;August 29, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;セミナー資料&#34;&gt;セミナー資料&lt;/h1&gt;
+
+&lt;p&gt;レイトレ合宿ではセミナーも行われます。&lt;/p&gt;
+
+&lt;p&gt;今年は参加者全員で発表を行ったので、朝から晩までたくさんのセミナーを聞くことができました。&lt;/p&gt;
+
+&lt;div class=&#34;google-slide-wrap&#34;&gt;
+&lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vSdZQILhwkXvTsW024mmgc5V0G0sdFY2CQ1a5GtN953__e5drmPzBqVqr1qin2EtZOelzu6cl9IT9M2/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;1440&#34; height=&#34;839&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;私は「レイマーチングのすすめ」という発表をしました。&lt;/p&gt;
+
+&lt;p&gt;過去資料を参照しながら、レイマーチングについて個人的に意外だと感じる部分や、Shadertoyなどで使わているテクニックについて、広く浅く紹介しました。&lt;/p&gt;
+
+&lt;p&gt;口頭での説明が前提の発表なので、資料だけでは分かりにくいと思いますが、雰囲気だけでも伝わればと思います。&lt;/p&gt;
+
+&lt;h1 id=&#34;印象に残った作品&#34;&gt;印象に残った作品&lt;/h1&gt;
+
+&lt;p&gt;たた (@8picoz) さんがRust 100%のGPUレンダラーを開発していて、前々回のレイトレ合宿までは私もRustを使っていたということもあり、個人的にとても参考にしたいと思いました。
+Vulkanのレイトレーシング機能をつかっていて、VulkanではSPIR-Vというシェーダーの中間コードの仕組みが使えるようになっているので、任意の言語でシェーダーを実装できるようになりました。
+SPIR-Vをつかうことで、GPUコードもRustで実装をしたそうです。すごい良さそう！&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;こんな感じの動画をレンダリングして11位でした！ &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/aSEekYHQgr&#34;&gt;pic.twitter.com/aSEekYHQgr&lt;/a&gt;&lt;/p&gt;&amp;mdash; たた (@8picoz) &lt;a href=&#34;https://twitter.com/8picoz/status/1566239120065982465?ref_src=twsrc%5Etfw&#34;&gt;September 4, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;うしお (@ushiostarfish) さんはNeRFで絵を出していました。
+既存の機械学習のライブラリを使わずに、CUDAでスクラッチ実装したとのことだったので、個人的にとても驚きした。
+学習のための写真も自分で苦労して撮影したという裏話も聞けて良かったです。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;一発ネタのNeRFで、もはやレイトレなのか分からなくなってきましたが、思いのほか反響があってよかったです！&lt;br&gt;実装と解説スライドなどこちらにあります&lt;a href=&#34;https://t.co/YdeNXrIYBF&#34;&gt;https://t.co/YdeNXrIYBF&lt;/a&gt;&lt;br&gt;&lt;br&gt;運営の皆さま、今年も大変お疲れ様でございました！大変充実したイベントをありがとうございました！&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt;&lt;/p&gt;&amp;mdash; うしお (@ushiostarfish) &lt;a href=&#34;https://twitter.com/ushiostarfish/status/1568187460596953093?ref_src=twsrc%5Etfw&#34;&gt;September 9, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Shocker (@Shocker_0x15) さんのNeural Radiance Cachingをボリュームに適用して高速化をしていました。
+他の参加者と差別化できていて、結果も綺麗ですごいと思いました。機械学習の波がレイトレ合宿にも来ているのを感じました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;3年ぶりの &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; 8でMulti-scatteringな雲の動画をレンダリングして1位を頂きました！&lt;br&gt;普通にやると重すぎて間に合わないのでNeural Radiance Cachingをボリュームに適用して高速化しました。&lt;br&gt;&lt;br&gt;レンダラー紹介スライド&lt;a href=&#34;https://t.co/ry4W70XcgI&#34;&gt;https://t.co/ry4W70XcgI&lt;/a&gt; &lt;a href=&#34;https://t.co/82OFf5rYue&#34;&gt;pic.twitter.com/82OFf5rYue&lt;/a&gt;&lt;/p&gt;&amp;mdash; Shocker (@Shocker_0x15) &lt;a href=&#34;https://twitter.com/Shocker_0x15/status/1566267613440684033?ref_src=twsrc%5Etfw&#34;&gt;September 4, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;hole (@h013) はゴールベースコースティクスを実装していました。分散の発生する処理がほとんどなく、Deterministicに結果が決まるそうで、ノイズがまったくないめちゃくちゃ綺麗な結果でした。
+他の参加者と違うアプローチで差別化ができていて、結果もめちゃくちゃ綺麗でいいなと思いました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;レイトレ合宿終わりました。皆さんありがとうござました！&lt;br&gt;&lt;br&gt;僕はコースティクスを実装し、こんな感じの動画をレンダリングして４位でした。 &lt;br&gt;&lt;br&gt; &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/NbHutC9KtB&#34;&gt;pic.twitter.com/NbHutC9KtB&lt;/a&gt;&lt;/p&gt;&amp;mdash; hole (@h013) &lt;a href=&#34;https://twitter.com/h013/status/1566238238959759361?ref_src=twsrc%5Etfw&#34;&gt;September 4, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Shinji Ogaki (@ShinjiOgaki) さんはCPUレンダラーかつデノイズしないという条件で、ノイズがまったくない綺麗な絵を出していて、圧倒的な実装力の違いを見せつけられました。強者の風格をとても感じる作品でした。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;記事はまる一日で3000くらい閲覧があったようなので、合宿に興味がある人が多いのかも？&lt;br&gt;せっかくなので、少し尺の長い動画を載せておきます。&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/generative?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#generative&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/creativecoding?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#creativecoding&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/processing?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#processing&lt;/a&gt; &lt;a href=&#34;https://t.co/RqMLxaUIMX&#34;&gt;pic.twitter.com/RqMLxaUIMX&lt;/a&gt;&lt;/p&gt;&amp;mdash; Shinji Ogaki (@ShinjiOgaki) &lt;a href=&#34;https://twitter.com/ShinjiOgaki/status/1566909271043817472?ref_src=twsrc%5Etfw&#34;&gt;September 5, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;感想&#34;&gt;感想&lt;/h1&gt;
+
+&lt;p&gt;年々と制限時間が短くなっているのに、ほとんどの参加者はノイズのない綺麗なレンダリング結果を出していて、参加者のレベルがどんどんインフレしているのを感じました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/time-limit.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/time-limit.png&#34; alt=&#34;レイトレ合宿の時間制限の遷移&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;もはやノイズの少ない絵を出すだけでは差別化が難しいので、ユニークな切り口で勝負してくるハイレベルな戦いでした。&lt;/p&gt;
+
+&lt;p&gt;今年のセミナーは参加者全員で発表しました。参加者のバックグラウンドもさまざまだったので、いろんな分野の興味深い話や深い話を聞くことができて楽しかったです。&lt;/p&gt;
+
+&lt;p&gt;レイトレ合宿を運営の方々、その他の参加者のみなさん、本当にありがとうございました！&lt;/p&gt;
+
+&lt;h1 id=&#34;写真コーナー&#34;&gt;写真コーナー&lt;/h1&gt;
+
+&lt;p&gt;天候には恵まれませんでしたが、ホテルがめちゃくちゃ豪華だったり、美味しいご飯を食べたりして沖縄を満喫しました。&lt;/p&gt;
+
+&lt;p&gt;写真から雰囲気が少しでも伝われば幸いです。&lt;/p&gt;
+
+&lt;p&gt;ホテルは棟ごと貸し切りをしました！まるでレンダリング用のシーンのようにピカピカなお部屋でした！すごい！&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-1.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-1.jpg&#34; alt=&#34;ホテルの様子&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-2.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-2.jpg&#34; alt=&#34;ホテルの様子&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-3.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-3.jpg&#34; alt=&#34;ホテルの様子&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-4.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-4.jpg&#34; alt=&#34;ホテルの様子&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-5.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-5.jpg&#34; alt=&#34;ホテルの様子&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-6.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-6.jpg&#34; alt=&#34;ホテルの様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;沖縄の料理なども堪能しました。合宿自体は2泊でしたが、個人的に延泊して4泊したので料理の写真が多くなっています。&lt;/p&gt;
+
+&lt;p&gt;しまぶた屋　地酒の飲み比べ
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-1.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-1.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;海ぶどう　茶碗蒸し
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-2.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-2.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;なかゆくい　ハブ酒
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-3.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-3.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;なかゆくい　マンゴーのかき氷
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-4.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-4.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;アメリカ食堂
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-5.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-5.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;タコライスcafe きじむなぁ
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-6.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-6.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;琉球ダイニング 桃香
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-7.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-7.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;沖縄のブルーシールアイスクリーム BLUE SEAL
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-8.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-8.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-9.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-9.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ステーキハウス88
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-10.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-10.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-11.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-11.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;土～夢 ごはんカフェ 琉球ガラス村店（ドーム）
+食器がおしゃれ
+&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-12.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-12.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;!--
+
+# 関連商品
+
+レンダラー名の由来となった楽曲です。プリパラを見てください。
+
+&lt;iframe sandbox=&#34;allow-popups allow-scripts allow-modals allow-forms allow-same-origin&#34; style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B06Y3Z1PTK&amp;linkId=e1fef8b2771937a4232c7850b5dca2da&#34;&gt;&lt;/iframe&gt;
+
+--&gt;</description>
+    </item>
     
     <item>
       <title>速度比較！レイマーチングvsレイキャスティング</title>
@@ -3354,617 +3659,6 @@ cbuffer PixelShaderSettings {
 &lt;p&gt;ついに商業誌デビュー！と思ったら、よく考えたら2007年にWindows100%のフリーゲーム紹介コーナーに自作ゲームがちょっとだけ掲載されたのを思い出しました（当時は中学生）。&lt;/p&gt;
 
 &lt;p&gt;今回は4ページしっかりと担当できましたし、CGWORLDという映像業界において圧倒的な知名度のある雑誌に寄稿する機会をいただけて、本当に嬉しいです。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Revision2020 PC 64K Intro 優勝作品『RE: SIMULATED』の技術解説</title>
-      <link>https://gam0022.net/blog/2020/04/30/revision2020/</link>
-      <pubDate>Thu, 30 Apr 2020 12:00:00 +0900</pubDate>
-      
-      <guid>https://gam0022.net/blog/2020/04/30/revision2020/</guid>
-      <description>&lt;p&gt;4月10日～4月13日に世界最大のデモパーティ&lt;a href=&#34;https://2020.revision-party.net/start&#34;&gt;Revision 2020&lt;/a&gt;に参加しました。&lt;/p&gt;
-
-&lt;p&gt;Revision 2020内で開催されたコンペのうち、&lt;a href=&#34;https://2020.revision-party.net/competitions/pc-competitions&#34;&gt;PC 64K Intro&lt;/a&gt;という64KBの容量制約のある部門で『RE: SIMULATED by gam0022 &amp;amp; sadakkey』という作品を発表しました。&lt;/p&gt;
-
-&lt;p&gt;Tokyo Demo Fest 2018に続き、私（&lt;a href=&#34;https://twitter.com/gam0022&#34;&gt;@gam0022&lt;/a&gt;）が映像を、さだきちさん（&lt;a href=&#34;https://twitter.com/sadakkey&#34;&gt;@sadakkey&lt;/a&gt;）が音楽を制作しました。&lt;/p&gt;
-
-&lt;p&gt;……なんと、本作品が参加者投票により1位に選ばれました！
-日本人のチームがPC 64K Intro部門で優勝するのは Revision 史上初です。とても嬉しいです！&lt;/p&gt;
-
-&lt;p&gt;本記事では、技術解説をメインに、『RE: SIMULATED by gam0022 &amp;amp; sadakkey』を紹介したいと思います。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2020-04-19-revision2020/resimulated-collage.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2020-04-19-revision2020/resimulated-collage.jpg&#34; alt=&#34;resimulated-collage&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;作品へのリンク&#34;&gt;作品へのリンク&lt;/h1&gt;
-
-&lt;p&gt;WebGLとWebAudioによる64K Introなので、最新のChromeと高性能なGPUがあれば、ブラウザ上で動作します。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://gam0022.net/webgl/64k-intro_resimulated.html&#34;&gt;64KB HTML version&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://neort.io/art/bqa4pgs3p9f6qoqnmujg&#34;&gt;NEORT version&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;高スペックのPCを持っていない方は、YouTubeの動画をご覧ください。&lt;/p&gt;
-
-&lt;p&gt;フラクタルをつかった映像のビットレートの高い作品ですが、4K解像度を選ぶことである程度は綺麗な状態で見れます。&lt;/p&gt;
-
-&lt;div class=&#34;movie-wrap&#34;&gt;
-&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/tirAdWbceak&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;こちらはpouet（デモシーンのコミュニティサイト）のリンクです。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.pouet.net/prod.php?which=85260&#34;&gt;RE: SIMULATED by Gam0022 &amp;amp; Sadakkey :: pouët.net&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;技術解説&#34;&gt;技術解説&lt;/h1&gt;
-
-&lt;p&gt;ソースコードはすべてGitHubに公開しているので、興味がある方はぜひ見てください。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/gam0022/resimulated&#34;&gt;gam0022/resimulated: 1st place at Revision 2020 (PC 64K Intro)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;サウンド編についてはさだきちさんが解説されています。あわせてご覧ください！&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.klab.com/jp/blog/creative/2020/revision-2020-pc-64k-intro.html&#34;&gt;Revision 2020 のPC 64K INTRO 優勝作品のサウンドについて&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;キーワードとしては、以下の技術が使われています。&lt;/p&gt;
-
-&lt;p&gt;TypeScript, WebGL, WebAudio, webpack, pnginator.rb, Raymarching, GLSL Sound&lt;/p&gt;
-
-&lt;h2 id=&#34;シンプルなwebglエンジン-chromatiq&#34;&gt;シンプルなWebGLエンジン『Chromatiq』&lt;/h2&gt;
-
-&lt;p&gt;64KBの容量制約があるため、Unityやthree.jsといった既存のゲームエンジンやフレームワークを利用せずに、描画用のWebGLエンジンと制作用のツール（エディタ機能）を自作する必要がありました。&lt;/p&gt;
-
-&lt;p&gt;OpenGLやDirectXを使わずに、WebGLを選択した理由は以下です。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;WebGLでブラウザ上で動かせれば、手元のPCで動かしてもらえる可能性が高いと考えた
-
-&lt;ul&gt;
-&lt;li&gt;自分の作品は映像のビットレートが高く、動画だと綺麗にならない&lt;/li&gt;
-&lt;li&gt;手元のPCで実行して綺麗な状態で見てもらいたい&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Webフロントエンドの技術をキャッチアップしたかった&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;そこで、64K Intro向けに&lt;strong&gt;ファイルサイズの最小化を目指したシンプルなWebGLエンジン『Chromatiq』&lt;/strong&gt;を開発しました。&lt;/p&gt;
-
-&lt;p&gt;WebGLエンジンとは言うものの、本当にシンプルで最小限な機能しか &amp;ldquo;現段階では&amp;rdquo; 実装していません。&lt;/p&gt;
-
-&lt;p&gt;なるべく作品に依存した機能は用意したくなかったので、汎用的な設計になっています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;マルチパスのImageShaderによるレンダリング（viewport square）&lt;/li&gt;
-&lt;li&gt;ビルドインのBloomのポストエフェクト
-
-&lt;ul&gt;
-&lt;li&gt;どんな作品でも利用できそうなので、これだけビルドインにした&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;TypeScriptからuniformをアニメーションするためのインターフェース&lt;/li&gt;
-&lt;li&gt;Shadertoyと互換性のあるGLSL Sound&lt;/li&gt;
-&lt;li&gt;オーディオファイルの再生（mp3 / ogg）
-
-&lt;ul&gt;
-&lt;li&gt;DAWによる音楽の再生用の機能&lt;/li&gt;
-&lt;li&gt;今回は先にDAWで作曲し、後からGLSLに移植する作戦にした&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;フォントをレンダリングするためのcanvasからのテクスチャ生成&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;イメージとしてはGLSLエディタを排除したスタンドアローンなShadertoyが近いかもしれません。&lt;/p&gt;
-
-&lt;p&gt;ソースコードは&lt;a href=&#34;https://github.com/gam0022/resimulated/blob/master/src/chromatiq.ts&#34;&gt;こちら&lt;/a&gt;です。単一ファイルのTypeScriptで実装しました。&lt;/p&gt;
-
-&lt;p&gt;圧縮後のコードサイズを気にして、変な感じの実装になっているので、微妙に読みづらいかもしれません。&lt;/p&gt;
-
-&lt;p&gt;例えば、フィールド参照の this を頭につけるとコードサイズが増えるため、コンストラクタの中で動的にインスタンスメソッドを定義することで、this の利用を最小限にしたり、
-クラス外から値を参照・設定する必要があるデータのみ、フィールドとして定義する方針とています。enumもコードサイズが増えるので禁止にしました。&lt;/p&gt;
-
-&lt;p&gt;製作の終盤から容量が余裕そうなことが判明したので、途中からファイルサイズを考慮するのを止め、mini化の中途半端感は否めないです。
-このあたりは、次のデモに向けて改良していきたいと考えています。&lt;/p&gt;
-
-&lt;p&gt;uniform名は基本的にはShadertoyと一致させているのですが、テクスチャのサンプラーはShadertoyを踏襲せずに、直前のパスを参照する &lt;code&gt;iPrevPass&lt;/code&gt; を定義しました。
-これによってGLSLを書き換えずにエフェクトの順番を入れ替えたり、気軽にパスを増やしてエフェクトをチェインしやすくしました。
-このあたりの仕様も、作品の需要に応じて変更していく可能性は高いです。&lt;/p&gt;
-
-&lt;h2 id=&#34;ファイル圧縮のためのビルドプロセス&#34;&gt;ファイル圧縮のためのビルドプロセス&lt;/h2&gt;
-
-&lt;p&gt;圧縮には&lt;a href=&#34;https://webpack.js.org/&#34;&gt;webpack&lt;/a&gt;と&lt;a href=&#34;https://gist.github.com/gasman/2560551&#34;&gt;pnginator.rb&lt;/a&gt;を利用しています。&lt;/p&gt;
-
-&lt;p&gt;ビルドプロセスを図にしました。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2020-04-19-revision2020/build-process.svg&#34; alt=&#34;build-process&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;webpackですべてのファイルをbundle.jsという単一のJavaScriptに固めてから、pnginator.rbで自己解凍形式のPNGにしています。&lt;/p&gt;
-
-&lt;p&gt;TypeScriptのminifyは完全にwebpack任せです。&lt;/p&gt;
-
-&lt;p&gt;PNGでは画像データをzlib圧縮するため、画像データではなくても、例えば今回のようなプログラムのソースコードでちゃんと圧縮できます。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://qiita.com/gam0022/items/364c7f76f2787e385161&#34;&gt;GLSLのminifyも検証&lt;/a&gt;はしていて、webpackのLoaderを開発する予定もあったのですが、容量が余裕だったのでGLSLの圧縮はPNG（zlib）だけになりました。&lt;/p&gt;
-
-&lt;p&gt;また、開発用にしか必要ないコードの削除もwebpackの&lt;a href=&#34;https://webpack.js.org/plugins/define-plugin/&#34;&gt;define-plugin&lt;/a&gt;で実現できました。&lt;/p&gt;
-
-&lt;p&gt;webpackとpnginator.rbを組み合わせる手法は、&lt;a href=&#34;https://twitter.com/FMS_Cat&#34;&gt;FMS_Catさん&lt;/a&gt;の&lt;a href=&#34;https://github.com/FMS-Cat/until/&#34;&gt;Until&lt;/a&gt;を参考にしました。&lt;/p&gt;
-
-&lt;p&gt;当初はnode.jsでGLSLのホットリロード機能付きのWebサーバを開発しようと技術検証していたのですが、
-要件は&lt;a href=&#34;https://github.com/webpack/webpack-dev-server&#34;&gt;webpack-dev-server&lt;/a&gt;ですべて実現可能だったので、webpackを採用しました。&lt;/p&gt;
-
-&lt;p&gt;PRごとに圧縮後のファイルサイズを確認するようにしたら、圧縮後のファイルサイズについて知見が貯まりました（例）&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;コードの自動フォーマットをかけると、圧縮効率が上がってファイルサイズが減る&lt;/li&gt;
-&lt;li&gt;コードをコピペすると圧縮効率が高くなるので、実は無理にコードを共通化する意味は実は薄い&lt;/li&gt;
-&lt;li&gt;似たよな構造になるようにコードを意識すると圧縮効率が良くなる&lt;/li&gt;
-&lt;li&gt;関数の順番を入れ替えただけで微妙にサイズが減ったりと謎が多い&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;制作用のエディタ機能の紹介&#34;&gt;制作用のエディタ機能の紹介&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2020-04-19-revision2020/chromatiq-editor.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2020-04-19-revision2020/chromatiq-editor.png&#34; alt=&#34;chromatiq-editor&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;製作のイテレーションを高速化するため、必要なエディタ機能は一通り実装しました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;再生位置のシーク機能
-
-&lt;ul&gt;
-&lt;li&gt;再生・一時停止・停止・フレームのコマ送り・時間の表示単位の秒とビートの切り替え&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;GLSLやTypeScriptのホットリロード機能&lt;/li&gt;
-&lt;li&gt;uniformのパラメータのインスペクタ&lt;/li&gt;
-&lt;li&gt;カメラの自由移動&lt;/li&gt;
-&lt;li&gt;デバッグ用に特定のパスの表示&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;エディタ機能は容量制約に影響しないので、既存のライブラリを積極的に利用しています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ボタン用のアイコンのために、&lt;a href=&#34;https://fontawesome.com/&#34;&gt;fontawesome&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;uniformのパラメータのインスペクタのために、&lt;a href=&#34;https://github.com/dataarts/dat.gui&#34;&gt;dat.gui&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;カメラの自由移動のために、&lt;a href=&#34;https://threejs.org/&#34;&gt;three.js&lt;/a&gt;の&lt;a href=&#34;https://threejs.org/docs/#examples/en/controls/OrbitControls&#34;&gt;OrbitControls&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/gam0022/resimulated#1-get-started&#34;&gt;リポジトリ&lt;/a&gt;をcloneして、 &lt;code&gt;npm run start&lt;/code&gt; すれば、エディタ機能が使えますので、興味がある人はお試しください。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git clone git@github.com:gam0022/resimulated.git
-cd resimulated
-npm install
-
-# 制作用のエディタを起動
-npm run start
-
-# 提出用のビルド（dist\resimulated.html）を生成
-npm run build
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;uniformのパラメータのインスペクタ&#34;&gt;uniformのパラメータのインスペクタ&lt;/h3&gt;
-
-&lt;p&gt;GLSL上で以下のようなuniformを宣言するだけで、そのままインスペクタに表示されるような仕組みを実装しました。&lt;/p&gt;
-
-&lt;p&gt;コメントでは左から順に &lt;code&gt;初期値 min max カテゴリー名&lt;/code&gt; を指定しています。初期値は必須ですが、それ以外は省略可能としました。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;uniform float gEmissiveIntensity;     // 6.0 0 20 emissive
-uniform float gEmissiveSpeed;         // 1 0 2
-uniform float gEmissiveHue;           // 0.33947042613522904 0 1
-uniform float gEmissiveHueShiftBeat;  // 0 0 1
-uniform float gEmissiveHueShiftZ;     // 0 0 1
-uniform float gEmissiveHueShiftXY;    // 0 0 1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;uniform宣言をすると、自動的にインスペクタにパラメータが追加されます。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2020-04-19-revision2020/chromatiq-editor-emissive.png&#34; alt=&#34;chromatiq-editor-emissive&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;私の作品では、フラクタルやIFSといったパラメータの細かな調整が重要になる表現を多用しているため、気軽にパラメータを増やして、気軽に値を調整できるようにしました。&lt;/p&gt;
-
-&lt;p&gt;値の当たりをつけた後に、パラメータのアニメーションを&lt;a href=&#34;https://github.com/gam0022/resimulated/blob/master/src/index.common.ts#L142-L569&#34;&gt;TypeScriptのコード&lt;/a&gt;に落とし込むワークフローにしました。&lt;/p&gt;
-
-&lt;p&gt;これは、インスペクタを動かしている様子の動画です。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;三谷先生に便乗して、MengerSponge をカットしてみました。&lt;br&gt;断面が星みたいになって面白いですね⭐️ &lt;a href=&#34;https://t.co/mCqFnfbjBF&#34;&gt;https://t.co/mCqFnfbjBF&lt;/a&gt; &lt;a href=&#34;https://t.co/QF73xfFL1y&#34;&gt;pic.twitter.com/QF73xfFL1y&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ / encoder killer (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1253296266424930304?ref_src=twsrc%5Etfw&#34;&gt;April 23, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;動画の保存機能&#34;&gt;動画の保存機能&lt;/h3&gt;
-
-&lt;p&gt;処理落ちなしに4K解像度で動画を出力したかったので、以下の機能を実装しました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;映像の連番PNG保存機能&lt;/li&gt;
-&lt;li&gt;サウンドの wav 保存機能&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;.png と .wav を ffmpeg で .mp4 に変換してYouTubeにアップロードしました。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ffmpeg.exe -r 60 -i chromatiq%04d.png -i chromatiq.wav -c:v libx264 -preset slow -profile:v high -coder 1 -pix_fmt yuv420p -movflags +faststart -g 30 -bf 2 -c:a aac -b:a 384k -profile:a aac_low -b:v 68M chromatiq_68M.mp4
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;YouTube用のffmpegのエンコード設定については、以下を参考にしました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://support.google.com/youtube/answer/1722171?hl=ja&#34;&gt;アップロードする動画におすすめのエンコード設定&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;映像ビットレート 2160p（4k）53～68 Mbps&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://gist.github.com/mikoim/27e4e0dc64e384adbcb91ff10a2d3678&#34;&gt;YouTube recommended encoding settings on ffmpeg (+ libx264)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://twitter.com/sasaki_0222/status/1248910333835530241&#34;&gt;解像度とビットレードについて by sasaki_0222&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;映像について&#34;&gt;映像について&lt;/h2&gt;
-
-&lt;p&gt;映像の3D描画は基本的に全部レイマーチングです。&lt;/p&gt;
-
-&lt;p&gt;前半のサイバーなシーンはMandelboxをベースにしました。&lt;/p&gt;
-
-&lt;p&gt;後半の宇宙空間とグリーティングのシーンでは、宇宙空間はレイマーチング、惑星の上のグリーティングの文字はAABBとして解析的に衝突判定をするハイブリッドなレイトレをしています。&lt;/p&gt;
-
-&lt;p&gt;パスの構成は、最終的にこうなりました。&lt;/p&gt;
-
-&lt;p&gt;1パス目と2パス目を分離したのは、シェーダーのコンパイル時間の短縮のためです。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;1パス目: 前半のシーンのレイマーチング&lt;/li&gt;
-&lt;li&gt;2パス目: 後半のシーンのレイマーチング&lt;/li&gt;
-&lt;li&gt;3パス目: テキストの描画&lt;/li&gt;
-&lt;li&gt;4～13パス目: Bloomのポストエフェクト&lt;/li&gt;
-&lt;li&gt;14パス目: ポストエフェクトとトーンマッピング&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;惑星のバリエーション生成の仕組み&#34;&gt;惑星のバリエーション生成の仕組み&lt;/h3&gt;
-
-&lt;p&gt;後半のグリーティングでは、自分が特に尊敬しているデモグループをイメージした惑星が合計14パターン登場します。&lt;/p&gt;
-
-&lt;p&gt;様々なバリエーションの惑星を効率的に生成するための仕組みを実装しました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;地形の高さマップの自動生成&lt;/li&gt;
-&lt;li&gt;テクスチャの色のグラデーションの自動生成&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&#34;地形の高さマップの自動生成&#34;&gt;地形の高さマップの自動生成&lt;/h4&gt;
-
-&lt;p&gt;2DのValue Noiseを重ね合わせたfbm（Fractal Brownian Motion）で地形の高さマップを生成しました。&lt;/p&gt;
-
-&lt;p&gt;さらに、fbm関数をネストして（fbmのUV計算にfbmをつかって）、歪んだような不思議な雰囲気の地形も生成できるようにしました。&lt;/p&gt;
-
-&lt;p&gt;左がfbmのネストよる歪みなしで、右がfbmのネストによる歪みありです。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2020-04-19-revision2020/fbm-shift.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2020-04-19-revision2020/fbm-shift.jpg&#34; alt=&#34;fbm-shift&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;fbmの各種パラメーター（振幅や周波数、Y方向のスケール、歪み用のfbmの強度）は、乱数ではなく、配列で直接指定することで、イメージ通りの結果に調整できるようにしました。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;// fbmAmp, fbmFreq, fbmYScale, fbmShift
-vec4[PLANETS_PAT_MAX * PLANETS_NUM_MAX] planetFbmParams = vec4[](
-    // MIX_A
-    vec4(0.3, 17.0, 1.0, 0.01), vec4(0.05, 10.0, 1.05, 0.0), vec4(0.05, 10.0, 1.05, 0.01),
-    vec4(0.05, 10.0, 4.05, 0.02), vec4(0.05, 10.0, 2.05, 00.1), vec4(0.0),
-    // MIX_B
-    vec4(0.0, 10.0, 1.0, 0.2), vec4(0.0, 10.0, 1.0, 0.01), vec4(0.0, 10.0, 1.0, 0.03),
-    vec4(0.05, 10.0, 1.0, 00.2), vec4(0.06, 10.0, 1.0, 0.03), vec4(0.05, 10.0, 1.0, 0.03));
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;このようなfbmをネストしたシンプルな関数で高さマップを生成しました。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;// 惑星の高さマップ（height map）を生成する関数
-// pは球体のUV, id は惑星のID
-float hPlanetsMix(vec2 p, int id) {
-    p.y *= planetFbmParams[id].z;
-    return fbm(p + 
-        planetFbmParams[id].w * fbm(p, 4.0 * planetFbmParams[id].y), planetFbmParams[id].y);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;テクスチャの色のグラデーションの自動生成&#34;&gt;テクスチャの色のグラデーションの自動生成&lt;/h4&gt;
-
-&lt;p&gt;iqのColor Palettesを使いました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://iquilezles.org/www/articles/palettes/palettes.htm&#34;&gt;Color Palettes - Inigo Quilez :: fractals, computer graphics&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;vec3 pal(in float t, in vec3 a, in vec3 b, in vec3 c, in vec3 d) {
-    return a + b * cos(TAU * (c * t + d));
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;pal 関数の使い方は簡単で、&lt;code&gt;a, b, c, d&lt;/code&gt; を任意に指定すれば、&lt;code&gt;t&lt;/code&gt; を変化することでグラデーションを生成できます。&lt;/p&gt;
-
-&lt;p&gt;今回は &lt;code&gt;a, b, c&lt;/code&gt; は定数、&lt;code&gt;d&lt;/code&gt; は惑星ごとに乱数で決定しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;a, b, c&lt;/code&gt; や乱数のseed値はインスペクタで値を調整しながら、イメージ通りのグラデーションが生成されるまで試行錯誤しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;t&lt;/code&gt; は地形の高さマップにマッピングしました。&lt;/p&gt;
-
-&lt;h3 id=&#34;無数の小惑星のランダムな配置&#34;&gt;無数の小惑星のランダムな配置&lt;/h3&gt;
-
-&lt;p&gt;宇宙空間がスカスカすぎて寂しかったので、無数の小惑星をランダムに配置しようとしたら、予想外に苦戦しました。&lt;/p&gt;
-
-&lt;p&gt;レイマーチングだと空間をmodすることで物体を無限に複製することは簡単なのですが、それでは規則的な配置にしかならず、かなり不自然になってしまいます。&lt;/p&gt;
-
-&lt;p&gt;gazさんのシェーダーを参考にして、空間をgridに分割して、gridごとに乱数を生成して、乱数で確率的に物体を間引く手法を採用しました。&lt;/p&gt;
-
-&lt;p&gt;また、アーティファクトの回避するために、rayの長さを制限する工夫も必要でした。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;もう忘れてるよ。自分で読み解いてしまったじゃないか。xy平面を通常のmod()で分割。z軸の奥行のみgridをseedに乱数を使い間引きしてる。z軸だけ空間移動のスピード、回転を変えてる。アーティファクト対策で、min(map(p), 1.0)を使いrayの長さを制限。effectにビルボードを使い発光を演出。&lt;/p&gt;&amp;mdash; gaz (@gaziya5) &lt;a href=&#34;https://twitter.com/gaziya5/status/1247671912521596928?ref_src=twsrc%5Etfw&#34;&gt;April 7, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;最終的に、ランダムな位置と大きさをもつ小惑星の距離関数はこうなりました。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;float dGomi(vec3 p) {
-    // アーティファクト対策のための固定長の距離
-    float d = 1.0;
-
-    // グリット（4m四方の立方体）の計算
-    vec3 g = vec3(floor(p / 4.0));
-
-    // 座標の繰り返し
-    p = mod(p, 4.0) - 2.0;
-
-    // 確率 rate に応じて球体を配置
-    vec3 rand = hash33(g);
-    float rate = (gPlanetsId != PLANETS_EARTH) ? 0.08 : 0.01;
-    if (rand.x &amp;lt; rate) {
-        p -= (rand - 0.5);
-        d = sdSphere(p, 0.1 * rand.y);
-    }
-
-    // fbmで表面の凹凸のディテールを加える
-    // レイが接近したときだけに計算するのは、LODによる負荷対策
-    // fbmの計算はかなり高負荷なので、LODをしないと激重になる
-    if (d &amp;lt; 0.5) {
-        vec2 uv = uvSphere(normalize(p));
-        uv.x += dot(rand, vec3(1.0));
-        d -= remapTo(rand.z, 0.01, 0.08) * fbm(uv, 5.0);
-    }
-
-    return d;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;音楽について&#34;&gt;音楽について&lt;/h2&gt;
-
-&lt;p&gt;基盤となるGLSLサウンド用のシーケンサーの実装は私が、それ以外のオシレーターの関数やメロディの実装はさだきちさんが担当しました。&lt;/p&gt;
-
-&lt;p&gt;音楽もやはり容量制約のためにGLSLで実装する必要があり、さだきちさんにはコーディングによる作曲をお願いしました。
-さだきちさんはプログラミングもGLSLも未経験だったので、それらの習得から始まりました。
-かなり無茶なお願いだったにも関わらず、かっこいいトランスミュージックを提供してくれたさだきちさんには感謝しかありません。ありがとうございます！&lt;/p&gt;
-
-&lt;p&gt;私が担当したGLSLサウンド用のシーケンサーはGLSLサウンド上で実装されており、GLSLサウンドを鳴らす仕組みについては、AMAGIさん（&lt;a href=&#34;https://twitter.com/amagitakayosi&#34;&gt;@amagitakayosi&lt;/a&gt;）の記事を参考に、Shadertoy互換のGLSLサウンドの再生機能を実装しました。ありがとうございます！&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://blog.amagi.dev/entry/veda-sound&#34;&gt;VEDA 2.4: GLSLで音楽を演奏できるようになったぞ！！！ - マルシテイア&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;サウンド用のシーケンサーの利用例&#34;&gt;サウンド用のシーケンサーの利用例&lt;/h3&gt;
-
-&lt;p&gt;これはベースのパートの波形を生成するGLSLの関数です。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;vec2 bass1(float beat, float time) {
-// 1つのパターンのビート数
-#define BASS1_BEAT_LEN 8
-
-// パターンの種類
-#define BASS1_DEV_PAT 10
-
-// 楽曲全体の長さのパターン数
-#define BASS1_DEV_LEN 32
-
-    // パターンの定義
-    int[BASS1_BEAT_LEN * NOTE_DIV * BASS1_DEV_PAT] notes = int[](
-        // パターン0
-        F(0), F(33), E(0, 33), S(0, 33, 0, 33),
-        F(0), F(33), E(0, 33), S(0, 33, 0, 33),
-
-        // パターン1
-        E(33, 33), S(0, 33, 33, 33), S(0, 33, 33, 33), S(0, 33, 33, 33),
-        E(33, 33), S(0, 33, 33, 33), S(0, 33, 33, 33), S(0, 33, 33, 33),
-
-        // パターン2
-        E(33, 33), S(0, 33, 33, 33), S(0, 33, 33, 33), S(0, 33, 33, 33),
-        E(29, 29), S(0, 29, 29, 29), S(0, 31, 31, 31), S(48, 47, 43, 40),
-
-        // パターン3
-        E(33, 33), S(0, 33, 33, 33), S(0, 33, 33, 33), S(0, 33, 33, 33),
-        E(33, 33), S(0, 33, 33, 33), S(0, 33, 33, 33), S(0, 34, 34, 34),
-
-        // パターン4
-        E(33, 33), S(0, 33, 33, 33), S(0, 33, 33, 33), S(0, 33, 33, 33),
-        E(33, 33), S(0, 33, 33, 33), S(0, 33, 33, 33), S(0, 36, 36, 36),
-
-        // パターン5
-        E(33, 33), S(0, 33, 33, 33), S(0, 33, 33, 33), S(0, 33, 33, 33),
-        E(33, 33), S(0, 33, 33, 33), S(0, 34, 34, 34), S(0, 36, 36, 36),
-
-        // パターン6
-        E(33, 33), S(0, 33, 33, 33), S(0, 33, 33, 33), S(0, 33, 33, 33),
-        E(33, 33), S(0, 33, 33, 33), S(0, 43, 43, 43), S(0, 55, 57, 69),
-
-        // パターン7
-        E(29, 29), S(0, 29, 29, 29), S(0, 29, 29, 29), S(0, 31, 33, 45),
-        E(29, 29), S(0, 29, 29, 29), S(0, 29, 29, 29), S(0, 31, 31, 31),
-
-        // パターン8
-        E(33, 33), S(0, 33, 33, 33), S(0, 33, 33, 33), S(0, 33, 33, 33),
-        E(33, 33), S(0, 33, 33, 33), S(0, 33, 33, 33), S(0, 43, 45, 57),
-
-        // パターン9
-        E(29, 29), S(0, 29, 29, 29), S(0, 29, 29, 29), S(0, 31, 33, 45),
-        E(29, 29), S(0, 29, 29, 29), S(0, 31, 31, 31), S(0, 31, 31, 31));
-
-    // パターンの進行
-    int[BASS1_DEV_LEN / DEV_PACK] development = int[](
-        D(0, 0, 0, 0, 0, 0, 0, 0), D(1, 1, 1, 2, 3, 4, 5, 6),
-        D(7, 0, 7, 8, 7, 0, 9, 0), D(0, 0, 0, 0, 0, 0, 0, 0));
-
-    SEQUENCER(beat, time, BASS1_BEAT_LEN, BASS1_DEV_PAT, BASS1_DEV_LEN,
-        notes, development, bass)
-
-    return ret;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;パターン（2小節分のノートナンバーの並び）の定義と進行は、それぞれ配列で指定できるようにしています。&lt;/p&gt;
-
-&lt;p&gt;音の長さは下記の4種類に対応しました。
-ノートナンバーに0を指定すれば、同じ長さの休符になります。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;O: 全音符&lt;/li&gt;
-&lt;li&gt;F: 4分音符&lt;/li&gt;
-&lt;li&gt;E: 8分音符&lt;/li&gt;
-&lt;li&gt;S: 16分音符&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;GLSLのコンスタントバッファのサイズには上限があり、サウンド用のシェーダー全体で要素数が4096個まででしか配列を宣言できません。&lt;/p&gt;
-
-&lt;p&gt;そこで、&lt;code&gt;O, F, E, S&lt;/code&gt; を関数マクロとし、16分音符を最小単位として各音符を16bit（うち、ノートナンバーが8bit、音の長さが8bit）ずつパッキングしています。
-GLSLのintは32bitなので、int配列の1要素に16分音符なら2つ、8分音符なら1つ入るような設計です。&lt;/p&gt;
-
-&lt;p&gt;また、パターン進行の &lt;code&gt;D&lt;/code&gt; もマクロにしていて、要素数の節約のために4bitずつパッキングをしています。&lt;/p&gt;
-
-&lt;p&gt;続いて、&lt;code&gt;bass&lt;/code&gt; は時間とノートナンバーを入力として、波形を出力するオシレーターのGLSL関数です。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;SEQUENCER&lt;/code&gt; は、時間、パターンの定義の配列、パターンの進行の配列、オシレーターの関数を指定することで、パートごとの波形を生成して &lt;code&gt;vec2 ret&lt;/code&gt; に代入する関数マクロです。
-GLSLでは関数を引数とするような高階関数は実現できませんが、関数マクロで擬似的に実現しました。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;#define SEQUENCER(beat, time, beatLen, devPat, devLen, notes, development, toneFunc)  \
-    int indexOffset = development[int(                                                \
-        mod(beat / float(beatLen * DEV_PACK), float(devLen / DEV_PACK)))];            \
-    indexOffset =                                                                     \
-        (indexOffset &amp;gt;&amp;gt; (4 * int(mod(beat / float(beatLen), float(DEV_PACK))))) &amp;amp; 15; \
-    indexOffset *= beatLen * NOTE_VDIV;                                               \
-                                                                                      \
-    for (int i = 0; i &amp;lt; beatLen * NOTE_VDIV;) {                                       \
-        int index = i + indexOffset;                                                  \
-        int shift = (index % 2 == 1) ? 16 : 0;                                        \
-        int div = ((notes[index &amp;gt;&amp;gt; 1] &amp;gt;&amp;gt; shift) &amp;gt;&amp;gt; 8) &amp;amp; 255;                          \
-        int len = NOTE_VDIV * NOTE_VDIV / div;                                        \
-        for (int j = 0; j &amp;lt; len; j++) {                                               \
-            tmpIndexes[i + j] = i;                                                    \
-        }                                                                             \
-        i += len;                                                                     \
-    }                                                                                 \
-                                                                                      \
-    float indexFloat = mod(beat * float(NOTE_VDIV), float(beatLen * NOTE_VDIV));      \
-    int index = int(indexFloat);                                                      \
-    int shift = (index % 2 == 1) ? 16 : 0;                                            \
-    int note = (notes[(index + indexOffset) &amp;gt;&amp;gt; 1] &amp;gt;&amp;gt; shift) &amp;amp; 255;                    \
-    float localTime =                                                                 \
-        beatToTime((indexFloat - float(tmpIndexes[index])) / float(NOTE_VDIV));       \
-    float amp = (note == 0) ? 0.0 : 1.0;                                              \
-    vec2 ret = vec2(toneFunc(float(note), localTime) * amp);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;パターンの定義・進行のマクロはこちらです。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;// 1ビートを最大何分割するか。16分音符に対応するなら4
-#define NOTE_VDIV 4
-
-// 1ビートのpackingを考慮した分割数。32bitのintに16bitずつ詰めているので
-// 4 / (32 / 16) = 2
-#define NOTE_DIV 2
-
-// 展開用の配列のpacking数。32bitのintに4bitずつ詰めているので
-// 32 / 4 = 8
-#define DEV_PACK 8
-
-#define MAX_BEAT_LEN 8
-int[MAX_BEAT_LEN * NOTE_VDIV] tmpIndexes;
-
-#define O(a)                                                                      \
-    (a | 1 &amp;lt;&amp;lt; 8) | ((a | 1 &amp;lt;&amp;lt; 8) &amp;lt;&amp;lt; 16), (a | 1 &amp;lt;&amp;lt; 8) | ((a | 1 &amp;lt;&amp;lt; 8) &amp;lt;&amp;lt; 16),     \
-        (a | 1 &amp;lt;&amp;lt; 8) | ((a | 1 &amp;lt;&amp;lt; 8) &amp;lt;&amp;lt; 16), (a | 1 &amp;lt;&amp;lt; 8) | ((a | 1 &amp;lt;&amp;lt; 8) &amp;lt;&amp;lt; 16), \
-        (a | 1 &amp;lt;&amp;lt; 8) | ((a | 1 &amp;lt;&amp;lt; 8) &amp;lt;&amp;lt; 16), (a | 1 &amp;lt;&amp;lt; 8) | ((a | 1 &amp;lt;&amp;lt; 8) &amp;lt;&amp;lt; 16), \
-        (a | 1 &amp;lt;&amp;lt; 8) | ((a | 1 &amp;lt;&amp;lt; 8) &amp;lt;&amp;lt; 16), (a | 1 &amp;lt;&amp;lt; 8) | ((a | 1 &amp;lt;&amp;lt; 8) &amp;lt;&amp;lt; 16)
-#define F(a) (a | 4 &amp;lt;&amp;lt; 8) | ((a | 4 &amp;lt;&amp;lt; 8) &amp;lt;&amp;lt; 16), (a | 4 &amp;lt;&amp;lt; 8) | ((a | 4 &amp;lt;&amp;lt; 8) &amp;lt;&amp;lt; 16)
-#define E(a, b) (a | 8 &amp;lt;&amp;lt; 8) | ((a | 8 &amp;lt;&amp;lt; 8) &amp;lt;&amp;lt; 16), (b | 8 &amp;lt;&amp;lt; 8) | ((b | 8 &amp;lt;&amp;lt; 8) &amp;lt;&amp;lt; 16)
-#define S(a, b, c, d) \
-    (a | 16 &amp;lt;&amp;lt; 8) | ((b | 16 &amp;lt;&amp;lt; 8) &amp;lt;&amp;lt; 16), (c | 16 &amp;lt;&amp;lt; 8) | ((d | 16 &amp;lt;&amp;lt; 8) &amp;lt;&amp;lt; 16)
-#define D(a, b, c, d, e, f, g, h) \
-    (a) | (b &amp;lt;&amp;lt; 4) | (c &amp;lt;&amp;lt; 8) | (d &amp;lt;&amp;lt; 12) | (e &amp;lt;&amp;lt; 16) | (f &amp;lt;&amp;lt; 20) | (g &amp;lt;&amp;lt; 24) | (h &amp;lt;&amp;lt; 28)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;re-simulated-の意味&#34;&gt;『RE: SIMULATED』の意味&lt;/h1&gt;
-
-&lt;p&gt;タイトルの『RE: SIMULATED』には2つの意味を込めました。&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;前作『WORMHOLE』の64K Introとしての「再現」&lt;/li&gt;
-&lt;li&gt;SIMULATED REALITY&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;1-前作-wormhole-の64k-introとしての-再現&#34;&gt;1. 前作『WORMHOLE』の64K Introとしての「再現」&lt;/h2&gt;
-
-&lt;p&gt;一昨年のTokyo Demo Fest 2018のCombined Demo Compoでも、さだきちさんとチームを組んで『WORMHOLE』という作品を制作しました（&lt;a href=&#34;https://gam0022.net/blog/2018/12/12/tdf2018/&#34;&gt;記事&lt;/a&gt;）。&lt;/p&gt;
-
-&lt;p&gt;前半のシーンが顕著ですが、『WORMHOLE』と表現や演出が酷似していると思います。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;フラクタルの形状変化&lt;/li&gt;
-&lt;li&gt;光の色の変化&lt;/li&gt;
-&lt;li&gt;シーン転換前の激しい点滅&lt;/li&gt;
-&lt;li&gt;シーン転換後のホワイトイン&lt;/li&gt;
-&lt;li&gt;パーティのロゴの登場&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;『WORMHOLE』はUnityで制作したので、60.7 MB（zip圧縮で 23.18MB）というファイルサイズでした。&lt;/p&gt;
-
-&lt;p&gt;前作では、Unityを利用したことで賛否両論があったので、ツールに頼らなくても同様のビジュアルを再現できることを証明する意図がありました。&lt;/p&gt;
-
-&lt;p&gt;また、64K Introなどの容量制限のある部門への参加が個人的にも憧れだったという理由もあります。&lt;/p&gt;
-
-&lt;p&gt;今回は自作のシステムで作品を制作することでファイルサイズは26KBになりました。&lt;/p&gt;
-
-&lt;p&gt;同じ表現を「再現」しつつも、容量を &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2334&lt;/sub&gt; まで圧縮する試みのコンセプトは達成できました。&lt;/p&gt;
-
-&lt;p&gt;まさか、コンポで優勝するという結果まで「再現」してしまうのは予想外でした（笑）&lt;/p&gt;
-
-&lt;h2 id=&#34;2-simulated-reality&#34;&gt;2. SIMULATED REALITY&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://ja.wikipedia.org/wiki/%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%83%86%E3%83%83%E3%83%89%E3%83%BB%E3%83%AA%E3%82%A2%E3%83%AA%E3%83%86%E3%82%A3&#34;&gt;Simulated Reality&lt;/a&gt;という裏設定もありました。&lt;/p&gt;
-
-&lt;p&gt;作品の最後に「RE: SIMULATED」の文字が&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;RE: SIMULATED&lt;/code&gt; → &lt;code&gt;RE&lt;/code&gt; → &lt;code&gt;REALITY&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;と変化して、REALITYに変化するタイミングで「地球」がフラッシュバックするのは、Simulated Realityの暗喩です。&lt;/p&gt;
-
-&lt;p&gt;前半のサイバーなシーンは電子的な仮想空間という設定で、シーン転換時に球体を中心に空間が歪んで圧縮するのは、宇宙誕生の爆発であるビッグバンの暗喩です。&lt;/p&gt;
-
-&lt;p&gt;この世界は上位存在によって電子的にシミュレーションされた仮想現実で、最後に自分たちが住む地球を見つけるというストーリーでした（あくまで裏設定だったので、見た人に通じなくても良い）。&lt;/p&gt;
-
-&lt;p&gt;できれば現実と見分けがつかないようなリアルなグラフィックで表現できたら良かったのですが、力量不足でした……。&lt;/p&gt;
-
-&lt;h1 id=&#34;おわりに&#34;&gt;おわりに&lt;/h1&gt;
-
-&lt;p&gt;Webフロントエンドは久しぶりで、node.jsとwebpackは初めてだったので、新しい技術を学ぶ良い機会となりました。&lt;/p&gt;
-
-&lt;p&gt;昔はjQueryが必要だったDOMのセレクターやHTTPアクセスが、標準のAPI（&lt;a href=&#34;https://developer.mozilla.org/ja/docs/Web/API/Document/querySelector&#34;&gt;querySelector&lt;/a&gt;や&lt;a href=&#34;https://developer.mozilla.org/ja/docs/Web/API/Fetch_API/Using_Fetch&#34;&gt;Fetch&lt;/a&gt;）になっていて驚きました。&lt;/p&gt;
-
-&lt;p&gt;TypeScript（ECMascript）に苦手意識がありましたが、最近はかなり使いやすい言語になったなぁと認識を改めました。
-演算子オーバーロードがないのだけは、3Dプログラミングには必須のベクトル計算の実装の可読性が落ちて苦しい気持ちになったので、早くサポートして欲しいと感じました。&lt;/p&gt;
-
-&lt;p&gt;また、64K Introのエントリーは今回が初めてということで、どのくらいのコンテンツが詰め込めるか感覚がつかめず、容量を半分以上も余らせてしまいました。
-次の機会には64KBギリギリまで使って、もっと映像としても洗練させて、さらにCoolな作品を発表したいです。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;実は26KBしか使いきれなかったので、次回は64KBギリギリまで使えるように精進します💪 &lt;a href=&#34;https://t.co/uxF2M5DZmg&#34;&gt;pic.twitter.com/uxF2M5DZmg&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ / encoder killer (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1249677712815321088?ref_src=twsrc%5Etfw&#34;&gt;April 13, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;例年のRevisionの64K Introの作品と比較すると、かなり未熟なので、もっと精進して最高のデモを作りたいという気持ちです。&lt;/p&gt;
-
-&lt;p&gt;ともあれ、このたびは優勝作品に選んでいただき、とても光栄に思います。&lt;/p&gt;
-
-&lt;p&gt;世界中の尊敬するデモチームの方々からいただいたお祝いのコメントも嬉しかったです。わーい！&lt;/p&gt;
-
-&lt;p&gt;最後に、世界的に大変な状況の中、オンラインでの開催のためにご尽力いただいた皆様に、心より感謝申し上げます。
-とても楽しく充実した3日間を過ごせました。来年はドイツでお会いしましょう！&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme" content="hugo-academic">
+    <meta name="generator" content="Hugo 0.17" />
+    <meta name="author" content="@gam0022">
+    <meta name="description" content="ソフトウェアエンジニア">
+
+    <link rel="stylesheet" href="https://gam0022.net/css/highlight.min.css">
+    <link rel="stylesheet" href="https://gam0022.net/css/bootstrap.custom.css">
+    <link rel="stylesheet" href="https://gam0022.net/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://gam0022.net/css/academicons.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+    <link rel="stylesheet" href="https://gam0022.net/css/hugo-academic.css?2021-05-30">
+    
+
+    
+    <link rel="alternate" href="https://gam0022.net/index.xml" type="application/rss+xml" title="gam0022.net">
+    <link rel="feed" href="https://gam0022.net/index.xml" type="application/rss+xml" title="gam0022.net">
+    
+    <link rel="shortcut icon" href="https://gam0022.net/img/favicon.png" type="image/png">
+    
+
+    <title>レイトレ合宿8参加レポート | gam0022.net</title>
+
+    
+        <meta property="og:type" content="article">
+        <meta property="og:description" content="9月2日(金)～9月4日(日)に沖縄本島で開催されたレイトレ合宿8に参加しました。
+
+自作のレンダラーでこんな動画を 10分の制限時間 でレンダリングして5位をいただきました！
+
+
+
+
+
+レイマーチングとポリゴンをハイブリッドに描画できる単方向パストレーシングのレンダラーをOptiXで開発して16人中7位でした。レンダリング時間は10分（1フレーム2秒）だったので、NEEやMISなどサンプリングの高速化も行いました。動画は本戦で実際に出力されたファイルです。#レイトレ合宿 pic.twitter.com/LDgKL7gLsY&mdash; がむ (@gam0022) September 4, 2022 
+
+">
+    
+
+    
+        <meta property="og:image" content="https://gam0022.net/images/posts/2022-09-26-rtcamp8/267.jpg">
+        <meta name="twitter:card" content="summary_large_image">
+    
+
+    <meta property="fb:app_id" content="413045302370371">
+    <meta property="og:title" content="レイトレ合宿8参加レポート | gam0022.net">
+    <meta property="og:url" content="https://gam0022.net/blog/2022/10/17/rtcamp8/">
+
+    <meta name="twitter:site" content="@gam0022">
+
+    <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'ja'}</script>
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents">
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.7";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <script>
+    (function() {
+      var cx = '014076568914435119268:lp0lsoyv6uk';
+      var gcse = document.createElement('script');
+      gcse.type = 'text/javascript';
+      gcse.async = true;
+      gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(gcse, s);
+    })();
+  </script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TEZN6LYHVZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TEZN6LYHVZ');
+</script>
+
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+    <div class="container">
+
+        
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://gam0022.net/">gam0022.net</a>
+        </div>
+
+        
+        <div class="collapse navbar-collapse" id="#navbar-collapse-1">
+
+            
+            <ul class="nav navbar-nav navbar-left">
+                
+                <li class="nav-item"><a href="https://gam0022.net/#top"><i class='fa fa-home'></i> Home</a></li>
+                
+                <li class="nav-item"><a href="https://gam0022.net/post/"><i class='fa fa-pencil-square-o'></i> Post</a></li>
+                
+                <li class="nav-item"><a href="https://gam0022.net/works"><i class='fa fa-photo'></i> Work</a></li>
+                
+            </ul>
+
+            
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item google-search-item"><gcse:searchbox-only></gcse:searchbox-only>
+</li>
+                
+                <li class="nav-item"><a href="https://gam0022.net/webgl/#raymarching_reflect"><i class='fa fa-flask'></i> WebGL</a></li>
+                
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-9">
+            <article class="article" itemscope itemtype="http://schema.org/Article">
+
+                
+
+                <h3 class="article-title" itemprop="name">レイトレ合宿8参加レポート</h3>
+                
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2022-10-17 10:00:00 &#43;0900 JST" itemprop="datePublished">2022-10-17</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/cg">CG</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%b3%e3%82%b0">レイトレーシング</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%91%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%b3%e3%82%b0">パストレーシング</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/optix">OptiX</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%9e%e3%83%bc%e3%83%81%e3%83%b3%e3%82%b0">レイマーチング</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/cuda">CUDA</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/gpu">GPU</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%88%e3%83%ac%e5%90%88%e5%ae%bf">レイトレ合宿</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e5%8c%97%e6%9d%a1%e3%81%9d%e3%81%b5%e3%81%83">北条そふぃ</a>
+        
+    </span>
+    
+    
+
+    
+        
+
+<div class="share-box">
+    <div class="share_wrap">
+        <div class="share_button">
+            <a href="http://b.hatena.ne.jp/entry/https://gam0022.net/blog/2022/10/17/rtcamp8/" class="hatena-bookmark-button" data-hatena-bookmark-title="レイトレ合宿8参加レポート" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+        </div>
+        <div class="share_button">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://gam0022.net/blog/2022/10/17/rtcamp8/" data-text="レイトレ合宿8参加レポート" data-via="gam0022">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+        <div class="share_button">
+            <div class="g-plus" data-action="share" data-annotation="none"></div>
+        </div>
+        <div class="share_button">
+            <div class="fb-like" data-href="https://gam0022.net/blog/2022/10/17/rtcamp8/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+        </div>
+        <div class="share_button">
+          <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a><script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+        </div>
+    </div>
+</div>
+
+
+    
+
+</div>
+
+
+                <div class="article-style" itemprop="articleBody">
+                    <p>9月2日(金)～9月4日(日)に沖縄本島で開催された<a href="https://sites.google.com/view/raytracingcamp8/">レイトレ合宿8</a>に参加しました。</p>
+
+<p>自作のレンダラーでこんな動画を <strong>10分の制限時間</strong> でレンダリングして5位をいただきました！</p>
+
+<div class="movie-wrap">
+<iframe width="1920" height="1080" src="https://www.youtube.com/embed/c7JqEpaR658" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">レイマーチングとポリゴンをハイブリッドに描画できる単方向パストレーシングのレンダラーをOptiXで開発して16人中7位でした。<br><br>レンダリング時間は10分（1フレーム2秒）だったので、<br>NEEやMISなどサンプリングの高速化も行いました。<br><br>動画は本戦で実際に出力されたファイルです。<a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;ref_src=twsrc%5Etfw">#レイトレ合宿</a> <a href="https://t.co/LDgKL7gLsY">pic.twitter.com/LDgKL7gLsY</a></p>&mdash; がむ (@gam0022) <a href="https://twitter.com/gam0022/status/1566269176314220544?ref_src=twsrc%5Etfw">September 4, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p></p>
+
+<p>コロナの影響もあり、3年ぶりのレイトレ合宿でした…！</p>
+
+<p>台風11号がちょうど沖縄に直撃してしまい、天候には恵まれなかったのは残念でしたが、とても充実した合宿でした。</p>
+
+<p>合宿の様子や雰囲気を詳しく知りたい方は、Ki_NaN_komotiさんのブログ記事がオススメです。</p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">２週間ぐらい経ちましたがレイトレ合宿の参加レポートを書きました<br><br>レンダラー開発記とレイトレ合宿の様子を書いています<a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;ref_src=twsrc%5Etfw">#レイトレ合宿</a><a href="https://t.co/Fhtvuz9n2H">https://t.co/Fhtvuz9n2H</a></p>&mdash; Ki_NaN_komoti (@Kinakomoti2357) <a href="https://twitter.com/Kinakomoti2357/status/1571122433763184640?ref_src=twsrc%5Etfw">September 17, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<h1 id="本戦用のレンダラーの解説">本戦用のレンダラーの解説</h1>
+
+<p>こちらが本戦のプレゼン資料です。</p>
+
+<div class="google-slide-wrap">
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTTvbJ3UILqFymar8yG4VOomRdeJzfeS8zoehGZruGQCmq8A2cQ4rru3WYfZdi3xRD4PkE3yamqRHjt/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1440" height="839" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
+
+<p>GitHubに<a href="https://github.com/gam0022/redflash_rtcamp8">リポジトリ</a>も公開しています。急いで実装したので品質は低いです。</p>
+
+<p><a href="/blog/2019/09/18/rtcamp7/">前回のレイトレ合宿7</a>で開発したRedflashというレンダラーを動画に対応させました。</p>
+
+<p><a href="/images/posts/2022-09-26-rtcamp8/slide_p2.png"><img src="/images/posts/2022-09-26-rtcamp8/slide_p2.png" alt="スライド 基本機能" /></a></p>
+
+<p>前回までにこれらの基本的な機能は実装していました。</p>
+
+<ul>
+<li>単方向のパストレーシング</li>
+<li>Disney BRDF</li>
+<li>NEE</li>
+<li>MIS</li>
+<li>レイマーチングの衝突判定（OptiXのカスタムプリミティブとして実装）</li>
+<li>ACES Filmic Tone Mapping</li>
+<li>Deep Learning Denoising（ディープラーニングによるデノイザー、OptiXを使えば簡単に利用できる）</li>
+</ul>
+
+<p>今年から静止画部門が廃止されたので、動画部門への対応を行いました。</p>
+
+<ul>
+<li>アニメーション（シーンの動的な更新）</li>
+<li>動画のための画像の連番出力</li>
+</ul>
+
+<h2 id="レンダラーの出力設定">レンダラーの出力設定</h2>
+
+<p>出力解像度の高さ・フレーム数の多さは、分かりやすくアピールポイントになるので、ギリギリを攻めました。</p>
+
+<ul>
+<li>解像度は1920x1080</li>
+<li>フレーム数は300（30FPS * 10秒）</li>
+</ul>
+
+<p><strong>制限時間は10分（600秒）なので、1フレームあたりの時間は2秒でした。</strong></p>
+
+<p><code>長さは3秒以上10秒以下</code> というレギュレーションだったので、上限の10秒にしました。</p>
+
+<p>パストレーシングの場合はゆったりしたアニメーションの方が映えそうなので、60FPSではなく30FPSにしました。
+普通のPCのモニターのリフレッシュレートは60Hzだと思うので、24FPSなど中途半端なのは選択肢から除外していました。</p>
+
+<p>PNGの保存（エンコード＋ファイル保存）と、レンダリングは別スレッドで並列実行するようにしました。
+解像度は2160pにするとPNGのエンコード時間がレンダリングよりもボトルネックになるので1080pを選びました。</p>
+
+<p>前回のレイトレ合宿7の本戦の静止画部門では、1フレームに60秒使えました。
+使える時間が30分の1まで急激に短くなったのは大変でした。</p>
+
+<p>さらに実行環境（AWSのEC2インスタンス）も大幅にスペックダウンしていたのも痛手でした。</p>
+
+<ul>
+<li>p3.16xlarge（レイトレ合宿7）</li>
+<li>g4dn.xlarge（レイトレ合宿8）</li>
+</ul>
+
+<p>g4dn.xlargeではRTコアが使えるようになったようですが、レイマーチングが主なので自分の場合は恩恵があまりありませんでした…</p>
+
+<h2 id="optixのバージョンについて">OptiXのバージョンについて</h2>
+
+<p>今回は最新のOptiX7でレンダラーを実装しようと思ったのですが、最終的には前回と同じOptiX6で提出しました。</p>
+
+<p><a href="/blog/2022/08/08/raymarching-vs-raycasting/">アドベントカレンダー</a>ではOptiX7で実装をしていました。</p>
+
+<p>OptiX7ではなぜかポリゴンとレイマーチングのプリミティブを混在するとパフォーマンスが異常に悪化する問題が発生してしまい、これを解決する方法が見つからず、提出まで時間もなかったので諦めてOptiX6を採用しました。</p>
+
+<p>もしパフォーマンスの問題を解決できたとしても、OptiX7はかなり低レイヤーのAPIになっていたので、何かしらのラッパーを開発しないと使うのは大変に思いました。セットアップするだけでもかなり大量のコードの実装が必要でした。</p>
+
+<h2 id="アニメーション要素">アニメーション要素</h2>
+
+<p>10秒の尺に3種類のアニメーション要素を詰め込みました。</p>
+
+<ul>
+<li>ライトのアニメーション</li>
+<li>レイマーチングのパラメーターのアニメーション</li>
+<li>マテリアルのアニメーション</li>
+</ul>
+
+<p>動画の内容もそれぞれのアニメーションの要素を1つ1つ紹介するような感じにしました。</p>
+
+<h3 id="ライトのアニメーション">ライトのアニメーション</h3>
+
+<p><a href="/images/posts/2022-09-26-rtcamp8/light_animation_960.gif"><img src="/images/posts/2022-09-26-rtcamp8/light_animation_960.gif" alt="ライトのアニメーション" /></a></p>
+
+<p>2つのポイントライトをアニメーションしました。</p>
+
+<p>OptiX6系では以下のようにmarkDirtyしてからlaunchすることでアクセラレーション構造を更新できました。</p>
+
+<pre><code class="language-c">light_group-&gt;getAcceleration()-&gt;markDirty();
+light_group-&gt;getContext()-&gt;launch(0, 0, 0);
+
+top_group_light-&gt;getAcceleration()-&gt;markDirty();
+top_group_light-&gt;getContext()-&gt;launch(0, 0, 0);
+</code></pre>
+
+<p>シーン内のプリミティブの数が少ないので、このあたりは工夫しなくてもパフォーマンス上の問題はありませんでした。</p>
+
+<p>NEE用にライトの情報の構造体の配列（ComputeShaderのStructuredBufferのようなもの）を渡しているので、これも毎フレーム更新が必要でした。</p>
+
+<h3 id="レイマーチングのパラメーターのアニメーション">レイマーチングのパラメーターのアニメーション</h3>
+
+<p><a href="/images/posts/2022-09-26-rtcamp8/raymarching-animation_960.gif"><img src="/images/posts/2022-09-26-rtcamp8/raymarching-animation_960.gif" alt="レイマーチングのパラメーターのアニメーション" /></a></p>
+
+<p>せっかくレイマーチングでフラクタル（Mandelboxの軽量版）を描画しているので、フラクタルのパラメーターをアニメーションさせてみました。</p>
+
+<p>CUDAでtimeを受け取るようにして、timeを元にパラメーターをアニメーションしているだけなので、とても簡単に実装できました。</p>
+
+<h3 id="マテリアルのアニメーション">マテリアルのアニメーション</h3>
+
+<p><a href="/images/posts/2022-09-26-rtcamp8/menger_960.gif"><img src="/images/posts/2022-09-26-rtcamp8/menger_960.gif" alt="マテリアルのアニメーション" /></a></p>
+
+<p>マテリアルのパラメーターをアニメーション可能にして、ここではEmissiveをアニメーションさせるようにしました。</p>
+
+<p>Emissiveのアニメーションが映えるように、MengerSpongeにしました。平面が多いので光の反射が綺麗に見せられるかなと思ってこうなりました。
+roughnessなどひたすら微調整して、最終的に気に入るルックにできました。</p>
+
+<p>実装的にはマテリアルのパラメーターを更新する専用のCallable Program（OptiX用語で関数ポインターのようなもの）を定義しました。</p>
+
+<p>CUDAの関数で好き勝手にアニメーションできるようにしました。</p>
+
+<h2 id="アダプティブなeps">アダプティブなeps</h2>
+
+<p><a href="/images/posts/2022-09-26-rtcamp8/zoom-out_960.gif"><img src="/images/posts/2022-09-26-rtcamp8/zoom-out_960.gif" alt="ズームアウト" /></a></p>
+
+<p>前回のレイトレ合宿に引き続き、今回もアダプティブなeps計算をしています。</p>
+
+<p>カメラからの距離に応じてレイマーチングの衝突判定につかうepsを変化させることで、実質的なLODのようなことをしています。</p>
+
+<p>カメラ距離が変化してもちょうど良い感じのディテールでフラクタルを描画することができました。</p>
+
+<h2 id="デバッグ機能">デバッグ機能</h2>
+
+<h3 id="wasd機能">WASD機能</h3>
+
+<p><a href="/images/posts/2022-09-26-rtcamp8/wasd-v1.gif"><img src="/images/posts/2022-09-26-rtcamp8/wasd-v1.gif" alt="WASD機能" /></a></p>
+
+<p>いい感じのカメラアングルを探るためにWASDでカメラを移動できるようにしました。</p>
+
+<p>余談ですが、Unityのシーンビューの右クリックでも同じようなことができます。Unityでカメラワークを実装するときもこの機能をよく活用しています。</p>
+
+<h3 id="デバッグ用のレンダラー">デバッグ用のレンダラー</h3>
+
+<p><a href="/images/posts/2022-09-26-rtcamp8/redflash_debug_render.gif"><img src="/images/posts/2022-09-26-rtcamp8/redflash_debug_render.gif" alt="デバッグ用のレンダラー" /></a></p>
+
+<p>パストレーシングで描画すると処理が重くてフレーム落ちするのでアニメーションの確認には適しません。</p>
+
+<p>アニメーションをリアルタイムに確認できるように、レンダリングの品質を落としたデバッグ用のレンダラーも実装しました。</p>
+
+<h2 id="awsの上限緩和申請は早めにやろう">AWSの上限緩和申請は早めにやろう</h2>
+
+<p>AWSの上限緩和申請（4vCPU）は時間がかかる場合もあるので、提出直前にやるのは良くなかったです。</p>
+
+<p>他の参加者からはすぐに申請が通ったという声も聞いたので、担当者ガチャに外れただけの可能性はあります。</p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">AWSの上限緩和申請(4vCPU)、1週間くらいかかったな<br><br>申請: 2022/08/23 1:49<br>承認: 2022/08/29 10:37<br><br>もっと事前にやっておくべきだった…</p>&mdash; がむ (@gam0022) <a href="https://twitter.com/gam0022/status/1564068725212360704?ref_src=twsrc%5Etfw">August 29, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<h1 id="セミナー資料">セミナー資料</h1>
+
+<p>レイトレ合宿ではセミナーも行われます。</p>
+
+<p>今年は参加者全員で発表を行ったので、朝から晩までたくさんのセミナーを聞くことができました。</p>
+
+<div class="google-slide-wrap">
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSdZQILhwkXvTsW024mmgc5V0G0sdFY2CQ1a5GtN953__e5drmPzBqVqr1qin2EtZOelzu6cl9IT9M2/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1440" height="839" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
+
+<p>私は「レイマーチングのすすめ」という発表をしました。</p>
+
+<p>過去資料を参照しながら、レイマーチングについて個人的に意外だと感じる部分や、Shadertoyなどで使わているテクニックについて、広く浅く紹介しました。</p>
+
+<p>口頭での説明が前提の発表なので、資料だけでは分かりにくいと思いますが、雰囲気だけでも伝わればと思います。</p>
+
+<h1 id="印象に残った作品">印象に残った作品</h1>
+
+<p>たた (@8picoz) さんがRust 100%のGPUレンダラーを開発していて、前々回のレイトレ合宿までは私もRustを使っていたということもあり、個人的にとても参考にしたいと思いました。
+Vulkanのレイトレーシング機能をつかっていて、VulkanではSPIR-Vというシェーダーの中間コードの仕組みが使えるようになっているので、任意の言語でシェーダーを実装できるようになりました。
+SPIR-Vをつかうことで、GPUコードもRustで実装をしたそうです。すごい良さそう！</p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">こんな感じの動画をレンダリングして11位でした！ <a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;ref_src=twsrc%5Etfw">#レイトレ合宿</a> <a href="https://t.co/aSEekYHQgr">pic.twitter.com/aSEekYHQgr</a></p>&mdash; たた (@8picoz) <a href="https://twitter.com/8picoz/status/1566239120065982465?ref_src=twsrc%5Etfw">September 4, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p>うしお (@ushiostarfish) さんはNeRFで絵を出していました。
+既存の機械学習のライブラリを使わずに、CUDAでスクラッチ実装したとのことだったので、個人的にとても驚きした。
+学習のための写真も自分で苦労して撮影したという裏話も聞けて良かったです。</p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">一発ネタのNeRFで、もはやレイトレなのか分からなくなってきましたが、思いのほか反響があってよかったです！<br>実装と解説スライドなどこちらにあります<a href="https://t.co/YdeNXrIYBF">https://t.co/YdeNXrIYBF</a><br><br>運営の皆さま、今年も大変お疲れ様でございました！大変充実したイベントをありがとうございました！<a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;ref_src=twsrc%5Etfw">#レイトレ合宿</a></p>&mdash; うしお (@ushiostarfish) <a href="https://twitter.com/ushiostarfish/status/1568187460596953093?ref_src=twsrc%5Etfw">September 9, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p>Shocker (@Shocker_0x15) さんのNeural Radiance Cachingをボリュームに適用して高速化をしていました。
+他の参加者と差別化できていて、結果も綺麗ですごいと思いました。機械学習の波がレイトレ合宿にも来ているのを感じました。</p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">3年ぶりの <a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;ref_src=twsrc%5Etfw">#レイトレ合宿</a> 8でMulti-scatteringな雲の動画をレンダリングして1位を頂きました！<br>普通にやると重すぎて間に合わないのでNeural Radiance Cachingをボリュームに適用して高速化しました。<br><br>レンダラー紹介スライド<a href="https://t.co/ry4W70XcgI">https://t.co/ry4W70XcgI</a> <a href="https://t.co/82OFf5rYue">pic.twitter.com/82OFf5rYue</a></p>&mdash; Shocker (@Shocker_0x15) <a href="https://twitter.com/Shocker_0x15/status/1566267613440684033?ref_src=twsrc%5Etfw">September 4, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p>hole (@h013) はゴールベースコースティクスを実装していました。分散の発生する処理がほとんどなく、Deterministicに結果が決まるそうで、ノイズがまったくないめちゃくちゃ綺麗な結果でした。
+他の参加者と違うアプローチで差別化ができていて、結果もめちゃくちゃ綺麗でいいなと思いました。</p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">レイトレ合宿終わりました。皆さんありがとうござました！<br><br>僕はコースティクスを実装し、こんな感じの動画をレンダリングして４位でした。 <br><br> <a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;ref_src=twsrc%5Etfw">#レイトレ合宿</a> <a href="https://t.co/NbHutC9KtB">pic.twitter.com/NbHutC9KtB</a></p>&mdash; hole (@h013) <a href="https://twitter.com/h013/status/1566238238959759361?ref_src=twsrc%5Etfw">September 4, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p>Shinji Ogaki (@ShinjiOgaki) さんはCPUレンダラーかつデノイズしないという条件で、ノイズがまったくない綺麗な絵を出していて、圧倒的な実装力の違いを見せつけられました。強者の風格をとても感じる作品でした。</p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">記事はまる一日で3000くらい閲覧があったようなので、合宿に興味がある人が多いのかも？<br>せっかくなので、少し尺の長い動画を載せておきます。<a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;ref_src=twsrc%5Etfw">#レイトレ合宿</a> <a href="https://twitter.com/hashtag/generative?src=hash&amp;ref_src=twsrc%5Etfw">#generative</a> <a href="https://twitter.com/hashtag/creativecoding?src=hash&amp;ref_src=twsrc%5Etfw">#creativecoding</a> <a href="https://twitter.com/hashtag/processing?src=hash&amp;ref_src=twsrc%5Etfw">#processing</a> <a href="https://t.co/RqMLxaUIMX">pic.twitter.com/RqMLxaUIMX</a></p>&mdash; Shinji Ogaki (@ShinjiOgaki) <a href="https://twitter.com/ShinjiOgaki/status/1566909271043817472?ref_src=twsrc%5Etfw">September 5, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<h1 id="感想">感想</h1>
+
+<p>年々と制限時間が短くなっているのに、ほとんどの参加者はノイズのない綺麗なレンダリング結果を出していて、参加者のレベルがどんどんインフレしているのを感じました。</p>
+
+<p><a href="/images/posts/2022-09-26-rtcamp8/time-limit.png"><img src="/images/posts/2022-09-26-rtcamp8/time-limit.png" alt="レイトレ合宿の時間制限の遷移" /></a></p>
+
+<p>もはやノイズの少ない絵を出すだけでは差別化が難しいので、ユニークな切り口で勝負してくるハイレベルな戦いでした。</p>
+
+<p>今年のセミナーは参加者全員で発表しました。参加者のバックグラウンドもさまざまだったので、いろんな分野の興味深い話や深い話を聞くことができて楽しかったです。</p>
+
+<p>レイトレ合宿を運営の方々、その他の参加者のみなさん、本当にありがとうございました！</p>
+
+<h1 id="写真コーナー">写真コーナー</h1>
+
+<p>天候には恵まれませんでしたが、ホテルがめちゃくちゃ豪華だったり、美味しいご飯を食べたりして沖縄を満喫しました。</p>
+
+<p>写真から雰囲気が少しでも伝われば幸いです。</p>
+
+<p>ホテルは棟ごと貸し切りをしました！まるでレンダリング用のシーンのようにピカピカなお部屋でした！すごい！</p>
+
+<p><a href="/images/posts/2022-09-26-rtcamp8/hotel-1.jpg"><img src="/images/posts/2022-09-26-rtcamp8/hotel-1.jpg" alt="ホテルの様子" /></a>
+<a href="/images/posts/2022-09-26-rtcamp8/hotel-2.jpg"><img src="/images/posts/2022-09-26-rtcamp8/hotel-2.jpg" alt="ホテルの様子" /></a>
+<a href="/images/posts/2022-09-26-rtcamp8/hotel-3.jpg"><img src="/images/posts/2022-09-26-rtcamp8/hotel-3.jpg" alt="ホテルの様子" /></a>
+<a href="/images/posts/2022-09-26-rtcamp8/hotel-4.jpg"><img src="/images/posts/2022-09-26-rtcamp8/hotel-4.jpg" alt="ホテルの様子" /></a>
+<a href="/images/posts/2022-09-26-rtcamp8/hotel-5.jpg"><img src="/images/posts/2022-09-26-rtcamp8/hotel-5.jpg" alt="ホテルの様子" /></a>
+<a href="/images/posts/2022-09-26-rtcamp8/hotel-6.jpg"><img src="/images/posts/2022-09-26-rtcamp8/hotel-6.jpg" alt="ホテルの様子" /></a></p>
+
+<p>沖縄の料理なども堪能しました。合宿自体は2泊でしたが、個人的に延泊して4泊したので料理の写真が多くなっています。</p>
+
+<p>しまぶた屋　地酒の飲み比べ
+<a href="/images/posts/2022-09-26-rtcamp8/food-1.jpg"><img src="/images/posts/2022-09-26-rtcamp8/food-1.jpg" alt="沖縄の料理の様子" /></a></p>
+
+<p>海ぶどう　茶碗蒸し
+<a href="/images/posts/2022-09-26-rtcamp8/food-2.jpg"><img src="/images/posts/2022-09-26-rtcamp8/food-2.jpg" alt="沖縄の料理の様子" /></a></p>
+
+<p>なかゆくい　ハブ酒
+<a href="/images/posts/2022-09-26-rtcamp8/food-3.jpg"><img src="/images/posts/2022-09-26-rtcamp8/food-3.jpg" alt="沖縄の料理の様子" /></a></p>
+
+<p>なかゆくい　マンゴーのかき氷
+<a href="/images/posts/2022-09-26-rtcamp8/food-4.jpg"><img src="/images/posts/2022-09-26-rtcamp8/food-4.jpg" alt="沖縄の料理の様子" /></a></p>
+
+<p>アメリカ食堂
+<a href="/images/posts/2022-09-26-rtcamp8/food-5.jpg"><img src="/images/posts/2022-09-26-rtcamp8/food-5.jpg" alt="沖縄の料理の様子" /></a></p>
+
+<p>タコライスcafe きじむなぁ
+<a href="/images/posts/2022-09-26-rtcamp8/food-6.jpg"><img src="/images/posts/2022-09-26-rtcamp8/food-6.jpg" alt="沖縄の料理の様子" /></a></p>
+
+<p>琉球ダイニング 桃香
+<a href="/images/posts/2022-09-26-rtcamp8/food-7.jpg"><img src="/images/posts/2022-09-26-rtcamp8/food-7.jpg" alt="沖縄の料理の様子" /></a></p>
+
+<p>沖縄のブルーシールアイスクリーム BLUE SEAL
+<a href="/images/posts/2022-09-26-rtcamp8/food-8.jpg"><img src="/images/posts/2022-09-26-rtcamp8/food-8.jpg" alt="沖縄の料理の様子" /></a>
+<a href="/images/posts/2022-09-26-rtcamp8/food-9.jpg"><img src="/images/posts/2022-09-26-rtcamp8/food-9.jpg" alt="沖縄の料理の様子" /></a></p>
+
+<p>ステーキハウス88
+<a href="/images/posts/2022-09-26-rtcamp8/food-10.jpg"><img src="/images/posts/2022-09-26-rtcamp8/food-10.jpg" alt="沖縄の料理の様子" /></a>
+<a href="/images/posts/2022-09-26-rtcamp8/food-11.jpg"><img src="/images/posts/2022-09-26-rtcamp8/food-11.jpg" alt="沖縄の料理の様子" /></a></p>
+
+<p>土～夢 ごはんカフェ 琉球ガラス村店（ドーム）
+食器がおしゃれ
+<a href="/images/posts/2022-09-26-rtcamp8/food-12.jpg"><img src="/images/posts/2022-09-26-rtcamp8/food-12.jpg" alt="沖縄の料理の様子" /></a></p>
+
+<!--
+
+# 関連商品
+
+レンダラー名の由来となった楽曲です。プリパラを見てください。
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=gam00220c-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B06Y3Z1PTK&linkId=e1fef8b2771937a4232c7850b5dca2da"></iframe>
+
+-->
+                </div>
+
+            </article>
+
+            
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2022-10-17 10:00:00 &#43;0900 JST" itemprop="datePublished">2022-10-17</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/cg">CG</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%b3%e3%82%b0">レイトレーシング</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%91%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%b3%e3%82%b0">パストレーシング</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/optix">OptiX</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%9e%e3%83%bc%e3%83%81%e3%83%b3%e3%82%b0">レイマーチング</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/cuda">CUDA</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/gpu">GPU</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%88%e3%83%ac%e5%90%88%e5%ae%bf">レイトレ合宿</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e5%8c%97%e6%9d%a1%e3%81%9d%e3%81%b5%e3%81%83">北条そふぃ</a>
+        
+    </span>
+    
+    
+
+    
+        
+
+<div class="share-box">
+    <div class="share_wrap">
+        <div class="share_button">
+            <a href="http://b.hatena.ne.jp/entry/https://gam0022.net/blog/2022/10/17/rtcamp8/" class="hatena-bookmark-button" data-hatena-bookmark-title="レイトレ合宿8参加レポート" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+        </div>
+        <div class="share_button">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://gam0022.net/blog/2022/10/17/rtcamp8/" data-text="レイトレ合宿8参加レポート" data-via="gam0022">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+        <div class="share_button">
+            <div class="g-plus" data-action="share" data-annotation="none"></div>
+        </div>
+        <div class="share_button">
+            <div class="fb-like" data-href="https://gam0022.net/blog/2022/10/17/rtcamp8/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+        </div>
+        <div class="share_button">
+          <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a><script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+        </div>
+    </div>
+</div>
+
+
+    
+
+</div>
+
+            <nav>
+    <ul class="pager">
+        
+        <li class="previous"><a href="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/"><span aria-hidden="true">&larr;</span> 速度比較！レイマーチングvsレイキャスティング</a></li>
+        
+
+        
+    </ul>
+</nav>
+
+            
+<section id="comments">
+    <div id="disqus_thread">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'gam0022-net';
+    var disqus_identifier = 'https:\/\/gam0022.net\/blog\/2022\/10\/17\/rtcamp8\/';
+    var disqus_title = 'レイトレ合宿8参加レポート';
+    var disqus_url = 'https:\/\/gam0022.net\/blog\/2022\/10\/17\/rtcamp8\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+</section>
+
+
+            <div class="row">
+    <h4 class="blog-title"><img src="/img/gam0022_splash.png" class="icon"> gam0022.net's Tag Cloud</h4>
+    <ul class="category-list">
+    <div class="widget tagcloud">
+        
+        <a href="https://gam0022.net/tags/apache" style="font-size: 12px;">apache(1)</a>
+        
+        <a href="https://gam0022.net/tags/ascii" style="font-size: 12px;">ascii(1)</a>
+        
+        <a href="https://gam0022.net/tags/bootstrap" style="font-size: 12px;">bootstrap(2)</a>
+        
+        <a href="https://gam0022.net/tags/c" style="font-size: 12px;">c#(1)</a>
+        
+        <a href="https://gam0022.net/tags/c&#43;&#43;" style="font-size: 12px;">c&#43;&#43;(1)</a>
+        
+        <a href="https://gam0022.net/tags/canvas" style="font-size: 12px;">canvas(1)</a>
+        
+        <a href="https://gam0022.net/tags/cg" style="font-size: 12px;">cg(30)</a>
+        
+        <a href="https://gam0022.net/tags/cgi" style="font-size: 12px;">cgi(2)</a>
+        
+        <a href="https://gam0022.net/tags/chrome" style="font-size: 12px;">chrome(1)</a>
+        
+        <a href="https://gam0022.net/tags/cocot" style="font-size: 12px;">cocot(1)</a>
+        
+        <a href="https://gam0022.net/tags/coffeescript" style="font-size: 12px;">coffeescript(1)</a>
+        
+        <a href="https://gam0022.net/tags/coins" style="font-size: 12px;">coins(3)</a>
+        
+        <a href="https://gam0022.net/tags/cojt" style="font-size: 12px;">cojt(4)</a>
+        
+        <a href="https://gam0022.net/tags/conoha" style="font-size: 12px;">conoha(2)</a>
+        
+        <a href="https://gam0022.net/tags/contest" style="font-size: 12px;">contest(1)</a>
+        
+        <a href="https://gam0022.net/tags/css" style="font-size: 12px;">css(1)</a>
+        
+        <a href="https://gam0022.net/tags/cuda" style="font-size: 12px;">cuda(3)</a>
+        
+        <a href="https://gam0022.net/tags/daigoroubot" style="font-size: 12px;">daigoroubot(1)</a>
+        
+        <a href="https://gam0022.net/tags/demo" style="font-size: 12px;">demo(1)</a>
+        
+        <a href="https://gam0022.net/tags/develop" style="font-size: 12px;">develop(1)</a>
+        
+        <a href="https://gam0022.net/tags/diary" style="font-size: 12px;">diary(5)</a>
+        
+        <a href="https://gam0022.net/tags/eclipse" style="font-size: 12px;">eclipse(3)</a>
+        
+        <a href="https://gam0022.net/tags/emscripten" style="font-size: 12px;">emscripten(1)</a>
+        
+        <a href="https://gam0022.net/tags/encoding" style="font-size: 12px;">encoding(1)</a>
+        
+        <a href="https://gam0022.net/tags/event" style="font-size: 12px;">event(21)</a>
+        
+        <a href="https://gam0022.net/tags/gcc" style="font-size: 12px;">gcc(1)</a>
+        
+        <a href="https://gam0022.net/tags/gem" style="font-size: 12px;">gem(3)</a>
+        
+        <a href="https://gam0022.net/tags/git" style="font-size: 12px;">git(2)</a>
+        
+        <a href="https://gam0022.net/tags/github" style="font-size: 12px;">github(2)</a>
+        
+        <a href="https://gam0022.net/tags/glsl" style="font-size: 12px;">glsl(12)</a>
+        
+        <a href="https://gam0022.net/tags/glsl-snadbox" style="font-size: 12px;">glsl-snadbox(1)</a>
+        
+        <a href="https://gam0022.net/tags/gnuplot" style="font-size: 12px;">gnuplot(1)</a>
+        
+        <a href="https://gam0022.net/tags/gpu" style="font-size: 12px;">gpu(3)</a>
+        
+        <a href="https://gam0022.net/tags/heroku" style="font-size: 12px;">heroku(1)</a>
+        
+        <a href="https://gam0022.net/tags/hlsl" style="font-size: 12px;">hlsl(1)</a>
+        
+        <a href="https://gam0022.net/tags/homebrew" style="font-size: 12px;">homebrew(2)</a>
+        
+        <a href="https://gam0022.net/tags/houdini" style="font-size: 12px;">houdini(2)</a>
+        
+        <a href="https://gam0022.net/tags/hsp" style="font-size: 12px;">hsp(1)</a>
+        
+        <a href="https://gam0022.net/tags/html5" style="font-size: 12px;">html5(2)</a>
+        
+        <a href="https://gam0022.net/tags/http2" style="font-size: 12px;">http2(1)</a>
+        
+        <a href="https://gam0022.net/tags/https" style="font-size: 12px;">https(1)</a>
+        
+        <a href="https://gam0022.net/tags/hugo" style="font-size: 12px;">hugo(2)</a>
+        
+        <a href="https://gam0022.net/tags/isucon" style="font-size: 12px;">isucon(2)</a>
+        
+        <a href="https://gam0022.net/tags/iterm2" style="font-size: 12px;">iterm2(1)</a>
+        
+        <a href="https://gam0022.net/tags/java" style="font-size: 12px;">java(2)</a>
+        
+        <a href="https://gam0022.net/tags/javascript" style="font-size: 12px;">javascript(8)</a>
+        
+        <a href="https://gam0022.net/tags/keynote" style="font-size: 12px;">keynote(1)</a>
+        
+        <a href="https://gam0022.net/tags/kodelife" style="font-size: 12px;">kodelife(1)</a>
+        
+        <a href="https://gam0022.net/tags/korg-nanokontrol2" style="font-size: 12px;">korg-nanokontrol2(1)</a>
+        
+        <a href="https://gam0022.net/tags/kramdown" style="font-size: 12px;">kramdown(1)</a>
+        
+        <a href="https://gam0022.net/tags/latex" style="font-size: 12px;">latex(3)</a>
+        
+        <a href="https://gam0022.net/tags/lion" style="font-size: 12px;">lion(3)</a>
+        
+        <a href="https://gam0022.net/tags/llvm-gcc" style="font-size: 12px;">llvm-gcc(1)</a>
+        
+        <a href="https://gam0022.net/tags/mac-os-x" style="font-size: 12px;">mac-os-x(18)</a>
+        
+        <a href="https://gam0022.net/tags/markdown" style="font-size: 12px;">markdown(2)</a>
+        
+        <a href="https://gam0022.net/tags/mecab" style="font-size: 12px;">mecab(1)</a>
+        
+        <a href="https://gam0022.net/tags/mountain-lion" style="font-size: 12px;">mountain-lion(1)</a>
+        
+        <a href="https://gam0022.net/tags/moutain-lion" style="font-size: 12px;">moutain-lion(1)</a>
+        
+        <a href="https://gam0022.net/tags/neort" style="font-size: 12px;">neort(1)</a>
+        
+        <a href="https://gam0022.net/tags/nginx" style="font-size: 12px;">nginx(1)</a>
+        
+        <a href="https://gam0022.net/tags/ocaml" style="font-size: 12px;">ocaml(1)</a>
+        
+        <a href="https://gam0022.net/tags/octave" style="font-size: 12px;">octave(1)</a>
+        
+        <a href="https://gam0022.net/tags/octopress" style="font-size: 12px;">octopress(13)</a>
+        
+        <a href="https://gam0022.net/tags/opencv" style="font-size: 12px;">opencv(1)</a>
+        
+        <a href="https://gam0022.net/tags/optix" style="font-size: 12px;">optix(4)</a>
+        
+        <a href="https://gam0022.net/tags/passenger" style="font-size: 12px;">passenger(1)</a>
+        
+        <a href="https://gam0022.net/tags/programming" style="font-size: 12px;">programming(1)</a>
+        
+        <a href="https://gam0022.net/tags/rails" style="font-size: 12px;">rails(2)</a>
+        
+        <a href="https://gam0022.net/tags/rails4" style="font-size: 12px;">rails4(1)</a>
+        
+        <a href="https://gam0022.net/tags/raymarching" style="font-size: 12px;">raymarching(2)</a>
+        
+        <a href="https://gam0022.net/tags/revision" style="font-size: 12px;">revision(2)</a>
+        
+        <a href="https://gam0022.net/tags/rsync" style="font-size: 12px;">rsync(2)</a>
+        
+        <a href="https://gam0022.net/tags/ruby" style="font-size: 12px;">ruby(17)</a>
+        
+        <a href="https://gam0022.net/tags/ruby-c-extension" style="font-size: 12px;">ruby-c-extension(3)</a>
+        
+        <a href="https://gam0022.net/tags/ruby-on-rails" style="font-size: 12px;">ruby-on-rails(1)</a>
+        
+        <a href="https://gam0022.net/tags/rubygems" style="font-size: 12px;">rubygems(1)</a>
+        
+        <a href="https://gam0022.net/tags/rust" style="font-size: 12px;">rust(3)</a>
+        
+        <a href="https://gam0022.net/tags/rvm" style="font-size: 12px;">rvm(1)</a>
+        
+        <a href="https://gam0022.net/tags/sass/scss" style="font-size: 12px;">sass/scss(1)</a>
+        
+        <a href="https://gam0022.net/tags/serversmanvps" style="font-size: 12px;">serversmanvps(3)</a>
+        
+        <a href="https://gam0022.net/tags/shader" style="font-size: 12px;">shader(5)</a>
+        
+        <a href="https://gam0022.net/tags/shader-showdown" style="font-size: 12px;">shader-showdown(1)</a>
+        
+        <a href="https://gam0022.net/tags/shadertoy" style="font-size: 12px;">shadertoy(1)</a>
+        
+        <a href="https://gam0022.net/tags/slide" style="font-size: 12px;">slide(4)</a>
+        
+        <a href="https://gam0022.net/tags/sqlite3" style="font-size: 12px;">sqlite3(1)</a>
+        
+        <a href="https://gam0022.net/tags/ssh" style="font-size: 12px;">ssh(1)</a>
+        
+        <a href="https://gam0022.net/tags/study" style="font-size: 12px;">study(3)</a>
+        
+        <a href="https://gam0022.net/tags/techbooster" style="font-size: 12px;">techbooster(1)</a>
+        
+        <a href="https://gam0022.net/tags/terminal.app" style="font-size: 12px;">terminal.app(1)</a>
+        
+        <a href="https://gam0022.net/tags/textmeshpro" style="font-size: 12px;">textmeshpro(1)</a>
+        
+        <a href="https://gam0022.net/tags/theme" style="font-size: 12px;">theme(1)</a>
+        
+        <a href="https://gam0022.net/tags/three.js" style="font-size: 12px;">three.js(2)</a>
+        
+        <a href="https://gam0022.net/tags/tips" style="font-size: 12px;">tips(1)</a>
+        
+        <a href="https://gam0022.net/tags/tokyodemofest" style="font-size: 12px;">tokyodemofest(10)</a>
+        
+        <a href="https://gam0022.net/tags/trouble" style="font-size: 12px;">trouble(1)</a>
+        
+        <a href="https://gam0022.net/tags/twincal" style="font-size: 12px;">twincal(1)</a>
+        
+        <a href="https://gam0022.net/tags/twitter" style="font-size: 12px;">twitter(1)</a>
+        
+        <a href="https://gam0022.net/tags/typescript" style="font-size: 12px;">typescript(2)</a>
+        
+        <a href="https://gam0022.net/tags/ubuntu" style="font-size: 12px;">ubuntu(2)</a>
+        
+        <a href="https://gam0022.net/tags/unity" style="font-size: 12px;">unity(9)</a>
+        
+        <a href="https://gam0022.net/tags/utf-8-mac" style="font-size: 12px;">utf-8-mac(1)</a>
+        
+        <a href="https://gam0022.net/tags/uva-online-judge" style="font-size: 12px;">uva-online-judge(3)</a>
+        
+        <a href="https://gam0022.net/tags/vim" style="font-size: 12px;">vim(1)</a>
+        
+        <a href="https://gam0022.net/tags/vps" style="font-size: 12px;">vps(2)</a>
+        
+        <a href="https://gam0022.net/tags/vscode" style="font-size: 12px;">vscode(1)</a>
+        
+        <a href="https://gam0022.net/tags/web" style="font-size: 12px;">web(2)</a>
+        
+        <a href="https://gam0022.net/tags/webgl" style="font-size: 12px;">webgl(10)</a>
+        
+        <a href="https://gam0022.net/tags/webrick" style="font-size: 12px;">webrick(1)</a>
+        
+        <a href="https://gam0022.net/tags/windows" style="font-size: 12px;">windows(1)</a>
+        
+        <a href="https://gam0022.net/tags/windows-terminal" style="font-size: 12px;">windows-terminal(1)</a>
+        
+        <a href="https://gam0022.net/tags/x11" style="font-size: 12px;">x11(1)</a>
+        
+        <a href="https://gam0022.net/tags/x86" style="font-size: 12px;">x86(1)</a>
+        
+        <a href="https://gam0022.net/tags/xcode" style="font-size: 12px;">xcode(2)</a>
+        
+        <a href="https://gam0022.net/tags/zsh" style="font-size: 12px;">zsh(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%a2%e3%82%bb%e3%83%b3%e3%83%96%e3%83%a9" style="font-size: 12px;">アセンブラ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%a2%e3%83%95%e3%82%a3%e3%83%aa%e3%82%a8%e3%82%a4%e3%83%88" style="font-size: 12px;">アフィリエイト(3)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%b3%e3%83%9f%e3%82%b1" style="font-size: 12px;">コミケ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%b4" style="font-size: 12px;">ゴ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%b7%e3%82%a7%e3%83%bc%e3%83%80%e3%83%bc" style="font-size: 12px;">シェーダー(3)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%89%e3%83%a1%e3%82%a4%e3%83%b3" style="font-size: 12px;">ドメイン(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%8d%e3%82%bf" style="font-size: 12px;">ネタ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%91%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%b3%e3%82%b0" style="font-size: 12px;">パストレーシング(8)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%96%e3%83%ad%e3%82%b0%e9%81%8b%e5%96%b6" style="font-size: 12px;">ブログ運営(4)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%9a%e3%83%bc%e3%83%91%e3%83%bc%e3%82%af%e3%83%a9%e3%83%95%e3%83%88" style="font-size: 12px;">ペーパークラフト(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%9c%e3%83%bc%e3%83%b3%e3%83%87%e3%82%b8%e3%82%bf%e3%83%ab" style="font-size: 12px;">ボーンデジタル(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%a9%e3%82%a4%e3%83%96%e3%82%b3%e3%83%bc%e3%83%87%e3%82%a3%e3%83%b3%e3%82%b0" style="font-size: 12px;">ライブコーディング(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%aa%e3%83%a2%e3%83%bc%e3%83%88%e3%83%af%e3%83%bc%e3%82%af" style="font-size: 12px;">リモートワーク(3)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%b3%e3%82%b0" style="font-size: 12px;">レイトレーシング(7)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%88%e3%83%ac%e5%90%88%e5%ae%bf" style="font-size: 12px;">レイトレ合宿(7)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%9e%e3%83%bc%e3%83%81%e3%83%b3%e3%82%b0" style="font-size: 12px;">レイマーチング(21)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%87%ba%e7%89%88" style="font-size: 12px;">出版(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%8b%89%e5%bc%b7%e4%bc%9a" style="font-size: 12px;">勉強会(7)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%8c%97%e6%9d%a1%e3%81%9d%e3%81%b5%e3%81%83" style="font-size: 12px;">北条そふぃ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%95%86%e5%93%81%e3%83%ac%e3%83%93%e3%83%a5%e3%83%bc" style="font-size: 12px;">商品レビュー(2)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%a4%a7%e4%ba%94%e9%83%8ebot" style="font-size: 12px;">大五郎bot(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%ae%a3%e4%bc%9d" style="font-size: 12px;">宣伝(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%b0%8f%e3%83%8d%e3%82%bf" style="font-size: 12px;">小ネタ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%8a%80%e8%a1%93%e6%9b%b8%e5%85%b8" style="font-size: 12px;">技術書典(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%97%a5%e6%9c%ac%e8%aa%9e" style="font-size: 12px;">日本語(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%97%a5%e8%a8%98" style="font-size: 12px;">日記(2)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%9b%b8%e7%b1%8d" style="font-size: 12px;">書籍(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%9c%ac" style="font-size: 12px;">本(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%a9%9f%e6%a2%b0%e8%aa%9e%e5%ba%8f%e8%ab%96" style="font-size: 12px;">機械語序論(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e7%99%ba%e8%a1%a8%e8%b3%87%e6%96%99" style="font-size: 12px;">発表資料(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e7%99%bb%e5%a3%87" style="font-size: 12px;">登壇(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e7%a0%94%e7%a9%b6" style="font-size: 12px;">研究(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e7%ab%b6%e6%8a%80%e3%83%97%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%9f%e3%83%b3%e3%82%b0" style="font-size: 12px;">競技プログラミング(4)</a>
+        
+        <a href="https://gam0022.net/tags/%e8%b2%b7%e3%81%a3%e3%81%a6%e8%89%af%e3%81%8b%e3%81%a3%e3%81%9f%e3%82%82%e3%81%ae" style="font-size: 12px;">買って良かったもの(3)</a>
+        
+    </div>
+</ul>
+
+</div>
+
+
+
+
+
+
+<div class="row">
+    <div class="col section-heading">
+        <h1>Recent Posts</h1>
+        <p>最新記事</p>
+        <div class="col-md-12">
+  <div class="row">
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2022/10/17/rtcamp8/" itemprop="url">レイトレ合宿8参加レポート</a></h3>
+      
+      <a href="https://gam0022.net/blog/2022/10/17/rtcamp8/">
+        <img src="https://gam0022.net///images/posts/2022-09-26-rtcamp8/267.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/" itemprop="url">速度比較！レイマーチングvsレイキャスティング</a></h3>
+      
+      <a href="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/">
+        <img src="https://gam0022.net///images/posts/2022-08-08-raymarching-vs-raycasting/raymarching_i4_s256_l300.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2022/05/08/kodelife-midi/" itemprop="url">KodeLifeでMIDIコンを使うのがとても簡単だった</a></h3>
+      
+      <a href="https://gam0022.net/blog/2022/05/08/kodelife-midi/">
+        <img src="https://gam0022.net///images/posts/2022-05-08-kodelife-midi/IMG_5022.MOV_snapshot_00.50.066.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/" itemprop="url">HugoをGitHub Pagesで公開し、2リポジトリ構成の管理を楽にする方法</a></h3>
+      
+      <a href="https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/">
+        <img src="https://gam0022.net///images/posts/2022-05-07-hugo-on-github-pages/thumbnail.png" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2022/04/10/wh-1000xm4/" itemprop="url">WH-1000XM3からWH-1000XM4に乗り換えた</a></h3>
+      
+      <a href="https://gam0022.net/blog/2022/04/10/wh-1000xm4/">
+        <img src="https://gam0022.net///images/posts/2022-04-10-wh-1000xm4/compare.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2021/12/31/tdf2021-shader-showdown/" itemprop="url">Tokyo Demo Fest 2021のShader Showdownに参加しました</a></h3>
+      
+      <a href="https://gam0022.net/blog/2021/12/31/tdf2021-shader-showdown/">
+        <img src="https://gam0022.net///images/posts/2021-12-31-tdf2021-shader-showdown/Collage_Fotor_v3.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2021/12/23/unity-urp-billboard-shader/" itemprop="url">[Unity][URP] Y軸ビルボードシェーダー</a></h3>
+      
+      <a href="https://gam0022.net/blog/2021/12/23/unity-urp-billboard-shader/">
+        <img src="https://gam0022.net///images/posts/2021-12-23-unity-urp-billboard-shader/20211223020601_x1.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2021/12/20/tdf2021-glsl/" itemprop="url">Tokyo Demo Fest 2021のGLSL Graphics Compo優勝作品の解説</a></h3>
+      
+      <a href="https://gam0022.net/blog/2021/12/20/tdf2021-glsl/">
+        <img src="https://gam0022.net///images/posts/2021-12-20-tdf2021-glsl-compo/party1164.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2021/08/23/best-buy/" itemprop="url">リモートワーク「買って良かったモノ・買って失敗したモノ」</a></h3>
+      
+      <a href="https://gam0022.net/blog/2021/08/23/best-buy/">
+        <img src="https://gam0022.net///images/posts/2021-08-23-best-buy/desk_16_9.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+  </div>
+
+  <div class="read-more">
+    <a href="/post" class="btn btn-primary btn-outline">Read more</a>
+  </div>
+</div>
+    </div>
+</div>
+
+            <footer class="site-footer">
+    <div class="container">
+        <p class="powered-by">
+
+            &copy; 2021 gam0022 &middot; 
+
+            Powered by the <a href="https://github.com/gam0022/hugo-academic" target="_blank">Customized Academic theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+            <span class="pull-right"><a href="#" id="back_to_top"><span class="button_icon"><i class="fa fa-chevron-up fa-2x" aria-hidden="true"></i></span></a></span>
+
+        </p>
+    </div>
+</footer>
+
+                    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+        <script src="https://gam0022.net/js/jquery-1.12.3.min.js"></script>
+        <script src="https://gam0022.net/js/bootstrap.custom.js"></script>
+        <script src="https://gam0022.net/js/hugo-academic.js"></script>
+        
+
+        <script>
+            
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-84469205-1', 'auto');
+            ga('send', 'pageview');
+
+             
+            var links = document.querySelectorAll('a');
+            Array.prototype.map.call(links, function(item) {
+                if (item.host != document.location.host) {
+                    item.addEventListener('click', function() {
+                        var action = item.getAttribute('data-action') || 'follow';
+                        ga('send', 'event', 'outbound', action, item.href);
+                    });
+                }
+            });
+            
+
+            $(document).ready(function() {
+                $("#TableOfContents").addClass("bs-docs-sidebar affix");
+                $("#TableOfContents ul").addClass("nav nav-stacked");
+            });
+        </script>
+
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        
+        
+
+    </body>
+</html>
+
+        </div>
+        <div class="col-md-3">
+            <nav id="TableOfContents">
+<ul>
+<li><a href="#本戦用のレンダラーの解説">本戦用のレンダラーの解説</a>
+<ul>
+<li><a href="#レンダラーの出力設定">レンダラーの出力設定</a></li>
+<li><a href="#optixのバージョンについて">OptiXのバージョンについて</a></li>
+<li><a href="#アニメーション要素">アニメーション要素</a>
+<ul>
+<li><a href="#ライトのアニメーション">ライトのアニメーション</a></li>
+<li><a href="#レイマーチングのパラメーターのアニメーション">レイマーチングのパラメーターのアニメーション</a></li>
+<li><a href="#マテリアルのアニメーション">マテリアルのアニメーション</a></li>
+</ul></li>
+<li><a href="#アダプティブなeps">アダプティブなeps</a></li>
+<li><a href="#デバッグ機能">デバッグ機能</a>
+<ul>
+<li><a href="#wasd機能">WASD機能</a></li>
+<li><a href="#デバッグ用のレンダラー">デバッグ用のレンダラー</a></li>
+</ul></li>
+<li><a href="#awsの上限緩和申請は早めにやろう">AWSの上限緩和申請は早めにやろう</a></li>
+</ul></li>
+<li><a href="#セミナー資料">セミナー資料</a></li>
+<li><a href="#印象に残った作品">印象に残った作品</a></li>
+<li><a href="#感想">感想</a></li>
+<li><a href="#写真コーナー">写真コーナー</a></li>
+</ul>
+</nav>
+        </div>
+    </div>
+    
+</div>
