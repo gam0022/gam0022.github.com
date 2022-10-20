@@ -124,6 +124,52 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/02/11/fdtd/" itemprop="url">OctopressでMathJax.rbの導入</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2013-02-11 16:23:00 &#43;0900 JST" itemprop="datePublished">2013-02-11</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/octopress">Octopress</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/latex">latex</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                数値シュミレーションという授業で波動関数をシュミレーションする課題がありました。
+面白かったので忘れないように、MathJax.rbというプラグインのテストを兼ねてメモすることにしました。
+MathJax.rbの導入 MathJax.rbの導入には、30分のチュートリアルでJekyllを理解するが非常に参考になりました。
+ MathJax.rbをダウンロードして、/plugins/にコピーする。 octopressの場合、_layouts/layout.htmlではなくて、source/_includes/custom/head.htmlに次の行を追加する。  # source/_includes/custom/head.html &lt;script type=&quot;text/javascript&quot; src=&quot;<a href="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt;">http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt;</a>  MathJax.rbの使い方 ブロックの場合、mathとendmathタグで囲む
+{% math %} Simple\ FDTD\ Algorithm\ and\ Devils\ in\ the\ Details \ \begin{eqnarray} \psi(x,t + \Delta t) &amp;=&amp; -\psi(x, t - \Delta t) + [2 + \frac{v^2\Delta t^2}{\Delta x ^2} d_x^2] \psi(x,t) \ $$ -\psi(x, t - \Delta t) + 2\psi(x,t) + \frac{v^2\Delta t^2}{\Delta x ^2} d_x^2 \psi(x,t) \ $$ -\psi(x, t - \Delta t) + 2\psi(x,t) + \frac{v^2\Delta t^2}{\Delta x ^2} [ \psi(x - \Delta x, t) + \psi(x + \Delta x, t) - 2 \psi(x, t) ] \ \end{eqnarray} {% endmath %}  インラインの場合、m とemタグで囲む(下のコードだと、emの部分が消えていますが囲んでください)
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2013/02/11/fdtd/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/02/09/ruby-variable/" itemprop="url">初心者が混乱しやすいRubyの変数</a></h3>
         
 
@@ -682,65 +728,6 @@ reset ~_~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         </div>
         <p class="read-more">
             <a href="https://gam0022.net/blog/2012/12/05/circuit-diagram/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/09/06/install-octave-on-mac-os-x/" itemprop="url">GNU Octave を Mac OS Xにインストールする</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2012-09-06 19:27:00 &#43;0900 JST" itemprop="datePublished">2012-09-06</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/mac-os-x">Mac OS X</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/moutain-lion">Moutain Lion</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/homebrew">homebrew</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/octave">Octave</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                大学の数値計算法・数理アルゴリズムなどの授業でMatlabを使わないといけないのですが、 Matlabを買うお金がなかったので、代替ソフトとしてGNU OctaveをMac OS Xに入れました。
-けっこうハマりどころが多かったのでメモします。
-GNU Octaveについて wikipediaからの抜粋です。
- GNU Octaveとは、MATLABと互換性を持ったフリーな数値解析ソフトウェアであり、GNUで開発している。 MATLABとの互換性を主に目指しており、MATLABの機能の多くをOctaveも持っている。また MATLAB のために書かれたプログラムも修正せずに動作するものが多い。
- GNU Octave
-Mountain Lion にしたらHomebrewがおかしくなった人はこれ Mountain Lion にしたら、Homebrewがおかしくなった人は、まず次のリンクを参考にしてFixしましょう。
-Get Mountain Lion and Homebrew to Be Happy
-HomebrewでOctaveを入れる # リポジトリ追加 brew tap free/open # updateしないとうまくいかなかった brew update # OctaveのコンパイルにFortranのコンパイラが必要 brew install gfortran # ようやくOctaveがコンパイルできる brew install octave  plotとかでグラフを描けるようにする Octave自体には、グラフの描画機能はなく、gnuplotに依存しているのでgnuplotを入れます。
-brew install gnuplot  次に、GNUTERMという環境変数を設定します。</p>
-
-<h1 id="bash-profile-export-gnuterm-x11-次にsource-bash-profileをするかログインし直せばoctaveでplotなどからグラフを描画できるようになります">~/.bash_profile export GNUTERM=x11  次にsource ~/.bash_profileをするかログインし直せばOctaveでplotなどからグラフを描画できるようになります。</h1>
-
-<p>ちなみに、GNUTERMを設定しないとこういう感じのエラーになります。
-octave :1&gt; plot(x) gnuplot&gt; set terminal aqua enhanced title &quot;Figure 1&quot; size 560 420 font &quot;*,6&quot; ^ line 0: unknown or ambiguous terminal type; type just &lsquo;set terminal&rsquo; for a list  MacのターミナルからOctaveを使うための設定
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2012/09/06/install-octave-on-mac-os-x/" class="btn btn-primary btn-outline">
                 Read more
             </a>
         </p>

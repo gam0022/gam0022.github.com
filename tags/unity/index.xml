@@ -10,6 +10,18 @@
     <atom:link href="/tags/unity/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>normalizefm.fmにゲスト出演しました</title>
+      <link>https://gam0022.net/blog/2022/10/20/normalizefm/</link>
+      <pubDate>Thu, 20 Oct 2022 10:44:48 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2022/10/20/normalizefm/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://normalize.fm/&#34;&gt;normalize.fm&lt;/a&gt;の第032回にゲスト出演させていただきました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/normalizeFM?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#normalizeFM&lt;/a&gt; の新エピソード公開しました。&lt;br&gt;今回は &lt;a href=&#34;https://twitter.com/gam0022?ref_src=twsrc%5Etfw&#34;&gt;@gam0022&lt;/a&gt; さんをゲストに、普段の収録と比較するとかなりテックな話題に寄った感じで、深い技術の話をいろいろうかがいました。&lt;br&gt;&lt;br&gt;032. たゆまぬ努力とキャッチアップ&lt;a href=&#34;https://t.co/acML0WOwYQ&#34;&gt;https://t.co/acML0WOwYQ&lt;/a&gt;&lt;/p&gt;&amp;mdash; h_doxas (@h_doxas) &lt;a href=&#34;https://twitter.com/h_doxas/status/1582287588978618369?ref_src=twsrc%5Etfw&#34;&gt;October 18, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>[Unity][URP] Y軸ビルボードシェーダー</title>
       <link>https://gam0022.net/blog/2021/12/23/unity-urp-billboard-shader/</link>
       <pubDate>Thu, 23 Dec 2021 10:00:00 +0900</pubDate>

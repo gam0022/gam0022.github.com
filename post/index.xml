@@ -7,8 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>&amp;copy; 2021 gam0022</copyright>
-    <lastBuildDate>Mon, 17 Oct 2022 10:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 20 Oct 2022 10:44:48 +0900</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>normalizefm.fmにゲスト出演しました</title>
+      <link>https://gam0022.net/blog/2022/10/20/normalizefm/</link>
+      <pubDate>Thu, 20 Oct 2022 10:44:48 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2022/10/20/normalizefm/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://normalize.fm/&#34;&gt;normalize.fm&lt;/a&gt;の第032回にゲスト出演させていただきました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/normalizeFM?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#normalizeFM&lt;/a&gt; の新エピソード公開しました。&lt;br&gt;今回は &lt;a href=&#34;https://twitter.com/gam0022?ref_src=twsrc%5Etfw&#34;&gt;@gam0022&lt;/a&gt; さんをゲストに、普段の収録と比較するとかなりテックな話題に寄った感じで、深い技術の話をいろいろうかがいました。&lt;br&gt;&lt;br&gt;032. たゆまぬ努力とキャッチアップ&lt;a href=&#34;https://t.co/acML0WOwYQ&#34;&gt;https://t.co/acML0WOwYQ&lt;/a&gt;&lt;/p&gt;&amp;mdash; h_doxas (@h_doxas) &lt;a href=&#34;https://twitter.com/h_doxas/status/1582287588978618369?ref_src=twsrc%5Etfw&#34;&gt;October 18, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>レイトレ合宿8参加レポート</title>
@@ -3633,49 +3645,6 @@ cbuffer PixelShaderSettings {
 &lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/KLabExpertCamp?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#KLabExpertCamp&lt;/a&gt; で制作しました！&lt;br&gt;凄い人ばかりでめちゃくちゃ良い経験になりました！&lt;a href=&#34;https://t.co/astTdcYc79&#34;&gt;https://t.co/astTdcYc79&lt;/a&gt;&lt;/p&gt;&amp;mdash; 3yen (@3yen_CG) &lt;a href=&#34;https://twitter.com/3yen_CG/status/1304754989412134912?ref_src=twsrc%5Etfw&#34;&gt;September 12, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;メンター賞を頂いたあの「embrace」がツイッター投稿版になりました！&lt;br&gt;ツイッター限定で、映画と同じフレームレートで書き出したバージョンになります&lt;br&gt;フレームレートを下げることで雰囲気も変わりました&lt;br&gt;ぜひ見てください！&lt;a href=&#34;https://twitter.com/hashtag/KLabExpertCamp?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#KLabExpertCamp&lt;/a&gt; &lt;a href=&#34;https://t.co/XE6wsLfws4&#34;&gt;https://t.co/XE6wsLfws4&lt;/a&gt; &lt;a href=&#34;https://t.co/47sXyr8FtL&#34;&gt;pic.twitter.com/47sXyr8FtL&lt;/a&gt;&lt;/p&gt;&amp;mdash; tonoshake🍶 (@TonoShake) &lt;a href=&#34;https://twitter.com/TonoShake/status/1304933850754068480?ref_src=twsrc%5Etfw&#34;&gt;September 13, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>CGWORLD vol.266（2020年10月号）に「デモシーンを支えるプロシージャル技術」という記事を寄稿しました</title>
-      <link>https://gam0022.net/blog/2020/09/13/cgworld-vol266/</link>
-      <pubDate>Sun, 13 Sep 2020 20:00:00 +0900</pubDate>
-      
-      <guid>https://gam0022.net/blog/2020/09/13/cgworld-vol266/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2020-09-13-cgworld-vol266/Collage_Fotor.jpg&#34; alt=&#34;CGWORLD vol.266（2020年10月号）に「デモシーンを支えるプロシージャル技術」という記事を寄稿しました&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;9/10（木）発売のCGWORLD vol.266（2020年10月号）に「デモシーンを支えるプロシージャル技術」という記事を寄稿しました。&lt;/p&gt;
-
-&lt;p&gt;デモシーンの魅力や、64KB制限で映像作品を創るための3Dモデルやテクスチャのプロシージャル生成について解説しています。&lt;/p&gt;
-
-&lt;p&gt;この記事をきっかけにCGWORLD読者の方々にもデモシーンに興味をもっていただき、国内のデモシーンが盛り上がっていくことを願っています。&lt;/p&gt;
-
-&lt;p&gt;もちろん自分の活動を知っている方々もお手に取っていただければとても嬉しいです！&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;9/10（木）発売のCGWORLD vol.266（2020年10月号）に「デモシーンを支えるプロシージャル技術」という記事を寄稿しました。&lt;br&gt;&lt;br&gt;デモシーンの魅力や、64KB制限で映像作品を創るための3Dモデルやテクスチャのプロシージャル生成について解説しています。&lt;a href=&#34;https://t.co/BPf1txlSxU&#34;&gt;https://t.co/BPf1txlSxU&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/CGWjp?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#CGWjp&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/demoscene?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#demoscene&lt;/a&gt; &lt;a href=&#34;https://t.co/XXpCh1xiFw&#34;&gt;pic.twitter.com/XXpCh1xiFw&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ #CEDEC2020 9/4登壇, CGWORLD 10月号 (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1301514617588518915?ref_src=twsrc%5Etfw&#34;&gt;September 3, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;購入方法&#34;&gt;購入方法&lt;/h1&gt;
-
-&lt;p&gt;Amazonのアフェリエイトリンクを貼っておきます。&lt;/p&gt;
-
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B08FP5NM5P&amp;linkId=8ed32da93c5253b64ba074583462b34a&#34;&gt;&lt;/iframe&gt;
-
-&lt;h1 id=&#34;感想&#34;&gt;感想&lt;/h1&gt;
-
-&lt;p&gt;Twitter上の反響を認知している範囲でメモしておきます。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;すごい、、表紙に「デモシーン」の文字があるぅ、、！&lt;a href=&#34;https://twitter.com/hashtag/CGWjp?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#CGWjp&lt;/a&gt;&lt;/p&gt;&amp;mdash; Setsuko (@setsuko_h) &lt;a href=&#34;https://twitter.com/setsuko_h/status/1303997649582874625?ref_src=twsrc%5Etfw&#34;&gt;September 10, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;CGWORLD vol.266「デモシーンを支えるプロシージャル技術」を買ってきて読んだ。ディファードレンダリングか。まさに俺が手を付けようとしてるとこだね。これとエフェクトを何とかしないと勝負にはならないな。&lt;/p&gt;&amp;mdash; gaziya (@gaziya5) &lt;a href=&#34;https://twitter.com/gaziya5/status/1303907439134220288?ref_src=twsrc%5Etfw&#34;&gt;September 10, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;がむさん…！ &lt;a href=&#34;https://t.co/0SV02Jq91M&#34;&gt;pic.twitter.com/0SV02Jq91M&lt;/a&gt;&lt;/p&gt;&amp;mdash; さだきち : sadakkey (@sadakkey) &lt;a href=&#34;https://twitter.com/sadakkey/status/1304006171674640386?ref_src=twsrc%5Etfw&#34;&gt;September 10, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;余談&#34;&gt;余談&lt;/h1&gt;
-
-&lt;p&gt;ついに商業誌デビュー！と思ったら、よく考えたら2007年にWindows100%のフリーゲーム紹介コーナーに自作ゲームがちょっとだけ掲載されたのを思い出しました（当時は中学生）。&lt;/p&gt;
-
-&lt;p&gt;今回は4ページしっかりと担当できましたし、CGWORLDという映像業界において圧倒的な知名度のある雑誌に寄稿する機会をいただけて、本当に嬉しいです。&lt;/p&gt;</description>
     </item>
     
   </channel>

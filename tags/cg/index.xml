@@ -10,6 +10,18 @@
     <atom:link href="/tags/cg/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>normalizefm.fmにゲスト出演しました</title>
+      <link>https://gam0022.net/blog/2022/10/20/normalizefm/</link>
+      <pubDate>Thu, 20 Oct 2022 10:44:48 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2022/10/20/normalizefm/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://normalize.fm/&#34;&gt;normalize.fm&lt;/a&gt;の第032回にゲスト出演させていただきました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/normalizeFM?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#normalizeFM&lt;/a&gt; の新エピソード公開しました。&lt;br&gt;今回は &lt;a href=&#34;https://twitter.com/gam0022?ref_src=twsrc%5Etfw&#34;&gt;@gam0022&lt;/a&gt; さんをゲストに、普段の収録と比較するとかなりテックな話題に寄った感じで、深い技術の話をいろいろうかがいました。&lt;br&gt;&lt;br&gt;032. たゆまぬ努力とキャッチアップ&lt;a href=&#34;https://t.co/acML0WOwYQ&#34;&gt;https://t.co/acML0WOwYQ&lt;/a&gt;&lt;/p&gt;&amp;mdash; h_doxas (@h_doxas) &lt;a href=&#34;https://twitter.com/h_doxas/status/1582287588978618369?ref_src=twsrc%5Etfw&#34;&gt;October 18, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>レイトレ合宿8参加レポート</title>
       <link>https://gam0022.net/blog/2022/10/17/rtcamp8/</link>
       <pubDate>Mon, 17 Oct 2022 10:00:00 +0900</pubDate>
@@ -3942,63 +3954,6 @@ SDFテクスチャをフェッチするUVをこのように時間でclampする�
 &lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2019-06-20-klab-tech-meetup4/live-coding-original.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-06-20-klab-tech-meetup4/live-coding.jpg&#34; alt=&#34;懇親会中のライブコーディングの様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;懇親会中のライブコーディングの様子&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Mercari GDC 2019 報告会に登壇しました</title>
-      <link>https://gam0022.net/blog/2019/04/03/mercari-gdc-2019/</link>
-      <pubDate>Wed, 03 Apr 2019 23:41:14 +0900</pubDate>
-      
-      <guid>https://gam0022.net/blog/2019/04/03/mercari-gdc-2019/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://mercaridev.connpass.com/event/123663/&#34;&gt;Mercari GDC 2019 報告会&lt;/a&gt;に登壇しました。&lt;/p&gt;
-
-&lt;p&gt;私はレンダリング系セッションの紹介に加えて、Meetupはいいぞ！という話をしました。&lt;/p&gt;
-
-&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;43f1a13c03944d5e8f36bf6b649566a5&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;発表中の写真です（&lt;a href=&#34;https://twitter.com/nkjzm/status/1113404837146685440&#34;&gt;@nkjzm さん提供&lt;/a&gt;）。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-04-03-mercari-gdc-2019/presentation.jpg&#34; alt=&#34;発表の様子&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;こちらは当日のTwitterの様子です。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://togetter.com/li/1334523&#34;&gt;Mercari GDC 2019 報告会 まとめ #mercariGDC - Togetter&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;発表資料&#34;&gt;発表資料&lt;/h1&gt;
-
-&lt;p&gt;自分以外の他の発表者の資料をまとめました。&lt;/p&gt;
-
-&lt;h2 id=&#34;nkjzm-https-twitter-com-nkjzm-さん-写真でみるgdc2019とvrの最新情報&#34;&gt;&lt;a href=&#34;https://twitter.com/nkjzm&#34;&gt;@nkjzm&lt;/a&gt; さん「写真でみるGDC2019とVRの最新情報?!」&lt;/h2&gt;
-
-&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;4cb12085fae64a1b8261c5efd1ac1391&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-
-&lt;h2 id=&#34;liketableteninu-https-twitter-com-liketableteninu-さん-spatial-computingの未来に思いを馳せて&#34;&gt;&lt;a href=&#34;https://twitter.com/liketableteninu&#34;&gt;@liketableteninu&lt;/a&gt; さん「Spatial Computingの未来に思いを馳せて」&lt;/h2&gt;
-
-&lt;p&gt;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/3BQHozzVZ0MGbv&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;//www.slideshare.net/NishoMatsusita/spatial-computing&#34; title=&#34;Spatial Computingの未来に思いを馳せて&#34; target=&#34;_blank&#34;&gt;Spatial Computingの未来に思いを馳せて&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;https://www.slideshare.net/NishoMatsusita&#34; target=&#34;_blank&#34;&gt;NishoMatsusita&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;korinvr-https-twitter-com-korinvr-さん-gdc-に行ってきました&#34;&gt;&lt;a href=&#34;https://twitter.com/korinVR&#34;&gt;@korinVR&lt;/a&gt; さん「GDC に行ってきました」&lt;/h2&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;本日のスライドこちらです &lt;a href=&#34;https://t.co/cuDxK1DOJK&#34;&gt;https://t.co/cuDxK1DOJK&lt;/a&gt; ゆるく GDC の地理案内と、主に個人的に激熱だったインディーゲームのセッションの紹介をしました。お聞きくださった皆様ありがとうございました！ &lt;a href=&#34;https://twitter.com/hashtag/mercariGDC?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#mercariGDC&lt;/a&gt;&lt;/p&gt;&amp;mdash; こりん@VR (@korinVR) &lt;a href=&#34;https://twitter.com/korinVR/status/1113447575971975169?ref_src=twsrc%5Etfw&#34;&gt;2019年4月3日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;e-koma-https-twitter-com-e-koma-さん-ゲーム開発者から見たstadia&#34;&gt;&lt;a href=&#34;https://twitter.com/e__koma&#34;&gt;@e__koma&lt;/a&gt; さん「ゲーム開発者から見たSTADIA」&lt;/h2&gt;
-
-&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;d307d0b7b9ac41d5b86055ca6e7ed1f7&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-
-&lt;h2 id=&#34;ash-yanagisawa-https-twitter-com-ash-yanagisawa-さん-reality-is-complex-arの普及までの長い道のり&#34;&gt;&lt;a href=&#34;https://twitter.com/ash_yanagisawa&#34;&gt;@ash_yanagisawa&lt;/a&gt;さん「Reality is Complex ARの普及までの長い道のり」&lt;/h2&gt;
-
-&lt;p&gt;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/Nm9XqHno5uAiXO&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;//www.slideshare.net/SatoshiYanagisawa1/reality-is-complex-ar-139467876&#34; title=&#34;Reality is Complex ARの普及までの長い道のり&#34; target=&#34;_blank&#34;&gt;Reality is Complex ARの普及までの長い道のり&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;//www.slideshare.net/SatoshiYanagisawa1&#34; target=&#34;_blank&#34;&gt;Satoshi Yanagisawa&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;ntaro-https-connpass-com-user-ntaro-さん-vrdcセッションとメーカームーブメントによるgdcの影響&#34;&gt;&lt;a href=&#34;https://connpass.com/user/ntaro/&#34;&gt;ntaro&lt;/a&gt;さん「VRDCセッションとメーカームーブメントによるGDCの影響」&lt;/h2&gt;
-
-&lt;p&gt;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/bQiL0FWNbtFTYa&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;//www.slideshare.net/NakamuraTaro/vrdcgdc&#34; title=&#34;VRDCセッションとメーカームーブメントによるGDCの影響&#34; target=&#34;_blank&#34;&gt;VRDCセッションとメーカームーブメントによるGDCの影響&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;https://www.slideshare.net/NakamuraTaro&#34; target=&#34;_blank&#34;&gt;NakamuraTaro&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;感想&#34;&gt;感想&lt;/h1&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;発表者が8人もいたのにそれぞれ自分の興味のある分野を紹介していて、&lt;br&gt;内容の重複がほとんど無かったのすごい  &lt;a href=&#34;https://twitter.com/hashtag/mercarigdc?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#mercarigdc&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ@GDC登壇した (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1113439372072738826?ref_src=twsrc%5Etfw&#34;&gt;2019年4月3日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
