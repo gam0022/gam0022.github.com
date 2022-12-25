@@ -118,7 +118,7 @@
 
 &lt;p&gt;非常にシンプルな処理ですが、意外にもそれなりにインクっぽく見えるのではないでしょうか？&lt;/p&gt;
 
-&lt;p&gt;ShaderGraphのGradient Noiseはシェーダーでプロシージャル生成しているようでGPU負荷があるようでした。軽量化のためにテクスチャのサンプリングに置き換えた方がいいかもしれません。&lt;/p&gt;
+&lt;p&gt;余談になりますが、ShaderGraphのGradient Noiseはシェーダーでプロシージャル生成しているのでGPU負荷も高いと思います。実用するなら軽量化のためにテクスチャのサンプリングに置き換えた方がいいかもしれません。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/3-noise.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/3-noise.png&#34; alt=&#34;インクの高さマップ用のノイズ生成&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
