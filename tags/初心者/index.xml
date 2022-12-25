@@ -29,8 +29,14 @@
 
 &lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;UnityのShaderGraphでインクシェーダーを試作&lt;a href=&#34;https://twitter.com/hashtag/Unity3D?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Unity3D&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/ShaderGraph?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ShaderGraph&lt;/a&gt; &lt;a href=&#34;https://t.co/PHxIkfnkiQ&#34;&gt;pic.twitter.com/PHxIkfnkiQ&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1606141695724204032?ref_src=twsrc%5Etfw&#34;&gt;December 23, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/ink-shader.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/ink-shader.gif&#34; alt=&#34;インクシェーダー&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/gam0022/ShaderPlaygroundURP/tree/main/Assets/ShaderPlaygroundURP/InkShader&#34;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Unityプロジェクト
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gam0022/ShaderPlaygroundURP&#34;&gt;github.com/gam0022/ShaderPlaygroundURP&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://gam0022.net/ShaderPlaygroundURP/&#34;&gt;WebGLデモ&lt;/a&gt;
 
 &lt;ul&gt;
@@ -46,7 +52,8 @@
 
 &lt;p&gt;文字が小さくてすみません。&lt;/p&gt;
 
-&lt;p&gt;※2回に分けてスクリーンショットを取ってMSペイントで結合しました。3回以上分割して撮影するのは手間がかかるので諦めました。いい感じにウィンドウのスクロール領域を含めて一発でスクリーンショットを撮る方法があれば教えてください。&lt;/p&gt;
+&lt;p&gt;※2回に分けてスクリーンショットを撮影してMSペイントで手動結合しました。3回以上分割して撮影すればもっと高解像度にできるのですが、手間がかかるので諦めました。
+いい感じにウィンドウのスクロール領域を含めて一発でスクリーンショットを撮る方法があれば教えてください。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/shader-graph-all.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/shader-graph-all.png&#34; alt=&#34;ShaderGraph全体&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
