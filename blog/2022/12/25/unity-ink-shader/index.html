@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme" content="hugo-academic">
+    <meta name="generator" content="Hugo 0.17" />
+    <meta name="author" content="@gam0022">
+    <meta name="description" content="ソフトウェアエンジニア">
+
+    <link rel="stylesheet" href="https://gam0022.net/css/highlight.min.css">
+    <link rel="stylesheet" href="https://gam0022.net/css/bootstrap.custom.css">
+    <link rel="stylesheet" href="https://gam0022.net/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://gam0022.net/css/academicons.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+    <link rel="stylesheet" href="https://gam0022.net/css/hugo-academic.css?2022-10-17">
+    
+
+    
+    <link rel="alternate" href="https://gam0022.net/index.xml" type="application/rss+xml" title="gam0022.net">
+    <link rel="feed" href="https://gam0022.net/index.xml" type="application/rss+xml" title="gam0022.net">
+    
+    <link rel="shortcut icon" href="https://gam0022.net/img/favicon.png" type="image/png">
+    
+
+    <title>[Unity][ShaderGraph]インクシェーダーを作る | gam0022.net</title>
+
+    
+        <meta property="og:type" content="article">
+        <meta property="og:description" content="これはUnity Advent Calendar 2022の22日目の記事です。
+
+
+
+スプラトゥーン3面白いですよね。過去作は未プレイでしたが、ゆるく楽しく遊んでいます。
+
+スプラ3で遊びながら、インクシェーダーの実装方法に興味が出てきたので、UnityのShaderGraphでそれっぽいものを実装してみました。
+
+ShaderGraphの基本機能だけで構成されており、ノードの量も少なめにしました。
+
+ShaderGraphの基本操作は解説しませんが、なるべく丁寧に説明をしたつもりなので、ShaderGraphの入門記事として参考にしてください！
+
+UnityのShaderGraphでインクシェーダーを試作#Unity3D #ShaderGraph pic.twitter.com/PHxIkfnkiQ&mdash; がむ (@gam0022) December 23, 2022 
+
+
+GitHub
+WebGLデモ
+
+
+WASDと右クリックのドラッグでカメラ操作
+
+
+
+">
+    
+
+    
+        <meta property="og:image" content="https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/main.png">
+        <meta name="twitter:card" content="summary_large_image">
+    
+
+    <meta property="fb:app_id" content="413045302370371">
+    <meta property="og:title" content="[Unity][ShaderGraph]インクシェーダーを作る | gam0022.net">
+    <meta property="og:url" content="https://gam0022.net/blog/2022/12/25/unity-ink-shader/">
+
+    <meta name="twitter:site" content="@gam0022">
+
+    <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'ja'}</script>
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents">
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.7";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <script>
+    (function() {
+      var cx = '014076568914435119268:lp0lsoyv6uk';
+      var gcse = document.createElement('script');
+      gcse.type = 'text/javascript';
+      gcse.async = true;
+      gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(gcse, s);
+    })();
+  </script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TEZN6LYHVZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TEZN6LYHVZ');
+</script>
+
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+    <div class="container">
+
+        
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://gam0022.net/">gam0022.net</a>
+        </div>
+
+        
+        <div class="collapse navbar-collapse" id="#navbar-collapse-1">
+
+            
+            <ul class="nav navbar-nav navbar-left">
+                
+                <li class="nav-item"><a href="https://gam0022.net/#top"><i class='fa fa-home'></i> Home</a></li>
+                
+                <li class="nav-item"><a href="https://gam0022.net/post/"><i class='fa fa-pencil-square-o'></i> Post</a></li>
+                
+                <li class="nav-item"><a href="https://gam0022.net/works"><i class='fa fa-photo'></i> Work</a></li>
+                
+            </ul>
+
+            
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item google-search-item"><gcse:searchbox-only></gcse:searchbox-only>
+</li>
+                
+                <li class="nav-item"><a href="https://gam0022.net/webgl/#raymarching_reflect"><i class='fa fa-flask'></i> WebGL</a></li>
+                
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-9">
+            <article class="article" itemscope itemtype="http://schema.org/Article">
+
+                
+
+                <h3 class="article-title" itemprop="name">[Unity][ShaderGraph]インクシェーダーを作る</h3>
+                
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2022-12-25 23:03:44 &#43;0900 JST" itemprop="datePublished">2022-12-25</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/unity">Unity</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/shader">Shader</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/cg">CG</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/urp">URP</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/shadergraph">ShaderGraph</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e5%85%a5%e9%96%80">入門</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e5%88%9d%e5%bf%83%e8%80%85">初心者</a>
+        
+    </span>
+    
+    
+
+    
+        
+
+<div class="share-box">
+    <div class="share_wrap">
+        <div class="share_button">
+            <a href="http://b.hatena.ne.jp/entry/https://gam0022.net/blog/2022/12/25/unity-ink-shader/" class="hatena-bookmark-button" data-hatena-bookmark-title="[Unity][ShaderGraph]インクシェーダーを作る" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+        </div>
+        <div class="share_button">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://gam0022.net/blog/2022/12/25/unity-ink-shader/" data-text="[Unity][ShaderGraph]インクシェーダーを作る" data-via="gam0022">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+        <div class="share_button">
+            <div class="g-plus" data-action="share" data-annotation="none"></div>
+        </div>
+        <div class="share_button">
+            <div class="fb-like" data-href="https://gam0022.net/blog/2022/12/25/unity-ink-shader/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+        </div>
+        <div class="share_button">
+          <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a><script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+        </div>
+    </div>
+</div>
+
+
+    
+
+</div>
+
+
+                <div class="article-style" itemprop="articleBody">
+                    <p>これは<a href="https://qiita.com/advent-calendar/2022/unity">Unity Advent Calendar 2022</a>の22日目の記事です。</p>
+
+<hr />
+
+<p>スプラトゥーン3面白いですよね。過去作は未プレイでしたが、ゆるく楽しく遊んでいます。</p>
+
+<p>スプラ3で遊びながら、インクシェーダーの実装方法に興味が出てきたので、UnityのShaderGraphでそれっぽいものを実装してみました。</p>
+
+<p>ShaderGraphの基本機能だけで構成されており、ノードの量も少なめにしました。</p>
+
+<p>ShaderGraphの基本操作は解説しませんが、なるべく丁寧に説明をしたつもりなので、ShaderGraphの入門記事として参考にしてください！</p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">UnityのShaderGraphでインクシェーダーを試作<a href="https://twitter.com/hashtag/Unity3D?src=hash&amp;ref_src=twsrc%5Etfw">#Unity3D</a> <a href="https://twitter.com/hashtag/ShaderGraph?src=hash&amp;ref_src=twsrc%5Etfw">#ShaderGraph</a> <a href="https://t.co/PHxIkfnkiQ">pic.twitter.com/PHxIkfnkiQ</a></p>&mdash; がむ (@gam0022) <a href="https://twitter.com/gam0022/status/1606141695724204032?ref_src=twsrc%5Etfw">December 23, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<ul>
+<li><a href="https://github.com/gam0022/ShaderPlaygroundURP/tree/main/Assets/ShaderPlaygroundURP/InkShader">GitHub</a></li>
+<li><a href="https://gam0022.net/ShaderPlaygroundURP/">WebGLデモ</a>
+
+<ul>
+<li>WASDと右クリックのドラッグでカメラ操作</li>
+</ul></li>
+</ul>
+
+<p></p>
+
+<h1 id="shadergraph全体">ShaderGraph全体</h1>
+
+<p>ShaderGraphの全体です。</p>
+
+<p>文字が小さくてすみません。</p>
+
+<p>※2回に分けてスクリーンショットを取ってMSペイントで結合しました。3回以上分割して撮影するのは手間がかかるので諦めました。いい感じにウィンドウのスクロール領域を含めて一発でスクリーンショットを撮る方法があれば教えてください。</p>
+
+<p><a href="/images/posts/2022-12-26-unity-ink-shader/shader-graph-all.png"><img src="/images/posts/2022-12-26-unity-ink-shader/shader-graph-all.png" alt="ShaderGraph全体" /></a></p>
+
+<h2 id="基本方針">基本方針</h2>
+
+<ul>
+<li>URPのLitグラフに与えるBaseColorやSmoothnessや法線をいい感じに制御してインクっぽくする
+
+<ul>
+<li>カスタムなシェーディングはしない</li>
+</ul></li>
+<li>インクの高さマップはGradient Noiseからプロシージャル生成
+
+<ul>
+<li>インタラクティブなインク制御は未対応</li>
+<li>RenderTextureを生成してペイントするようなアプローチでインタラクティブにできそう（今後の課題）</li>
+</ul></li>
+</ul>
+
+<h1 id="チュートリアル">チュートリアル</h1>
+
+<p>そこまで規模の大きくないShaderGraphですが、理解しやすいように1ステップごと解説します。</p>
+
+<h2 id="ステップ1-pbrテクスチャに対応">ステップ1. PBRテクスチャに対応</h2>
+
+<p>まずはPBRテクスチャに対応します。</p>
+
+<p>PBRテクスチャは以下のサイトからお借りしました。とても良い感じのCC0ライセンスの床のタイル素材を利用させていただきました。</p>
+
+<ul>
+<li><a href="https://polyhaven.com/a/cobblestone_floor_08">Cobblestone Floor 08 Texture • Poly Haven</a></li>
+</ul>
+
+<p>これがPBRテクスチャをプロパティにして、ShaderGraphの各種PBRパラメーターを渡すだけのShaderGraphです。</p>
+
+<p><a href="/images/posts/2022-12-26-unity-ink-shader/1-armtex.png"><img src="/images/posts/2022-12-26-unity-ink-shader/1-armtex.png" alt="PBRテクスチャに対応" /></a></p>
+
+<p><code>BaseColor</code> や <code>Normal</code> はそのままノードを繋げるだけでOKです。</p>
+
+<p><code>Metallic/Smoothness/Ambient Occlusion</code> だけ少し工夫がいります。</p>
+
+<p>Poly Havenのテクスチャは <code>Ambient Occlusion/Roughness/Metallic</code>（以下、ARMテクスチャ）がRGBに格納されているようなので、RGBの順番をBGRのように並び替える必要があります。</p>
+
+<p><code>Smoothness = 1 - Roughness</code> の関係があるので <code>One Minus</code> ノードで変換します。</p>
+
+<p>これでPoly Havenから落としてきたARMテクスチャに対応したShaderGraphができました。</p>
+
+<h2 id="ステップ2-uvのタイリング">ステップ2. UVのタイリング</h2>
+
+<p>ここから最終的なインクシェーダーのShaderGraphをステップごとに解説します。</p>
+
+<p>まずUVのタイリングですが、単純にUVに定数を乗算しているだけです。今回は下地のテクスチャ用とインク用で独立してタイリングできるようにしました。</p>
+
+<p><a href="/images/posts/2022-12-26-unity-ink-shader/2-uv.png"><img src="/images/posts/2022-12-26-unity-ink-shader/2-uv.png" alt="UVのタイリング" /></a></p>
+
+<h2 id="ステップ3-インクの高さマップ用のノイズ生成">ステップ3. インクの高さマップ用のノイズ生成</h2>
+
+<p>インクの高さマップはGradient Noiseから生成します。時間でアニメーションさせるために2つのGradient Noiseを線形補間で合成しています。</p>
+
+<p>1つ目のGradient NoiseのUVは固定させておいて、2つ目のGradient NoiseのUVはtimeでスクロールさせています。</p>
+
+<p>非常にシンプルな処理ですが、意外にもそれなりにインクっぽく見えるのではないでしょうか？</p>
+
+<p>ShaderGraphのGradient Noiseはシェーダーでプロシージャル生成しているようでGPU負荷があるようでした。軽量化のためにテクスチャのサンプリングに置き換えた方がいいかもしれません。</p>
+
+<p><a href="/images/posts/2022-12-26-unity-ink-shader/3-noise.png"><img src="/images/posts/2022-12-26-unity-ink-shader/3-noise.png" alt="インクの高さマップ用のノイズ生成" /></a></p>
+
+<h2 id="ステップ4-凹凸を考慮したインク判定のしきい値">ステップ4. 凹凸を考慮したインク判定のしきい値</h2>
+
+<p>ステップ3. でインクの高さマップを生成しました。この高さマップがしきい値以上ならインクの領域と見なすようにします。</p>
+
+<p>インク判定のしきい値は定数でも良いのですが、高さマップを考慮してブロックの溝など低い部分の方がインクになりやすくします。</p>
+
+<p><a href="/images/posts/2022-12-26-unity-ink-shader/4-threshold.png"><img src="/images/posts/2022-12-26-unity-ink-shader/4-threshold.png" alt="インクの高さマップ用のノイズ生成" /></a></p>
+
+<p>高さマップの影響力はプロパティで制御できるようにしました。</p>
+
+<p>高さマップの考慮がないと真っ平らなPlaneにインクが乗っているようで、雑コラ感・馴染まない感があります。</p>
+
+<p><a href="/images/posts/2022-12-26-unity-ink-shader/height-intensity-off.png"><img src="/images/posts/2022-12-26-unity-ink-shader/height-intensity-off.png" alt="高さマップの考慮なし" /></a></p>
+
+<p>高さマップを考慮すると、ブロックの凹凸を考慮してインクが広がるので、リアリティを少し向上できます。</p>
+
+<p><a href="/images/posts/2022-12-26-unity-ink-shader/height-intensity-on.png"><img src="/images/posts/2022-12-26-unity-ink-shader/height-intensity-on.png" alt="高さマップの考慮あり" /></a></p>
+
+<h2 id="ステップ5-インクのマスク生成">ステップ5. インクのマスク生成</h2>
+
+<p>「ステップ3のインクの高さマップ」から「ステップ4のしきい値」を引き算することで、インクのマスク画像を生成します。</p>
+
+<p>そのままだとコントラストが薄いので、Powerノードでコントラストを強めに調整します。</p>
+
+<p><a href="/images/posts/2022-12-26-unity-ink-shader/5-1-ink-mask.png"><img src="/images/posts/2022-12-26-unity-ink-shader/5-1-ink-mask.png" alt="インクのマスク生成" /></a></p>
+
+<p>インクのマスクマップをLerpの引数にして、各種PBRパラメーターにインク用の値をブレンドします。
+元はARMテクスチャの値をそのままPBRパラメーターとして渡していましたが、間にLerpノードを挟み込んで、インク用の <code>Ambient Occlusion/Roughness/Metallic</code> をブレンドできるようにしました。</p>
+
+<p><a href="/images/posts/2022-12-26-unity-ink-shader/5-2-ink-mask.png"><img src="/images/posts/2022-12-26-unity-ink-shader/5-2-ink-mask.png" alt="インク用の設定をブレンド" /></a></p>
+
+<p>BaseMapも同じようにLerpします。</p>
+
+<p><a href="/images/posts/2022-12-26-unity-ink-shader/5-3-ink-mask.png"><img src="/images/posts/2022-12-26-unity-ink-shader/5-3-ink-mask.png" alt="インク用の設定をブレンド(BaseMap)" /></a></p>
+
+<h2 id="ステップ6-法線の生成">ステップ6. 法線の生成</h2>
+
+<p><a href="/images/posts/2022-12-26-unity-ink-shader/6-normal.png"><img src="/images/posts/2022-12-26-unity-ink-shader/6-normal.png" alt="法線の生成" /></a></p>
+
+<p>ステップ3のインクの高さマップから法線を生成します。Normal From Heightノードがあるので利用します。</p>
+
+<p>ステップ5のインクのマスクでは高さマップの影響で高周波成分が現れてしまうので滑らかな法線ができず、法線生成には不適切です。しきい値を引き算する前のGradient Noiseの値をNormal From Heightノードに繋ぎます。</p>
+
+<p>今回もPowerノードでコントラストを調整可能にしました。SaturateノードではなくMaximumノードを利用しているのでは、 <code>Clamp(x, 0, INF)</code> にしたいからです。</p>
+
+<p>マスク画像の結果は <code>[0-1]</code> に正規化する必要がありますが、法線生成のHeightマップであれば最大値の制限は不要だと思ったからです。</p>
+
+<p>以上がインク用のシェーダーの解説でした。</p>
+
+<h1 id="まとめ">まとめ</h1>
+
+<p>ShaderGraphだけでノーコードのインクシェーダーを試作しました。
+PBRパラメーターを制御するだけのお手軽な実装ですが、思ったよりも良い見た目になったので満足です。</p>
+
+<p>今回はインクのマスクにGradient Noiseを利用しましたが、RenderTextureをシェーダー外部から与えればインタラクティブにインクを塗ったりもできると思います。</p>
+                </div>
+
+            </article>
+
+            
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2022-12-25 23:03:44 &#43;0900 JST" itemprop="datePublished">2022-12-25</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/unity">Unity</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/shader">Shader</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/cg">CG</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/urp">URP</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/shadergraph">ShaderGraph</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e5%85%a5%e9%96%80">入門</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e5%88%9d%e5%bf%83%e8%80%85">初心者</a>
+        
+    </span>
+    
+    
+
+    
+        
+
+<div class="share-box">
+    <div class="share_wrap">
+        <div class="share_button">
+            <a href="http://b.hatena.ne.jp/entry/https://gam0022.net/blog/2022/12/25/unity-ink-shader/" class="hatena-bookmark-button" data-hatena-bookmark-title="[Unity][ShaderGraph]インクシェーダーを作る" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+        </div>
+        <div class="share_button">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://gam0022.net/blog/2022/12/25/unity-ink-shader/" data-text="[Unity][ShaderGraph]インクシェーダーを作る" data-via="gam0022">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+        <div class="share_button">
+            <div class="g-plus" data-action="share" data-annotation="none"></div>
+        </div>
+        <div class="share_button">
+            <div class="fb-like" data-href="https://gam0022.net/blog/2022/12/25/unity-ink-shader/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+        </div>
+        <div class="share_button">
+          <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a><script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+        </div>
+    </div>
+</div>
+
+
+    
+
+</div>
+
+            <nav>
+    <ul class="pager">
+        
+        <li class="previous"><a href="https://gam0022.net/blog/2022/10/20/normalizefm/"><span aria-hidden="true">&larr;</span> normalize.fmにゲスト出演しました</a></li>
+        
+
+        
+    </ul>
+</nav>
+
+            
+<section id="comments">
+    <div id="disqus_thread">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'gam0022-net';
+    var disqus_identifier = 'https:\/\/gam0022.net\/blog\/2022\/12\/25\/unity-ink-shader\/';
+    var disqus_title = '[Unity][ShaderGraph]インクシェーダーを作る';
+    var disqus_url = 'https:\/\/gam0022.net\/blog\/2022\/12\/25\/unity-ink-shader\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+</section>
+
+
+            <div class="row">
+    <h4 class="blog-title"><img src="/img/gam0022_splash.png" class="icon"> gam0022.net's Tag Cloud</h4>
+    <ul class="category-list">
+    <div class="widget tagcloud">
+        
+        <a href="https://gam0022.net/tags/apache" style="font-size: 12px;">apache(1)</a>
+        
+        <a href="https://gam0022.net/tags/ascii" style="font-size: 12px;">ascii(1)</a>
+        
+        <a href="https://gam0022.net/tags/bootstrap" style="font-size: 12px;">bootstrap(2)</a>
+        
+        <a href="https://gam0022.net/tags/c" style="font-size: 12px;">c#(1)</a>
+        
+        <a href="https://gam0022.net/tags/c&#43;&#43;" style="font-size: 12px;">c&#43;&#43;(1)</a>
+        
+        <a href="https://gam0022.net/tags/canvas" style="font-size: 12px;">canvas(1)</a>
+        
+        <a href="https://gam0022.net/tags/cg" style="font-size: 12px;">cg(32)</a>
+        
+        <a href="https://gam0022.net/tags/cgi" style="font-size: 12px;">cgi(2)</a>
+        
+        <a href="https://gam0022.net/tags/chrome" style="font-size: 12px;">chrome(1)</a>
+        
+        <a href="https://gam0022.net/tags/cocot" style="font-size: 12px;">cocot(1)</a>
+        
+        <a href="https://gam0022.net/tags/coffeescript" style="font-size: 12px;">coffeescript(1)</a>
+        
+        <a href="https://gam0022.net/tags/coins" style="font-size: 12px;">coins(3)</a>
+        
+        <a href="https://gam0022.net/tags/cojt" style="font-size: 12px;">cojt(4)</a>
+        
+        <a href="https://gam0022.net/tags/conoha" style="font-size: 12px;">conoha(2)</a>
+        
+        <a href="https://gam0022.net/tags/contest" style="font-size: 12px;">contest(1)</a>
+        
+        <a href="https://gam0022.net/tags/css" style="font-size: 12px;">css(1)</a>
+        
+        <a href="https://gam0022.net/tags/cuda" style="font-size: 12px;">cuda(4)</a>
+        
+        <a href="https://gam0022.net/tags/daigoroubot" style="font-size: 12px;">daigoroubot(1)</a>
+        
+        <a href="https://gam0022.net/tags/demo" style="font-size: 12px;">demo(1)</a>
+        
+        <a href="https://gam0022.net/tags/develop" style="font-size: 12px;">develop(1)</a>
+        
+        <a href="https://gam0022.net/tags/diary" style="font-size: 12px;">diary(5)</a>
+        
+        <a href="https://gam0022.net/tags/eclipse" style="font-size: 12px;">eclipse(3)</a>
+        
+        <a href="https://gam0022.net/tags/emscripten" style="font-size: 12px;">emscripten(1)</a>
+        
+        <a href="https://gam0022.net/tags/encoding" style="font-size: 12px;">encoding(1)</a>
+        
+        <a href="https://gam0022.net/tags/event" style="font-size: 12px;">event(21)</a>
+        
+        <a href="https://gam0022.net/tags/gcc" style="font-size: 12px;">gcc(1)</a>
+        
+        <a href="https://gam0022.net/tags/gem" style="font-size: 12px;">gem(3)</a>
+        
+        <a href="https://gam0022.net/tags/git" style="font-size: 12px;">git(2)</a>
+        
+        <a href="https://gam0022.net/tags/github" style="font-size: 12px;">github(2)</a>
+        
+        <a href="https://gam0022.net/tags/glsl" style="font-size: 12px;">glsl(12)</a>
+        
+        <a href="https://gam0022.net/tags/glsl-snadbox" style="font-size: 12px;">glsl-snadbox(1)</a>
+        
+        <a href="https://gam0022.net/tags/gnuplot" style="font-size: 12px;">gnuplot(1)</a>
+        
+        <a href="https://gam0022.net/tags/gpu" style="font-size: 12px;">gpu(4)</a>
+        
+        <a href="https://gam0022.net/tags/heroku" style="font-size: 12px;">heroku(1)</a>
+        
+        <a href="https://gam0022.net/tags/hlsl" style="font-size: 12px;">hlsl(1)</a>
+        
+        <a href="https://gam0022.net/tags/homebrew" style="font-size: 12px;">homebrew(2)</a>
+        
+        <a href="https://gam0022.net/tags/houdini" style="font-size: 12px;">houdini(2)</a>
+        
+        <a href="https://gam0022.net/tags/hsp" style="font-size: 12px;">hsp(1)</a>
+        
+        <a href="https://gam0022.net/tags/html5" style="font-size: 12px;">html5(2)</a>
+        
+        <a href="https://gam0022.net/tags/http2" style="font-size: 12px;">http2(1)</a>
+        
+        <a href="https://gam0022.net/tags/https" style="font-size: 12px;">https(1)</a>
+        
+        <a href="https://gam0022.net/tags/hugo" style="font-size: 12px;">hugo(2)</a>
+        
+        <a href="https://gam0022.net/tags/isucon" style="font-size: 12px;">isucon(2)</a>
+        
+        <a href="https://gam0022.net/tags/iterm2" style="font-size: 12px;">iterm2(1)</a>
+        
+        <a href="https://gam0022.net/tags/java" style="font-size: 12px;">java(2)</a>
+        
+        <a href="https://gam0022.net/tags/javascript" style="font-size: 12px;">javascript(8)</a>
+        
+        <a href="https://gam0022.net/tags/keynote" style="font-size: 12px;">keynote(1)</a>
+        
+        <a href="https://gam0022.net/tags/kodelife" style="font-size: 12px;">kodelife(1)</a>
+        
+        <a href="https://gam0022.net/tags/korg-nanokontrol2" style="font-size: 12px;">korg-nanokontrol2(1)</a>
+        
+        <a href="https://gam0022.net/tags/kramdown" style="font-size: 12px;">kramdown(1)</a>
+        
+        <a href="https://gam0022.net/tags/latex" style="font-size: 12px;">latex(3)</a>
+        
+        <a href="https://gam0022.net/tags/lion" style="font-size: 12px;">lion(3)</a>
+        
+        <a href="https://gam0022.net/tags/llvm-gcc" style="font-size: 12px;">llvm-gcc(1)</a>
+        
+        <a href="https://gam0022.net/tags/mac-os-x" style="font-size: 12px;">mac-os-x(18)</a>
+        
+        <a href="https://gam0022.net/tags/markdown" style="font-size: 12px;">markdown(2)</a>
+        
+        <a href="https://gam0022.net/tags/mecab" style="font-size: 12px;">mecab(1)</a>
+        
+        <a href="https://gam0022.net/tags/mountain-lion" style="font-size: 12px;">mountain-lion(1)</a>
+        
+        <a href="https://gam0022.net/tags/moutain-lion" style="font-size: 12px;">moutain-lion(1)</a>
+        
+        <a href="https://gam0022.net/tags/neort" style="font-size: 12px;">neort(1)</a>
+        
+        <a href="https://gam0022.net/tags/nginx" style="font-size: 12px;">nginx(1)</a>
+        
+        <a href="https://gam0022.net/tags/normalizefm" style="font-size: 12px;">normalizefm(1)</a>
+        
+        <a href="https://gam0022.net/tags/ocaml" style="font-size: 12px;">ocaml(1)</a>
+        
+        <a href="https://gam0022.net/tags/octave" style="font-size: 12px;">octave(1)</a>
+        
+        <a href="https://gam0022.net/tags/octopress" style="font-size: 12px;">octopress(13)</a>
+        
+        <a href="https://gam0022.net/tags/opencv" style="font-size: 12px;">opencv(1)</a>
+        
+        <a href="https://gam0022.net/tags/optix" style="font-size: 12px;">optix(5)</a>
+        
+        <a href="https://gam0022.net/tags/passenger" style="font-size: 12px;">passenger(1)</a>
+        
+        <a href="https://gam0022.net/tags/programming" style="font-size: 12px;">programming(1)</a>
+        
+        <a href="https://gam0022.net/tags/rails" style="font-size: 12px;">rails(2)</a>
+        
+        <a href="https://gam0022.net/tags/rails4" style="font-size: 12px;">rails4(1)</a>
+        
+        <a href="https://gam0022.net/tags/raymarching" style="font-size: 12px;">raymarching(2)</a>
+        
+        <a href="https://gam0022.net/tags/revision" style="font-size: 12px;">revision(2)</a>
+        
+        <a href="https://gam0022.net/tags/rsync" style="font-size: 12px;">rsync(2)</a>
+        
+        <a href="https://gam0022.net/tags/ruby" style="font-size: 12px;">ruby(17)</a>
+        
+        <a href="https://gam0022.net/tags/ruby-c-extension" style="font-size: 12px;">ruby-c-extension(3)</a>
+        
+        <a href="https://gam0022.net/tags/ruby-on-rails" style="font-size: 12px;">ruby-on-rails(1)</a>
+        
+        <a href="https://gam0022.net/tags/rubygems" style="font-size: 12px;">rubygems(1)</a>
+        
+        <a href="https://gam0022.net/tags/rust" style="font-size: 12px;">rust(3)</a>
+        
+        <a href="https://gam0022.net/tags/rvm" style="font-size: 12px;">rvm(1)</a>
+        
+        <a href="https://gam0022.net/tags/sass/scss" style="font-size: 12px;">sass/scss(1)</a>
+        
+        <a href="https://gam0022.net/tags/serversmanvps" style="font-size: 12px;">serversmanvps(3)</a>
+        
+        <a href="https://gam0022.net/tags/shader" style="font-size: 12px;">shader(7)</a>
+        
+        <a href="https://gam0022.net/tags/shader-showdown" style="font-size: 12px;">shader-showdown(1)</a>
+        
+        <a href="https://gam0022.net/tags/shadergraph" style="font-size: 12px;">shadergraph(1)</a>
+        
+        <a href="https://gam0022.net/tags/shadertoy" style="font-size: 12px;">shadertoy(1)</a>
+        
+        <a href="https://gam0022.net/tags/slide" style="font-size: 12px;">slide(4)</a>
+        
+        <a href="https://gam0022.net/tags/sqlite3" style="font-size: 12px;">sqlite3(1)</a>
+        
+        <a href="https://gam0022.net/tags/ssh" style="font-size: 12px;">ssh(1)</a>
+        
+        <a href="https://gam0022.net/tags/study" style="font-size: 12px;">study(3)</a>
+        
+        <a href="https://gam0022.net/tags/techbooster" style="font-size: 12px;">techbooster(1)</a>
+        
+        <a href="https://gam0022.net/tags/terminal.app" style="font-size: 12px;">terminal.app(1)</a>
+        
+        <a href="https://gam0022.net/tags/textmeshpro" style="font-size: 12px;">textmeshpro(1)</a>
+        
+        <a href="https://gam0022.net/tags/theme" style="font-size: 12px;">theme(1)</a>
+        
+        <a href="https://gam0022.net/tags/three.js" style="font-size: 12px;">three.js(2)</a>
+        
+        <a href="https://gam0022.net/tags/tips" style="font-size: 12px;">tips(1)</a>
+        
+        <a href="https://gam0022.net/tags/tokyodemofest" style="font-size: 12px;">tokyodemofest(10)</a>
+        
+        <a href="https://gam0022.net/tags/trouble" style="font-size: 12px;">trouble(1)</a>
+        
+        <a href="https://gam0022.net/tags/twincal" style="font-size: 12px;">twincal(1)</a>
+        
+        <a href="https://gam0022.net/tags/twitter" style="font-size: 12px;">twitter(1)</a>
+        
+        <a href="https://gam0022.net/tags/typescript" style="font-size: 12px;">typescript(2)</a>
+        
+        <a href="https://gam0022.net/tags/ubuntu" style="font-size: 12px;">ubuntu(2)</a>
+        
+        <a href="https://gam0022.net/tags/unity" style="font-size: 12px;">unity(11)</a>
+        
+        <a href="https://gam0022.net/tags/urp" style="font-size: 12px;">urp(1)</a>
+        
+        <a href="https://gam0022.net/tags/utf-8-mac" style="font-size: 12px;">utf-8-mac(1)</a>
+        
+        <a href="https://gam0022.net/tags/uva-online-judge" style="font-size: 12px;">uva-online-judge(3)</a>
+        
+        <a href="https://gam0022.net/tags/vim" style="font-size: 12px;">vim(1)</a>
+        
+        <a href="https://gam0022.net/tags/vps" style="font-size: 12px;">vps(2)</a>
+        
+        <a href="https://gam0022.net/tags/vscode" style="font-size: 12px;">vscode(1)</a>
+        
+        <a href="https://gam0022.net/tags/web" style="font-size: 12px;">web(2)</a>
+        
+        <a href="https://gam0022.net/tags/webgl" style="font-size: 12px;">webgl(10)</a>
+        
+        <a href="https://gam0022.net/tags/webrick" style="font-size: 12px;">webrick(1)</a>
+        
+        <a href="https://gam0022.net/tags/windows" style="font-size: 12px;">windows(1)</a>
+        
+        <a href="https://gam0022.net/tags/windows-terminal" style="font-size: 12px;">windows-terminal(1)</a>
+        
+        <a href="https://gam0022.net/tags/x11" style="font-size: 12px;">x11(1)</a>
+        
+        <a href="https://gam0022.net/tags/x86" style="font-size: 12px;">x86(1)</a>
+        
+        <a href="https://gam0022.net/tags/xcode" style="font-size: 12px;">xcode(2)</a>
+        
+        <a href="https://gam0022.net/tags/zsh" style="font-size: 12px;">zsh(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%a2%e3%82%bb%e3%83%b3%e3%83%96%e3%83%a9" style="font-size: 12px;">アセンブラ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%a2%e3%83%95%e3%82%a3%e3%83%aa%e3%82%a8%e3%82%a4%e3%83%88" style="font-size: 12px;">アフィリエイト(3)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%b3%e3%83%9f%e3%82%b1" style="font-size: 12px;">コミケ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%b4" style="font-size: 12px;">ゴ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%b7%e3%82%a7%e3%83%bc%e3%83%80%e3%83%bc" style="font-size: 12px;">シェーダー(3)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%89%e3%83%a1%e3%82%a4%e3%83%b3" style="font-size: 12px;">ドメイン(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%8d%e3%82%bf" style="font-size: 12px;">ネタ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%91%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%b3%e3%82%b0" style="font-size: 12px;">パストレーシング(9)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%96%e3%83%ad%e3%82%b0%e9%81%8b%e5%96%b6" style="font-size: 12px;">ブログ運営(4)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%9a%e3%83%bc%e3%83%91%e3%83%bc%e3%82%af%e3%83%a9%e3%83%95%e3%83%88" style="font-size: 12px;">ペーパークラフト(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%9c%e3%83%bc%e3%83%b3%e3%83%87%e3%82%b8%e3%82%bf%e3%83%ab" style="font-size: 12px;">ボーンデジタル(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%a9%e3%82%a4%e3%83%96%e3%82%b3%e3%83%bc%e3%83%87%e3%82%a3%e3%83%b3%e3%82%b0" style="font-size: 12px;">ライブコーディング(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%aa%e3%83%a2%e3%83%bc%e3%83%88%e3%83%af%e3%83%bc%e3%82%af" style="font-size: 12px;">リモートワーク(3)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%b3%e3%82%b0" style="font-size: 12px;">レイトレーシング(8)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%88%e3%83%ac%e5%90%88%e5%ae%bf" style="font-size: 12px;">レイトレ合宿(8)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%9e%e3%83%bc%e3%83%81%e3%83%b3%e3%82%b0" style="font-size: 12px;">レイマーチング(22)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%85%a5%e9%96%80" style="font-size: 12px;">入門(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%87%ba%e7%89%88" style="font-size: 12px;">出版(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%88%9d%e5%bf%83%e8%80%85" style="font-size: 12px;">初心者(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%8b%89%e5%bc%b7%e4%bc%9a" style="font-size: 12px;">勉強会(7)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%8c%97%e6%9d%a1%e3%81%9d%e3%81%b5%e3%81%83" style="font-size: 12px;">北条そふぃ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%95%86%e5%93%81%e3%83%ac%e3%83%93%e3%83%a5%e3%83%bc" style="font-size: 12px;">商品レビュー(2)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%a4%a7%e4%ba%94%e9%83%8ebot" style="font-size: 12px;">大五郎bot(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%ae%a3%e4%bc%9d" style="font-size: 12px;">宣伝(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%b0%8f%e3%83%8d%e3%82%bf" style="font-size: 12px;">小ネタ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%8a%80%e8%a1%93%e6%9b%b8%e5%85%b8" style="font-size: 12px;">技術書典(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%97%a5%e6%9c%ac%e8%aa%9e" style="font-size: 12px;">日本語(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%97%a5%e8%a8%98" style="font-size: 12px;">日記(2)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%9b%b8%e7%b1%8d" style="font-size: 12px;">書籍(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%9c%ac" style="font-size: 12px;">本(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%a9%9f%e6%a2%b0%e8%aa%9e%e5%ba%8f%e8%ab%96" style="font-size: 12px;">機械語序論(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e7%99%ba%e8%a1%a8%e8%b3%87%e6%96%99" style="font-size: 12px;">発表資料(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e7%99%bb%e5%a3%87" style="font-size: 12px;">登壇(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e7%a0%94%e7%a9%b6" style="font-size: 12px;">研究(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e7%ab%b6%e6%8a%80%e3%83%97%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%9f%e3%83%b3%e3%82%b0" style="font-size: 12px;">競技プログラミング(4)</a>
+        
+        <a href="https://gam0022.net/tags/%e8%b2%b7%e3%81%a3%e3%81%a6%e8%89%af%e3%81%8b%e3%81%a3%e3%81%9f%e3%82%82%e3%81%ae" style="font-size: 12px;">買って良かったもの(3)</a>
+        
+    </div>
+</ul>
+
+</div>
+
+
+
+
+
+
+<div class="row">
+    <div class="col section-heading">
+        <h1>Recent Posts</h1>
+        <p>最新記事</p>
+        <div class="col-md-12">
+  <div class="row">
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2022/12/25/unity-ink-shader/" itemprop="url">[Unity][ShaderGraph]インクシェーダーを作る</a></h3>
+      
+      <a href="https://gam0022.net/blog/2022/12/25/unity-ink-shader/">
+        <img src="https://gam0022.net///images/posts/2022-12-26-unity-ink-shader/main.png" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2022/10/20/normalizefm/" itemprop="url">normalize.fmにゲスト出演しました</a></h3>
+      
+      <a href="https://gam0022.net/blog/2022/10/20/normalizefm/">
+        <img src="https://gam0022.net///images/posts/2022-10-20-normalizefm/ogp-16_9.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2022/10/17/rtcamp8/" itemprop="url">レイトレ合宿8参加レポート</a></h3>
+      
+      <a href="https://gam0022.net/blog/2022/10/17/rtcamp8/">
+        <img src="https://gam0022.net///images/posts/2022-09-26-rtcamp8/267.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/" itemprop="url">速度比較！レイマーチングvsレイキャスティング</a></h3>
+      
+      <a href="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/">
+        <img src="https://gam0022.net///images/posts/2022-08-08-raymarching-vs-raycasting/raymarching_i4_s256_l300.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2022/05/08/kodelife-midi/" itemprop="url">KodeLifeでMIDIコンを使うのがとても簡単だった</a></h3>
+      
+      <a href="https://gam0022.net/blog/2022/05/08/kodelife-midi/">
+        <img src="https://gam0022.net///images/posts/2022-05-08-kodelife-midi/IMG_5022.MOV_snapshot_00.50.066.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/" itemprop="url">HugoをGitHub Pagesで公開し、2リポジトリ構成の管理を楽にする方法</a></h3>
+      
+      <a href="https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/">
+        <img src="https://gam0022.net///images/posts/2022-05-07-hugo-on-github-pages/thumbnail.png" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2022/04/10/wh-1000xm4/" itemprop="url">WH-1000XM3からWH-1000XM4に乗り換えた</a></h3>
+      
+      <a href="https://gam0022.net/blog/2022/04/10/wh-1000xm4/">
+        <img src="https://gam0022.net///images/posts/2022-04-10-wh-1000xm4/compare.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2021/12/31/tdf2021-shader-showdown/" itemprop="url">Tokyo Demo Fest 2021のShader Showdownに参加しました</a></h3>
+      
+      <a href="https://gam0022.net/blog/2021/12/31/tdf2021-shader-showdown/">
+        <img src="https://gam0022.net///images/posts/2021-12-31-tdf2021-shader-showdown/Collage_Fotor_v3.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2021/12/23/unity-urp-billboard-shader/" itemprop="url">[Unity][URP] Y軸ビルボードシェーダー</a></h3>
+      
+      <a href="https://gam0022.net/blog/2021/12/23/unity-urp-billboard-shader/">
+        <img src="https://gam0022.net///images/posts/2021-12-23-unity-urp-billboard-shader/20211223020601_x1.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+  </div>
+
+  <div class="read-more">
+    <a href="/post" class="btn btn-primary btn-outline">Read more</a>
+  </div>
+</div>
+    </div>
+</div>
+
+            <footer class="site-footer">
+    <div class="container">
+        <p class="powered-by">
+
+            &copy; 2021 gam0022 &middot; 
+
+            Powered by the <a href="https://github.com/gam0022/hugo-academic" target="_blank">Customized Academic theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+            <span class="pull-right"><a href="#" id="back_to_top"><span class="button_icon"><i class="fa fa-chevron-up fa-2x" aria-hidden="true"></i></span></a></span>
+
+        </p>
+    </div>
+</footer>
+
+                    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+        <script src="https://gam0022.net/js/jquery-1.12.3.min.js"></script>
+        <script src="https://gam0022.net/js/bootstrap.custom.js"></script>
+        <script src="https://gam0022.net/js/hugo-academic.js"></script>
+        
+
+        <script>
+            
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-84469205-1', 'auto');
+            ga('send', 'pageview');
+
+             
+            var links = document.querySelectorAll('a');
+            Array.prototype.map.call(links, function(item) {
+                if (item.host != document.location.host) {
+                    item.addEventListener('click', function() {
+                        var action = item.getAttribute('data-action') || 'follow';
+                        ga('send', 'event', 'outbound', action, item.href);
+                    });
+                }
+            });
+            
+
+            $(document).ready(function() {
+                $("#TableOfContents").addClass("bs-docs-sidebar affix");
+                $("#TableOfContents ul").addClass("nav nav-stacked");
+            });
+        </script>
+
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        
+        
+
+    </body>
+</html>
+
+        </div>
+        <div class="col-md-3">
+            <nav id="TableOfContents">
+<ul>
+<li><a href="#shadergraph全体">ShaderGraph全体</a>
+<ul>
+<li><a href="#基本方針">基本方針</a></li>
+</ul></li>
+<li><a href="#チュートリアル">チュートリアル</a>
+<ul>
+<li><a href="#ステップ1-pbrテクスチャに対応">ステップ1. PBRテクスチャに対応</a></li>
+<li><a href="#ステップ2-uvのタイリング">ステップ2. UVのタイリング</a></li>
+<li><a href="#ステップ3-インクの高さマップ用のノイズ生成">ステップ3. インクの高さマップ用のノイズ生成</a></li>
+<li><a href="#ステップ4-凹凸を考慮したインク判定のしきい値">ステップ4. 凹凸を考慮したインク判定のしきい値</a></li>
+<li><a href="#ステップ5-インクのマスク生成">ステップ5. インクのマスク生成</a></li>
+<li><a href="#ステップ6-法線の生成">ステップ6. 法線の生成</a></li>
+</ul></li>
+<li><a href="#まとめ">まとめ</a></li>
+</ul>
+</nav>
+        </div>
+    </div>
+    
+</div>

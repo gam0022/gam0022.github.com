@@ -10,6 +10,168 @@
     <atom:link href="/tags/cg/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>[Unity][ShaderGraph]インクシェーダーを作る</title>
+      <link>https://gam0022.net/blog/2022/12/25/unity-ink-shader/</link>
+      <pubDate>Sun, 25 Dec 2022 23:03:44 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2022/12/25/unity-ink-shader/</guid>
+      <description>&lt;p&gt;これは&lt;a href=&#34;https://qiita.com/advent-calendar/2022/unity&#34;&gt;Unity Advent Calendar 2022&lt;/a&gt;の22日目の記事です。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;スプラトゥーン3面白いですよね。過去作は未プレイでしたが、ゆるく楽しく遊んでいます。&lt;/p&gt;
+
+&lt;p&gt;スプラ3で遊びながら、インクシェーダーの実装方法に興味が出てきたので、UnityのShaderGraphでそれっぽいものを実装してみました。&lt;/p&gt;
+
+&lt;p&gt;ShaderGraphの基本機能だけで構成されており、ノードの量も少なめにしました。&lt;/p&gt;
+
+&lt;p&gt;ShaderGraphの基本操作は解説しませんが、なるべく丁寧に説明をしたつもりなので、ShaderGraphの入門記事として参考にしてください！&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;UnityのShaderGraphでインクシェーダーを試作&lt;a href=&#34;https://twitter.com/hashtag/Unity3D?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Unity3D&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/ShaderGraph?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ShaderGraph&lt;/a&gt; &lt;a href=&#34;https://t.co/PHxIkfnkiQ&#34;&gt;pic.twitter.com/PHxIkfnkiQ&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1606141695724204032?ref_src=twsrc%5Etfw&#34;&gt;December 23, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gam0022/ShaderPlaygroundURP/tree/main/Assets/ShaderPlaygroundURP/InkShader&#34;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gam0022.net/ShaderPlaygroundURP/&#34;&gt;WebGLデモ&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;WASDと右クリックのドラッグでカメラ操作&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;shadergraph全体&#34;&gt;ShaderGraph全体&lt;/h1&gt;
+
+&lt;p&gt;ShaderGraphの全体です。&lt;/p&gt;
+
+&lt;p&gt;文字が小さくてすみません。&lt;/p&gt;
+
+&lt;p&gt;※2回に分けてスクリーンショットを取ってMSペイントで結合しました。3回以上分割して撮影するのは手間がかかるので諦めました。いい感じにウィンドウのスクロール領域を含めて一発でスクリーンショットを撮る方法があれば教えてください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/shader-graph-all.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/shader-graph-all.png&#34; alt=&#34;ShaderGraph全体&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;基本方針&#34;&gt;基本方針&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;URPのLitグラフに与えるBaseColorやSmoothnessや法線をいい感じに制御してインクっぽくする
+
+&lt;ul&gt;
+&lt;li&gt;カスタムなシェーディングはしない&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;インクの高さマップはGradient Noiseからプロシージャル生成
+
+&lt;ul&gt;
+&lt;li&gt;インタラクティブなインク制御は未対応&lt;/li&gt;
+&lt;li&gt;RenderTextureを生成してペイントするようなアプローチでインタラクティブにできそう（今後の課題）&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;チュートリアル&#34;&gt;チュートリアル&lt;/h1&gt;
+
+&lt;p&gt;そこまで規模の大きくないShaderGraphですが、理解しやすいように1ステップごと解説します。&lt;/p&gt;
+
+&lt;h2 id=&#34;ステップ1-pbrテクスチャに対応&#34;&gt;ステップ1. PBRテクスチャに対応&lt;/h2&gt;
+
+&lt;p&gt;まずはPBRテクスチャに対応します。&lt;/p&gt;
+
+&lt;p&gt;PBRテクスチャは以下のサイトからお借りしました。とても良い感じのCC0ライセンスの床のタイル素材を利用させていただきました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://polyhaven.com/a/cobblestone_floor_08&#34;&gt;Cobblestone Floor 08 Texture • Poly Haven&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;これがPBRテクスチャをプロパティにして、ShaderGraphの各種PBRパラメーターを渡すだけのShaderGraphです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/1-armtex.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/1-armtex.png&#34; alt=&#34;PBRテクスチャに対応&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;BaseColor&lt;/code&gt; や &lt;code&gt;Normal&lt;/code&gt; はそのままノードを繋げるだけでOKです。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Metallic/Smoothness/Ambient Occlusion&lt;/code&gt; だけ少し工夫がいります。&lt;/p&gt;
+
+&lt;p&gt;Poly Havenのテクスチャは &lt;code&gt;Ambient Occlusion/Roughness/Metallic&lt;/code&gt;（以下、ARMテクスチャ）がRGBに格納されているようなので、RGBの順番をBGRのように並び替える必要があります。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Smoothness = 1 - Roughness&lt;/code&gt; の関係があるので &lt;code&gt;One Minus&lt;/code&gt; ノードで変換します。&lt;/p&gt;
+
+&lt;p&gt;これでPoly Havenから落としてきたARMテクスチャに対応したShaderGraphができました。&lt;/p&gt;
+
+&lt;h2 id=&#34;ステップ2-uvのタイリング&#34;&gt;ステップ2. UVのタイリング&lt;/h2&gt;
+
+&lt;p&gt;ここから最終的なインクシェーダーのShaderGraphをステップごとに解説します。&lt;/p&gt;
+
+&lt;p&gt;まずUVのタイリングですが、単純にUVに定数を乗算しているだけです。今回は下地のテクスチャ用とインク用で独立してタイリングできるようにしました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/2-uv.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/2-uv.png&#34; alt=&#34;UVのタイリング&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;ステップ3-インクの高さマップ用のノイズ生成&#34;&gt;ステップ3. インクの高さマップ用のノイズ生成&lt;/h2&gt;
+
+&lt;p&gt;インクの高さマップはGradient Noiseから生成します。時間でアニメーションさせるために2つのGradient Noiseを線形補間で合成しています。&lt;/p&gt;
+
+&lt;p&gt;1つ目のGradient NoiseのUVは固定させておいて、2つ目のGradient NoiseのUVはtimeでスクロールさせています。&lt;/p&gt;
+
+&lt;p&gt;非常にシンプルな処理ですが、意外にもそれなりにインクっぽく見えるのではないでしょうか？&lt;/p&gt;
+
+&lt;p&gt;ShaderGraphのGradient Noiseはシェーダーでプロシージャル生成しているようでGPU負荷があるようでした。軽量化のためにテクスチャのサンプリングに置き換えた方がいいかもしれません。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/3-noise.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/3-noise.png&#34; alt=&#34;インクの高さマップ用のノイズ生成&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;ステップ4-凹凸を考慮したインク判定のしきい値&#34;&gt;ステップ4. 凹凸を考慮したインク判定のしきい値&lt;/h2&gt;
+
+&lt;p&gt;ステップ3. でインクの高さマップを生成しました。この高さマップがしきい値以上ならインクの領域と見なすようにします。&lt;/p&gt;
+
+&lt;p&gt;インク判定のしきい値は定数でも良いのですが、高さマップを考慮してブロックの溝など低い部分の方がインクになりやすくします。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/4-threshold.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/4-threshold.png&#34; alt=&#34;インクの高さマップ用のノイズ生成&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;高さマップの影響力はプロパティで制御できるようにしました。&lt;/p&gt;
+
+&lt;p&gt;高さマップの考慮がないと真っ平らなPlaneにインクが乗っているようで、雑コラ感・馴染まない感があります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/height-intensity-off.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/height-intensity-off.png&#34; alt=&#34;高さマップの考慮なし&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;高さマップを考慮すると、ブロックの凹凸を考慮してインクが広がるので、リアリティを少し向上できます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/height-intensity-on.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/height-intensity-on.png&#34; alt=&#34;高さマップの考慮あり&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;ステップ5-インクのマスク生成&#34;&gt;ステップ5. インクのマスク生成&lt;/h2&gt;
+
+&lt;p&gt;「ステップ3のインクの高さマップ」から「ステップ4のしきい値」を引き算することで、インクのマスク画像を生成します。&lt;/p&gt;
+
+&lt;p&gt;そのままだとコントラストが薄いので、Powerノードでコントラストを強めに調整します。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/5-1-ink-mask.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/5-1-ink-mask.png&#34; alt=&#34;インクのマスク生成&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;インクのマスクマップをLerpの引数にして、各種PBRパラメーターにインク用の値をブレンドします。
+元はARMテクスチャの値をそのままPBRパラメーターとして渡していましたが、間にLerpノードを挟み込んで、インク用の &lt;code&gt;Ambient Occlusion/Roughness/Metallic&lt;/code&gt; をブレンドできるようにしました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/5-2-ink-mask.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/5-2-ink-mask.png&#34; alt=&#34;インク用の設定をブレンド&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;BaseMapも同じようにLerpします。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/5-3-ink-mask.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/5-3-ink-mask.png&#34; alt=&#34;インク用の設定をブレンド(BaseMap)&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;ステップ6-法線の生成&#34;&gt;ステップ6. 法線の生成&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/6-normal.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/6-normal.png&#34; alt=&#34;法線の生成&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ステップ3のインクの高さマップから法線を生成します。Normal From Heightノードがあるので利用します。&lt;/p&gt;
+
+&lt;p&gt;ステップ5のインクのマスクでは高さマップの影響で高周波成分が現れてしまうので滑らかな法線ができず、法線生成には不適切です。しきい値を引き算する前のGradient Noiseの値をNormal From Heightノードに繋ぎます。&lt;/p&gt;
+
+&lt;p&gt;今回もPowerノードでコントラストを調整可能にしました。SaturateノードではなくMaximumノードを利用しているのでは、 &lt;code&gt;Clamp(x, 0, INF)&lt;/code&gt; にしたいからです。&lt;/p&gt;
+
+&lt;p&gt;マスク画像の結果は &lt;code&gt;[0-1]&lt;/code&gt; に正規化する必要がありますが、法線生成のHeightマップであれば最大値の制限は不要だと思ったからです。&lt;/p&gt;
+
+&lt;p&gt;以上がインク用のシェーダーの解説でした。&lt;/p&gt;
+
+&lt;h1 id=&#34;まとめ&#34;&gt;まとめ&lt;/h1&gt;
+
+&lt;p&gt;ShaderGraphだけでノーコードのインクシェーダーを試作しました。
+PBRパラメーターを制御するだけのお手軽な実装ですが、思ったよりも良い見た目になったので満足です。&lt;/p&gt;
+
+&lt;p&gt;今回はインクのマスクにGradient Noiseを利用しましたが、RenderTextureをシェーダー外部から与えればインタラクティブにインクを塗ったりもできると思います。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>normalize.fmにゲスト出演しました</title>
       <link>https://gam0022.net/blog/2022/10/20/normalizefm/</link>
       <pubDate>Thu, 20 Oct 2022 10:44:48 +0900</pubDate>
@@ -3875,85 +4037,6 @@ SDFテクスチャをフェッチするUVをこのように時間でclampする�
 &lt;p&gt;リアルな質感も、複雑な形状も、カッコいい演出も、どれもシェーダーで実現できます。&lt;/p&gt;
 
 &lt;p&gt;短いコードだけで多彩な表現ができるため、映像作成においては &lt;strong&gt;シェーダーは最強の道具&lt;/strong&gt; だと言えるでしょう。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>UnityエンジニアによるShader勉強会！に登壇しました</title>
-      <link>https://gam0022.net/blog/2019/06/20/klab-tech-meetup4/</link>
-      <pubDate>Thu, 20 Jun 2019 10:04:11 +0900</pubDate>
-      
-      <guid>https://gam0022.net/blog/2019/06/20/klab-tech-meetup4/</guid>
-      <description>&lt;p&gt;6/19に開催された&lt;a href=&#34;https://techplay.jp/event/733454&#34;&gt;UnityエンジニアによるShader勉強会！&lt;/a&gt;で「Unity×レイマーチングによる映像制作の実践手法」という発表をしました。&lt;/p&gt;
-
-&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;daf8218b7458460087137b6f23e938b3&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;（06/25追記）&lt;/strong&gt; 発表内容をブログ向けに編集・要約して別記事にまとめました。
-スライドだけでは伝わりにくい箇所を文章でフォローしました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://gam0022.net/blog/2019/06/25/unity-raymarching/&#34;&gt;Unity×レイマーチングによる映像制作の実践手法 | gam0022.net&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;発表資料まとめ&#34;&gt;発表資料まとめ&lt;/h1&gt;
-
-&lt;p&gt;発表者の資料のツイートをまとめました。&lt;/p&gt;
-
-&lt;h2 id=&#34;kanetaaaaa-シェーダーライブコーディングのすすめ&#34;&gt;@kanetaaaaa 「シェーダーライブコーディングのすすめ」&lt;/h2&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;先日の資料を元にシェーダーライブコーディング入門の記事を書きました🤔&lt;br&gt;普段シェーダーを使ってる人の遊び道具になって欲しいです！&lt;br&gt;懇親会時に作ったシェーダーで使用したテクニックもいくつか追加で紹介しています！！&lt;a href=&#34;https://t.co/MgDFAatZre&#34;&gt;https://t.co/MgDFAatZre&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/klab_meetup?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#klab_meetup&lt;/a&gt;&lt;/p&gt;&amp;mdash; かねた (@kanetaaaaa) &lt;a href=&#34;https://twitter.com/kanetaaaaa/status/1141485526815346688?ref_src=twsrc%5Etfw&#34;&gt;2019年6月19日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;本日の資料のために眺めるだけでレイマーチングを完全に理解できるかもしれないシェーダーを作りました🤔&lt;a href=&#34;https://t.co/Hia4I0Dgii&#34;&gt;https://t.co/Hia4I0Dgii&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/klab_meetup?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#klab_meetup&lt;/a&gt; &lt;a href=&#34;https://t.co/kIuU4USxRJ&#34;&gt;pic.twitter.com/kIuU4USxRJ&lt;/a&gt;&lt;/p&gt;&amp;mdash; かねた (@kanetaaaaa) &lt;a href=&#34;https://twitter.com/kanetaaaaa/status/1141307706139004934?ref_src=twsrc%5Etfw&#34;&gt;2019年6月19日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;gam0022-unity-レイマーチングによる映像制作の実践手法&#34;&gt;@gam0022「Unity×レイマーチングによる映像制作の実践手法」&lt;/h2&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;本日の発表資料です！&lt;br&gt;モデリングと演出とライティングを全部シェーダーで実装しました！&lt;a href=&#34;https://t.co/lwg0xVcm3J&#34;&gt;https://t.co/lwg0xVcm3J&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/klab_meetup?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#klab_meetup&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Unity3D?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Unity3D&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/HLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#HLSL&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1141307844999778304?ref_src=twsrc%5Etfw&#34;&gt;2019年6月19日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ブログも更新しました🙏&lt;br&gt;全員の発表資料をまとめ！もあります。&lt;a href=&#34;https://t.co/TdiHF5jILF&#34;&gt;https://t.co/TdiHF5jILF&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/klab_meetup?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#klab_meetup&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Unity3D?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Unity3D&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/HLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#HLSL&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1141541272877850624?ref_src=twsrc%5Etfw&#34;&gt;2019年6月20日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;archeleeds-unityで遊べる背景シェーダーを作る&#34;&gt;@archeleeds「Unityで遊べる背景シェーダーを作る」&lt;/h2&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;KLab Tech Meetup #4&lt;br&gt;「Unityで遊べる背景シェーダーを作る」のスライドです&lt;a href=&#34;https://t.co/YyVB6gEhVk&#34;&gt;https://t.co/YyVB6gEhVk&lt;/a&gt;&lt;br&gt;拙いですが何かの参考になれば 🙇‍♂️&lt;a href=&#34;https://twitter.com/hashtag/klab_meetup?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#klab_meetup&lt;/a&gt;&lt;/p&gt;&amp;mdash; リゼ (@archeleeds) &lt;a href=&#34;https://twitter.com/archeleeds/status/1141376228558983168?ref_src=twsrc%5Etfw&#34;&gt;2019年6月19日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;setchi-fancyscrollview-x-shader&#34;&gt;@setchi「FancyScrollView x Shader」&lt;/h2&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;スクロールビューでもシェーダー芸がしたい！&lt;br&gt;KLab TECH Meetup ＃4 で発表したスライドおよびサンプルコードです。&lt;br&gt;&lt;br&gt;GitHub: &lt;a href=&#34;https://t.co/WFqznn2vVM&#34;&gt;https://t.co/WFqznn2vVM&lt;/a&gt;&lt;br&gt;Google Slides: &lt;a href=&#34;https://t.co/TR5KBVmDUJ&#34;&gt;https://t.co/TR5KBVmDUJ&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/klab_meetup?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#klab_meetup&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/madewithunity?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#madewithunity&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/gamedev?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#gamedev&lt;/a&gt; &lt;a href=&#34;https://t.co/zqECmup7Qi&#34;&gt;pic.twitter.com/zqECmup7Qi&lt;/a&gt;&lt;/p&gt;&amp;mdash; setchi (@setchi) &lt;a href=&#34;https://twitter.com/setchi/status/1141313091134562304?ref_src=twsrc%5Etfw&#34;&gt;2019年6月19日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ブログ更新しました &amp;gt; スクロールビューでもシェーダー芸がしたい！&lt;a href=&#34;https://t.co/5bNo2FlQqe&#34;&gt;https://t.co/5bNo2FlQqe&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/klab_meetup?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#klab_meetup&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/unity3d?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#unity3d&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/gamedev?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#gamedev&lt;/a&gt;&lt;/p&gt;&amp;mdash; setchi (@setchi) &lt;a href=&#34;https://twitter.com/setchi/status/1142779645751783425?ref_src=twsrc%5Etfw&#34;&gt;2019年6月23日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;20分シェーダーライブコーディング-by-kanetaaaaa&#34;&gt;20分シェーダーライブコーディング by @kanetaaaaa&lt;/h2&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;昨日の勉強会の懇親会中に20分間のライブコーディングでシェーダーを作りました！&lt;br&gt;初めて人前でコーディングをしたんですが、めちゃくちゃ楽しかったです！！&lt;br&gt;&lt;br&gt;（当日動かなかったpmod修正済です&amp;hellip;）&lt;br&gt;差分&lt;br&gt;- q.x = abs(p.x ) - 10.;&lt;br&gt;+ q.x = abs(q.x ) - 10.;&lt;a href=&#34;https://t.co/LH3TT4YzSU&#34;&gt;https://t.co/LH3TT4YzSU&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/klab_meetup?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#klab_meetup&lt;/a&gt; &lt;a href=&#34;https://t.co/k61c3O2ZA1&#34;&gt;pic.twitter.com/k61c3O2ZA1&lt;/a&gt;&lt;/p&gt;&amp;mdash; かねた (@kanetaaaaa) &lt;a href=&#34;https://twitter.com/kanetaaaaa/status/1141480732180619264?ref_src=twsrc%5Etfw&#34;&gt;2019年6月19日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;先日の &lt;a href=&#34;https://twitter.com/hashtag/klab_meetup?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#klab_meetup&lt;/a&gt; の懇親会で行った20分のライブコーディング映像を公開しました！&lt;br&gt;実況解説は&lt;a href=&#34;https://twitter.com/gam0022?ref_src=twsrc%5Etfw&#34;&gt;@gam0022&lt;/a&gt; さんと&lt;a href=&#34;https://twitter.com/songofsaya_?ref_src=twsrc%5Etfw&#34;&gt;@songofsaya_&lt;/a&gt;さんです&lt;br&gt;突発ながら面白い実況で場を盛り上げてくださって非常に楽しかったです！&lt;br&gt;動画でもこの空間の楽しさが伝わると思うので是非ご覧ください！&lt;a href=&#34;https://t.co/1CDeXMfJlT&#34;&gt;https://t.co/1CDeXMfJlT&lt;/a&gt;&lt;/p&gt;&amp;mdash; かねた (@kanetaaaaa) &lt;a href=&#34;https://twitter.com/kanetaaaaa/status/1141987474824036353?ref_src=twsrc%5Etfw&#34;&gt;2019年6月21日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;感想&#34;&gt;感想&lt;/h1&gt;
-
-&lt;p&gt;これまでの人生で最高の勉強会でした！&lt;/p&gt;
-
-&lt;p&gt;参加者も発表者もモチベーションがとても高く、終始ものすごい熱気に包まれていて、発表する側としても非常にやりやすかったです！&lt;/p&gt;
-
-&lt;p&gt;勉強会のテーマがニッチすぎることから当初は参加枠を100名としていたのですが、告知開始から数時間後には満員となってしまったため、最終的に会場のキャパシティ上限の200名まで増枠することになりました。
-これほど大人数の勉強会が実現されるとは思っておらず、世間のシェーダーへの関心の高さに驚きました。&lt;/p&gt;
-
-&lt;p&gt;どの発表も尖った内容が満載だったのではないでしょうか。
-シェーダーに対する理解がより深まり、興味が増したのであれば幸いです。&lt;/p&gt;
-
-&lt;p&gt;ご参加いただいた皆さま、本当にありがとうございました！&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2019-06-20-klab-tech-meetup4/live-coding-original.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-06-20-klab-tech-meetup4/live-coding.jpg&#34; alt=&#34;懇親会中のライブコーディングの様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;懇親会中のライブコーディングの様子&lt;/p&gt;</description>
     </item>
     
   </channel>
