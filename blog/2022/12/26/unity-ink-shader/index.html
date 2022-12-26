@@ -25,31 +25,44 @@
     <link rel="shortcut icon" href="https://gam0022.net/img/favicon.png" type="image/png">
     
 
-    <title>メガデモ勉強会!2018で発表しました | gam0022.net</title>
+    <title>UnityのShaderGraphでインクシェーダーを作る | gam0022.net</title>
 
     
         <meta property="og:type" content="article">
-        <meta property="og:description" content="3/10（土）に開催されたメガデモ勉強会! 2018で発表しました。
-
-発表タイトルは「もっと綺麗で写実的な絵作りをしたい！レイマーチング向けのシェーディング技術」です。
-
-発表の概要はこんな感じです。
+        <meta property="og:description" content="これはUnity Advent Calendar 2022の22日目の記事です。
 
 
-レイマーチングのおさらい
-レイマーチングでいい感じにシェーディングするための理論と実践
+
+スプラトゥーン3、けっこう面白いですね。過去作の1,2は未プレイでしたが、3からスプラデビューしました。
+
+スプラ3で遊びながら、インクシェーダーの実装方法に興味が出てきたので、UnityのShaderGraphでそれっぽいものを実装してみました。
+
+ShaderGraphの基本機能だけで構成されており、ノードの量も少なめにしました。
+
+ShaderGraphの基本操作は解説しませんが、なるべく丁寧に説明をしたつもりなので、ShaderGraphの入門記事として参考にしてください！
+
+UnityのShaderGraphでインクシェーダーを試作#Unity3D #ShaderGraph pic.twitter.com/PHxIkfnkiQ&mdash; がむ (@gam0022) December 23, 2022 
 
 
-写実的なレンダリングに不可欠な 大域照明 を説明
-大域照明を構成する間接照明を近似する AO を説明
-レイマーチングによるAO計算の実装を図で解説
 
-レイマーチングによるマテリアル実装のベストプラクティスを紹介
+色変更
 
 
-AOがどういう意味を持つのか、大域照明にどんな関係にあるのか、などを学んでいただけたら嬉しいです。
-レイマーチングによるAO計算の動作原理を図で解説した日本語の資料は見たことが無いので、
-この発表を聞いて「なるほどな」と思ってもらえれば幸いです。
+
+しきい値の調整
+
+
+
+
+Unityプロジェクト
+
+
+github.com/gam0022/ShaderPlaygroundURP
+
+WebGLデモ
+
+
+WASDと右クリックのドラッグでカメラ操作
 
 
 
@@ -57,13 +70,13 @@ AOがどういう意味を持つのか、大域照明にどんな関係にある
     
 
     
-        <meta property="og:image" content="https://gam0022.net/images/posts/2018-03-12-demoscene-study-session/slide.jpg">
+        <meta property="og:image" content="https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/main.png">
         <meta name="twitter:card" content="summary_large_image">
     
 
     <meta property="fb:app_id" content="413045302370371">
-    <meta property="og:title" content="メガデモ勉強会!2018で発表しました | gam0022.net">
-    <meta property="og:url" content="https://gam0022.net/blog/2018/03/16/demoscene-study-session/">
+    <meta property="og:title" content="UnityのShaderGraphでインクシェーダーを作る | gam0022.net">
+    <meta property="og:url" content="https://gam0022.net/blog/2022/12/26/unity-ink-shader/">
 
     <meta name="twitter:site" content="@gam0022">
 
@@ -150,13 +163,13 @@ AOがどういう意味を持つのか、大域照明にどんな関係にある
 
                 
 
-                <h3 class="article-title" itemprop="name">メガデモ勉強会!2018で発表しました</h3>
+                <h3 class="article-title" itemprop="name">UnityのShaderGraphでインクシェーダーを作る</h3>
                 
 
 <div class="article-metadata">
 
     <span class="article-date">
-        <time datetime="2018-03-16 10:14:35 &#43;0900 JST" itemprop="datePublished">2018-03-16</time>
+        <time datetime="2022-12-26 10:36:44 &#43;0900 JST" itemprop="datePublished">2022-12-26</time>
     </span>
 
     
@@ -165,11 +178,19 @@ AOがどういう意味を持つのか、大域照明にどんな関係にある
     <span class="article-tags">
         <i class="fa fa-tags"></i>
         
-        <a class="article-tag-link" href="https://gam0022.net/tags/event">event</a>, 
+        <a class="article-tag-link" href="https://gam0022.net/tags/unity">Unity</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/shader">Shader</a>, 
         
         <a class="article-tag-link" href="https://gam0022.net/tags/cg">CG</a>, 
         
-        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%9e%e3%83%bc%e3%83%81%e3%83%b3%e3%82%b0">レイマーチング</a>
+        <a class="article-tag-link" href="https://gam0022.net/tags/urp">URP</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/shadergraph">ShaderGraph</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e5%85%a5%e9%96%80">入門</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e5%88%9d%e5%bf%83%e8%80%85">初心者</a>
         
     </span>
     
@@ -181,16 +202,16 @@ AOがどういう意味を持つのか、大域照明にどんな関係にある
 <div class="share-box">
     <div class="share_wrap">
         <div class="share_button">
-            <a href="http://b.hatena.ne.jp/entry/https://gam0022.net/blog/2018/03/16/demoscene-study-session/" class="hatena-bookmark-button" data-hatena-bookmark-title="メガデモ勉強会!2018で発表しました" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+            <a href="http://b.hatena.ne.jp/entry/https://gam0022.net/blog/2022/12/26/unity-ink-shader/" class="hatena-bookmark-button" data-hatena-bookmark-title="UnityのShaderGraphでインクシェーダーを作る" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
         </div>
         <div class="share_button">
-            <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://gam0022.net/blog/2018/03/16/demoscene-study-session/" data-text="メガデモ勉強会!2018で発表しました" data-via="gam0022">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://gam0022.net/blog/2022/12/26/unity-ink-shader/" data-text="UnityのShaderGraphでインクシェーダーを作る" data-via="gam0022">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         </div>
         <div class="share_button">
             <div class="g-plus" data-action="share" data-annotation="none"></div>
         </div>
         <div class="share_button">
-            <div class="fb-like" data-href="https://gam0022.net/blog/2018/03/16/demoscene-study-session/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+            <div class="fb-like" data-href="https://gam0022.net/blog/2022/12/26/unity-ink-shader/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
         </div>
         <div class="share_button">
           <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a><script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
@@ -205,111 +226,175 @@ AOがどういう意味を持つのか、大域照明にどんな関係にある
 
 
                 <div class="article-style" itemprop="articleBody">
-                    <p>3/10（土）に開催された<a href="https://atnd.org/events/93843">メガデモ勉強会! 2018</a>で発表しました。</p>
-
-<p>発表タイトルは「もっと綺麗で写実的な絵作りをしたい！レイマーチング向けのシェーディング技術」です。</p>
-
-<p>発表の概要はこんな感じです。</p>
-
-<ul>
-<li>レイマーチングのおさらい</li>
-<li>レイマーチングでいい感じにシェーディングするための理論と実践
-
-<ul>
-<li>写実的なレンダリングに不可欠な <strong>大域照明</strong> を説明</li>
-<li>大域照明を構成する間接照明を近似する <strong>AO</strong> を説明</li>
-<li>レイマーチングによるAO計算の実装を図で解説</li>
-</ul></li>
-<li>レイマーチングによるマテリアル実装のベストプラクティスを紹介</li>
-</ul>
-
-<p>AOがどういう意味を持つのか、大域照明にどんな関係にあるのか、などを学んでいただけたら嬉しいです。
-レイマーチングによるAO計算の動作原理を図で解説した日本語の資料は見たことが無いので、
-この発表を聞いて「なるほどな」と思ってもらえれば幸いです。</p>
-
-<script async class="speakerdeck-embed" data-id="74ea75d0686849238368f73150a7adba" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-
-<p></p>
-
-<p><blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">本日の発表資料です😇 <a href="https://twitter.com/hashtag/%E3%83%A1%E3%82%AC%E3%83%87%E3%83%A2%E5%8B%89%E5%BC%B7%E4%BC%9A?src=hash&amp;ref_src=twsrc%5Etfw">#メガデモ勉強会</a><a href="https://t.co/pxqSbH3DPl">https://t.co/pxqSbH3DPl</a></p>&mdash; がむ😇 (@gam0022) <a href="https://twitter.com/gam0022/status/972340970892111874?ref_src=twsrc%5Etfw">2018年3月10日</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-
-<h1 id="発表の紹介と感想">発表の紹介と感想</h1>
-
-<p>自分以外の発表について、自分の感想を混じえながら紹介します。</p>
-
-<h2 id="notargs-さんの-デモのためのunity講座">@notargs さんの「デモのためのUnity講座」</h2>
-
-<p><blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">本日のメガデモ勉強会で発表した資料です<a href="https://t.co/DStmEyNQ5a">https://t.co/DStmEyNQ5a</a> <a href="https://twitter.com/hashtag/%E3%83%A1%E3%82%AC%E3%83%87%E3%83%A2%E5%8B%89%E5%BC%B7%E4%BC%9A?src=hash&amp;ref_src=twsrc%5Etfw">#メガデモ勉強会</a></p>&mdash; のたぐすキャット (@notargs) <a href="https://twitter.com/notargs/status/972345507111616512?ref_src=twsrc%5Etfw">2018年3月10日</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-
-<p>去年の末に<a href="/blog/2017/12/25/unity-demoscene/">Unityによるデモを作成</a>を試みていたところだったので、参考になる情報がたくさんありました。</p>
-
-<p>音響にエフェクトをかけるための<code>OnAudioFilterRead</code>で入力を無視して波形を作れば、プロシージャルに音楽も作れますね。
-良いことを知りました。</p>
-
-<h2 id="soma-arc-さんの-鏡映によるフラクタルとglslによる描画">@soma_arc さんの「鏡映によるフラクタルとGLSLによる描画」</h2>
-
-<p><blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E3%83%A1%E3%82%AC%E3%83%87%E3%83%A2%E5%8B%89%E5%BC%B7%E4%BC%9A?src=hash&amp;ref_src=twsrc%5Etfw">#メガデモ勉強会</a> 「鏡映によるフラクタルとGLSLによる描画」で使用した資料を公開しました．本日はありがとうございました．<a href="https://t.co/r3o3Rajbpn">https://t.co/r3o3Rajbpn</a><a href="https://t.co/wL36mO8d6e">https://t.co/wL36mO8d6e</a></p>&mdash; 蘇摩 (@soma_arc) <a href="https://twitter.com/soma_arc/status/972426826772434945?ref_src=twsrc%5Etfw">2018年3月10日</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-
-<p>ずっと聞いてみたかった内容でした。資料も説明も上手で理解しやすかったです。</p>
-
-<p>以前にブログで紹介した<a href="/blog/2017/03/02/raymarching-fold/">距離関数のfold</a>に近いものを感じました。</p>
-
-<p>foldでは平面の鏡を使いましたが、この発表では円形の鏡を使うイメージだと理解しました。</p>
-
-<p>円の鏡映では、まず円形の鏡を配置します。すると鏡同士で相互に反射するので、合わせ鏡のように、映り込んだ円がさらに再帰的に別の円の鏡に映り込みます。反射の再帰の深度に応じて色をつけると、単純な円から美しい模様が生成できると理解しました。</p>
-
-<p>円の外にテクスチャを置いた例や、2D -&gt; 3D に拡張した球の鏡による例も紹介されていました。</p>
-
-<h2 id="fl1ne-さんの-tokyodemofestとfrontl1neのご紹介">@FL1NE   さんの「TokyoDemoFestとFRONTL1NEのご紹介」</h2>
-
-<p><blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">本日の発表資料です <a href="https://twitter.com/hashtag/%E3%83%A1%E3%82%AC%E3%83%87%E3%83%A2%E5%8B%89%E5%BC%B7%E4%BC%9A?src=hash&amp;ref_src=twsrc%5Etfw">#メガデモ勉強会</a> <a href="https://t.co/NkgvYkD8eH">https://t.co/NkgvYkD8eH</a></p>&mdash; ΓL1ИΞ@GDC2018 (@FL1NE) <a href="https://twitter.com/FL1NE/status/972377117815009280?ref_src=twsrc%5Etfw">2018年3月10日</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-
-<p>Tokyo Demo Fest 2018 は10月〜11月に開催予定！</p>
-
-<p>Meet the Meatのパワーワード感がすごい！</p>
-
-<h2 id="fms-cat-さんの-glslで音楽を作ります">@FMS_Cat さんの「GLSLで音楽を作ります」</h2>
-
-<p><blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">本日の勉強会で使ったサンプルコードおよびスライドです。 <a href="https://t.co/tkAqql021E">https://t.co/tkAqql021E</a> <a href="https://twitter.com/hashtag/%E3%83%A1%E3%82%AC%E3%83%87%E3%83%A2%E5%8B%89%E5%BC%B7%E4%BC%9A?src=hash&amp;ref_src=twsrc%5Etfw">#メガデモ勉強会</a></p>&mdash; JPEG Depression (@FMS_Cat) <a href="https://twitter.com/FMS_Cat/status/972495648883752960?ref_src=twsrc%5Etfw">2018年3月10日</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-
-<p>シェーダーで音楽を作ってみたいと思いながらも、音楽知識が0で諦めていた私のような人のための発表でした。</p>
-
-<p>資料も説明も素晴らしくて、素人の私でもすっと頭に入ってきました。</p>
-
-<p>「ステレオサウンド」「音量・音階・音色」「コード」のような基礎用語の説明がカバーされていて助かりました。
-GLSLの実装を踏まえた説明だったので、よく知らない音楽の概念も理解できました。</p>
-
-<p>特に印象的だったのは楽器編成です。
-sin波や矩形波といった単純な波形をベースにして、本物の楽器のような音色を作れることに感動しました。</p>
-
-<p>またコードを構成する音からランダムに音を選択し、オクターブもランダムに変化させることで、
-ランダムながらかなり曲っぽい感じになることにびっくりしました（アルペジオ？）。</p>
-
-<p>音楽は諦めかけていましたが、この発表のおかげで自分で音楽を制作する道筋が見えました。
-発表で使われたコードはGitHubでも公開されているので、実際にShadertoyで動かして理解を深めているところです。
-素敵な発表ありがとうございました！</p>
+                    <p>これは<a href="https://qiita.com/advent-calendar/2022/unity">Unity Advent Calendar 2022</a>の22日目の記事です。</p>
 
 <hr />
 
-<p>勉強会から帰宅した後、FMS_Catさんの発表でオススメされていた「Moleman 2」という動画を家で見ました。
-メガデモの起源から現在に至るまで、メガデモの歴史を1時間30分に凝縮された動画になっていて、デモシーナー必見の内容でした。</p>
+<p>スプラトゥーン3、けっこう面白いですね。過去作の1,2は未プレイでしたが、3からスプラデビューしました。</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/iRkZcTg1JWU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<p>スプラ3で遊びながら、インクシェーダーの実装方法に興味が出てきたので、UnityのShaderGraphでそれっぽいものを実装してみました。</p>
 
-<h1 id="さいごに">さいごに</h1>
+<p>ShaderGraphの基本機能だけで構成されており、ノードの量も少なめにしました。</p>
 
-<p>ずっと気になっていた内容を聞けて大満足でした。どの発表も資料も説明も分かりやすくて素晴らしかったです。
-懇親会では、以前の自分の発表でレイマーチングを知って、卒業制作にレイマーチングを使ったという学生とお話しました。
-自分の活動を通して何かを得た人もいるということに嬉しくなりました。</p>
+<p>ShaderGraphの基本操作は解説しませんが、なるべく丁寧に説明をしたつもりなので、ShaderGraphの入門記事として参考にしてください！</p>
 
-<p>メガデモ制作のモチベーションが高まってきたので、今年の10〜11月のTDFに向けて頑張りたいです！</p>
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">UnityのShaderGraphでインクシェーダーを試作<a href="https://twitter.com/hashtag/Unity3D?src=hash&amp;ref_src=twsrc%5Etfw">#Unity3D</a> <a href="https://twitter.com/hashtag/ShaderGraph?src=hash&amp;ref_src=twsrc%5Etfw">#ShaderGraph</a> <a href="https://t.co/PHxIkfnkiQ">pic.twitter.com/PHxIkfnkiQ</a></p>&mdash; がむ (@gam0022) <a href="https://twitter.com/gam0022/status/1606141695724204032?ref_src=twsrc%5Etfw">December 23, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
 
-<p>運営の方々、発表者の方々、会場を提供していただいたさくらインターネット様、ご参加いただいた方々、ありがとうございました！</p>
+<p><a href="/images/posts/2022-12-26-unity-ink-shader/ink-shader.gif"><img src="/images/posts/2022-12-26-unity-ink-shader/ink-shader.gif" alt="インクシェーダー" /></a></p>
+
+<p>色変更</p>
+
+<p><a href="/images/posts/2022-12-26-unity-ink-shader/ink-shader-color.gif"><img src="/images/posts/2022-12-26-unity-ink-shader/ink-shader-color.gif" alt="インクシェーダー 色変更" /></a></p>
+
+<p>しきい値の調整</p>
+
+<p><a href="/images/posts/2022-12-26-unity-ink-shader/ink-shader-threshold.gif"><img src="/images/posts/2022-12-26-unity-ink-shader/ink-shader-threshold.gif" alt="インクシェーダー しきい値の調整" /></a></p>
+
+<ul>
+<li>Unityプロジェクト
+
+<ul>
+<li><a href="https://github.com/gam0022/ShaderPlaygroundURP">github.com/gam0022/ShaderPlaygroundURP</a></li>
+</ul></li>
+<li><a href="https://gam0022.net/ShaderPlaygroundURP/">WebGLデモ</a>
+
+<ul>
+<li>WASDと右クリックのドラッグでカメラ操作</li>
+</ul></li>
+</ul>
+
+<p></p>
+
+<h1 id="shadergraph全体">ShaderGraph全体</h1>
+
+<p>ShaderGraphの全体です。</p>
+
+<p>文字が小さくてすみません。</p>
+
+<p>※2回に分けてスクリーンショットを撮影してMSペイントで手動結合しました。3回以上分割して撮影すればもっと高解像度にできるのですが、手間がかかるので諦めました。
+いい感じにウィンドウのスクロール領域を含めて一発でスクリーンショットを撮る方法があれば教えてください。</p>
+
+<p><a href="/images/posts/2022-12-26-unity-ink-shader/shader-graph-all.png"><img src="/images/posts/2022-12-26-unity-ink-shader/shader-graph-all.png" alt="ShaderGraph全体" /></a></p>
+
+<h2 id="基本方針">基本方針</h2>
+
+<ul>
+<li>URPのLitグラフに与えるBaseColorやSmoothnessや法線をいい感じに制御してインクっぽくする
+
+<ul>
+<li>カスタムなシェーディングはしない</li>
+</ul></li>
+<li>インクの高さマップはGradient Noiseからプロシージャル生成
+
+<ul>
+<li>インタラクティブなインク制御は未対応</li>
+<li>RenderTextureを生成してペイントするようなアプローチでインタラクティブにできそう（今後の課題）</li>
+</ul></li>
+</ul>
+
+<h1 id="チュートリアル">チュートリアル</h1>
+
+<p>そこまで規模の大きくないShaderGraphですが、理解しやすいように1ステップごと解説します。</p>
+
+<h2 id="ステップ1-pbrテクスチャに対応">ステップ1. PBRテクスチャに対応</h2>
+
+<p>まずはPBRテクスチャに対応します。</p>
+
+<p>PBRテクスチャは以下のサイトからお借りしました。とても良い感じのCC0ライセンスの床のタイル素材を利用させていただきました。</p>
+
+<ul>
+<li><a href="https://polyhaven.com/a/cobblestone_floor_08">Cobblestone Floor 08 Texture • Poly Haven</a></li>
+</ul>
+
+<p>これがPBRテクスチャをプロパティにして、ShaderGraphの各種PBRパラメーターを渡すだけのShaderGraphです。</p>
+
+<p><a href="/images/posts/2022-12-26-unity-ink-shader/1-armtex.png"><img src="/images/posts/2022-12-26-unity-ink-shader/1-armtex.png" alt="PBRテクスチャに対応" /></a></p>
+
+<p><code>BaseColor</code> や <code>Normal</code> はそのままノードを繋げるだけでOKです。</p>
+
+<p><code>Metallic/Smoothness/Ambient Occlusion</code> だけ少し工夫がいります。</p>
+
+<p>Poly Havenのテクスチャは <code>Ambient Occlusion/Roughness/Metallic</code>（以下、ARMテクスチャ）がRGBに格納されているようなので、RGBの順番をBGRのように並び替える必要があります。</p>
+
+<p><code>Smoothness = 1 - Roughness</code> の関係があるので <code>One Minus</code> ノードで変換します。</p>
+
+<p>これでPoly Havenから落としてきたARMテクスチャに対応したShaderGraphができました。</p>
+
+<h2 id="ステップ2-uvのタイリング">ステップ2. UVのタイリング</h2>
+
+<p>ここから最終的なインクシェーダーのShaderGraphをステップごとに解説します。</p>
+
+<p>まずUVのタイリングですが、単純にUVに定数を乗算しているだけです。今回は下地のテクスチャ用とインク用で独立してタイリングできるようにしました。</p>
+
+<p><a href="/images/posts/2022-12-26-unity-ink-shader/2-uv.png"><img src="/images/posts/2022-12-26-unity-ink-shader/2-uv.png" alt="UVのタイリング" /></a></p>
+
+<h2 id="ステップ3-インクの高さマップ用のノイズ生成">ステップ3. インクの高さマップ用のノイズ生成</h2>
+
+<p>インクの高さマップはGradient Noiseから生成します。時間でアニメーションさせるために2つのGradient Noiseを線形補間で合成しています。</p>
+
+<p>1つ目のGradient NoiseのUVは固定させておいて、2つ目のGradient NoiseのUVはtimeでスクロールさせています。</p>
+
+<p>非常にシンプルな処理ですが、意外にもそれなりにインクっぽく見えるのではないでしょうか？</p>
+
+<p>余談になりますが、ShaderGraphのGradient Noiseはシェーダーでプロシージャル生成しているのでGPU負荷も高いと思います。実用するなら軽量化のためにテクスチャのサンプリングに置き換えた方がいいかもしれません。</p>
+
+<p><a href="/images/posts/2022-12-26-unity-ink-shader/3-noise.png"><img src="/images/posts/2022-12-26-unity-ink-shader/3-noise.png" alt="インクの高さマップ用のノイズ生成" /></a></p>
+
+<h2 id="ステップ4-凹凸を考慮したインク判定のしきい値">ステップ4. 凹凸を考慮したインク判定のしきい値</h2>
+
+<p>ステップ3. でインクの高さマップを生成しました。この高さマップがしきい値以上ならインクの領域と見なすようにします。</p>
+
+<p>インク判定のしきい値は定数でも良いのですが、高さマップを考慮してブロックの溝など低い部分の方がインクになりやすくします。</p>
+
+<p><a href="/images/posts/2022-12-26-unity-ink-shader/4-threshold.png"><img src="/images/posts/2022-12-26-unity-ink-shader/4-threshold.png" alt="インクの高さマップ用のノイズ生成" /></a></p>
+
+<p>高さマップの影響力はプロパティで制御できるようにしました。</p>
+
+<p>高さマップの考慮がないと真っ平らなPlaneにインクが乗っているようで、雑コラ感・馴染まない感があります。</p>
+
+<p><a href="/images/posts/2022-12-26-unity-ink-shader/height-intensity-off.png"><img src="/images/posts/2022-12-26-unity-ink-shader/height-intensity-off.png" alt="高さマップの考慮なし" /></a></p>
+
+<p>高さマップを考慮すると、ブロックの凹凸を考慮してインクが広がるので、リアリティを少し向上できます。</p>
+
+<p><a href="/images/posts/2022-12-26-unity-ink-shader/height-intensity-on.png"><img src="/images/posts/2022-12-26-unity-ink-shader/height-intensity-on.png" alt="高さマップの考慮あり" /></a></p>
+
+<h2 id="ステップ5-インクのマスク生成">ステップ5. インクのマスク生成</h2>
+
+<p>「ステップ3のインクの高さマップ」から「ステップ4のしきい値」を引き算することで、インクのマスク画像を生成します。</p>
+
+<p>そのままだとコントラストが薄いので、Powerノードでコントラストを強めに調整します。</p>
+
+<p><a href="/images/posts/2022-12-26-unity-ink-shader/5-1-ink-mask.png"><img src="/images/posts/2022-12-26-unity-ink-shader/5-1-ink-mask.png" alt="インクのマスク生成" /></a></p>
+
+<p>インクのマスクマップをLerpの引数にして、各種PBRパラメーターにインク用の値をブレンドします。
+元はARMテクスチャの値をそのままPBRパラメーターとして渡していましたが、間にLerpノードを挟み込んで、インク用の <code>Ambient Occlusion/Roughness/Metallic</code> をブレンドできるようにしました。</p>
+
+<p><a href="/images/posts/2022-12-26-unity-ink-shader/5-2-ink-mask.png"><img src="/images/posts/2022-12-26-unity-ink-shader/5-2-ink-mask.png" alt="インク用の設定をブレンド" /></a></p>
+
+<p>BaseMapも同じようにLerpします。</p>
+
+<p><a href="/images/posts/2022-12-26-unity-ink-shader/5-3-ink-mask.png"><img src="/images/posts/2022-12-26-unity-ink-shader/5-3-ink-mask.png" alt="インク用の設定をブレンド(BaseMap)" /></a></p>
+
+<h2 id="ステップ6-法線の生成">ステップ6. 法線の生成</h2>
+
+<p><a href="/images/posts/2022-12-26-unity-ink-shader/6-normal.png"><img src="/images/posts/2022-12-26-unity-ink-shader/6-normal.png" alt="法線の生成" /></a></p>
+
+<p>ステップ3のインクの高さマップから法線を生成します。Normal From Heightノードがあるので利用します。</p>
+
+<p>ステップ5のインクのマスクでは高さマップの影響で高周波成分が現れてしまうので滑らかな法線ができず、法線生成には不適切です。しきい値を引き算する前のGradient Noiseの値をNormal From Heightノードに繋ぎます。</p>
+
+<p>今回もPowerノードでコントラストを調整可能にしました。SaturateノードではなくMaximumノードを利用しているのでは、 <code>Clamp(x, 0, INF)</code> にしたいからです。</p>
+
+<p>マスク画像の結果は <code>[0-1]</code> に正規化する必要がありますが、法線生成のHeightマップであれば最大値の制限は不要だと思ったからです。</p>
+
+<p>以上がインク用のシェーダーの解説でした。</p>
+
+<h1 id="まとめ">まとめ</h1>
+
+<p>ShaderGraphだけでノーコードのインクシェーダーを試作しました。
+PBRパラメーターを制御するだけのお手軽な実装ですが、思ったよりも良い見た目になったので満足です。</p>
+
+<p>今回はインクのマスクにGradient Noiseを利用しましたが、RenderTextureをシェーダー外部から与えればインタラクティブにインクを塗ったりもできると思います。</p>
                 </div>
 
             </article>
@@ -319,7 +404,7 @@ sin波や矩形波といった単純な波形をベースにして、本物の�
 <div class="article-metadata">
 
     <span class="article-date">
-        <time datetime="2018-03-16 10:14:35 &#43;0900 JST" itemprop="datePublished">2018-03-16</time>
+        <time datetime="2022-12-26 10:36:44 &#43;0900 JST" itemprop="datePublished">2022-12-26</time>
     </span>
 
     
@@ -328,11 +413,19 @@ sin波や矩形波といった単純な波形をベースにして、本物の�
     <span class="article-tags">
         <i class="fa fa-tags"></i>
         
-        <a class="article-tag-link" href="https://gam0022.net/tags/event">event</a>, 
+        <a class="article-tag-link" href="https://gam0022.net/tags/unity">Unity</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/shader">Shader</a>, 
         
         <a class="article-tag-link" href="https://gam0022.net/tags/cg">CG</a>, 
         
-        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%9e%e3%83%bc%e3%83%81%e3%83%b3%e3%82%b0">レイマーチング</a>
+        <a class="article-tag-link" href="https://gam0022.net/tags/urp">URP</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/shadergraph">ShaderGraph</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e5%85%a5%e9%96%80">入門</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e5%88%9d%e5%bf%83%e8%80%85">初心者</a>
         
     </span>
     
@@ -344,16 +437,16 @@ sin波や矩形波といった単純な波形をベースにして、本物の�
 <div class="share-box">
     <div class="share_wrap">
         <div class="share_button">
-            <a href="http://b.hatena.ne.jp/entry/https://gam0022.net/blog/2018/03/16/demoscene-study-session/" class="hatena-bookmark-button" data-hatena-bookmark-title="メガデモ勉強会!2018で発表しました" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+            <a href="http://b.hatena.ne.jp/entry/https://gam0022.net/blog/2022/12/26/unity-ink-shader/" class="hatena-bookmark-button" data-hatena-bookmark-title="UnityのShaderGraphでインクシェーダーを作る" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
         </div>
         <div class="share_button">
-            <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://gam0022.net/blog/2018/03/16/demoscene-study-session/" data-text="メガデモ勉強会!2018で発表しました" data-via="gam0022">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://gam0022.net/blog/2022/12/26/unity-ink-shader/" data-text="UnityのShaderGraphでインクシェーダーを作る" data-via="gam0022">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         </div>
         <div class="share_button">
             <div class="g-plus" data-action="share" data-annotation="none"></div>
         </div>
         <div class="share_button">
-            <div class="fb-like" data-href="https://gam0022.net/blog/2018/03/16/demoscene-study-session/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+            <div class="fb-like" data-href="https://gam0022.net/blog/2022/12/26/unity-ink-shader/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
         </div>
         <div class="share_button">
           <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a><script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
@@ -369,11 +462,9 @@ sin波や矩形波といった単純な波形をベースにして、本物の�
             <nav>
     <ul class="pager">
         
-        <li class="previous"><a href="https://gam0022.net/blog/2017/12/25/unity-demoscene/"><span aria-hidden="true">&larr;</span> Unityでメガデモ制作に挑戦（uRaymarchingとTimelineを試す）</a></li>
+        <li class="previous"><a href="https://gam0022.net/blog/2022/10/20/normalizefm/"><span aria-hidden="true">&larr;</span> normalize.fmにゲスト出演しました</a></li>
         
 
-        
-        <li class="next"><a href="https://gam0022.net/blog/2018/05/29/unite2018/">Unite2018感想 <span aria-hidden="true">&rarr;</span></a></li>
         
     </ul>
 </nav>
@@ -384,9 +475,9 @@ sin波や矩形波といった単純な波形をベースにして、本物の�
         <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'gam0022-net';
-    var disqus_identifier = 'https:\/\/gam0022.net\/blog\/2018\/03\/16\/demoscene-study-session\/';
-    var disqus_title = 'メガデモ勉強会!2018で発表しました';
-    var disqus_url = 'https:\/\/gam0022.net\/blog\/2018\/03\/16\/demoscene-study-session\/';
+    var disqus_identifier = 'https:\/\/gam0022.net\/blog\/2022\/12\/26\/unity-ink-shader\/';
+    var disqus_title = 'UnityのShaderGraphでインクシェーダーを作る';
+    var disqus_url = 'https:\/\/gam0022.net\/blog\/2022\/12\/26\/unity-ink-shader\/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -880,14 +971,20 @@ sin波や矩形波といった単純な波形をベースにして、本物の�
         <div class="col-md-3">
             <nav id="TableOfContents">
 <ul>
-<li><a href="#発表の紹介と感想">発表の紹介と感想</a>
+<li><a href="#shadergraph全体">ShaderGraph全体</a>
 <ul>
-<li><a href="#notargs-さんの-デモのためのunity講座">@notargs さんの「デモのためのUnity講座」</a></li>
-<li><a href="#soma-arc-さんの-鏡映によるフラクタルとglslによる描画">@soma_arc さんの「鏡映によるフラクタルとGLSLによる描画」</a></li>
-<li><a href="#fl1ne-さんの-tokyodemofestとfrontl1neのご紹介">@FL1NE   さんの「TokyoDemoFestとFRONTL1NEのご紹介」</a></li>
-<li><a href="#fms-cat-さんの-glslで音楽を作ります">@FMS_Cat さんの「GLSLで音楽を作ります」</a></li>
+<li><a href="#基本方針">基本方針</a></li>
 </ul></li>
-<li><a href="#さいごに">さいごに</a></li>
+<li><a href="#チュートリアル">チュートリアル</a>
+<ul>
+<li><a href="#ステップ1-pbrテクスチャに対応">ステップ1. PBRテクスチャに対応</a></li>
+<li><a href="#ステップ2-uvのタイリング">ステップ2. UVのタイリング</a></li>
+<li><a href="#ステップ3-インクの高さマップ用のノイズ生成">ステップ3. インクの高さマップ用のノイズ生成</a></li>
+<li><a href="#ステップ4-凹凸を考慮したインク判定のしきい値">ステップ4. 凹凸を考慮したインク判定のしきい値</a></li>
+<li><a href="#ステップ5-インクのマスク生成">ステップ5. インクのマスク生成</a></li>
+<li><a href="#ステップ6-法線の生成">ステップ6. 法線の生成</a></li>
+</ul></li>
+<li><a href="#まとめ">まとめ</a></li>
 </ul>
 </nav>
         </div>
