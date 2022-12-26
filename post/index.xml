@@ -59,12 +59,20 @@
 
 &lt;p&gt;ShaderGraphの全体です。&lt;/p&gt;
 
-&lt;p&gt;文字が小さくてすみません。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/InkNoise.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/InkNoise.png&#34; alt=&#34;ShaderGraph全体&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;※2回に分けてスクリーンショットを撮影してMSペイントで手動結合しました。3回以上分割して撮影すればもっと高解像度にできるのですが、手間がかかるので諦めました。
-いい感じにウィンドウのスクロール領域を含めて一発でスクリーンショットを撮る方法があれば教えてください。&lt;/p&gt;
+&lt;p&gt;ShaderGraphのスクロール領域を含めてキャプチャするために &lt;a href=&#34;https://github.com/Cyanilux/ShaderGraphToPNG&#34;&gt;Cyanilux/ShaderGraphToPNG&lt;/a&gt; というUnityのパッケージを利用しました。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/shader-graph-all.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/shader-graph-all.png&#34; alt=&#34;ShaderGraph全体&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;完璧なソリューションがありました。&lt;br&gt;Unity2021.3.15f1 + URP12.1.8 でも完璧に動作！&lt;a href=&#34;https://t.co/3J2qsrye8s&#34;&gt;https://t.co/3J2qsrye8s&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1607359807710978049?ref_src=twsrc%5Etfw&#34;&gt;December 26, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;!--
+文字が小さくてすみません。
+
+※2回に分けてスクリーンショットを撮影してMSペイントで手動結合しました。3回以上分割して撮影すればもっと高解像度にできるのですが、手間がかかるので諦めました。
+いい感じにウィンドウのスクロール領域を含めて一発でスクリーンショットを撮る方法があれば教えてください。
+
+[![ShaderGraph全体](/images/posts/2022-12-26-unity-ink-shader/shader-graph-all.png)](/images/posts/2022-12-26-unity-ink-shader/shader-graph-all.png)
+--&gt;
 
 &lt;h2 id=&#34;基本方針&#34;&gt;基本方針&lt;/h2&gt;
 
