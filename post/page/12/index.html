@@ -124,6 +124,72 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/12/11/hsp-contest2012/" itemprop="url">HSPプログラミングコンテスト2012で秀和システム賞を受賞</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2012-12-11 12:42:00 &#43;0900 JST" itemprop="datePublished">2012-12-11</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/hsp">HSP</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                <p>HSPプログラミングコンテスト2012で秀和システム賞を受賞しました。</p>
+
+<p><a href="http://hsp.tv/contest2012/cntst_fresult.html#313">HSPプログラムコンテスト2012　入賞作品詳細</a></p>
+
+<p>入賞作品名はSoar(ソアー)で、女の子を落下しないように操作して、ひたすら上を目指すシンプルなゲームです。</p>
+
+<p>去年はこのコンテストに参加しなかったので、2年ぶりの参加でした。</p>
+
+<p>今年は<a href="http://www.ustream.tv/recorded/27086650">コンテストTV</a>などでも
+取り上げて貰えたので嬉しかったです。</p>
+
+<p>(開発期間が本当に3日くらいだったので、)不具合などを修正したら、
+ソースコードなどもGitHubなどに公開する予定です。</p>
+
+<p>技術的な点だと、キャラクターの移動の計算に速度を使ったり、
+床の移動に三角関数を用いたりして、滑らかな動きを実現しました。</p>
+
+<p>久しぶりにHSPを触りましたが、やっぱりこのくらいの規模のゲームを
+サクッと作るにはとても便利な言語ですね。</p>
+
+<p>最近ではJavaScriptに変換できたり、
+スマートフォン上にも簡単に移植できるようになっているようなので、
+期待が高まります。</p>
+
+<p>コンテストの主催者の方、審査員の方、協賛の方、Soarを遊んで下さった方、
+関係者さんに感謝です。来年も参加したいと思います。</p>
+
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2012/12/11/hsp-contest2012/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/12/05/circuit-diagram/" itemprop="url">タイミングチャートと回路図を比較的楽につくる方法</a></h3>
         
 
@@ -753,76 +819,6 @@ module Jekyll module Filters # Outputs a list of categories as comma-separated &
         </div>
         <p class="read-more">
             <a href="https://gam0022.net/blog/2012/08/09/get-ascii-code-using-ruby1-dot-9/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/08/06/how-to-use-cocot/" itemprop="url">cocotで文字コードが異なるマシンにsshする</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2012-08-06 11:18:00 &#43;0900 JST" itemprop="datePublished">2012-08-06</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/ssh">ssh</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/coins">coins</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/cocot">cocot</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/mac-os-x">Mac OS X</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                <p>私が所属している情報科学類(略称coins)では、24時間いつでもsshできるiMacがあるのですが、文字エンコーディングはEUC-JPです。</p>
-
-<p>一方で私のノートPCの文字エンコーディングはUTF-8なので、
-普通にsshすると文字化けしてひどいことになってしまいます。</p>
-
-<p>cocotという端末(tty)とプロセスの間に割り込んで、文字コード変換を行うツールがあるので、これを使うことで文字化けが解消します。</p>
-
-<p>OS Xを使っていれば、cocotは普通にhomebrewからインストールできます。</p>
-
-<pre><code class="language-bash">brew install cocot # cocotをインストールする
-</code></pre>
-
-<p>UTF-8環境からEUC-JP環境にsshする場合、次のようにすればいいです。</p>
-
-<pre><code class="language-bash"># cocot -t コンソール側の文字コード -p プロセス側の文字コード -- 使いたいコマンド
-cocot -t UTF-8 -p EUC-JP -- ssh coins
-</code></pre>
-
-<p>頻繁にsshする場合、次のようにエイリアスを作ればいいかと思います。
-うーむ。エイリアス名は検討の余地がありそうです。(汗)</p>
-
-<pre><code class="language-bash">alias sshe='cocot -t UTF-8 -p EUC-JP -- ssh' #EUC-JP環境にsshする
-sshe coins
-</code></pre>
-
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2012/08/06/how-to-use-cocot/" class="btn btn-primary btn-outline">
                 Read more
             </a>
         </p>
