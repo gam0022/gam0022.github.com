@@ -1830,7 +1830,12 @@ WORMHOLEではシェーダーによるプログラミングによってプロシ
       <pubDate>Mon, 04 Mar 2019 09:01:07 +0900</pubDate>
       
       <guid>https://gam0022.net/blog/2019/03/04/porting-from-shadertoy-to-glslsandbox/</guid>
-      <description>&lt;p&gt;2021-11-16 backbufferとマウスの対応&lt;/p&gt;
+      <description>&lt;p&gt;更新履歴&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2021-11-16 backbufferとマウスの対応&lt;/li&gt;
+&lt;li&gt;2023-05-02 twigl(classic 300es)について追記&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://www.shadertoy.com/&#34;&gt;Shadertoy&lt;/a&gt;のコードを&lt;a href=&#34;http://glslsandbox.com/&#34;&gt;GLSL Sandbox&lt;/a&gt;に一発で移植するコードを思いつきました。&lt;/p&gt;
 
@@ -1875,6 +1880,36 @@ void main(void) {
 
 &lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;NEORTはじめました⛩️&lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/creativecoding?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#creativecoding&lt;/a&gt; &lt;a href=&#34;https://t.co/acKyzwIU8S&#34;&gt;https://t.co/acKyzwIU8S&lt;/a&gt; &lt;a href=&#34;https://t.co/1AqphUQ5jv&#34;&gt;pic.twitter.com/1AqphUQ5jv&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1100564853985501184?ref_src=twsrc%5Etfw&#34;&gt;2019年2月27日&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;shadertoy-twigl-classic-300es&#34;&gt;Shadertoy → twigl (classic 300es)&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://sessions.frontl1ne.net/&#34;&gt;SESSION&lt;/a&gt; 2023のGLSL Graphics Compoでは&lt;a href=&#34;https://twigl.app/&#34;&gt;twigl&lt;/a&gt;が採用されたので、twigl対応をしました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&amp;quot;Transcendental Cube&amp;quot; &lt;br&gt;&lt;br&gt;2nd place at GLSL Graphics Compo, &lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; 2023 🥈&lt;br&gt;&lt;br&gt;SESSIONS 2023のGLSL Graphics Compoで2位を勝ち取りました！ &lt;a href=&#34;https://t.co/Ra2Y0Ccfpx&#34;&gt;pic.twitter.com/Ra2Y0Ccfpx&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1653096277184503808?ref_src=twsrc%5Etfw&#34;&gt;May 1, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;// BEGIN: shadertoy porting template
+// https://gam0022.net/blog/2019/03/04/porting-from-shadertoy-to-glslsandbox/
+precision highp float;
+
+uniform vec2 resolution;
+uniform float time;
+uniform vec2 mouse;
+uniform sampler2D backbuffer;
+
+#define iResolution resolution
+#define iTime time
+#define iMouse (vec4(mouse, .5, .5) * resolution.xyxy)
+#define iChannel0 backbuffer
+
+void mainImage(out vec4 fragColor, vec2 fragCoord);
+out vec4 outColor;
+void main () {
+    vec4 col;
+    mainImage(col, gl_FragCoord.xy);
+    outColor = col;
+}
+// END: shadertoy porting template
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;解説&#34;&gt;解説&lt;/h2&gt;
 
