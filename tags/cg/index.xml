@@ -10,7 +10,7 @@
     <atom:link href="/tags/cg/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>SESSIONS2023のGLSL Graphics Compoで準優勝しました（グラフィックス解説）</title>
+      <title>SESSIONS 2023のGLSL Graphics Compoで準優勝しました（グラフィックス解説）</title>
       <link>https://gam0022.net/blog/2023/05/31/sessions2023-glsl-compo/</link>
       <pubDate>Wed, 31 May 2023 06:49:24 +0900</pubDate>
       
@@ -73,7 +73,7 @@
 
 &lt;h2 id=&#34;webgl2-0が利用可能に&#34;&gt;WebGL2.0が利用可能に&lt;/h2&gt;
 
-&lt;p&gt;SESSIONS2023では、twiglの&lt;code&gt;classic (300 es)&lt;/code&gt;モードが許可されたので、WebGL2.0の機能も利用できるようになりました！&lt;/p&gt;
+&lt;p&gt;SESSIONS 2023では、twiglの&lt;code&gt;classic (300 es)&lt;/code&gt;モードが許可されたので、WebGL2.0の機能も利用できるようになりました！&lt;/p&gt;
 
 &lt;p&gt;TokyoDemoFest2021ではGLSL Snadboxがレギュレーションとなっており、WebGL1.0の機能しか使えないという制約があったのですが、今回から配列やビット演算などが利用できるようになりました。&lt;/p&gt;
 
@@ -412,23 +412,33 @@ Mad Tracingではレイマーチングのステップ中にセカンダリレイ
 
 &lt;p&gt;作品のグラフィックス解説からはテーマが外れてしまいますが、最後にSESSIONSの振り返りを記しておきます。&lt;/p&gt;
 
-&lt;p&gt;約5年ぶりのオフライン開催ということで、大勢でデモを鑑賞したり、交流したりと、懐かしくも楽しい時間を過ごせました。&lt;/p&gt;
+&lt;h2 id=&#34;オフラインパーティーの魅力&#34;&gt;オフラインパーティーの魅力&lt;/h2&gt;
+
+&lt;p&gt;TokyoDemoFest2018年以来の約5年ぶりのオフライン開催のデモパーティーということで、大勢でデモを鑑賞したり、交流したりと、懐かしくも楽しい時間を過ごせました。&lt;/p&gt;
 
 &lt;p&gt;オンラインのデモパーティーも素晴らしいものですが、会場の雰囲気や臨場感を直接感じられる点で、やはりオフラインイベントには特別な魅力があると感じています。&lt;/p&gt;
 
 &lt;p&gt;実際に参加者と話をしたり、作品についての感想やアイデアを交換したりすることで、新たな視点やインスピレーションを得ることができました。&lt;/p&gt;
 
-&lt;p&gt;SESSIONSは2023年から新たにスタートした日本のデモパーティです。当日の雰囲気は、アフタームービーからよく伝わってきます。&lt;/p&gt;
+&lt;h2 id=&#34;sessionsについて&#34;&gt;SESSIONSについて&lt;/h2&gt;
 
-&lt;div class=&#34;movie-wrap&#34;&gt;
-&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/Xyf5op4-hSs&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+&lt;p&gt;SESSIONSは2023年から新たにスタートしたデモパーティーです。&lt;/p&gt;
 
-&lt;p&gt;SESSIONSは純粋なデモパーティーとは異なり、デモシーンの枠に囚われないさまざまなクリエイティブコーディングの作品を募集しています。&lt;/p&gt;
+&lt;p&gt;実は、厳密にはデモパーティーではなく、デモパーティのようなイベントだそうです。&lt;/p&gt;
+
+&lt;p&gt;純粋なデモパーティーであるTokyoDemoFestとは異なり、デモシーンの枠に囚われず、さまざまなカテゴリーのクリエイティブ作品を募集する「パーティ＆コンペティションイベント」として位置づけられています。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;qme&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; &lt;a href=&#34;https://t.co/aSwiTfSjYH&#34;&gt;pic.twitter.com/aSwiTfSjYH&lt;/a&gt;&lt;/p&gt;&amp;mdash; 蘇摩清良 (@soma_arc) &lt;a href=&#34;https://twitter.com/soma_arc/status/1661693568975794178?ref_src=twsrc%5Etfw&#34;&gt;May 25, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;当日の雰囲気は、アフタームービーからよく伝わってきます。&lt;/p&gt;
 
 &lt;p&gt;実際に今回のSESSIONSでも、デモシーンに詳しくない参加者も楽しんで参加している姿を目にすることができました。&lt;/p&gt;
 
 &lt;p&gt;学生や新社会人の方の参加も多く見られ、これからのSESSIONSの展開が楽しみです！&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/Xyf5op4-hSs&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&#34;c4-lanレポート&#34;&gt;C4 LANレポート&lt;/h2&gt;
 
