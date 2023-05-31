@@ -124,6 +124,77 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/07/21/use-bootstrap-theme/" itemprop="url">Octopressのテーマをカスタマイズする</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2012-07-21 23:51:00 &#43;0900 JST" itemprop="datePublished">2012-07-21</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/octopress">Octopress</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/diary">Diary</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/bootstrap">bootstrap</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                <p>Ocpressの標準のデザインは悪くはないのですが、個人的にはいまいち物足りなさを感じたので、テーマを変更しました。</p>
+
+<p>テーマですが、<a href="https://github.com/imathis/octopress/wiki/List-Of-Octopress-Themes">このページ</a>などから、
+かっこいいのを見つけてくればいいと思います。</p>
+
+<p>とりあえず私は、<a href="https://github.com/bkutil/bootstrap-theme">bootstrap-theme</a>を入れてみることにしました。
+導入はとても簡単です。</p>
+
+<p>コード例を示すまでもないですが、Codeblockを試してみたいので、導入するまでのコードを貼り付けます。</p>
+
+<p>(ちなみに、シェルのコマンドを貼り付けるときはlangをbashにすると良いみたいです。)</p>
+
+<pre><code class="language-bash">cd ~/git/octpress #octpressのディレクトリ
+git clone https://github.com/bkutil/bootstrap-theme.git .themes/bootstrap-theme
+rake install[&quot;bootstrap-theme&quot;]
+rake generate
+rake deploy #公開
+</code></pre>
+
+<p>テーマを変えることで、一気にモダンな感じになりました!</p>
+
+<p>話題のBootstrapだけあって、こんなショボイブログも見てくれだけはいい感じに見えるような気がします。</p>
+
+<p>あとは、_config.ymlをちょっといじるだけで、facebookやGoogle+のボタンをつけたり、
+Disqus Commentsでコメントをできるようにできるので、簡単にモダンなブログを作ることが出来ました。</p>
+
+<p>Octopressすごい!</p>
+
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2012/07/21/use-bootstrap-theme/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/07/21/hello/" itemprop="url">Octopressはじめました!</a></h3>
         
 
