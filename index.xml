@@ -31,6 +31,12 @@
 
 &lt;p&gt;レイマーチングをノードだけで実装するのは大変なので、MaterialのCustomノードを用いて複雑な処理はHLSLのコードで実装しました。&lt;/p&gt;
 
+&lt;p&gt;UE（Unreal Engine）のプロジェクトはGitHubに公開しています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gam0022/RaymarchingInUE5/&#34;&gt;github.com/gam0022/RaymarchingInUE5/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Object Space Raymarching in Unreal Engine 5.2&lt;a href=&#34;https://twitter.com/hashtag/UE5?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#UE5&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/UnrealEngine?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#UnrealEngine&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/UnrealEngine5?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#UnrealEngine5&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt; &lt;a href=&#34;https://t.co/42n2W87HnJ&#34;&gt;pic.twitter.com/42n2W87HnJ&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1684596333209075712?ref_src=twsrc%5Etfw&#34;&gt;July 27, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Randomization of glowing animation borders&lt;a href=&#34;https://twitter.com/hashtag/UE5?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#UE5&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/UnrealEngine?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#UnrealEngine&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/UnrealEngine5?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#UnrealEngine5&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt; &lt;a href=&#34;https://t.co/FvLbVtE9Q3&#34;&gt;pic.twitter.com/FvLbVtE9Q3&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1685583942920089600?ref_src=twsrc%5Etfw&#34;&gt;July 30, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
@@ -43,7 +49,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;1週間前の自分&lt;/li&gt;
-&lt;li&gt;レイマーチングやシェーダーの経験はあるが、UE（Unreal Engin）は初心者&lt;/li&gt;
+&lt;li&gt;レイマーチングやシェーダーの実装経験はあるが、UEは初心者の方&lt;/li&gt;
 &lt;li&gt;UEのカスタムシェーダーやMaterial Editorに興味がある方&lt;/li&gt;
 &lt;li&gt;UE上でノードでは難しい複雑なシェーダーを実装してみたい人&lt;/li&gt;
 &lt;/ul&gt;
