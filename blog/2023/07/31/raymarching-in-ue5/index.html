@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://gam0022.net/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://gam0022.net/css/academicons.min.css">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
-    <link rel="stylesheet" href="https://gam0022.net/css/hugo-academic.css?2022-10-17">
+    <link rel="stylesheet" href="https://gam0022.net/css/hugo-academic.css?2023-07-31">
     
 
     
@@ -630,7 +630,7 @@ UEのMaterialのノードの接続は番号（整数のインデックス）で�
 
 <p>次のようなノードでカメラのレイを生成しています。</p>
 
-<p><a href="/images/posts/2023-07-30-raymarching-in-ue5/material_camera.png"><img src="/images/posts/2023-07-30-raymarching-in-ue5/material_camera.png" alt="Materialノード解説：カメラのレイの生成" /></a></p>
+<p><a href="/images/posts/2023-07-30-raymarching-in-ue5/material_camera_text.png"><img src="/images/posts/2023-07-30-raymarching-in-ue5/material_camera_text.png" alt="Materialノード解説：カメラのレイの生成" /></a></p>
 
 <p>レイは2つの3次元ベクトルで定義されます。</p>
 
@@ -676,6 +676,34 @@ UEのMaterialのノードの接続は番号（整数のインデックス）で�
 
 <p><a href="/images/posts/2023-07-30-raymarching-in-ue5/camera_inside_v1.gif"><img src="/images/posts/2023-07-30-raymarching-in-ue5/camera_inside_v1.gif" alt="カメラがレイマーチングの空間の内部に潜った場合" /></a></p>
 
+<h2 id="materialノード解説-resultノードへの出力">Materialノード解説：Resultノードへの出力</h2>
+
+<p>RaymarchingのCustomノードの出力を、それぞれResultノードに接続します。</p>
+
+<p>これによりレイマーチングの衝突判定の結果をライティング計算に反映させます。</p>
+
+<ul>
+<li>hit
+
+<ul>
+<li>レイマーチングの衝突判定の結果（0なら衝突しなかった、1なら衝突した）です</li>
+<li>Resultノードの <code>Opacity Mask</code> に接続することで、レイマーチングがヒットしなかったPixelをdiscardできます</li>
+</ul></li>
+<li>normal
+
+<ul>
+<li>ローカルスペースの法線です</li>
+<li>ワールドスペースに変換（TransformVector）してから、Resultノードの <code>Normal</code> に接続します</li>
+</ul></li>
+<li>ao
+
+<ul>
+<li>[0-1]のパラメーターなので、そのままResultノードの <code>Ambient Occlusion</code> に接続します</li>
+</ul></li>
+</ul>
+
+<p><a href="/images/posts/2023-07-30-raymarching-in-ue5/material_raymarching_result_text.png"><img src="/images/posts/2023-07-30-raymarching-in-ue5/material_raymarching_result_text.png" alt="Materialノード解説：Resultノードへの出力" /></a></p>
+
 <h2 id="materialノード解説-前後関係の解決-pixel-depth-offsetの計算">Materialノード解説：前後関係の解決（Pixel Depth Offsetの計算）</h2>
 
 <p>他のオブジェクトと重なった場合でも、前後関係を正しく解決するための工夫について説明します。</p>
@@ -688,11 +716,11 @@ UEのMaterialのノードの接続は番号（整数のインデックス）で�
 
 <p>UEのMaterialではDepthBufferを直接書き込むことはできませんが、ワールド座標でのDepthの押し込み距離から、Pixel Depth Offsetを計算することで前後関係を解決しています。</p>
 
-<p><a href="/images/posts/2023-07-30-raymarching-in-ue5/material_pixel_depth_offset.png"><img src="/images/posts/2023-07-30-raymarching-in-ue5/material_pixel_depth_offset.png" alt="Materialノード解説：前後関係の解決（Pixel Depth Offsetの計算）" /></a></p>
+<p><a href="/images/posts/2023-07-30-raymarching-in-ue5/material_pixel_depth_offset_text.png"><img src="/images/posts/2023-07-30-raymarching-in-ue5/material_pixel_depth_offset_text.png" alt="Materialノード解説：前後関係の解決（Pixel Depth Offsetの計算）" /></a></p>
 
 <p>Pixel Depth Offsetは、ワールド空間でのオフセット距離を計算する必要があります。したがって、Raymarchingの衝突点（hit）をTransform Positionノードを使用してワールド座標に変換し、Absolute World Positionとの差分（Subtract）を計算し、その距離（Length）を計算しています。</p>
 
-<p>Pixel Depth Offsetでは、カメラの奥方向にのみオフセットすることができます。逆に手前にオフセットさせることはできません。この制約は、パフォーマンスの向上を目的としています。</p>
+<p>Pixel Depth Offsetでは、カメラの奥方向にのみオフセットできます。逆に手前にオフセットさせることはできません。この制約は、パフォーマンスの向上を目的としています。</p>
 
 <ul>
 <li><a href="https://qiita.com/EGJ-Nori_Shinoyama/items/42cb29e95eca601250db">[UE4] Pixel Depth Offsetは何故画面奥にしか行かないのかまた本当に重たいのかどうか問題 - Qiita</a></li>
@@ -1369,6 +1397,7 @@ UEのMaterialのノードの接続は番号（整数のインデックス）で�
 <li><a href="#rayの計算">rayの計算</a></li>
 <li><a href="#originの計算">originの計算</a></li>
 </ul></li>
+<li><a href="#materialノード解説-resultノードへの出力">Materialノード解説：Resultノードへの出力</a></li>
 <li><a href="#materialノード解説-前後関係の解決-pixel-depth-offsetの計算">Materialノード解説：前後関係の解決（Pixel Depth Offsetの計算）</a></li>
 <li><a href="#まとめ">まとめ</a></li>
 <li><a href="#参考資料">参考資料</a></li>
