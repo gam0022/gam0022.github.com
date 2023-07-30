@@ -23,6 +23,8 @@
 &lt;li&gt;レイトレ合宿ではレンダラーを自作する必要があるため、ゲームエンジンは使えません&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-07-30-raymarching-in-ue5//images/posts/2023-07-30-raymarching-in-ue5/RaymarchingInUE5_thumbnail_v7.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-07-30-raymarching-in-ue5//images/posts/2023-07-30-raymarching-in-ue5/RaymarchingInUE5_thumbnail_v7.jpg&#34; alt=&#34;Object Space Raymarching in Unreal Engine 5.2&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
 &lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
 
 &lt;p&gt;Unreal Engine 5.2上でオブジェクトスペースのレイマーチングを実装したので、その解説をします。&lt;/p&gt;
