@@ -451,7 +451,7 @@ UEのMaterialのノードの接続は番号（整数のインデックス）で�
 
 &lt;p&gt;カメラの位置と、描画しようとしているSurfaceの座標（Absolute World Position）の差分（Subtract）から計算できます。&lt;/p&gt;
 
-&lt;p&gt;最後にTransform Vectorノードでワールドスペースからローカルスペースに変換しています。&lt;/p&gt;
+&lt;p&gt;正規化（Normalize）してから、Transform Vectorノードでワールドスペースからローカルスペースに変換しています。&lt;/p&gt;
 
 &lt;p&gt;今回はオブジェクトスペースのレイマーチングのため、レイマーチングのCustomノードに入力する位置や向きはすべてローカルスペースに変換する必要があります。&lt;/p&gt;
 
