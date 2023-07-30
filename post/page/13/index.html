@@ -124,6 +124,63 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/08/10/make-categories-on-otcpress/" itemprop="url">Octopressでカテゴリーの一覧みたいのを実装する</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2012-08-10 12:24:00 &#43;0900 JST" itemprop="datePublished">2012-08-10</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/octopress">Octopress</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e6%97%a5%e6%9c%ac%e8%aa%9e">日本語</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%82%b4">ゴ</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                Octopressはそれなりに高機能なのにも関わらず、なぜかカテゴリーの一覧を表示する機能がありませんでした。
+仕方ないので、自分で実装することにしました。
+今回の記事は、次の画像のようなカテゴリーの一覧をサイドバーに表示するまでのメモです。
+前提知識として、Octopressのサイドバーをカスタマイズするためには、次の2つの作業が必要です。 ここでは、categoriesという名前のサイドバーを追加します。
+ source/_includes/asides/categories.htmlというファイルを作る。 _config.ymlのdefault_asides:にasides/categories.htmlを加える。ex.  あとは、1,のsource/_includes/asides/categories.htmlにカテゴリーの一覧を表示する機能をうまく実装しなくてはなりません。
+siteというグローバル変数のダンプを手がかりに、site.categoriesというハッシュが存在することがわかりました。
+JekyllのLiquidテンプレートエンジンの文法がよくわからないので、以下のサイトなどを参考にして学習しました。
+ <a href="http://wiki.shopify.com/UsingLiquid">http://wiki.shopify.com/UsingLiquid</a> <a href="http://melborne.github.com/2012/05/13/first-step-of-jekyll/">http://melborne.github.com/2012/05/13/first-step-of-jekyll/</a> for item in hash すると、item[0]にキー名、item[1]に値が入る  しかし、site.categoriesはカテゴリー名をキーとして値が記事の本文のHTMLへの参照(?)の配列としたハッシュになっており、 そのままではURLが取得できず、カテゴリー名からURLに変換する処理をLiquidの文法だけで実装するのは無理だと気が付きました。
+で、どうしたかというと、Liquidを拡張しました。Jekyll::Filtersにメソッドを定義すると、Liquidからそのメソッドを呼び出せるようになります。
+最終的に、_config.ymlを編集後、 source/_includes/asides/categories.htmlとplugins/category_generator.rbを次のようにしたら、うまくいきました。
+source/_includes/asides/categories.html source/_includes/asides/categories.html はこれだけです。
+{.{ の.は消してください。
+&lt;section class=&quot;well&quot;&gt; &lt;ul id=&quot;categorys&quot; class=&quot;nav nav-list&quot;&gt; &lt;li class=&quot;nav-header&quot;&gt;Categorys&lt;/li&gt; {.{ site.categories | site_categories_links }} &lt;/ul&gt; &lt;/section&gt;  plugins/category_generator.rb plugins/category_generator.rbのJekyll::Filtersにsite_categories_linksというメソッドを追加します。
+module Jekyll module Filters # Outputs a list of categories as comma-separated &lt;a&gt; links. This is used # to output the category list for site&rsquo;s all categories.
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2012/08/10/make-categories-on-otcpress/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/08/09/get-ascii-code-using-ruby1-dot-9/" itemprop="url">Ruby 1.9を使ってアスキーコードを取得する方法</a></h3>
         
 
@@ -729,62 +786,6 @@ SCSSとは、CSSメタ言語のことで、要するにCSSを生成するため�
         </div>
         <p class="read-more">
             <a href="https://gam0022.net/blog/2012/07/24/configure-the-css-with-bootstrap-theme/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/07/23/run-octopress-on-a-vps-using-rsync/" itemprop="url">Rsyncを使ってOctopressをVPS上で公開する</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2012-07-23 10:02:00 &#43;0900 JST" itemprop="datePublished">2012-07-23</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/octopress">Octopress</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/vps">VPS</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/rsync">Rsync</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/serversmanvps">ServersMan@VPS</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                今回もOctopressに関する記事です。
-先日、Octopressを使ってGithubPages上にブログを運営しましたが、 気が変わってレンタルしているVPS上で運営したくなりました。
-Octopressではrake deployを叩くだけでRsyncを使い自分のサーバ上にコンテンツを同期することができるので、 その方法を紹介したいと思います。
-Rsyncを使って同期するためには次の2つの作業をする必要があります。
- 公開鍵認証を使ってsshでログインできるようにする。 サーバ側の~/.ssh/authorized_keysにローカル側の公開鍵を登録する。  ここでは、serverという名前のサーバに作成済みのuserというユーザを使って、公開鍵でログインするようにするまでの手順を紹介します。
-ローカル側の設定(鍵のペアの生成) まず、ローカル側で鍵のペアの生成します。
-cd ~/.ssh ssh-keygen -t rsa # RSAの鍵のペアを生成する。save the keyは空白でOK。パスフレーズは任意のものを指定する。 cat id_rsa.pub # 公開鍵はサーバのauthorized_keysに後で登録するので表示しておく  サーバ側の設定 公開鍵の登録 vim ~/.ssh/authorized_keys # 上で表示したローカル側のid_rsa.pubを最後の行に追加する。(ファイルがなければ作る)  sshの設定 vimなどで、サーバ側の/etc/ssh/sshd_configを編集します。 間違った設定をすると最悪sshでログインできなるので注意しましょうw
-私の場合はこのような感じに一部を書き換えました。 この記事を書いている私ですが、サーバの設定は初心者なので、あまり信用しないようにしましょうw あくまで参考程度で。
-AllowUsers user RSAAuthentication yes PubkeyAuthentication yes AuthorizedKeysFile %h/.ssh/authorized_keys  VPS上の設定が終わったら、sshdを再起動します。
-/etc/init.d/ssh restart  再びローカル側の設定(sshのテスト) 以上で公開鍵を使ってsshをする準備が整ったので、テストしてみます。
-cd ~/.ssh chmod 600 id_rsa # パーミションが600でないと「WARNING: UNPROTECTED PRIVATE KEY FILE!」というエラーになる。 ssh -i id_rsa user@server #これでログインできれば成功。-iで秘密鍵を指定できる。  Octopressの設定 ここまで来れば、あとはOctopressの設定だけです。Rakefileを編集します。
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2012/07/23/run-octopress-on-a-vps-using-rsync/" class="btn btn-primary btn-outline">
                 Read more
             </a>
         </p>

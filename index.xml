@@ -7,8 +7,549 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>&amp;copy; 2021 gam0022</copyright>
-    <lastBuildDate>Wed, 31 May 2023 06:49:24 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 31 Jul 2023 10:00:00 +0900</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Object Space Raymarching in Unreal Engine 5.2</title>
+      <link>https://gam0022.net/blog/2023/07/31/raymarching-in-ue5/</link>
+      <pubDate>Mon, 31 Jul 2023 10:00:00 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2023/07/31/raymarching-in-ue5/</guid>
+      <description>&lt;p&gt;これは&lt;a href=&#34;https://sites.google.com/view/rtcamp9/home&#34;&gt;レイトレ合宿9&lt;/a&gt;のアドベントカレンダーの記事です。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;あまりレイトレに関連しないテーマですが、レイは飛ばしているので大目に見てください&lt;/li&gt;
+&lt;li&gt;レイトレ合宿ではレンダラーを自作する必要があるため、ゲームエンジンは使えません&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+
+&lt;p&gt;Unreal Engine 5.2上でオブジェクトスペースのレイマーチングを実装したので、その解説をします。&lt;/p&gt;
+
+&lt;p&gt;レイマーチングをノードだけで実装するのは大変なので、MaterialのCustomノードを用いて複雑な処理はHLSLのコードで実装しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Object Space Raymarching in Unreal Engine 5.2&lt;a href=&#34;https://twitter.com/hashtag/UE5?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#UE5&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/UnrealEngine?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#UnrealEngine&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/UnrealEngine5?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#UnrealEngine5&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt; &lt;a href=&#34;https://t.co/42n2W87HnJ&#34;&gt;pic.twitter.com/42n2W87HnJ&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1684596333209075712?ref_src=twsrc%5Etfw&#34;&gt;July 27, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Randomization of glowing animation borders&lt;a href=&#34;https://twitter.com/hashtag/UE5?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#UE5&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/UnrealEngine?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#UnrealEngine&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/UnrealEngine5?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#UnrealEngine5&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt; &lt;a href=&#34;https://t.co/FvLbVtE9Q3&#34;&gt;pic.twitter.com/FvLbVtE9Q3&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1685583942920089600?ref_src=twsrc%5Etfw&#34;&gt;July 30, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;読者対象&#34;&gt;読者対象&lt;/h2&gt;
+
+&lt;p&gt;この記事は以下の読者を対象としています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1週間前の自分&lt;/li&gt;
+&lt;li&gt;レイマーチングやシェーダーの経験はあるが、UE（Unreal Engin）は初心者&lt;/li&gt;
+&lt;li&gt;UEのカスタムシェーダーやMaterial Editorに興味がある方&lt;/li&gt;
+&lt;li&gt;UE上でノードでは難しい複雑なシェーダーを実装してみたい人&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;結果&#34;&gt;結果&lt;/h2&gt;
+
+&lt;p&gt;まずは実装結果を紹介します。&lt;/p&gt;
+
+&lt;h3 id=&#34;オブジェクトスペースのレイマーチング&#34;&gt;オブジェクトスペースのレイマーチング&lt;/h3&gt;
+
+&lt;p&gt;オブジェクトスペースのレイマーチングを実装しました。カスタムシェーダーをCubeに適用し、レイマーチングを行います。Cubeをレイマーチングのバウンディングボックスとして使用します。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-07-30-raymarching-in-ue5/object_space_raymarching_v1.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-07-30-raymarching-in-ue5/object_space_raymarching_v1.png&#34; alt=&#34;オブジェクトスペースのレイマーチング&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;オブジェクトスペースにすることで、フルスクリーンのレイマーチングと比較して処理負荷を抑えることができます。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;カメラではなくCubeの表面からレイを飛ばすことで、レイマーチングの衝突判定を少ないイテレーション回数に抑えられる&lt;/li&gt;
+&lt;li&gt;レイマーチングの負荷の高いシェーダーの描画範囲を制限できる&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;パラメーターのリアルタイム編集&#34;&gt;パラメーターのリアルタイム編集&lt;/h3&gt;
+
+&lt;p&gt;レイマーチングによる描画を行っているため、フラクタルのパラメーターをリアルタイムに編集できます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-07-30-raymarching-in-ue5/param_v1.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-07-30-raymarching-in-ue5/param_v1.gif&#34; alt=&#34;IFSパラメーターのアニメーション1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-07-30-raymarching-in-ue5/param_v2.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-07-30-raymarching-in-ue5/param_v2.gif&#34; alt=&#34;IFSパラメーターのアニメーション2&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;▲グローのアニメーションのボーダーを乱数で散らしたバージョン&lt;/p&gt;
+
+&lt;h3 id=&#34;actorのトランスフォームに追従&#34;&gt;Actorのトランスフォームに追従&lt;/h3&gt;
+
+&lt;p&gt;オブジェクトスペースのレイマーチングの実装のため、Actor（UnityのGameObjectに相当）のトランスフォームに追従します。&lt;/p&gt;
+
+&lt;h4 id=&#34;平行移動&#34;&gt;平行移動&lt;/h4&gt;
+
+&lt;p&gt;平行移動の結果を見ると、UEのレンダリング結果と統合できていることがわかります。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;他のオブジェクトと相互にライティングの影響を受けている&lt;/li&gt;
+&lt;li&gt;床に反射し、ライティング結果が周囲に自然に馴染んでいる&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-07-30-raymarching-in-ue5/transform_translation_v1.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-07-30-raymarching-in-ue5/transform_translation_v1.gif&#34; alt=&#34;平行移動&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;回転&#34;&gt;回転&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-07-30-raymarching-in-ue5/transform_rotation_v1.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-07-30-raymarching-in-ue5/transform_rotation_v1.gif&#34; alt=&#34;回転&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;拡大縮小&#34;&gt;拡大縮小&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-07-30-raymarching-in-ue5/transform_scale_v1.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-07-30-raymarching-in-ue5/transform_scale_v1.gif&#34; alt=&#34;拡大縮小&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;実装の流れ&#34;&gt;実装の流れ&lt;/h2&gt;
+
+&lt;p&gt;以下は実装の流れです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;UE上のHLSL（.ush）シェーダー開発環境の構築
+
+&lt;ul&gt;
+&lt;li&gt;C++の開発環境のセットアップ&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;AddShaderSourceDirectoryMapping&lt;/code&gt; を使用してシェーダーを配置するディレクトリを登録&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;UE上のレイマーチングの実装
+
+&lt;ul&gt;
+&lt;li&gt;HLSL（.ush）でレイマーチングを実装&lt;/li&gt;
+&lt;li&gt;MaterialのCustomノードの &lt;code&gt;Include File Paths&lt;/code&gt; にHLSLシェーダー（.ush）を指定し、レイマーチングの関数を呼び出す&lt;/li&gt;
+&lt;li&gt;Customノードの計算結果をResultノードに出力し、ライティング計算はエンジン側に任せる&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;発展的な内容
+
+&lt;ul&gt;
+&lt;li&gt;オブジェクトスペースのレイマーチングに対応&lt;/li&gt;
+&lt;li&gt;レイマーチングの空間にカメラが潜った場合を考慮&lt;/li&gt;
+&lt;li&gt;他のオブジェクトの前後関係の解消&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;hlsl-ush-によるシェーダー開発環境の構築&#34;&gt;HLSL（.ush）によるシェーダー開発環境の構築&lt;/h2&gt;
+
+&lt;p&gt;Unityでは、シェーダーファイル（.shader）をAssetsフォルダーに配置するだけで認識されますが、UEではシェーダーを明示的に配置するディレクトリをエンジンに認識させる必要があります。&lt;/p&gt;
+
+&lt;p&gt;シェーダーを書くためにC++のコードを記述する必要があるのは面倒ですが、仕方ありませんね。&lt;/p&gt;
+
+&lt;p&gt;C++の関数である&lt;a href=&#34;https://docs.unrealengine.com/5.2/en-US/API/Runtime/RenderCore/AddShaderSourceDirectoryMapping/&#34;&gt;AddShaderSourceDirectoryMapping&lt;/a&gt;を呼び出すことで、エンジンがHLSLシェーダー（.ush）を認識できるようになります。&lt;/p&gt;
+
+&lt;p&gt;まずは、C++の開発環境を整える必要があります。以下の記事を参考に、UE用のC++の開発環境をセットアップしました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://zenn.dev/posita33/books/ue5_starter_cpp_and_bp_001/viewer/chap_01_vs2022_setup&#34;&gt;Visual Studio 2022のセットアップ｜Unreal Engine 5から始める C++ &amp;amp; Blueprint&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;C++の開発環境をセットアップしたら、次の記事の「普通の方法」を参考にして、AddShaderSourceDirectoryMappingを呼び出してシェーダーを配置するディレクトリをエンジン側に登録します。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://qiita.com/takaf51/items/cd98bd83fe5965d0de30#%E6%99%AE%E9%80%9A%E3%81%AE%E6%96%B9%E6%B3%95&#34;&gt;UE4,5 プロジェクトファイル内の外部シェーダーファイル(usf, ush, hlsl)をインクルードする為の設定。 - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;手順を箇条書きにすると以下のようになります。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;C++プロジェクト化&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;プロジェクト名.Build.cs&lt;/code&gt; に &lt;code&gt;RenderCore&lt;/code&gt; への依存関係を追加&lt;/li&gt;
+&lt;li&gt;プロジェクトにモジュール開始と終了の関数を追加&lt;/li&gt;
+&lt;li&gt;モジュール開始のStartupModule()に下記のコードを追加&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;FString ShaderDir = FPaths::Combine(FPaths::ProjectDir(), &amp;quot;Shaders&amp;quot;);
+AddShaderSourceDirectoryMapping(&amp;quot;/Project&amp;quot;, ShaderDir);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;このコードにより、プロジェクトの直下にある &lt;code&gt;Shaders&lt;/code&gt; ディレクトリに配置されたHLSLシェーダー（.ush）をエンジン側からIncludeできるようになります。&lt;/p&gt;
+
+&lt;h3 id=&#34;余談-昔のueでhlslの関数定義やincludeは大変だった&#34;&gt;余談：昔のUEでHLSLの関数定義やincludeは大変だった&lt;/h3&gt;
+
+&lt;p&gt;過去のUEでは、HLSLをIncludeすることができず、Customノードの展開される仕様を利用して、関数定義や#includeをインジェクションする必要があったようです。&lt;/p&gt;
+
+&lt;p&gt;これは大変ですね。エンジンの改善により、HLSLのシェーダー開発がより使いやすくなったことは、喜ばしい進化と言えるでしょう。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;もんしょさんと話していたのは、カスタムノードをカッコで閉じちゃえば、あとは自由にコード書けちゃうぜ！というネタです。&lt;br&gt;実はこのTweetのマテリアルもこれを使用して書かれています。&lt;a href=&#34;https://t.co/y3P8BkDWyw&#34;&gt;https://t.co/y3P8BkDWyw&lt;/a&gt; &lt;a href=&#34;https://t.co/M4M5WX4u7m&#34;&gt;pic.twitter.com/M4M5WX4u7m&lt;/a&gt;&lt;/p&gt;&amp;mdash; Takuro Kayumi (@TakuroKX) &lt;a href=&#34;https://twitter.com/TakuroKX/status/670292440369094656?ref_src=twsrc%5Etfw&#34;&gt;November 27, 2015&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://monsho.hatenablog.com/entry/2015/12/23/120142&#34;&gt;Customノード3分ハッキング - もんしょの巣穴ブログ Ver2.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://pafuhana1213.hatenablog.com/entry/2015/02/15/152312&#34;&gt;UE4のCustomノード(カスタムHLSLシェーダ)を使ってみた - ぼっちプログラマのメモ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;material全体&#34;&gt;Material全体&lt;/h2&gt;
+
+&lt;p&gt;次の画像はMaterialのグラフ全体です。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-07-30-raymarching-in-ue5/material_all_text.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-07-30-raymarching-in-ue5/material_all_text.png&#34; alt=&#34;マテリアル全体&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;このグラフでは、レイマーチングの処理をHLSLで実装し、Customノードから呼び出しています。&lt;/p&gt;
+
+&lt;p&gt;ノードとしては以下の処理のみ実装しています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;カメラのレイの生成&lt;/li&gt;
+&lt;li&gt;前後関係の解消のためのPixel Depth Offsetの計算&lt;/li&gt;
+&lt;li&gt;Emissiveのパターン計算&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;また、オブジェクトスペースのレイマーチングを行うための座標系の計算もノードで行われています。レイマーチングのCustomノードの前後にはTransformノードが接続されています。&lt;/p&gt;
+
+&lt;h2 id=&#34;hlslシェーダーでレイマーチングを実装&#34;&gt;HLSLシェーダーでレイマーチングを実装&lt;/h2&gt;
+
+&lt;p&gt;MaterialのCustomノードのDetailsからInclude File Pathsを指定し、HLSLファイル（.ush）をインクルードします。&lt;/p&gt;
+
+&lt;p&gt;このとき「実際のファイルパス」と「Include File Paths」の指定に違いがある点に注意してください。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ファイルパスの例: &lt;code&gt;D:\UnrealProjects\プロジェクト名\Shaders\Raymarching.ush&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Include File Paths: &lt;code&gt;/Project/Raymarching.ush&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;Raymarching.ush&lt;/code&gt; のHLSLコードの実装例は以下の通りです。レイマーチングの基本的な実装方法については説明しません。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;#pragma once
+
+float sdBox(float3 p, float3 b)
+{
+    float3 q = abs(p) - b;
+    return length(max(q, 0.0)) + min(max(q.x, max(q.y, q.z)), 0.0);
+}
+
+// メンガーのスポンジの距離関数
+float dMenger(float3 z0, float3 offset, float scale, inout float4 ifsPosition)
+{
+    float4 z = float4(z0, 1.0);
+
+    [loop]
+    for (int n = 0; n &amp;lt; 4; n++)
+    {
+        z = abs(z);
+
+        if (z.x &amp;lt; z.y) z.xy = z.yx;
+        if (z.x &amp;lt; z.z) z.xz = z.zx;
+        if (z.y &amp;lt; z.z) z.yz = z.zy;
+
+        z *= scale;
+        z.xyz -= offset * (scale - 1.0);
+
+        if (z.z &amp;lt; - 0.5 * offset.z * (scale - 1.0))
+        {
+            z.z += offset.z * (scale - 1.0);
+        }
+    }
+
+    ifsPosition = z;
+
+    return (length(max(abs(z.xyz) - float3(1.0, 1.0, 1.0), 0.0)) - 0.05) / z.w;
+}
+
+float map(float3 pos, float uniformScale, float3 mengerOffst, float mengerScale, inout float4 ifsPosition)
+{
+    pos /= uniformScale;
+
+    float d = dMenger(pos, mengerOffst, mengerScale, ifsPosition);
+    d *= uniformScale;
+
+    return d;
+}
+
+// 偏微分から法線を計算
+float3 calcNormal(float3 p, float uniformScale, float3 mengerOffst, float mengerScale, inout float4 ifsPosition)
+{
+    float eps = 0.001;
+
+    return normalize(float3(
+        map(p + float3(eps, 0.0, 0.0), uniformScale, mengerOffst, mengerScale, ifsPosition) - map(p + float3(-eps, 0.0, 0.0), uniformScale, mengerOffst, mengerScale, ifsPosition),
+        map(p + float3(0.0, eps, 0.0), uniformScale, mengerOffst, mengerScale, ifsPosition) - map(p + float3(0.0, -eps, 0.0), uniformScale, mengerOffst, mengerScale, ifsPosition),
+        map(p + float3(0.0, 0.0, eps), uniformScale, mengerOffst, mengerScale, ifsPosition) - map(p + float3(0.0, 0.0, -eps), uniformScale, mengerOffst, mengerScale, ifsPosition)
+    ));
+}
+
+// Ambient Occlusionを計算
+float calcAO(float3 pos, float3 nor, float uniformScale, float3 mengerOffst, float mengerScale, inout float4 ifsPosition)
+{
+    float occ = 0.0;
+    float sca = 1.0;
+
+    for (int i = 0; i &amp;lt; 5; i++)
+    {
+        float h = 0.01 + 0.12 * float(i) / 4.0;
+        float d = map(pos + h * nor, uniformScale, mengerOffst, mengerScale, ifsPosition);
+        occ += (h - d) * sca;
+        sca *= 0.95;
+        if (occ &amp;gt; 0.35) break;
+    }
+
+    return saturate(clamp(1.0 - 3.0 * occ, 0.0, 1.0) * (0.5 + 0.5 * nor.y));
+}
+
+// エッジを計算
+float calcEdge(float3 p, float uniformScale, float3 mengerOffst, float mengerScale, inout float4 ifsPosition)
+{
+    float edge = 0.0;
+    float2 e = float2(0.01, 0);
+
+    float d1 = map(p + e.xyy, uniformScale, mengerOffst, mengerScale, ifsPosition);
+    float d2 = map(p - e.xyy, uniformScale, mengerOffst, mengerScale, ifsPosition);
+    float d3 = map(p + e.yxy, uniformScale, mengerOffst, mengerScale, ifsPosition);
+    float d4 = map(p - e.yxy, uniformScale, mengerOffst, mengerScale, ifsPosition);
+    float d5 = map(p + e.yyx, uniformScale, mengerOffst, mengerScale, ifsPosition);
+    float d6 = map(p - e.yyx, uniformScale, mengerOffst, mengerScale, ifsPosition);
+    float d = map(p, uniformScale, mengerOffst, mengerScale, ifsPosition) * 2.;
+
+    edge = abs(d1 + d2 - d) + abs(d3 + d4 - d) + abs(d5 + d6 - d);
+    edge = smoothstep(0., 1., sqrt(edge / e.x * 2.));
+
+    return edge;
+}
+
+// 原点にあるサイズが100x100x100のCubeの内部にいるかどうかを判定
+float isInsideCube(float3 p)
+{
+    return sdBox(p, (50).xxx) &amp;lt;= 0;
+}
+
+void raymarching(
+    // Inputs
+    float3 origin, float3 ray, int raymarchingLoop,
+    float uniformScale, float3 mengerOffst, float mengerScale,
+
+    // Additional Outpus
+    inout float hit, inout float depth, inout float3 hitPosition, inout float4 ifsPosition,
+    inout float3 albedo, inout float3 normal, inout float ao, inout float emissive
+)
+{
+    // レイマーチング
+    hit = 0;
+    depth = 0.0;// レイの進んだ距離
+    float3 p = origin;// レイの先端の座標
+    int i = 0;// レイマーチングのループカウンター
+
+    [loop]
+    for (i = 0; i &amp;lt; raymarchingLoop; i++)
+    {
+        float d = map(p, uniformScale, mengerOffst, mengerScale, ifsPosition);
+
+        // 最短距離を0に近似できるなら、オブジェクトに衝突したとみなして、ループを抜けます
+        if (abs(d) &amp;lt; 0.1)
+        {
+            break;
+        }
+
+        depth += d;// 最短距離だけレイを進めます
+        p = origin + ray * depth;// レイの先端の座標を更新します
+    }
+
+    // バウンディングボックスの中にレイが留まっていればヒットしたと判定
+    hit = isInsideCube(p);
+    hitPosition = p;
+
+    float4 _ifsPosition;
+
+    if (hit)
+    {
+        // ライティングのパラメーター
+        normal = calcNormal(p, uniformScale, mengerOffst, mengerScale, _ifsPosition);// 法線
+        emissive = calcEdge(p, uniformScale, mengerOffst, mengerScale, _ifsPosition);// エッジ
+        ao = calcAO(p, normal, uniformScale, mengerOffst, mengerScale, _ifsPosition);// AO
+    }
+    else
+    {
+        albedo = float3(0, 0, 0);
+        discard;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;customノードのdetails&#34;&gt;CustomノードのDetails&lt;/h2&gt;
+
+&lt;p&gt;CustomノードのDetailsは以下のように設定します。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-07-30-raymarching-in-ue5/material_custom_details.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-07-30-raymarching-in-ue5/material_custom_details.png&#34; alt=&#34;CustomノードのDetails&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;CustomノードのCodeでは、raymarhcing関数を呼び出します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;albedo = objectAlbedo;
+
+raymarching(
+    origin, ray, raymarchingLoop,
+    uniformScale, mengerOffst, mengerScale,
+    hit, depth, hitPosition, ifsPosition,
+    albedo, normal, ao, emissive
+);
+
+return albedo;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;Inputs&lt;/code&gt;と&lt;code&gt;Additional Outpus&lt;/code&gt;には、&lt;code&gt;Raymarching.ush&lt;/code&gt;の&lt;code&gt;raymarching&lt;/code&gt;関数の全パラメーターを指定します。&lt;/p&gt;
+
+&lt;p&gt;パラメーターの多い関数なので手間はかかりますが、ミスのないように注意しながら1個1個指定します。&lt;/p&gt;
+
+&lt;p&gt;注意点として、関数のパラメーターの順序を変更したり、新しいパラメーターを追加すると、ノードの接続情報も再設定する必要があります。&lt;/p&gt;
+
+&lt;!--
+UEのMaterialのノードの接続は番号（整数のインデックス）で接続情報を保持しているようなので、パラメーターの順序を入れ替えたり、途中にパラメーターを追加すると、ノード上の接続もやり直しになります。
+--&gt;
+
+&lt;p&gt;繰り返しになりますが、Include File Pathsは実際のファイルパスとは異なる点に留意して、&lt;code&gt;/Project/Raymarching.ush&lt;/code&gt;と指定してください。&lt;/p&gt;
+
+&lt;h2 id=&#34;material全体のdetails&#34;&gt;Material全体のDetails&lt;/h2&gt;
+
+&lt;p&gt;Material全体のDetailsは以下のように設定します。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-07-30-raymarching-in-ue5/material_graph_details_text.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-07-30-raymarching-in-ue5/material_graph_details_text.png&#34; alt=&#34;Material全体のDetails&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Material Domain: Surface
+
+&lt;ul&gt;
+&lt;li&gt;レイマーチングはボリュームレダリングの印象があるかもしれませんが、Surfaceで問題ありません&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Blend Mode: Masked
+
+&lt;ul&gt;
+&lt;li&gt;レイマーチングの衝突判定によって形状をマスクする必要があります&lt;/li&gt;
+&lt;li&gt;このオプションを有効にすることで、Opacity Maskを出力できます
+
+&lt;ul&gt;
+&lt;li&gt;交差している場合は1、交差していない場合は0を出力します&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Shading Model: Default Lit
+
+&lt;ul&gt;
+&lt;li&gt;ライティング計算はエンジン側に任せます&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Two Sideded: ON
+
+&lt;ul&gt;
+&lt;li&gt;カメラがレイマーチングの内部に入った場合に両面描画が必要です&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;materialノード解説-カメラのレイの生成&#34;&gt;Materialノード解説：カメラのレイの生成&lt;/h2&gt;
+
+&lt;p&gt;ここからはノードの解説をします。まずはカメラのレイを生成するためのノードです。&lt;/p&gt;
+
+&lt;p&gt;次のようなノードでカメラのレイを生成しています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-07-30-raymarching-in-ue5/material_camera.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-07-30-raymarching-in-ue5/material_camera.png&#34; alt=&#34;Materialノード解説：カメラのレイの生成&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;レイは2つの3次元ベクトルで定義されます。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;origin: レイの原点&lt;/li&gt;
+&lt;li&gt;ray: レイの向き&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;rayの計算&#34;&gt;rayの計算&lt;/h3&gt;
+
+&lt;p&gt;レイの方向（ray）はシンプルです。&lt;/p&gt;
+
+&lt;p&gt;カメラの位置と、描画しようとしているSurfaceの座標（Absolute World Position）の差分（Subtract）から計算できます。&lt;/p&gt;
+
+&lt;p&gt;最後にTransform Vectorノードでワールドスペースからローカルスペースに変換しています。&lt;/p&gt;
+
+&lt;p&gt;今回はオブジェクトスペースのレイマーチングのため、レイマーチングのCustomノードに入力する位置や向きはすべてローカルスペースに変換する必要があります。&lt;/p&gt;
+
+&lt;h3 id=&#34;originの計算&#34;&gt;originの計算&lt;/h3&gt;
+
+&lt;p&gt;レイの原点（origin）の計算には分岐（DynamicBranch）があります。&lt;/p&gt;
+
+&lt;p&gt;これはカメラがレイマーチングの空間の内部に潜った場合を考慮しているためです。&lt;/p&gt;
+
+&lt;p&gt;カメラの位置によってoriginを分岐しています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;カメラが外部にある場合: origin = Absolute World Position&lt;/li&gt;
+&lt;li&gt;カメラが内部にある場合: origin = カメラの位置&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;また、originもローカルスペースにする必要があるため、Transform Positionノードで変換しています。&lt;/p&gt;
+
+&lt;p&gt;カメラの内部/外部の判定はInsideCubeノードで行われています。これもCustomノードです。&lt;/p&gt;
+
+&lt;p&gt;Codeには &lt;code&gt;isInsideCube(localPos)&lt;/code&gt; と指定しています。これは&lt;code&gt;Raymarching.ush&lt;/code&gt;で定義された関数です。&lt;/p&gt;
+
+&lt;p&gt;この分岐によって、カメラがレイマーチングの外部にある場合でも内部にある場合でも、問題なく動作するようになっています。&lt;/p&gt;
+
+&lt;p&gt;また、「Two Sideded: ON」にしている理由は、カメラがレイマーチングの内部に入っている場合において、Cubeの裏面側でレイマーチングを描画するためです。&lt;/p&gt;
+
+&lt;p&gt;これによって、以下のGIFアニメーションでは、カメラがレイマーチングの空間の内部に入り込んだ場合でも正常に描画されています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-07-30-raymarching-in-ue5/camera_inside_v1.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-07-30-raymarching-in-ue5/camera_inside_v1.gif&#34; alt=&#34;カメラがレイマーチングの空間の内部に潜った場合&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;materialノード解説-前後関係の解決-pixel-depth-offsetの計算&#34;&gt;Materialノード解説：前後関係の解決（Pixel Depth Offsetの計算）&lt;/h2&gt;
+
+&lt;p&gt;他のオブジェクトと重なった場合でも、前後関係を正しく解決するための工夫について説明します。&lt;/p&gt;
+
+&lt;p&gt;以下のGIFアニメーションのように、白い球体と重なっている場合でも、前後関係を正しく解決できています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-07-30-raymarching-in-ue5/depth_transform_v1.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-07-30-raymarching-in-ue5/depth_transform_v1.gif&#34; alt=&#34;前後関係の解決: 平行移動&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-07-30-raymarching-in-ue5/depth_scale_v1.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-07-30-raymarching-in-ue5/depth_scale_v1.gif&#34; alt=&#34;前後関係の解決: スケール&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;UEのMaterialではDepthBufferを直接書き込むことはできませんが、ワールド座標でのDepthの押し込み距離から、Pixel Depth Offsetを計算することで前後関係を解決しています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-07-30-raymarching-in-ue5/material_pixel_depth_offset.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-07-30-raymarching-in-ue5/material_pixel_depth_offset.png&#34; alt=&#34;Materialノード解説：前後関係の解決（Pixel Depth Offsetの計算）&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Pixel Depth Offsetは、ワールド空間でのオフセット距離を計算する必要があります。したがって、Raymarchingの衝突点（hit）をTransform Positionノードを使用してワールド座標に変換し、Absolute World Positionとの差分（Subtract）を計算し、その距離（Length）を計算しています。&lt;/p&gt;
+
+&lt;p&gt;Pixel Depth Offsetでは、カメラの奥方向にのみオフセットすることができます。逆に手前にオフセットさせることはできません。この制約は、パフォーマンスの向上を目的としています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://qiita.com/EGJ-Nori_Shinoyama/items/42cb29e95eca601250db&#34;&gt;[UE4] Pixel Depth Offsetは何故画面奥にしか行かないのかまた本当に重たいのかどうか問題 - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;カメラがレイマーチングの内部にある場合、Cubeの裏面のSurfaceからは、衝突点（hit）が手前に来るため、Pixel Depth Offsetはマイナス値となります。
+しかしこのマイナス値は利用できないため、カメラが内部にある場合は、&lt;code&gt;Pixel Depth Offset = 0&lt;/code&gt; となるようにLerpノードで分岐しています&lt;/p&gt;
+
+&lt;!--
+今回はLerpで分岐を処理しましたが、`Max(0, x)` でも良いと思います。
+--&gt;
+
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;UE5.2でオブジェクトスペースのレイマーチングを実装できた
+
+&lt;ul&gt;
+&lt;li&gt;Actorに追従し、通常のMeshのようにギズモによりマウスで配置や変形ができる&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;エンジンのレンダリング機能とも破綻なく統合できた
+
+&lt;ul&gt;
+&lt;li&gt;床への反射やグローバルイルミネーションに統合できた&lt;/li&gt;
+&lt;li&gt;Opacity Mask、Pixel Depth Offsetを利用して、他のオブジェクトの前後関係なども解決できた&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ノードとコードの役割分担をうまくできた
+
+&lt;ul&gt;
+&lt;li&gt;複雑な処理はHLSLによるコードで実装し、Customノードで呼び出す&lt;/li&gt;
+&lt;li&gt;オブジェクトスペースのための座標変換はノードを利用することでシンプルに実装できた&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;UEの細かいTipsについては別記事でまとめる予定
+
+&lt;ul&gt;
+&lt;li&gt;「Ctrl + 1 + 左クリック」でスカラーの定数ノードを作成できる&lt;/li&gt;
+&lt;li&gt;VS2022プロジェクトの作成に失敗する場合、Source Code Editorを再選択すると解決することがある&lt;/li&gt;
+&lt;li&gt;UnityとUEの座標系やスケールの違いについて&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;参考資料&#34;&gt;参考資料&lt;/h2&gt;
+
+&lt;p&gt;UE4やUnity上でのレイマーチング実装の前例を以下に紹介します。これらの情報をとても参考にさせていただきました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://coposuke.hateblo.jp/entry/2019/12/11/002521&#34;&gt;【UE4】Object Space Raymarching (Material Editor) - コポうぇぶろぐ&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;UE4上でのレイマーチング実装の取り組み&lt;/li&gt;
+&lt;li&gt;当時は Include File Paths が存在しなかったため、Customノードの関数定義に対するハックが必要であったことなどに触れています。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://nanka.hateblo.jp/entry/2019/08/27/004905&#34;&gt;Unity HDRPのLitシェーダーを改造してレイマーチングする（GBuffer編） - なんかやる&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Unity HDRP上でのレイマーチング実装の取り組み&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     
     <item>
       <title>SESSIONS 2023のGLSL Graphics Compoで準優勝しました（グラフィックス解説）</title>
@@ -3968,154 +4509,6 @@ TDFのオーガナイザーの方々、エントリーしてくださったみ�
 &lt;p&gt;7/29の「Unityゲーム プログラミング・バイブル 2nd Generation 出版記念トーク グラフィックス編」にゲスト出演しました。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://learning.unity3d.jp/7437/&#34;&gt;Unityゲーム プログラミング・バイブル 2nd Generation 出版記念トーク グラフィックス編&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>お名前.comからGoogleドメインに乗り換えました（2021版）</title>
-      <link>https://gam0022.net/blog/2021/05/06/onamae-com-to-google-domain/</link>
-      <pubDate>Thu, 06 May 2021 02:00:00 +0900</pubDate>
-      
-      <guid>https://gam0022.net/blog/2021/05/06/onamae-com-to-google-domain/</guid>
-      <description>&lt;p&gt;当サイト（&lt;a href=&#34;http://gam0022.net/&#34;&gt;gam0022.net&lt;/a&gt;）のドメイン管理の事業者を&lt;a href=&#34;https://www.onamae.com/&#34;&gt;お名前.com&lt;/a&gt;から&lt;a href=&#34;https://domains.google/intl/ja_jp/&#34;&gt;Googleドメイン&lt;/a&gt;に移管しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-05-05-onamae-com-to-google-domain/transfer.png&#34; alt=&#34;お名前.comからGoogleドメインに移管&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;ドメイン移管は思ったよりもずっと簡単で待ち時間を含めても1時間以内に完了しました。&lt;/p&gt;
-
-&lt;p&gt;この程度の手間だったら、もっと早くやっておけば良かったです。&lt;/p&gt;
-
-&lt;p&gt;移管するとドメインの更新日が1年延長されて、Googleドメインに1年分のドメイン費用を支払う形になります。&lt;/p&gt;
-
-&lt;p&gt;つまり、&lt;strong&gt;お名前.comの更新日はずっと先の日付だろうと問題なく移管できます。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;当サイトのドメインの更新日は2028年で7年後くらいでした。&lt;/p&gt;
-
-&lt;h1 id=&#34;移管手順&#34;&gt;移管手順&lt;/h1&gt;
-
-&lt;p&gt;せっかくなので簡単に手順をメモしておきます。&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;お名前.comでドメインのロック解除
-
-&lt;ul&gt;
-&lt;li&gt;ドメイン設定 &amp;gt; その他の機能 &amp;gt; ドメイン移管ロック&lt;/li&gt;
-&lt;li&gt;移管したいドメインのステータスが「OFF」になっていたら問題ありません&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;お名前.comでAuthコードを入手
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.onamae.com/guide/p/80&#34;&gt;ドメイン詳細&lt;/a&gt;からAuthコードの[表示]ボタンを押すと表示されます&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Googleドメインでドメイン移管手続き
-
-&lt;ul&gt;
-&lt;li&gt;必要な情報を入力して進めるだけでOKです。とくに悩む要素はないと思います
-
-&lt;ul&gt;
-&lt;li&gt;移管したいドメイン&lt;/li&gt;
-&lt;li&gt;Authコード&lt;/li&gt;
-&lt;li&gt;支払い用クレジットカード&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;お名前.comでドメイン移管を承認
-
-&lt;ul&gt;
-&lt;li&gt;私の場合、Googleドメイン上の操作から &lt;strong&gt;30分くらい経過してから&lt;/strong&gt; 「【重要】トランスファー申請に関する確認のご連絡 gam0022.net」というメールが来ました&lt;/li&gt;
-&lt;li&gt;メールのURLから承認ボタンを押せば作業完了です&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;AレコードやAAAAレコードなどのDNS設定も自動で引き継がれていました。&lt;/p&gt;
-
-&lt;p&gt;サブドメインの設定までは引き継がれなかったので手動で再設定する必要がありました。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;お名前comからGoogleドメインに乗り換えた。&lt;br&gt;Aレコードなどの設定は自動で引き継がれており、有能だなぁ。 &lt;a href=&#34;https://t.co/utmwAwougz&#34;&gt;pic.twitter.com/utmwAwougz&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1387671139170754563?ref_src=twsrc%5Etfw&#34;&gt;April 29, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;参考記事&#34;&gt;参考記事&lt;/h2&gt;
-
-&lt;p&gt;こちらの記事に画像つきで手順が書かれています。この記事が分かりにくかったら参考にすると良いと思います。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://qiita.com/fnifni/items/0daca17e0750659f2866&#34;&gt;お名前comからgoogle domainsにドメイン移管する - Qiita&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;移管した理由&#34;&gt;移管した理由&lt;/h1&gt;
-
-&lt;p&gt;GMO社員の方もこのブログを見ることがあるかもしれないので、お名前.comを解約した理由を記しておきます。&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;お名前.comからの迷惑メールが多すぎる&lt;/li&gt;
-&lt;li&gt;UIが使いづらい&lt;/li&gt;
-&lt;li&gt;経済的理由&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;1-お名前-comからの迷惑メールが多すぎる&#34;&gt;1. お名前.comからの迷惑メールが多すぎる&lt;/h2&gt;
-
-&lt;p&gt;1.は業界では有名な評判ですね。お名前.comからの迷惑メールは本当に多すぎます。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://tk-create.com/domain/onamae-com-mail-stop/&#34;&gt;お知らせメールを受信しない設定&lt;/a&gt;でしたが、「gam0022.netの期限日を定期的にご確認ください。」というメールが来ました。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;更新日は7年後の2028年でしたが、「お知らせメールの受信設定が無効となっている方にも配信されております。」とのことです。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;温厚な私でも流石にイラッとしました。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;お知らせメールの受信設定が無効となっている方にも配信されております。&lt;br&gt;&lt;br&gt;じゃあないんだよ &lt;a href=&#34;https://t.co/RgkauLvEtX&#34;&gt;pic.twitter.com/RgkauLvEtX&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1387313503879368705?ref_src=twsrc%5Etfw&#34;&gt;April 28, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;2-uiが使いづらい&#34;&gt;2. UIが使いづらい&lt;/h2&gt;
-
-&lt;p&gt;2.もひどいと思います。使用頻度のもっとも高いであろうDNS設定がなぜかメニューの深い階層に埋もれていて使いづらいです。
-対照的にGoogleドメインはメニューがシンプルで使いやすいと感じました。&lt;/p&gt;
-
-&lt;h2 id=&#34;3-経済的理由&#34;&gt;3. 経済的理由&lt;/h2&gt;
-
-&lt;p&gt;3.については誤差でしたが、1年間の.netのドメインの料金を比較すると、Googleドメインの方が88円だけ節約できました。&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;サービス名&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;1年間の費用（税込）&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;1年間の費用（税別）&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;お名前.com&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;1628円&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;1480円&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Googldドメイン&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;1540円&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;1400円&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;補足すると、お名前.comでは初年度は安く、2年目以降に値上がりします。&lt;/p&gt;
-
-&lt;p&gt;1年目は35円と激安なのですが、2年目以降は上記の更新料がかかります。詳細はこちらを見てください。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.onamae.com/service/d-price/&#34;&gt;ドメインの料金・種類一覧｜ドメイン取るならお名前.com&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;お名前-comの初年度が激安な件&#34;&gt;お名前.comの初年度が激安な件&lt;/h3&gt;
-
-&lt;p&gt;この手法はあまり推奨しないほうが良いと思いますが…&lt;/p&gt;
-
-&lt;p&gt;ほとんどの&lt;a href=&#34;https://help.onamae.com/answer/8577&#34;&gt;ドメインの取得から60日経過すれば移管できる&lt;/a&gt;ようになります。&lt;/p&gt;
-
-&lt;p&gt;お名前.comは初年度がありえないほど安いので、ドメインの取得だけお名前.comで行なって、60日経過後に他社に移管することでコストを最小化できそうな気がしています。&lt;/p&gt;
-
-&lt;h1 id=&#34;まとめ&#34;&gt;まとめ&lt;/h1&gt;
-
-&lt;p&gt;冒頭で述べたとおり、1時間もあればドメインの移管はできました。
-お名前.comの迷惑メールに困っている方は、Googleドメインに乗り換えてみてはいかがでしょうか？&lt;/p&gt;</description>
     </item>
     
   </channel>
