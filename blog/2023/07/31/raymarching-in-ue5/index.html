@@ -248,11 +248,11 @@ Randomization of glowing animation borders#UE5 #UnrealEngine #UnrealEngine5 #Sha
 <li>UE上でノードでは難しい複雑なシェーダーを実装してみたい人</li>
 </ul>
 
-<h2 id="結果">結果</h2>
+<h1 id="結果">結果</h1>
 
 <p>まずは実装結果を紹介します。</p>
 
-<h3 id="オブジェクトスペースのレイマーチング">オブジェクトスペースのレイマーチング</h3>
+<h2 id="オブジェクトスペースのレイマーチング">オブジェクトスペースのレイマーチング</h2>
 
 <p>オブジェクトスペースのレイマーチングを実装しました。カスタムシェーダーをCubeに適用し、レイマーチングを行います。Cubeをレイマーチングのバウンディングボックスとして使用します。</p>
 
@@ -265,7 +265,7 @@ Randomization of glowing animation borders#UE5 #UnrealEngine #UnrealEngine5 #Sha
 <li>レイマーチングの負荷の高いシェーダーの描画範囲を制限できる</li>
 </ul>
 
-<h3 id="パラメーターのリアルタイム編集">パラメーターのリアルタイム編集</h3>
+<h2 id="パラメーターのリアルタイム編集">パラメーターのリアルタイム編集</h2>
 
 <p>レイマーチングによる描画を行っているため、フラクタルのパラメーターをリアルタイムに編集できます。</p>
 
@@ -275,11 +275,11 @@ Randomization of glowing animation borders#UE5 #UnrealEngine #UnrealEngine5 #Sha
 
 <p>▲グローのアニメーションのボーダーを乱数で散らしたバージョン</p>
 
-<h3 id="actorのトランスフォームに追従">Actorのトランスフォームに追従</h3>
+<h2 id="actorのトランスフォームに追従">Actorのトランスフォームに追従</h2>
 
 <p>オブジェクトスペースのレイマーチングの実装のため、Actor（UnityのGameObjectに相当）のトランスフォームに追従します。</p>
 
-<h4 id="平行移動">平行移動</h4>
+<h3 id="平行移動">平行移動</h3>
 
 <p>平行移動の結果を見ると、UEのレンダリング結果と統合できていることがわかります。</p>
 
@@ -290,15 +290,19 @@ Randomization of glowing animation borders#UE5 #UnrealEngine #UnrealEngine5 #Sha
 
 <p><a href="/images/posts/2023-07-30-raymarching-in-ue5/transform_translation_v1.gif"><img src="/images/posts/2023-07-30-raymarching-in-ue5/transform_translation_v1.gif" alt="平行移動" /></a></p>
 
-<h4 id="回転">回転</h4>
+<h3 id="回転">回転</h3>
 
 <p><a href="/images/posts/2023-07-30-raymarching-in-ue5/transform_rotation_v1.gif"><img src="/images/posts/2023-07-30-raymarching-in-ue5/transform_rotation_v1.gif" alt="回転" /></a></p>
 
-<h4 id="拡大縮小">拡大縮小</h4>
+<h3 id="拡大縮小">拡大縮小</h3>
 
 <p><a href="/images/posts/2023-07-30-raymarching-in-ue5/transform_scale_v1.gif"><img src="/images/posts/2023-07-30-raymarching-in-ue5/transform_scale_v1.gif" alt="拡大縮小" /></a></p>
 
-<h2 id="実装の流れ">実装の流れ</h2>
+<h1 id="実装の解説">実装の解説</h1>
+
+<p>ここからは実装の解説をします。</p>
+
+<h2 id="実装の全体流れ">実装の全体流れ</h2>
 
 <p>以下は実装の流れです。</p>
 
@@ -733,7 +737,7 @@ UEのMaterialのノードの接続は番号（整数のインデックス）で�
 今回はLerpで分岐を処理しましたが、`Max(0, x)` でも良いと思います。
 -->
 
-<h2 id="まとめ">まとめ</h2>
+<h1 id="まとめ">まとめ</h1>
 
 <ul>
 <li>UE5.2でオブジェクトスペースのレイマーチングを実装できた
@@ -762,7 +766,7 @@ UEのMaterialのノードの接続は番号（整数のインデックス）で�
 </ul></li>
 </ul>
 
-<h2 id="参考資料">参考資料</h2>
+<h1 id="参考資料">参考資料</h1>
 
 <p>UE4やUnity上でのレイマーチング実装の前例を以下に紹介します。これらの情報をとても参考にさせていただきました。</p>
 
@@ -1372,6 +1376,7 @@ UEのMaterialのノードの接続は番号（整数のインデックス）で�
 <li><a href="#はじめに">はじめに</a>
 <ul>
 <li><a href="#読者対象">読者対象</a></li>
+</ul></li>
 <li><a href="#結果">結果</a>
 <ul>
 <li><a href="#オブジェクトスペースのレイマーチング">オブジェクトスペースのレイマーチング</a></li>
@@ -1383,7 +1388,9 @@ UEのMaterialのノードの接続は番号（整数のインデックス）で�
 <li><a href="#拡大縮小">拡大縮小</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#実装の流れ">実装の流れ</a></li>
+<li><a href="#実装の解説">実装の解説</a>
+<ul>
+<li><a href="#実装の全体流れ">実装の全体流れ</a></li>
 <li><a href="#hlsl-ush-によるシェーダー開発環境の構築">HLSL（.ush）によるシェーダー開発環境の構築</a>
 <ul>
 <li><a href="#余談-昔のueでhlslの関数定義やincludeは大変だった">余談：昔のUEでHLSLの関数定義やincludeは大変だった</a></li>
@@ -1399,9 +1406,9 @@ UEのMaterialのノードの接続は番号（整数のインデックス）で�
 </ul></li>
 <li><a href="#materialノード解説-resultノードへの出力">Materialノード解説：Resultノードへの出力</a></li>
 <li><a href="#materialノード解説-前後関係の解決-pixel-depth-offsetの計算">Materialノード解説：前後関係の解決（Pixel Depth Offsetの計算）</a></li>
+</ul></li>
 <li><a href="#まとめ">まとめ</a></li>
 <li><a href="#参考資料">参考資料</a></li>
-</ul></li>
 </ul>
 </nav>
         </div>
