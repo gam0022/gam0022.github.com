@@ -124,6 +124,80 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2016/09/25/migrated-from-octopress-to-hugo/" itemprop="url">OctopressからHugoへ移行する方法</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2016-09-25 12:45:18 &#43;0900 JST" itemprop="datePublished">2016-09-25</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/hugo">Hugo</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/octopress">Octopress</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%96%e3%83%ad%e3%82%b0%e9%81%8b%e5%96%b6">ブログ運営</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                <img src="/images/posts/2016-09-25-migrated-from-octopress-to-hugo/migrated-from-octopress-to-hugo.png" alt="OctopressからHugoへ移行" /></p>
+
+<p>当サイトはOctopressを使って生成していたのですが、このたびHugoに移行することにしました。
+この記事ではHugoに移行した経緯と、Hugoへの移行手順についてまとめます。
+なおローカル環境はMac OS Xです。</p>
+
+<h1 id="octopressを辞めた理由">Octopressを辞めた理由</h1>
+
+<p>Octopressを辞めた理由は、記事数の増加に伴い、サイトの生成に時間がかかるようになってしまったからです。</p>
+
+<p>HugoではOctopressに比べてサイトの生成時間が短いことから、Hugoに移行することにしました。</p>
+
+<p>現在の記事数でのサイトの生成時間は、Octpress(<code>rake generate</code>コマンド)で 20.39秒、Hugo(<code>hugo</code>コマンド)では 2.66秒でした！</p>
+
+<p>他にも、Octpressは直近のコミットが半年前のもので、活発にメンテナンスされていないと感じたことも、Hugoへ移行した理由の1つです。</p>
+
+<h1 id="hugoのインストール">Hugoのインストール</h1>
+
+<p>Macの場合はHomebrewからインストールするのが良いでしょう。</p>
+
+<pre><code class="language-bash">brew update
+brew install hugo
+</code></pre>
+
+<p>Mac以外の方は、公式ページを参考にして、ソースコードからインストールしましょう。</p>
+
+<ul>
+<li><a href="https://gohugo.io/overview/installing/">Hugo - Installing Hugo</a></li>
+</ul>
+
+<p>
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2016/09/25/migrated-from-octopress-to-hugo/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2016/04/10/railway/" itemprop="url">三谷先生の鉄道模型コースシミュレータにパーマリンク機能を実装</a></h3>
         
 
@@ -689,61 +763,6 @@ three.js を使って開発していたので、その知識を集約させま�
         </div>
         <p class="read-more">
             <a href="https://gam0022.net/blog/2014/11/13/papar-craft/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2014/11/13/code-festival-2014/" itemprop="url">CODE FESTIVAL2014 本戦に参加</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2014-11-13 17:25:00 &#43;0900 JST" itemprop="datePublished">2014-11-13</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/%e7%ab%b6%e6%8a%80%e3%83%97%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%9f%e3%83%b3%e3%82%b0">競技プログラミング</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/event">Event</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                土日(<sup>11</sup>&frasl;<sub>8</sub>-9)に開催された <a href="http://recruit-jinji.jp/code_fes2014/">CODE FESTIVAL2014</a> 本戦に参加しました。</p>
-
-<p><a href="http://code-festival-2014-qualb.contest.atcoder.jp/">予選B</a>で3完しかできなかったので、
-参加はムリだろうと思っていたのですが、なぜか本戦に出場できてしまいました。
-3完でも行けなかった人がいるみたいなので、本当に運ですね。</p>
-
-<p>順位的には残念な感じになってしまって悔しかったですが、豪華な企画が盛りだくさんで(リンク先のタイムテーブルを参照)、
-chokudaiさんの生コーディングが見れたり、iwiwiさんのサインが貰えたり、美味しいご飯が食べれて良かったです。
-また、本戦上位5人によるエキシビジョンマッチを観戦しましたが、実況が分かりやすくて私のような初心者でも十分に楽しむことができました。
-あと、なぜかDDRや太鼓の達人の筐体が用意されていて、遊び放題でした。</p>
-
-<p>良いイベントだと思うので、リクルートさんには来年以降もやって欲しいと思います。</p>
-
-<p>
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2014/11/13/code-festival-2014/" class="btn btn-primary btn-outline">
                 Read more
             </a>
         </p>

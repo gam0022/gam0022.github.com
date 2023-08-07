@@ -7,8 +7,104 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>&amp;copy; 2021 gam0022</copyright>
-    <lastBuildDate>Mon, 31 Jul 2023 10:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 07 Aug 2023 10:00:00 +0900</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>『Unityバイブル R5夏号』の「Shader Graphの基本操作から発展的なテクニックまで」を執筆しました</title>
+      <link>https://gam0022.net/blog/2023/08/07/unity-bible/</link>
+      <pubDate>Mon, 07 Aug 2023 10:00:00 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2023/08/07/unity-bible/</guid>
+      <description>&lt;p&gt;8/29発売の&lt;a href=&#34;https://amzn.to/3QzV4me&#34;&gt;『Unityバイブル R5夏号』&lt;/a&gt;のSECTION 01「Shader Graphの基本操作から発展的なテクニックまで」を執筆しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-08-07-unity-bible/thumbnail.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-08-07-unity-bible/thumbnail.jpg&#34; alt=&#34;『Unityバイブル R5夏号』&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe sandbox=&#34;allow-popups allow-scripts allow-modals allow-forms allow-same-origin&#34; style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4862465684&amp;linkId=c3575812bc16a75ff5f4ccf46ea0671e&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;unityバイブル-r5夏号&#34;&gt;Unityバイブル R5夏号&lt;/h2&gt;
+
+&lt;p&gt;前回の&lt;a href=&#34;https://gam0022.net/blog/2021/06/08/unity-bible2/&#34;&gt;『Unityゲーム プログラミング・バイブル 2nd Generation』&lt;/a&gt;は1000ページ超えの厚さで「鈍器」とも言われていましたが、
+本書では著者を10人に絞り、約300ページに凝縮されたボリュームに仕上がりました。&lt;/p&gt;
+
+&lt;p&gt;ページ数を抑えた替わりに、年2回の定期刊行になりました。前回よりも気軽に読んでいただけると思います。&lt;/p&gt;
+
+&lt;p&gt;本書では、バリエーション豊かな10のテーマを取り上げています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;高品質なグラフィックスを表現するためのUniversal RPの各種機能の解説&lt;/li&gt;
+&lt;li&gt;Shader Graphの基本操作から発展的なテクニックまで&lt;/li&gt;
+&lt;li&gt;TimelineでUIとキャラクターの演出をつけてみよう&lt;/li&gt;
+&lt;li&gt;Photon Fusionによるリアルタイムネットワークゲーム&lt;/li&gt;
+&lt;li&gt;Unity Localizationを使ってゲームを多言語化してみよう&lt;/li&gt;
+&lt;li&gt;ゲームプレイの自動テスト&lt;/li&gt;
+&lt;li&gt;.NET向けIDE「JetBrains Rider」の活用【前編】&lt;/li&gt;
+&lt;li&gt;Editor拡張で作業効率を上げよう&lt;/li&gt;
+&lt;li&gt;すぐに使えるゲームサウンド演出&lt;/li&gt;
+&lt;li&gt;VRアプリケーションにおけるVRMアバターの導入&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;shader-graphの基本操作から発展的なテクニックまで&#34;&gt;Shader Graphの基本操作から発展的なテクニックまで&lt;/h2&gt;
+
+&lt;p&gt;10のテーマのうち、「Shader Graphの基本操作から発展的なテクニックまで」というセクションを私が担当しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-08-07-unity-bible/Collage2.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-08-07-unity-bible/Collage2.png&#34; alt=&#34;Shader Graphの基本操作から発展的なテクニックまで&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;SDユニティちゃん ©Unity Technologies Japan/UCL&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;このセクションでは初心者向けの基本的な使い方から、Custom Functionなどの発展的なテクニックまで幅広く学ぶことができます。&lt;/p&gt;
+
+&lt;p&gt;Shader Graphを使う上で覚えおきたい重要なポイントをピックアップし、30ページにわたって丁寧に解説しています。&lt;/p&gt;
+
+&lt;p&gt;以下がセクションの見出しです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Shader Graphとは？
+
+&lt;ul&gt;
+&lt;li&gt;コラム：Shader Graph vs ShaderLab&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Shader Graphの基本画面&lt;/li&gt;
+&lt;li&gt;サンプル1：基本操作とPBRテクスチャ対応シェーダー
+
+&lt;ul&gt;
+&lt;li&gt;TIPS：Ridirect Nodeでエッジを整理しよう&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;サンプル2：ディゾルブシェーダー
+
+&lt;ul&gt;
+&lt;li&gt;TIPS：BackboardのCategory機能でプロパティを整理しよう&lt;/li&gt;
+&lt;li&gt;TIPS：Sticky Noteでコメントを残そう&lt;/li&gt;
+&lt;li&gt;TIPS：Group Selectionでノードをまとめよう&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;サンプル3：ToonシェーダーとCustom Function
+
+&lt;ul&gt;
+&lt;li&gt;TIPS：Sub Graphで機能を再利用しよう&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;サンプル4：プロシージャルテクスチャ&lt;/li&gt;
+&lt;li&gt;サンプル5：ポストエフェクト&lt;/li&gt;
+&lt;li&gt;このセクションのまとめと次のステップ
+
+&lt;ul&gt;
+&lt;li&gt;シェーダーとデモシーン&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Shader Graphの各機能をバランスよくマスターするための、5つの小規模なサンプルを用意しました。近日中にサンプルはGitHubで公開予定です。&lt;/p&gt;
+
+&lt;p&gt;なるべく複雑にならないようにシンプルに保ちながらも、それなりの見栄えになるサンプルを目指しました。&lt;/p&gt;
+
+&lt;p&gt;TIPSでは「Ridirect Node」「BackboardのCategory機能」「Group Selection」「Sub Graph」など覚えておくと作業効率を向上できる機能の使い方なども紹介しました。&lt;/p&gt;
+
+&lt;p&gt;さいごに、この本の発行部数はAmazonの予約数によって決まるとのことなので、興味を持っていただける方はぜひ予約していただければ幸いです🙇‍♂️&lt;/p&gt;
+
+&lt;iframe sandbox=&#34;allow-popups allow-scripts allow-modals allow-forms allow-same-origin&#34; style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4862465684&amp;linkId=c3575812bc16a75ff5f4ccf46ea0671e&#34;&gt;&lt;/iframe&gt;</description>
+    </item>
     
     <item>
       <title>Object Space Raymarching in Unreal Engine 5.2</title>
@@ -4369,191 +4465,6 @@ TDFのオーガナイザーの方々、エントリーしてくださったみ�
 &lt;p&gt;気がつくと異常にLogicool製品が増えました。Logicool信者ではないですが、製品の質に安定感があり、幅広いラインナップを取り揃えているので、PC機器のブランド統一するなら有力な選択肢かなと思います。&lt;/p&gt;
 
 &lt;p&gt;G HUBの使い勝手が微妙だったり、稀にフリーズすることがあるので、今後のソフトウェアアップデートに期待しています。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>『Unityゲーム プログラミング・バイブル 2nd Generation』のレイマーチングとTimelineの章を執筆しました</title>
-      <link>https://gam0022.net/blog/2021/06/08/unity-bible2/</link>
-      <pubDate>Tue, 08 Jun 2021 10:30:19 +0900</pubDate>
-      
-      <guid>https://gam0022.net/blog/2021/06/08/unity-bible2/</guid>
-      <description>&lt;p&gt;6/29発売の&lt;a href=&#34;https://amzn.to/3oe2agf&#34;&gt;『Unityゲーム プログラミング・バイブル 2nd Generation』&lt;/a&gt;を執筆しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-05-27-unity-bible2/Collage_Fotor.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-05-27-unity-bible2/Collage_Fotor.jpg&#34; alt=&#34;『Unityゲーム プログラミング・バイブル 2nd Generation』&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;『Unityゲーム プログラミング・バイブル 2nd Generation』について、公式ページから紹介文を引用します。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Unityのゲーム開発現場で最も使われた決定版書籍が、大幅バージョンアップして登場!&lt;/strong&gt;
-&lt;strong&gt;ゲームの開発現場で即実践できるスキルが身につく!&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;本書は、ゲーム開発で最も使われている「Unity」の入門や初級レベルを卒業した方向けの書籍です。ゲームの開発現場で、即実践できるスキルが身につくように、&lt;strong&gt;「37」の最新のトピックを網羅&lt;/strong&gt;しました。&lt;/p&gt;
-
-&lt;p&gt;本書には、第一線の現場で活躍している23名の著者陣が参加しており、ゲーム開発のノウハウやTipsが満載されています。またほとんどのトピックでは、サンプルゲームがダウンロードでき、実際に動かしながら、実践的に学んでいくことが可能です。&lt;/p&gt;
-
-&lt;p&gt;Unityでのゲーム開発のさまざまな場面で、すぐに役立つ1冊となっています。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;!--
-![Unityゲーム プログラミング・バイブル 2nd Generation](/images/posts/2021-05-27-unity-bible2/Collage_Fotor.jpg)
---&gt;
-
-&lt;p&gt;37のトピックのうち、私は次の2つを担当しました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;レイマーチング：基礎から応用まで&lt;/li&gt;
-&lt;li&gt;Timelineによる映像制作&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;この記事では私の担当した内容を簡単に紹介します。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;『Unityゲーム プログラミング・バイブル 2nd Generation 』を執筆しました！&lt;br&gt;6/29発売です！&lt;br&gt;&lt;br&gt;・レイマーチング：基礎から応用まで&lt;br&gt;・Timelineによる映像制作&lt;br&gt;&lt;br&gt;の2本を担当しました。&lt;a href=&#34;https://t.co/lYWIxseCON&#34;&gt;https://t.co/lYWIxseCON&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1392725305526161411?ref_src=twsrc%5Etfw&#34;&gt;May 13, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;レイマーチング-基礎から応用まで&#34;&gt;レイマーチング：基礎から応用まで&lt;/h1&gt;
-
-&lt;div style=&#34;display: flex;&#34;&gt;
-    &lt;div style=&#34;width: 50%;&#34;&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-05-27-unity-bible2/11_RaymarchingOpRepeat.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-05-27-unity-bible2/11_RaymarchingOpRepeat.jpg&#34; alt=&#34;サンプル11 距離関数の応用：無限複製編&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
-    &lt;div style=&#34;width: 50%;&#34;&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-05-27-unity-bible2/13_RaymarchingBoolean2.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-05-27-unity-bible2/13_RaymarchingBoolean2.jpg&#34; alt=&#34;サンプル13 距離関数の応用：無限複製とブーリアン演算の合せ技&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;!--
-![サンプル11 距離関数の応用：無限複製編](/images/posts/2021-05-27-unity-bible2/11_RaymarchingOpRepeat.jpg)
-![サンプル13 距離関数の応用：無限複製とブーリアン演算の合せ技](/images/posts/2021-05-27-unity-bible2/13_RaymarchingBoolean2.jpg)
---&gt;
-
-&lt;p&gt;このセクションでは「レイマーチング」という手法により、グラフィックスを描画する仕組みを紹介しました。&lt;/p&gt;
-
-&lt;p&gt;レイマーチングと似た名前の手法にレイトレーシングがありますが、どちらもレイ、つまり光線をプログラムでシミュレーションしてカメラに映る画像を生成する手法です。&lt;/p&gt;
-
-&lt;p&gt;レイマーチングでは、距離関数という数式で定義した形状に対して、レイとの交差判定を行うことで照明や反射などの計算を行います。
-そのため、通常のUnityの描画パイプラインではできないような表現が可能になるということが特徴です。&lt;/p&gt;
-
-&lt;p&gt;このセクションでは、Unityのシェーダーのコードを記述してレイマーチングを実装します。
-レイマーチングの基礎から応用まで解説するために、合計13個のサンプルシーンを用意しました。
-少しずつ処理を加えることで、一歩ずつレベルアップしながら理解を深められるチュートリアル形式のサンプルシーンになっています。&lt;/p&gt;
-
-&lt;p&gt;サンプルプロジェクトは、筆者のGitHubにて公開しています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/gam0022/UnityBible2-RaymarchingTutorial&#34;&gt;https://github.com/gam0022/UnityBible2-RaymarchingTutorial&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;このセクションで学べることとそのポイントを、以下にまとめておきます。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;レイマーチングのアルゴリズムと本質
-
-&lt;ul&gt;
-&lt;li&gt;レイマーチングは魔法の道具ではなく、単なる衝突判定の手法&lt;/li&gt;
-&lt;li&gt;数式（距離関数）によるプロシージャルなモデリング手法&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;コンピュータグラフィックスの基礎
-
-&lt;ul&gt;
-&lt;li&gt;レイマーチングが扱う範囲はあくまで衝突判定&lt;/li&gt;
-&lt;li&gt;ライティングは通常のシェーダーとまったく同じように実装する必要がある&lt;/li&gt;
-&lt;li&gt;Unityエンジンのシーンやライティング機能を利用せずに、グラフィックスを描画する一連の流れを学べるため、コンピュータグラッフィックスの学習教材としても有用&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;執筆の裏話&#34;&gt;執筆の裏話&lt;/h2&gt;
-
-&lt;p&gt;執筆の裏話としては作図にレイマーチングを利用しました。&lt;/p&gt;
-
-&lt;p&gt;よくあるレイトレーシングの原理（スクリーン上のピクセルに対応する向きのレイを飛ばして交差判定）を解説するための図が欲しかったので、レイマーチングで作図しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;シェーダーは最強の作図ツールなので、&lt;br&gt;レイトレーシングの原理を説明するための図をUnityシェーダーだけで作りました。 &lt;a href=&#34;https://t.co/VuLBhoqEaY&#34;&gt;pic.twitter.com/VuLBhoqEaY&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1343070779961839617?ref_src=twsrc%5Etfw&#34;&gt;December 27, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;ちゃんとアニメーションもできるように作り込んだのですが、書籍だと静止画になってしまうのが残念ですね。&lt;/p&gt;
-
-&lt;h1 id=&#34;timelineによる映像制作&#34;&gt;Timelineによる映像制作&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-05-27-unity-bible2/00_Top.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-05-27-unity-bible2/00_Top.jpg&#34; alt=&#34;Timelineによる映像制作&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;このセクションでは、Unityの&lt;a href=&#34;https://docs.unity3d.com/ja/2019.2/Manual/TimelineOverview.html&#34;&gt;Timeline&lt;/a&gt;を利用した映像作品の制作について解説しました。&lt;/p&gt;
-
-&lt;p&gt;このセクションで学べる項目は、以下の通りです。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/hecomi/uRaymarching&#34;&gt;uRaymarching&lt;/a&gt;を利用したレイマーチング&lt;/li&gt;
-&lt;li&gt;Post-processing Stackの導入からビルトインエフェクトの利用、カスタムエフェクトの作成まで&lt;/li&gt;
-&lt;li&gt;Timelineの基本からカスタムトラックの作成まで&lt;/li&gt;
-&lt;li&gt;Cinemachineの基本的な使い方から、Post-processing Stackとの連携まで&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--
-このセクションのサンプルシーンは、以下の各バージョンで作成しています。
-
-- Unity 2020.1.8f1
-- uRaymarching: v2.1.1
-- Post-processing Stack（v2）2.3.0
-- Timeline 1.3.6
-- Cinemachine 2.6.3
-- TextMeshPro 3.0.3
-- Unity Recorder 2.5.2
---&gt;
-
-&lt;p&gt;映像の作成のためには、数多くのUnityの機能とAssetを組み合わせる必要があります。&lt;/p&gt;
-
-&lt;p&gt;それぞれのUnityの機能とAssetにフォーカスを当てた合計12個のサンプルシーンを用意しました。
-サンプルシーンはチュートリアル形式で、一歩ずつレベルアップしながら理解を深められるようになっています。&lt;/p&gt;
-
-&lt;p&gt;サンプルプロジェクトは、筆者のGitHubで公開しています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/gam0022/UnityBible2-TimelineTutorial&#34;&gt;https://github.com/gam0022/UnityBible2-TimelineTutorial&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-05-27-unity-bible2/12_BeatSync.gif&#34; alt=&#34;サンプル12 音楽と同期して演出をブラッシュアップ&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;執筆の裏話-1&#34;&gt;執筆の裏話&lt;/h2&gt;
-
-&lt;p&gt;これも執筆の裏話になりますが、&lt;strong&gt;デモのメイキングを書籍として出版する&lt;/strong&gt; という個人的な試みに今回はチャレンジしました。&lt;/p&gt;
-
-&lt;p&gt;このツイートが伏線でした。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;RevisionのWriteup先には意外な &amp;quot;媒体&amp;quot; を予定しています&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1379103521409101826?ref_src=twsrc%5Etfw&#34;&gt;April 5, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;サンプルの完成形のデモが『Secret stage BOSS』です。Revision2021のPC Demo Compoで初リリースしました。&lt;/p&gt;
-
-&lt;p&gt;グラフィックスは私（&lt;a href=&#34;https://twitter.com/gam0022/&#34;&gt;@gam0022&lt;/a&gt;）、サウンドはさだきちさん（&lt;a href=&#34;https://twitter.com/sadakkey&#34;&gt;@sadakkey&lt;/a&gt;）が担当しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&amp;quot;Secret stage BOSS&amp;quot; by &lt;a href=&#34;https://twitter.com/gam0022?ref_src=twsrc%5Etfw&#34;&gt;@gam0022&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://twitter.com/sadakkey?ref_src=twsrc%5Etfw&#34;&gt;@sadakkey&lt;/a&gt;&lt;br&gt;&lt;br&gt;Our new PC Demo for &lt;a href=&#34;https://twitter.com/hashtag/Revision2021?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Revision2021&lt;/a&gt; (&lt;a href=&#34;https://twitter.com/revision_party?ref_src=twsrc%5Etfw&#34;&gt;@revision_party&lt;/a&gt;)&lt;br&gt;&lt;br&gt;It&amp;#39;s a Massive Greetings to &amp;quot;2nd stage BOSS&amp;quot; &lt;a href=&#34;https://t.co/vVWJJB4cyS&#34;&gt;pic.twitter.com/vVWJJB4cyS&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1378967812463501313?ref_src=twsrc%5Etfw&#34;&gt;April 5, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;『Secret stage BOSS』は&lt;a href=&#34;https://youtu.be/SFoyJED5A4s&#34;&gt;『2nd stage BOSS by 0x4015&amp;amp;YET11』&lt;/a&gt;というデモシーン歴史に残る伝説級のデモのオマージュ作品です。&lt;/p&gt;
-
-&lt;p&gt;自機やボスが登場するシューティングゲーム風のストーリーを、自分たちなりのビジュアルと音楽のスタイルで再現しました。&lt;/p&gt;
-
-&lt;div class=&#34;movie-wrap&#34;&gt;
-&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/srO7IxNckZ8&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;p&gt;GitHub上でUnityプロジェクトを丸ごと公開しているので、もし興味があれば参考にしてください。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;You can see the source code &amp;amp; Unity project on GitHub!&lt;br&gt;&lt;br&gt;ソースコードとUnityプロジェクトをGitHubで公開しました！&lt;a href=&#34;https://t.co/dQJV35DGKB&#34;&gt;https://t.co/dQJV35DGKB&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1378975301456130049?ref_src=twsrc%5Etfw&#34;&gt;April 5, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;おわりに&#34;&gt;おわりに&lt;/h1&gt;
-
-&lt;p&gt;6年前にレイマーチングと出会ってから、レイマーチングの面白さに魅せられ続け、レイマーチングに関するさまざまな情報を発信してきました。
-今回、Unityの一般ユーザー向けの書籍でレイマーチングについて解説をする機会をいただけたことをとても光栄に思います。
-これまでシェーダーと縁がなかった方にもシェーダーに興味をもってもらえれば幸いです。&lt;/p&gt;
-
-&lt;p&gt;日本語で書かれたレイマーチングの入門情報はかなり充実してきましたが、その次のステップの情報が不足しているように感じていました。
-本書ではレイマーチングの中級者向けの情報として、距離関数によるモデリングや本格的なライティングまで解説しました。
-レイマーチングで球体のレンダリングはできたけど、その次のステップが分からないという方にぜひ読んでいただきたいです。&lt;/p&gt;
-
-&lt;p&gt;本書は定価8580円と気軽に購入しづらいかもしれませんが、&lt;strong&gt;フルカラーの1112ページ、扱うテーマの広さ、得られる情報の密度&lt;/strong&gt;を踏まえると妥当（むしろお買い得！）な値段だと思います。
-初版部数はAmazonでの予約数をもとに決まるそうなので、ぜひ&lt;a href=&#34;https://amzn.to/3oe2agf&#34;&gt;Amazonから予約&lt;/a&gt;をお願いします！&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;リアルタイムレンダリング 第4版よりもページ数が多いことに気がついて驚いています。 &lt;a href=&#34;https://t.co/zJGUYOm8XL&#34;&gt;https://t.co/zJGUYOm8XL&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1393040315762634755?ref_src=twsrc%5Etfw&#34;&gt;May 14, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;追記-2021-08-21&#34;&gt;追記（2021-08-21）&lt;/h1&gt;
-
-&lt;p&gt;7/29の「Unityゲーム プログラミング・バイブル 2nd Generation 出版記念トーク グラフィックス編」にゲスト出演しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://learning.unity3d.jp/7437/&#34;&gt;Unityゲーム プログラミング・バイブル 2nd Generation 出版記念トーク グラフィックス編&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

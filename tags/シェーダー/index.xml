@@ -10,6 +10,102 @@
     <atom:link href="/tags/%E3%82%B7%E3%82%A7%E3%83%BC%E3%83%80%E3%83%BC/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>『Unityバイブル R5夏号』の「Shader Graphの基本操作から発展的なテクニックまで」を執筆しました</title>
+      <link>https://gam0022.net/blog/2023/08/07/unity-bible/</link>
+      <pubDate>Mon, 07 Aug 2023 10:00:00 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2023/08/07/unity-bible/</guid>
+      <description>&lt;p&gt;8/29発売の&lt;a href=&#34;https://amzn.to/3QzV4me&#34;&gt;『Unityバイブル R5夏号』&lt;/a&gt;のSECTION 01「Shader Graphの基本操作から発展的なテクニックまで」を執筆しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-08-07-unity-bible/thumbnail.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-08-07-unity-bible/thumbnail.jpg&#34; alt=&#34;『Unityバイブル R5夏号』&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe sandbox=&#34;allow-popups allow-scripts allow-modals allow-forms allow-same-origin&#34; style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4862465684&amp;linkId=c3575812bc16a75ff5f4ccf46ea0671e&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;unityバイブル-r5夏号&#34;&gt;Unityバイブル R5夏号&lt;/h2&gt;
+
+&lt;p&gt;前回の&lt;a href=&#34;https://gam0022.net/blog/2021/06/08/unity-bible2/&#34;&gt;『Unityゲーム プログラミング・バイブル 2nd Generation』&lt;/a&gt;は1000ページ超えの厚さで「鈍器」とも言われていましたが、
+本書では著者を10人に絞り、約300ページに凝縮されたボリュームに仕上がりました。&lt;/p&gt;
+
+&lt;p&gt;ページ数を抑えた替わりに、年2回の定期刊行になりました。前回よりも気軽に読んでいただけると思います。&lt;/p&gt;
+
+&lt;p&gt;本書では、バリエーション豊かな10のテーマを取り上げています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;高品質なグラフィックスを表現するためのUniversal RPの各種機能の解説&lt;/li&gt;
+&lt;li&gt;Shader Graphの基本操作から発展的なテクニックまで&lt;/li&gt;
+&lt;li&gt;TimelineでUIとキャラクターの演出をつけてみよう&lt;/li&gt;
+&lt;li&gt;Photon Fusionによるリアルタイムネットワークゲーム&lt;/li&gt;
+&lt;li&gt;Unity Localizationを使ってゲームを多言語化してみよう&lt;/li&gt;
+&lt;li&gt;ゲームプレイの自動テスト&lt;/li&gt;
+&lt;li&gt;.NET向けIDE「JetBrains Rider」の活用【前編】&lt;/li&gt;
+&lt;li&gt;Editor拡張で作業効率を上げよう&lt;/li&gt;
+&lt;li&gt;すぐに使えるゲームサウンド演出&lt;/li&gt;
+&lt;li&gt;VRアプリケーションにおけるVRMアバターの導入&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;shader-graphの基本操作から発展的なテクニックまで&#34;&gt;Shader Graphの基本操作から発展的なテクニックまで&lt;/h2&gt;
+
+&lt;p&gt;10のテーマのうち、「Shader Graphの基本操作から発展的なテクニックまで」というセクションを私が担当しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-08-07-unity-bible/Collage2.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-08-07-unity-bible/Collage2.png&#34; alt=&#34;Shader Graphの基本操作から発展的なテクニックまで&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;SDユニティちゃん ©Unity Technologies Japan/UCL&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;このセクションでは初心者向けの基本的な使い方から、Custom Functionなどの発展的なテクニックまで幅広く学ぶことができます。&lt;/p&gt;
+
+&lt;p&gt;Shader Graphを使う上で覚えおきたい重要なポイントをピックアップし、30ページにわたって丁寧に解説しています。&lt;/p&gt;
+
+&lt;p&gt;以下がセクションの見出しです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Shader Graphとは？
+
+&lt;ul&gt;
+&lt;li&gt;コラム：Shader Graph vs ShaderLab&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Shader Graphの基本画面&lt;/li&gt;
+&lt;li&gt;サンプル1：基本操作とPBRテクスチャ対応シェーダー
+
+&lt;ul&gt;
+&lt;li&gt;TIPS：Ridirect Nodeでエッジを整理しよう&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;サンプル2：ディゾルブシェーダー
+
+&lt;ul&gt;
+&lt;li&gt;TIPS：BackboardのCategory機能でプロパティを整理しよう&lt;/li&gt;
+&lt;li&gt;TIPS：Sticky Noteでコメントを残そう&lt;/li&gt;
+&lt;li&gt;TIPS：Group Selectionでノードをまとめよう&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;サンプル3：ToonシェーダーとCustom Function
+
+&lt;ul&gt;
+&lt;li&gt;TIPS：Sub Graphで機能を再利用しよう&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;サンプル4：プロシージャルテクスチャ&lt;/li&gt;
+&lt;li&gt;サンプル5：ポストエフェクト&lt;/li&gt;
+&lt;li&gt;このセクションのまとめと次のステップ
+
+&lt;ul&gt;
+&lt;li&gt;シェーダーとデモシーン&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Shader Graphの各機能をバランスよくマスターするための、5つの小規模なサンプルを用意しました。近日中にサンプルはGitHubで公開予定です。&lt;/p&gt;
+
+&lt;p&gt;なるべく複雑にならないようにシンプルに保ちながらも、それなりの見栄えになるサンプルを目指しました。&lt;/p&gt;
+
+&lt;p&gt;TIPSでは「Ridirect Node」「BackboardのCategory機能」「Group Selection」「Sub Graph」など覚えておくと作業効率を向上できる機能の使い方なども紹介しました。&lt;/p&gt;
+
+&lt;p&gt;さいごに、この本の発行部数はAmazonの予約数によって決まるとのことなので、興味を持っていただける方はぜひ予約していただければ幸いです🙇‍♂️&lt;/p&gt;
+
+&lt;iframe sandbox=&#34;allow-popups allow-scripts allow-modals allow-forms allow-same-origin&#34; style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4862465684&amp;linkId=c3575812bc16a75ff5f4ccf46ea0671e&#34;&gt;&lt;/iframe&gt;</description>
+    </item>
+    
+    <item>
       <title>『Unityゲーム プログラミング・バイブル 2nd Generation』のレイマーチングとTimelineの章を執筆しました</title>
       <link>https://gam0022.net/blog/2021/06/08/unity-bible2/</link>
       <pubDate>Tue, 08 Jun 2021 10:30:19 +0900</pubDate>

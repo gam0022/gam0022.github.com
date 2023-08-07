@@ -124,6 +124,53 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/12/31/gnuplot-tips/" itemprop="url">gnuplotでCSVファイルを読み込む方法とmultiplotの注意点</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2012-12-31 17:02:00 &#43;0900 JST" itemprop="datePublished">2012-12-31</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/gnuplot">gnuplot</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                シュミレーション物理とかいう授業で、 座標のデータ(天体の膨張のシュミレーションらしい)をCSV形式に出力して それをエクセルで分散図として表示する課題があったのですが、 あえてgnuplotでやってみました。
+gnuplotでCSVファイルを読み込む方法 通常、gnuplotではスペースで区切ったデータしか読み取れませんが、 次のように設定すれば、CSV形式のファイルもplotできます。
+set datafile separator &quot;,&quot;  次のようにすれば、TSV形式でも読み取れると思います。
+set datafile separator &quot;\t&quot;  multiplotの注意点 multiplotを使えば、複数のグラフを並んで表示できます。 MatLabのsubplotのような機能です。 便利な機能なのですが、グラフをファイルに出力するときに注意点があります。
+次のように、set multiplotを使う前に、set outを使ってください。
+set terminal postscript eps set out &quot;img1.eps&quot; set multiplot layout 1,2 replot  さもないと、次のようなエラーになってしまいます。
+set out &quot;img1.eps&quot; ^ &quot;plot&quot;, line 9: you can&rsquo;t change the output in multiplot mode  まとめ 以上のことを踏まえて正しくgnuplotを使いましょう。
+set datafile separator &quot;,&quot; set size square set xr[40:60] set yr[40:60] set terminal postscript eps set out &quot;img1.
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2012/12/31/gnuplot-tips/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/12/26/x86-addressing-mode/" itemprop="url">x86のアドレッシングモードでハマった</a></h3>
         
 
@@ -761,63 +808,6 @@ dyld: lazy symbol binding failed: Symbol not found: __ZN5MeCab12getLastErrorEv R
         </div>
         <p class="read-more">
             <a href="https://gam0022.net/blog/2012/08/15/octopress-path/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/08/11/use-rsync-iconv-option/" itemprop="url">カテゴリー名に濁点を含んだ日本語が使えない問題を解決する(Rsyncのiconvオプションを使う)</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2012-08-11 10:38:00 &#43;0900 JST" itemprop="datePublished">2012-08-11</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/octopress">Octopress</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/rsync">Rsync</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/mac-os-x">Mac OS X</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/utf-8-mac">UTF-8-MAC</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                このブログで、カテゴリーに濁点を含んだ日本語を使うと、カテゴリーの一覧などからカテゴリーのページにリンクしたとき、 404エラーになってしまう問題が起きました。
-原因は、このブログの開発環境にありました。
-このブログは静的コンテンツなのですが、次のような手順でブログを運営しています。 (Rakefileで自動化されていますが、内部ではこうなっています)
- ローカル(Mac OS X)でブログを生成する。 サーバ(Ubuntu)にRsyncで生成したブログをアップロードする。  Mac OS X では、ファイル名のエンコードにUTF-8-MACを使っているので、 そのままアップロードすると、サーバ上のファイル名もUTF-8-MACになります。 しかし、ファイル自体のエンコードはUTF-8でURLをパーセントエンコーディングしていないので、 リンク先が見つからなくなってしまうようです。
-UTF-8-MAC問題について詳しく知りたい人は、こちらなどが勉強になるとおもいます。
-解決方法は簡単で、Rsyncでアップロードするときに、&ndash;iconvオプションを使い、 ファイル名をUTF-8-MACからUTF-8に変換すれば治ります。
-Rsyncのバージョンを3にする Rsyncの&ndash;iconvオプションが使えるのは、Rsync3からなのでアップデートします。</p>
-
-<h1 id="brew-tap-homebrew-dupes-リポジトリを追加-2019-06-20追記-この手順は不要になりました-brew-install-libiconv-iconvオプションを使うために必須のよう-brew-install-rsync-念のため-サーバ側-ubuntu-のrsync3にします">brew tap homebrew/dupes #リポジトリを追加（2019/06/20追記。この手順は不要になりました。） brew install libiconv #iconvオプションを使うために必須のよう brew install rsync  念のため、サーバ側(Ubuntu)のrsync3にします。</h1>
-
-<p>aptitude install rsync  Rakefileを修正する Rakefileのok_failed system&hellip;の行を書き換えます。
-desc &quot;Deploy website via rsync&quot; task :rsync do exclude = &quot;&quot; if File.exists?(&lsquo;./rsync-exclude&rsquo;) exclude = &quot;&ndash;exclude-from &lsquo;#{File.expand_path(&lsquo;./rsync-exclude&rsquo;)}&rsquo;&quot; end puts &quot;## Deploying website via Rsync&quot; #ok_failed system(&quot;rsync -avze &lsquo;ssh -p #{ssh_port}&rsquo; #{exclude} #{&quot;&ndash;delete&quot; unless rsync_delete == false} #{public_dir}/ #{ssh_user}:#{document_root}&quot;) ok_failed system(&quot;rsync &ndash;iconv=UTF-8-MAC,UTF-8 -avze &lsquo;ssh -p #{ssh_port}&rsquo; #{exclude} #{&quot;&ndash;delete&quot; unless rsync_delete == false} #{public_dir}/ #{ssh_user}:#{document_root}&quot;) end  完。 これでうまくいきました。
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2012/08/11/use-rsync-iconv-option/" class="btn btn-primary btn-outline">
                 Read more
             </a>
         </p>
