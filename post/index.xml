@@ -97,9 +97,15 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Shader Graphの各機能をバランスよくマスターするための、5つの小規模なサンプルを用意しました。近日中にサンプルはGitHubで公開予定です。&lt;/p&gt;
+&lt;p&gt;Shader Graphの各機能をバランスよくマスターするための、5つの小規模なサンプルを用意しました。&lt;/p&gt;
 
-&lt;p&gt;なるべく複雑にならないようにシンプルに保ちながらも、それなりの見栄えになるサンプルを目指しました。&lt;/p&gt;
+&lt;p&gt;（2023-08-14追記）サンプルコードをGitHubで公開しました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gam0022/UnityBibleR5Summer-ShaderGraphTutorial&#34;&gt;github.com/gam0022/UnityBibleR5Summer-ShaderGraphTutorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;なるべく複雑にならないようにシンプルに保ちながらも、そこそこの見栄えのするサンプルを目指しました。&lt;/p&gt;
 
 &lt;p&gt;TIPSでは「Ridirect Node」「BackboardのCategory機能」「Group Selection」「Sub Graph」など覚えておくと作業効率を向上できる機能の使い方なども紹介しました。&lt;/p&gt;
 
