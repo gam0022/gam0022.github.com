@@ -198,7 +198,7 @@ float3 stereographic(float4 p4)
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;ステレオ投影の幾何学的な理解については、3Blue1Brownの動画にとても助けられました。&lt;/p&gt;
+&lt;p&gt;4次元から3次元のステレオ投影の幾何学的な理解については、3Blue1Brownの動画にとても助けられました。&lt;/p&gt;
 
 &lt;div class=&#34;movie-wrap&#34;&gt;
 &lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/94NmanMgR9k?si=S0an_wHu7KWIyVq9&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
