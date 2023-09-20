@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme" content="hugo-academic">
+    <meta name="generator" content="Hugo 0.17" />
+    <meta name="author" content="@gam0022">
+    <meta name="description" content="ソフトウェアエンジニア / グラフィックスエンジニア">
+
+    <link rel="stylesheet" href="https://gam0022.net/css/highlight.min.css">
+    <link rel="stylesheet" href="https://gam0022.net/css/bootstrap.custom.css">
+    <link rel="stylesheet" href="https://gam0022.net/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://gam0022.net/css/academicons.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+    <link rel="stylesheet" href="https://gam0022.net/css/hugo-academic.css?2023-07-31-v2">
+    
+
+    
+    <link rel="alternate" href="https://gam0022.net/index.xml" type="application/rss+xml" title="gam0022.net">
+    <link rel="feed" href="https://gam0022.net/index.xml" type="application/rss+xml" title="gam0022.net">
+    
+    <link rel="shortcut icon" href="https://gam0022.net/img/favicon.png" type="image/png">
+    
+
+    <title>レイトレ合宿9で4次元立方体をテーマにしたアニメーションを作成しました | gam0022.net</title>
+
+    
+        <meta property="og:type" content="article">
+        <meta property="og:description" content="9月1日(金)～9月3日(日)に日蓮宗大本山清澄寺で開催されたレイトレ合宿9に参加しました。
+
+4次元空間上で回転してから、それを3次元に投影することで、内外が入れ替わるような不思議なループアニメーションをテーマにしました。
+
+開発した自作レンダラーで 5分の制限時間 でレンダリングして、こんな感じの動画を生成しました。
+
+
+
+">
+    
+
+    
+        <meta property="og:image" content="https://gam0022.net/images/posts/2023-09-19-rtcamp9/218.jpg">
+        <meta name="twitter:card" content="summary_large_image">
+    
+
+    <meta property="fb:app_id" content="413045302370371">
+    <meta property="og:title" content="レイトレ合宿9で4次元立方体をテーマにしたアニメーションを作成しました | gam0022.net">
+    <meta property="og:url" content="https://gam0022.net/blog/2023/09/20/rtcamp9/">
+
+    <meta name="twitter:site" content="@gam0022">
+
+    <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'ja'}</script>
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents">
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.7";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <script>
+    (function() {
+      var cx = '014076568914435119268:lp0lsoyv6uk';
+      var gcse = document.createElement('script');
+      gcse.type = 'text/javascript';
+      gcse.async = true;
+      gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(gcse, s);
+    })();
+  </script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TEZN6LYHVZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TEZN6LYHVZ');
+</script>
+
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+    <div class="container">
+
+        
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://gam0022.net/">gam0022.net</a>
+        </div>
+
+        
+        <div class="collapse navbar-collapse" id="#navbar-collapse-1">
+
+            
+            <ul class="nav navbar-nav navbar-left">
+                
+                <li class="nav-item"><a href="https://gam0022.net/#top"><i class='fa fa-home'></i> Home</a></li>
+                
+                <li class="nav-item"><a href="https://gam0022.net/post/"><i class='fa fa-pencil-square-o'></i> Post</a></li>
+                
+                <li class="nav-item"><a href="https://gam0022.net/works"><i class='fa fa-photo'></i> Work</a></li>
+                
+            </ul>
+
+            
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item google-search-item"><gcse:searchbox-only></gcse:searchbox-only>
+</li>
+                
+                <li class="nav-item"><a href="https://gam0022.net/webgl/#raymarching_reflect"><i class='fa fa-flask'></i> WebGL</a></li>
+                
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-9">
+            <article class="article" itemscope itemtype="http://schema.org/Article">
+
+                
+
+                <h3 class="article-title" itemprop="name">レイトレ合宿9で4次元立方体をテーマにしたアニメーションを作成しました</h3>
+                
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2023-09-20 12:00:00 &#43;0900 JST" itemprop="datePublished">2023-09-20</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/cg">CG</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%b3%e3%82%b0">レイトレーシング</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%91%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%b3%e3%82%b0">パストレーシング</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/optix">OptiX</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%9e%e3%83%bc%e3%83%81%e3%83%b3%e3%82%b0">レイマーチング</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/cuda">CUDA</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/gpu">GPU</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%88%e3%83%ac%e5%90%88%e5%ae%bf">レイトレ合宿</a>
+        
+    </span>
+    
+    
+
+    
+        
+
+<div class="share-box">
+    <div class="share_wrap">
+        <div class="share_button">
+            <a href="http://b.hatena.ne.jp/entry/https://gam0022.net/blog/2023/09/20/rtcamp9/" class="hatena-bookmark-button" data-hatena-bookmark-title="レイトレ合宿9で4次元立方体をテーマにしたアニメーションを作成しました" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+        </div>
+        <div class="share_button">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://gam0022.net/blog/2023/09/20/rtcamp9/" data-text="レイトレ合宿9で4次元立方体をテーマにしたアニメーションを作成しました" data-via="gam0022">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+        <div class="share_button">
+            <div class="g-plus" data-action="share" data-annotation="none"></div>
+        </div>
+        <div class="share_button">
+            <div class="fb-like" data-href="https://gam0022.net/blog/2023/09/20/rtcamp9/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+        </div>
+        <div class="share_button">
+          <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a><script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+        </div>
+    </div>
+</div>
+
+
+    
+
+</div>
+
+
+                <div class="article-style" itemprop="articleBody">
+                    <p>9月1日(金)～9月3日(日)に<a href="http://www.seichoji.com/">日蓮宗大本山清澄寺</a>で開催された<a href="https://sites.google.com/view/rtcamp9/home">レイトレ合宿9</a>に参加しました。</p>
+
+<p>4次元空間上で回転してから、それを3次元に投影することで、内外が入れ替わるような不思議なループアニメーションをテーマにしました。</p>
+
+<p>開発した自作レンダラーで <strong>5分の制限時間</strong> でレンダリングして、こんな感じの動画を生成しました。</p>
+
+<video playsinline="" loop="" muted="" controls="" width="100%" src="/images/posts/2023-09-19-rtcamp9/gam_crf12.mp4" poster="/images/posts/2023-09-19-rtcamp9/218.jpg"></video>
+
+<p></p>
+
+<p>長時間をかけて4K解像度でレンダリングした動画をYouTubeにアップロードしました。</p>
+
+<div class="movie-wrap">
+<iframe width="1920" height="1080" src="https://www.youtube.com/embed/ohbv8_jCQtc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<p>YouTubeの仕様の勉強も兼ねて、ループアニメーションという特性を活かした<a href="https://youtube.com/shorts/SgPbXt50Jw0?si=n_qbmh5-ouQYhrTp">YouTubeショート版</a>も作成しました。</p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;ref_src=twsrc%5Etfw">#レイトレ合宿</a> 9、4Dをテーマにして4位でした！<br><br>4次元空間上で回転し、それから3次元に投影することで、内外が入れ替わるような不思議なループアニメーションを制作しました。<br><br>OptiXで開発した自作レンダラーで300秒以内にレンダリングしました。 <a href="https://t.co/aP4w23rAYT">pic.twitter.com/aP4w23rAYT</a></p>&mdash; がむ (@gam0022) <a href="https://twitter.com/gam0022/status/1698130408406462644?ref_src=twsrc%5Etfw">September 3, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<h1 id="お寺で合宿">お寺で合宿！？</h1>
+
+<p>去年のレイトレ8は沖縄のラグジュアリーなホテルでの開催でしたが、今年は対照的に質素にお寺での開催でした。
+運営メンバー曰く、ダイナミックレンジの広さを重視しているそうです！</p>
+
+<p>去年のレポートはこちらです。</p>
+
+<ul>
+<li><a href="https://gam0022.net/blog/2022/10/17/rtcamp8/">レイトレ合宿8参加レポート | gam0022.net</a></li>
+</ul>
+
+<p>当日の詳細な様子については、<a href="https://twitter.com/Kinakomoti2357/status/1703970431546605827">@Kinakomoti2357</a>さんのレポートがとても参考になります。
+ぜひ合わせて読んでください。</p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;ref_src=twsrc%5Etfw">#レイトレ合宿</a> 9の参加レポートを書きました<a href="https://t.co/f8vi2PbrJC">https://t.co/f8vi2PbrJC</a></p>&mdash; KiNaNkomoti C102_2日目西か-03b (@Kinakomoti2357) <a href="https://twitter.com/Kinakomoti2357/status/1703970431546605827?ref_src=twsrc%5Etfw">September 19, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<h1 id="本戦の実行環境">本戦の実行環境</h1>
+
+<p>レイトレ合宿9の本戦では、AWSを利用してレンダラーを実行する必要があります。インスタンスタイプの選択肢は以下の通りです。</p>
+
+<ul>
+<li>CPUレンダラーの場合: c6i.32xlargeを2台</li>
+<li>GPUレンダラーの場合: g4dn.xlargeを2台（私はこちらを選択）</li>
+</ul>
+
+<p>今年、新たなルールとして2台のインスタンスを利用できるようになりました。</p>
+
+<p>私はフレームを半分に分割して2台のインスタンスを活用する単純な戦略にしました。
+余談ですが、片方のインスタンスで描画が失敗してもバレないようにループは2周するようにしました（笑）。</p>
+
+<p>毎年、新しい試みが取り入れられることが、この合宿の魅力の一つだと思います。</p>
+
+<h1 id="自作レンダラーの紹介">自作レンダラーの紹介</h1>
+
+<p>GPUレンダラーをOptiXで開発しました。レンダラーの名前はredflashです。</p>
+
+<p>こちらがレンダラーのプレゼン資料です。</p>
+
+<div class="google-slide-wrap">
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQbWup2egsNq-4MgXMBmQnp-M9HBHbotYQZq-C2ABcRaQNRqBFs3zgkQVWfrqCUctZlqQzskBRiAEEX/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1440" height="839" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
+
+<ul>
+<li><a href="https://speakerdeck.com/gam0022/rtcamp9">Speaker Deck版</a></li>
+</ul>
+
+<p>プレゼン資料をベースにしながら、当日話した内容などを文章として補足しながら紹介します。</p>
+
+<h2 id="アピールポイント">アピールポイント</h2>
+
+<p><img src="/images/posts/2023-09-19-rtcamp9/slide_2p.png" alt="アピールポイント" /></p>
+
+<p>アピールポイントは次の2点です。</p>
+
+<ol>
+<li>4D上の回転を3Dに投影することで、内外が入れ替わる不思議なアニメーション</li>
+<li>2023年に発表されたばかりのレイマーチングの高速化の論文を実装
+
+<ul>
+<li><a href="https://diglib.eg.org/bitstream/handle/10.2312/egs20231014/057-060.pdf?sequence=1&amp;isAllowed=y">[Bán&amp;Valasek 23] Automatic Step Size Relaxation in Sphere Tracing</a></li>
+</ul></li>
+</ol>
+
+<h2 id="基本機能">基本機能</h2>
+
+<p><img src="/images/posts/2023-09-19-rtcamp9/slide_3p.png" alt="基本機能" /></p>
+
+<p>レンダラーの基本機能です。</p>
+
+<ul>
+<li>Unidirectional Path Tracing
+
+<ul>
+<li>implemented in NVIDIA® OptiX 6.5</li>
+</ul></li>
+<li>Materials
+
+<ul>
+<li>Disney BRDF</li>
+<li>Lambert Diffuse</li>
+</ul></li>
+<li>NEE（Next Event Estimation）</li>
+<li>MIS（Multiple Importance Sampling）</li>
+<li>Primitives
+
+<ul>
+<li>Sphere</li>
+<li>Mesh</li>
+<li>Distance Function (Raymarching)</li>
+</ul></li>
+<li>ACES Filmic Tone Mapping</li>
+<li>Deep Learning Denoising</li>
+</ul>
+
+<p>シンプルな単方向のパストレーシングで、NEEやMISサンプリングの効率化をしています。</p>
+
+<p>OptiXのカスタムなプリミティブの衝突判定としてレイマーチングを実装し、距離関数によるプリミティブもサポートしています。
+詳しくは過去の記事を参考にしてください。</p>
+
+<ul>
+<li><a href="https://gam0022.net/blog/2019/08/05/optix-raymarching-pathtracing/">NVIDIA® OptiX上で『レイマーチング×パストレーシング』による物理ベースレンダラーを実装した | gam0022.net</a></li>
+</ul>
+
+<p>余談ですが、昨今のレイトレ合宿では1フレームに使える時間が減っているのため、単方向のパストレーシングが多い印象でした。</p>
+
+<h2 id="レンダラーの出力設定">レンダラーの出力設定</h2>
+
+<p><img src="/images/posts/2023-09-19-rtcamp9/slide_4p.png" alt="レンダラーの出力設定" /></p>
+
+<p>レンダラーの出力設定について、解像度はフルHD（1920x1080）、長さはレギュレーション上の最大の10秒にしました。</p>
+
+<p>30FPSで10秒なので、合計300フレームを描画しました。</p>
+
+<p>制限時間が300秒（5分）なので、1フレームあたりに使える時間は1秒とかなり短めでしたが、ほとんどノイズが出ない綺麗な結果にできました。</p>
+
+<h2 id="超立方体-4次元上の回転">超立方体（4次元上の回転）</h2>
+
+<p>レイトレ合宿で何を作ろうと考えた時、動画の最大の長さが10秒だったので、ループ可能なアニメーションが良さそうだと思いました。</p>
+
+<p>ふと、TokyoDemoFest2021のShowdown準決勝で<a href="https://twitter.com/sp4ghet">sp4ghet</a>さんが<a href="https://www.shadertoy.com/view/stcSDM">表裏が裏返るようなアニメーション</a>を作っていたのを思い出して、自分でもやってみました。</p>
+
+<p><img src="/images/posts/2023-09-19-rtcamp9/slide_5p.png" alt="超立方体" /></p>
+
+<p>超立方体とは4次元空間上の立方体です。</p>
+
+<ul>
+<li><a href="https://zellij.hatenablog.com/entry/20121201/p1">4次元の立方体の理解 - 大人になってからの再学習</a></li>
+</ul>
+
+<p>4次元の回転を3次元から観測すると、内側と外側がグルグルと入れ替わるようなおもしろいアニメーションになります。</p>
+
+<p><img src="/images/posts/2023-09-19-rtcamp9/Tesseract.gif" alt="Tesseract" /></p>
+
+<p>このアニメーションは<a href="https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:8-cell-simple.gif">Wikipedia</a>から引用しました。</p>
+
+<p><img src="/images/posts/2023-09-19-rtcamp9/slide_7p.png" alt="描画の流れ" /></p>
+
+<p>具体的な実装としては、距離関数に与える座標をうまく加工しているだけです。</p>
+
+<ul>
+<li>3次元座標を4次元に変換（逆ステレオ投影）</li>
+<li>4次元空間上で回転</li>
+<li>4次元座標を3次元に変換（ステレオ投影）</li>
+<li>3次元空間上で描画</li>
+</ul>
+
+<p>以下は、ステレオ投影をCUDA C言語で実装したものになります。</p>
+
+<pre><code class="language-cpp">// 3次元座標を4次元に変換（逆ステレオ投影）
+float4 inverseStereographic(float3 p)
+{
+    float k = 2.0 / (1.0 + dot(p, p));
+    return make_float4(k * p, k - 1.0);
+}
+
+// 4次元座標を3次元に変換（ステレオ投影）
+float3 stereographic(float4 p4)
+{
+    float k = 1.0 / (1.0 + p4.w);
+    return k * make_float3(p4.x, p4.y, p4.z);
+}
+</code></pre>
+
+<p>ステレオ投影の幾何学的な理解については、3Blue1Brownの動画にとても助けられました。</p>
+
+<div class="movie-wrap">
+<iframe width="1920" height="1080" src="https://www.youtube.com/embed/94NmanMgR9k?si=S0an_wHu7KWIyVq9" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<p><img src="/images/posts/2023-09-19-rtcamp9/slide_9p.png" alt="シーン構成" /></p>
+
+<p>MengerSpongeと呼ばれる有名なフラクタルをベースにしました。外側と内側は2種類のMengerSpongeから構成されます。</p>
+
+<p>外側と内側で対照的なマテリアルに設定していて、外側は複雑な金属感、内側はシンプルなサイバー感をイメージしました。</p>
+
+<p>アニメーションの途中で部屋を暗くしていますが、サイバー感のあるマテリアルが光ってかっこよくなるように調整を試行錯誤しました。</p>
+
+<p><img src="/images/posts/2023-09-19-rtcamp9/slide_11p.png" alt="モデリングの試行錯誤" /></p>
+
+<p>モデリングはUnity上で行ってパラメーター調整してから、後からCUDAに移植するアプローチをとりました。</p>
+
+<p>パラメーター調整はUnity上の方が作業しやすいからです。</p>
+
+<h2 id="レイマーチングの高速化">レイマーチングの高速化</h2>
+
+<p><img src="/images/posts/2023-09-19-rtcamp9/slide_12p.png" alt="レイマーチング（Sphere Tracing）の高速化の研究" /></p>
+
+<p>レイマーチングの高速化の論文を3つを調査しました。</p>
+
+<ol>
+<li><a href="https://diglib.eg.org/handle/10.2312/stag.20141233.001-008">[Keinert et al. 14] Enhanced Sphere Tracing</a>
+
+<ul>
+<li>@Hirai0827さんによる<a href="https://qiita.com/Hirai0827/items/eddcb73a1976c3088b88">日本語解説</a></li>
+</ul></li>
+<li><a href="https://diglib.eg.org/bitstream/handle/10.2312/egs20181037/029-032.pdf">[Bán&amp;Valasek 18] Accelerating Sphere Tracing</a>
+
+<ul>
+<li>@Hirai0827さんによる<a href="https://qiita.com/Hirai0827/items/e05e13f343357d648b1b">日本語解説</a></li>
+</ul></li>
+<li><a href="https://diglib.eg.org/bitstream/handle/10.2312/egs20231014/057-060.pdf?sequence=1&amp;isAllowed=y">[Bán&amp;Valasek 23] Automatic Step Size Relaxation in Sphere Tracing</a></li>
+</ol>
+
+<p>この3つの手法の基本的な考え方はどれも共通していて、通常より大きくレイを進めて、進み過ぎたら引き返すというシンプルなものです。</p>
+
+<h3 id="keinert-et-al-14-enhanced-sphere-tracing">[Keinert et al. 14] Enhanced Sphere Tracing</h3>
+
+<p><img src="/images/posts/2023-09-19-rtcamp9/slide_13p.png" alt="[Keinert et al. 14] Enhanced Sphere Tracing" /></p>
+
+<p>[Keinert et al. 14] では、レイのステップを $\omega \in[1,2)$ 倍して通常より大きくレイを進めます。</p>
+
+<p><code>ω</code> が小さいと効果が薄れてしまい、 <code>ω</code> が大きすぎると引き返しが発生して効率が悪くなります。</p>
+
+<p>そのため、適切な <code>ω</code> はシーンの形状に応じて手動で調整する必要があります。</p>
+
+<p>その他、この論文では「スクリーンスペースを考慮した交差点の選択」「自己交差を防ぐためのεの動的設定」「非連続性の緩和」「凸形状物質における最適化」にも触れられていますが、今回は割愛します。</p>
+
+<h3 id="bán-valasek-18-accelerating-sphere-tracing">[Bán&amp;Valasek 18] Accelerating Sphere Tracing</h3>
+
+<p><img src="/images/posts/2023-09-19-rtcamp9/slide_14p.png" alt="[Bán&amp;Valasek 18] Accelerating Sphere Tracing" /></p>
+
+<p>[Bán&amp;Valasek 18] は [Keinert et al. 14] の改良版で、レイを大きく進めるステップを定数ではなく状況に応じて計算します。</p>
+
+<p>具体的にはシーンの形状を平面に仮定して次のステップを予測します。</p>
+
+<ul>
+<li>マーチングループの現在のステップSphere（半径 $r_n$ ）</li>
+<li>そのSphereに接する平面</li>
+</ul>
+
+<p>上の2つにぴったり接する次のステップのSphere（半径 $r_{n+1}$）を決定し、ステップ $d_{n+1}$ を求めます。</p>
+
+<p>さらに、シーンが平面でないカーブした面を考慮して、ωで調整できるようにします。</p>
+
+<p>$$
+d_{n+1} = r_n + \omega r_{n+1}, \omega \in(0,1)
+$$</p>
+
+<h3 id="bán-valasek-23-automatic-step-size-relaxation-in-sphere-tracing">[Bán&amp;Valasek 23] Automatic Step Size Relaxation in Sphere Tracing</h3>
+
+<p><img src="/images/posts/2023-09-19-rtcamp9/slide_15p.png" alt="[Bán&amp;Valasek 23] Automatic Step Size Relaxation in Sphere Tracing" /></p>
+
+<p>[Bán&amp;Valasek 23] は [Bán&amp;Valasek 18] と同じ著者による研究で、平面を仮定する基本的なアプローチはそのままに <code>ω</code> を自動調整するようにさらに改良したものです。</p>
+
+<ul>
+<li>引き返しが起きない状態が続けばωを大きく
+
+<ul>
+<li>どのくらい大きくするかは $\beta \in(0,1)$ で調整</li>
+</ul></li>
+<li>引き返しが発生したらωをリセット</li>
+</ul>
+
+<p>前の2つの手法より良いか同等の結果となっていました。基本アプローチは同じでパラメーター調整の工夫なので、納得できる結果です。</p>
+
+<h4 id="bán-valasek-23-の結果">[Bán&amp;Valasek 23] の結果</h4>
+
+<p><img src="/images/posts/2023-09-19-rtcamp9/slide_16p.png" alt="[Bán&amp;Valasek 23] Automatic Step Size Relaxation in Sphere Tracingの結果" /></p>
+
+<p>今回の提出シーンを使って、同じサンプリング数のレンダリング時間を計測したところ、約1.9倍ほど高速化しました（β=0.2）。</p>
+
+<p>ここまで効果があるとは正直驚きでした。</p>
+
+<p><img src="/images/posts/2023-09-19-rtcamp9/slide_17p.png" alt="[Bán&amp;Valasek 23] Automatic Step Size Relaxation in Sphere Tracingの結果 時間ごと" /></p>
+
+<p>時系列で見ていくと、歪みの少ないシーンほど効果が高く、歪みの大きいシーンは効果が少し下がるようでした。</p>
+
+<p>この理由はシーンの形状に平面を仮定しているのが関係ありそうな気がしました。</p>
+
+<p><img src="/images/posts/2023-09-19-rtcamp9/slide_18p.png" alt="[Bán&amp;Valasek 23] Automatic Step Size Relaxation in Sphere Tracingの結果 Mandelbox" /></p>
+
+<p>一方で去年のレイトレ合宿8のシーンで試したところ、むしろ性能が半分ほどに大きく劣化してしまいました。</p>
+
+<p>Mandelboxというフラクタルのシーンだったのですが、平面が少なく、曲面で構成されるのが原因かもしれません。</p>
+
+<p>まとめると、以下のような傾向がありそうでした。</p>
+
+<ul>
+<li>MengerSpongeのように平面から構成されるフラクタルとは相性が良い</li>
+<li>Mandelboxのように曲面から構成されるフラクタルとは相性が悪い</li>
+</ul>
+
+<p>色んなシーンで検証したわけではないので、あくまで予想ですが、なんとなく納得はできる結果になりました。</p>
+
+<h1 id="セミナーの発表資料">セミナーの発表資料</h1>
+
+<p>45分枠をいただたので、2つのテーマ（20分＋25分）で発表しました。</p>
+
+<h2 id="object-space-raymarching-in-unreal-engine-5-2">Object Space Raymarching in Unreal Engine 5.2</h2>
+
+<p>レイトレ合宿アドベントカレンダーと同じ内容です。</p>
+
+<ul>
+<li><a href="https://gam0022.net/blog/2023/07/31/raymarching-in-ue5/">Object Space Raymarching in Unreal Engine 5.2 | gam0022.net</a></li>
+</ul>
+
+<p>Unreal Engine 5.2上でオブジェクトスペースのレイマーチングを実装したので、その解説をします。</p>
+
+<p>レイマーチングをノードだけで実装するのは大変なので、MaterialのCustomノードを用いて複雑な処理はHLSLのコードで実装しました。</p>
+
+<div class="google-slide-wrap">
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQfE3NIpPR3jQ-YISM7paRmMD4Z7-onSKdKK4RGXd8A9K36Wguj9S7zXyo_XCsNB-aFT22gxFyr7Z-c/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1440" height="839" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
+
+<ul>
+<li><a href="https://speakerdeck.com/gam0022/raymarching-in-ue5">Speaker Deck版</a></li>
+</ul>
+
+<h2 id="ifsによるフラクタルのモデリング">IFSによるフラクタルのモデリング</h2>
+
+<p>今回の合宿でも利用したMengerSpongeなどのフラクタルはIFS（Iterated Function System）と呼ばれる手法で距離関数を実装しています。</p>
+
+<p>そのIFSについて、現実世界の実例（万華鏡や絞り染め）を用いて説明しました。</p>
+
+<div class="google-slide-wrap">
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTeqnJbtD5u15mXPjgFqQJW854Tr24C-8Ie-EQXme_XxQBbnqTsGBFEO6mvNqpptoxOqdhLyKhjIdcF/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1440" height="839" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
+
+<ul>
+<li><a href="https://speakerdeck.com/gam0022/ifs-fractal">Speaker Deck版</a></li>
+</ul>
+
+<h1 id="オススメのセミナー資料">オススメのセミナー資料</h1>
+
+<p>どのセミナーもとても参考になる興味深い内容だったのですが、個人的に印象に残ったセミナーの資料を紹介します。</p>
+
+<h2 id="現代のgpuの実行スタイルとレイトレ-2023-by-shocker-0x15">現代のGPUの実行スタイルとレイトレ (2023) by @Shocker_0x15</h2>
+
+<p>参加者投票によってベストプレゼンター賞にも輝いた <a href="https://twitter.com/Shocker_0x15">@Shocker_0x15</a> さんによる「現代のGPUの実行スタイルとレイトレ (2023)」です。</p>
+
+<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/3183d0c88c5f4de39daaeb464a2690c9" title="現代のGPUの実行スタイルとレイトレ (2023)" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777"></iframe>
+
+<p>「シェーダーではifが重い」という話はよく耳にしますが、これには古い情報や誤解が混ざっていることがあり、現代のGPUにおいては必ずしも正しいとは言えません。</p>
+
+<p>現代のGPUにおいて、if文が性能にどのように影響するかを理解するためには、実行ダイバージェンスの観点からアプローチすることが重要です。
+また、現代のGPUにおける命令実行戦略、データダイバージェンス、キャッシュとメモリの速度の違い、Occupancy（GPUのリソース利用率）、そしてレイトレーシングにおけるダイバージェンスの問題など、さまざまな要因が影響を与えます。</p>
+
+<p>残念ながら、このようなトピックに関するまとまった日本語の資料は少ないため、この発表は非常に貴重なものでした。
+シェーダーを扱う開発者は一度は目を通しておきたい発表でした！</p>
+
+<h2 id="0-0-1-0-の乱数を得るための-本当の-方法-by-h013">[0.0, 1.0) の乱数を得るための“本当の”方法 by @h013</h2>
+
+<p><a href="https://twitter.com/h013">@h013</a>さんによる「[0.0, 1.0) の乱数を得るための“本当の”方法」です。</p>
+
+<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/b000ac1dfa2d479d83756b0267d3f992" title="[0.0, 1.0) の乱数を得るための“本当の”方法" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777"></iframe>
+
+<p><code>[0.0, 1.0)</code> のfloatの乱数を生成する方法は自明ではなく、ほとんどのC++標準ライブラリーの <code>std::generate_canonical</code> 実装では <code>[0.0, 1.0)</code> が保証されていないというのは驚きでした。</p>
+
+<p><code>[0.0, 1.0)</code> が保証される方法もパフォーマンス上の問題があったり、最適化の方法がさまざまに考案されていたり、こんなに乱数って奥が深かったんだと思いました。</p>
+
+<p>これまで乱数について深く考えたことはなかったのですが、貴重な気づきが得られる発表でした。</p>
+
+<h2 id="volume-expression-ggx-microfacet-by-kinakomoti2357">Volume Expression GGX(Microfacet) by @Kinakomoti2357</h2>
+
+<p><a href="https://twitter.com/Kinakomoti2357">@Kinakomoti2357</a>さんによる「Volume Expression GGX(Microfacet)」です。</p>
+
+<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/d1ad5e65246047a4a6f87c7a8dbe398f" title="Volume Expression GGX(Microfacet)" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777"></iframe>
+
+<p>きなこもちさんは<a href="https://booth.pm/ja/items/5004949">GGXは何処から来たのか</a>という本を書いた方で、導入のMicrofacet BRDFの説明が分かりやすかったです。
+レイトレを始めたばかりの人にもオススメできる内容でした。</p>
+
+<p>個人的にMultiple-Scatteringの扱いについて気になっていたところだったので参考になりました。</p>
+
+<p>本題のGGXのVolumeについても興味深い話だと思いました。</p>
+
+<h1 id="マテリアル神経衰弱">マテリアル神経衰弱</h1>
+
+<p>当日のレクリエーションとしてマテリアル神経衰弱が開催されました。</p>
+
+<p>カード216枚もあり、ほとんど同じようなカードが多数存在するため、悪意を感じるような難易度の高さでした。</p>
+
+<p>たとえば、同じ色でもplasticやphenolicなどの材質にバリエーションがあり、ほとんど同じにしか見えないが違うカードが多数ありました。</p>
+
+<p>その難易度にもかかわらず、優勝チームはなんと3ペアを引き当てていました。すごすぎる…！</p>
+
+<p>なお、カードはレイトレ合宿のためだけの特注品だそうです！</p>
+
+<p>レクリエーションの内容は直前まで秘密にされていたため、合宿参加者は「一体何が起きるんだろう？」という気持ちで臨むことになりました。</p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">マテリアル神経衰弱をしました <a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;ref_src=twsrc%5Etfw">#レイトレ合宿</a> <a href="https://t.co/j4KSiKpGfR">pic.twitter.com/j4KSiKpGfR</a></p>&mdash; hole (@h013) <a href="https://twitter.com/h013/status/1697830574294249798?ref_src=twsrc%5Etfw">September 2, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">マテリアル神経衰弱<br>どれも同じにしか見えない🤯<br> <a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;ref_src=twsrc%5Etfw">#レイトレ合宿</a> <a href="https://t.co/DWP1CbosWD">pic.twitter.com/DWP1CbosWD</a></p>&mdash; がむ (@gam0022) <a href="https://twitter.com/gam0022/status/1697832084034003167?ref_src=twsrc%5Etfw">September 2, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">部屋対抗マテリアル神経衰弱、優勝！！景品はマテリアルトランプ🃏 <a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;ref_src=twsrc%5Etfw">#レイトレ合宿</a> <a href="https://t.co/LyNN733b9B">pic.twitter.com/LyNN733b9B</a></p>&mdash; Nishiki (@yknishidate) <a href="https://twitter.com/yknishidate/status/1697924033504026778?ref_src=twsrc%5Etfw">September 2, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;ref_src=twsrc%5Etfw">#レイトレ合宿</a> 9終了！今年から運営側でしたが変わらず楽しかったです。皆さまありがとうございました！<br>セミナーではベストに選んで頂きましたが、肝心の本戦に出せなかったので来年はリベンジ。<br><br>写真はレクリエーション用に作ったMERL BRDFトランプによるハードコア神経衰弱 <a href="https://t.co/FMioEzeoyp">pic.twitter.com/FMioEzeoyp</a></p>&mdash; Shocker (@Shocker_0x15) <a href="https://twitter.com/Shocker_0x15/status/1698268528355553623?ref_src=twsrc%5Etfw">September 3, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<h1 id="感想">感想</h1>
+
+<p>本戦は色々なアプローチに挑戦されている方が多く、多様性がありました。
+1位のうしおさんはボクセル、2位のholeさんはボリュームなど、計算時間的に難易度な高そうなテーマを扱いながら、ノイズがまったく分からない結果だったので印象的でした。</p>
+
+<p>去年に引き続き、セミナーは参加者全員で発表しました。参加者のバックグラウンドもさまざまだったので、いろんな分野の興味深い話や深い話を聞くことができて楽しかったです。</p>
+
+<p>Yoshi&rsquo;s Dreannさんの<a href="https://speakerdeck.com/runningoutrate/reitorehe-su-9seminazi-liao-svgfnituite">SVGF</a>やうでメガネさんの<a href="https://www.docswell.com/s/udemegane/5247P4-2023-09-06-185245">ReSTIR PT</a>など、気になってはいるものの、なかなか手を出せていない手法も発表も多く、自分も頑張らねばとなりました。</p>
+
+<p>さまざまなグラフィックスAPIにおけるレイトレの話もありました。kugiさんの<a href="https://speakerdeck.com/kugimasa/webgpunihong-retemita">WebGPU</a>、Nishikiさんの<a href="https://github.com/yknishidate/rtcamp9/blob/main/Vulkan%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E3%81%AE%E3%81%AF%E3%81%AA%E3%81%97.pdf">Vulkan</a>、Pentanさんの<a href="https://github.com/Pentan/RaytracingCamp2019-23/blob/master/etc/2023/slides/seminar_slide.pdf">Metal</a>などです。</p>
+
+<p>今年は新規の参加者も多かったので、色んな人とお話できるよい機会に恵まれました。</p>
+
+<p>レイトレ合宿の運営の方々、その他の参加者のみなさん、本当にありがとうございました！</p>
+
+<h1 id="写真コーナー">写真コーナー</h1>
+
+<p>レイトレ合宿史上初の寺での開催でした。開催地を聞かされた時、お寺で合宿が可能なんだ…という驚きが強かったです。</p>
+
+<p>最終日は朝4時からお勤めあったり、3食とも精進料理だったりと、生活リズムが健康的になりました。いい経験になりました。</p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">お寺の朝は早い <a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;ref_src=twsrc%5Etfw">#レイトレ合宿</a> <a href="https://t.co/jR0ZLg2wmR">pic.twitter.com/jR0ZLg2wmR</a></p>&mdash; がむ (@gam0022) <a href="https://twitter.com/gam0022/status/1697707181465100455?ref_src=twsrc%5Etfw">September 1, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">朝食🍱 <a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;ref_src=twsrc%5Etfw">#レイトレ合宿</a> <a href="https://t.co/y6EHL5ug4e">pic.twitter.com/y6EHL5ug4e</a></p>&mdash; がむ (@gam0022) <a href="https://twitter.com/gam0022/status/1697737461554962700?ref_src=twsrc%5Etfw">September 1, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">お昼は蕎麦🍜 <a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;ref_src=twsrc%5Etfw">#レイトレ合宿</a> <a href="https://t.co/7punHumnK8">pic.twitter.com/7punHumnK8</a></p>&mdash; がむ (@gam0022) <a href="https://twitter.com/gam0022/status/1697813390520139958?ref_src=twsrc%5Etfw">September 2, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">夜ご飯🍱 <a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;ref_src=twsrc%5Etfw">#レイトレ合宿</a> <a href="https://t.co/RqQxodezxn">pic.twitter.com/RqQxodezxn</a></p>&mdash; がむ (@gam0022) <a href="https://twitter.com/gam0022/status/1697967291919683822?ref_src=twsrc%5Etfw">September 2, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p>日の出もとても綺麗でした🌅</p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">放射状のライトシャフトすごい🌅 <a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;ref_src=twsrc%5Etfw">#レイトレ合宿</a> <a href="https://t.co/GnmDCd9N8Q">pic.twitter.com/GnmDCd9N8Q</a></p>&mdash; がむ (@gam0022) <a href="https://twitter.com/gam0022/status/1698063763306652078?ref_src=twsrc%5Etfw">September 2, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">日の出🌅 <a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;ref_src=twsrc%5Etfw">#レイトレ合宿</a> <a href="https://t.co/EoIqfssRRf">pic.twitter.com/EoIqfssRRf</a></p>&mdash; がむ (@gam0022) <a href="https://twitter.com/gam0022/status/1698071301800526108?ref_src=twsrc%5Etfw">September 2, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p>フリータイム中に境内を散歩したときの写真たちです。</p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">お寺⛩️で <a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;ref_src=twsrc%5Etfw">#レイトレ合宿</a> <a href="https://t.co/vGSi0BcIBn">pic.twitter.com/vGSi0BcIBn</a></p>&mdash; がむ (@gam0022) <a href="https://twitter.com/gam0022/status/1697463738268520496?ref_src=twsrc%5Etfw">September 1, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">巨大な杉🌲 <a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;ref_src=twsrc%5Etfw">#レイトレ合宿</a> <a href="https://t.co/ljckfAnzUM">pic.twitter.com/ljckfAnzUM</a></p>&mdash; がむ (@gam0022) <a href="https://twitter.com/gam0022/status/1697745934405505036?ref_src=twsrc%5Etfw">September 1, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p><blockquote class="twitter-tweet"><p lang="qme" dir="ltr"><a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;ref_src=twsrc%5Etfw">#レイトレ合宿</a> <a href="https://t.co/oCVmNCFvC2">pic.twitter.com/oCVmNCFvC2</a></p>&mdash; がむ (@gam0022) <a href="https://twitter.com/gam0022/status/1697749270676529499?ref_src=twsrc%5Etfw">September 1, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">海が見える <a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;ref_src=twsrc%5Etfw">#レイトレ合宿</a> <a href="https://t.co/v9skl7fZnx">pic.twitter.com/v9skl7fZnx</a></p>&mdash; がむ (@gam0022) <a href="https://twitter.com/gam0022/status/1697749447936233824?ref_src=twsrc%5Etfw">September 1, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">マテリアルとフォントが特徴的 <a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;ref_src=twsrc%5Etfw">#レイトレ合宿</a> <a href="https://t.co/ldQbjAjGkz">pic.twitter.com/ldQbjAjGkz</a></p>&mdash; がむ (@gam0022) <a href="https://twitter.com/gam0022/status/1697756752744481206?ref_src=twsrc%5Etfw">September 1, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p><blockquote class="twitter-tweet"><p lang="qme" dir="ltr">⛩️ <a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;ref_src=twsrc%5Etfw">#レイトレ合宿</a> <a href="https://t.co/tGxQ04mL2A">pic.twitter.com/tGxQ04mL2A</a></p>&mdash; がむ (@gam0022) <a href="https://twitter.com/gam0022/status/1697760465529786856?ref_src=twsrc%5Etfw">September 1, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">瞑想で精神統一🧘 <a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;ref_src=twsrc%5Etfw">#レイトレ合宿</a> <a href="https://t.co/1wLEOw6GL1">pic.twitter.com/1wLEOw6GL1</a></p>&mdash; がむ (@gam0022) <a href="https://twitter.com/gam0022/status/1697776870610407885?ref_src=twsrc%5Etfw">September 2, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">神社Now <a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;ref_src=twsrc%5Etfw">#レイトレ合宿</a> <a href="https://t.co/TLUKeayQCB">pic.twitter.com/TLUKeayQCB</a></p>&mdash; がむ (@gam0022) <a href="https://twitter.com/gam0022/status/1698080450391191682?ref_src=twsrc%5Etfw">September 2, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">見納めです🙏 <a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;ref_src=twsrc%5Etfw">#レイトレ合宿</a> <a href="https://t.co/Bjin2IOgLG">pic.twitter.com/Bjin2IOgLG</a></p>&mdash; がむ (@gam0022) <a href="https://twitter.com/gam0022/status/1698139360858927237?ref_src=twsrc%5Etfw">September 3, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+                </div>
+
+            </article>
+
+            
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2023-09-20 12:00:00 &#43;0900 JST" itemprop="datePublished">2023-09-20</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/cg">CG</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%b3%e3%82%b0">レイトレーシング</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%91%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%b3%e3%82%b0">パストレーシング</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/optix">OptiX</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%9e%e3%83%bc%e3%83%81%e3%83%b3%e3%82%b0">レイマーチング</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/cuda">CUDA</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/gpu">GPU</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%88%e3%83%ac%e5%90%88%e5%ae%bf">レイトレ合宿</a>
+        
+    </span>
+    
+    
+
+    
+        
+
+<div class="share-box">
+    <div class="share_wrap">
+        <div class="share_button">
+            <a href="http://b.hatena.ne.jp/entry/https://gam0022.net/blog/2023/09/20/rtcamp9/" class="hatena-bookmark-button" data-hatena-bookmark-title="レイトレ合宿9で4次元立方体をテーマにしたアニメーションを作成しました" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+        </div>
+        <div class="share_button">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://gam0022.net/blog/2023/09/20/rtcamp9/" data-text="レイトレ合宿9で4次元立方体をテーマにしたアニメーションを作成しました" data-via="gam0022">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+        <div class="share_button">
+            <div class="g-plus" data-action="share" data-annotation="none"></div>
+        </div>
+        <div class="share_button">
+            <div class="fb-like" data-href="https://gam0022.net/blog/2023/09/20/rtcamp9/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+        </div>
+        <div class="share_button">
+          <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a><script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+        </div>
+    </div>
+</div>
+
+
+    
+
+</div>
+
+            <nav>
+    <ul class="pager">
+        
+        <li class="previous"><a href="https://gam0022.net/blog/2023/08/07/unity-bible/"><span aria-hidden="true">&larr;</span> 『Unityバイブル R5夏号』の「Shader Graphの基本操作から発展的なテクニックまで」を執筆しました</a></li>
+        
+
+        
+    </ul>
+</nav>
+
+            
+<section id="comments">
+    <div id="disqus_thread">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'gam0022-net';
+    var disqus_identifier = 'https:\/\/gam0022.net\/blog\/2023\/09\/20\/rtcamp9\/';
+    var disqus_title = 'レイトレ合宿9で4次元立方体をテーマにしたアニメーションを作成しました';
+    var disqus_url = 'https:\/\/gam0022.net\/blog\/2023\/09\/20\/rtcamp9\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+</section>
+
+
+            <div class="row">
+    <h4 class="blog-title"><img src="/img/gam0022_splash.png" class="icon"> gam0022.net's Tag Cloud</h4>
+    <ul class="category-list">
+    <div class="widget tagcloud">
+        
+        <a href="https://gam0022.net/tags/1%e9%80%b1%e9%96%93%e3%81%a7%e9%96%93%e3%81%ab%e5%90%88%e3%82%8f%e3%81%9b%e3%82%8b" style="font-size: 12px;">1週間で間に合わせる(1)</a>
+        
+        <a href="https://gam0022.net/tags/apache" style="font-size: 12px;">apache(1)</a>
+        
+        <a href="https://gam0022.net/tags/ascii" style="font-size: 12px;">ascii(1)</a>
+        
+        <a href="https://gam0022.net/tags/bootstrap" style="font-size: 12px;">bootstrap(2)</a>
+        
+        <a href="https://gam0022.net/tags/c" style="font-size: 12px;">c#(1)</a>
+        
+        <a href="https://gam0022.net/tags/c&#43;&#43;" style="font-size: 12px;">c&#43;&#43;(1)</a>
+        
+        <a href="https://gam0022.net/tags/canvas" style="font-size: 12px;">canvas(1)</a>
+        
+        <a href="https://gam0022.net/tags/cg" style="font-size: 12px;">cg(34)</a>
+        
+        <a href="https://gam0022.net/tags/cgi" style="font-size: 12px;">cgi(2)</a>
+        
+        <a href="https://gam0022.net/tags/chrome" style="font-size: 12px;">chrome(1)</a>
+        
+        <a href="https://gam0022.net/tags/cocot" style="font-size: 12px;">cocot(1)</a>
+        
+        <a href="https://gam0022.net/tags/coffeescript" style="font-size: 12px;">coffeescript(1)</a>
+        
+        <a href="https://gam0022.net/tags/coins" style="font-size: 12px;">coins(3)</a>
+        
+        <a href="https://gam0022.net/tags/cojt" style="font-size: 12px;">cojt(4)</a>
+        
+        <a href="https://gam0022.net/tags/conoha" style="font-size: 12px;">conoha(2)</a>
+        
+        <a href="https://gam0022.net/tags/contest" style="font-size: 12px;">contest(1)</a>
+        
+        <a href="https://gam0022.net/tags/css" style="font-size: 12px;">css(1)</a>
+        
+        <a href="https://gam0022.net/tags/cuda" style="font-size: 12px;">cuda(5)</a>
+        
+        <a href="https://gam0022.net/tags/daigoroubot" style="font-size: 12px;">daigoroubot(1)</a>
+        
+        <a href="https://gam0022.net/tags/demo" style="font-size: 12px;">demo(1)</a>
+        
+        <a href="https://gam0022.net/tags/develop" style="font-size: 12px;">develop(1)</a>
+        
+        <a href="https://gam0022.net/tags/diary" style="font-size: 12px;">diary(5)</a>
+        
+        <a href="https://gam0022.net/tags/eclipse" style="font-size: 12px;">eclipse(3)</a>
+        
+        <a href="https://gam0022.net/tags/emscripten" style="font-size: 12px;">emscripten(1)</a>
+        
+        <a href="https://gam0022.net/tags/encoding" style="font-size: 12px;">encoding(1)</a>
+        
+        <a href="https://gam0022.net/tags/event" style="font-size: 12px;">event(22)</a>
+        
+        <a href="https://gam0022.net/tags/fp%e8%a9%a6%e9%a8%93" style="font-size: 12px;">fp試験(1)</a>
+        
+        <a href="https://gam0022.net/tags/gcc" style="font-size: 12px;">gcc(1)</a>
+        
+        <a href="https://gam0022.net/tags/gem" style="font-size: 12px;">gem(3)</a>
+        
+        <a href="https://gam0022.net/tags/git" style="font-size: 12px;">git(2)</a>
+        
+        <a href="https://gam0022.net/tags/github" style="font-size: 12px;">github(2)</a>
+        
+        <a href="https://gam0022.net/tags/glsl" style="font-size: 12px;">glsl(13)</a>
+        
+        <a href="https://gam0022.net/tags/glsl-snadbox" style="font-size: 12px;">glsl-snadbox(1)</a>
+        
+        <a href="https://gam0022.net/tags/gnuplot" style="font-size: 12px;">gnuplot(1)</a>
+        
+        <a href="https://gam0022.net/tags/gpu" style="font-size: 12px;">gpu(5)</a>
+        
+        <a href="https://gam0022.net/tags/heroku" style="font-size: 12px;">heroku(1)</a>
+        
+        <a href="https://gam0022.net/tags/hlsl" style="font-size: 12px;">hlsl(1)</a>
+        
+        <a href="https://gam0022.net/tags/homebrew" style="font-size: 12px;">homebrew(2)</a>
+        
+        <a href="https://gam0022.net/tags/houdini" style="font-size: 12px;">houdini(2)</a>
+        
+        <a href="https://gam0022.net/tags/hsp" style="font-size: 12px;">hsp(1)</a>
+        
+        <a href="https://gam0022.net/tags/html5" style="font-size: 12px;">html5(2)</a>
+        
+        <a href="https://gam0022.net/tags/http2" style="font-size: 12px;">http2(1)</a>
+        
+        <a href="https://gam0022.net/tags/https" style="font-size: 12px;">https(1)</a>
+        
+        <a href="https://gam0022.net/tags/hugo" style="font-size: 12px;">hugo(2)</a>
+        
+        <a href="https://gam0022.net/tags/isucon" style="font-size: 12px;">isucon(2)</a>
+        
+        <a href="https://gam0022.net/tags/iterm2" style="font-size: 12px;">iterm2(1)</a>
+        
+        <a href="https://gam0022.net/tags/java" style="font-size: 12px;">java(2)</a>
+        
+        <a href="https://gam0022.net/tags/javascript" style="font-size: 12px;">javascript(8)</a>
+        
+        <a href="https://gam0022.net/tags/keynote" style="font-size: 12px;">keynote(1)</a>
+        
+        <a href="https://gam0022.net/tags/kodelife" style="font-size: 12px;">kodelife(1)</a>
+        
+        <a href="https://gam0022.net/tags/korg-nanokontrol2" style="font-size: 12px;">korg-nanokontrol2(1)</a>
+        
+        <a href="https://gam0022.net/tags/kramdown" style="font-size: 12px;">kramdown(1)</a>
+        
+        <a href="https://gam0022.net/tags/latex" style="font-size: 12px;">latex(3)</a>
+        
+        <a href="https://gam0022.net/tags/lion" style="font-size: 12px;">lion(3)</a>
+        
+        <a href="https://gam0022.net/tags/llvm-gcc" style="font-size: 12px;">llvm-gcc(1)</a>
+        
+        <a href="https://gam0022.net/tags/mac-os-x" style="font-size: 12px;">mac-os-x(18)</a>
+        
+        <a href="https://gam0022.net/tags/markdown" style="font-size: 12px;">markdown(2)</a>
+        
+        <a href="https://gam0022.net/tags/mecab" style="font-size: 12px;">mecab(1)</a>
+        
+        <a href="https://gam0022.net/tags/mountain-lion" style="font-size: 12px;">mountain-lion(1)</a>
+        
+        <a href="https://gam0022.net/tags/moutain-lion" style="font-size: 12px;">moutain-lion(1)</a>
+        
+        <a href="https://gam0022.net/tags/neort" style="font-size: 12px;">neort(1)</a>
+        
+        <a href="https://gam0022.net/tags/nginx" style="font-size: 12px;">nginx(1)</a>
+        
+        <a href="https://gam0022.net/tags/normalizefm" style="font-size: 12px;">normalizefm(1)</a>
+        
+        <a href="https://gam0022.net/tags/ocaml" style="font-size: 12px;">ocaml(1)</a>
+        
+        <a href="https://gam0022.net/tags/octave" style="font-size: 12px;">octave(1)</a>
+        
+        <a href="https://gam0022.net/tags/octopress" style="font-size: 12px;">octopress(13)</a>
+        
+        <a href="https://gam0022.net/tags/opencv" style="font-size: 12px;">opencv(1)</a>
+        
+        <a href="https://gam0022.net/tags/optix" style="font-size: 12px;">optix(6)</a>
+        
+        <a href="https://gam0022.net/tags/passenger" style="font-size: 12px;">passenger(1)</a>
+        
+        <a href="https://gam0022.net/tags/programming" style="font-size: 12px;">programming(1)</a>
+        
+        <a href="https://gam0022.net/tags/rails" style="font-size: 12px;">rails(2)</a>
+        
+        <a href="https://gam0022.net/tags/rails4" style="font-size: 12px;">rails4(1)</a>
+        
+        <a href="https://gam0022.net/tags/raymarching" style="font-size: 12px;">raymarching(4)</a>
+        
+        <a href="https://gam0022.net/tags/revision" style="font-size: 12px;">revision(2)</a>
+        
+        <a href="https://gam0022.net/tags/rsync" style="font-size: 12px;">rsync(2)</a>
+        
+        <a href="https://gam0022.net/tags/ruby" style="font-size: 12px;">ruby(17)</a>
+        
+        <a href="https://gam0022.net/tags/ruby-c-extension" style="font-size: 12px;">ruby-c-extension(3)</a>
+        
+        <a href="https://gam0022.net/tags/ruby-on-rails" style="font-size: 12px;">ruby-on-rails(1)</a>
+        
+        <a href="https://gam0022.net/tags/rubygems" style="font-size: 12px;">rubygems(1)</a>
+        
+        <a href="https://gam0022.net/tags/rust" style="font-size: 12px;">rust(3)</a>
+        
+        <a href="https://gam0022.net/tags/rvm" style="font-size: 12px;">rvm(1)</a>
+        
+        <a href="https://gam0022.net/tags/sass/scss" style="font-size: 12px;">sass/scss(1)</a>
+        
+        <a href="https://gam0022.net/tags/serversmanvps" style="font-size: 12px;">serversmanvps(3)</a>
+        
+        <a href="https://gam0022.net/tags/sessions" style="font-size: 12px;">sessions(1)</a>
+        
+        <a href="https://gam0022.net/tags/shader" style="font-size: 12px;">shader(9)</a>
+        
+        <a href="https://gam0022.net/tags/shader-showdown" style="font-size: 12px;">shader-showdown(1)</a>
+        
+        <a href="https://gam0022.net/tags/shadergraph" style="font-size: 12px;">shadergraph(1)</a>
+        
+        <a href="https://gam0022.net/tags/shadertoy" style="font-size: 12px;">shadertoy(1)</a>
+        
+        <a href="https://gam0022.net/tags/slide" style="font-size: 12px;">slide(4)</a>
+        
+        <a href="https://gam0022.net/tags/sqlite3" style="font-size: 12px;">sqlite3(1)</a>
+        
+        <a href="https://gam0022.net/tags/ssh" style="font-size: 12px;">ssh(1)</a>
+        
+        <a href="https://gam0022.net/tags/study" style="font-size: 12px;">study(3)</a>
+        
+        <a href="https://gam0022.net/tags/techbooster" style="font-size: 12px;">techbooster(1)</a>
+        
+        <a href="https://gam0022.net/tags/terminal.app" style="font-size: 12px;">terminal.app(1)</a>
+        
+        <a href="https://gam0022.net/tags/textmeshpro" style="font-size: 12px;">textmeshpro(1)</a>
+        
+        <a href="https://gam0022.net/tags/theme" style="font-size: 12px;">theme(1)</a>
+        
+        <a href="https://gam0022.net/tags/three.js" style="font-size: 12px;">three.js(2)</a>
+        
+        <a href="https://gam0022.net/tags/tips" style="font-size: 12px;">tips(1)</a>
+        
+        <a href="https://gam0022.net/tags/tokyodemofest" style="font-size: 12px;">tokyodemofest(11)</a>
+        
+        <a href="https://gam0022.net/tags/trouble" style="font-size: 12px;">trouble(1)</a>
+        
+        <a href="https://gam0022.net/tags/twincal" style="font-size: 12px;">twincal(1)</a>
+        
+        <a href="https://gam0022.net/tags/twitter" style="font-size: 12px;">twitter(1)</a>
+        
+        <a href="https://gam0022.net/tags/typescript" style="font-size: 12px;">typescript(2)</a>
+        
+        <a href="https://gam0022.net/tags/ubuntu" style="font-size: 12px;">ubuntu(2)</a>
+        
+        <a href="https://gam0022.net/tags/ue5" style="font-size: 12px;">ue5(1)</a>
+        
+        <a href="https://gam0022.net/tags/unity" style="font-size: 12px;">unity(12)</a>
+        
+        <a href="https://gam0022.net/tags/unrealengine" style="font-size: 12px;">unrealengine(1)</a>
+        
+        <a href="https://gam0022.net/tags/unrealengine5" style="font-size: 12px;">unrealengine5(1)</a>
+        
+        <a href="https://gam0022.net/tags/urp" style="font-size: 12px;">urp(1)</a>
+        
+        <a href="https://gam0022.net/tags/utf-8-mac" style="font-size: 12px;">utf-8-mac(1)</a>
+        
+        <a href="https://gam0022.net/tags/uva-online-judge" style="font-size: 12px;">uva-online-judge(3)</a>
+        
+        <a href="https://gam0022.net/tags/vim" style="font-size: 12px;">vim(1)</a>
+        
+        <a href="https://gam0022.net/tags/vps" style="font-size: 12px;">vps(2)</a>
+        
+        <a href="https://gam0022.net/tags/vscode" style="font-size: 12px;">vscode(1)</a>
+        
+        <a href="https://gam0022.net/tags/web" style="font-size: 12px;">web(2)</a>
+        
+        <a href="https://gam0022.net/tags/webgl" style="font-size: 12px;">webgl(10)</a>
+        
+        <a href="https://gam0022.net/tags/webrick" style="font-size: 12px;">webrick(1)</a>
+        
+        <a href="https://gam0022.net/tags/windows" style="font-size: 12px;">windows(1)</a>
+        
+        <a href="https://gam0022.net/tags/windows-terminal" style="font-size: 12px;">windows-terminal(1)</a>
+        
+        <a href="https://gam0022.net/tags/x11" style="font-size: 12px;">x11(1)</a>
+        
+        <a href="https://gam0022.net/tags/x86" style="font-size: 12px;">x86(1)</a>
+        
+        <a href="https://gam0022.net/tags/xcode" style="font-size: 12px;">xcode(2)</a>
+        
+        <a href="https://gam0022.net/tags/zsh" style="font-size: 12px;">zsh(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%a2%e3%82%bb%e3%83%b3%e3%83%96%e3%83%a9" style="font-size: 12px;">アセンブラ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%a2%e3%83%95%e3%82%a3%e3%83%aa%e3%82%a8%e3%82%a4%e3%83%88" style="font-size: 12px;">アフィリエイト(3)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%b3%e3%83%9f%e3%82%b1" style="font-size: 12px;">コミケ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%b4" style="font-size: 12px;">ゴ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%b7%e3%82%a7%e3%83%bc%e3%83%80%e3%83%bc" style="font-size: 12px;">シェーダー(4)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%89%e3%83%a1%e3%82%a4%e3%83%b3" style="font-size: 12px;">ドメイン(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%8d%e3%82%bf" style="font-size: 12px;">ネタ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%91%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%b3%e3%82%b0" style="font-size: 12px;">パストレーシング(10)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%96%e3%83%ad%e3%82%b0%e9%81%8b%e5%96%b6" style="font-size: 12px;">ブログ運営(4)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%9a%e3%83%bc%e3%83%91%e3%83%bc%e3%82%af%e3%83%a9%e3%83%95%e3%83%88" style="font-size: 12px;">ペーパークラフト(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%9c%e3%83%bc%e3%83%b3%e3%83%87%e3%82%b8%e3%82%bf%e3%83%ab" style="font-size: 12px;">ボーンデジタル(2)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%a9%e3%82%a4%e3%83%96%e3%82%b3%e3%83%bc%e3%83%87%e3%82%a3%e3%83%b3%e3%82%b0" style="font-size: 12px;">ライブコーディング(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%aa%e3%83%a2%e3%83%bc%e3%83%88%e3%83%af%e3%83%bc%e3%82%af" style="font-size: 12px;">リモートワーク(3)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%b3%e3%82%b0" style="font-size: 12px;">レイトレーシング(9)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%88%e3%83%ac%e5%90%88%e5%ae%bf" style="font-size: 12px;">レイトレ合宿(9)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%9e%e3%83%bc%e3%83%81%e3%83%b3%e3%82%b0" style="font-size: 12px;">レイマーチング(24)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%85%a5%e9%96%80" style="font-size: 12px;">入門(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%87%ba%e7%89%88" style="font-size: 12px;">出版(2)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%88%9d%e5%bf%83%e8%80%85" style="font-size: 12px;">初心者(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%8b%89%e5%bc%b7%e4%bc%9a" style="font-size: 12px;">勉強会(7)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%8b%89%e5%bc%b7%e6%b3%95" style="font-size: 12px;">勉強法(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%8c%97%e6%9d%a1%e3%81%9d%e3%81%b5%e3%81%83" style="font-size: 12px;">北条そふぃ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%95%86%e5%93%81%e3%83%ac%e3%83%93%e3%83%a5%e3%83%bc" style="font-size: 12px;">商品レビュー(2)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%a4%a7%e4%ba%94%e9%83%8ebot" style="font-size: 12px;">大五郎bot(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%ae%a3%e4%bc%9d" style="font-size: 12px;">宣伝(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%b0%8f%e3%83%8d%e3%82%bf" style="font-size: 12px;">小ネタ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%8a%80%e8%a1%93%e6%9b%b8%e5%85%b8" style="font-size: 12px;">技術書典(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%97%a5%e6%9c%ac%e8%aa%9e" style="font-size: 12px;">日本語(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%97%a5%e8%a8%98" style="font-size: 12px;">日記(2)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%9b%b8%e7%b1%8d" style="font-size: 12px;">書籍(2)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%9c%ac" style="font-size: 12px;">本(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%a9%9f%e6%a2%b0%e8%aa%9e%e5%ba%8f%e8%ab%96" style="font-size: 12px;">機械語序論(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e7%94%9f%e6%b4%bb" style="font-size: 12px;">生活(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e7%99%ba%e8%a1%a8%e8%b3%87%e6%96%99" style="font-size: 12px;">発表資料(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e7%99%bb%e5%a3%87" style="font-size: 12px;">登壇(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e7%9b%b4%e5%89%8d%e5%af%be%e7%ad%96" style="font-size: 12px;">直前対策(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e7%a0%94%e7%a9%b6" style="font-size: 12px;">研究(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e7%ab%b6%e6%8a%80%e3%83%97%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%9f%e3%83%b3%e3%82%b0" style="font-size: 12px;">競技プログラミング(4)</a>
+        
+        <a href="https://gam0022.net/tags/%e8%b2%b7%e3%81%a3%e3%81%a6%e8%89%af%e3%81%8b%e3%81%a3%e3%81%9f%e3%82%82%e3%81%ae" style="font-size: 12px;">買って良かったもの(3)</a>
+        
+    </div>
+</ul>
+
+</div>
+
+
+
+
+
+
+<div class="row">
+    <div class="col section-heading">
+        <h1>Recent Posts</h1>
+        <p>最新記事</p>
+        <div class="col-md-12">
+  <div class="row">
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2023/09/20/rtcamp9/" itemprop="url">レイトレ合宿9で4次元立方体をテーマにしたアニメーションを作成しました</a></h3>
+      
+      <a href="https://gam0022.net/blog/2023/09/20/rtcamp9/">
+        <img src="https://gam0022.net///images/posts/2023-09-19-rtcamp9/218.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2023/08/07/unity-bible/" itemprop="url">『Unityバイブル R5夏号』の「Shader Graphの基本操作から発展的なテクニックまで」を執筆しました</a></h3>
+      
+      <a href="https://gam0022.net/blog/2023/08/07/unity-bible/">
+        <img src="https://gam0022.net///images/posts/2023-08-07-unity-bible/thumbnail.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2023/07/31/raymarching-in-ue5/" itemprop="url">Object Space Raymarching in Unreal Engine 5.2</a></h3>
+      
+      <a href="https://gam0022.net/blog/2023/07/31/raymarching-in-ue5/">
+        <img src="https://gam0022.net///images/posts/2023-07-30-raymarching-in-ue5/RaymarchingInUE5_thumbnail_v7.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2023/05/31/sessions2023-glsl-compo/" itemprop="url">SESSIONS 2023のGLSL Graphics Compoで準優勝しました（グラフィックス解説）</a></h3>
+      
+      <a href="https://gam0022.net/blog/2023/05/31/sessions2023-glsl-compo/">
+        <img src="https://gam0022.net///images/posts/2023-05-29-sessions2023-glsl-compo/TranscendentalCube.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2023/01/15/fp-study/" itemprop="url">FP試験のオススメ勉強法</a></h3>
+      
+      <a href="https://gam0022.net/blog/2023/01/15/fp-study/">
+        <img src="https://gam0022.net///images/posts/2023-01-15-fp-study/pass_certificate_1920x1080.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2022/12/25/unity-ink-shader/" itemprop="url">UnityのShaderGraphでインクシェーダーを作る</a></h3>
+      
+      <a href="https://gam0022.net/blog/2022/12/25/unity-ink-shader/">
+        <img src="https://gam0022.net///images/posts/2022-12-26-unity-ink-shader/main.png" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2022/10/20/normalizefm/" itemprop="url">normalize.fmにゲスト出演しました</a></h3>
+      
+      <a href="https://gam0022.net/blog/2022/10/20/normalizefm/">
+        <img src="https://gam0022.net///images/posts/2022-10-20-normalizefm/ogp-1920x1080.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2022/10/17/rtcamp8/" itemprop="url">レイトレ合宿8参加レポート</a></h3>
+      
+      <a href="https://gam0022.net/blog/2022/10/17/rtcamp8/">
+        <img src="https://gam0022.net///images/posts/2022-09-26-rtcamp8/267.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/" itemprop="url">速度比較！レイマーチングvsレイキャスティング</a></h3>
+      
+      <a href="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/">
+        <img src="https://gam0022.net///images/posts/2022-08-08-raymarching-vs-raycasting/raymarching_i4_s256_l300.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+  </div>
+
+  <div class="read-more">
+    <a href="/post" class="btn btn-primary btn-outline">Read more</a>
+  </div>
+</div>
+    </div>
+</div>
+
+            <footer class="site-footer">
+    <div class="container">
+        <p class="powered-by">
+
+            &copy; 2021 gam0022 &middot; 
+
+            Powered by the <a href="https://github.com/gam0022/hugo-academic" target="_blank">Customized Academic theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+            <span class="pull-right"><a href="#" id="back_to_top"><span class="button_icon"><i class="fa fa-chevron-up fa-2x" aria-hidden="true"></i></span></a></span>
+
+        </p>
+    </div>
+</footer>
+
+                    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+        <script src="https://gam0022.net/js/jquery-1.12.3.min.js"></script>
+        <script src="https://gam0022.net/js/bootstrap.custom.js"></script>
+        <script src="https://gam0022.net/js/hugo-academic.js?2023-09-20"></script>
+        
+
+        <script>
+            
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-84469205-1', 'auto');
+            ga('send', 'pageview');
+
+             
+            var links = document.querySelectorAll('a');
+            Array.prototype.map.call(links, function(item) {
+                if (item.host != document.location.host) {
+                    item.addEventListener('click', function() {
+                        var action = item.getAttribute('data-action') || 'follow';
+                        ga('send', 'event', 'outbound', action, item.href);
+                    });
+                }
+            });
+            
+
+            $(document).ready(function() {
+                $("#TableOfContents").addClass("bs-docs-sidebar affix");
+                $("#TableOfContents ul").addClass("nav nav-stacked");
+            });
+        </script>
+
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        
+        
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+        </script>
+        <script async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
+        
+
+    </body>
+</html>
+
+        </div>
+        <div class="col-md-3">
+            <nav id="TableOfContents">
+<ul>
+<li><a href="#お寺で合宿">お寺で合宿！？</a></li>
+<li><a href="#本戦の実行環境">本戦の実行環境</a></li>
+<li><a href="#自作レンダラーの紹介">自作レンダラーの紹介</a>
+<ul>
+<li><a href="#アピールポイント">アピールポイント</a></li>
+<li><a href="#基本機能">基本機能</a></li>
+<li><a href="#レンダラーの出力設定">レンダラーの出力設定</a></li>
+<li><a href="#超立方体-4次元上の回転">超立方体（4次元上の回転）</a></li>
+<li><a href="#レイマーチングの高速化">レイマーチングの高速化</a>
+<ul>
+<li><a href="#keinert-et-al-14-enhanced-sphere-tracing">[Keinert et al. 14] Enhanced Sphere Tracing</a></li>
+<li><a href="#bán-valasek-18-accelerating-sphere-tracing">[Bán&amp;Valasek 18] Accelerating Sphere Tracing</a></li>
+<li><a href="#bán-valasek-23-automatic-step-size-relaxation-in-sphere-tracing">[Bán&amp;Valasek 23] Automatic Step Size Relaxation in Sphere Tracing</a>
+<ul>
+<li><a href="#bán-valasek-23-の結果">[Bán&amp;Valasek 23] の結果</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#セミナーの発表資料">セミナーの発表資料</a>
+<ul>
+<li><a href="#object-space-raymarching-in-unreal-engine-5-2">Object Space Raymarching in Unreal Engine 5.2</a></li>
+<li><a href="#ifsによるフラクタルのモデリング">IFSによるフラクタルのモデリング</a></li>
+</ul></li>
+<li><a href="#オススメのセミナー資料">オススメのセミナー資料</a>
+<ul>
+<li><a href="#現代のgpuの実行スタイルとレイトレ-2023-by-shocker-0x15">現代のGPUの実行スタイルとレイトレ (2023) by @Shocker_0x15</a></li>
+<li><a href="#0-0-1-0-の乱数を得るための-本当の-方法-by-h013">[0.0, 1.0) の乱数を得るための“本当の”方法 by @h013</a></li>
+<li><a href="#volume-expression-ggx-microfacet-by-kinakomoti2357">Volume Expression GGX(Microfacet) by @Kinakomoti2357</a></li>
+</ul></li>
+<li><a href="#マテリアル神経衰弱">マテリアル神経衰弱</a></li>
+<li><a href="#感想">感想</a></li>
+<li><a href="#写真コーナー">写真コーナー</a></li>
+</ul>
+</nav>
+        </div>
+    </div>
+    
+</div>

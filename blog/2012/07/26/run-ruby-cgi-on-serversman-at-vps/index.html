@@ -31,11 +31,11 @@
         <meta property="og:type" content="article">
         <meta property="og:description" content="ServersMan@VPS(Ubuntu)でRubyのCGIを実行するまでのメモです。
 apache2をインストールする apt-getかaptitudeでインストールすればいいと思います。
-sudo aptitude install apache2	 AddHandlerを設定する /etc/apache2/mods-enabled/mime.confにAddHandlerを設定します。
+sudo aptitude install apache2  AddHandlerを設定する /etc/apache2/mods-enabled/mime.confにAddHandlerを設定します。
 #AddHandler cgi-script .cgiという行があるので、 見つけてコメントアウトを解除して、次のように書き換えればいいと思います。
 AddHandler cgi-script .cgi .rb  Options &#43;ExecCGIを設定する /etc/apache2/sites-available/defaultでOptions &#43;ExecCGIを設定します。
 &lt;Directory /var/www/html/&gt; #Options Indexes FollowSymLinks MultiViews Options Indexes FollowSymLinks MultiViews ExecCGI AllowOverride None Order allow,deny allow from all &lt;/Directory&gt;  apache2を再起動する 上の2つのファイルを編集したら、apacheを再起動して設定を反映させます。
-sudo /etc/init.d/apache2 restart	 Ruby CGIのパーミッションを755にする cd /var/www/html chmod 755 test.rb  これでたぶん動くようになります。
+sudo /etc/init.d/apache2 restart  Ruby CGIのパーミッションを755にする cd /var/www/html chmod 755 test.rb  これでたぶん動くようになります。
 ね？簡単でしょ？
 うまくいかないときは /var/log/apache2/error.logのエラーメッセージを見ましょう。">
     
@@ -197,7 +197,7 @@ sudo /etc/init.d/apache2 restart	 Ruby CGIのパーミッションを755にす�
 
 <p>apt-getかaptitudeでインストールすればいいと思います。</p>
 
-<pre><code class="language-bash">sudo aptitude install apache2	
+<pre><code class="language-bash">sudo aptitude install apache2   
 </code></pre>
 
 <h2 id="addhandlerを設定する">AddHandlerを設定する</h2>
@@ -215,11 +215,11 @@ sudo /etc/init.d/apache2 restart	 Ruby CGIのパーミッションを755にす�
 <p><code>/etc/apache2/sites-available/default</code>でOptions +ExecCGIを設定します。</p>
 
 <pre><code>&lt;Directory /var/www/html/&gt;
-	#Options Indexes FollowSymLinks MultiViews 
-	Options Indexes FollowSymLinks MultiViews ExecCGI
-	AllowOverride None
-	Order allow,deny
-	allow from all
+    #Options Indexes FollowSymLinks MultiViews 
+    Options Indexes FollowSymLinks MultiViews ExecCGI
+    AllowOverride None
+    Order allow,deny
+    allow from all
 &lt;/Directory&gt;
 </code></pre>
 
@@ -227,7 +227,7 @@ sudo /etc/init.d/apache2 restart	 Ruby CGIのパーミッションを755にす�
 
 <p>上の2つのファイルを編集したら、apacheを再起動して設定を反映させます。</p>
 
-<pre><code class="language-bash">sudo /etc/init.d/apache2 restart	
+<pre><code class="language-bash">sudo /etc/init.d/apache2 restart    
 </code></pre>
 
 <h2 id="ruby-cgiのパーミッションを755にする">Ruby CGIのパーミッションを755にする</h2>
@@ -355,7 +355,7 @@ chmod 755 test.rb
         
         <a href="https://gam0022.net/tags/canvas" style="font-size: 12px;">canvas(1)</a>
         
-        <a href="https://gam0022.net/tags/cg" style="font-size: 12px;">cg(33)</a>
+        <a href="https://gam0022.net/tags/cg" style="font-size: 12px;">cg(34)</a>
         
         <a href="https://gam0022.net/tags/cgi" style="font-size: 12px;">cgi(2)</a>
         
@@ -375,7 +375,7 @@ chmod 755 test.rb
         
         <a href="https://gam0022.net/tags/css" style="font-size: 12px;">css(1)</a>
         
-        <a href="https://gam0022.net/tags/cuda" style="font-size: 12px;">cuda(4)</a>
+        <a href="https://gam0022.net/tags/cuda" style="font-size: 12px;">cuda(5)</a>
         
         <a href="https://gam0022.net/tags/daigoroubot" style="font-size: 12px;">daigoroubot(1)</a>
         
@@ -409,7 +409,7 @@ chmod 755 test.rb
         
         <a href="https://gam0022.net/tags/gnuplot" style="font-size: 12px;">gnuplot(1)</a>
         
-        <a href="https://gam0022.net/tags/gpu" style="font-size: 12px;">gpu(4)</a>
+        <a href="https://gam0022.net/tags/gpu" style="font-size: 12px;">gpu(5)</a>
         
         <a href="https://gam0022.net/tags/heroku" style="font-size: 12px;">heroku(1)</a>
         
@@ -475,7 +475,7 @@ chmod 755 test.rb
         
         <a href="https://gam0022.net/tags/opencv" style="font-size: 12px;">opencv(1)</a>
         
-        <a href="https://gam0022.net/tags/optix" style="font-size: 12px;">optix(5)</a>
+        <a href="https://gam0022.net/tags/optix" style="font-size: 12px;">optix(6)</a>
         
         <a href="https://gam0022.net/tags/passenger" style="font-size: 12px;">passenger(1)</a>
         
@@ -601,7 +601,7 @@ chmod 755 test.rb
         
         <a href="https://gam0022.net/tags/%e3%83%8d%e3%82%bf" style="font-size: 12px;">ネタ(1)</a>
         
-        <a href="https://gam0022.net/tags/%e3%83%91%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%b3%e3%82%b0" style="font-size: 12px;">パストレーシング(9)</a>
+        <a href="https://gam0022.net/tags/%e3%83%91%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%b3%e3%82%b0" style="font-size: 12px;">パストレーシング(10)</a>
         
         <a href="https://gam0022.net/tags/%e3%83%96%e3%83%ad%e3%82%b0%e9%81%8b%e5%96%b6" style="font-size: 12px;">ブログ運営(4)</a>
         
@@ -613,11 +613,11 @@ chmod 755 test.rb
         
         <a href="https://gam0022.net/tags/%e3%83%aa%e3%83%a2%e3%83%bc%e3%83%88%e3%83%af%e3%83%bc%e3%82%af" style="font-size: 12px;">リモートワーク(3)</a>
         
-        <a href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%b3%e3%82%b0" style="font-size: 12px;">レイトレーシング(8)</a>
+        <a href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%b3%e3%82%b0" style="font-size: 12px;">レイトレーシング(9)</a>
         
-        <a href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%88%e3%83%ac%e5%90%88%e5%ae%bf" style="font-size: 12px;">レイトレ合宿(8)</a>
+        <a href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%88%e3%83%ac%e5%90%88%e5%ae%bf" style="font-size: 12px;">レイトレ合宿(9)</a>
         
-        <a href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%9e%e3%83%bc%e3%83%81%e3%83%b3%e3%82%b0" style="font-size: 12px;">レイマーチング(23)</a>
+        <a href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%9e%e3%83%bc%e3%83%81%e3%83%b3%e3%82%b0" style="font-size: 12px;">レイマーチング(24)</a>
         
         <a href="https://gam0022.net/tags/%e5%85%a5%e9%96%80" style="font-size: 12px;">入門(1)</a>
         
@@ -681,6 +681,15 @@ chmod 755 test.rb
         <p>最新記事</p>
         <div class="col-md-12">
   <div class="row">
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2023/09/20/rtcamp9/" itemprop="url">レイトレ合宿9で4次元立方体をテーマにしたアニメーションを作成しました</a></h3>
+      
+      <a href="https://gam0022.net/blog/2023/09/20/rtcamp9/">
+        <img src="https://gam0022.net///images/posts/2023-09-19-rtcamp9/218.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
     
     <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
       <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2023/08/07/unity-bible/" itemprop="url">『Unityバイブル R5夏号』の「Shader Graphの基本操作から発展的なテクニックまで」を執筆しました</a></h3>
@@ -754,15 +763,6 @@ chmod 755 test.rb
       
     </div>
     
-    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
-      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2022/05/08/kodelife-midi/" itemprop="url">KodeLifeでMIDIコンを使うのがとても簡単だった</a></h3>
-      
-      <a href="https://gam0022.net/blog/2022/05/08/kodelife-midi/">
-        <img src="https://gam0022.net///images/posts/2022-05-08-kodelife-midi/IMG_5022.MOV_snapshot_00.50.066.jpg" class="article-banner" itemprop="image">
-      </a>
-      
-    </div>
-    
   </div>
 
   <div class="read-more">
@@ -790,7 +790,7 @@ chmod 755 test.rb
         <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
         <script src="https://gam0022.net/js/jquery-1.12.3.min.js"></script>
         <script src="https://gam0022.net/js/bootstrap.custom.js"></script>
-        <script src="https://gam0022.net/js/hugo-academic.js"></script>
+        <script src="https://gam0022.net/js/hugo-academic.js?2023-09-20"></script>
         
 
         <script>

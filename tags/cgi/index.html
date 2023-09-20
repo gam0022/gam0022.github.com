@@ -283,7 +283,7 @@ CGIで長いURIを発行すると、RequestURITooLargeというエラーにな�
 
 <p>apt-getかaptitudeでインストールすればいいと思います。</p>
 
-<pre><code class="language-bash">sudo aptitude install apache2	
+<pre><code class="language-bash">sudo aptitude install apache2   
 </code></pre>
 
 <h2 id="addhandlerを設定する">AddHandlerを設定する</h2>
@@ -301,11 +301,11 @@ CGIで長いURIを発行すると、RequestURITooLargeというエラーにな�
 <p><code>/etc/apache2/sites-available/default</code>でOptions +ExecCGIを設定します。</p>
 
 <pre><code>&lt;Directory /var/www/html/&gt;
-	#Options Indexes FollowSymLinks MultiViews 
-	Options Indexes FollowSymLinks MultiViews ExecCGI
-	AllowOverride None
-	Order allow,deny
-	allow from all
+    #Options Indexes FollowSymLinks MultiViews 
+    Options Indexes FollowSymLinks MultiViews ExecCGI
+    AllowOverride None
+    Order allow,deny
+    allow from all
 &lt;/Directory&gt;
 </code></pre>
 
@@ -313,7 +313,7 @@ CGIで長いURIを発行すると、RequestURITooLargeというエラーにな�
 
 <p>上の2つのファイルを編集したら、apacheを再起動して設定を反映させます。</p>
 
-<pre><code class="language-bash">sudo /etc/init.d/apache2 restart	
+<pre><code class="language-bash">sudo /etc/init.d/apache2 restart    
 </code></pre>
 
 <h2 id="ruby-cgiのパーミッションを755にする">Ruby CGIのパーミッションを755にする</h2>
@@ -363,7 +363,7 @@ chmod 755 test.rb
         <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
         <script src="https://gam0022.net/js/jquery-1.12.3.min.js"></script>
         <script src="https://gam0022.net/js/bootstrap.custom.js"></script>
-        <script src="https://gam0022.net/js/hugo-academic.js"></script>
+        <script src="https://gam0022.net/js/hugo-academic.js?2023-09-20"></script>
         
 
         <script>

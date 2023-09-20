@@ -7,8 +7,477 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>&amp;copy; 2021 gam0022</copyright>
-    <lastBuildDate>Mon, 07 Aug 2023 10:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 20 Sep 2023 12:00:00 +0900</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>レイトレ合宿9で4次元立方体をテーマにしたアニメーションを作成しました</title>
+      <link>https://gam0022.net/blog/2023/09/20/rtcamp9/</link>
+      <pubDate>Wed, 20 Sep 2023 12:00:00 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2023/09/20/rtcamp9/</guid>
+      <description>&lt;p&gt;9月1日(金)～9月3日(日)に&lt;a href=&#34;http://www.seichoji.com/&#34;&gt;日蓮宗大本山清澄寺&lt;/a&gt;で開催された&lt;a href=&#34;https://sites.google.com/view/rtcamp9/home&#34;&gt;レイトレ合宿9&lt;/a&gt;に参加しました。&lt;/p&gt;
+
+&lt;p&gt;4次元空間上で回転してから、それを3次元に投影することで、内外が入れ替わるような不思議なループアニメーションをテーマにしました。&lt;/p&gt;
+
+&lt;p&gt;開発した自作レンダラーで &lt;strong&gt;5分の制限時間&lt;/strong&gt; でレンダリングして、こんな感じの動画を生成しました。&lt;/p&gt;
+
+&lt;video playsinline=&#34;&#34; loop=&#34;&#34; muted=&#34;&#34; controls=&#34;&#34; width=&#34;100%&#34; src=&#34;https://gam0022.net/images/posts/2023-09-19-rtcamp9/gam_crf12.mp4&#34; poster=&#34;/images/posts/2023-09-19-rtcamp9/218.jpg&#34;&gt;&lt;/video&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;長時間をかけて4K解像度でレンダリングした動画をYouTubeにアップロードしました。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/ohbv8_jCQtc&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;YouTubeの仕様の勉強も兼ねて、ループアニメーションという特性を活かした&lt;a href=&#34;https://youtube.com/shorts/SgPbXt50Jw0?si=n_qbmh5-ouQYhrTp&#34;&gt;YouTubeショート版&lt;/a&gt;も作成しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; 9、4Dをテーマにして4位でした！&lt;br&gt;&lt;br&gt;4次元空間上で回転し、それから3次元に投影することで、内外が入れ替わるような不思議なループアニメーションを制作しました。&lt;br&gt;&lt;br&gt;OptiXで開発した自作レンダラーで300秒以内にレンダリングしました。 &lt;a href=&#34;https://t.co/aP4w23rAYT&#34;&gt;pic.twitter.com/aP4w23rAYT&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1698130408406462644?ref_src=twsrc%5Etfw&#34;&gt;September 3, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;お寺で合宿&#34;&gt;お寺で合宿！？&lt;/h1&gt;
+
+&lt;p&gt;去年のレイトレ8は沖縄のラグジュアリーなホテルでの開催でしたが、今年は対照的に質素にお寺での開催でした。
+運営メンバー曰く、ダイナミックレンジの広さを重視しているそうです！&lt;/p&gt;
+
+&lt;p&gt;去年のレポートはこちらです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gam0022.net/blog/2022/10/17/rtcamp8/&#34;&gt;レイトレ合宿8参加レポート | gam0022.net&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;当日の詳細な様子については、&lt;a href=&#34;https://twitter.com/Kinakomoti2357/status/1703970431546605827&#34;&gt;@Kinakomoti2357&lt;/a&gt;さんのレポートがとても参考になります。
+ぜひ合わせて読んでください。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; 9の参加レポートを書きました&lt;a href=&#34;https://t.co/f8vi2PbrJC&#34;&gt;https://t.co/f8vi2PbrJC&lt;/a&gt;&lt;/p&gt;&amp;mdash; KiNaNkomoti C102_2日目西か-03b (@Kinakomoti2357) &lt;a href=&#34;https://twitter.com/Kinakomoti2357/status/1703970431546605827?ref_src=twsrc%5Etfw&#34;&gt;September 19, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;本戦の実行環境&#34;&gt;本戦の実行環境&lt;/h1&gt;
+
+&lt;p&gt;レイトレ合宿9の本戦では、AWSを利用してレンダラーを実行する必要があります。インスタンスタイプの選択肢は以下の通りです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;CPUレンダラーの場合: c6i.32xlargeを2台&lt;/li&gt;
+&lt;li&gt;GPUレンダラーの場合: g4dn.xlargeを2台（私はこちらを選択）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;今年、新たなルールとして2台のインスタンスを利用できるようになりました。&lt;/p&gt;
+
+&lt;p&gt;私はフレームを半分に分割して2台のインスタンスを活用する単純な戦略にしました。
+余談ですが、片方のインスタンスで描画が失敗してもバレないようにループは2周するようにしました（笑）。&lt;/p&gt;
+
+&lt;p&gt;毎年、新しい試みが取り入れられることが、この合宿の魅力の一つだと思います。&lt;/p&gt;
+
+&lt;h1 id=&#34;自作レンダラーの紹介&#34;&gt;自作レンダラーの紹介&lt;/h1&gt;
+
+&lt;p&gt;GPUレンダラーをOptiXで開発しました。レンダラーの名前はredflashです。&lt;/p&gt;
+
+&lt;p&gt;こちらがレンダラーのプレゼン資料です。&lt;/p&gt;
+
+&lt;div class=&#34;google-slide-wrap&#34;&gt;
+&lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vQbWup2egsNq-4MgXMBmQnp-M9HBHbotYQZq-C2ABcRaQNRqBFs3zgkQVWfrqCUctZlqQzskBRiAEEX/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;1440&#34; height=&#34;839&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://speakerdeck.com/gam0022/rtcamp9&#34;&gt;Speaker Deck版&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;プレゼン資料をベースにしながら、当日話した内容などを文章として補足しながら紹介します。&lt;/p&gt;
+
+&lt;h2 id=&#34;アピールポイント&#34;&gt;アピールポイント&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-09-19-rtcamp9/slide_2p.png&#34; alt=&#34;アピールポイント&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;アピールポイントは次の2点です。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;4D上の回転を3Dに投影することで、内外が入れ替わる不思議なアニメーション&lt;/li&gt;
+&lt;li&gt;2023年に発表されたばかりのレイマーチングの高速化の論文を実装
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://diglib.eg.org/bitstream/handle/10.2312/egs20231014/057-060.pdf?sequence=1&amp;amp;isAllowed=y&#34;&gt;[Bán&amp;amp;Valasek 23] Automatic Step Size Relaxation in Sphere Tracing&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;基本機能&#34;&gt;基本機能&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-09-19-rtcamp9/slide_3p.png&#34; alt=&#34;基本機能&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;レンダラーの基本機能です。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Unidirectional Path Tracing
+
+&lt;ul&gt;
+&lt;li&gt;implemented in NVIDIA® OptiX 6.5&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Materials
+
+&lt;ul&gt;
+&lt;li&gt;Disney BRDF&lt;/li&gt;
+&lt;li&gt;Lambert Diffuse&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;NEE（Next Event Estimation）&lt;/li&gt;
+&lt;li&gt;MIS（Multiple Importance Sampling）&lt;/li&gt;
+&lt;li&gt;Primitives
+
+&lt;ul&gt;
+&lt;li&gt;Sphere&lt;/li&gt;
+&lt;li&gt;Mesh&lt;/li&gt;
+&lt;li&gt;Distance Function (Raymarching)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ACES Filmic Tone Mapping&lt;/li&gt;
+&lt;li&gt;Deep Learning Denoising&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;シンプルな単方向のパストレーシングで、NEEやMISサンプリングの効率化をしています。&lt;/p&gt;
+
+&lt;p&gt;OptiXのカスタムなプリミティブの衝突判定としてレイマーチングを実装し、距離関数によるプリミティブもサポートしています。
+詳しくは過去の記事を参考にしてください。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gam0022.net/blog/2019/08/05/optix-raymarching-pathtracing/&#34;&gt;NVIDIA® OptiX上で『レイマーチング×パストレーシング』による物理ベースレンダラーを実装した | gam0022.net&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;余談ですが、昨今のレイトレ合宿では1フレームに使える時間が減っているのため、単方向のパストレーシングが多い印象でした。&lt;/p&gt;
+
+&lt;h2 id=&#34;レンダラーの出力設定&#34;&gt;レンダラーの出力設定&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-09-19-rtcamp9/slide_4p.png&#34; alt=&#34;レンダラーの出力設定&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;レンダラーの出力設定について、解像度はフルHD（1920x1080）、長さはレギュレーション上の最大の10秒にしました。&lt;/p&gt;
+
+&lt;p&gt;30FPSで10秒なので、合計300フレームを描画しました。&lt;/p&gt;
+
+&lt;p&gt;制限時間が300秒（5分）なので、1フレームあたりに使える時間は1秒とかなり短めでしたが、ほとんどノイズが出ない綺麗な結果にできました。&lt;/p&gt;
+
+&lt;h2 id=&#34;超立方体-4次元上の回転&#34;&gt;超立方体（4次元上の回転）&lt;/h2&gt;
+
+&lt;p&gt;レイトレ合宿で何を作ろうと考えた時、動画の最大の長さが10秒だったので、ループ可能なアニメーションが良さそうだと思いました。&lt;/p&gt;
+
+&lt;p&gt;ふと、TokyoDemoFest2021のShowdown準決勝で&lt;a href=&#34;https://twitter.com/sp4ghet&#34;&gt;sp4ghet&lt;/a&gt;さんが&lt;a href=&#34;https://www.shadertoy.com/view/stcSDM&#34;&gt;表裏が裏返るようなアニメーション&lt;/a&gt;を作っていたのを思い出して、自分でもやってみました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-09-19-rtcamp9/slide_5p.png&#34; alt=&#34;超立方体&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;超立方体とは4次元空間上の立方体です。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://zellij.hatenablog.com/entry/20121201/p1&#34;&gt;4次元の立方体の理解 - 大人になってからの再学習&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;4次元の回転を3次元から観測すると、内側と外側がグルグルと入れ替わるようなおもしろいアニメーションになります。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-09-19-rtcamp9/Tesseract.gif&#34; alt=&#34;Tesseract&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;このアニメーションは&lt;a href=&#34;https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:8-cell-simple.gif&#34;&gt;Wikipedia&lt;/a&gt;から引用しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-09-19-rtcamp9/slide_7p.png&#34; alt=&#34;描画の流れ&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;具体的な実装としては、距離関数に与える座標をうまく加工しているだけです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;3次元座標を4次元に変換（逆ステレオ投影）&lt;/li&gt;
+&lt;li&gt;4次元空間上で回転&lt;/li&gt;
+&lt;li&gt;4次元座標を3次元に変換（ステレオ投影）&lt;/li&gt;
+&lt;li&gt;3次元空間上で描画&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;以下は、ステレオ投影をCUDA C言語で実装したものになります。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;// 3次元座標を4次元に変換（逆ステレオ投影）
+float4 inverseStereographic(float3 p)
+{
+    float k = 2.0 / (1.0 + dot(p, p));
+    return make_float4(k * p, k - 1.0);
+}
+
+// 4次元座標を3次元に変換（ステレオ投影）
+float3 stereographic(float4 p4)
+{
+    float k = 1.0 / (1.0 + p4.w);
+    return k * make_float3(p4.x, p4.y, p4.z);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ステレオ投影の幾何学的な理解については、3Blue1Brownの動画にとても助けられました。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/94NmanMgR9k?si=S0an_wHu7KWIyVq9&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-09-19-rtcamp9/slide_9p.png&#34; alt=&#34;シーン構成&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;MengerSpongeと呼ばれる有名なフラクタルをベースにしました。外側と内側は2種類のMengerSpongeから構成されます。&lt;/p&gt;
+
+&lt;p&gt;外側と内側で対照的なマテリアルに設定していて、外側は複雑な金属感、内側はシンプルなサイバー感をイメージしました。&lt;/p&gt;
+
+&lt;p&gt;アニメーションの途中で部屋を暗くしていますが、サイバー感のあるマテリアルが光ってかっこよくなるように調整を試行錯誤しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-09-19-rtcamp9/slide_11p.png&#34; alt=&#34;モデリングの試行錯誤&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;モデリングはUnity上で行ってパラメーター調整してから、後からCUDAに移植するアプローチをとりました。&lt;/p&gt;
+
+&lt;p&gt;パラメーター調整はUnity上の方が作業しやすいからです。&lt;/p&gt;
+
+&lt;h2 id=&#34;レイマーチングの高速化&#34;&gt;レイマーチングの高速化&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-09-19-rtcamp9/slide_12p.png&#34; alt=&#34;レイマーチング（Sphere Tracing）の高速化の研究&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;レイマーチングの高速化の論文を3つを調査しました。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://diglib.eg.org/handle/10.2312/stag.20141233.001-008&#34;&gt;[Keinert et al. 14] Enhanced Sphere Tracing&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;@Hirai0827さんによる&lt;a href=&#34;https://qiita.com/Hirai0827/items/eddcb73a1976c3088b88&#34;&gt;日本語解説&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://diglib.eg.org/bitstream/handle/10.2312/egs20181037/029-032.pdf&#34;&gt;[Bán&amp;amp;Valasek 18] Accelerating Sphere Tracing&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;@Hirai0827さんによる&lt;a href=&#34;https://qiita.com/Hirai0827/items/e05e13f343357d648b1b&#34;&gt;日本語解説&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://diglib.eg.org/bitstream/handle/10.2312/egs20231014/057-060.pdf?sequence=1&amp;amp;isAllowed=y&#34;&gt;[Bán&amp;amp;Valasek 23] Automatic Step Size Relaxation in Sphere Tracing&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;この3つの手法の基本的な考え方はどれも共通していて、通常より大きくレイを進めて、進み過ぎたら引き返すというシンプルなものです。&lt;/p&gt;
+
+&lt;h3 id=&#34;keinert-et-al-14-enhanced-sphere-tracing&#34;&gt;[Keinert et al. 14] Enhanced Sphere Tracing&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-09-19-rtcamp9/slide_13p.png&#34; alt=&#34;[Keinert et al. 14] Enhanced Sphere Tracing&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;[Keinert et al. 14] では、レイのステップを $\omega \in[1,2)$ 倍して通常より大きくレイを進めます。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;ω&lt;/code&gt; が小さいと効果が薄れてしまい、 &lt;code&gt;ω&lt;/code&gt; が大きすぎると引き返しが発生して効率が悪くなります。&lt;/p&gt;
+
+&lt;p&gt;そのため、適切な &lt;code&gt;ω&lt;/code&gt; はシーンの形状に応じて手動で調整する必要があります。&lt;/p&gt;
+
+&lt;p&gt;その他、この論文では「スクリーンスペースを考慮した交差点の選択」「自己交差を防ぐためのεの動的設定」「非連続性の緩和」「凸形状物質における最適化」にも触れられていますが、今回は割愛します。&lt;/p&gt;
+
+&lt;h3 id=&#34;bán-valasek-18-accelerating-sphere-tracing&#34;&gt;[Bán&amp;amp;Valasek 18] Accelerating Sphere Tracing&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-09-19-rtcamp9/slide_14p.png&#34; alt=&#34;[Bán&amp;amp;Valasek 18] Accelerating Sphere Tracing&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;[Bán&amp;amp;Valasek 18] は [Keinert et al. 14] の改良版で、レイを大きく進めるステップを定数ではなく状況に応じて計算します。&lt;/p&gt;
+
+&lt;p&gt;具体的にはシーンの形状を平面に仮定して次のステップを予測します。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;マーチングループの現在のステップSphere（半径 $r_n$ ）&lt;/li&gt;
+&lt;li&gt;そのSphereに接する平面&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;上の2つにぴったり接する次のステップのSphere（半径 $r_{n+1}$）を決定し、ステップ $d_{n+1}$ を求めます。&lt;/p&gt;
+
+&lt;p&gt;さらに、シーンが平面でないカーブした面を考慮して、ωで調整できるようにします。&lt;/p&gt;
+
+&lt;p&gt;$$
+d_{n+1} = r_n + \omega r_{n+1}, \omega \in(0,1)
+$$&lt;/p&gt;
+
+&lt;h3 id=&#34;bán-valasek-23-automatic-step-size-relaxation-in-sphere-tracing&#34;&gt;[Bán&amp;amp;Valasek 23] Automatic Step Size Relaxation in Sphere Tracing&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-09-19-rtcamp9/slide_15p.png&#34; alt=&#34;[Bán&amp;amp;Valasek 23] Automatic Step Size Relaxation in Sphere Tracing&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;[Bán&amp;amp;Valasek 23] は [Bán&amp;amp;Valasek 18] と同じ著者による研究で、平面を仮定する基本的なアプローチはそのままに &lt;code&gt;ω&lt;/code&gt; を自動調整するようにさらに改良したものです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;引き返しが起きない状態が続けばωを大きく
+
+&lt;ul&gt;
+&lt;li&gt;どのくらい大きくするかは $\beta \in(0,1)$ で調整&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;引き返しが発生したらωをリセット&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;前の2つの手法より良いか同等の結果となっていました。基本アプローチは同じでパラメーター調整の工夫なので、納得できる結果です。&lt;/p&gt;
+
+&lt;h4 id=&#34;bán-valasek-23-の結果&#34;&gt;[Bán&amp;amp;Valasek 23] の結果&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-09-19-rtcamp9/slide_16p.png&#34; alt=&#34;[Bán&amp;amp;Valasek 23] Automatic Step Size Relaxation in Sphere Tracingの結果&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;今回の提出シーンを使って、同じサンプリング数のレンダリング時間を計測したところ、約1.9倍ほど高速化しました（β=0.2）。&lt;/p&gt;
+
+&lt;p&gt;ここまで効果があるとは正直驚きでした。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-09-19-rtcamp9/slide_17p.png&#34; alt=&#34;[Bán&amp;amp;Valasek 23] Automatic Step Size Relaxation in Sphere Tracingの結果 時間ごと&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;時系列で見ていくと、歪みの少ないシーンほど効果が高く、歪みの大きいシーンは効果が少し下がるようでした。&lt;/p&gt;
+
+&lt;p&gt;この理由はシーンの形状に平面を仮定しているのが関係ありそうな気がしました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-09-19-rtcamp9/slide_18p.png&#34; alt=&#34;[Bán&amp;amp;Valasek 23] Automatic Step Size Relaxation in Sphere Tracingの結果 Mandelbox&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;一方で去年のレイトレ合宿8のシーンで試したところ、むしろ性能が半分ほどに大きく劣化してしまいました。&lt;/p&gt;
+
+&lt;p&gt;Mandelboxというフラクタルのシーンだったのですが、平面が少なく、曲面で構成されるのが原因かもしれません。&lt;/p&gt;
+
+&lt;p&gt;まとめると、以下のような傾向がありそうでした。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;MengerSpongeのように平面から構成されるフラクタルとは相性が良い&lt;/li&gt;
+&lt;li&gt;Mandelboxのように曲面から構成されるフラクタルとは相性が悪い&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;色んなシーンで検証したわけではないので、あくまで予想ですが、なんとなく納得はできる結果になりました。&lt;/p&gt;
+
+&lt;h1 id=&#34;セミナーの発表資料&#34;&gt;セミナーの発表資料&lt;/h1&gt;
+
+&lt;p&gt;45分枠をいただたので、2つのテーマ（20分＋25分）で発表しました。&lt;/p&gt;
+
+&lt;h2 id=&#34;object-space-raymarching-in-unreal-engine-5-2&#34;&gt;Object Space Raymarching in Unreal Engine 5.2&lt;/h2&gt;
+
+&lt;p&gt;レイトレ合宿アドベントカレンダーと同じ内容です。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gam0022.net/blog/2023/07/31/raymarching-in-ue5/&#34;&gt;Object Space Raymarching in Unreal Engine 5.2 | gam0022.net&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Unreal Engine 5.2上でオブジェクトスペースのレイマーチングを実装したので、その解説をします。&lt;/p&gt;
+
+&lt;p&gt;レイマーチングをノードだけで実装するのは大変なので、MaterialのCustomノードを用いて複雑な処理はHLSLのコードで実装しました。&lt;/p&gt;
+
+&lt;div class=&#34;google-slide-wrap&#34;&gt;
+&lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vQfE3NIpPR3jQ-YISM7paRmMD4Z7-onSKdKK4RGXd8A9K36Wguj9S7zXyo_XCsNB-aFT22gxFyr7Z-c/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;1440&#34; height=&#34;839&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://speakerdeck.com/gam0022/raymarching-in-ue5&#34;&gt;Speaker Deck版&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;ifsによるフラクタルのモデリング&#34;&gt;IFSによるフラクタルのモデリング&lt;/h2&gt;
+
+&lt;p&gt;今回の合宿でも利用したMengerSpongeなどのフラクタルはIFS（Iterated Function System）と呼ばれる手法で距離関数を実装しています。&lt;/p&gt;
+
+&lt;p&gt;そのIFSについて、現実世界の実例（万華鏡や絞り染め）を用いて説明しました。&lt;/p&gt;
+
+&lt;div class=&#34;google-slide-wrap&#34;&gt;
+&lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vTeqnJbtD5u15mXPjgFqQJW854Tr24C-8Ie-EQXme_XxQBbnqTsGBFEO6mvNqpptoxOqdhLyKhjIdcF/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;1440&#34; height=&#34;839&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://speakerdeck.com/gam0022/ifs-fractal&#34;&gt;Speaker Deck版&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;オススメのセミナー資料&#34;&gt;オススメのセミナー資料&lt;/h1&gt;
+
+&lt;p&gt;どのセミナーもとても参考になる興味深い内容だったのですが、個人的に印象に残ったセミナーの資料を紹介します。&lt;/p&gt;
+
+&lt;h2 id=&#34;現代のgpuの実行スタイルとレイトレ-2023-by-shocker-0x15&#34;&gt;現代のGPUの実行スタイルとレイトレ (2023) by @Shocker_0x15&lt;/h2&gt;
+
+&lt;p&gt;参加者投票によってベストプレゼンター賞にも輝いた &lt;a href=&#34;https://twitter.com/Shocker_0x15&#34;&gt;@Shocker_0x15&lt;/a&gt; さんによる「現代のGPUの実行スタイルとレイトレ (2023)」です。&lt;/p&gt;
+
+&lt;iframe class=&#34;speakerdeck-iframe&#34; frameborder=&#34;0&#34; src=&#34;https://speakerdeck.com/player/3183d0c88c5f4de39daaeb464a2690c9&#34; title=&#34;現代のGPUの実行スタイルとレイトレ (2023)&#34; allowfullscreen=&#34;true&#34; style=&#34;border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;&#34; data-ratio=&#34;1.7777777777777777&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;「シェーダーではifが重い」という話はよく耳にしますが、これには古い情報や誤解が混ざっていることがあり、現代のGPUにおいては必ずしも正しいとは言えません。&lt;/p&gt;
+
+&lt;p&gt;現代のGPUにおいて、if文が性能にどのように影響するかを理解するためには、実行ダイバージェンスの観点からアプローチすることが重要です。
+また、現代のGPUにおける命令実行戦略、データダイバージェンス、キャッシュとメモリの速度の違い、Occupancy（GPUのリソース利用率）、そしてレイトレーシングにおけるダイバージェンスの問題など、さまざまな要因が影響を与えます。&lt;/p&gt;
+
+&lt;p&gt;残念ながら、このようなトピックに関するまとまった日本語の資料は少ないため、この発表は非常に貴重なものでした。
+シェーダーを扱う開発者は一度は目を通しておきたい発表でした！&lt;/p&gt;
+
+&lt;h2 id=&#34;0-0-1-0-の乱数を得るための-本当の-方法-by-h013&#34;&gt;[0.0, 1.0) の乱数を得るための“本当の”方法 by @h013&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/h013&#34;&gt;@h013&lt;/a&gt;さんによる「[0.0, 1.0) の乱数を得るための“本当の”方法」です。&lt;/p&gt;
+
+&lt;iframe class=&#34;speakerdeck-iframe&#34; frameborder=&#34;0&#34; src=&#34;https://speakerdeck.com/player/b000ac1dfa2d479d83756b0267d3f992&#34; title=&#34;[0.0, 1.0) の乱数を得るための“本当の”方法&#34; allowfullscreen=&#34;true&#34; style=&#34;border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;&#34; data-ratio=&#34;1.7777777777777777&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;code&gt;[0.0, 1.0)&lt;/code&gt; のfloatの乱数を生成する方法は自明ではなく、ほとんどのC++標準ライブラリーの &lt;code&gt;std::generate_canonical&lt;/code&gt; 実装では &lt;code&gt;[0.0, 1.0)&lt;/code&gt; が保証されていないというのは驚きでした。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;[0.0, 1.0)&lt;/code&gt; が保証される方法もパフォーマンス上の問題があったり、最適化の方法がさまざまに考案されていたり、こんなに乱数って奥が深かったんだと思いました。&lt;/p&gt;
+
+&lt;p&gt;これまで乱数について深く考えたことはなかったのですが、貴重な気づきが得られる発表でした。&lt;/p&gt;
+
+&lt;h2 id=&#34;volume-expression-ggx-microfacet-by-kinakomoti2357&#34;&gt;Volume Expression GGX(Microfacet) by @Kinakomoti2357&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/Kinakomoti2357&#34;&gt;@Kinakomoti2357&lt;/a&gt;さんによる「Volume Expression GGX(Microfacet)」です。&lt;/p&gt;
+
+&lt;iframe class=&#34;speakerdeck-iframe&#34; frameborder=&#34;0&#34; src=&#34;https://speakerdeck.com/player/d1ad5e65246047a4a6f87c7a8dbe398f&#34; title=&#34;Volume Expression GGX(Microfacet)&#34; allowfullscreen=&#34;true&#34; style=&#34;border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;&#34; data-ratio=&#34;1.7777777777777777&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;きなこもちさんは&lt;a href=&#34;https://booth.pm/ja/items/5004949&#34;&gt;GGXは何処から来たのか&lt;/a&gt;という本を書いた方で、導入のMicrofacet BRDFの説明が分かりやすかったです。
+レイトレを始めたばかりの人にもオススメできる内容でした。&lt;/p&gt;
+
+&lt;p&gt;個人的にMultiple-Scatteringの扱いについて気になっていたところだったので参考になりました。&lt;/p&gt;
+
+&lt;p&gt;本題のGGXのVolumeについても興味深い話だと思いました。&lt;/p&gt;
+
+&lt;h1 id=&#34;マテリアル神経衰弱&#34;&gt;マテリアル神経衰弱&lt;/h1&gt;
+
+&lt;p&gt;当日のレクリエーションとしてマテリアル神経衰弱が開催されました。&lt;/p&gt;
+
+&lt;p&gt;カード216枚もあり、ほとんど同じようなカードが多数存在するため、悪意を感じるような難易度の高さでした。&lt;/p&gt;
+
+&lt;p&gt;たとえば、同じ色でもplasticやphenolicなどの材質にバリエーションがあり、ほとんど同じにしか見えないが違うカードが多数ありました。&lt;/p&gt;
+
+&lt;p&gt;その難易度にもかかわらず、優勝チームはなんと3ペアを引き当てていました。すごすぎる…！&lt;/p&gt;
+
+&lt;p&gt;なお、カードはレイトレ合宿のためだけの特注品だそうです！&lt;/p&gt;
+
+&lt;p&gt;レクリエーションの内容は直前まで秘密にされていたため、合宿参加者は「一体何が起きるんだろう？」という気持ちで臨むことになりました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;マテリアル神経衰弱をしました &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/j4KSiKpGfR&#34;&gt;pic.twitter.com/j4KSiKpGfR&lt;/a&gt;&lt;/p&gt;&amp;mdash; hole (@h013) &lt;a href=&#34;https://twitter.com/h013/status/1697830574294249798?ref_src=twsrc%5Etfw&#34;&gt;September 2, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;マテリアル神経衰弱&lt;br&gt;どれも同じにしか見えない🤯&lt;br&gt; &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/DWP1CbosWD&#34;&gt;pic.twitter.com/DWP1CbosWD&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1697832084034003167?ref_src=twsrc%5Etfw&#34;&gt;September 2, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;部屋対抗マテリアル神経衰弱、優勝！！景品はマテリアルトランプ🃏 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/LyNN733b9B&#34;&gt;pic.twitter.com/LyNN733b9B&lt;/a&gt;&lt;/p&gt;&amp;mdash; Nishiki (@yknishidate) &lt;a href=&#34;https://twitter.com/yknishidate/status/1697924033504026778?ref_src=twsrc%5Etfw&#34;&gt;September 2, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; 9終了！今年から運営側でしたが変わらず楽しかったです。皆さまありがとうございました！&lt;br&gt;セミナーではベストに選んで頂きましたが、肝心の本戦に出せなかったので来年はリベンジ。&lt;br&gt;&lt;br&gt;写真はレクリエーション用に作ったMERL BRDFトランプによるハードコア神経衰弱 &lt;a href=&#34;https://t.co/FMioEzeoyp&#34;&gt;pic.twitter.com/FMioEzeoyp&lt;/a&gt;&lt;/p&gt;&amp;mdash; Shocker (@Shocker_0x15) &lt;a href=&#34;https://twitter.com/Shocker_0x15/status/1698268528355553623?ref_src=twsrc%5Etfw&#34;&gt;September 3, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;感想&#34;&gt;感想&lt;/h1&gt;
+
+&lt;p&gt;本戦は色々なアプローチに挑戦されている方が多く、多様性がありました。
+1位のうしおさんはボクセル、2位のholeさんはボリュームなど、計算時間的に難易度な高そうなテーマを扱いながら、ノイズがまったく分からない結果だったので印象的でした。&lt;/p&gt;
+
+&lt;p&gt;去年に引き続き、セミナーは参加者全員で発表しました。参加者のバックグラウンドもさまざまだったので、いろんな分野の興味深い話や深い話を聞くことができて楽しかったです。&lt;/p&gt;
+
+&lt;p&gt;Yoshi&amp;rsquo;s Dreannさんの&lt;a href=&#34;https://speakerdeck.com/runningoutrate/reitorehe-su-9seminazi-liao-svgfnituite&#34;&gt;SVGF&lt;/a&gt;やうでメガネさんの&lt;a href=&#34;https://www.docswell.com/s/udemegane/5247P4-2023-09-06-185245&#34;&gt;ReSTIR PT&lt;/a&gt;など、気になってはいるものの、なかなか手を出せていない手法も発表も多く、自分も頑張らねばとなりました。&lt;/p&gt;
+
+&lt;p&gt;さまざまなグラフィックスAPIにおけるレイトレの話もありました。kugiさんの&lt;a href=&#34;https://speakerdeck.com/kugimasa/webgpunihong-retemita&#34;&gt;WebGPU&lt;/a&gt;、Nishikiさんの&lt;a href=&#34;https://github.com/yknishidate/rtcamp9/blob/main/Vulkan%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E3%81%AE%E3%81%AF%E3%81%AA%E3%81%97.pdf&#34;&gt;Vulkan&lt;/a&gt;、Pentanさんの&lt;a href=&#34;https://github.com/Pentan/RaytracingCamp2019-23/blob/master/etc/2023/slides/seminar_slide.pdf&#34;&gt;Metal&lt;/a&gt;などです。&lt;/p&gt;
+
+&lt;p&gt;今年は新規の参加者も多かったので、色んな人とお話できるよい機会に恵まれました。&lt;/p&gt;
+
+&lt;p&gt;レイトレ合宿の運営の方々、その他の参加者のみなさん、本当にありがとうございました！&lt;/p&gt;
+
+&lt;h1 id=&#34;写真コーナー&#34;&gt;写真コーナー&lt;/h1&gt;
+
+&lt;p&gt;レイトレ合宿史上初の寺での開催でした。開催地を聞かされた時、お寺で合宿が可能なんだ…という驚きが強かったです。&lt;/p&gt;
+
+&lt;p&gt;最終日は朝4時からお勤めあったり、3食とも精進料理だったりと、生活リズムが健康的になりました。いい経験になりました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;お寺の朝は早い &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/jR0ZLg2wmR&#34;&gt;pic.twitter.com/jR0ZLg2wmR&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1697707181465100455?ref_src=twsrc%5Etfw&#34;&gt;September 1, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;朝食🍱 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/y6EHL5ug4e&#34;&gt;pic.twitter.com/y6EHL5ug4e&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1697737461554962700?ref_src=twsrc%5Etfw&#34;&gt;September 1, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;お昼は蕎麦🍜 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/7punHumnK8&#34;&gt;pic.twitter.com/7punHumnK8&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1697813390520139958?ref_src=twsrc%5Etfw&#34;&gt;September 2, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;夜ご飯🍱 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/RqQxodezxn&#34;&gt;pic.twitter.com/RqQxodezxn&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1697967291919683822?ref_src=twsrc%5Etfw&#34;&gt;September 2, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;日の出もとても綺麗でした🌅&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;放射状のライトシャフトすごい🌅 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/GnmDCd9N8Q&#34;&gt;pic.twitter.com/GnmDCd9N8Q&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1698063763306652078?ref_src=twsrc%5Etfw&#34;&gt;September 2, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;日の出🌅 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/EoIqfssRRf&#34;&gt;pic.twitter.com/EoIqfssRRf&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1698071301800526108?ref_src=twsrc%5Etfw&#34;&gt;September 2, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;フリータイム中に境内を散歩したときの写真たちです。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;お寺⛩️で &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/vGSi0BcIBn&#34;&gt;pic.twitter.com/vGSi0BcIBn&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1697463738268520496?ref_src=twsrc%5Etfw&#34;&gt;September 1, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;巨大な杉🌲 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/ljckfAnzUM&#34;&gt;pic.twitter.com/ljckfAnzUM&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1697745934405505036?ref_src=twsrc%5Etfw&#34;&gt;September 1, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;qme&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/oCVmNCFvC2&#34;&gt;pic.twitter.com/oCVmNCFvC2&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1697749270676529499?ref_src=twsrc%5Etfw&#34;&gt;September 1, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;海が見える &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/v9skl7fZnx&#34;&gt;pic.twitter.com/v9skl7fZnx&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1697749447936233824?ref_src=twsrc%5Etfw&#34;&gt;September 1, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;マテリアルとフォントが特徴的 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/ldQbjAjGkz&#34;&gt;pic.twitter.com/ldQbjAjGkz&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1697756752744481206?ref_src=twsrc%5Etfw&#34;&gt;September 1, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;qme&#34; dir=&#34;ltr&#34;&gt;⛩️ &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/tGxQ04mL2A&#34;&gt;pic.twitter.com/tGxQ04mL2A&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1697760465529786856?ref_src=twsrc%5Etfw&#34;&gt;September 1, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;瞑想で精神統一🧘 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/1wLEOw6GL1&#34;&gt;pic.twitter.com/1wLEOw6GL1&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1697776870610407885?ref_src=twsrc%5Etfw&#34;&gt;September 2, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;神社Now &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/TLUKeayQCB&#34;&gt;pic.twitter.com/TLUKeayQCB&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1698080450391191682?ref_src=twsrc%5Etfw&#34;&gt;September 2, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;見納めです🙏 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/Bjin2IOgLG&#34;&gt;pic.twitter.com/Bjin2IOgLG&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1698139360858927237?ref_src=twsrc%5Etfw&#34;&gt;September 3, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>『Unityバイブル R5夏号』の「Shader Graphの基本操作から発展的なテクニックまで」を執筆しました</title>
@@ -3645,834 +4114,6 @@ TDFのオーガナイザーの方々、エントリーしてくださったみ�
 &lt;h2 id=&#34;2021-12-03&#34;&gt;2021-12-03&lt;/h2&gt;
 
 &lt;p&gt;締切当日はコンパイル時間の削減をがんばっていた。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>リモートワーク「買って良かったモノ・買って失敗したモノ」</title>
-      <link>https://gam0022.net/blog/2021/08/23/best-buy/</link>
-      <pubDate>Mon, 23 Aug 2021 13:50:00 +0900</pubDate>
-      
-      <guid>https://gam0022.net/blog/2021/08/23/best-buy/</guid>
-      <description>&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
-
-&lt;p&gt;リモートワークになってから1年半が経過しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/2020/03/10/best-buy/&#34;&gt;去年&lt;/a&gt;も作業環境の紹介と商品レビューをしたのですが、1年半も経ったのでアップデートしようと思います。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-08-23-best-buy/desk.jpg&#34; alt=&#34;机&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;※これはアフィリエイト記事です。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;買って良かったモノ&#34;&gt;買って良かったモノ&lt;/h1&gt;
-
-&lt;p&gt;成功した買い物の振り返りです。&lt;/p&gt;
-
-&lt;h2 id=&#34;無線メカニカルキーボード&#34;&gt;無線メカニカルキーボード&lt;/h2&gt;
-
-&lt;p&gt;Logicoolの&lt;a href=&#34;https://amzn.to/3mkYYR3&#34;&gt;G913-TKL&lt;/a&gt;を使っています（2020/8～）。&lt;/p&gt;
-
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B088BYC54C&amp;linkId=46888f2d7de2e24dfd62106c3e31fc5b&#34;&gt;&lt;/iframe&gt;
-
-&lt;h3 id=&#34;良いポイント&#34;&gt;良いポイント&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;打鍵感が良い&lt;/li&gt;
-&lt;li&gt;キースイッチは3種類から選べる
-
-&lt;ul&gt;
-&lt;li&gt;クリッキー（青軸）←自分はこれ&lt;/li&gt;
-&lt;li&gt;リニア（赤軸）&lt;/li&gt;
-&lt;li&gt;タクタイル（茶軸）&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;ライトを光らせないならバッテリーの持ちが良い
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://twitter.com/gam0022/status/1322617333425139712&#34;&gt;87日間、毎日使用してバッテリー残量37%&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;テンキーレスで場所をとらない
-
-&lt;ul&gt;
-&lt;li&gt;テンキーは使わない派なので机のスペースを節約できてGOOD&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;キーボードレイアウトが無難
-
-&lt;ul&gt;
-&lt;li&gt;親指の位置に無変換・変換キーが配置されているのがGOOD
-
-&lt;ul&gt;
-&lt;li&gt;個人的に無変換・変換キーでIMEをON/OFFにしているため&lt;/li&gt;
-&lt;li&gt;FILCOのキーボードもテンキーレスの無難なレイアウトだが、スペースキーが大きすぎるため選択肢から外した&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;音量のダイヤルが便利
-
-&lt;ul&gt;
-&lt;li&gt;不要だろうと思っていたが、意外に便利&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;全体的にデザインが良い
-
-&lt;ul&gt;
-&lt;li&gt;ライトをOFFにすると無刻印っぽくてカッコいい&lt;/li&gt;
-&lt;li&gt;ボディはアルミ製&lt;/li&gt;
-&lt;li&gt;ゴミが溜まりにくい構造&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;薄型なのでパームレストがなくても使える&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;3万円の光るオモチャです！&lt;br&gt;カッコいいし最高！😆 &lt;a href=&#34;https://t.co/RsdBEgZpn3&#34;&gt;pic.twitter.com/RsdBEgZpn3&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1292653375926894592?ref_src=twsrc%5Etfw&#34;&gt;August 10, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;悪いポイント&#34;&gt;悪いポイント&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;PS5では認識しない
-
-&lt;ul&gt;
-&lt;li&gt;ちなみにELECOMの&lt;a href=&#34;https://amzn.to/3kiLzq3&#34;&gt;TK-FDM105TXBK&lt;/a&gt;という1500円くらいの安価な無線のメンブレンキーボードであれば認識する&lt;/li&gt;
-&lt;li&gt;LIGHTSPEEDというLogicool独自のワイヤレス規格だからかもしれないと思い、Bluetoothで接続しても「PS5はこのBluetooth機器に対応していません」となる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;値段が高い
-
-&lt;ul&gt;
-&lt;li&gt;現時点のAmazon価格が25,360円&lt;/li&gt;
-&lt;li&gt;大きな欠点はない商品なので、個人的には妥当な価格&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;充電ケーブルがmicro USB Type-B
-
-&lt;ul&gt;
-&lt;li&gt;USB Type-Cが良かった&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;誤解を生まないように補足すると、&lt;br&gt;G913 TKLは本当に素晴らしいキーボードです。&lt;br&gt;&lt;br&gt;でもなぜか PS4/PS5 未対応でした。念の為にbluetoothとUSBレシーバーの両方で試しましたが、どちらもダメでした。 &lt;a href=&#34;https://t.co/4uTnb5HibI&#34;&gt;pic.twitter.com/4uTnb5HibI&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1359745575743201289?ref_src=twsrc%5Etfw&#34;&gt;February 11, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;無線マウス&#34;&gt;無線マウス&lt;/h2&gt;
-
-&lt;p&gt;LogicoolのG502WLという無線のマウスを使っています（2021/3～）。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;3日ぶりにマウスを購入しました！（買い物が下手すぎる…🙄）&lt;br&gt;&lt;br&gt;今度はG502WLというクワガタみたいなやつです。&lt;br&gt;&lt;br&gt;G703h（3枚目の写真の奥）は全体的には良かったのですが、ホイールクリックが硬くて深すぎるのと、自分の手には少しサイズが大きすぎましたね😢 &lt;a href=&#34;https://t.co/O6NeYwnc2o&#34;&gt;pic.twitter.com/O6NeYwnc2o&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1373234586881122314?ref_src=twsrc%5Etfw&#34;&gt;March 20, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B07RR94VQT&amp;linkId=0e8f91eb0af540ef2a5c961b9a460f9a&#34;&gt;&lt;/iframe&gt;
-
-&lt;h3 id=&#34;良いポイント-1&#34;&gt;良いポイント&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;持ちやすい
-
-&lt;ul&gt;
-&lt;li&gt;高さが低め（4cm）&lt;/li&gt;
-&lt;li&gt;「つまみ持ち・つかみ持ち」の人には最適な高さ&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;カスタマイズ可能なボタンの位置が押しやすく、誤操作しずらい
-
-&lt;ul&gt;
-&lt;li&gt;親指と人差し指の位置に集約されている&lt;/li&gt;
-&lt;li&gt;G HUBでアプリケーションごとにカスタマイズも可能&lt;/li&gt;
-&lt;li&gt;ゲームだけでなくUnity Editorのショートカットに割り当ても可能&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;悪いポイント-1&#34;&gt;悪いポイント&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;バッテリーの持ちが悪い
-
-&lt;ul&gt;
-&lt;li&gt;ライトをOFFにしても1週間くらいでバッテリーが切れる&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://amzn.to/3j5IQAI&#34;&gt;G-PMP-001 POWERPLAY&lt;/a&gt;という専用のマウスパッドを買えば充電しながら使える
-
-&lt;ul&gt;
-&lt;li&gt;Amazon価格で17,523円&lt;/li&gt;
-&lt;li&gt;個人的にマウスパッドは不要なので未購入&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;充電ケーブルがmicro USB Type-B
-
-&lt;ul&gt;
-&lt;li&gt;USB Type-Cが良かった&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;G HUBの使い勝手が悪い
-
-&lt;ul&gt;
-&lt;li&gt;設定に手間がかかる&lt;/li&gt;
-&lt;li&gt;使い方を理解するのが難しい&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;echo-dot-nature-remo-mini-meross&#34;&gt;Echo Dot + Nature Remo mini + Meross&lt;/h2&gt;
-
-&lt;p&gt;Echo Dot 第3世代とNature Remo miniのセットを買いました（2020/10～）。&lt;/p&gt;
-
-&lt;p&gt;買う前は便利なのか半信半疑でしたが、エアコン等の家電の操作を音声できるため便利です。&lt;/p&gt;
-
-&lt;p&gt;寝る時に「Alexa おやすみ」で家電を一括OFFにして、「Alexa おはよう」で家電を一括ONもできます。&lt;/p&gt;
-
-&lt;p&gt;細かい設定は別記事にしようと思いますが、このような家電をAlexaで管理しています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;照明&lt;/li&gt;
-&lt;li&gt;エアコン&lt;/li&gt;
-&lt;li&gt;PCの電源&lt;/li&gt;
-&lt;li&gt;モニターの電源&lt;/li&gt;
-&lt;li&gt;加湿器（冬場のみ）&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;echo dot と Nature Remo mini が届いたのでセットアップした！ &lt;a href=&#34;https://t.co/04VoZShslL&#34;&gt;pic.twitter.com/04VoZShslL&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1317044797601804288?ref_src=twsrc%5Etfw&#34;&gt;October 16, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B07PFFMQ64&amp;linkId=20a74e386150dd6529d9622e885c1f2d&#34;&gt;&lt;/iframe&gt;
-
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B07CWNLHJ8&amp;linkId=20656060e550fcb1afeac74887ba421f&#34;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;Nature Remoはリモコンの赤外線を再現することで家電を制御するので、リモコン制御のほとんどの家電を操作できます。&lt;/p&gt;
-
-&lt;p&gt;リモコン制御できないものは、Merossというスマートプラグを利用しました。
-こちらはコンセントの電流のON/OFFしかできないので、加湿器や照明のように単純な家電にしか使わないほうが良いと思います。&lt;/p&gt;
-
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B08BRX8BLZ&amp;linkId=7b71e4efd068fb20a331df1fe4b101e3&#34;&gt;&lt;/iframe&gt;
-
-&lt;h3 id=&#34;悪かった点-echo-dot-第3世代&#34;&gt;悪かった点（Echo Dot 第3世代）&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;PCのBluetoothスピーカーとして利用すると、一時停止しているブラウザの動画や音楽が勝手に再生される&lt;/li&gt;
-&lt;li&gt;音質が悪い
-
-&lt;ul&gt;
-&lt;li&gt;音楽の再生用途としては厳しい音質&lt;/li&gt;
-&lt;li&gt;スマートスピーカーとしては問題ない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;echo dotをPCのbluetoothスピーカーとして利用中。&lt;br&gt;&lt;br&gt;概ね快適だけど、困ったところが1つがある。&lt;br&gt;&lt;br&gt;一時停止しているブラウザの動画や音楽が勝手に再生される現象が発生する。&lt;br&gt;&lt;br&gt;設定などで解決できるならなんとかしたい…&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1320651494853496834?ref_src=twsrc%5Etfw&#34;&gt;October 26, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;ウェブカメラ&#34;&gt;ウェブカメラ&lt;/h2&gt;
-
-&lt;p&gt;オンライン会議のときだけノートPCを利用していましたが、デスクトップPCがメインになったのでWebカメラを買いました（2021/2～）。&lt;/p&gt;
-
-&lt;p&gt;ノートPCを机の上から撤去できてスッキリとしました。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;AmazonのタイムセールだったのでWebカメラを買った。&lt;br&gt;これでWeb会議専用のノートPCを机から撤去できる！ &lt;a href=&#34;https://t.co/GVNGPE4PD9&#34;&gt;pic.twitter.com/GVNGPE4PD9&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1356196732774715399?ref_src=twsrc%5Etfw&#34;&gt;February 1, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B07QQR6G5N&amp;linkId=c3bebf8f73b1de0ed73be0721c504fff&#34;&gt;&lt;/iframe&gt;
-
-&lt;h3 id=&#34;良いポイント-2&#34;&gt;良いポイント&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;画質や機能は必要十分&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;悪いポイント-2&#34;&gt;悪いポイント&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;長時間（6時間以上）利用していると映像が止まることもある
-
-&lt;ul&gt;
-&lt;li&gt;ZoomやMeet上でカメラのON/OFFで治るので致命的ではない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;画角（視野角）が78°は広すぎる
-
-&lt;ul&gt;
-&lt;li&gt;部屋全体が写りやすい&lt;/li&gt;
-&lt;li&gt;ZoomやMeetのバーチャル背景が実装されてからはそこまで気にならない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;付属アプリのLogicool Captureの使い勝手は微妙
-
-&lt;ul&gt;
-&lt;li&gt;画角が広すぎる場合はトリミング等ができる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;画角が広すぎワロタと思っていたが、Logicool Captureという専用アプリをインストールしたら、画角と中央位置を調整できた👍&lt;a href=&#34;https://t.co/NtxdPFxtyd&#34;&gt;https://t.co/NtxdPFxtyd&lt;/a&gt; &lt;a href=&#34;https://t.co/LlDo5W5M2Q&#34;&gt;pic.twitter.com/LlDo5W5M2Q&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1356197321407569926?ref_src=twsrc%5Etfw&#34;&gt;February 1, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;無線ヘッドセット&#34;&gt;無線ヘッドセット&lt;/h2&gt;
-
-&lt;p&gt;オンライン会議用にヘッドセット（&lt;a href=&#34;https://amzn.to/381p6Ig&#34;&gt;Logicool G733&lt;/a&gt;）を買いました（2021/2～）。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;またヘッドセットを買った🎧 &lt;a href=&#34;https://t.co/lgjaztw8Mk&#34;&gt;pic.twitter.com/lgjaztw8Mk&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1356513514437795843?ref_src=twsrc%5Etfw&#34;&gt;February 2, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B08FSYJ92M&amp;linkId=f2e4c3f1ba886551661d8e91f7883115&#34;&gt;&lt;/iframe&gt;
-
-&lt;h3 id=&#34;良いポイント-3&#34;&gt;良いポイント&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;音質が良い・遅延がない
-
-&lt;ul&gt;
-&lt;li&gt;SONYのノイズキャンセリングヘッドホン&lt;a href=&#34;https://amzn.to/32NECE6&#34;&gt;WH-1000XM3&lt;/a&gt;の場合
-
-&lt;ul&gt;
-&lt;li&gt;体感できるレベルの遅延がある&lt;/li&gt;
-&lt;li&gt;マイクを有効にすると顕著に音質が劣化する&lt;/li&gt;
-&lt;li&gt;Bluetoothの仕様上、帯域が狭いので仕方がない可能性&lt;/li&gt;
-&lt;li&gt;色んなBluetoothのレシバーを購入したが改善しなかった&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;これらの問題がすべて解決したので、初手でこれを買えばよかった…&lt;/strong&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Bluetoothはトラブルが多いので、今後は避ける予定&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;マイクも問題ない
-
-&lt;ul&gt;
-&lt;li&gt;同僚から声が聞き取りやすくなったと評判だった（WH-1000XM3と比較して）&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;再生・一時停止ボタンがある
-
-&lt;ul&gt;
-&lt;li&gt;初期設定だとマイクのON/OFFになっているが、G HUBでカスタマイズが可能&lt;/li&gt;
-&lt;li&gt;家事をしながら音楽を再生しているときにポーズできる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;音量調整のボタンがある&lt;/li&gt;
-&lt;li&gt;PS5でも使用可能
-
-&lt;ul&gt;
-&lt;li&gt;ちなみにPS5ではBluetoothのヘッドセットは使用不可（WH-1000XM3で検証済み）&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;悪いポイント-3&#34;&gt;悪いポイント&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Bluetooth未対応
-
-&lt;ul&gt;
-&lt;li&gt;iPhoneと接続できない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;椅子&#34;&gt;椅子&lt;/h2&gt;
-
-&lt;p&gt;AKRACINGのゲーミングチェアを使っています（2018/7～）。&lt;/p&gt;
-
-&lt;p&gt;長時間集中して作業するためには、椅子は身体に負担のかからないちゃんとしたものを選ぶべきかと思います。&lt;/p&gt;
-
-&lt;p&gt;ゲーミングチェアを買う以前は、無印良品の&lt;a href=&#34;https://www.muji.com/jp/ja/store/cmdty/section/S10305&#34;&gt;体にフィットするソファ&lt;/a&gt;へ座りながらコタツで作業していましたが、姿勢が安定しないせいで身体を痛めそうですし作業にも集中できませんでした…&lt;/p&gt;
-
-&lt;p&gt;このゲーミングチェアは腰と首の位置にそれぞれサポートがあり、長時間座っていても疲労感が少ないです。&lt;/p&gt;
-
-&lt;p&gt;それから、賃貸に住んでいるため、キャスターで床が傷つかないかどうか、わりと心配していました。&lt;/p&gt;
-
-&lt;p&gt;このゲーミングチェアは床を傷つけにくいキャスターを採用していて、実際に床に直接置いてずっと使用していますが、まったく気にならないです！&lt;/p&gt;
-
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B01G8E6NZW&amp;linkId=c4ebe4bcb67905f67849a9e72c1de0be&#34;&gt;&lt;/iframe&gt;
-
-&lt;h3 id=&#34;良いポイント-4&#34;&gt;良いポイント&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;素材の硬さが絶妙で、長時間座っていてもお尻や腰が痛くならない&lt;/li&gt;
-&lt;li&gt;腰の位置のランバーサポートがとても良くて、深く腰掛けても腰椎がサポートされて体が痛くならない&lt;/li&gt;
-&lt;li&gt;フローリング床に傷をつけにくいPU（ポリウレタン）製キャスターを採用&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;悪いポイント-4&#34;&gt;悪いポイント&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;レザーのパーツが摩耗してきた（経年劣化の許容範囲）&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;補足&#34;&gt;補足&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://amzn.to/32NiM3y&#34;&gt;最上位のモデル&lt;/a&gt;だと座面チルト機能があるので、リクライニングをよく使う人は、こっちを買ったほうがいいかもしれません。&lt;/p&gt;
-
-&lt;p&gt;AKRACINGのゲーミングチェアはAmazonのセールで毎回セール対象になっているので、セールを狙って買うのが良いかもしれません。自分もセールのときに買いました。&lt;/p&gt;
-
-&lt;h2 id=&#34;机&#34;&gt;机&lt;/h2&gt;
-
-&lt;p&gt;LOWYAの&lt;a href=&#34;https://item.rakuten.co.jp/low-ya/f802-g1021-100/?s-id=ph_pc_itemname&#34;&gt;デスク&lt;/a&gt;を使っています（2018/1～）。&lt;/p&gt;
-
-&lt;h3 id=&#34;良いポイント-5&#34;&gt;良いポイント&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;140cm x 70cmの大きさなので、作業スペースに困らない
-
-&lt;ul&gt;
-&lt;li&gt;例: ノートパソコンとデスクトップPCを並行して使える&lt;/li&gt;
-&lt;li&gt;個人的にL字型よりシンプルな形の方が好き&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;モニターアームを設置できるスペースが広い
-
-&lt;ul&gt;
-&lt;li&gt;引き出しのある手前側以外はどこでもモニターアームを取り付けられる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;2年利用して、大きな問題なし&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;奥行きが 70cm あるため、ノートパソコンやA6サイズのキャンパスノートと併用しても十分な作業スペースが確保できます。&lt;/p&gt;
-
-&lt;!--
-
-![キャンパスノートと併用](/images/posts/2020-03-04-best-buy/mac-open2.jpg)
-
-![Macを開いた状態](/images/posts/2020-03-04-best-buy/mac-open.jpg)
-
---&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2020-03-04-best-buy/mac-close2.jpg&#34; alt=&#34;Macを閉じた状態&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;悪いポイント-5&#34;&gt;悪いポイント&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;角が角張っているので、腕などに擦れて塗装がハゲる。腕が痛い
-
-&lt;ul&gt;
-&lt;li&gt;姿勢によっては角が腕にあたって痛く感じるかもしれない&lt;/li&gt;
-&lt;li&gt;欲を言えば角が丸く加工してあるタイプの方が良いかもしれない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;角で腕が痛い問題&#34;&gt;角で腕が痛い問題&lt;/h3&gt;
-
-&lt;p&gt;TRUSCO(トラスコ)の安心クッションを机の角に接着して解決しました（2020/9～）。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;机の角が当たって痛いのでL字型のクッションを装着した。&lt;br&gt;思ったより快適になった気がする！&lt;br&gt;厚さ（高さ）もいい感じ。&lt;a href=&#34;https://t.co/B5KKp36AJ5&#34;&gt;https://t.co/B5KKp36AJ5&lt;/a&gt;&lt;br&gt;&lt;br&gt;TRUSCO(トラスコ) 安心クッション L字型 大 1本入 ブラック TAC-08 &lt;a href=&#34;https://t.co/uXuOTEeXkx&#34;&gt;pic.twitter.com/uXuOTEeXkx&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1308303960793513984?ref_src=twsrc%5Etfw&#34;&gt;September 22, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B00B4T9H78&amp;linkId=2a5612e0f7f8f735b6d55d0f932e3fb2&#34;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;掃除がしずらいという問題もありますが、痛いよりは良いのでこれで運用しています。&lt;/p&gt;
-
-&lt;h3 id=&#34;配線がカオス問題の解決&#34;&gt;配線がカオス問題の解決&lt;/h3&gt;
-
-&lt;p&gt;配線を整理することで掃除機がけが非常に楽になりました。&lt;/p&gt;
-
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B00BP4S3D6&amp;linkId=740a76ea7dc29b96d1759610b75a4fc5&#34;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;掃除機をかけやすくした☺️ &lt;a href=&#34;https://t.co/hMHo0C2Iwb&#34;&gt;pic.twitter.com/hMHo0C2Iwb&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1323846467191123976?ref_src=twsrc%5Etfw&#34;&gt;November 4, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;LOWYAのデスクだと高さがギリギリだったので、本当に設置できるか寸法は確認したほうが良いと思います。&lt;/p&gt;
-
-&lt;h2 id=&#34;モニター&#34;&gt;モニター&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://amzn.to/2IlWooI&#34;&gt;I-O DATAの31.5型 WQHDのモニター EX-LDQ322DB&lt;/a&gt;を使っています（2018/5～）。&lt;/p&gt;
-
-&lt;p&gt;※私が購入したのは1つ前のEX-LDQ321DBというモデルでしたが、今買うなら後継機のEX-LDQ322DBでいい気がします。&lt;/p&gt;
-
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B0816PPCHZ&amp;linkId=89b2d4f31835374d62ee072f4c3d6bea&#34;&gt;&lt;/iframe&gt;
-
-&lt;h3 id=&#34;良いポイント-6&#34;&gt;良いポイント&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;WQHD（2560x1440）の解像度は使いやすい
-
-&lt;ul&gt;
-&lt;li&gt;Windows用の高DPI環境のスケーリングに対応したアプリが少ないので、現状では4K解像度は使いづらい（個人の意見）&lt;/li&gt;
-&lt;li&gt;スケーリングなしに広すぎず狭すぎず、ちょうどよいくらいの解像度&lt;/li&gt;
-&lt;li&gt;4K解像度でスケーリングなしだと文字が小さすぎて実用性が低い&lt;/li&gt;
-&lt;li&gt;アスペクト比が16:9なので、全画面でゲームしたり動画鑑賞するときに無難&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;31.5インチだと、スケーリングなしで普通に文字が読めるくらいの大きさになる
-
-&lt;ul&gt;
-&lt;li&gt;WQHDや4Kの高解像度なら、30インチ未満はやめておいたほうがいいかも&lt;/li&gt;
-&lt;li&gt;4Kで40インチ以上であれば、スケーリングは不要そうだが、置き場所に困る&lt;/li&gt;
-&lt;li&gt;40インチだと視野が広くないと厳しそう（想像）&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;結論として、WQHDの31インチが作業用としては最適
-
-&lt;ul&gt;
-&lt;li&gt;Macがメインならスケーリングありで30インチ前後の4K解像度の方が快適かも&lt;/li&gt;
-&lt;li&gt;最近はWindowsがメインの開発環境のため、WQHDを選択&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;悪いポイント-6&#34;&gt;悪いポイント&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;リモコンで操作できない（悪いというほどではない）
-
-&lt;ul&gt;
-&lt;li&gt;Nature Remoで操作できれば完璧だった&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;補足-1&#34;&gt;補足&lt;/h3&gt;
-
-&lt;p&gt;なぜかWQHDの製品はほとんど発売されていないので、選択肢はI-O DATAくらいしかありません。もっと色んなメーカーから発売して欲しいです。&lt;/p&gt;
-
-&lt;p&gt;机が大きすぎて、モニターのスケール感が伝わりにくいと思ったので、キーボードとティッシュ箱と並べた様子です。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2020-03-04-best-buy/display.jpg&#34; alt=&#34;ディスプレイ&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;モニターアーム&#34;&gt;モニターアーム&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://amzn.to/39pDucj&#34;&gt;エルゴトロン LX デスクマウント モニターアーム&lt;/a&gt;を使っています（2019/7～）。&lt;/p&gt;
-
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B00689HXI4&amp;linkId=3a2e16eee065f517d43c3742428d038b&#34;&gt;&lt;/iframe&gt;
-
-&lt;h3 id=&#34;良いポイント-7&#34;&gt;良いポイント&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;スクリーンサイズ：34インチまで、荷重範囲：3.2㎏から11.3㎏までなので、前述のWQHDのモニターでも余裕でホールドできる
-
-&lt;ul&gt;
-&lt;li&gt;2年以上使っているが、自重で落ちることはない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;昇降範囲:33cmなので、高めの位置でもホールドできる
-
-&lt;ul&gt;
-&lt;li&gt;ノートPCと併用して利用するときに便利&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;机を壁ギリギリまで配置できて空間が無駄にならない&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2020-03-04-best-buy/monitor-arm.jpg&#34; alt=&#34;モニターアーム&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;ノイズキャンセリングヘッドホン&#34;&gt;ノイズキャンセリングヘッドホン&lt;/h2&gt;
-
-&lt;p&gt;SONYのノイズキャンセリングヘッドホン&lt;a href=&#34;https://amzn.to/32NECE6&#34;&gt;WH-1000XM3&lt;/a&gt;を使っています（2019/2～）。&lt;/p&gt;
-
-&lt;p&gt;G733を買ってから使用頻度は減りましたが、外出時にiPhoneで音楽を聞きたいときや、部屋でノイズキャンセリングが欲しい場面では使っています。&lt;/p&gt;
-
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B07GZ8DZC8&amp;linkId=b56ce3f9b6fc28eb3b74dee541fddb33&#34;&gt;&lt;/iframe&gt;
-
-&lt;h3 id=&#34;良いポイント-8&#34;&gt;良いポイント&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ノイズキャンセリング性能が神
-
-&lt;ul&gt;
-&lt;li&gt;外したときに雑音が気になりすぎて、ノイズキャンセリングのない状態に戻れなくなるレベル&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;バッテリーが30時間くらい持つので、1日中使える
-
-&lt;ul&gt;
-&lt;li&gt;毎日、寝る前に充電して、朝から夜まで利用可能&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;ワイヤレスが最高すぎる
-
-&lt;ul&gt;
-&lt;li&gt;もう有線には戻れない&lt;/li&gt;
-&lt;li&gt;そもそも最近のiPhoneはイヤホンジャックがない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;有線でも利用可能なので、飛行機で映画を見るときにも使える&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;悪いポイント-7&#34;&gt;悪いポイント&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;長時間利用すると圧迫感や蒸れが気になる
-
-&lt;ul&gt;
-&lt;li&gt;この製品の問題というより、ヘッドフォン自体の特徴&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;マイクの性能が悪い
-
-&lt;ul&gt;
-&lt;li&gt;Bluetoohのコーデック上の問題かもしれない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;音の遅延がある
-
-&lt;ul&gt;
-&lt;li&gt;Bluetoohのコーデック上の問題かもしれない&lt;/li&gt;
-&lt;li&gt;音ゲーなどをする人は影響がある&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;イヤークッションの蒸れる-雑菌が繁殖する問題の解決&#34;&gt;イヤークッションの蒸れる・雑菌が繁殖する問題の解決&lt;/h3&gt;
-
-&lt;p&gt;イヤークッションを交換し、カバーをかけることで緩和しました。&lt;/p&gt;
-
-&lt;p&gt;レザーはアルコール消毒で痛むため、皮脂などの汚れを落とすことが難しく、そもそも肌に触れないように使用すべきというのが個人的な結論です。&lt;/p&gt;
-
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B082B4WPNS&amp;linkId=a3789b3da5ffd075781c51ec72b0be3d&#34;&gt;&lt;/iframe&gt;
-
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B07QHD7S2L&amp;linkId=e3a29ddf7c8e907bf8d9230b1fabb928&#34;&gt;&lt;/iframe&gt;
-
-&lt;h2 id=&#34;pc&#34;&gt;PC&lt;/h2&gt;
-
-&lt;p&gt;ドスパラのCore i7-9700K / RTX2070搭載のフルタワー型のPCを使っています。&lt;/p&gt;
-
-&lt;h3 id=&#34;メモリを増設&#34;&gt;メモリを増設&lt;/h3&gt;
-
-&lt;p&gt;メモリ32GBを追加し、合計48GBになりました（2021/3～）。&lt;/p&gt;
-
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B093GNJS1T&amp;linkId=074f2b41d30705649bd2bb414c9c62df&#34;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;メモリを48GBに増設！&lt;br&gt;&lt;br&gt;DDR4 3200Mhzのメモリだったが、&lt;br&gt;何も設定せずに2666Mhzで動作して良かった👍&lt;br&gt;&lt;br&gt;メモリの外装は深い赤色🧧&lt;br&gt;Amazonの写真よりかっこいい⭐️ &lt;a href=&#34;https://t.co/oVZsP7PS4x&#34;&gt;pic.twitter.com/oVZsP7PS4x&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1374223664846053378?ref_src=twsrc%5Etfw&#34;&gt;March 23, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;購入する前に互換性のチェックをしておくと買い物に失敗しません。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;マザーボードの型番を調べる&lt;/li&gt;
-&lt;li&gt;メーカーページのメモリのサポート一覧（&lt;a href=&#34;https://www.asus.com/jp/Motherboards-Components/Motherboards/All-series/PRIME-B365-PLUS/HelpDesk_QVL/&#34;&gt;例&lt;/a&gt;）を参照し、購入予定のメモリがリストアップされていることを確認&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;インターネット回線&#34;&gt;インターネット回線&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.nuro.jp/hikari/&#34;&gt;NURO光&lt;/a&gt;は安くて速いので、3年以上引っ越す予定がなければ、個人的にはオススメできます。&lt;/p&gt;
-
-&lt;p&gt;NURO光 for マンションに加入できる物件なら、月2500円程度なのでかなりコスパが良いです。
-戸建てプランだと月5000円程度になってしまいます。&lt;/p&gt;
-
-&lt;p&gt;月額料金とは別に4万円の工事費が30か月の分割払いになりますが、&lt;a href=&#34;https://www.hikari-au.net/nuro/install/fee&#34;&gt;途中解約しなければ実質無料&lt;/a&gt;になります。&lt;/p&gt;
-
-&lt;p&gt;3年未満で解約してしまうと、残りの工事費用を一括で支払う必要があるので、割高になってしまう可能性があります。&lt;/p&gt;
-
-&lt;p&gt;※この記事を鵜呑みにせず最新の情報を各自で調べてください。加入できるプランや条件は申し込み時期や物件ごとに変わりますし、料金プランが非常に複雑なのでこの記事では説明しません。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;NURO 光 for マンション開通記念🎉&lt;br&gt;この速度で月額税別2500円なのは強い😉 &lt;a href=&#34;https://t.co/ompihOEwY5&#34;&gt;pic.twitter.com/ompihOEwY5&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1228952083698569216?ref_src=twsrc%5Etfw&#34;&gt;February 16, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;ファイアウォール機能-ipv6のspi機能の有効化&#34;&gt;ファイアウォール機能・IPv6のSPI機能の有効化&lt;/h3&gt;
-
-&lt;p&gt;NURO光の契約時にレンタルできるZTE製ONU（F660A）のデフォルト設定にはセキュリティ上の問題があるため、ファイアウォール機能・IPv6のSPI機能を有効にして利用しています。詳しくは次の記事を参考にしてください。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://yukimomiji.net/nuro-onu-f660a-firewall-setting/&#34;&gt;NURO光のONUのファイアウォール機能を有効にしたメモ | ゆきろぐ&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;lanケーブルをcat6aに変更&#34;&gt;LANケーブルをCat6Aに変更&lt;/h3&gt;
-
-&lt;p&gt;PCとPS5用のLANケーブルをCat6Aに変更しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;LANケーブルを選ぶための有益情報です。&lt;br&gt;&lt;br&gt;・カテゴリ6A UTPを買いましょう。&lt;br&gt;・RJ-45のカテゴリ7は規格不適合品&lt;br&gt;・一般家庭でSTPケーブルが使えるようなアースを準備するのは非常に難しい&lt;br&gt;・カテゴリ7以上はSTPケーブルが必須&lt;br&gt;・カテゴリ7は家庭用には適しておらず非推奨&lt;a href=&#34;https://t.co/KnZqRiwdvG&#34;&gt;https://t.co/KnZqRiwdvG&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1360555713156640770?ref_src=twsrc%5Etfw&#34;&gt;February 13, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;買って失敗したモノ&#34;&gt;買って失敗したモノ&lt;/h1&gt;
-
-&lt;p&gt;無駄な買い物の振り返りです。&lt;/p&gt;
-
-&lt;h3 id=&#34;有線ヘッドセット&#34;&gt;有線ヘッドセット&lt;/h3&gt;
-
-&lt;p&gt;個人的に有線は邪魔でした。&lt;/p&gt;
-
-&lt;p&gt;G733（無線）を購入したので、G433（有線）は倉庫番になってしまいました。買い物を失敗したと思います。&lt;/p&gt;
-
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B071GBFYT4&amp;linkId=2069d47e7e06263faacf71a9fda9568c&#34;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;買い物が下手すぎる人の写真です。&lt;br&gt;&lt;br&gt;左から順に、&lt;br&gt;・SONY WH-1000XM3（bluetooth）&lt;br&gt;・Logicool G433（有線）&lt;br&gt;・Logicool G733（無線） &lt;a href=&#34;https://t.co/uapx5cXnKg&#34;&gt;pic.twitter.com/uapx5cXnKg&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1356514427550400518?ref_src=twsrc%5Etfw&#34;&gt;February 2, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;無線マウス-1&#34;&gt;無線マウス&lt;/h3&gt;
-
-&lt;p&gt;G703hは評判が良い製品でしたが、自分には合わなかったので3時間くらいで使わなくなりました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;マウスのホイールクリックが硬すぎる&lt;/li&gt;
-&lt;li&gt;高さが大きすぎる（4.3cm）
-
-&lt;ul&gt;
-&lt;li&gt;「つまみ持ち・つかみ持ち」にはNG&lt;/li&gt;
-&lt;li&gt;おそらく「かぶせ持ち」にはOK&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B07SYKKP47&amp;linkId=d0aad011c54de02b7fac25b3a9bc447f&#34;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;G703hという無線のマウスを購入しました！&lt;br&gt;&lt;br&gt;これまで使用していたマウスは壊れました… &lt;a href=&#34;https://t.co/Ayu9UCYjNj&#34;&gt;pic.twitter.com/Ayu9UCYjNj&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1372101400570732545?ref_src=twsrc%5Etfw&#34;&gt;March 17, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;キーボード&#34;&gt;キーボード&lt;/h3&gt;
-
-&lt;p&gt;PC用のG913-TKLとPS5用のTK-FDM105TXBKしか使っていません。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;買い物が下手そう🤣 &lt;a href=&#34;https://t.co/szr0QZ0mPN&#34;&gt;pic.twitter.com/szr0QZ0mPN&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1401029798017654788?ref_src=twsrc%5Etfw&#34;&gt;June 5, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;番外編&#34;&gt;番外編&lt;/h1&gt;
-
-&lt;p&gt;デスク周りではないですが、リモートワークの健康管理と生活、ステイホームに関連して買ってよかったモノの振り返りです。&lt;/p&gt;
-
-&lt;h2 id=&#34;oculus-quest-2&#34;&gt;Oculus Quest 2&lt;/h2&gt;
-
-&lt;p&gt;VRヘッドセットのOculus Quest 2を買いました（2020/10～）。&lt;/p&gt;
-
-&lt;p&gt;HTC Viveからの乗り換えです。&lt;/p&gt;
-
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B09B9F7439&amp;linkId=c81b9e4085271b5f91acbafd67a44d6e&#34;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Oculus Quest 2、届きました！&lt;br&gt;予定より1日早いので嬉しい😆 &lt;a href=&#34;https://t.co/etooBjyPIn&#34;&gt;pic.twitter.com/etooBjyPIn&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1321634309778808833?ref_src=twsrc%5Etfw&#34;&gt;October 29, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;Linkケーブル（USB-C to USB-A 3.0 ケーブル）は買ったけどまったく使わなかったので、買い物に失敗しました。&lt;/p&gt;
-
-&lt;h3 id=&#34;良いポイント-9&#34;&gt;良いポイント&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;完全ワイヤレスでPC VRが使える（Virtual Desktopを利用）
-
-&lt;ul&gt;
-&lt;li&gt;遅延なども感じない&lt;/li&gt;
-&lt;li&gt;現在はAir Link（Oculus公式機能）で無線化できるらしいが未検証&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;スタンドアローンでも動作する
-
-&lt;ul&gt;
-&lt;li&gt;運動不足解消のために毎日のBeat Saberが日課&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;HTC Viveと比較
-
-&lt;ul&gt;
-&lt;li&gt;解像度が高い&lt;/li&gt;
-&lt;li&gt;ベースステーションが不要
-
-&lt;ul&gt;
-&lt;li&gt;Nature RemoとHTC Viveのベースステーションが干渉していたので、個人的には大きなメリット&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;値段が安い
-
-&lt;ul&gt;
-&lt;li&gt;圧倒的コストパフォーマンス&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;悪いポイント-8&#34;&gt;悪いポイント&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Facebookアカウントが必須
-
-&lt;ul&gt;
-&lt;li&gt;発売当初はFacebookアカウントがBANされて文鎮化した人が続出。大きな話題に&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.moguravr.com/oculus-quest-2-facebook-account-problem/&#34;&gt;Oculus Quest 2のアカウント凍結問題 Facebook側の回答は？【10月15日追記】&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Quest 2 Eliteストラップは通常使用でヒビが入った
-
-&lt;ul&gt;
-&lt;li&gt;完全には壊れていないのでテープで補強して利用中&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;裸眼で遊ぶためのレンズ&#34;&gt;裸眼で遊ぶためのレンズ&lt;/h3&gt;
-
-&lt;p&gt;Quest2に限ったことではありませんが、VRヘッドセットは裸眼だと見えない問題があります。&lt;/p&gt;
-
-&lt;p&gt;リーフツアラーの水中マスク用のレンズを買うことで完全に解決しました。レンズは左右で2枚購入する必要があるので注意してください。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Oculus Quest2にリーフツアラーの水中マスクをぴったり装着できた！&lt;br&gt;&lt;br&gt;レンズ同士もぶつからないし、良さげな気がする。 &lt;a href=&#34;https://t.co/22yXqdBZZZ&#34;&gt;pic.twitter.com/22yXqdBZZZ&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1323188481930096640?ref_src=twsrc%5Etfw&#34;&gt;November 2, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B01AJDQB6E&amp;linkId=afae8593e42afa3260c144f6bbe0fe3c&#34;&gt;&lt;/iframe&gt;
-
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B01AJDQ84O&amp;linkId=e95e5fce8486be9ef3e034cfeb75b192&#34;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;注意点としては、レザー製のクッションは素材が柔らかすぎるので、リーフツアラーの度付きレンズの固定ができませんでした。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Quest2の接顔パーツのリコール手続きをしたら、&lt;br&gt;VR Coverのフェイスクッションが無料で送られてきました！&lt;br&gt;&lt;br&gt;Quest2付属品はウレタン製で硬かったのですが、こちらはレザー製で柔らかいですね☺️&lt;br&gt;&lt;br&gt;ただし、素材が柔らかすぎるので、リーフツアラーの度付きレンズの固定に工夫が必要かもしれません。 &lt;a href=&#34;https://t.co/WorRPtwW0c&#34;&gt;pic.twitter.com/WorRPtwW0c&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1367712944545361920?ref_src=twsrc%5Etfw&#34;&gt;March 5, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;ps5&#34;&gt;PS5&lt;/h2&gt;
-
-&lt;p&gt;運良くPS5をAmazonで定価購入できました（2021/2～）。&lt;/p&gt;
-
-&lt;p&gt;PS4所持者でもPS5を買って良かったと思いました。&lt;/p&gt;
-
-&lt;h3 id=&#34;良かった点&#34;&gt;良かった点&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;☓ボタンで決定に統一された&lt;/li&gt;
-&lt;li&gt;ほとんどのPS4のソフトがそのまま遊べる
-
-&lt;ul&gt;
-&lt;li&gt;自分の購入ソフトでは『P.T.』以外は遊べた&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;PS4からのスペックアップを実感できる
-
-&lt;ul&gt;
-&lt;li&gt;PS4だとファンが唸るような高負荷なゲームでもPS5なら静かのケースが多い&lt;/li&gt;
-&lt;li&gt;ゲームのロードが高速化される&lt;/li&gt;
-&lt;li&gt;Marvel&amp;rsquo;s Spider-Man Remasteredのレイトレによる反射が綺麗&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;My new gear😍&lt;br&gt;&lt;br&gt;左から PS3/PS4/PS5 を並べたけど、PS5の存在感が強い😲 &lt;a href=&#34;https://t.co/d3ptsGWdtN&#34;&gt;pic.twitter.com/d3ptsGWdtN&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1359708607487430657?ref_src=twsrc%5Etfw&#34;&gt;February 11, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B08JH72RMK&amp;linkId=2e308c3df692aaa581a1e82fd429fc8d&#34;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;フォトモードのテスト &lt;a href=&#34;https://twitter.com/hashtag/PS5Share?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#PS5Share&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/hashtag/MarvelsSpiderManRemastered?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#MarvelsSpiderManRemastered&lt;/a&gt; &lt;a href=&#34;https://t.co/zGS5HC0G6s&#34;&gt;pic.twitter.com/zGS5HC0G6s&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1426635820530683904?ref_src=twsrc%5Etfw&#34;&gt;August 14, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;マーベルスパイダーマンのリマスター版、完全トロコンしました！&lt;br&gt;あまり理不尽なトロフィーは無かったので楽しみながら取れました。 &lt;a href=&#34;https://twitter.com/hashtag/PS5Share?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#PS5Share&lt;/a&gt; &lt;a href=&#34;https://t.co/Ga26Cy4dZm&#34;&gt;pic.twitter.com/Ga26Cy4dZm&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1426635192094003200?ref_src=twsrc%5Etfw&#34;&gt;August 14, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;悪かった点&#34;&gt;悪かった点&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;PS5専用のソフトが現段階では少ない
-
-&lt;ul&gt;
-&lt;li&gt;実質的に高スペックなPS4という印象は拭えない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;wifi体重計&#34;&gt;Wifi体重計&lt;/h2&gt;
-
-&lt;p&gt;健康管理のために体重の自動記録ができるWifi体重計を買いました（2020/6～）。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Withings Body + 届きました。&lt;br&gt;&lt;br&gt;Withings Health Mateというアプリをインストールして指示に従って操作したら簡単に連携できました。&lt;br&gt;&lt;br&gt;リモートワークが長期化しているので、健康管理をやっていきます。 &lt;a href=&#34;https://t.co/b1DWIbHQir&#34;&gt;pic.twitter.com/b1DWIbHQir&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1409498054491721737?ref_src=twsrc%5Etfw&#34;&gt;June 28, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;!--
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B071LNJTVH&amp;linkId=24cfac29c3bae313168e3137860c8cd5&#34;&gt;&lt;/iframe&gt;
---&gt;
-
-&lt;h3 id=&#34;良いポイント-10&#34;&gt;良いポイント&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Wifiで自動的に体重を記録できる
-
-&lt;ul&gt;
-&lt;li&gt;スマートフォンアプリと&lt;a href=&#34;https://healthmate.withings.com/&#34;&gt;Webサイト&lt;/a&gt;で時系列の確認ができる&lt;/li&gt;
-&lt;li&gt;Bluetooth/NFCタイプの体重計は自動的に記録できないので、Wifiタイプが絶対に良い
-
-&lt;ul&gt;
-&lt;li&gt;以前はBluetooth/NFCタイプのオムロンの体重体組成計 HBF-254C『カラダスキャン』を使っていたが、アプリとの通信の手間が必要で面倒だった…&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;デザインが良い&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;上位機種のwithings-body-cardio&#34;&gt;上位機種のWithings Body Cardio&lt;/h3&gt;
-
-&lt;p&gt;上位機種の&lt;a href=&#34;https://amzn.to/3kcpuJz&#34;&gt;Withings Body Cardio&lt;/a&gt;はデザインが個人的に好みではなかったので、このWithings Body +にしました。基本的な機能はWithings Body +で揃っているので満足しています。&lt;/p&gt;
-
-&lt;h2 id=&#34;冷凍庫&#34;&gt;冷凍庫&lt;/h2&gt;
-
-&lt;p&gt;自炊はしない独身男性なので冷凍食品が主食です。&lt;/p&gt;
-
-&lt;p&gt;冷凍食品をまとめ買いするため、冷凍庫が73Lの&lt;a href=&#34;https://amzn.to/3y6kv21&#34;&gt;ツインバード ハーフ＆ハーフ&lt;/a&gt;を買いました（2021/6～）。&lt;/p&gt;
-
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B076Y4LS14&amp;linkId=55a42452ce98f4e480ba1501034ed97a&#34;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;都内在住なので東京ゼロエミポイントとして11,000円相当のギフト券も受け取れました。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;細かい注意点としては家電リサイクル券が必要ということくらいですかね。&lt;br&gt;&lt;br&gt;新規購入は対象外（買い替えが対象）のと、家電リサイクル法に従ってリサイクルする必要があります。&lt;br&gt;&lt;br&gt;きちんとリサイクル回収してくれるお店で家電を購入すれば問題ないと思います。&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1418440143245955073?ref_src=twsrc%5Etfw&#34;&gt;July 23, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;※Amazonのマーケットプレイスでは設置やリサイクル回収をしてくれない場合があるので、大手の家電量販店（オンラインサイトも含む）での購入を推奨します。&lt;/p&gt;
-
-&lt;p&gt;※東京ゼロエミポイントの申請には「家電リサイクル券（排出者控え）」が必須なので、古い冷蔵庫を家電リサイクル法に基づいて正しくリサイクルする必要があります。注意しましょう。&lt;/p&gt;
-
-&lt;p&gt;私は楽天市場のJoshin webで注文し、古い冷蔵庫のリサイクル回収を依頼しました。&lt;/p&gt;
-
-&lt;h3 id=&#34;良いポイント-11&#34;&gt;良いポイント&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;省エネ基準達成率:101%
-
-&lt;ul&gt;
-&lt;li&gt;前述の東京ゼロエミポイントの対象&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;冷凍庫が広いので、冷凍食品を買いだめるという目的は達成
-
-&lt;ul&gt;
-&lt;li&gt;冷蔵室:73L&lt;/li&gt;
-&lt;li&gt;冷凍室:73L&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;自動霜取り機能がある&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;優先度&#34;&gt;優先度&lt;/h1&gt;
-
-&lt;p&gt;予算が限られているなら、この順番で買うと費用対効果が高そうというランキングです（完全に個人の主観）。&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;椅子&lt;/li&gt;
-&lt;li&gt;モニター&lt;/li&gt;
-&lt;li&gt;ヘッドセット&lt;/li&gt;
-&lt;li&gt;机&lt;/li&gt;
-&lt;li&gt;キーボード&lt;/li&gt;
-&lt;li&gt;マウス&lt;/li&gt;
-&lt;li&gt;Webカメラ&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;椅子とモニターは作業効率に大きく影響しそうなので、この2つだけはしっかりしたものを選ぶといいのではないかと思います。&lt;/p&gt;
-
-&lt;p&gt;ヘッドセットもマイクの調子が悪いとオンライン会議の相手にストレスを与えてしまうので、なるべく良いものが好ましそうですね。&lt;/p&gt;
-
-&lt;h1 id=&#34;さいごに&#34;&gt;さいごに&lt;/h1&gt;
-
-&lt;p&gt;気がつくと異常にLogicool製品が増えました。Logicool信者ではないですが、製品の質に安定感があり、幅広いラインナップを取り揃えているので、PC機器のブランド統一するなら有力な選択肢かなと思います。&lt;/p&gt;
-
-&lt;p&gt;G HUBの使い勝手が微妙だったり、稀にフリーズすることがあるので、今後のソフトウェアアップデートに期待しています。&lt;/p&gt;</description>
     </item>
     
   </channel>

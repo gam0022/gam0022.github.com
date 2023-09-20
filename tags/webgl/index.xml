@@ -1185,7 +1185,7 @@ Pixel Ratioを2xにすると、綺麗な結果になりますが、描画の負�
 ハイトマップの距離関数は非常にシンプルに実装できます。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;float sdGround(in vec3 p) {
-	return p.y - texture2D(groundHeight, p.xz * 0.1).r + GROUND_BASE;
+    return p.y - texture2D(groundHeight, p.xz * 0.1).r + GROUND_BASE;
 }
 &lt;/code&gt;&lt;/pre&gt;
 

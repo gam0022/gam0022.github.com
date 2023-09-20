@@ -107,14 +107,14 @@ Mandelboxで何か作品を作るということ、完成図のイメージは�
 &lt;p&gt;&lt;code&gt;Intersect&lt;/code&gt;の定義はこうしました。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;struct Intersect {
-	bool isHit;
+    bool isHit;
 
-	vec3 position;
-	float distance;
-	vec3 normal;
+    vec3 position;
+    float distance;
+    vec3 normal;
 
-	int material;
-	vec3 color;
+    int material;
+    vec3 color;
 };
 
 const int CIRCUIT_MATERIAL = 0;

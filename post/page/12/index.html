@@ -124,6 +124,59 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/01/23/eclipse-console-encoding/" itemprop="url">Eclipseのコンソール(Console)の出力が文字化けする</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2013-01-23 10:58:00 &#43;0900 JST" itemprop="datePublished">2013-01-23</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/java">Java</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/eclipse">Eclipse</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/mac-os-x">Mac OS X</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                <p>最近、Eclipseを使っているのですが、文字エンコーディングを<code>EUC-JP</code>から<code>UTF-8</code>に変更したところ、コンソールへの標準出力は正常に行われるのに、標準入力が文字化けするようになってしまいました。</p>
+
+<p>ぐぐったところ、<code>eclipse.ini</code>に<code>-Dfile.encoding=UTF-8</code>という行を追加すれば解消するようでした。</p>
+
+<p>Mac OS Xの場合、<code>eclipse.ini</code>は<code>/Applications/eclipse/Eclipse.app/Contents/MacOS/eclipse.ini</code>にあります。</p>
+
+<p>コマンドライン引数が文字化けする場合も、同様に対処できるようです。</p>
+
+<p><a href="http://starzero.hatenablog.com/entry/20100902/1283438762">Macのeclipseでコマンドライン引数が文字化け</a></p>
+
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2013/01/23/eclipse-console-encoding/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/12/31/gnuplot-tips/" itemprop="url">gnuplotでCSVファイルを読み込む方法とmultiplotの注意点</a></h3>
         
 
@@ -763,57 +816,6 @@ dyld: lazy symbol binding failed: Symbol not found: __ZN5MeCab12getLastErrorEv R
     </div>
     <hr>
     
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/08/15/octopress-path/" itemprop="url">Octopressでパスを指定するときのテクニック</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2012-08-15 09:34:00 &#43;0900 JST" itemprop="datePublished">2012-08-15</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/octopress">Octopress</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                <p>Octopressで画像などを使うとき、例えば、トップページで表示されるときと記事の詳細ページで表示されるときでは、
-ディレクトリの階層が同じならないため、アドレスは絶対パスで指定するしかないのですが、そのときに使えるテクニックを紹介します。</p>
-
-<p>URLを<code>/</code>から指定すると、Octopress側で絶対パスに補完してくれるようです。</p>
-
-<p>例を挙げると、次のような具合に補完してくれます。</p>
-
-<p>例:
-<code>/images/hoge.png</code> =&gt; <code>http://gam0022.net/images/hoge.png</code></p>
-
-<p>この機能は、<code>plugins/octopress_filters.rb</code>の79行目の<code>expand_urls</code>というメソッドで定義されているようです。</p>
-
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2012/08/15/octopress-path/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
 
     
 <nav>
@@ -848,7 +850,7 @@ dyld: lazy symbol binding failed: Symbol not found: __ZN5MeCab12getLastErrorEv R
         <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
         <script src="https://gam0022.net/js/jquery-1.12.3.min.js"></script>
         <script src="https://gam0022.net/js/bootstrap.custom.js"></script>
-        <script src="https://gam0022.net/js/hugo-academic.js"></script>
+        <script src="https://gam0022.net/js/hugo-academic.js?2023-09-20"></script>
         
 
         <script>
