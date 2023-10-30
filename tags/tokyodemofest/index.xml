@@ -10,6 +10,51 @@
     <atom:link href="/tags/tokyodemofest/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>TDF 16ms #0（2023）のGLSL Graphics Compoで3位入賞しました</title>
+      <link>https://gam0022.net/blog/2023/10/30/tdf16ms0/</link>
+      <pubDate>Mon, 30 Oct 2023 10:00:00 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2023/10/30/tdf16ms0/</guid>
+      <description>&lt;p&gt;2023年10月22日にオンライン（YouTube配信）で開催された&lt;a href=&#34;https://16ms.tokyodemofest.jp/&#34;&gt;TDF 16ms #0&lt;/a&gt;に参加し、GLSL Graphics Compo部門で3位をいただきました！&lt;/p&gt;
+
+&lt;p&gt;作品のタイトルは『Infinite Keys』で、ゲーミングキーボードをモチーフにしました。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/B4ZirkFOdZg&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;以下は『Infinite Keys』の各種リンクです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/B4ZirkFOdZg&#34;&gt;📺 YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.shadertoy.com/view/csKfzw&#34;&gt;👁️ Shadertoy&lt;/a&gt; ※高負荷のためRTX3080以上のGPU推奨&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.pouet.net/prod.php?which=95342&#34;&gt;📦 Pouet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&amp;quot;Infinite Keys&amp;quot; by &lt;a href=&#34;https://twitter.com/gam0022?ref_src=twsrc%5Etfw&#34;&gt;@gam0022&lt;/a&gt;&lt;br&gt;&lt;br&gt;3rd Place in GLSL Graphics Compo at &lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; 16ms #0&lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; 16ms #0 のGLSLグラフィックスコンポで3位に入賞しました！ &lt;a href=&#34;https://t.co/EsJitdiOdV&#34;&gt;pic.twitter.com/EsJitdiOdV&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1716107013154087009?ref_src=twsrc%5Etfw&#34;&gt;October 22, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;tdf-16ms-0アーカイブ&#34;&gt;TDF 16ms #0アーカイブ&lt;/h1&gt;
+
+&lt;p&gt;TDF 16ms #0はYouTubeライブでストリーミングされていたので、アーカイブが残っています。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/MmOaXb9ldz8&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;閉会式ではTDF 16msのコンセプトについての説明がありました。「シーンの炎を絶やさない🔥」「持続可能なデモパーティ」の話が興味深かったです。&lt;/p&gt;
+
+&lt;p&gt;さまざまな試行錯誤をしていただいているオーガナイザーの方々に深く感謝します。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-10-30-tdf16ms0/5-52-51_screenshot.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-10-30-tdf16ms0/5-52-51_screenshot.png&#34; alt=&#34;シーンの炎を絶やさない🔥&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-10-30-tdf16ms0/5-53-20_screenshot.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-10-30-tdf16ms0/5-53-20_screenshot.png&#34; alt=&#34;3つのコンセプト&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-10-30-tdf16ms0/5-53-46_screenshot.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-10-30-tdf16ms0/5-53-46_screenshot.png&#34; alt=&#34;持続可能なデモパーティ&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>SESSIONS 2023のGLSL Graphics Compoで準優勝しました（グラフィックス解説）</title>
       <link>https://gam0022.net/blog/2023/05/31/sessions2023-glsl-compo/</link>
       <pubDate>Wed, 31 May 2023 06:49:24 +0900</pubDate>

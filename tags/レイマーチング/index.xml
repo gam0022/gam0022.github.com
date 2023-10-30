@@ -10,6 +10,51 @@
     <atom:link href="/tags/%E3%83%AC%E3%82%A4%E3%83%9E%E3%83%BC%E3%83%81%E3%83%B3%E3%82%B0/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>TDF 16ms #0（2023）のGLSL Graphics Compoで3位入賞しました</title>
+      <link>https://gam0022.net/blog/2023/10/30/tdf16ms0/</link>
+      <pubDate>Mon, 30 Oct 2023 10:00:00 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2023/10/30/tdf16ms0/</guid>
+      <description>&lt;p&gt;2023年10月22日にオンライン（YouTube配信）で開催された&lt;a href=&#34;https://16ms.tokyodemofest.jp/&#34;&gt;TDF 16ms #0&lt;/a&gt;に参加し、GLSL Graphics Compo部門で3位をいただきました！&lt;/p&gt;
+
+&lt;p&gt;作品のタイトルは『Infinite Keys』で、ゲーミングキーボードをモチーフにしました。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/B4ZirkFOdZg&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;以下は『Infinite Keys』の各種リンクです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/B4ZirkFOdZg&#34;&gt;📺 YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.shadertoy.com/view/csKfzw&#34;&gt;👁️ Shadertoy&lt;/a&gt; ※高負荷のためRTX3080以上のGPU推奨&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.pouet.net/prod.php?which=95342&#34;&gt;📦 Pouet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&amp;quot;Infinite Keys&amp;quot; by &lt;a href=&#34;https://twitter.com/gam0022?ref_src=twsrc%5Etfw&#34;&gt;@gam0022&lt;/a&gt;&lt;br&gt;&lt;br&gt;3rd Place in GLSL Graphics Compo at &lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; 16ms #0&lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; 16ms #0 のGLSLグラフィックスコンポで3位に入賞しました！ &lt;a href=&#34;https://t.co/EsJitdiOdV&#34;&gt;pic.twitter.com/EsJitdiOdV&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1716107013154087009?ref_src=twsrc%5Etfw&#34;&gt;October 22, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;tdf-16ms-0アーカイブ&#34;&gt;TDF 16ms #0アーカイブ&lt;/h1&gt;
+
+&lt;p&gt;TDF 16ms #0はYouTubeライブでストリーミングされていたので、アーカイブが残っています。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/MmOaXb9ldz8&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;閉会式ではTDF 16msのコンセプトについての説明がありました。「シーンの炎を絶やさない🔥」「持続可能なデモパーティ」の話が興味深かったです。&lt;/p&gt;
+
+&lt;p&gt;さまざまな試行錯誤をしていただいているオーガナイザーの方々に深く感謝します。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-10-30-tdf16ms0/5-52-51_screenshot.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-10-30-tdf16ms0/5-52-51_screenshot.png&#34; alt=&#34;シーンの炎を絶やさない🔥&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-10-30-tdf16ms0/5-53-20_screenshot.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-10-30-tdf16ms0/5-53-20_screenshot.png&#34; alt=&#34;3つのコンセプト&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-10-30-tdf16ms0/5-53-46_screenshot.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-10-30-tdf16ms0/5-53-46_screenshot.png&#34; alt=&#34;持続可能なデモパーティ&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>レイトレ合宿9で4次元立方体をテーマにしたアニメーションを作成しました</title>
       <link>https://gam0022.net/blog/2023/09/20/rtcamp9/</link>
       <pubDate>Wed, 20 Sep 2023 12:00:00 +0900</pubDate>
@@ -4170,85 +4215,6 @@ SDFテクスチャをフェッチするUVをこのように時間でclampする�
 &lt;p&gt;リアルな質感も、複雑な形状も、カッコいい演出も、どれもシェーダーで実現できます。&lt;/p&gt;
 
 &lt;p&gt;短いコードだけで多彩な表現ができるため、映像作成においては &lt;strong&gt;シェーダーは最強の道具&lt;/strong&gt; だと言えるでしょう。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>UnityエンジニアによるShader勉強会！に登壇しました</title>
-      <link>https://gam0022.net/blog/2019/06/20/klab-tech-meetup4/</link>
-      <pubDate>Thu, 20 Jun 2019 10:04:11 +0900</pubDate>
-      
-      <guid>https://gam0022.net/blog/2019/06/20/klab-tech-meetup4/</guid>
-      <description>&lt;p&gt;6/19に開催された&lt;a href=&#34;https://techplay.jp/event/733454&#34;&gt;UnityエンジニアによるShader勉強会！&lt;/a&gt;で「Unity×レイマーチングによる映像制作の実践手法」という発表をしました。&lt;/p&gt;
-
-&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;daf8218b7458460087137b6f23e938b3&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;（06/25追記）&lt;/strong&gt; 発表内容をブログ向けに編集・要約して別記事にまとめました。
-スライドだけでは伝わりにくい箇所を文章でフォローしました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://gam0022.net/blog/2019/06/25/unity-raymarching/&#34;&gt;Unity×レイマーチングによる映像制作の実践手法 | gam0022.net&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;発表資料まとめ&#34;&gt;発表資料まとめ&lt;/h1&gt;
-
-&lt;p&gt;発表者の資料のツイートをまとめました。&lt;/p&gt;
-
-&lt;h2 id=&#34;kanetaaaaa-シェーダーライブコーディングのすすめ&#34;&gt;@kanetaaaaa 「シェーダーライブコーディングのすすめ」&lt;/h2&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;先日の資料を元にシェーダーライブコーディング入門の記事を書きました🤔&lt;br&gt;普段シェーダーを使ってる人の遊び道具になって欲しいです！&lt;br&gt;懇親会時に作ったシェーダーで使用したテクニックもいくつか追加で紹介しています！！&lt;a href=&#34;https://t.co/MgDFAatZre&#34;&gt;https://t.co/MgDFAatZre&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/klab_meetup?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#klab_meetup&lt;/a&gt;&lt;/p&gt;&amp;mdash; かねた (@kanetaaaaa) &lt;a href=&#34;https://twitter.com/kanetaaaaa/status/1141485526815346688?ref_src=twsrc%5Etfw&#34;&gt;2019年6月19日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;本日の資料のために眺めるだけでレイマーチングを完全に理解できるかもしれないシェーダーを作りました🤔&lt;a href=&#34;https://t.co/Hia4I0Dgii&#34;&gt;https://t.co/Hia4I0Dgii&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/klab_meetup?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#klab_meetup&lt;/a&gt; &lt;a href=&#34;https://t.co/kIuU4USxRJ&#34;&gt;pic.twitter.com/kIuU4USxRJ&lt;/a&gt;&lt;/p&gt;&amp;mdash; かねた (@kanetaaaaa) &lt;a href=&#34;https://twitter.com/kanetaaaaa/status/1141307706139004934?ref_src=twsrc%5Etfw&#34;&gt;2019年6月19日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;gam0022-unity-レイマーチングによる映像制作の実践手法&#34;&gt;@gam0022「Unity×レイマーチングによる映像制作の実践手法」&lt;/h2&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;本日の発表資料です！&lt;br&gt;モデリングと演出とライティングを全部シェーダーで実装しました！&lt;a href=&#34;https://t.co/lwg0xVcm3J&#34;&gt;https://t.co/lwg0xVcm3J&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/klab_meetup?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#klab_meetup&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Unity3D?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Unity3D&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/HLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#HLSL&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1141307844999778304?ref_src=twsrc%5Etfw&#34;&gt;2019年6月19日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ブログも更新しました🙏&lt;br&gt;全員の発表資料をまとめ！もあります。&lt;a href=&#34;https://t.co/TdiHF5jILF&#34;&gt;https://t.co/TdiHF5jILF&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/klab_meetup?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#klab_meetup&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Unity3D?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Unity3D&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/HLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#HLSL&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1141541272877850624?ref_src=twsrc%5Etfw&#34;&gt;2019年6月20日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;archeleeds-unityで遊べる背景シェーダーを作る&#34;&gt;@archeleeds「Unityで遊べる背景シェーダーを作る」&lt;/h2&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;KLab Tech Meetup #4&lt;br&gt;「Unityで遊べる背景シェーダーを作る」のスライドです&lt;a href=&#34;https://t.co/YyVB6gEhVk&#34;&gt;https://t.co/YyVB6gEhVk&lt;/a&gt;&lt;br&gt;拙いですが何かの参考になれば 🙇‍♂️&lt;a href=&#34;https://twitter.com/hashtag/klab_meetup?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#klab_meetup&lt;/a&gt;&lt;/p&gt;&amp;mdash; リゼ (@archeleeds) &lt;a href=&#34;https://twitter.com/archeleeds/status/1141376228558983168?ref_src=twsrc%5Etfw&#34;&gt;2019年6月19日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;setchi-fancyscrollview-x-shader&#34;&gt;@setchi「FancyScrollView x Shader」&lt;/h2&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;スクロールビューでもシェーダー芸がしたい！&lt;br&gt;KLab TECH Meetup ＃4 で発表したスライドおよびサンプルコードです。&lt;br&gt;&lt;br&gt;GitHub: &lt;a href=&#34;https://t.co/WFqznn2vVM&#34;&gt;https://t.co/WFqznn2vVM&lt;/a&gt;&lt;br&gt;Google Slides: &lt;a href=&#34;https://t.co/TR5KBVmDUJ&#34;&gt;https://t.co/TR5KBVmDUJ&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/klab_meetup?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#klab_meetup&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/madewithunity?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#madewithunity&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/gamedev?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#gamedev&lt;/a&gt; &lt;a href=&#34;https://t.co/zqECmup7Qi&#34;&gt;pic.twitter.com/zqECmup7Qi&lt;/a&gt;&lt;/p&gt;&amp;mdash; setchi (@setchi) &lt;a href=&#34;https://twitter.com/setchi/status/1141313091134562304?ref_src=twsrc%5Etfw&#34;&gt;2019年6月19日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ブログ更新しました &amp;gt; スクロールビューでもシェーダー芸がしたい！&lt;a href=&#34;https://t.co/5bNo2FlQqe&#34;&gt;https://t.co/5bNo2FlQqe&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/klab_meetup?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#klab_meetup&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/unity3d?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#unity3d&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/gamedev?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#gamedev&lt;/a&gt;&lt;/p&gt;&amp;mdash; setchi (@setchi) &lt;a href=&#34;https://twitter.com/setchi/status/1142779645751783425?ref_src=twsrc%5Etfw&#34;&gt;2019年6月23日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;20分シェーダーライブコーディング-by-kanetaaaaa&#34;&gt;20分シェーダーライブコーディング by @kanetaaaaa&lt;/h2&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;昨日の勉強会の懇親会中に20分間のライブコーディングでシェーダーを作りました！&lt;br&gt;初めて人前でコーディングをしたんですが、めちゃくちゃ楽しかったです！！&lt;br&gt;&lt;br&gt;（当日動かなかったpmod修正済です&amp;hellip;）&lt;br&gt;差分&lt;br&gt;- q.x = abs(p.x ) - 10.;&lt;br&gt;+ q.x = abs(q.x ) - 10.;&lt;a href=&#34;https://t.co/LH3TT4YzSU&#34;&gt;https://t.co/LH3TT4YzSU&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/klab_meetup?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#klab_meetup&lt;/a&gt; &lt;a href=&#34;https://t.co/k61c3O2ZA1&#34;&gt;pic.twitter.com/k61c3O2ZA1&lt;/a&gt;&lt;/p&gt;&amp;mdash; かねた (@kanetaaaaa) &lt;a href=&#34;https://twitter.com/kanetaaaaa/status/1141480732180619264?ref_src=twsrc%5Etfw&#34;&gt;2019年6月19日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;先日の &lt;a href=&#34;https://twitter.com/hashtag/klab_meetup?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#klab_meetup&lt;/a&gt; の懇親会で行った20分のライブコーディング映像を公開しました！&lt;br&gt;実況解説は&lt;a href=&#34;https://twitter.com/gam0022?ref_src=twsrc%5Etfw&#34;&gt;@gam0022&lt;/a&gt; さんと&lt;a href=&#34;https://twitter.com/songofsaya_?ref_src=twsrc%5Etfw&#34;&gt;@songofsaya_&lt;/a&gt;さんです&lt;br&gt;突発ながら面白い実況で場を盛り上げてくださって非常に楽しかったです！&lt;br&gt;動画でもこの空間の楽しさが伝わると思うので是非ご覧ください！&lt;a href=&#34;https://t.co/1CDeXMfJlT&#34;&gt;https://t.co/1CDeXMfJlT&lt;/a&gt;&lt;/p&gt;&amp;mdash; かねた (@kanetaaaaa) &lt;a href=&#34;https://twitter.com/kanetaaaaa/status/1141987474824036353?ref_src=twsrc%5Etfw&#34;&gt;2019年6月21日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;感想&#34;&gt;感想&lt;/h1&gt;
-
-&lt;p&gt;これまでの人生で最高の勉強会でした！&lt;/p&gt;
-
-&lt;p&gt;参加者も発表者もモチベーションがとても高く、終始ものすごい熱気に包まれていて、発表する側としても非常にやりやすかったです！&lt;/p&gt;
-
-&lt;p&gt;勉強会のテーマがニッチすぎることから当初は参加枠を100名としていたのですが、告知開始から数時間後には満員となってしまったため、最終的に会場のキャパシティ上限の200名まで増枠することになりました。
-これほど大人数の勉強会が実現されるとは思っておらず、世間のシェーダーへの関心の高さに驚きました。&lt;/p&gt;
-
-&lt;p&gt;どの発表も尖った内容が満載だったのではないでしょうか。
-シェーダーに対する理解がより深まり、興味が増したのであれば幸いです。&lt;/p&gt;
-
-&lt;p&gt;ご参加いただいた皆さま、本当にありがとうございました！&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2019-06-20-klab-tech-meetup4/live-coding-original.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-06-20-klab-tech-meetup4/live-coding.jpg&#34; alt=&#34;懇親会中のライブコーディングの様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;懇親会中のライブコーディングの様子&lt;/p&gt;</description>
     </item>
     
   </channel>
