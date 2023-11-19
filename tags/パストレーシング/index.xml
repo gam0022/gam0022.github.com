@@ -19,13 +19,13 @@
 
 &lt;p&gt;4次元空間上で回転してから、それを3次元に投影することで、内外が入れ替わるような不思議なループアニメーションをテーマにしました。&lt;/p&gt;
 
-&lt;p&gt;自作のレンダラーで &lt;strong&gt;5分の制限時間&lt;/strong&gt; でレンダリングして4位をいただきました！次の動画は合宿運営側で制限時間内にレンダリングしたものです。&lt;/p&gt;
+&lt;p&gt;開発した自作レンダラーで &lt;strong&gt;5分の制限時間&lt;/strong&gt; でレンダリングして、こんな感じの動画を生成しました。&lt;/p&gt;
 
 &lt;video playsinline=&#34;&#34; loop=&#34;&#34; muted=&#34;&#34; controls=&#34;&#34; width=&#34;100%&#34; src=&#34;https://gam0022.net/images/posts/2023-09-19-rtcamp9/gam_crf12.mp4&#34; poster=&#34;/images/posts/2023-09-19-rtcamp9/218.jpg&#34;&gt;&lt;/video&gt;
 
 &lt;p&gt;&lt;/p&gt;
 
-&lt;p&gt;時間制限なしで4K解像度でレンダリングした動画はYouTubeにアップロードしました。&lt;/p&gt;
+&lt;p&gt;長時間をかけて4K解像度でレンダリングした動画をYouTubeにアップロードしました。&lt;/p&gt;
 
 &lt;div class=&#34;movie-wrap&#34;&gt;
 &lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/ohbv8_jCQtc&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
@@ -181,9 +181,7 @@
 &lt;li&gt;3次元空間上で描画&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;以下は、ステレオ投影とその利用例をCUDA C言語で実装したものになります。&lt;/p&gt;
-
-&lt;p&gt;実際の距離関数はマテリアル分けだったり、複数の距離関数を合成したりと、もう少し複雑になっていますが、分かりやすさ重視でシンプルにしました。&lt;/p&gt;
+&lt;p&gt;以下は、ステレオ投影をCUDA C言語で実装したものになります。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;// 3次元座標を4次元に変換（逆ステレオ投影）
 float4 inverseStereographic(float3 p)
@@ -198,38 +196,9 @@ float3 stereographic(float4 p4)
     float k = 1.0 / (1.0 + p4.w);
     return k * make_float3(p4.x, p4.y, p4.z);
 }
-
-// 距離関数での利用例
-float map(float3 pos)
-{
-    float f = length(pos);
-
-    // 3Dから4Dに逆ステレオ投影
-    float4 p4d = inverseStereographic(pos);
-
-    // 4D空間のZW平面上の回転
-    float2 p4d_zw = make_float2(p4d.z, p4d.w);
-    rot(p4d_zw, (-time + 0.01) / 5 * TAU);
-    p4d.z = p4d_zw.x;
-    p4d.w = p4d_zw.y;
-
-    // 4Dから3Dにステレオ変換
-    float3 p = stereographic(p4d);
-
-    // 3D上で距離関数を評価
-    float d = dMenger(p / _MengerUniformScale0, _MengerOffset0, _MengerScale0, _MengerIteration0);
-    d *= _MengerUniformScale0;
-
-    // 空間の歪みを考慮して距離関数をスケール（0.7は係数）
-    float e = length(p);
-    d *= min(1.0, 0.7 / e) * max(1.0, f);
-
-    return d;
-}
-
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;4次元から3次元のステレオ投影の幾何学的な理解については、3Blue1Brownの動画にとても助けられました。&lt;/p&gt;
+&lt;p&gt;ステレオ投影の幾何学的な理解については、3Blue1Brownの動画にとても助けられました。&lt;/p&gt;
 
 &lt;div class=&#34;movie-wrap&#34;&gt;
 &lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/94NmanMgR9k?si=S0an_wHu7KWIyVq9&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
@@ -460,7 +429,7 @@ $$&lt;/p&gt;
 
 &lt;p&gt;去年に引き続き、セミナーは参加者全員で発表しました。参加者のバックグラウンドもさまざまだったので、いろんな分野の興味深い話や深い話を聞くことができて楽しかったです。&lt;/p&gt;
 
-&lt;p&gt;Yoshi&amp;rsquo;s Dreannさんの&lt;a href=&#34;https://speakerdeck.com/runningoutrate/reitorehe-su-9seminazi-liao-svgfnituite&#34;&gt;SVGF&lt;/a&gt;やうでメガネさんの&lt;a href=&#34;https://www.docswell.com/s/udemegane/5247P4-2023-09-06-185245&#34;&gt;ReSTIR PT&lt;/a&gt;など、気になってはいるものの、なかなか手を出せていない手法についての発表も多く、自分も頑張らねばと思いました。&lt;/p&gt;
+&lt;p&gt;Yoshi&amp;rsquo;s Dreannさんの&lt;a href=&#34;https://speakerdeck.com/runningoutrate/reitorehe-su-9seminazi-liao-svgfnituite&#34;&gt;SVGF&lt;/a&gt;やうでメガネさんの&lt;a href=&#34;https://www.docswell.com/s/udemegane/5247P4-2023-09-06-185245&#34;&gt;ReSTIR PT&lt;/a&gt;など、気になってはいるものの、なかなか手を出せていない手法も発表も多く、自分も頑張らねばとなりました。&lt;/p&gt;
 
 &lt;p&gt;さまざまなグラフィックスAPIにおけるレイトレの話もありました。kugiさんの&lt;a href=&#34;https://speakerdeck.com/kugimasa/webgpunihong-retemita&#34;&gt;WebGPU&lt;/a&gt;、Nishikiさんの&lt;a href=&#34;https://github.com/yknishidate/rtcamp9/blob/main/Vulkan%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E3%81%AE%E3%81%AF%E3%81%AA%E3%81%97.pdf&#34;&gt;Vulkan&lt;/a&gt;、Pentanさんの&lt;a href=&#34;https://github.com/Pentan/RaytracingCamp2019-23/blob/master/etc/2023/slides/seminar_slide.pdf&#34;&gt;Metal&lt;/a&gt;などです。&lt;/p&gt;
 
@@ -765,7 +734,7 @@ SPIR-Vをつかうことで、GPUコードもRustで実装をしたそうです�
 
 &lt;p&gt;今年のセミナーは参加者全員で発表しました。参加者のバックグラウンドもさまざまだったので、いろんな分野の興味深い話や深い話を聞くことができて楽しかったです。&lt;/p&gt;
 
-&lt;p&gt;レイトレ合宿の運営の方々、その他の参加者のみなさん、本当にありがとうございました！&lt;/p&gt;
+&lt;p&gt;レイトレ合宿を運営の方々、その他の参加者のみなさん、本当にありがとうございました！&lt;/p&gt;
 
 &lt;h1 id=&#34;写真コーナー&#34;&gt;写真コーナー&lt;/h1&gt;
 

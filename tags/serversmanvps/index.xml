@@ -149,7 +149,7 @@ tcpsndbuf                  222624              1737856              1720320     
 
 &lt;p&gt;apt-getかaptitudeでインストールすればいいと思います。&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo aptitude install apache2   
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo aptitude install apache2	
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;addhandlerを設定する&#34;&gt;AddHandlerを設定する&lt;/h2&gt;
@@ -167,11 +167,11 @@ tcpsndbuf                  222624              1737856              1720320     
 &lt;p&gt;&lt;code&gt;/etc/apache2/sites-available/default&lt;/code&gt;でOptions +ExecCGIを設定します。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;lt;Directory /var/www/html/&amp;gt;
-    #Options Indexes FollowSymLinks MultiViews 
-    Options Indexes FollowSymLinks MultiViews ExecCGI
-    AllowOverride None
-    Order allow,deny
-    allow from all
+	#Options Indexes FollowSymLinks MultiViews 
+	Options Indexes FollowSymLinks MultiViews ExecCGI
+	AllowOverride None
+	Order allow,deny
+	allow from all
 &amp;lt;/Directory&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -179,7 +179,7 @@ tcpsndbuf                  222624              1737856              1720320     
 
 &lt;p&gt;上の2つのファイルを編集したら、apacheを再起動して設定を反映させます。&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo /etc/init.d/apache2 restart    
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo /etc/init.d/apache2 restart	
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;ruby-cgiのパーミッションを755にする&#34;&gt;Ruby CGIのパーミッションを755にする&lt;/h2&gt;

@@ -124,52 +124,6 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/10/18/run-rails-on-passenger/" itemprop="url">Rails4をPassengerで動かす</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2013-10-18 00:13:00 &#43;0900 JST" itemprop="datePublished">2013-10-18</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/rails">Rails</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/passenger">Passenger</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                RailsをPassengerを使ってVPSで動かすまでにハマったことなどをメモします。
-自分用のメモ程度の記事なので、あくまで参考程度にお願いします。
-Railsのサーバ環境を作るのは難しいというイメージがありましたが、結果的には Passenger の指示通りにやればなんとかなりました。
- Passenger をインストールする。  古い情報らしいですが、Passenger のインストールについては、このページが参考になる。 $ gem install passenger $ passenger-install-apache2-module 上を実行すると、必要なパッケージが足りてないというエラーがでるので、パッケージ管理システムなどを使ってインストールする。 インストールが成功すると、LoadModule などの設定やvirtualhostの設定のサンプルが表示されるので、メモしておく。   LoadModule passenger_module /usr/local/rvm/gems/ruby-2.0.0-p247/gems/passenger-4.0.14/buildout/apache2/mod_passenger.so PassengerRoot /usr/local/rvm/gems/ruby-2.0.0-p247/gems/passenger-4.0.14 PassengerDefaultRuby /usr/local/rvm/wrappers/ruby-2.0.0-p247/ruby  &lt;VirtualHost *:80&gt; ServerName www.yourhost.com # !!! Be sure to point DocumentRoot to &lsquo;public&rsquo;! DocumentRoot /somewhere/public &lt;Directory /somewhere/public&gt; # This relaxes Apache security settings. AllowOverride all # MultiViews must be turned off. Options -MultiViews &lt;/Directory&gt; &lt;/VirtualHost&gt;   VPSのAレコードの設定をして、サブドメインを使えるようにする。
- DTI のServerman@VPSのUbicNameでドメインを取っている場合、負荷分散設定というのでDNSレコードを設定できる。  Railsのプロジェクトをサーバの適当な場所に配置する。
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2013/10/18/run-rails-on-passenger/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/10/14/diary/" itemprop="url">近状報告</a></h3>
         
 
@@ -713,6 +667,56 @@ require &lsquo;linkedlist&rsquo; p LinkedList.
     </div>
     <hr>
     
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/08/18/ruby-thread-join/" itemprop="url">Rubyの改造してThread#joinのTimeoutで例外を発生させる</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2013-08-18 17:15:00 &#43;0900 JST" itemprop="datePublished">2013-08-18</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/ruby">Ruby</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/ruby-c-extension">Ruby C Extension</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                ぼっちupcamp #upcamp に参加しようと思ったのですが、 諸事情により行けなくなったので、一人で何か作ってました。
+Ruby の 処理系の動作の改良(改悪)をしていました。
+Ruby は git clone <a href="https://github.com/ruby/ruby.git">https://github.com/ruby/ruby.git</a> で落としたものを使いました。
+Thread#join で タイムアウトしたときに例外を発生させる Thread#joinは、 スレッド self の実行が終了するまで、カレントスレッドを停止させるメソッドです。 limit を指定して、limit 秒過ぎても自身が終了しない場合、nil を返します。
+今回は、limit 秒を過ぎてタイムアウトした場合、 例外Timeout を発生させるように改造しました。
+正直、自分でもネタをミスった感がありますが、 すこしはタイムアウトした場合の処理が楽に書けるようになる気がします。
+従来のRubyの Thread#join でタイムアウトを処理する まず、従来のRubyの Thread#join でタイムアウトを処理する場合のコード例を示します。
+Thread#joinの返り値が nilのときにタイムアウトしたと分かるので、 このように書けると思います。
+begin t = Thread.start { # 1秒で終わらない処理 while true 1 end } isTimeout = (t.join(1) == nil) rescue ThreadError puts &quot;theread error&quot; ensure puts &quot;timeout error&quot; if isTimeout t.kill end # =&gt; &quot;timeout error&quot;  改造したRubyの Thread#join でタイムアウトを処理する 今回の改造によって、次のようにRubyのコードをスッキリさせることができます。
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2013/08/18/ruby-thread-join/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
 
     
 <nav>
@@ -747,7 +751,7 @@ require &lsquo;linkedlist&rsquo; p LinkedList.
         <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
         <script src="https://gam0022.net/js/jquery-1.12.3.min.js"></script>
         <script src="https://gam0022.net/js/bootstrap.custom.js"></script>
-        <script src="https://gam0022.net/js/hugo-academic.js?2023-09-20"></script>
+        <script src="https://gam0022.net/js/hugo-academic.js?2023-09-18"></script>
         
 
         <script>

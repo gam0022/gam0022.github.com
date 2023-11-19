@@ -124,56 +124,6 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/08/18/ruby-thread-join/" itemprop="url">Rubyの改造してThread#joinのTimeoutで例外を発生させる</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2013-08-18 17:15:00 &#43;0900 JST" itemprop="datePublished">2013-08-18</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/ruby">Ruby</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/ruby-c-extension">Ruby C Extension</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                ぼっちupcamp #upcamp に参加しようと思ったのですが、 諸事情により行けなくなったので、一人で何か作ってました。
-Ruby の 処理系の動作の改良(改悪)をしていました。
-Ruby は git clone <a href="https://github.com/ruby/ruby.git">https://github.com/ruby/ruby.git</a> で落としたものを使いました。
-Thread#join で タイムアウトしたときに例外を発生させる Thread#joinは、 スレッド self の実行が終了するまで、カレントスレッドを停止させるメソッドです。 limit を指定して、limit 秒過ぎても自身が終了しない場合、nil を返します。
-今回は、limit 秒を過ぎてタイムアウトした場合、 例外Timeout を発生させるように改造しました。
-正直、自分でもネタをミスった感がありますが、 すこしはタイムアウトした場合の処理が楽に書けるようになる気がします。
-従来のRubyの Thread#join でタイムアウトを処理する まず、従来のRubyの Thread#join でタイムアウトを処理する場合のコード例を示します。
-Thread#joinの返り値が nilのときにタイムアウトしたと分かるので、 このように書けると思います。
-begin t = Thread.start { # 1秒で終わらない処理 while true 1 end } isTimeout = (t.join(1) == nil) rescue ThreadError puts &quot;theread error&quot; ensure puts &quot;timeout error&quot; if isTimeout t.kill end # =&gt; &quot;timeout error&quot;  改造したRubyの Thread#join でタイムアウトを処理する 今回の改造によって、次のようにRubyのコードをスッキリさせることができます。
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2013/08/18/ruby-thread-join/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/08/04/opencv-on-xcode/" itemprop="url">XcodeでopenCVを使う</a></h3>
         
 
@@ -706,6 +656,60 @@ spinrfの実装 JavaScriptには、spinrfがないので、自分で実装する
     </div>
     <hr>
     
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/05/27/kramdown/" itemprop="url">Octopressで定義リストを使う</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2013-05-27 22:40:00 &#43;0900 JST" itemprop="datePublished">2013-05-27</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/octopress">Octopress</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/kramdown">kramdown</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/markdown">Markdown</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                <h1 id="定義リストを使いたい">定義リストを使いたい</h1>
+
+<p>Markdownは楽で便利なのですが、残念なことに標準ではMarkdownは定義リスト<code>&lt;dl&gt;</code>を使えません。</p>
+
+<p>Markdownでは、HTMLを埋め込めるので、手打ちでHTMLを書くことで対処できますが、
+それだと負けた気分になってしまいます。</p>
+
+<p>Octopress(というか、Jekyll)では、標準のMarkdownのパーサを変更できるので、
+定義リストを使えるParserに変更して対処しました。</p>
+
+<p>
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2013/05/27/kramdown/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
 
     
 <nav>
@@ -740,7 +744,7 @@ spinrfの実装 JavaScriptには、spinrfがないので、自分で実装する
         <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
         <script src="https://gam0022.net/js/jquery-1.12.3.min.js"></script>
         <script src="https://gam0022.net/js/bootstrap.custom.js"></script>
-        <script src="https://gam0022.net/js/hugo-academic.js?2023-09-20"></script>
+        <script src="https://gam0022.net/js/hugo-academic.js?2023-09-18"></script>
         
 
         <script>

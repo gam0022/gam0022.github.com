@@ -10,51 +10,6 @@
     <atom:link href="/tags/cg/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>TDF 16ms #0（2023）のGLSL Graphics Compoで3位入賞しました</title>
-      <link>https://gam0022.net/blog/2023/10/30/tdf16ms0/</link>
-      <pubDate>Mon, 30 Oct 2023 10:00:00 +0900</pubDate>
-      
-      <guid>https://gam0022.net/blog/2023/10/30/tdf16ms0/</guid>
-      <description>&lt;p&gt;2023年10月22日にオンライン（YouTube配信）で開催された&lt;a href=&#34;https://16ms.tokyodemofest.jp/&#34;&gt;TDF 16ms #0&lt;/a&gt;に参加し、GLSL Graphics Compo部門で3位をいただきました！&lt;/p&gt;
-
-&lt;p&gt;作品のタイトルは『Infinite Keys』で、ゲーミングキーボードをモチーフにしました。&lt;/p&gt;
-
-&lt;div class=&#34;movie-wrap&#34;&gt;
-&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/B4ZirkFOdZg&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;p&gt;以下は『Infinite Keys』の各種リンクです。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://youtu.be/B4ZirkFOdZg&#34;&gt;📺 YouTube&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.shadertoy.com/view/csKfzw&#34;&gt;👁️ Shadertoy&lt;/a&gt; ※高負荷のためRTX3080以上のGPU推奨&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.pouet.net/prod.php?which=95342&#34;&gt;📦 Pouet&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&amp;quot;Infinite Keys&amp;quot; by &lt;a href=&#34;https://twitter.com/gam0022?ref_src=twsrc%5Etfw&#34;&gt;@gam0022&lt;/a&gt;&lt;br&gt;&lt;br&gt;3rd Place in GLSL Graphics Compo at &lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; 16ms #0&lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; 16ms #0 のGLSLグラフィックスコンポで3位に入賞しました！ &lt;a href=&#34;https://t.co/EsJitdiOdV&#34;&gt;pic.twitter.com/EsJitdiOdV&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1716107013154087009?ref_src=twsrc%5Etfw&#34;&gt;October 22, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;tdf-16ms-0アーカイブ&#34;&gt;TDF 16ms #0アーカイブ&lt;/h1&gt;
-
-&lt;p&gt;TDF 16ms #0はYouTubeライブでストリーミングされていたので、アーカイブが残っています。&lt;/p&gt;
-
-&lt;div class=&#34;movie-wrap&#34;&gt;
-&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/MmOaXb9ldz8&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;p&gt;閉会式ではTDF 16msのコンセプトについての説明がありました。「シーンの炎を絶やさない🔥」「持続可能なデモパーティ」の話が興味深かったです。&lt;/p&gt;
-
-&lt;p&gt;さまざまな試行錯誤をしていただいているオーガナイザーの方々に深く感謝します。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-10-30-tdf16ms0/5-52-51_screenshot.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-10-30-tdf16ms0/5-52-51_screenshot.png&#34; alt=&#34;シーンの炎を絶やさない🔥&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-10-30-tdf16ms0/5-53-20_screenshot.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-10-30-tdf16ms0/5-53-20_screenshot.png&#34; alt=&#34;3つのコンセプト&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-10-30-tdf16ms0/5-53-46_screenshot.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-10-30-tdf16ms0/5-53-46_screenshot.png&#34; alt=&#34;持続可能なデモパーティ&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>レイトレ合宿9で4次元立方体をテーマにしたアニメーションを作成しました</title>
       <link>https://gam0022.net/blog/2023/09/20/rtcamp9/</link>
       <pubDate>Wed, 20 Sep 2023 12:00:00 +0900</pubDate>
@@ -64,13 +19,13 @@
 
 &lt;p&gt;4次元空間上で回転してから、それを3次元に投影することで、内外が入れ替わるような不思議なループアニメーションをテーマにしました。&lt;/p&gt;
 
-&lt;p&gt;自作のレンダラーで &lt;strong&gt;5分の制限時間&lt;/strong&gt; でレンダリングして4位をいただきました！次の動画は合宿運営側で制限時間内にレンダリングしたものです。&lt;/p&gt;
+&lt;p&gt;開発した自作レンダラーで &lt;strong&gt;5分の制限時間&lt;/strong&gt; でレンダリングして、こんな感じの動画を生成しました。&lt;/p&gt;
 
 &lt;video playsinline=&#34;&#34; loop=&#34;&#34; muted=&#34;&#34; controls=&#34;&#34; width=&#34;100%&#34; src=&#34;https://gam0022.net/images/posts/2023-09-19-rtcamp9/gam_crf12.mp4&#34; poster=&#34;/images/posts/2023-09-19-rtcamp9/218.jpg&#34;&gt;&lt;/video&gt;
 
 &lt;p&gt;&lt;/p&gt;
 
-&lt;p&gt;時間制限なしで4K解像度でレンダリングした動画はYouTubeにアップロードしました。&lt;/p&gt;
+&lt;p&gt;長時間をかけて4K解像度でレンダリングした動画をYouTubeにアップロードしました。&lt;/p&gt;
 
 &lt;div class=&#34;movie-wrap&#34;&gt;
 &lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/ohbv8_jCQtc&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
@@ -226,9 +181,7 @@
 &lt;li&gt;3次元空間上で描画&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;以下は、ステレオ投影とその利用例をCUDA C言語で実装したものになります。&lt;/p&gt;
-
-&lt;p&gt;実際の距離関数はマテリアル分けだったり、複数の距離関数を合成したりと、もう少し複雑になっていますが、分かりやすさ重視でシンプルにしました。&lt;/p&gt;
+&lt;p&gt;以下は、ステレオ投影をCUDA C言語で実装したものになります。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;// 3次元座標を4次元に変換（逆ステレオ投影）
 float4 inverseStereographic(float3 p)
@@ -243,38 +196,9 @@ float3 stereographic(float4 p4)
     float k = 1.0 / (1.0 + p4.w);
     return k * make_float3(p4.x, p4.y, p4.z);
 }
-
-// 距離関数での利用例
-float map(float3 pos)
-{
-    float f = length(pos);
-
-    // 3Dから4Dに逆ステレオ投影
-    float4 p4d = inverseStereographic(pos);
-
-    // 4D空間のZW平面上の回転
-    float2 p4d_zw = make_float2(p4d.z, p4d.w);
-    rot(p4d_zw, (-time + 0.01) / 5 * TAU);
-    p4d.z = p4d_zw.x;
-    p4d.w = p4d_zw.y;
-
-    // 4Dから3Dにステレオ変換
-    float3 p = stereographic(p4d);
-
-    // 3D上で距離関数を評価
-    float d = dMenger(p / _MengerUniformScale0, _MengerOffset0, _MengerScale0, _MengerIteration0);
-    d *= _MengerUniformScale0;
-
-    // 空間の歪みを考慮して距離関数をスケール（0.7は係数）
-    float e = length(p);
-    d *= min(1.0, 0.7 / e) * max(1.0, f);
-
-    return d;
-}
-
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;4次元から3次元のステレオ投影の幾何学的な理解については、3Blue1Brownの動画にとても助けられました。&lt;/p&gt;
+&lt;p&gt;ステレオ投影の幾何学的な理解については、3Blue1Brownの動画にとても助けられました。&lt;/p&gt;
 
 &lt;div class=&#34;movie-wrap&#34;&gt;
 &lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/94NmanMgR9k?si=S0an_wHu7KWIyVq9&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
@@ -505,7 +429,7 @@ $$&lt;/p&gt;
 
 &lt;p&gt;去年に引き続き、セミナーは参加者全員で発表しました。参加者のバックグラウンドもさまざまだったので、いろんな分野の興味深い話や深い話を聞くことができて楽しかったです。&lt;/p&gt;
 
-&lt;p&gt;Yoshi&amp;rsquo;s Dreannさんの&lt;a href=&#34;https://speakerdeck.com/runningoutrate/reitorehe-su-9seminazi-liao-svgfnituite&#34;&gt;SVGF&lt;/a&gt;やうでメガネさんの&lt;a href=&#34;https://www.docswell.com/s/udemegane/5247P4-2023-09-06-185245&#34;&gt;ReSTIR PT&lt;/a&gt;など、気になってはいるものの、なかなか手を出せていない手法についての発表も多く、自分も頑張らねばと思いました。&lt;/p&gt;
+&lt;p&gt;Yoshi&amp;rsquo;s Dreannさんの&lt;a href=&#34;https://speakerdeck.com/runningoutrate/reitorehe-su-9seminazi-liao-svgfnituite&#34;&gt;SVGF&lt;/a&gt;やうでメガネさんの&lt;a href=&#34;https://www.docswell.com/s/udemegane/5247P4-2023-09-06-185245&#34;&gt;ReSTIR PT&lt;/a&gt;など、気になってはいるものの、なかなか手を出せていない手法も発表も多く、自分も頑張らねばとなりました。&lt;/p&gt;
 
 &lt;p&gt;さまざまなグラフィックスAPIにおけるレイトレの話もありました。kugiさんの&lt;a href=&#34;https://speakerdeck.com/kugimasa/webgpunihong-retemita&#34;&gt;WebGPU&lt;/a&gt;、Nishikiさんの&lt;a href=&#34;https://github.com/yknishidate/rtcamp9/blob/main/Vulkan%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E3%81%AE%E3%81%AF%E3%81%AA%E3%81%97.pdf&#34;&gt;Vulkan&lt;/a&gt;、Pentanさんの&lt;a href=&#34;https://github.com/Pentan/RaytracingCamp2019-23/blob/master/etc/2023/slides/seminar_slide.pdf&#34;&gt;Metal&lt;/a&gt;などです。&lt;/p&gt;
 
@@ -1498,7 +1422,7 @@ SPIR-Vをつかうことで、GPUコードもRustで実装をしたそうです�
 
 &lt;p&gt;今年のセミナーは参加者全員で発表しました。参加者のバックグラウンドもさまざまだったので、いろんな分野の興味深い話や深い話を聞くことができて楽しかったです。&lt;/p&gt;
 
-&lt;p&gt;レイトレ合宿の運営の方々、その他の参加者のみなさん、本当にありがとうございました！&lt;/p&gt;
+&lt;p&gt;レイトレ合宿を運営の方々、その他の参加者のみなさん、本当にありがとうございました！&lt;/p&gt;
 
 &lt;h1 id=&#34;写真コーナー&#34;&gt;写真コーナー&lt;/h1&gt;
 
@@ -4104,6 +4028,301 @@ DCCツールから直接シーンを出力する形式だと、距離関数の�
 &lt;p&gt;レイトレ合宿は自身の成長や糧となる機会を与えてくれる、とても良い合宿勉強会だなと改めて感じました。&lt;/p&gt;
 
 &lt;p&gt;レイトレ合宿を毎年主催してくださっている&lt;a href=&#34;https://twitter.com/q_cinnamon&#34;&gt;q&lt;/a&gt;さんと&lt;a href=&#34;https://twitter.com/h013&#34;&gt;hole&lt;/a&gt;さん、その他の参加者のみなさん、本当にありがとうございました！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>NVIDIA® OptiX上で『レイマーチング×パストレーシング』による物理ベースレンダラーを実装した</title>
+      <link>https://gam0022.net/blog/2019/08/05/optix-raymarching-pathtracing/</link>
+      <pubDate>Mon, 05 Aug 2019 12:10:23 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2019/08/05/optix-raymarching-pathtracing/</guid>
+      <description>&lt;p&gt;これは&lt;a href=&#34;https://sites.google.com/site/raytracingcamp7/&#34;&gt;レイトレ合宿7&lt;/a&gt;アドベントカレンダーの記事です。&lt;/p&gt;
+
+&lt;p&gt;NVIDIA® OptiX上で『レイマーチング×パストレーシング』による物理ベースレンダラーを開発しました。&lt;/p&gt;
+
+&lt;p&gt;レイとオブジェクトの交差判定をレイマーチングで行い、ライティングをパストレーシングをするという、レイマーチングとパストレーシングのハイブリッドなレンダリングを実現しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;NVIDIA® OptiX上で&lt;br&gt;『レイマーチング×パストレーシング』&lt;br&gt;を実装できた😉 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/FKbuHiXqmP&#34;&gt;pic.twitter.com/FKbuHiXqmP&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1155489034354843649?ref_src=twsrc%5Etfw&#34;&gt;July 28, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;実装の方針&#34;&gt;実装の方針&lt;/h1&gt;
+
+&lt;p&gt;Optixは、CUDA基盤上で動作する、NVIDIA製のGPUレイトレーシング用フレームワークです。&lt;/p&gt;
+
+&lt;p&gt;Optixではユーザ独自のプリミティブを定義できるため、この機能をつかってレイマーチングで衝突判定を行う距離関数のプリミティブを定義しました。&lt;/p&gt;
+
+&lt;p&gt;独自のプリミティブの定義に必要なProgram（Optix用語でPTXアセンブリにコンパイルされたCUDA C関数を指す）は次の2つです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Bounding Box&lt;/li&gt;
+&lt;li&gt;Intersection&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Optixの公式サンプルプロジェクトに optixPathtracing（パストレーシングの実装例）があったので、これにレイマーチングのプリミティブを追加する形で実装しました。&lt;/p&gt;
+
+&lt;p&gt;パストレーシングの処理はサンプルコードの実装そのまま利用させていただきました。&lt;/p&gt;
+
+&lt;h2 id=&#34;bounding-box&#34;&gt;Bounding Box&lt;/h2&gt;
+
+&lt;p&gt;Bounding Boxを定義するProgramです。&lt;/p&gt;
+
+&lt;p&gt;レイマーチングのオブジェクトのBounding BoxはC++側から値を渡すようにしました。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rtDeclareVariable&lt;/code&gt; でCPUからGPUへ送るバッファの宣言（GLSLのunifromと同じ）ができます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;#include &amp;lt;optix_world.h&amp;gt;
+
+rtDeclareVariable(float3, center, , );
+rtDeclareVariable(float3, size, , );
+
+RT_PROGRAM void bounds(int, float result[6])
+{
+    optix::Aabb* aabb = (optix::Aabb*)result;
+    aabb-&amp;gt;m_min = center - size;
+    aabb-&amp;gt;m_max = center + size;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;intersection&#34;&gt;Intersection&lt;/h2&gt;
+
+&lt;p&gt;衝突判定をするProgramです。&lt;/p&gt;
+
+&lt;p&gt;ごくごく普通のレイマーチングです。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;rtDeclareVariable(int, lgt_instance, , ) = {0};
+rtDeclareVariable(float3, texcoord, attribute texcoord, );
+rtDeclareVariable(int, lgt_idx, attribute lgt_idx, );
+
+RT_PROGRAM void intersect(int primIdx)
+{
+    const float EPS = 1e-2;
+    float t = 0.0, d = 1e100;
+    float3 p = ray.origin;
+
+    for (int i = 0; i &amp;lt; 50; i++)
+    {
+        d = map(p);
+        t += d;
+        p = ray.origin + t * ray.direction;
+        if (abs(d) &amp;lt; EPS)
+        {
+            break;
+        }
+    }
+
+    if (abs(d) &amp;lt; EPS &amp;amp;&amp;amp; rtPotentialIntersection(t))
+    {
+        shading_normal = geometric_normal = calcNormal(p, map);
+        texcoord = make_float3(p.x, p.y, 0);
+        lgt_idx = lgt_instance;
+        rtReportIntersection(0);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;法線計算&#34;&gt;法線計算&lt;/h3&gt;
+
+&lt;p&gt;法線計算は四面体によるアプローチを用いました。&lt;/p&gt;
+
+&lt;p&gt;通常は6回の距離関数の評価が必要なところ、4回の評価だけで法線を計算できます。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://iquilezles.org/www/articles/normalsSDF/normalsSDF.htm&#34;&gt;normals for an SDF | http://iquilezles.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://setchi.hatenablog.com/entry/2018/12/17/095532&#34;&gt;#TokyoDemoFest 2018 の GLSL Graphics Compo で2位入賞しました - setchi’s blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;map関数を差し替え可能にするためにマクロをつかって実装しました。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;const float EPS_N = 1e-4;
+#define calcNormal(p, dFunc) normalize(\
+    make_float3( EPS_N, -EPS_N, -EPS_N) * dFunc(p + make_float3( EPS_N, -EPS_N, -EPS_N)) + \
+    make_float3(-EPS_N, -EPS_N,  EPS_N) * dFunc(p + make_float3(-EPS_N, -EPS_N,  EPS_N)) + \
+    make_float3(-EPS_N,  EPS_N, -EPS_N) * dFunc(p + make_float3(-EPS_N,  EPS_N, -EPS_N)) + \
+    make_float3( EPS_N,  EPS_N,  EPS_N) * dFunc(p + make_float3( EPS_N,  EPS_N,  EPS_N)))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;距離関数&#34;&gt;距離関数&lt;/h3&gt;
+
+&lt;p&gt;以前にブログで紹介したIFSによるMengerSpongeの距離関数をCUDA Cに移植しました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gam0022.net/blog/2019/06/25/unity-raymarching/&#34;&gt;Unity×レイマーチングによる映像制作の実践手法 | gam0022.net&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Swizzle Operationを手動展開するのがしんどかったです…&lt;/p&gt;
+
+&lt;p&gt;ベクトル版のabsやmaxは自分で定義すれば解決しますが、Swizzle OperationをCUDA C上で再現する方法は私には分かりませんでした。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;CUDA C言語、absやmaxにベクトル型のオーバーロードが無いし、Swizzle Operationも無いからストレスで発狂して精神が崩壊した🤬🤪🤮 &lt;a href=&#34;https://t.co/mRPmQTTcsb&#34;&gt;pic.twitter.com/mRPmQTTcsb&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1155465784807657472?ref_src=twsrc%5Etfw&#34;&gt;July 28, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;float dMenger(float3 z0, float3 offset, float scale) {
+    float4 z = make_float4(z0, 1.0);
+    for (int n = 0; n &amp;lt; 4; n++) {
+        // z = abs(z);
+        z.x = abs(z.x);
+        z.y = abs(z.y);
+        z.z = abs(z.z);
+        z.w = abs(z.w);
+
+        // if (z.x &amp;lt; z.y) z.xy = z.yx;
+        if (z.x &amp;lt; z.y)
+        {
+            float x = z.x;
+            z.x = z.y;
+            z.y = x;
+        }
+
+        // if (z.x &amp;lt; z.z) z.xz = z.zx;
+        if (z.x &amp;lt; z.z)
+        {
+            float x = z.x;
+            z.x = z.z;
+            z.z = x;
+        }
+
+        // if (z.y &amp;lt; z.z) z.yz = z.zy;
+        if (z.y &amp;lt; z.z)
+        {
+            float y = z.y;
+            z.y = z.z;
+            z.z = y;
+        }
+
+        z *= scale;
+        // z.xyz -= offset * (scale - 1.0);
+        z.x -= offset.x * (scale - 1.0);
+        z.y -= offset.y * (scale - 1.0);
+        z.z -= offset.z * (scale - 1.0);
+
+        if (z.z &amp;lt; -0.5 * offset.z * (scale - 1.0))
+            z.z += offset.z * (scale - 1.0);
+    }
+    // return (length(max(abs(z.xyz) - make_float3(1.0, 1.0, 1.0), 0.0)) - 0.05) / z.w;
+    return (length(make_float3(max(abs(z.x) - 1.0, 0.0), max(abs(z.y) - 1.0, 0.0), max(abs(z.z) - 1.0, 0.0))) - 0.05) / z.w;
+}
+
+float map(float3 p)
+{
+    float scale = 100;
+    return dMenger((p - center) / scale, make_float3(1, 1, 1), 3.1) * scale;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;c-からprogramの利用&#34;&gt;C++からProgramの利用&lt;/h2&gt;
+
+&lt;p&gt;Programを利用するには以下のようなC++のコードを書けばOKです。&lt;/p&gt;
+
+&lt;p&gt;ProgramとGPUに送る情報のバッファを指定しているだけです。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;Context        context = 0;
+Program        pgram_raymarching_intersection = 0;
+Program        pgram_raymarching_bounding_box = 0;
+
+// レイマーチングのオブジェクトの GeometryInstance を生成します
+GeometryInstance createRaymrachingObject(
+    const float3&amp;amp; center,
+    const float3&amp;amp; size)
+{
+    Geometry raymarching = context-&amp;gt;createGeometry();
+    raymarching-&amp;gt;setPrimitiveCount(1u);
+    raymarching-&amp;gt;setIntersectionProgram(pgram_raymarching_intersection);
+    raymarching-&amp;gt;setBoundingBoxProgram(pgram_raymarching_bounding_box);
+
+    raymarching[&amp;quot;center&amp;quot;]-&amp;gt;setFloat(center);
+    raymarching[&amp;quot;size&amp;quot;]-&amp;gt;setFloat(size);
+
+    GeometryInstance gi = context-&amp;gt;createGeometryInstance();
+    gi-&amp;gt;setGeometry(raymarching);
+    return gi;
+}
+
+// ジオメトリのセットアップをします
+// ※レイマーチングに直接関係ないコードは省略しています
+void loadGeometry()
+{
+    // Set up Raymarching programs
+    const char *ptx = sutil::getPtxString( SAMPLE_NAME, &amp;quot;optixRaymarching.cu&amp;quot; );
+    pgram_raymarching_bounding_box = context-&amp;gt;createProgramFromPTXString( ptx, &amp;quot;bounds&amp;quot; );
+    pgram_raymarching_intersection = context-&amp;gt;createProgramFromPTXString( ptx, &amp;quot;intersect&amp;quot; );
+
+    // create geometry instances
+    std::vector&amp;lt;GeometryInstance&amp;gt; gis;
+
+    // Raymarcing
+    gis.push_back(createRaymrachingObject(
+        make_float3(278.0f, 120.0f, 278.0f),
+        make_float3(100.0f, 100.0f, 100.0f)));
+    setMaterial(gis.back(), diffuse, &amp;quot;diffuse_color&amp;quot;, white);
+
+    // Create geometry group
+    GeometryGroup geometry_group = context-&amp;gt;createGeometryGroup(gis.begin(), gis.end());
+    geometry_group-&amp;gt;setAcceleration( context-&amp;gt;createAcceleration( &amp;quot;Trbvh&amp;quot; ) );
+    context[&amp;quot;top_object&amp;quot;]-&amp;gt;set( geometry_group );
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;optixの環境構築-windows&#34;&gt;Optixの環境構築（Windows）&lt;/h1&gt;
+
+&lt;p&gt;OptixのWindows用の環境構築の流れは&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;必要なツールを事前にインストール&lt;/li&gt;
+&lt;li&gt;CamkeでVisualStudioのソリューションファイルを生成&lt;/li&gt;
+&lt;li&gt;VisualStudioでビルド&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;という感じでした。&lt;/p&gt;
+
+&lt;p&gt;morishigeさんのQiitaの記事が大変参考になりました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://qiita.com/morishige/items/d4a99c88b925ac31ff3d&#34;&gt;Nvidia OptiX 入門（環境構築編）&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;CmakeとOptixとCUDAのバージョンの組み合わせが肝のようで、Cmakeのバージョンを変えながら何回かトライしたところ、この組み合わせでCmakeビルドに成功しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;✍️ &lt;br&gt;CUDA 10.1&lt;br&gt;OptiX SDK 6.0.0&lt;br&gt;Visual Studio 2017&lt;br&gt;Cmake 3.8.2&lt;br&gt;&lt;br&gt;freeglut / GLFW / GLEW は Nuget の最新版をインストール&lt;a href=&#34;https://t.co/OtsR6bnxmk&#34;&gt;https://t.co/OtsR6bnxmk&lt;/a&gt;&lt;br&gt;&lt;br&gt;Cmakeの設定はスクショ通り &lt;a href=&#34;https://t.co/cpBM4y2Vy1&#34;&gt;pic.twitter.com/cpBM4y2Vy1&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1150906026528391168?ref_src=twsrc%5Etfw&#34;&gt;July 15, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;CmakeでVisual Studioのバージョンを選択する際、誤って64bit版ではなく32bit版を選択してしまい、Cmake自体は成功するもののソリューションがビルドできないことがありました。&lt;/p&gt;
+
+&lt;p&gt;Cmakeの過去のバージョンはGitHubからインストールできます。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Kitware/CMake/releases&#34;&gt;Releases · Kitware/CMake&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;サンプルコードの改造&#34;&gt;サンプルコードの改造&lt;/h2&gt;
+
+&lt;p&gt;サンプルコードの改造方法はNVIDIA Developer Forumsにあります。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://devtalk.nvidia.com/default/topic/1049151/optix/how-can-i-modify-a-simple-example-/&#34;&gt;How can I modify a simple example? - NVIDIA Developer Forums&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Adding a new example is very simple:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Copy one of the optixIntro_01 (this is effectively optixHello) to optixIntro_10 folders,&lt;/li&gt;
+&lt;li&gt;rename it,&lt;/li&gt;
+&lt;li&gt;rename the project name in its copied CMakeLists.txt,&lt;/li&gt;
+&lt;li&gt;add your new subdirectory in the CMakeLists.txt one folder above,&lt;/li&gt;
+&lt;li&gt;rebuild the solution with CMake GUI. Done.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Your new project appears and would do the same thing as the example you copied it from.
+Now change it as you like.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;参考資料&#34;&gt;参考資料&lt;/h1&gt;
+
+&lt;p&gt;以下の記事が大変参考になりました。ありがとうございます。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://memo.render.jp/optix&#34;&gt;optix - uimac実装メモ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.nvidia.com/gameworks/content/gameworkslibrary/optix/optix_quickstart.htm&#34;&gt;OptiX QuickStart（公式チュートリアル）&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
   </channel>
