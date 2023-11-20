@@ -819,42 +819,42 @@ Octopressに&lt;a href=&#34;https://github.com/bkutil/bootstrap-theme&#34;&gt;bo
 // Add styles here to make changes without digging in too much
 
 div.entry-content {
-	h1, h2, h3, h4, h5, h6 {
-		line-height: 2;
-		margin-top: 30px;
-		margin-bottom: 20px;
-		padding-left: 10px;
-	}
-	h1 {
-		font-size: 20px;
-		background: #eee;  
-		border-left: 7px solid #777;  
-		margin-top: 50px;
-	}
-	h2 {
-		font-size: 18px;
-		border-left:7px solid #ccc;  
-		border-bottom:1px solid #ccc;
-		margin-top: 40px;
-	}
-	h3 {
-		font-size: 15px;
-		border-left:7px solid #ccc;  
-	}
-	h4 {
-		line-height: 1.5;
-		font-size: 14px;
-		border-bottom:1px solid #ddd;
-	}
-	h5 {
-		line-height: 1.5;
-		font-size: 12px;
-		border-bottom:1px dashed #ddd;
-	}
-	h6 {
-		line-height: 1.5;
-		font-size: 11px;
-	}
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 2;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        padding-left: 10px;
+    }
+    h1 {
+        font-size: 20px;
+        background: #eee;  
+        border-left: 7px solid #777;  
+        margin-top: 50px;
+    }
+    h2 {
+        font-size: 18px;
+        border-left:7px solid #ccc;  
+        border-bottom:1px solid #ccc;
+        margin-top: 40px;
+    }
+    h3 {
+        font-size: 15px;
+        border-left:7px solid #ccc;  
+    }
+    h4 {
+        line-height: 1.5;
+        font-size: 14px;
+        border-bottom:1px solid #ddd;
+    }
+    h5 {
+        line-height: 1.5;
+        font-size: 12px;
+        border-bottom:1px dashed #ddd;
+    }
+    h6 {
+        line-height: 1.5;
+        font-size: 11px;
+    }
 }
 &lt;/code&gt;&lt;/pre&gt;
 

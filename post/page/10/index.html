@@ -124,6 +124,108 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/08/19/ruby-linkedlist/" itemprop="url">RubyでLinkedListを使うためのC拡張を作った</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2013-08-19 21:25:00 &#43;0900 JST" itemprop="datePublished">2013-08-19</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/ruby">Ruby</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/ruby-c-extension">Ruby C Extension</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                追記  10&frasl;7 RubyGemsとして公開。クラス名はImmutableListに変更。  RubyGems.org README(GitHub)  10&frasl;22 クラス名が変わったり、この記事では説明不足の部分があったので、記事を書き直しました。  Rubyで関数型プログラミングをするための ImmutableList Gem を公開   はじめに RubyのC拡張として LinkedList (連結リスト) を実装しました。
+Ruby の Array は 配列で実装されているため、長いリストでの先頭への要素を追加(cons)や連結(append)が非常に遅いのをなんとかしたいと思いました。
+用途としては、Rubyで再帰を使って関数型言語風にプログラムを組むことを想定しています。
+ソースコードはGitHubに置きました。
+gam0022/linkedlist (GitHub)
+車輪の再発明じゃないの? gem search linked_list で調べてみたところ、次の2つのgemが見つかりました。
+ circular_linked_list (0.0.1) linked_list (1.0.0)  しかし、どちらも Ruby で実装されていたので、Cの拡張として実装し直す意味はあるのではないかと思います。
+使用例 OCaml の List に影響を受けて実装したので、次のようなメソッドがあります。
+ cons head tail rev_append rev append length nth  また、Ruby風の名前の文字列や配列への変換、空リストの判定をするメソッドもあります。
+ inspect(to_s) to_a empty?  動作確認 以下のような動作をします。
+require &lsquo;linkedlist&rsquo; p LinkedList.
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2013/08/19/ruby-linkedlist/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/08/18/ruby-thread-join/" itemprop="url">Rubyの改造してThread#joinのTimeoutで例外を発生させる</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2013-08-18 17:15:00 &#43;0900 JST" itemprop="datePublished">2013-08-18</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/ruby">Ruby</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/ruby-c-extension">Ruby C Extension</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                ぼっちupcamp #upcamp に参加しようと思ったのですが、 諸事情により行けなくなったので、一人で何か作ってました。
+Ruby の 処理系の動作の改良(改悪)をしていました。
+Ruby は git clone <a href="https://github.com/ruby/ruby.git">https://github.com/ruby/ruby.git</a> で落としたものを使いました。
+Thread#join で タイムアウトしたときに例外を発生させる Thread#joinは、 スレッド self の実行が終了するまで、カレントスレッドを停止させるメソッドです。 limit を指定して、limit 秒過ぎても自身が終了しない場合、nil を返します。
+今回は、limit 秒を過ぎてタイムアウトした場合、 例外Timeout を発生させるように改造しました。
+正直、自分でもネタをミスった感がありますが、 すこしはタイムアウトした場合の処理が楽に書けるようになる気がします。
+従来のRubyの Thread#join でタイムアウトを処理する まず、従来のRubyの Thread#join でタイムアウトを処理する場合のコード例を示します。
+Thread#joinの返り値が nilのときにタイムアウトしたと分かるので、 このように書けると思います。
+begin t = Thread.start { # 1秒で終わらない処理 while true 1 end } isTimeout = (t.join(1) == nil) rescue ThreadError puts &quot;theread error&quot; ensure puts &quot;timeout error&quot; if isTimeout t.kill end # =&gt; &quot;timeout error&quot;  改造したRubyの Thread#join でタイムアウトを処理する 今回の改造によって、次のようにRubyのコードをスッキリさせることができます。
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2013/08/18/ruby-thread-join/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/08/04/opencv-on-xcode/" itemprop="url">XcodeでopenCVを使う</a></h3>
         
 
@@ -594,122 +696,6 @@ spinrfの実装 JavaScriptには、spinrfがないので、自分で実装する
     </div>
     <hr>
     
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/06/06/programming-challenges-1/" itemprop="url">Programming Challenges 1</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2013-06-06 09:14:00 &#43;0900 JST" itemprop="datePublished">2013-06-06</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/%e7%ab%b6%e6%8a%80%e3%83%97%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%9f%e3%83%b3%e3%82%b0">競技プログラミング</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/uva-online-judge">Uva Online Judge</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                Uva Online Judgeで解いた問題を適当に解説します。</p>
-
-<h1 id="the-3n-1-problem">The 3n+1 Problem</h1>
-
-<h2 id="問題">問題</h2>
-
-<p><a href="http://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=29&amp;page=show_problem&amp;problem=36">100 - The 3n + 1 problem</a></p>
-
-<dl>
-<dt>問題</dt>
-<dd>ある整数nに対して、問題文のように数列を1になるまで計算する。</dd>
-<dd>nを iからjの 範囲にして、数列を計算した時、</dd>
-<dd>1で終わるまでの数列のサイクル数が最大になるときのサイクル数を求める。</dd>
-<dt>入力</dt>
-<dd>1つのテストケースに対して、次の1行の入力。</dd>
-<dd><code>i, j</code></dd>
-<dt>出力</dt>
-<dd><code>i, j, 最大のサイクル数</code></dd>
-</dl>
-
-<p>
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2013/06/06/programming-challenges-1/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/05/27/kramdown/" itemprop="url">Octopressで定義リストを使う</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2013-05-27 22:40:00 &#43;0900 JST" itemprop="datePublished">2013-05-27</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/octopress">Octopress</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/kramdown">kramdown</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/markdown">Markdown</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                <h1 id="定義リストを使いたい">定義リストを使いたい</h1>
-
-<p>Markdownは楽で便利なのですが、残念なことに標準ではMarkdownは定義リスト<code>&lt;dl&gt;</code>を使えません。</p>
-
-<p>Markdownでは、HTMLを埋め込めるので、手打ちでHTMLを書くことで対処できますが、
-それだと負けた気分になってしまいます。</p>
-
-<p>Octopress(というか、Jekyll)では、標準のMarkdownのパーサを変更できるので、
-定義リストを使えるParserに変更して対処しました。</p>
-
-<p>
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2013/05/27/kramdown/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
 
     
 <nav>
@@ -744,7 +730,7 @@ spinrfの実装 JavaScriptには、spinrfがないので、自分で実装する
         <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
         <script src="https://gam0022.net/js/jquery-1.12.3.min.js"></script>
         <script src="https://gam0022.net/js/bootstrap.custom.js"></script>
-        <script src="https://gam0022.net/js/hugo-academic.js?2023-09-18"></script>
+        <script src="https://gam0022.net/js/hugo-academic.js?2023-09-20"></script>
         
 
         <script>

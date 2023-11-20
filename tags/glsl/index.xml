@@ -10,6 +10,181 @@
     <atom:link href="/tags/glsl/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>映画館でGLSLライブコーディングをしました（第10回新千歳空港国際アニメーション映画祭）</title>
+      <link>https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/</link>
+      <pubDate>Mon, 20 Nov 2023 10:50:40 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/</guid>
+      <description>&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+
+&lt;p&gt;11月2日～11月6日に開催された&lt;a href=&#34;https://airport-anifes.jp/&#34;&gt;第10回新千歳空港国際アニメーション映画祭&lt;/a&gt;でデモシーンの上映とGLSLのシェーダーライブコーディングをしました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-11-20-livecoding-airport-animefes2023/C20231104_0197.MP4_snapshot_17.56.475.jpg&#34; alt=&#34;GLSLライブコーディング@第10回新千歳空港国際アニメーション映画祭&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;今回のアニメーション映画祭では、&lt;a href=&#34;https://sessions.frontl1ne.net/&#34;&gt;SESSIONS&lt;/a&gt;として2つのプログラムを行いました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://airport-anifes.jp/programs/talk_technical_creation/&#34;&gt;トーク：技術が中心の創作活動「テクニカルクリエーション」と「デモシーン」&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://airport-anifes.jp/programs/live_demoscene/&#34;&gt;上映＋ライブ：「デモシーン」で表現される世界と「ライブコーディング」の世界&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;1つ目のプログラムでは、&lt;a href=&#34;https://twitter.com/FL1NE&#34;&gt;@FL1NE&lt;/a&gt;さんがデモシーンが生まれた歴史であったり、テクニカルクリエーションやそのイベントであるSESSIONSの説明を行いました。
+デモシーンの歴史について網羅されている資料は少なく、とても貴重な発表だと感じました。&lt;/p&gt;
+
+&lt;p&gt;2つ目のプログラムでは、前半は@FL1NEさんが司会を務めながら映画館で国内外のデモシーンの上映を行い、後半は私と&lt;a href=&#34;https://twitter.com/Renardealer&#34;&gt;@Renardealer&lt;/a&gt;さんの2人でGLSLのシェーダーライブコーディングを行いました。
+映画館という超大画面＋最高の音響でのライブコーディングは本当に楽しかったです！！
+音楽も&lt;a href=&#34;https://twitter.com/himazin917&#34;&gt;@himazin917&lt;/a&gt;さんのSonic Piによるライブコーディングの演奏でした。&lt;/p&gt;
+
+&lt;h1 id=&#34;デモシーン上映&#34;&gt;デモシーン上映&lt;/h1&gt;
+
+&lt;p&gt;国内外のデモシーン9作品を上映しました。&lt;/p&gt;
+
+&lt;p&gt;PCデモから64K Introや4K Introまで幅広くセレクトしました。
+動画の再生ではなく、その場でのexeファイルの実行によるリアルタイムの本当のデモシーンの上映を行いました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-11-20-livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_13.14.026.jpg&#34; alt=&#34;映画館で上映されたWORMHOLE&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;私と&lt;a href=&#34;https://twitter.com/sadakkey&#34;&gt;@sadakkey&lt;/a&gt;さんによる作品である&lt;a href=&#34;https://www.youtube.com/watch?v=NMNJV-Pbqtk&#34;&gt;WORMHOLE&lt;/a&gt;も上映されました。&lt;/p&gt;
+
+&lt;p&gt;自分の作品が映画館で上映されているという事実が信じられず、非日常体験だなぁと思いました。&lt;/p&gt;
+
+&lt;p&gt;2nd Stage BOSSなど個人的に大好きなデモも映画館で見られました！&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-11-20-livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_46.17.407.jpg&#34; alt=&#34;映画館で上映された2nd Stage BOSS&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;glslライブコーディング&#34;&gt;GLSLライブコーディング&lt;/h1&gt;
+
+&lt;p&gt;Renardと2人でBonzomaticというライブコーディング用のエディターをつかったGLSLライブコーディングを行いました。&lt;/p&gt;
+
+&lt;p&gt;今回はエキシビションということで一部の関数は持ち込みOKのルールで行いました。
+時間制限はRevisionのShaderShowdownと同じく25分でした。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;25分間のGLSLライブコーディングでした。&lt;br&gt;&lt;br&gt;今回はエキシビションということで一部の関数は持ち込みOKのルールで行いました。&lt;br&gt;&lt;br&gt;トラブルでFFT（サウンドを拾う機能）が動作しなかったのと、時間が足りずにシーン切り替えの実装は間に合わなかったので、動画用にコードを少しだけ修正しています。 &lt;a href=&#34;https://t.co/LQoERgILPG&#34;&gt;pic.twitter.com/LQoERgILPG&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1721025346848653593?ref_src=twsrc%5Etfw&#34;&gt;November 5, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;ライブコーディングの楽しさは雰囲気を知ってもらうことが目標だったので、解説を交えながら、複数のシーンを次々に切り替えていく作戦でいきました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;シーン1: IFSによるトンネルのシーン&lt;/li&gt;
+&lt;li&gt;シーン2: MengerSpongeをベースにして&lt;a href=&#34;https://www.youtube.com/watch?v=NMNJV-Pbqtk&#34;&gt;WORMHOLE&lt;/a&gt;風のトンネルのシーン&lt;/li&gt;
+&lt;li&gt;シーン3: Mandelboxのシーン&lt;/li&gt;
+&lt;li&gt;シーン4: シーン3を&lt;a href=&#34;https://seikaisuru-kado.com/&#34;&gt;正解するカド&lt;/a&gt;の「カド」風にしたシーン&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;第10回新千歳空港国際アニメーション映画祭で「GLSL ライブコーディング」を行いました。&lt;br&gt;&lt;br&gt;音楽も &lt;a href=&#34;https://twitter.com/himazin917?ref_src=twsrc%5Etfw&#34;&gt;@himazin917&lt;/a&gt; さんのSonic Piによるライブコーディングによる演奏です。&lt;br&gt;&lt;br&gt;映画館という超大画面＋最高の音響でのライブコーディング、本当に楽しかった！！！&lt;a href=&#34;https://twitter.com/hashtag/newchitose2023?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#newchitose2023&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; &lt;a href=&#34;https://t.co/kbpZcDgZq9&#34;&gt;pic.twitter.com/kbpZcDgZq9&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1721024192278409556?ref_src=twsrc%5Etfw&#34;&gt;November 5, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;正解するカドが伝わるのか正直あまり自信がなかったのですが、意外に反応が良かったのでホッとしました。&lt;/p&gt;
+
+&lt;p&gt;途中でバグらせてしまって時間が足りなくなってしまいましたが、むしろライブ感が演出できて結果的には良かったのかなと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://t.co/GoB6m63pvx&#34;&gt;https://t.co/GoB6m63pvx&lt;/a&gt;&lt;br&gt;第10回新千歳空港国際アニメーション映画祭にて25分にわたるライブコーディングをしました！&lt;br&gt;音楽も &lt;a href=&#34;https://twitter.com/himazin917?ref_src=twsrc%5Etfw&#34;&gt;@himazin917&lt;/a&gt; さんによるライブコーディングです！&lt;br&gt;&lt;br&gt;(本番の録画が出来なかったのでこれは練習の録画ですが、本番でも同じ絵が出せました！)&lt;a href=&#34;https://twitter.com/hashtag/newchitose2023?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#newchitose2023&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; &lt;a href=&#34;https://t.co/LdQnLTYL0x&#34;&gt;pic.twitter.com/LdQnLTYL0x&lt;/a&gt;&lt;/p&gt;&amp;mdash; Renard (@Renardealer) &lt;a href=&#34;https://twitter.com/Renardealer/status/1721195825932743087?ref_src=twsrc%5Etfw&#34;&gt;November 5, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;対戦相手であるRenardさんの作品は素晴らしかったです。
+タイル張りの複数のシーンがおしゃれにトランジションで切り替わり、さらにカメラのアニメーションやトランジションのバーのアニメーションが心地よく、非常に高いクオリティの作品でした！&lt;/p&gt;
+
+&lt;p&gt;エキシビションだったので順位付けはありませんでした。&lt;/p&gt;
+
+&lt;h1 id=&#34;感想&#34;&gt;感想&lt;/h1&gt;
+
+&lt;p&gt;映画館という最高の環境でデモシーンを上映したり、ライブコーディングを行うことができて、本当に楽しかったです。&lt;/p&gt;
+
+&lt;p&gt;このような貴重なチャンスをいただけて本当に嬉しく思います。&lt;/p&gt;
+
+&lt;p&gt;ライブコーディング中に歓声があがったり、プログラム終了後の時間だったり、映画祭の関係者のパーティーでも興味をもってくださった方々からたくさん感想や質問をいただいて、やって良かったと心から思いました。&lt;/p&gt;
+
+&lt;p&gt;Twitter上でもたくさん感想をいただけて嬉しかったです！&lt;/p&gt;
+
+&lt;p&gt;映画祭のスタッフの方々、参加者の方々、デモシーンの上映とライブコーディング用にハイエンドPCを手配してくださったツクモ様、本当にありがとうございました！！！&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;上映＋ライブ：「デモシーン」で表現される世界と「ライブコーディング」の世界、後半ライブコーディングは見てて楽しい凄い体験でした。&lt;br&gt;&lt;br&gt;コーディング変更する度に背景映像や音が変わっていくのは圧巻。これは凄い。&lt;br&gt;&lt;br&gt;そして、ここでまさか正解するカドが出てくるとは思わず笑った。まさがさかだよ &lt;a href=&#34;https://t.co/OUJtMax3MB&#34;&gt;pic.twitter.com/OUJtMax3MB&lt;/a&gt;&lt;/p&gt;&amp;mdash; NOG (@NOGjp) &lt;a href=&#34;https://twitter.com/NOGjp/status/1720779213186482574?ref_src=twsrc%5Etfw&#34;&gt;November 4, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;二日目は25アニメ &amp;amp; 1ソフトクリームでした！　ライブコーディングも凄かったです！&lt;/p&gt;&amp;mdash; 南野これ式　コミティアQ38b (@mebaGna) &lt;a href=&#34;https://twitter.com/mebaGna/status/1720783163826565600?ref_src=twsrc%5Etfw&#34;&gt;November 4, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;これ実際に見たんだけどライブコーディングかなり面白かった。25分でMVのようなデモシーンが出来ちゃうの凄い世界だね&lt;/p&gt;&amp;mdash; サチイ (@mg_sachi1) &lt;a href=&#34;https://twitter.com/mg_sachi1/status/1720789301703950827?ref_src=twsrc%5Etfw&#34;&gt;November 4, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;第10回新千歳空港国際アニメーション映画祭」今日の最後は、上映＋ライブ『「デモシーン」で表現される世界と「ライブコーディング」の世界』へ。凄い世界でした。リアルタイムに映像や音楽を生成するプログラムを制作する「デモシーン」をはじめとしたテクニカルクリエーションのイベント「SESSIONS」… &lt;a href=&#34;https://t.co/Sxjt3CsSQS&#34;&gt;pic.twitter.com/Sxjt3CsSQS&lt;/a&gt;&lt;/p&gt;&amp;mdash; 矢倉 あゆみ (@babyish_guide) &lt;a href=&#34;https://twitter.com/babyish_guide/status/1720814720289219035?ref_src=twsrc%5Etfw&#34;&gt;November 4, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;今日の最後の方シアター2でやってた「デモシーン」で表現される世界と⁰「ライブコーディング」の世界、めっっっっっっちゃくちゃ面白かった！！！！！！！👏👏👏👏👏👏&lt;br&gt;面白すぎてそのまま帰りたくなくて、数人でプロント閉店時間まで面白すぎたね…！と語り合いました😂😂&lt;a href=&#34;https://twitter.com/hashtag/newchitose2023?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#newchitose2023&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/SESSIONS?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS&lt;/a&gt;&lt;/p&gt;&amp;mdash; さとうゆか / SATO Yuka (@satoyuka_01) &lt;a href=&#34;https://twitter.com/satoyuka_01/status/1720838739130523962?ref_src=twsrc%5Etfw&#34;&gt;November 4, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;昨日のライブコーディングは良かったよなー。&lt;br&gt;&lt;br&gt;あの環境、絶対楽しいと思うので、家帰ったら構築してみたい。でも解説サイトとかあるんかな？&lt;/p&gt;&amp;mdash; NOG (@NOGjp) &lt;a href=&#34;https://twitter.com/NOGjp/status/1720927272461545735?ref_src=twsrc%5Etfw&#34;&gt;November 4, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;「上映＋ライブ：「デモシーン」で表現される世界と「ライブコーディング」の世界」最高すぎた……！　「メガデモ」の傑作選にくわえ（なんと4KBの作品も！）、コーディングによってリアルタイムで映像を生成する「ライブコーティング」のデモンストレーションも！&lt;a href=&#34;https://twitter.com/hashtag/newchitose2023?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#newchitose2023&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; &lt;a href=&#34;https://t.co/PJbbbyL5Oa&#34;&gt;pic.twitter.com/PJbbbyL5Oa&lt;/a&gt;&lt;/p&gt;&amp;mdash; 田中大裕(Daisuke Tanaka) (@diecoo1025) &lt;a href=&#34;https://twitter.com/diecoo1025/status/1721152668998189144?ref_src=twsrc%5Etfw&#34;&gt;November 5, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;まさか映画祭でライブコーディングを楽しめるとは。。最高でした &lt;a href=&#34;https://t.co/SVbHJnHnS6&#34;&gt;https://t.co/SVbHJnHnS6&lt;/a&gt;&lt;/p&gt;&amp;mdash; Achabox (@achabox) &lt;a href=&#34;https://twitter.com/achabox/status/1721206960912257467?ref_src=twsrc%5Etfw&#34;&gt;November 5, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;キーボードが使えないトラブル&#34;&gt;キーボードが使えないトラブル&lt;/h2&gt;
+
+&lt;p&gt;ライブコーディング用に&lt;a href=&#34;https://amzn.to/46pfG4W&#34;&gt;いつも使っている無線キーボード&lt;/a&gt;を持ち込んだのに、USBのレシーバーを家に忘れるというミスをしました。
+詰んだかと思われたのですが、Bluetoothでも接続できたのでセーフでした。危なかった！&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ライブコーディングのために愛用の無線キーボードを北海道まで飛行機で持ってきたのに、レシーバーを家に置いてきた😇&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1720386131488133405?ref_src=twsrc%5Etfw&#34;&gt;November 3, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;映画祭の感想&#34;&gt;映画祭の感想&lt;/h1&gt;
+
+&lt;p&gt;映画祭というイベントは初参加だったので、とても新鮮に楽しめました。&lt;/p&gt;
+
+&lt;p&gt;印象に残ったプログラムは&lt;a href=&#34;https://airport-anifes.jp/programs/frieren_anime/&#34;&gt;葬送のフリーレン（スタッフトーク付き）&lt;/a&gt;です。
+アニメの4話まで上映した後、スタッフトークがあり、制作の裏話を聞くことができました。アニメ放送中で忙しい中のご対応に感謝しかありませんでした。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://airport-anifes.jp/feature_item/komada-a-whisky-family/&#34;&gt;駒田蒸留所へようこそ&lt;/a&gt;の先行上映もありました。
+幻のウイスキー「KOMA」を復活させるために奮闘する話でしたが、人間ドラマもとても良かったです。
+ウイスキーの設定や監修が本格的で解像度が高く、世界にぐっと引き込まれました。
+11月10日から一般の劇場でも公開されています。とても良い作品だったので、ぜひ映画館で見てください。&lt;/p&gt;
+
+&lt;p&gt;いろんな短編作品が上映される&lt;a href=&#34;https://airport-anifes.jp/programs/compe_jp/&#34;&gt;コンペティション&lt;/a&gt;や&lt;a href=&#34;https://airport-anifes.jp/programs/otototabi_newchitose2023/&#34;&gt;音楽ライブ&lt;/a&gt;も楽しかったです。
+コンペティションは投票で順位が決まるので、デモシーンに通じるものを感じました。&lt;/p&gt;
+
+&lt;p&gt;新千歳空港国際も商業施設が充実していて驚きました。
+会期中は空港内のホテルに滞在していたので、3日くらい空港から外に一歩も出なかったのですが、飽きることなく楽しめました。空港の温泉も露天風呂があって良かったです。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>TDF 16ms #0（2023）のGLSL Graphics Compoで3位入賞しました</title>
+      <link>https://gam0022.net/blog/2023/10/30/tdf16ms0/</link>
+      <pubDate>Mon, 30 Oct 2023 10:00:00 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2023/10/30/tdf16ms0/</guid>
+      <description>&lt;p&gt;2023年10月22日にオンライン（YouTube配信）で開催された&lt;a href=&#34;https://16ms.tokyodemofest.jp/&#34;&gt;TDF 16ms #0&lt;/a&gt;に参加し、GLSL Graphics Compo部門で3位をいただきました！&lt;/p&gt;
+
+&lt;p&gt;作品のタイトルは『Infinite Keys』で、ゲーミングキーボードをモチーフにしました。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/B4ZirkFOdZg&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;以下は『Infinite Keys』の各種リンクです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/B4ZirkFOdZg&#34;&gt;📺 YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.shadertoy.com/view/csKfzw&#34;&gt;👁️ Shadertoy&lt;/a&gt; ※高負荷のためRTX3080以上のGPU推奨&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.pouet.net/prod.php?which=95342&#34;&gt;📦 Pouet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&amp;quot;Infinite Keys&amp;quot; by &lt;a href=&#34;https://twitter.com/gam0022?ref_src=twsrc%5Etfw&#34;&gt;@gam0022&lt;/a&gt;&lt;br&gt;&lt;br&gt;3rd Place in GLSL Graphics Compo at &lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; 16ms #0&lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; 16ms #0 のGLSLグラフィックスコンポで3位に入賞しました！ &lt;a href=&#34;https://t.co/EsJitdiOdV&#34;&gt;pic.twitter.com/EsJitdiOdV&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1716107013154087009?ref_src=twsrc%5Etfw&#34;&gt;October 22, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;tdf-16ms-0アーカイブ&#34;&gt;TDF 16ms #0アーカイブ&lt;/h1&gt;
+
+&lt;p&gt;TDF 16ms #0はYouTubeライブでストリーミングされていたので、アーカイブが残っています。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/MmOaXb9ldz8&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;閉会式ではTDF 16msのコンセプトについての説明がありました。「シーンの炎を絶やさない🔥」「持続可能なデモパーティ」の話が興味深かったです。&lt;/p&gt;
+
+&lt;p&gt;さまざまな試行錯誤をしていただいているオーガナイザーの方々に深く感謝します。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-10-30-tdf16ms0/5-52-51_screenshot.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-10-30-tdf16ms0/5-52-51_screenshot.png&#34; alt=&#34;シーンの炎を絶やさない🔥&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-10-30-tdf16ms0/5-53-20_screenshot.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-10-30-tdf16ms0/5-53-20_screenshot.png&#34; alt=&#34;3つのコンセプト&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-10-30-tdf16ms0/5-53-46_screenshot.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-10-30-tdf16ms0/5-53-46_screenshot.png&#34; alt=&#34;持続可能なデモパーティ&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>SESSIONS 2023のGLSL Graphics Compoで準優勝しました（グラフィックス解説）</title>
       <link>https://gam0022.net/blog/2023/05/31/sessions2023-glsl-compo/</link>
       <pubDate>Wed, 31 May 2023 06:49:24 +0900</pubDate>

@@ -10,6 +10,181 @@
     <atom:link href="/tags/cg/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>映画館でGLSLライブコーディングをしました（第10回新千歳空港国際アニメーション映画祭）</title>
+      <link>https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/</link>
+      <pubDate>Mon, 20 Nov 2023 10:50:40 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/</guid>
+      <description>&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+
+&lt;p&gt;11月2日～11月6日に開催された&lt;a href=&#34;https://airport-anifes.jp/&#34;&gt;第10回新千歳空港国際アニメーション映画祭&lt;/a&gt;でデモシーンの上映とGLSLのシェーダーライブコーディングをしました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-11-20-livecoding-airport-animefes2023/C20231104_0197.MP4_snapshot_17.56.475.jpg&#34; alt=&#34;GLSLライブコーディング@第10回新千歳空港国際アニメーション映画祭&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;今回のアニメーション映画祭では、&lt;a href=&#34;https://sessions.frontl1ne.net/&#34;&gt;SESSIONS&lt;/a&gt;として2つのプログラムを行いました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://airport-anifes.jp/programs/talk_technical_creation/&#34;&gt;トーク：技術が中心の創作活動「テクニカルクリエーション」と「デモシーン」&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://airport-anifes.jp/programs/live_demoscene/&#34;&gt;上映＋ライブ：「デモシーン」で表現される世界と「ライブコーディング」の世界&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;1つ目のプログラムでは、&lt;a href=&#34;https://twitter.com/FL1NE&#34;&gt;@FL1NE&lt;/a&gt;さんがデモシーンが生まれた歴史であったり、テクニカルクリエーションやそのイベントであるSESSIONSの説明を行いました。
+デモシーンの歴史について網羅されている資料は少なく、とても貴重な発表だと感じました。&lt;/p&gt;
+
+&lt;p&gt;2つ目のプログラムでは、前半は@FL1NEさんが司会を務めながら映画館で国内外のデモシーンの上映を行い、後半は私と&lt;a href=&#34;https://twitter.com/Renardealer&#34;&gt;@Renardealer&lt;/a&gt;さんの2人でGLSLのシェーダーライブコーディングを行いました。
+映画館という超大画面＋最高の音響でのライブコーディングは本当に楽しかったです！！
+音楽も&lt;a href=&#34;https://twitter.com/himazin917&#34;&gt;@himazin917&lt;/a&gt;さんのSonic Piによるライブコーディングの演奏でした。&lt;/p&gt;
+
+&lt;h1 id=&#34;デモシーン上映&#34;&gt;デモシーン上映&lt;/h1&gt;
+
+&lt;p&gt;国内外のデモシーン9作品を上映しました。&lt;/p&gt;
+
+&lt;p&gt;PCデモから64K Introや4K Introまで幅広くセレクトしました。
+動画の再生ではなく、その場でのexeファイルの実行によるリアルタイムの本当のデモシーンの上映を行いました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-11-20-livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_13.14.026.jpg&#34; alt=&#34;映画館で上映されたWORMHOLE&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;私と&lt;a href=&#34;https://twitter.com/sadakkey&#34;&gt;@sadakkey&lt;/a&gt;さんによる作品である&lt;a href=&#34;https://www.youtube.com/watch?v=NMNJV-Pbqtk&#34;&gt;WORMHOLE&lt;/a&gt;も上映されました。&lt;/p&gt;
+
+&lt;p&gt;自分の作品が映画館で上映されているという事実が信じられず、非日常体験だなぁと思いました。&lt;/p&gt;
+
+&lt;p&gt;2nd Stage BOSSなど個人的に大好きなデモも映画館で見られました！&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-11-20-livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_46.17.407.jpg&#34; alt=&#34;映画館で上映された2nd Stage BOSS&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;glslライブコーディング&#34;&gt;GLSLライブコーディング&lt;/h1&gt;
+
+&lt;p&gt;Renardと2人でBonzomaticというライブコーディング用のエディターをつかったGLSLライブコーディングを行いました。&lt;/p&gt;
+
+&lt;p&gt;今回はエキシビションということで一部の関数は持ち込みOKのルールで行いました。
+時間制限はRevisionのShaderShowdownと同じく25分でした。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;25分間のGLSLライブコーディングでした。&lt;br&gt;&lt;br&gt;今回はエキシビションということで一部の関数は持ち込みOKのルールで行いました。&lt;br&gt;&lt;br&gt;トラブルでFFT（サウンドを拾う機能）が動作しなかったのと、時間が足りずにシーン切り替えの実装は間に合わなかったので、動画用にコードを少しだけ修正しています。 &lt;a href=&#34;https://t.co/LQoERgILPG&#34;&gt;pic.twitter.com/LQoERgILPG&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1721025346848653593?ref_src=twsrc%5Etfw&#34;&gt;November 5, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;ライブコーディングの楽しさは雰囲気を知ってもらうことが目標だったので、解説を交えながら、複数のシーンを次々に切り替えていく作戦でいきました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;シーン1: IFSによるトンネルのシーン&lt;/li&gt;
+&lt;li&gt;シーン2: MengerSpongeをベースにして&lt;a href=&#34;https://www.youtube.com/watch?v=NMNJV-Pbqtk&#34;&gt;WORMHOLE&lt;/a&gt;風のトンネルのシーン&lt;/li&gt;
+&lt;li&gt;シーン3: Mandelboxのシーン&lt;/li&gt;
+&lt;li&gt;シーン4: シーン3を&lt;a href=&#34;https://seikaisuru-kado.com/&#34;&gt;正解するカド&lt;/a&gt;の「カド」風にしたシーン&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;第10回新千歳空港国際アニメーション映画祭で「GLSL ライブコーディング」を行いました。&lt;br&gt;&lt;br&gt;音楽も &lt;a href=&#34;https://twitter.com/himazin917?ref_src=twsrc%5Etfw&#34;&gt;@himazin917&lt;/a&gt; さんのSonic Piによるライブコーディングによる演奏です。&lt;br&gt;&lt;br&gt;映画館という超大画面＋最高の音響でのライブコーディング、本当に楽しかった！！！&lt;a href=&#34;https://twitter.com/hashtag/newchitose2023?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#newchitose2023&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; &lt;a href=&#34;https://t.co/kbpZcDgZq9&#34;&gt;pic.twitter.com/kbpZcDgZq9&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1721024192278409556?ref_src=twsrc%5Etfw&#34;&gt;November 5, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;正解するカドが伝わるのか正直あまり自信がなかったのですが、意外に反応が良かったのでホッとしました。&lt;/p&gt;
+
+&lt;p&gt;途中でバグらせてしまって時間が足りなくなってしまいましたが、むしろライブ感が演出できて結果的には良かったのかなと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://t.co/GoB6m63pvx&#34;&gt;https://t.co/GoB6m63pvx&lt;/a&gt;&lt;br&gt;第10回新千歳空港国際アニメーション映画祭にて25分にわたるライブコーディングをしました！&lt;br&gt;音楽も &lt;a href=&#34;https://twitter.com/himazin917?ref_src=twsrc%5Etfw&#34;&gt;@himazin917&lt;/a&gt; さんによるライブコーディングです！&lt;br&gt;&lt;br&gt;(本番の録画が出来なかったのでこれは練習の録画ですが、本番でも同じ絵が出せました！)&lt;a href=&#34;https://twitter.com/hashtag/newchitose2023?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#newchitose2023&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; &lt;a href=&#34;https://t.co/LdQnLTYL0x&#34;&gt;pic.twitter.com/LdQnLTYL0x&lt;/a&gt;&lt;/p&gt;&amp;mdash; Renard (@Renardealer) &lt;a href=&#34;https://twitter.com/Renardealer/status/1721195825932743087?ref_src=twsrc%5Etfw&#34;&gt;November 5, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;対戦相手であるRenardさんの作品は素晴らしかったです。
+タイル張りの複数のシーンがおしゃれにトランジションで切り替わり、さらにカメラのアニメーションやトランジションのバーのアニメーションが心地よく、非常に高いクオリティの作品でした！&lt;/p&gt;
+
+&lt;p&gt;エキシビションだったので順位付けはありませんでした。&lt;/p&gt;
+
+&lt;h1 id=&#34;感想&#34;&gt;感想&lt;/h1&gt;
+
+&lt;p&gt;映画館という最高の環境でデモシーンを上映したり、ライブコーディングを行うことができて、本当に楽しかったです。&lt;/p&gt;
+
+&lt;p&gt;このような貴重なチャンスをいただけて本当に嬉しく思います。&lt;/p&gt;
+
+&lt;p&gt;ライブコーディング中に歓声があがったり、プログラム終了後の時間だったり、映画祭の関係者のパーティーでも興味をもってくださった方々からたくさん感想や質問をいただいて、やって良かったと心から思いました。&lt;/p&gt;
+
+&lt;p&gt;Twitter上でもたくさん感想をいただけて嬉しかったです！&lt;/p&gt;
+
+&lt;p&gt;映画祭のスタッフの方々、参加者の方々、デモシーンの上映とライブコーディング用にハイエンドPCを手配してくださったツクモ様、本当にありがとうございました！！！&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;上映＋ライブ：「デモシーン」で表現される世界と「ライブコーディング」の世界、後半ライブコーディングは見てて楽しい凄い体験でした。&lt;br&gt;&lt;br&gt;コーディング変更する度に背景映像や音が変わっていくのは圧巻。これは凄い。&lt;br&gt;&lt;br&gt;そして、ここでまさか正解するカドが出てくるとは思わず笑った。まさがさかだよ &lt;a href=&#34;https://t.co/OUJtMax3MB&#34;&gt;pic.twitter.com/OUJtMax3MB&lt;/a&gt;&lt;/p&gt;&amp;mdash; NOG (@NOGjp) &lt;a href=&#34;https://twitter.com/NOGjp/status/1720779213186482574?ref_src=twsrc%5Etfw&#34;&gt;November 4, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;二日目は25アニメ &amp;amp; 1ソフトクリームでした！　ライブコーディングも凄かったです！&lt;/p&gt;&amp;mdash; 南野これ式　コミティアQ38b (@mebaGna) &lt;a href=&#34;https://twitter.com/mebaGna/status/1720783163826565600?ref_src=twsrc%5Etfw&#34;&gt;November 4, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;これ実際に見たんだけどライブコーディングかなり面白かった。25分でMVのようなデモシーンが出来ちゃうの凄い世界だね&lt;/p&gt;&amp;mdash; サチイ (@mg_sachi1) &lt;a href=&#34;https://twitter.com/mg_sachi1/status/1720789301703950827?ref_src=twsrc%5Etfw&#34;&gt;November 4, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;第10回新千歳空港国際アニメーション映画祭」今日の最後は、上映＋ライブ『「デモシーン」で表現される世界と「ライブコーディング」の世界』へ。凄い世界でした。リアルタイムに映像や音楽を生成するプログラムを制作する「デモシーン」をはじめとしたテクニカルクリエーションのイベント「SESSIONS」… &lt;a href=&#34;https://t.co/Sxjt3CsSQS&#34;&gt;pic.twitter.com/Sxjt3CsSQS&lt;/a&gt;&lt;/p&gt;&amp;mdash; 矢倉 あゆみ (@babyish_guide) &lt;a href=&#34;https://twitter.com/babyish_guide/status/1720814720289219035?ref_src=twsrc%5Etfw&#34;&gt;November 4, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;今日の最後の方シアター2でやってた「デモシーン」で表現される世界と⁰「ライブコーディング」の世界、めっっっっっっちゃくちゃ面白かった！！！！！！！👏👏👏👏👏👏&lt;br&gt;面白すぎてそのまま帰りたくなくて、数人でプロント閉店時間まで面白すぎたね…！と語り合いました😂😂&lt;a href=&#34;https://twitter.com/hashtag/newchitose2023?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#newchitose2023&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/SESSIONS?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS&lt;/a&gt;&lt;/p&gt;&amp;mdash; さとうゆか / SATO Yuka (@satoyuka_01) &lt;a href=&#34;https://twitter.com/satoyuka_01/status/1720838739130523962?ref_src=twsrc%5Etfw&#34;&gt;November 4, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;昨日のライブコーディングは良かったよなー。&lt;br&gt;&lt;br&gt;あの環境、絶対楽しいと思うので、家帰ったら構築してみたい。でも解説サイトとかあるんかな？&lt;/p&gt;&amp;mdash; NOG (@NOGjp) &lt;a href=&#34;https://twitter.com/NOGjp/status/1720927272461545735?ref_src=twsrc%5Etfw&#34;&gt;November 4, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;「上映＋ライブ：「デモシーン」で表現される世界と「ライブコーディング」の世界」最高すぎた……！　「メガデモ」の傑作選にくわえ（なんと4KBの作品も！）、コーディングによってリアルタイムで映像を生成する「ライブコーティング」のデモンストレーションも！&lt;a href=&#34;https://twitter.com/hashtag/newchitose2023?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#newchitose2023&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; &lt;a href=&#34;https://t.co/PJbbbyL5Oa&#34;&gt;pic.twitter.com/PJbbbyL5Oa&lt;/a&gt;&lt;/p&gt;&amp;mdash; 田中大裕(Daisuke Tanaka) (@diecoo1025) &lt;a href=&#34;https://twitter.com/diecoo1025/status/1721152668998189144?ref_src=twsrc%5Etfw&#34;&gt;November 5, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;まさか映画祭でライブコーディングを楽しめるとは。。最高でした &lt;a href=&#34;https://t.co/SVbHJnHnS6&#34;&gt;https://t.co/SVbHJnHnS6&lt;/a&gt;&lt;/p&gt;&amp;mdash; Achabox (@achabox) &lt;a href=&#34;https://twitter.com/achabox/status/1721206960912257467?ref_src=twsrc%5Etfw&#34;&gt;November 5, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;キーボードが使えないトラブル&#34;&gt;キーボードが使えないトラブル&lt;/h2&gt;
+
+&lt;p&gt;ライブコーディング用に&lt;a href=&#34;https://amzn.to/46pfG4W&#34;&gt;いつも使っている無線キーボード&lt;/a&gt;を持ち込んだのに、USBのレシーバーを家に忘れるというミスをしました。
+詰んだかと思われたのですが、Bluetoothでも接続できたのでセーフでした。危なかった！&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ライブコーディングのために愛用の無線キーボードを北海道まで飛行機で持ってきたのに、レシーバーを家に置いてきた😇&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1720386131488133405?ref_src=twsrc%5Etfw&#34;&gt;November 3, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;映画祭の感想&#34;&gt;映画祭の感想&lt;/h1&gt;
+
+&lt;p&gt;映画祭というイベントは初参加だったので、とても新鮮に楽しめました。&lt;/p&gt;
+
+&lt;p&gt;印象に残ったプログラムは&lt;a href=&#34;https://airport-anifes.jp/programs/frieren_anime/&#34;&gt;葬送のフリーレン（スタッフトーク付き）&lt;/a&gt;です。
+アニメの4話まで上映した後、スタッフトークがあり、制作の裏話を聞くことができました。アニメ放送中で忙しい中のご対応に感謝しかありませんでした。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://airport-anifes.jp/feature_item/komada-a-whisky-family/&#34;&gt;駒田蒸留所へようこそ&lt;/a&gt;の先行上映もありました。
+幻のウイスキー「KOMA」を復活させるために奮闘する話でしたが、人間ドラマもとても良かったです。
+ウイスキーの設定や監修が本格的で解像度が高く、世界にぐっと引き込まれました。
+11月10日から一般の劇場でも公開されています。とても良い作品だったので、ぜひ映画館で見てください。&lt;/p&gt;
+
+&lt;p&gt;いろんな短編作品が上映される&lt;a href=&#34;https://airport-anifes.jp/programs/compe_jp/&#34;&gt;コンペティション&lt;/a&gt;や&lt;a href=&#34;https://airport-anifes.jp/programs/otototabi_newchitose2023/&#34;&gt;音楽ライブ&lt;/a&gt;も楽しかったです。
+コンペティションは投票で順位が決まるので、デモシーンに通じるものを感じました。&lt;/p&gt;
+
+&lt;p&gt;新千歳空港国際も商業施設が充実していて驚きました。
+会期中は空港内のホテルに滞在していたので、3日くらい空港から外に一歩も出なかったのですが、飽きることなく楽しめました。空港の温泉も露天風呂があって良かったです。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>TDF 16ms #0（2023）のGLSL Graphics Compoで3位入賞しました</title>
+      <link>https://gam0022.net/blog/2023/10/30/tdf16ms0/</link>
+      <pubDate>Mon, 30 Oct 2023 10:00:00 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2023/10/30/tdf16ms0/</guid>
+      <description>&lt;p&gt;2023年10月22日にオンライン（YouTube配信）で開催された&lt;a href=&#34;https://16ms.tokyodemofest.jp/&#34;&gt;TDF 16ms #0&lt;/a&gt;に参加し、GLSL Graphics Compo部門で3位をいただきました！&lt;/p&gt;
+
+&lt;p&gt;作品のタイトルは『Infinite Keys』で、ゲーミングキーボードをモチーフにしました。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/B4ZirkFOdZg&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;以下は『Infinite Keys』の各種リンクです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/B4ZirkFOdZg&#34;&gt;📺 YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.shadertoy.com/view/csKfzw&#34;&gt;👁️ Shadertoy&lt;/a&gt; ※高負荷のためRTX3080以上のGPU推奨&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.pouet.net/prod.php?which=95342&#34;&gt;📦 Pouet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&amp;quot;Infinite Keys&amp;quot; by &lt;a href=&#34;https://twitter.com/gam0022?ref_src=twsrc%5Etfw&#34;&gt;@gam0022&lt;/a&gt;&lt;br&gt;&lt;br&gt;3rd Place in GLSL Graphics Compo at &lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; 16ms #0&lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; 16ms #0 のGLSLグラフィックスコンポで3位に入賞しました！ &lt;a href=&#34;https://t.co/EsJitdiOdV&#34;&gt;pic.twitter.com/EsJitdiOdV&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1716107013154087009?ref_src=twsrc%5Etfw&#34;&gt;October 22, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;tdf-16ms-0アーカイブ&#34;&gt;TDF 16ms #0アーカイブ&lt;/h1&gt;
+
+&lt;p&gt;TDF 16ms #0はYouTubeライブでストリーミングされていたので、アーカイブが残っています。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/MmOaXb9ldz8&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;閉会式ではTDF 16msのコンセプトについての説明がありました。「シーンの炎を絶やさない🔥」「持続可能なデモパーティ」の話が興味深かったです。&lt;/p&gt;
+
+&lt;p&gt;さまざまな試行錯誤をしていただいているオーガナイザーの方々に深く感謝します。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-10-30-tdf16ms0/5-52-51_screenshot.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-10-30-tdf16ms0/5-52-51_screenshot.png&#34; alt=&#34;シーンの炎を絶やさない🔥&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-10-30-tdf16ms0/5-53-20_screenshot.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-10-30-tdf16ms0/5-53-20_screenshot.png&#34; alt=&#34;3つのコンセプト&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-10-30-tdf16ms0/5-53-46_screenshot.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-10-30-tdf16ms0/5-53-46_screenshot.png&#34; alt=&#34;持続可能なデモパーティ&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>レイトレ合宿9で4次元立方体をテーマにしたアニメーションを作成しました</title>
       <link>https://gam0022.net/blog/2023/09/20/rtcamp9/</link>
       <pubDate>Wed, 20 Sep 2023 12:00:00 +0900</pubDate>
@@ -19,13 +194,13 @@
 
 &lt;p&gt;4次元空間上で回転してから、それを3次元に投影することで、内外が入れ替わるような不思議なループアニメーションをテーマにしました。&lt;/p&gt;
 
-&lt;p&gt;開発した自作レンダラーで &lt;strong&gt;5分の制限時間&lt;/strong&gt; でレンダリングして、こんな感じの動画を生成しました。&lt;/p&gt;
+&lt;p&gt;自作のレンダラーで &lt;strong&gt;5分の制限時間&lt;/strong&gt; でレンダリングして4位をいただきました！次の動画は合宿運営側で制限時間内にレンダリングしたものです。&lt;/p&gt;
 
 &lt;video playsinline=&#34;&#34; loop=&#34;&#34; muted=&#34;&#34; controls=&#34;&#34; width=&#34;100%&#34; src=&#34;https://gam0022.net/images/posts/2023-09-19-rtcamp9/gam_crf12.mp4&#34; poster=&#34;/images/posts/2023-09-19-rtcamp9/218.jpg&#34;&gt;&lt;/video&gt;
 
 &lt;p&gt;&lt;/p&gt;
 
-&lt;p&gt;長時間をかけて4K解像度でレンダリングした動画をYouTubeにアップロードしました。&lt;/p&gt;
+&lt;p&gt;時間制限なしで4K解像度でレンダリングした動画はYouTubeにアップロードしました。&lt;/p&gt;
 
 &lt;div class=&#34;movie-wrap&#34;&gt;
 &lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/ohbv8_jCQtc&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
@@ -181,7 +356,9 @@
 &lt;li&gt;3次元空間上で描画&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;以下は、ステレオ投影をCUDA C言語で実装したものになります。&lt;/p&gt;
+&lt;p&gt;以下は、ステレオ投影とその利用例をCUDA C言語で実装したものになります。&lt;/p&gt;
+
+&lt;p&gt;実際の距離関数はマテリアル分けだったり、複数の距離関数を合成したりと、もう少し複雑になっていますが、分かりやすさ重視でシンプルにしました。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;// 3次元座標を4次元に変換（逆ステレオ投影）
 float4 inverseStereographic(float3 p)
@@ -196,9 +373,38 @@ float3 stereographic(float4 p4)
     float k = 1.0 / (1.0 + p4.w);
     return k * make_float3(p4.x, p4.y, p4.z);
 }
+
+// 距離関数での利用例
+float map(float3 pos)
+{
+    float f = length(pos);
+
+    // 3Dから4Dに逆ステレオ投影
+    float4 p4d = inverseStereographic(pos);
+
+    // 4D空間のZW平面上の回転
+    float2 p4d_zw = make_float2(p4d.z, p4d.w);
+    rot(p4d_zw, (-time + 0.01) / 5 * TAU);
+    p4d.z = p4d_zw.x;
+    p4d.w = p4d_zw.y;
+
+    // 4Dから3Dにステレオ変換
+    float3 p = stereographic(p4d);
+
+    // 3D上で距離関数を評価
+    float d = dMenger(p / _MengerUniformScale0, _MengerOffset0, _MengerScale0, _MengerIteration0);
+    d *= _MengerUniformScale0;
+
+    // 空間の歪みを考慮して距離関数をスケール（0.7は係数）
+    float e = length(p);
+    d *= min(1.0, 0.7 / e) * max(1.0, f);
+
+    return d;
+}
+
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;ステレオ投影の幾何学的な理解については、3Blue1Brownの動画にとても助けられました。&lt;/p&gt;
+&lt;p&gt;4次元から3次元のステレオ投影の幾何学的な理解については、3Blue1Brownの動画にとても助けられました。&lt;/p&gt;
 
 &lt;div class=&#34;movie-wrap&#34;&gt;
 &lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/94NmanMgR9k?si=S0an_wHu7KWIyVq9&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
@@ -429,7 +635,7 @@ $$&lt;/p&gt;
 
 &lt;p&gt;去年に引き続き、セミナーは参加者全員で発表しました。参加者のバックグラウンドもさまざまだったので、いろんな分野の興味深い話や深い話を聞くことができて楽しかったです。&lt;/p&gt;
 
-&lt;p&gt;Yoshi&amp;rsquo;s Dreannさんの&lt;a href=&#34;https://speakerdeck.com/runningoutrate/reitorehe-su-9seminazi-liao-svgfnituite&#34;&gt;SVGF&lt;/a&gt;やうでメガネさんの&lt;a href=&#34;https://www.docswell.com/s/udemegane/5247P4-2023-09-06-185245&#34;&gt;ReSTIR PT&lt;/a&gt;など、気になってはいるものの、なかなか手を出せていない手法も発表も多く、自分も頑張らねばとなりました。&lt;/p&gt;
+&lt;p&gt;Yoshi&amp;rsquo;s Dreannさんの&lt;a href=&#34;https://speakerdeck.com/runningoutrate/reitorehe-su-9seminazi-liao-svgfnituite&#34;&gt;SVGF&lt;/a&gt;やうでメガネさんの&lt;a href=&#34;https://www.docswell.com/s/udemegane/5247P4-2023-09-06-185245&#34;&gt;ReSTIR PT&lt;/a&gt;など、気になってはいるものの、なかなか手を出せていない手法についての発表も多く、自分も頑張らねばと思いました。&lt;/p&gt;
 
 &lt;p&gt;さまざまなグラフィックスAPIにおけるレイトレの話もありました。kugiさんの&lt;a href=&#34;https://speakerdeck.com/kugimasa/webgpunihong-retemita&#34;&gt;WebGPU&lt;/a&gt;、Nishikiさんの&lt;a href=&#34;https://github.com/yknishidate/rtcamp9/blob/main/Vulkan%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E3%81%AE%E3%81%AF%E3%81%AA%E3%81%97.pdf&#34;&gt;Vulkan&lt;/a&gt;、Pentanさんの&lt;a href=&#34;https://github.com/Pentan/RaytracingCamp2019-23/blob/master/etc/2023/slides/seminar_slide.pdf&#34;&gt;Metal&lt;/a&gt;などです。&lt;/p&gt;
 
@@ -1422,7 +1628,7 @@ SPIR-Vをつかうことで、GPUコードもRustで実装をしたそうです�
 
 &lt;p&gt;今年のセミナーは参加者全員で発表しました。参加者のバックグラウンドもさまざまだったので、いろんな分野の興味深い話や深い話を聞くことができて楽しかったです。&lt;/p&gt;
 
-&lt;p&gt;レイトレ合宿を運営の方々、その他の参加者のみなさん、本当にありがとうございました！&lt;/p&gt;
+&lt;p&gt;レイトレ合宿の運営の方々、その他の参加者のみなさん、本当にありがとうございました！&lt;/p&gt;
 
 &lt;h1 id=&#34;写真コーナー&#34;&gt;写真コーナー&lt;/h1&gt;
 
@@ -3715,614 +3921,6 @@ WORMHOLEではシェーダーによるプログラミングによってプロシ
 &lt;p&gt;シェーダやレイマーチングや3DCGに少しでも興味を持っていただけたのなら嬉しい限りです。ありがとうございました！&lt;/p&gt;
 
 &lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;メガデモとシェーダーについて&lt;br&gt;「楽しそう！」「自分でも作ってみたい」&lt;br&gt;といった好意的な感想をいただけて嬉しい限りです☺️&lt;a href=&#34;https://twitter.com/hashtag/DHW?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DHW&lt;/a&gt; &lt;a href=&#34;https://t.co/BCkGVOiAdv&#34;&gt;pic.twitter.com/BCkGVOiAdv&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1200068188043501568?ref_src=twsrc%5Etfw&#34;&gt;November 28, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>レイトレ合宿7でレイマーチング対応のGPUパストレーサーを実装しました！</title>
-      <link>https://gam0022.net/blog/2019/09/18/rtcamp7/</link>
-      <pubDate>Wed, 18 Sep 2019 10:15:43 +0900</pubDate>
-      
-      <guid>https://gam0022.net/blog/2019/09/18/rtcamp7/</guid>
-      <description>&lt;p&gt;9月7日(土)～9月8日(日)に猪苗代湖で開催された&lt;a href=&#34;https://sites.google.com/site/raytracingcamp7/&#34;&gt;レイトレ合宿7&lt;/a&gt;に参加しました。&lt;/p&gt;
-
-&lt;p&gt;自作のレンダラーでこんな画像を &lt;strong&gt;60秒の制限時間&lt;/strong&gt; でレンダリングして4位をいただきました！&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2019-09-10-rtcamp7/11.gam.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-09-10-rtcamp7/11.gam.jpg&#34; alt=&#34;本番のレンダリング結果&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;ちなみに4K解像度（3840x2160）です！&lt;/p&gt;
-
-&lt;p&gt;事前に本番環境で動作確認できなかったこともあり、よく見ると意図しないアーティファクトが発生しているのですが、許容レベルに収まったのはラッキーでした。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;レイトレ合宿とは&#34;&gt;レイトレ合宿とは&lt;/h1&gt;
-
-&lt;p&gt;レイトレ合宿は完全自作のレイトレーサーを走らせて画像の美しさを競うイベントです。&lt;/p&gt;
-
-&lt;p&gt;参加者はレンダラーを自作する必要がある！というだけで面白いイベントなのですが、レンダリングの制限時間が毎年どんどん短縮されているのも注目ポイントです。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://sites.google.com/site/rendering1h/&#34;&gt;第1回のレンダリング合宿&lt;/a&gt;では制限時間が1時間だったのですが、第7回となる今年は60秒制限でした。&lt;/p&gt;
-
-&lt;p&gt;この制限時間はレンダラーを起動してから画像を保存するまでの時間なので、シーンの読み込みからレンダリングをすべて含めて60秒で完了させなくてはなりません。&lt;/p&gt;
-
-&lt;p&gt;そのため、参加者はあらゆる手段をつかって、レンダラーの高速化に本気で取り組む必要があります。&lt;/p&gt;
-
-&lt;p&gt;パストレーシングの高速化のアプローチとしては、サンプリングを効率化する、BVHなどの構造をつかってシーンとの交差判定を効率化する、ノイズを軽減するためにデノイズを行う、などが挙げられます。&lt;/p&gt;
-
-&lt;p&gt;パストレーシングを使わないといけないルールは無いのですが、近年のレイトレ合宿ではパストレーシングが人気です。
-今年のレイトレ合宿では、Stochastic Progressive Photon Mappingを実装した&lt;a href=&#34;https://github.com/tabochans&#34;&gt;tabochan&lt;/a&gt;さん以外は全員パストレーシングだったと記憶しています。&lt;/p&gt;
-
-&lt;p&gt;また、複数コアのCPU・複数のGPUを利用したり、メモリのキャッシュ効率を上げてマシンスペックを最大限に活かし切るというのも、実はかなり難しい課題だったりします。私は今年は複数のGPUをうまく使えませんでした…&lt;/p&gt;
-
-&lt;p&gt;参加者はプロダクションレンダラーの開発者やコンピュータグラフィック分野の研究者などのプロの人から、私のように趣味でレンダラーを開発している人まで様々です。&lt;/p&gt;
-
-&lt;p&gt;レイトレ合宿の参加者のレベルが年々向上していて、特に今年は技術的にもアートセンスにも秀でた作品が多い中、4位と上位に食い込めて本当に嬉しかったです！&lt;/p&gt;
-
-&lt;h1 id=&#34;前回までのレイトレ合宿の参加レポート&#34;&gt;前回までのレイトレ合宿の参加レポート&lt;/h1&gt;
-
-&lt;p&gt;ちなみに私は今年で4回目の参加になります。過去の参加レポートはこちらです。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://gam0022.net/blog/2018/09/25/rtcamp6-part2/&#34;&gt;レイトレ合宿6 参加報告 Part2（当日編） | gam0022.net&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://gam0022.net/blog/2018/09/18/rtcamp6-part1/&#34;&gt;レイトレ合宿6 参加報告 前編（準備編） | gam0022.net&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://gam0022.net/blog/2017/10/02/rtcamp5/&#34;&gt;レイトレ合宿5‽に参加して、Rustでパストレーシングを実装しました！ | gam0022.net&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://gam0022.hatenablog.com/entry/raytracingcamp4&#34;&gt;レイトレ合宿4!? に参加しました！ - gam0022のブログ&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;redflash-renderer&#34;&gt;Redflash Renderer&lt;/h1&gt;
-
-&lt;p&gt;Redflash というGPUレンダラーを開発しました。&lt;/p&gt;
-
-&lt;p&gt;Redflash は NVIDIA® OptiX 6.0 上で実装したパストレーシングによる物理ベースレンダラーで、ポリゴンと &lt;strong&gt;レイマーチング&lt;/strong&gt; が混在したシーンを一貫した描画ができます。&lt;/p&gt;
-
-&lt;p&gt;GitHubにソースコードを公開しています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/gam0022/redflash&#34;&gt;https://github.com/gam0022/redflash&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;こちらはアーティファクトなしの想定のレンダリング結果です。レンダリングは30分です。クリックすると非圧縮形式の画像になります。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2019-09-10-rtcamp7/pr33_v6_t3000_s1030.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-09-10-rtcamp7/pr33_v6_t3000_s1030_1920x1080.jpg&#34; alt=&#34;想定したレンダリング結果&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;別視点からのレンダリング結果も紹介します。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2019-09-10-rtcamp7/camera_angle1.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-09-10-rtcamp7/camera_angle1.jpg&#34; alt=&#34;別視点からのレンダリング結果1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2019-09-10-rtcamp7/camera_angle2.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-09-10-rtcamp7/camera_angle2.jpg&#34; alt=&#34;別視点からのレンダリング結果2&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2019-09-10-rtcamp7/camera_angle3.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-09-10-rtcamp7/camera_angle3.jpg&#34; alt=&#34;別視点からのレンダリング結果3&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;発表資料&#34;&gt;発表資料&lt;/h2&gt;
-
-&lt;p&gt;自作レンダラーの紹介スライドです。&lt;/p&gt;
-
-&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;ba3966aad908467e8b21249e828c26d0&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;レイトレ合宿の参加者にとっては常識だと思われる箇所の説明を省略してしまったので、ここから簡単に補足解説をします。&lt;/p&gt;
-
-&lt;h2 id=&#34;neeとmisによるサンプリングの効率化&#34;&gt;NEEとMISによるサンプリングの効率化&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-09-10-rtcamp7/redflash_rtcamp7.003.jpeg&#34; alt=&#34;実装機能&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;この2つは「パストレーシングのサンプリングを効率化する」ための非常に有名なテクニックです。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Next Event Estimation (Direct Light Sampling)&lt;/li&gt;
-&lt;li&gt;Multiple Importance Sampling&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Next Event EstimationはよくNEEと省略されて呼ばれます。
-光源が小さいシーンでは、BSDFによる重点的サンプリングだけではなかなか光源にヒットしません。
-そのため、短い計算時間ではノイズだらけの結果になってしまいます。
-また、BSDFの分布と光源の方向が異なる場合、むしろBSDFによる重点的サンプリングによって悪化するケースもありえます。
-そこで、光源の表面上の点を明示的にサンプリングして光転送経路を生成することで、効率的なサンプリングを行うテクニックがNEEです。&lt;/p&gt;
-
-&lt;p&gt;Multiple Importance SamplingはよくMISと省略されて呼ばれます。
-MISは複数のサンプリング戦略を組み合わせることでサンプリングの効率を向上するテクニックです。
-具体的には「BSDFによる重点的サンプリング」と「NEEによるライトのサンプリング」の2つの戦略の結果を適切なウェイトで組み合わせることで、サンプリングの効率を向上します。
-それぞれのサンプリング戦略が得意な部分だけウェイトを大きくすることで、分散を抑えて効率的にサンプリングができるようになります。
-例えば、光源が大きくてroughnessが大きいような「BSDFによる重点的サンプリング」が得意なケースなら「BSDFによる重点的サンプリング」の重みを大きくして、
-逆に光源が小さくてroughnessが小さいような「NEEによるライトのサンプリング」が得意なケースなら「NEEによるライトのサンプリング」の重みを大きくします。&lt;/p&gt;
-
-&lt;p&gt;NEEやMISについては、レイトレ合宿の参加者でもある &lt;a href=&#34;https://twitter.com/Shocker_0x15&#34;&gt;@Shocker_0x15&lt;/a&gt; さんが日本語で詳しく記事を書かれています。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://rayspace.xyz/CG/contents/path_tracing/&#34;&gt;パストレーシング - Computer Graphics - memoRANDOM&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://rayspace.xyz/CG/contents/MIS/&#34;&gt;多重重点的サンプリング - Computer Graphics - memoRANDOM&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;optixとレイマーチングの統合&#34;&gt;OptiXとレイマーチングの統合&lt;/h2&gt;
-
-&lt;p&gt;OptiXには独自のプリミティブを定義する仕組みがあるため、OptiXとレイマーチングの統合はそこまで苦労しませんでした。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;IntersectionProgram&lt;/code&gt; と &lt;code&gt;BoundingBoxProgram&lt;/code&gt; としてレイマーチングによる交差判定とAABBの定義をCUDAで実装するだけでできました。&lt;/p&gt;
-
-&lt;p&gt;詳細はレイトレ合宿アドベントカレンダーの記事で既に紹介しているので、気になる方は読んでみてください。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://gam0022.net/blog/2019/08/05/optix-raymarching-pathtracing/&#34;&gt;NVIDIA® OptiX上で『レイマーチング×パストレーシング』による物理ベースレンダラーを実装した | gam0022.net&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;衝突判定の高速化&#34;&gt;衝突判定の高速化&lt;/h2&gt;
-
-&lt;p&gt;BVHの構築はOptiXが自動でやってくれるので、ポリゴンの衝突判定は特に高速化しませんでした。
-なんとOptiX 6.0ではRTXに対応しているので、RTX 2070ではハードウェアをつかって高速化な衝突判定ができました！（が、本番環境はRTX非対応でした…）&lt;/p&gt;
-
-&lt;p&gt;一方でレイマーチングの衝突判定については自力で行う必要がありました。
-シーン全体を1個の距離関数で表現したため、BVHなどの構造では衝突判定の高速化が難しいためです。&lt;/p&gt;
-
-&lt;h3 id=&#34;距離関数の軽量化&#34;&gt;距離関数の軽量化&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-09-10-rtcamp7/redflash_rtcamp7.008.jpeg&#34; alt=&#34;実装機能&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;レイマーチングでは1本をレイを飛ばすごとに数百回も距離関数を評価する必要があります（今回のレンダリング結果は300回）。&lt;/p&gt;
-
-&lt;p&gt;レイマーチングの負荷は距離関数の複雑さに比例するので、距離関数の軽量化は効果が大きい最適化でした。&lt;/p&gt;
-
-&lt;p&gt;今回はMandelboxという伝統的なフラクタル図形を距離関数として用いたのですが、
-メジャーなMandelboxの実装では &lt;code&gt;sphereFold&lt;/code&gt; という操作で分岐があったりとGPUには高負荷なものでした。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;sphereFold&lt;/code&gt; のどちらの分岐に入るかはMandelboxのパラメータによって決まるので、
-一部のパラメータを削除したり、パラメータの範囲を狭めることで分岐を削除して処理を簡略化しました。&lt;/p&gt;
-
-&lt;h3 id=&#34;レイマーチングの衝突判定の精度のlod&#34;&gt;レイマーチングの衝突判定の精度のLOD&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-09-10-rtcamp7/redflash_rtcamp7.009.jpeg&#34; alt=&#34;レイマーチングの衝突判定の精度のLOD 1/2&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;まず速度面では、カメラに近い部分は細部まで正確に衝突判定をする必要がありますが、遠い部分は大雑把でも問題にならないため、LODが有効でした。&lt;/p&gt;
-
-&lt;p&gt;品質面でもLODが必要でした。
-Mandelboxの距離関数は厳密には Distance Estimator（距離推定器）と呼ばれるものです。
-通常の距離関数は表面までの距離をぴったりと計算できるのに対して、
-Distance Estimatorは有限のイテレーション回数では表面に漸近しても、距離0になりません。&lt;/p&gt;
-
-&lt;p&gt;そのため、適当な距離 eps で衝突とみなして計算を打ち切る必要があります。
-また、eps を小さくすると、より細かい detail まで可視化できるのですが、
-遠景まで同じ eps で処理すると高周波成分が現れて、まるでMipMap OFFのような汚い結果となります。&lt;/p&gt;
-
-&lt;p&gt;このようにレイマーチングの高速化と品質向上の2つの目的ために、衝突判定の精度のLODが必要でした。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-09-10-rtcamp7/redflash_rtcamp7.010.jpeg&#34; alt=&#34;レイマーチングの衝突判定の精度のLOD 2/2&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;LODはカメラからの距離に応じて動的に eps を決定することで実現しました。&lt;/p&gt;
-
-&lt;p&gt;レイマーチングではレイを漸近的に進めるため、レイが進んだ距離を必ず計算する必要があります。
-このとき &lt;code&gt;レイが進んだ距離 = カメラからの距離&lt;/code&gt; となるため、eps は簡単に決定できます。&lt;/p&gt;
-
-&lt;p&gt;具体的にはレイが進んだ距離に定数を乗算したものを eps として扱うようにしました。&lt;/p&gt;
-
-&lt;p&gt;今回の提出シーンのように同じレイマーチングのオブジェクトの近影〜遠景がひとつのカットで混在していても、綺麗に描画できるようになりました。&lt;/p&gt;
-
-&lt;p&gt;また、カメラを近づけると実質無限に細部が現れるようになりました（フラクタル図形の特徴）。&lt;/p&gt;
-
-&lt;h3 id=&#34;1回のlaunchでなるべくたくさんサンプリングする戦略&#34;&gt;1回のlaunchでなるべくたくさんサンプリングする戦略&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-09-10-rtcamp7/redflash_rtcamp7.011.jpeg&#34; alt=&#34;1回のlaunchでなるべくたくさんサンプリングする戦略&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;OptiXでパストレーシングを実装する場合、通常は1回のlaunchでパストレーシングの1サンプリングを行うように実装するかと思います。&lt;/p&gt;
-
-&lt;p&gt;ところが、launchにも多少のオーバーヘッドがあるため、手元のPCで実験した結果では、
-&lt;code&gt;sample_per_launch&lt;/code&gt; （1回のlaunchごとのサンプリング回数）を大きくすれば大きくするほど60秒あたりのサンプリング回数を増やすことができました。&lt;/p&gt;
-
-&lt;p&gt;そこで、最初の4サンプリングでマシンの性能をベンチマークして時間切れにならない最大の sample_per_launch を決定するような戦略をとりました。&lt;/p&gt;
-
-&lt;h2 id=&#34;deep-learning-denoising&#34;&gt;Deep Learning Denoising&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-09-10-rtcamp7/redflash_rtcamp7.012.jpeg&#34; alt=&#34;Deep Learning Denoising&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;ディープラーニングをつかったデノイザーの性能が驚異的に良くて驚きました。&lt;/p&gt;
-
-&lt;p&gt;左が10spp（sample per pixel）の結果で、右がデノイズした結果です。&lt;/p&gt;
-
-&lt;p&gt;かなり少ないサンプリング数でも非常に綺麗にデノイズができました。
-特にLucy像の拡散面の部分などは効果が絶大でした。&lt;/p&gt;
-
-&lt;p&gt;Deep Learning DenoisingはOptiXの標準機能を利用しただけなので、詳細については私は理解していません。&lt;/p&gt;
-
-&lt;p&gt;レンダリング結果とnormalとalbedoのバッファを与えてやると、綺麗にデノイズした結果を出力してくれました。&lt;/p&gt;
-
-&lt;p&gt;速度面でも優秀で4K解像度でも&lt;a href=&#34;https://github.com/gam0022/redflash/pull/34&#34;&gt;1.4秒程度&lt;/a&gt;でデノイズが完了しました。&lt;/p&gt;
-
-&lt;p&gt;まだリアルタイムレンダリングには速度的には使いづらいかもしれませんが、これまでの Bilateral Filter や Non-local Means Filter を遥かに凌駕する性能なので、改めてレンダリング技術とディープラーニングの親和性の高さを実感しました。&lt;/p&gt;
-
-&lt;p&gt;これからの時代はグラフィックエンジニアもディープラーニングも勉強しなくては！と思いました。&lt;/p&gt;
-
-&lt;h3 id=&#34;rt-buffer-gpu-local-による最適化&#34;&gt;RT_BUFFER_GPU_LOCAL による最適化&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-09-10-rtcamp7/redflash_rtcamp7.013.jpeg&#34; alt=&#34;RT_BUFFER_GPU_LOCAL による最適化&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Deep Learning Denoising用にalbedoとnormalのバッファを生成したところ、合計で5枚もバッファが必要になりました。
-バッファの読み書きもそれなりに重たい処理なので、対策を行いました。
-createBuffer の第1引数に &lt;code&gt;RT_BUFFER_INPUT_OUTPUT&lt;/code&gt; を指定したところ、なんと13.6%くらい高速化しました。&lt;/p&gt;
-
-&lt;p&gt;ディスプレイにバッファを同期するかのオプションのようでした。
-ウィンドウにバッファを表示する場合はこのオプションをつけると描画結果が同期されなくなってしまいますが、
-CUIモードで起動するときには同期は不要なので、このオプションを有効にすることで大幅に性能向上できました。&lt;/p&gt;
-
-&lt;h1 id=&#34;反省-スケジュール面が厳しすぎた&#34;&gt;反省：スケジュール面が厳しすぎた&lt;/h1&gt;
-
-&lt;p&gt;ここまでがレンダラーの紹介でした。ここからは振り返りを書こうと思います。&lt;/p&gt;
-
-&lt;p&gt;最大の反省点はスケジュール面が厳しすぎたことでした…&lt;/p&gt;
-
-&lt;p&gt;OptiXのキャッチアップを含めて約一ヶ月で開発したのですが、流石に無理なスケジュールだったと思います。&lt;/p&gt;
-
-&lt;p&gt;8月は仕事のプロジェクトの追い込み時期とCEDECの登壇準備が重なって、なかなかレンダラー開発の時間を捻出できず、
-睡眠時間と生活を削りすぎたため、体力的にも精神的にもかなり限界でした…&lt;/p&gt;
-
-&lt;p&gt;そろそろ若さで無茶をカバーできない年齢になってきたので、締め切り直前になって慌てて開発するのではなく、
-日頃から継続的にレンダラーを開発することが大事だろうと思います。&lt;/p&gt;
-
-&lt;h1 id=&#34;余談-シーン作成はunity&#34;&gt;余談：シーン作成はUnity&lt;/h1&gt;
-
-&lt;p&gt;時間がなくてシーン編集機能を実装できなかったので、
-Unityで事前に距離関数のパラメータ調整や光源の配置を行ってシーンのイメージを固めてから、後からパラメータを自作レンダラーに移植しました。&lt;/p&gt;
-
-&lt;p&gt;結果的には納得できるシーンを作成できたので、作戦は成功だったと思います。&lt;/p&gt;
-
-&lt;p&gt;UnityのHDRPでレイマーチングを行うのには&lt;a href=&#34;https://twitter.com/kanetaaaaa&#34;&gt;@kanetaaaaa&lt;/a&gt;さんの&lt;a href=&#34;https://github.com/kaneta1992/RaymarchingInHDRP/&#34;&gt;RaymarchingInHDRP&lt;/a&gt;を利用させていただきました。&lt;/p&gt;
-
-&lt;p&gt;カッコいいシーンを大量に作れたので、ついスクリーンショットをたくさん撮影してしまいました！&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Unity HDRP + Raymarching by &lt;a href=&#34;https://twitter.com/kanetaaaaa?ref_src=twsrc%5Etfw&#34;&gt;@kanetaaaaa&lt;/a&gt; を試してみました！&lt;br&gt;カッコいいシーンが無限に作れてしまう😍&lt;br&gt;これは凄いです🙏&lt;a href=&#34;https://twitter.com/hashtag/unity3d?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#unity3d&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/raymarching?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#raymarching&lt;/a&gt;&lt;a href=&#34;https://t.co/EK6JsHpTBZ&#34;&gt;https://t.co/EK6JsHpTBZ&lt;/a&gt; &lt;a href=&#34;https://t.co/ZueP2hfzet&#34;&gt;pic.twitter.com/ZueP2hfzet&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1163876089489285120?ref_src=twsrc%5Etfw&#34;&gt;August 20, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;今後やりたいこと&#34;&gt;今後やりたいこと&lt;/h1&gt;
-
-&lt;h2 id=&#34;シーン編集機能がほしい&#34;&gt;シーン編集機能がほしい&lt;/h2&gt;
-
-&lt;p&gt;現状はGUIでカメラ操作だけができます。&lt;/p&gt;
-
-&lt;p&gt;シーン編集に関して、上で紹介したようなUnityからパラメータを移植する方法だと最終的なルックの確認のイテレーションの高速化がしずらいので、
-Redflash自体にシーン編集機能を実装したいと思っています。&lt;/p&gt;
-
-&lt;p&gt;距離関数を定義したCUDAファイルのホットリロード機能を実装したり、 CallableProgramをつかって距離関数を差し替え可能にしたいです。&lt;/p&gt;
-
-&lt;p&gt;他にも距離関数やマテリアルのパラメータをインスペクタで編集するなどは最低限欲しいなと思っています。&lt;/p&gt;
-
-&lt;p&gt;あとはオブジェクトの配置などをマニピュレーターでできるようにしたいですが、どうしても実装工数がかかるので、どういう感じが良いのか思案しているところです。
-DCCツールから直接シーンを出力する形式だと、距離関数の扱いに困るため、なかなか難しい問題です。&lt;/p&gt;
-
-&lt;h2 id=&#34;リファクタリング&#34;&gt;リファクタリング&lt;/h2&gt;
-
-&lt;p&gt;CallableProgramでBSDFを入れ替えられるようにしたり、ファイルを適切に分割したりして、もう少しコードをリファクタリングしたいです。&lt;/p&gt;
-
-&lt;h2 id=&#34;pngのエンコード時間の短縮&#34;&gt;PNGのエンコード時間の短縮&lt;/h2&gt;
-
-&lt;p&gt;PNGの保存には &lt;a href=&#34;https://github.com/nothings/stb/blob/master/stb_image.h&#34;&gt;stb_image&lt;/a&gt; を使わせていただきました。&lt;/p&gt;
-
-&lt;p&gt;ただし、4K解像度となるとPNGの保存に1.7秒前後の時間が必要でした。&lt;/p&gt;
-
-&lt;p&gt;制限時間が短くなると、PNGの保存やGPUの初期化に要する時間が相対的に増えて、レンダリングに使える時間がどんどん短くなってしまいます。&lt;/p&gt;
-
-&lt;p&gt;そのため、PNGの保存やGPU初期化の高速化は、来年以降のレイトレ合宿では重要な課題になるだろうと予想しています。&lt;/p&gt;
-
-&lt;h2 id=&#34;複数gpu対応&#34;&gt;複数GPU対応&lt;/h2&gt;
-
-&lt;p&gt;OptiXをつかっても複数のGPUをうまく使ってくれなかったので、独自の仕組みで対応が必要のようでした。&lt;/p&gt;
-
-&lt;p&gt;単純な解決策として、プロセスを複数起動して最後にレンダリング結果をマージする方法が考えられますが、ちゃんと検証をしたいです。&lt;/p&gt;
-
-&lt;h2 id=&#34;フルスクラッチgpuレンダラー&#34;&gt;フルスクラッチGPUレンダラー&lt;/h2&gt;
-
-&lt;p&gt;去年まではGPUインスタンス勢は1人だけだったのですが、今年は7人（レンダラーが動かなかった人も含む）もいました。&lt;/p&gt;
-
-&lt;p&gt;GPU勢にも、私のようにOptiXなどのレイトレーシング用のフレームワークを使う勢と、フルスクラッチ実装勢で別れていました。&lt;/p&gt;
-
-&lt;p&gt;フルスクラッチ勢からは「OptiXでは作法がきっちり決められているのがなんとなく嫌だった」「GPU向けのBVH実装をしてみたかった」といった意見を聞きました。&lt;/p&gt;
-
-&lt;p&gt;たしかにRTXなどの登場によって交差判定がハードウェアに移りつつある今だからこそ、勉強する価値はあるのかもしれません。&lt;/p&gt;
-
-&lt;h1 id=&#34;感想&#34;&gt;感想&lt;/h1&gt;
-
-&lt;p&gt;今年は忙しいからレイトレ合宿に参加できるか怪しいと思っていましたが、なんとかちゃんとレンダラーを提出できて良かったです。&lt;/p&gt;
-
-&lt;p&gt;思えば「レイマーチングとポリゴンが混在したシーンをパストレーシングしたい」というのは3年前のレイトレ合宿4のときに本当は実現したいテーマでした。&lt;/p&gt;
-
-&lt;p&gt;当時はレイトレ初心者だったので、ナイーブなパストレーシングで精一杯で高速化方法が分からず、
-普通にレイマーチングを組み合わせたら激重になってしまい、5時間くらいかけないとまともな絵が出ない状態でした。
-結局、パストレーシングを諦めて疑似手法でAOやシャドウを計算してなんとか見れる絵を提出しました…&lt;/p&gt;
-
-&lt;p&gt;3年間で学んだ知識でようやくやりたいことを実現できて本当に良かったです。過去の自分に勝利できました。&lt;/p&gt;
-
-&lt;p&gt;レイトレ合宿は自身の成長や糧となる機会を与えてくれる、とても良い合宿勉強会だなと改めて感じました。&lt;/p&gt;
-
-&lt;p&gt;レイトレ合宿を毎年主催してくださっている&lt;a href=&#34;https://twitter.com/q_cinnamon&#34;&gt;q&lt;/a&gt;さんと&lt;a href=&#34;https://twitter.com/h013&#34;&gt;hole&lt;/a&gt;さん、その他の参加者のみなさん、本当にありがとうございました！&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>NVIDIA® OptiX上で『レイマーチング×パストレーシング』による物理ベースレンダラーを実装した</title>
-      <link>https://gam0022.net/blog/2019/08/05/optix-raymarching-pathtracing/</link>
-      <pubDate>Mon, 05 Aug 2019 12:10:23 +0900</pubDate>
-      
-      <guid>https://gam0022.net/blog/2019/08/05/optix-raymarching-pathtracing/</guid>
-      <description>&lt;p&gt;これは&lt;a href=&#34;https://sites.google.com/site/raytracingcamp7/&#34;&gt;レイトレ合宿7&lt;/a&gt;アドベントカレンダーの記事です。&lt;/p&gt;
-
-&lt;p&gt;NVIDIA® OptiX上で『レイマーチング×パストレーシング』による物理ベースレンダラーを開発しました。&lt;/p&gt;
-
-&lt;p&gt;レイとオブジェクトの交差判定をレイマーチングで行い、ライティングをパストレーシングをするという、レイマーチングとパストレーシングのハイブリッドなレンダリングを実現しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;NVIDIA® OptiX上で&lt;br&gt;『レイマーチング×パストレーシング』&lt;br&gt;を実装できた😉 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/FKbuHiXqmP&#34;&gt;pic.twitter.com/FKbuHiXqmP&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1155489034354843649?ref_src=twsrc%5Etfw&#34;&gt;July 28, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;実装の方針&#34;&gt;実装の方針&lt;/h1&gt;
-
-&lt;p&gt;Optixは、CUDA基盤上で動作する、NVIDIA製のGPUレイトレーシング用フレームワークです。&lt;/p&gt;
-
-&lt;p&gt;Optixではユーザ独自のプリミティブを定義できるため、この機能をつかってレイマーチングで衝突判定を行う距離関数のプリミティブを定義しました。&lt;/p&gt;
-
-&lt;p&gt;独自のプリミティブの定義に必要なProgram（Optix用語でPTXアセンブリにコンパイルされたCUDA C関数を指す）は次の2つです。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Bounding Box&lt;/li&gt;
-&lt;li&gt;Intersection&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Optixの公式サンプルプロジェクトに optixPathtracing（パストレーシングの実装例）があったので、これにレイマーチングのプリミティブを追加する形で実装しました。&lt;/p&gt;
-
-&lt;p&gt;パストレーシングの処理はサンプルコードの実装そのまま利用させていただきました。&lt;/p&gt;
-
-&lt;h2 id=&#34;bounding-box&#34;&gt;Bounding Box&lt;/h2&gt;
-
-&lt;p&gt;Bounding Boxを定義するProgramです。&lt;/p&gt;
-
-&lt;p&gt;レイマーチングのオブジェクトのBounding BoxはC++側から値を渡すようにしました。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;rtDeclareVariable&lt;/code&gt; でCPUからGPUへ送るバッファの宣言（GLSLのunifromと同じ）ができます。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;#include &amp;lt;optix_world.h&amp;gt;
-
-rtDeclareVariable(float3, center, , );
-rtDeclareVariable(float3, size, , );
-
-RT_PROGRAM void bounds(int, float result[6])
-{
-    optix::Aabb* aabb = (optix::Aabb*)result;
-    aabb-&amp;gt;m_min = center - size;
-    aabb-&amp;gt;m_max = center + size;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;intersection&#34;&gt;Intersection&lt;/h2&gt;
-
-&lt;p&gt;衝突判定をするProgramです。&lt;/p&gt;
-
-&lt;p&gt;ごくごく普通のレイマーチングです。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;rtDeclareVariable(int, lgt_instance, , ) = {0};
-rtDeclareVariable(float3, texcoord, attribute texcoord, );
-rtDeclareVariable(int, lgt_idx, attribute lgt_idx, );
-
-RT_PROGRAM void intersect(int primIdx)
-{
-    const float EPS = 1e-2;
-    float t = 0.0, d = 1e100;
-    float3 p = ray.origin;
-
-    for (int i = 0; i &amp;lt; 50; i++)
-    {
-        d = map(p);
-        t += d;
-        p = ray.origin + t * ray.direction;
-        if (abs(d) &amp;lt; EPS)
-        {
-            break;
-        }
-    }
-
-    if (abs(d) &amp;lt; EPS &amp;amp;&amp;amp; rtPotentialIntersection(t))
-    {
-        shading_normal = geometric_normal = calcNormal(p, map);
-        texcoord = make_float3(p.x, p.y, 0);
-        lgt_idx = lgt_instance;
-        rtReportIntersection(0);
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;法線計算&#34;&gt;法線計算&lt;/h3&gt;
-
-&lt;p&gt;法線計算は四面体によるアプローチを用いました。&lt;/p&gt;
-
-&lt;p&gt;通常は6回の距離関数の評価が必要なところ、4回の評価だけで法線を計算できます。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://iquilezles.org/www/articles/normalsSDF/normalsSDF.htm&#34;&gt;normals for an SDF | http://iquilezles.org&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://setchi.hatenablog.com/entry/2018/12/17/095532&#34;&gt;#TokyoDemoFest 2018 の GLSL Graphics Compo で2位入賞しました - setchi’s blog&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;map関数を差し替え可能にするためにマクロをつかって実装しました。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;const float EPS_N = 1e-4;
-#define calcNormal(p, dFunc) normalize(\
-    make_float3( EPS_N, -EPS_N, -EPS_N) * dFunc(p + make_float3( EPS_N, -EPS_N, -EPS_N)) + \
-    make_float3(-EPS_N, -EPS_N,  EPS_N) * dFunc(p + make_float3(-EPS_N, -EPS_N,  EPS_N)) + \
-    make_float3(-EPS_N,  EPS_N, -EPS_N) * dFunc(p + make_float3(-EPS_N,  EPS_N, -EPS_N)) + \
-    make_float3( EPS_N,  EPS_N,  EPS_N) * dFunc(p + make_float3( EPS_N,  EPS_N,  EPS_N)))
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;距離関数&#34;&gt;距離関数&lt;/h3&gt;
-
-&lt;p&gt;以前にブログで紹介したIFSによるMengerSpongeの距離関数をCUDA Cに移植しました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://gam0022.net/blog/2019/06/25/unity-raymarching/&#34;&gt;Unity×レイマーチングによる映像制作の実践手法 | gam0022.net&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Swizzle Operationを手動展開するのがしんどかったです…&lt;/p&gt;
-
-&lt;p&gt;ベクトル版のabsやmaxは自分で定義すれば解決しますが、Swizzle OperationをCUDA C上で再現する方法は私には分かりませんでした。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;CUDA C言語、absやmaxにベクトル型のオーバーロードが無いし、Swizzle Operationも無いからストレスで発狂して精神が崩壊した🤬🤪🤮 &lt;a href=&#34;https://t.co/mRPmQTTcsb&#34;&gt;pic.twitter.com/mRPmQTTcsb&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1155465784807657472?ref_src=twsrc%5Etfw&#34;&gt;July 28, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;float dMenger(float3 z0, float3 offset, float scale) {
-    float4 z = make_float4(z0, 1.0);
-    for (int n = 0; n &amp;lt; 4; n++) {
-        // z = abs(z);
-        z.x = abs(z.x);
-        z.y = abs(z.y);
-        z.z = abs(z.z);
-        z.w = abs(z.w);
-
-        // if (z.x &amp;lt; z.y) z.xy = z.yx;
-        if (z.x &amp;lt; z.y)
-        {
-            float x = z.x;
-            z.x = z.y;
-            z.y = x;
-        }
-
-        // if (z.x &amp;lt; z.z) z.xz = z.zx;
-        if (z.x &amp;lt; z.z)
-        {
-            float x = z.x;
-            z.x = z.z;
-            z.z = x;
-        }
-
-        // if (z.y &amp;lt; z.z) z.yz = z.zy;
-        if (z.y &amp;lt; z.z)
-        {
-            float y = z.y;
-            z.y = z.z;
-            z.z = y;
-        }
-
-        z *= scale;
-        // z.xyz -= offset * (scale - 1.0);
-        z.x -= offset.x * (scale - 1.0);
-        z.y -= offset.y * (scale - 1.0);
-        z.z -= offset.z * (scale - 1.0);
-
-        if (z.z &amp;lt; -0.5 * offset.z * (scale - 1.0))
-            z.z += offset.z * (scale - 1.0);
-    }
-    // return (length(max(abs(z.xyz) - make_float3(1.0, 1.0, 1.0), 0.0)) - 0.05) / z.w;
-    return (length(make_float3(max(abs(z.x) - 1.0, 0.0), max(abs(z.y) - 1.0, 0.0), max(abs(z.z) - 1.0, 0.0))) - 0.05) / z.w;
-}
-
-float map(float3 p)
-{
-    float scale = 100;
-    return dMenger((p - center) / scale, make_float3(1, 1, 1), 3.1) * scale;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;c-からprogramの利用&#34;&gt;C++からProgramの利用&lt;/h2&gt;
-
-&lt;p&gt;Programを利用するには以下のようなC++のコードを書けばOKです。&lt;/p&gt;
-
-&lt;p&gt;ProgramとGPUに送る情報のバッファを指定しているだけです。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;Context        context = 0;
-Program        pgram_raymarching_intersection = 0;
-Program        pgram_raymarching_bounding_box = 0;
-
-// レイマーチングのオブジェクトの GeometryInstance を生成します
-GeometryInstance createRaymrachingObject(
-    const float3&amp;amp; center,
-    const float3&amp;amp; size)
-{
-    Geometry raymarching = context-&amp;gt;createGeometry();
-    raymarching-&amp;gt;setPrimitiveCount(1u);
-    raymarching-&amp;gt;setIntersectionProgram(pgram_raymarching_intersection);
-    raymarching-&amp;gt;setBoundingBoxProgram(pgram_raymarching_bounding_box);
-
-    raymarching[&amp;quot;center&amp;quot;]-&amp;gt;setFloat(center);
-    raymarching[&amp;quot;size&amp;quot;]-&amp;gt;setFloat(size);
-
-    GeometryInstance gi = context-&amp;gt;createGeometryInstance();
-    gi-&amp;gt;setGeometry(raymarching);
-    return gi;
-}
-
-// ジオメトリのセットアップをします
-// ※レイマーチングに直接関係ないコードは省略しています
-void loadGeometry()
-{
-    // Set up Raymarching programs
-    const char *ptx = sutil::getPtxString( SAMPLE_NAME, &amp;quot;optixRaymarching.cu&amp;quot; );
-    pgram_raymarching_bounding_box = context-&amp;gt;createProgramFromPTXString( ptx, &amp;quot;bounds&amp;quot; );
-    pgram_raymarching_intersection = context-&amp;gt;createProgramFromPTXString( ptx, &amp;quot;intersect&amp;quot; );
-
-    // create geometry instances
-    std::vector&amp;lt;GeometryInstance&amp;gt; gis;
-
-    // Raymarcing
-    gis.push_back(createRaymrachingObject(
-        make_float3(278.0f, 120.0f, 278.0f),
-        make_float3(100.0f, 100.0f, 100.0f)));
-    setMaterial(gis.back(), diffuse, &amp;quot;diffuse_color&amp;quot;, white);
-
-    // Create geometry group
-    GeometryGroup geometry_group = context-&amp;gt;createGeometryGroup(gis.begin(), gis.end());
-    geometry_group-&amp;gt;setAcceleration( context-&amp;gt;createAcceleration( &amp;quot;Trbvh&amp;quot; ) );
-    context[&amp;quot;top_object&amp;quot;]-&amp;gt;set( geometry_group );
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;optixの環境構築-windows&#34;&gt;Optixの環境構築（Windows）&lt;/h1&gt;
-
-&lt;p&gt;OptixのWindows用の環境構築の流れは&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;必要なツールを事前にインストール&lt;/li&gt;
-&lt;li&gt;CamkeでVisualStudioのソリューションファイルを生成&lt;/li&gt;
-&lt;li&gt;VisualStudioでビルド&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;という感じでした。&lt;/p&gt;
-
-&lt;p&gt;morishigeさんのQiitaの記事が大変参考になりました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://qiita.com/morishige/items/d4a99c88b925ac31ff3d&#34;&gt;Nvidia OptiX 入門（環境構築編）&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;CmakeとOptixとCUDAのバージョンの組み合わせが肝のようで、Cmakeのバージョンを変えながら何回かトライしたところ、この組み合わせでCmakeビルドに成功しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;✍️ &lt;br&gt;CUDA 10.1&lt;br&gt;OptiX SDK 6.0.0&lt;br&gt;Visual Studio 2017&lt;br&gt;Cmake 3.8.2&lt;br&gt;&lt;br&gt;freeglut / GLFW / GLEW は Nuget の最新版をインストール&lt;a href=&#34;https://t.co/OtsR6bnxmk&#34;&gt;https://t.co/OtsR6bnxmk&lt;/a&gt;&lt;br&gt;&lt;br&gt;Cmakeの設定はスクショ通り &lt;a href=&#34;https://t.co/cpBM4y2Vy1&#34;&gt;pic.twitter.com/cpBM4y2Vy1&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1150906026528391168?ref_src=twsrc%5Etfw&#34;&gt;July 15, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;CmakeでVisual Studioのバージョンを選択する際、誤って64bit版ではなく32bit版を選択してしまい、Cmake自体は成功するもののソリューションがビルドできないことがありました。&lt;/p&gt;
-
-&lt;p&gt;Cmakeの過去のバージョンはGitHubからインストールできます。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/Kitware/CMake/releases&#34;&gt;Releases · Kitware/CMake&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;サンプルコードの改造&#34;&gt;サンプルコードの改造&lt;/h2&gt;
-
-&lt;p&gt;サンプルコードの改造方法はNVIDIA Developer Forumsにあります。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://devtalk.nvidia.com/default/topic/1049151/optix/how-can-i-modify-a-simple-example-/&#34;&gt;How can I modify a simple example? - NVIDIA Developer Forums&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Adding a new example is very simple:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Copy one of the optixIntro_01 (this is effectively optixHello) to optixIntro_10 folders,&lt;/li&gt;
-&lt;li&gt;rename it,&lt;/li&gt;
-&lt;li&gt;rename the project name in its copied CMakeLists.txt,&lt;/li&gt;
-&lt;li&gt;add your new subdirectory in the CMakeLists.txt one folder above,&lt;/li&gt;
-&lt;li&gt;rebuild the solution with CMake GUI. Done.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Your new project appears and would do the same thing as the example you copied it from.
-Now change it as you like.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&#34;参考資料&#34;&gt;参考資料&lt;/h1&gt;
-
-&lt;p&gt;以下の記事が大変参考になりました。ありがとうございます。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://memo.render.jp/optix&#34;&gt;optix - uimac実装メモ&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.nvidia.com/gameworks/content/gameworkslibrary/optix/optix_quickstart.htm&#34;&gt;OptiX QuickStart（公式チュートリアル）&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
     </item>
     
   </channel>

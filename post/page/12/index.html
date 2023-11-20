@@ -124,6 +124,114 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/02/05/header-anchor/" itemprop="url">Octopressの見出しにアンカーリンクをつけるように改造</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2013-02-05 14:30:00 &#43;0900 JST" itemprop="datePublished">2013-02-05</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/octopress">Octopress</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                
+
+<p>タイトルの通りなのですが、h1レベルの見出しにアンカーリンクをつけるようにOctopressを改造しました。</p>
+
+<p>``の19行目を次のように修正して、
+h1レベルの見出しに正規表現でアンカーリンクをつけるようにしました。</p>
+
+<pre><code class="language-diff"># plugins/octopress_filters.rb
+@@ -16,7 +16,7 @@ module OctopressFilters
+   end
+   def post_filter(input)
+     input = unwrap(input)
+-    RubyPants.new(input).to_html
++    RubyPants.new(input).to_html.gsub(/&lt;h1&gt;([^&lt;].*[^&gt;])&lt;\/h1&gt;/, '&lt;h1&gt;&lt;a name=&quot;\1&quot; href=&quot;#\1&quot;&gt;\1&lt;/a&gt;&lt;/h1&gt;')
+   end
+ end
+</code></pre>
+
+<p>修正するべき場所がここで本当に良いのか微妙ですが、とりあえず思った通りに動いているので良しとします。</p>
+
+<p>以下、見出しのテスト</p>
+
+<h1 id="見出し1">見出し1</h1>
+
+<h1 id="見出し2">見出し2</h1>
+
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2013/02/05/header-anchor/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/01/24/eclipse-formatter/" itemprop="url">Eclipseのformatterの設定の方法をいつも忘れてしまうので</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2013-01-24 14:55:00 &#43;0900 JST" itemprop="datePublished">2013-01-24</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/eclipse">Eclipse</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                <p>Eclipseのformatterの設定は、<code>Java &gt; Code Style &gt; Formatter</code>から。</p>
+
+<p><img src="/images/posts/2013.1.24_eclipse_formatter.png" alt="Eclipseのformatterの設定" /></p>
+
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2013/01/24/eclipse-formatter/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/01/23/eclipse-console-encoding/" itemprop="url">Eclipseのコンソール(Console)の出力が文字化けする</a></h3>
         
 
@@ -701,121 +809,6 @@ CGIで長いURIを発行すると、RequestURITooLargeというエラーにな�
     </div>
     <hr>
     
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/08/22/twincal/" itemprop="url">Twinsに登録した時間割をGoogleカレンダーやiCalにインポートするWebサービス「TwinCal」を作った</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2012-08-22 12:47:00 &#43;0900 JST" itemprop="datePublished">2012-08-22</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/ruby">Ruby</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/twincal">TwinCal</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                <p>Rubyで何かWebアプリを作ってみたかったので、
-Twinsに登録した時間割をGoogleカレンダーやiCalにインポートするWebサービス「TwinCal」を作ってみました。</p>
-
-<p><a href="http://gam0022.net/app/twincal/">TwinCal</a></p>
-
-<p>筑波大学生以外にも分かるように説明すると、筑波大学にはTwinsという履修の登録をするWebのシステムがあり、
-Twinsでは時間割をCSV出力する機能があるので、そのCSVをiCalender形式に変換して、
-GoogleカレンダーやiCalにインポートをサポートするWebアプリを作りました。</p>
-
-<p>来年、Twinsが改修されるらしいので、半年後には使えなくなると思います。</p>
-
-<p>バイトでPHPを使ってWebアプリを開発した経験はありましたが、個人でWebアプリを作ったのは初めてでした。</p>
-
-<p>気を使ったこととして、ビューの部分はerb(railsでも使われているアレ)を使い、MVCを意識して作りました。</p>
-
-<p>最近流行りのbootstrapやjQueryなどを使ったのですが、この2つを使ったのは正解でした。
-これらのおかげでロジック部分に集中することができ、かなりサクサク作業することができました。</p>
-
-<p>このアプリを作ろうと思い立ったのは12日で、14日には公開できるような状態になりました。</p>
-
-<p>あまり使ってくれている人はいないようですが、bootstrapとhtml5で遊べたことだけでもよい経験となりました。</p>
-
-<p>今回のことで学んだテクニックがいくつかあるので、後ほど記事にしたいです。</p>
-
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2012/08/22/twincal/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/08/20/run-daigoroubot/" itemprop="url">大五郎bot(@daigoroubot)を動かすためのメモ</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2012-08-20 13:28:00 &#43;0900 JST" itemprop="datePublished">2012-08-20</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/daigoroubot">daigoroubot</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/mecab">MeCab</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/mac-os-x">Mac OS X</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                @daigoroubotをMac OS Xで動かすまでのメモです。 なんて需要が無さそうな記事なんだ!
-Rubyとgemををインストール とりあえず、バージョンは次のような感じで。インストール方法はこれを参考にしてください。
- ruby 1.9.3p194 gem 1.8.24  required gems gem install oauth json sqlite3 twitter tweetstream unicode_math  MeCabを使えるようにしておく homebrewを導入しているなら、これでok。
-Mac用のメモですが、Ubuntuならbrewの代わりにapt-getなど、環境に合わせた適当なパッケージ管理システムにすれば普通に動くと思います。
-brew install mecab mecab-ipadic  MeCabのRubyバインディングをする  ここからbrewで入れたMeCabと同じバージョンのRubyバインディングをダウンロードする。 tar -jxf mecab-ruby-xxx.tar.gzなどで解凍。 READMEの指示通りに作業する。  もし次のようなエラーが出たら、extconf.rbを編集する必要があるよう。
-(参考:MacPortsで、mecabと、mecab-rubyのインストール)
-dyld: lazy symbol binding failed: Symbol not found: __ZN5MeCab12getLastErrorEv Referenced from: /Users/kobayashi/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/site_ruby/1.8/i686-darwin10.7.0/MeCab.bundle Expected in: flat namespace dyld: Symbol not found: __ZN5MeCab12getLastErrorEv Referenced from: /Users/kobayashi/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/site_ruby/1.8/i686-darwin10.7.0/MeCab.bundle Expected in: flat namespace  extconf.
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2012/08/20/run-daigoroubot/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
 
     
 <nav>
@@ -850,7 +843,7 @@ dyld: lazy symbol binding failed: Symbol not found: __ZN5MeCab12getLastErrorEv R
         <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
         <script src="https://gam0022.net/js/jquery-1.12.3.min.js"></script>
         <script src="https://gam0022.net/js/bootstrap.custom.js"></script>
-        <script src="https://gam0022.net/js/hugo-academic.js?2023-09-18"></script>
+        <script src="https://gam0022.net/js/hugo-academic.js?2023-09-20"></script>
         
 
         <script>

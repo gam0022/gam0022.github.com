@@ -124,6 +124,136 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/" itemprop="url">Linux(Ubuntu)からOS Xへ開発環境を移すときにしたこと</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2012-07-28 00:01:00 &#43;0900 JST" itemprop="datePublished">2012-07-28</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/mac-os-x">Mac OS X</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/lion">Lion</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/terminal.app">Terminal.app</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/vim">vim</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/homebrew">homebrew</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/git">git</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                とりあえず次のような感じになりました。
+ ターミナル :Terminal.app エディタ :vim パッケージ管理システム :homebrew バージョン管理システム :git  Mac初心者が躓かないように、この順番で作業すればうまくいくという順番で紹介していきます。
+Terminal.app Terminal.appはMacOSに標準で入っている端末です。
+最終的にはこんな感じになりました。
+外観を変える 外観を変えるために、環境設定 &gt; 設定でProという設定を使うことにしました。
+フォントをMonaco 13pt.にして、テキストをアンチエイリアス処理を有効にしました。
+.bash&#95;profile を設定する これまでの常識では、~/.bashrcに書いた設定が端末の起動時に読み込まれるものと思っていたのですが、 macの場合は~/.bashrcは無効になっており、ログイン時だけ~/.bash_profileが読み込まれるようです。
+要するにMacのTerminalの設定は~/.bash_profileに書けばいいということです。
+設定の反映が必要であれば$ source ~/.bash_profileを実行すればいいことなので、 ログイン時でも端末起動時でもそれほど影響はないです。
+前の環境の.bashrcは禍々しくて見せられませんが、.bash_profileをこんな感じで書いていきます。</p>
+
+<h1 id="パスの設定とか-export-path-path-home-bin-便利なエイリアスとか-alias-ll-ls-alf-alias-l-ls-alias-emacs-vim-lsに色を付ける-gt-http-jmblog-jp-archives-307-export-clicolor-1-export-lscolors-dxgxcxdxcxegedabagacad-プロンプトも色を付ける-ps1-033-36m-u-h-033-33m-w-033-36m-033-0m-exitでタブやウィンドウを閉じるようにする-なぜかデフォルトではexitしても画面が残ってしまうので-設定を変えます">パスの設定とか export PATH=$PATH:$HOME/bin # 便利なエイリアスとか alias ll=&lsquo;ls -alF&rsquo; alias l=&lsquo;ls&rsquo; alias emacs=&lsquo;vim&rsquo; # lsに色を付ける =&gt; <a href="http://jmblog.jp/archives/307">http://jmblog.jp/archives/307</a> export CLICOLOR=1 export LSCOLORS=DxGxcxdxCxegedabagacad # プロンプトも色を付ける PS1=&rsquo;[\033[36m][\u@\h:[\033[33m]\w[\033[36m]][\033[0m] \$ &lsquo;  exitでタブやウィンドウを閉じるようにする なぜかデフォルトではexitしても画面が残ってしまうので、設定を変えます。</h1>
+
+<p>~/Library/Preferences/com.apple.Terminal.plistのRoot &gt; Window Settings &gt; (任意のテーマ) &gt; shellExitActionの値を1(Number)に変更します。
+Mac OSXでTerminalをexitしたら閉じるようにする方法を参考しました。
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/07/27/getting-started-with-ruby-on-rails-on-mac/" itemprop="url">MacでRuby on Railsの開発環境を作るまで</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2012-07-27 06:34:00 &#43;0900 JST" itemprop="datePublished">2012-07-27</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/mac-os-x">Mac OS X</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/ruby-on-rails">Ruby on Rails</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/rvm">rvm</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/gem">gem</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/gcc">gcc</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/xcode">xcode</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/llvm-gcc">llvm-gcc</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                MacでRuby on Railsの開発環境を作るまで 先日、1世代前のMac Book Air 13インチモデルを入手しました。
+設定を弄りまくっている真っ最中ですが、 まずはMacでRuby on Railsの開発環境を作るまでをまとめます。
+今回の記事を一言でまとめると、「RAILSINSTALLERは神」です。
+おおまかな手順を説明すると、次のような感じです。
+せっかくなので、正解と失敗の２通りの方法を紹介します。
+失敗 Xcode4.4経由でgccを入れると、LLVMベースのgccが入ってしまい、rvmでコケます。
+ XcodeをAppStoreからインストールする。 Xcode-&gt; Preferences-&gt; Downloads から、Command Line Tools をインストールする。 (ここでなんとなくhomebrewをインストールする。) rvmを公式ページのように$ curl -L <a href="https://get.rvm.io">https://get.rvm.io</a> | bash -s stable &ndash;rubyとかでインストールする。 rvmのインストールは完了するが、rubyのコンパイルに失敗する。 $ rvm requirementsをしたら、Xcodeを4.1にダウングレードするか、Xcodeをアンインストールしてosx-gcc-installerをインストールしろと言われる。 Xcodeを入れなおすのも消すのもめんどくさい ＼(&#94;o&#94;)／ｵﾜﾀ  正解 最初からRAILSINSTALLERを使っていれば、これだけで終了しました。Xcode4.4と共存もできます。
+ RAILSINSTALLER でrvmをインストールする。 rvmでrubyをインストールする。 rvmで適当にgemsetを作って使う。 3.で作ったgemsetに、gemでrailsを入れる。  正解例を詳しく RAILSINSTALLER でrvmをインストールする リンクからRailsInstallerをインストールします。
+GUIでとっても簡単にインストールできます。ゆとり仕様です。
+あまりちゃんと確認しませんでしたが、この段階で最新のRubyとRailsが入った環境になります。
+最新でないRubyやRailsが欲しいときは、次のような感じで作業すればいいと思います。
+rvmでrubyをインストールする Ruby1.9.2が欲しければ、$ rvm install 1.9.2をします。
+なんで1.9.2にしたか言うと、Octopressを使いたいからです。ご了承ください。
+rvmの超基本的な使い方 rvm listでインストールしたrubyの一覧を表示します。
+$ rvm list rvm rubies ruby-1.
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2012/07/27/getting-started-with-ruby-on-rails-on-mac/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/07/26/run-ruby-cgi-on-serversman-at-vps/" itemprop="url">ServersMan@VPSでRubyのCGIを実行するまでのメモ</a></h3>
         
 
@@ -165,7 +295,7 @@
 
 <p>apt-getかaptitudeでインストールすればいいと思います。</p>
 
-<pre><code class="language-bash">sudo aptitude install apache2	
+<pre><code class="language-bash">sudo aptitude install apache2   
 </code></pre>
 
 <h2 id="addhandlerを設定する">AddHandlerを設定する</h2>
@@ -183,11 +313,11 @@
 <p><code>/etc/apache2/sites-available/default</code>でOptions +ExecCGIを設定します。</p>
 
 <pre><code>&lt;Directory /var/www/html/&gt;
-	#Options Indexes FollowSymLinks MultiViews 
-	Options Indexes FollowSymLinks MultiViews ExecCGI
-	AllowOverride None
-	Order allow,deny
-	allow from all
+    #Options Indexes FollowSymLinks MultiViews 
+    Options Indexes FollowSymLinks MultiViews ExecCGI
+    AllowOverride None
+    Order allow,deny
+    allow from all
 &lt;/Directory&gt;
 </code></pre>
 
@@ -195,7 +325,7 @@
 
 <p>上の2つのファイルを編集したら、apacheを再起動して設定を反映させます。</p>
 
-<pre><code class="language-bash">sudo /etc/init.d/apache2 restart	
+<pre><code class="language-bash">sudo /etc/init.d/apache2 restart    
 </code></pre>
 
 <h2 id="ruby-cgiのパーミッションを755にする">Ruby CGIのパーミッションを755にする</h2>
@@ -497,7 +627,7 @@ Disqus Commentsでコメントをできるようにできるので、簡単に�
         <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
         <script src="https://gam0022.net/js/jquery-1.12.3.min.js"></script>
         <script src="https://gam0022.net/js/bootstrap.custom.js"></script>
-        <script src="https://gam0022.net/js/hugo-academic.js?2023-09-18"></script>
+        <script src="https://gam0022.net/js/hugo-academic.js?2023-09-20"></script>
         
 
         <script>
