@@ -244,11 +244,11 @@
 
 &lt;p&gt;DensityをOneMinusノードで反転してから、Density Filterで中心から離れたポイントを削除します。&lt;/p&gt;
 
-&lt;h3 id=&#34;distanceを調整&#34;&gt;Distanceを調整&lt;/h3&gt;
+&lt;h3 id=&#34;でdensityを調整&#34;&gt;でDensityを調整&lt;/h3&gt;
 
 &lt;p&gt;PowやMultiplyでDensityを調整します。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example03-graph-density-multiply.png&#34; alt=&#34;Example03: Distanceを調整&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example03-graph-density-multiply.png&#34; alt=&#34;Example03: でDensityを調整&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;定数ノードの作成&#34;&gt;定数ノードの作成&lt;/h4&gt;
 
