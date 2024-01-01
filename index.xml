@@ -26,7 +26,7 @@
 
 &lt;p&gt;PCGを利用すると、大量のStaticMeshの配置などの手動では大変な作業を自動化に役立ちます。&lt;/p&gt;
 
-&lt;p&gt;Houdini Engine for Unreal Engineでも同じことは可能ですが、UE内で作業が完結するため、よりイテレーションを回せることがメリットだと思います。&lt;/p&gt;
+&lt;p&gt;Houdini Engine for Unreal Engineでも同じことは可能ですが、UE内で作業が完結するため、よりイテレーションを高速に回せることがメリットだと思います。&lt;/p&gt;
 
 &lt;p&gt;最近PCGを使う機会があったので、PCGについて最初に知りたかったポイントや、よく使うパターンの実践TIPSをまとめます。&lt;/p&gt;
 
