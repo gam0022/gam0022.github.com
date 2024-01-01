@@ -7,8 +7,358 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>&amp;copy; 2021 gam0022</copyright>
-    <lastBuildDate>Mon, 20 Nov 2023 10:50:40 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jan 2024 14:00:00 +0900</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>[UE5] プロシージャルコンテンツ生成（PCG）最初に知っておきたいポイントと実践TIPS</title>
+      <link>https://gam0022.net/blog/2024/01/01/ue5-pcg-introduction-tips/</link>
+      <pubDate>Mon, 01 Jan 2024 14:00:00 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2024/01/01/ue5-pcg-introduction-tips/</guid>
+      <description>&lt;p&gt;新年あけましておめでとうございます！&lt;/p&gt;
+
+&lt;p&gt;大変遅刻しましたが、&lt;a href=&#34;https://qiita.com/advent-calendar/2023/ue&#34;&gt;Unreal Engine (UE) Advent Calendar 2023&lt;/a&gt;の13日目の記事です。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;UE5.2から&lt;a href=&#34;https://docs.unrealengine.com/5.3/ja/procedural-content-generation-overview/&#34;&gt;プロシージャルコンテンツ生成フレームワーク (PCG：Procedural Content Generation Framework) &lt;/a&gt;が追加されました。&lt;/p&gt;
+
+&lt;p&gt;PCGを利用すると、大量のStaticMeshの配置などの手動では大変な作業を自動化に役立ちます。&lt;/p&gt;
+
+&lt;p&gt;Houdini Engine for Unreal Engineでも同じことは可能ですが、UE内で作業が完結するため、よりイテレーションを回せることがメリットだと思います。&lt;/p&gt;
+
+&lt;p&gt;最近PCGを使う機会があったので、PCGについて最初に知りたかったポイントや、よく使うパターンの実践TIPSをまとめます。&lt;/p&gt;
+
+&lt;p&gt;執筆時のバージョンはUE5.3.2です。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/ogp.jpg&#34; alt=&#34;OGP画像&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;UE5のサンプルプロジェクトはGitHubに公開しています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gam0022/UE5_Examples&#34;&gt;github.com/gam0022/UE5_Examples&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gam0022/UE5_Examples/tree/main/Content/PCGExamples&#34;&gt;Content/PCGExamples&lt;/a&gt; フォルダを参照してください&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;pcgのセットアップ&#34;&gt;PCGのセットアップ&lt;/h1&gt;
+
+&lt;p&gt;以下のプラグインを有効化してください。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Procedural Content Generation Framework&lt;/li&gt;
+&lt;li&gt;Procedural Content Generation Framework Geometry Script Interop&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;pcgの基本的な使い方&#34;&gt;PCGの基本的な使い方&lt;/h1&gt;
+
+&lt;p&gt;PCGの基本的な使い方については、たくさんの入門記事があるため、今回は割愛します。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://historia.co.jp/archives/34360/&#34;&gt;[UE5] PCGの特徴と使い方｜株式会社ヒストリア&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://unrealengine.hatenablog.com/entry/2023/05/27/221601&#34;&gt;UE5 PCG（Procedural Content Generation）ガッツリ入門 - Let&amp;#39;s Enjoy Unreal Engine&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Level上にPCG Volumeを作成して、PCGのGraph InstanceにPCG Graphを設定します。&lt;/p&gt;
+
+&lt;h1 id=&#34;pcgの最初に知りたかったポイント&#34;&gt;PCGの最初に知りたかったポイント&lt;/h1&gt;
+
+&lt;h2 id=&#34;example01-シンプルなpcgの例&#34;&gt;Example01: シンプルなPCGの例&lt;/h2&gt;
+
+&lt;p&gt;Landscape上にランダムにMeshを配置し、Mesh同士がぶつからないようにするシンプルなPCGの例です。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example01-result.jpg&#34; alt=&#34;シンプルなPCGの例 Example01 結果&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example01-graph.png&#34; alt=&#34;シンプルなPCGの例 Example01 PCGGraph&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;このPCGでは、以下の4ステップの処理を行っています。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;ポイントの生成
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Get Landscape Data&lt;/code&gt; でLandscapeを取得&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Surface Sampler&lt;/code&gt; でLandscapeに対してポイントを生成&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ポイントの処理
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Transform Points&lt;/code&gt; でランダムな移動と回転&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ポイントのフィルター
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Bounds Modifier&lt;/code&gt; でバウンディングボックスを調整&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Self Pruning&lt;/code&gt; で自己干渉しているポイントを消去&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;StaticMeshを生成
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Static Mesh Spawner&lt;/code&gt; でStaticMeshを生成&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;PCGではポイントを生成してから、ポイントのAttributeを何かしらの方法で加工し、最後にStatic Mesh SpawnerでStaticMeshを生成という流れになります。&lt;/p&gt;
+
+&lt;p&gt;そのため、ポイントにどんなAttributeが存在していて、どのように値が変化するのかを意識することがとても重要です。&lt;/p&gt;
+
+&lt;p&gt;この4ステップの流れは複雑なPCGでもほとんど変わらない定型パターンになります。&lt;/p&gt;
+
+&lt;h2 id=&#34;inspect機能でattributeの内容を確認する&#34;&gt;Inspect機能でAttributeの内容を確認する&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;「ポイントのAttributeの内容をInspect機能で常に確認しよう」&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;この記事で一番伝えたかったポイントです。Attributeの変化を意識することが、PCGマスターへの近道です。&lt;/p&gt;
+
+&lt;p&gt;Houdiniの経験がある方は実感できるのではないでしょうか。&lt;/p&gt;
+
+&lt;p&gt;参考記事: &lt;a href=&#34;https://note.com/aoi/n/n3633a8fb6fc0&#34;&gt;絶対に挫折しないHoudini入門 4 - オブジェクトとジオメトリ｜aoi&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;PCGのポイントはAttributeを持っています。これらがAttributeの具体例です。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Position&lt;/li&gt;
+&lt;li&gt;Rotation&lt;/li&gt;
+&lt;li&gt;Scale&lt;/li&gt;
+&lt;li&gt;BoundsMin / BoundsMax&lt;/li&gt;
+&lt;li&gt;Color&lt;/li&gt;
+&lt;li&gt;Density&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Inspect機能は、ポイントのAttributeを内容を確認するための機能です。HoudiniのGeometry Spreadsheetに相当する機能です。&lt;/p&gt;
+
+&lt;p&gt;PCGの上部のタブから &lt;code&gt;No Debug object selected&lt;/code&gt; と書かれている項目をプルダウンで変更し、現在のPCG Graph名 / PCG Compornetを選んでください。
+ノードを右クリックしてInspectにチェックすると、そのノードの処理時点のPointの持つAttributeが表示されます。&lt;/p&gt;
+
+&lt;p&gt;ショートカットとして、ノードを選択してからAキーを押してもInspectが有効になります。&lt;/p&gt;
+
+&lt;p&gt;Inspect中のノードは左上に黄色い●が表示されます。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/pcg-inspect.png&#34; alt=&#34;Inspect機能&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;debug機能でビューポート上でポイントを確認する-self-pruningで重なりを除去&#34;&gt;Debug機能でビューポート上でポイントを確認する + Self Pruningで重なりを除去&lt;/h2&gt;
+
+&lt;p&gt;Debug機能はViewport上でポイントを可視化する機能です。ノードを右クリックしてDebugにチェックするか、Dキーを押すことで有効になります。&lt;/p&gt;
+
+&lt;p&gt;Debug中のノードは左上に青い●が表示されます。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/pcg-debug.png&#34; alt=&#34;Debug機能&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ビューポート上の白・黒・グレーの箱がDebugの表示です。&lt;/p&gt;
+
+&lt;p&gt;箱の色はDensityに対応しており、箱の大きさは &lt;code&gt;Scale&lt;/code&gt; と &lt;code&gt;BoundsMin / BoundsMax&lt;/code&gt; に対応します。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Self Pruning&lt;/code&gt; はポイントが持つバウンディングボックスのAttributeに対して判定が行われます。&lt;/p&gt;
+
+&lt;p&gt;そのため、ステップ3のポイントのフィルターでは、まず &lt;code&gt;Bounds Modifier&lt;/code&gt; でバウンディングボックスを調整してから &lt;code&gt;Self Pruning&lt;/code&gt; しています。&lt;/p&gt;
+
+&lt;p&gt;Inspect機能とDebug機能をつかって、ポイントのAttributeの変化を確認することが、PCGの作業効率アップやPCGへの理解度がアップにつながります。&lt;/p&gt;
+
+&lt;h1 id=&#34;pcgの実践tips&#34;&gt;PCGの実践TIPS&lt;/h1&gt;
+
+&lt;p&gt;PCGでよく使いそうなパターンの実践TIPSを紹介します。&lt;/p&gt;
+
+&lt;h2 id=&#34;example02-特定のstaticmeshを避けて配置&#34;&gt;Example02: 特定のStaticMeshを避けて配置&lt;/h2&gt;
+
+&lt;p&gt;特定のオブジェクトを避けて配置する例です。&lt;/p&gt;
+
+&lt;p&gt;まず手動でテーブルのStaticMeshを配置し、ActorのTagsに &lt;code&gt;SM_Table&lt;/code&gt; を設定します。&lt;/p&gt;
+
+&lt;p&gt;対応前：Example01のままだと、テーブルと椅子が重なり合ってしまいます。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example02-result-before.jpg&#34; alt=&#34;Example02: 対応前&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;対応後：重ならないようになりました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example02-result-after.jpg&#34; alt=&#34;Example02: 対応後&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;これがPCG Graphです。オレンジ色の枠で部分がExample01から新しく追加した処理です。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example02-graph1.png&#34; alt=&#34;Example02: Graphの全体&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;get-actor-dataの設定&#34;&gt;Get Actor Dataの設定&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example02-graph2.png&#34; alt=&#34;Example02: GraphのGet Actor Data&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Get Actor Dataはアクターを取得するノードです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Actor Filter: All World Acotrs&lt;/li&gt;
+&lt;li&gt;Must Overlap Self: ON（Volumeの範囲内だけに限定します）&lt;/li&gt;
+&lt;li&gt;Actor Selection Tag: SM_Talbe（StaticMeshに設定したタグを指定）&lt;/li&gt;
+&lt;li&gt;Select Multiple: ON（テーブルが複数ある場合はONにします。基本的にONで良いと思います）&lt;/li&gt;
+&lt;li&gt;Mode: Get Single Point&lt;/li&gt;
+&lt;li&gt;Merge Single Point Data: ON&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;differenceの設定&#34;&gt;Differenceの設定&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example02-graph3.png&#34; alt=&#34;Example02: GraphのDifference&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Differenceは差集合を計算するノードです。今回の例では、テーブルのバウンディングボックスと重なる椅子を削除します。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Density Function: Binary&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;example02のまとめ&#34;&gt;Example02のまとめ&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Get Actor Dataでは、Tagでフィルターすることで特定のActorやStaticMeshを取得できます。&lt;/li&gt;
+&lt;li&gt;Differenceを使うことで特定の範囲内のポイントを消去できます。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;example03-特定のstaticmeshの周囲に配置&#34;&gt;Example03: 特定のStaticMeshの周囲に配置&lt;/h2&gt;
+
+&lt;p&gt;岩を手動配置して、その周りに花を自動配置する例です。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example03-result.jpg&#34; alt=&#34;Example03: 結果&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;PCG Graphの全体図です。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example03-graph-all.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example03-graph-all.png&#34; alt=&#34;Example03: PCG Graphの全体図&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;岩の周囲にポイントを生成する&#34;&gt;岩の周囲にポイントを生成する&lt;/h3&gt;
+
+&lt;p&gt;まずは岩のアクターの周囲にポイントを生成します。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example03-graph1.png&#34; alt=&#34;Example03: バウンディングボックスを指定したSurfaceSampler&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Example02と同じようにTag指定で岩のActorを取得し、&lt;code&gt;Bounds Modifier&lt;/code&gt; でバウンディングボックスを5倍に拡大します。&lt;/p&gt;
+
+&lt;p&gt;Surface SamplerのBounding Shapeに拡大したバウンディングボックスを指定することで、岩の周囲にポイントを生成できます。&lt;/p&gt;
+
+&lt;p&gt;ポイントの生成範囲を調整する場合は &lt;code&gt;Bounds Modifier&lt;/code&gt; で5倍の数値を調整します。&lt;/p&gt;
+
+&lt;h3 id=&#34;distanceノードで岩からの距離に応じたdensityを設定する&#34;&gt;Distanceノードで岩からの距離に応じたDensityを設定する&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example03-graph-distance.png&#34; alt=&#34;Example03: Distanceノード&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;DistanceノードでTargetへのPointの距離を計算できます。&lt;/p&gt;
+
+&lt;p&gt;SetDensityをONにして、Maximum Distanceを指定することで、距離から0-1の範囲にDensityを設定できます。&lt;/p&gt;
+
+&lt;p&gt;DensityをOneMinusノードで反転してから、Density Filterで中心から離れたポイントを削除します。&lt;/p&gt;
+
+&lt;h3 id=&#34;distanceを調整&#34;&gt;Distanceを調整&lt;/h3&gt;
+
+&lt;p&gt;PowやMultiplyでDensityを調整します。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example03-graph-density-multiply.png&#34; alt=&#34;Example03: Distanceを調整&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;定数ノードの作成&#34;&gt;定数ノードの作成&lt;/h4&gt;
+
+&lt;p&gt;2.0や4.0の定数のノードを作成するには、Create Attributeノードを作成し、TypeをDoubeにし、Double Valueを調整します。&lt;/p&gt;
+
+&lt;p&gt;筆者は定数ノードの名前が分からずにしばらく悩みました😱&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/create-attribute-1.png&#34; alt=&#34;Create Attribute 作成&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/create-attribute-2.png&#34; alt=&#34;Create Attribute 設定&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;static-meshの生成&#34;&gt;Static Meshの生成&lt;/h3&gt;
+
+&lt;p&gt;最後にStatic Mesh SpawnerでStaticMeshを生成します。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example03-graph-staticmesh.png&#34; alt=&#34;Create Attribute 設定&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;example04-splineで囲んだ領域内に木を生やす&#34;&gt;Example04: Splineで囲んだ領域内に木を生やす&lt;/h2&gt;
+
+&lt;p&gt;Splineで囲んだ領域内に木を生やす例です。SplineとPCGを組み合わせるためにはブループリントが必要になります。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example04-result.jpg&#34; alt=&#34;Example04: 結果&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;PCG Graphの全体図です。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example04-graph-all.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example04-graph-all.png&#34; alt=&#34;Example04: PCG Graphの全体図&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;ブループリントの作成&#34;&gt;ブループリントの作成&lt;/h3&gt;
+
+&lt;p&gt;Actorクラスのブループリントを作成します。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example04-bp.png&#34; alt=&#34;Example04: ブループリント&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Splineを作成し、Component Tagsに &lt;code&gt;ForestZone&lt;/code&gt; と設定します。&lt;/p&gt;
+
+&lt;p&gt;木を生やす目的以外のSplineを使う場合も想定して、Splineの判別用にComponent Tagsを設定しています。&lt;/p&gt;
+
+&lt;p&gt;たとえば、道に木を生やしたくない場合、RoadのTagを持ったSpline上にポイントをサンプリングして、
+Example02で紹介したDifferenceノードで道にある木を削除するような使い方が可能になります。&lt;/p&gt;
+
+&lt;h3 id=&#34;spline上のポイント生成&#34;&gt;Spline上のポイント生成&lt;/h3&gt;
+
+&lt;p&gt;Splineの内側にポイント生成します。&lt;/p&gt;
+
+&lt;p&gt;まずは &lt;code&gt;Get Spline Data&lt;/code&gt; でブループリント内にあるSplineを取得します。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example04-graph-get_spline_data.png&#34; alt=&#34;Example04: Get Spline&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Actor TagsではなくComponent Tagsでフィルターするために、 &lt;code&gt;Filter By Tag&lt;/code&gt; ノードを使いました。&lt;/p&gt;
+
+&lt;p&gt;Component Tagsにした方が1つのActor内に複数のSplineを生成できるので使い勝手が良くなります。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example04-filter_by_tag.png&#34; alt=&#34;Example04: Filter By Tag&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Spline Sampler&lt;/code&gt; でSplineの内部にポイントを生成します。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example04-graph-spline_sampler.png&#34; alt=&#34;Example04: Spline Sampler&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Dimention: On Interior（Splineの内側を指定します）&lt;/li&gt;
+&lt;li&gt;Unbounded: ON&lt;/li&gt;
+&lt;li&gt;Interior Sampling Spacingで密度を調整します&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;landscape上へのプロジェクション&#34;&gt;Landscape上へのプロジェクション&lt;/h3&gt;
+
+&lt;p&gt;Spline上に生成したポイントを &lt;code&gt;Projection&lt;/code&gt; でランドスケープ上に移動します。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example04-graph-projection.png&#34; alt=&#34;Example04: Projection&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;木は上方向に真っ直ぐに生やしたいので、Project Rotations はOFFにしました。&lt;/p&gt;
+
+&lt;h3 id=&#34;重なりを除去-staticmesh生成&#34;&gt;重なりを除去 + StaticMesh生成&lt;/h3&gt;
+
+&lt;p&gt;Example01でも登場した Bounds Modifier と Self Pruning のコンボ技で重なり合ったポイントを消します。&lt;/p&gt;
+
+&lt;p&gt;最後に Static Mesh Spawner でStaticMeshを生成して完了です。&lt;/p&gt;
+
+&lt;p&gt;このあたりの処理は定形パターンですね。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example04-graph-static_mesh_spawnerpng.png&#34; alt=&#34;Example04: Projection&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;まとめ&#34;&gt;まとめ&lt;/h1&gt;
+
+&lt;p&gt;PCGの基本的なデバッグ方法やよくある処理のパターンを解説しました。&lt;/p&gt;
+
+&lt;p&gt;PCGの基本的な処理の流れとしては、ポイントを生成して、Attributeを処理してから、最後にStaticMeshを生成になります。&lt;/p&gt;
+
+&lt;p&gt;InspectやDebugを使いながらAttributeの変化を確認すれば、あまり迷わずに使いこなすことができると思います。&lt;/p&gt;
+
+&lt;p&gt;StaticMesh上へのポイント生成だったり、複雑なPCGを作成するためにサブグラフ化する方法なども紹介しようと思いましたが、記事が長くなりすぎるので別記事にしたいと思います。&lt;/p&gt;
+
+&lt;p&gt;それでは良いPCGライフを！&lt;/p&gt;
+
+&lt;h1 id=&#34;利用させていただいたasset&#34;&gt;利用させていただいたAsset&lt;/h1&gt;
+
+&lt;p&gt;記事のサンプル作成にあたり、以下のアセットを利用させていただきました。ありがとうございます！&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.unrealengine.com/marketplace/ja/product/landscape-pro-auto-generated-material&#34;&gt;Landscape Pro 2.0 Auto-Generated Material&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Quixel
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://quixel.com/megascans/home?assetId=wjglaj3s&#34;&gt;https://quixel.com/megascans/home?assetId=wjglaj3s&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://quixel.com/megascans/home?assetId=wjglai2s&#34;&gt;https://quixel.com/megascans/home?assetId=wjglai2s&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://quixel.com/megascans/home?assetId=veigfjmaw&#34;&gt;https://quixel.com/megascans/home?assetId=veigfjmaw&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     
     <item>
       <title>映画館でGLSLライブコーディングをしました（第10回新千歳空港国際アニメーション映画祭）</title>
@@ -16,7 +366,13 @@
       <pubDate>Mon, 20 Nov 2023 10:50:40 +0900</pubDate>
       
       <guid>https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/</guid>
-      <description>&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;更新履歴&#34;&gt;更新履歴&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2023-12-29 YouTube動画を埋め込みました&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
 
 &lt;p&gt;11月2日～11月6日に開催された&lt;a href=&#34;https://airport-anifes.jp/&#34;&gt;第10回新千歳空港国際アニメーション映画祭&lt;/a&gt;でデモシーンの上映とGLSLのシェーダーライブコーディングをしました。&lt;/p&gt;
 
@@ -34,9 +390,17 @@
 &lt;p&gt;1つ目のプログラムでは、&lt;a href=&#34;https://twitter.com/FL1NE&#34;&gt;@FL1NE&lt;/a&gt;さんがデモシーンが生まれた歴史であったり、テクニカルクリエーションやそのイベントであるSESSIONSの説明を行いました。
 デモシーンの歴史について網羅されている資料は少なく、とても貴重な発表だと感じました。&lt;/p&gt;
 
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/1hOYpema_fg?si=UlFrrGRWBY1NzOod&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;p&gt;2つ目のプログラムでは、前半は@FL1NEさんが司会を務めながら映画館で国内外のデモシーンの上映を行い、後半は私と&lt;a href=&#34;https://twitter.com/Renardealer&#34;&gt;@Renardealer&lt;/a&gt;さんの2人でGLSLのシェーダーライブコーディングを行いました。
 映画館という超大画面＋最高の音響でのライブコーディングは本当に楽しかったです！！
 音楽も&lt;a href=&#34;https://twitter.com/himazin917&#34;&gt;@himazin917&lt;/a&gt;さんのSonic Piによるライブコーディングの演奏でした。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/B_Yst6SSVn0?si=Hzpq6Lqb6ulePhmy&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
 
 &lt;h1 id=&#34;デモシーン上映&#34;&gt;デモシーン上映&lt;/h1&gt;
 
@@ -3283,184 +3647,6 @@ PCで音楽再生を止めて、iPhoneで音楽を再生すれば、iPhoneのみ
 &lt;p&gt;PCと携帯のように2台以上の端末で使う需要があるなら、WH-1000XM4のマルチペアリング接続は大きなメリットがあるので、WH-1000XM3から乗り換えを検討しても良いと思いました。&lt;/p&gt;
 
 &lt;p&gt;執筆時点ではWH-1000XM3とWH-1000XM4の差額は7000円ほどですが、毎日の接続の切り替えの手間を考えれば、差額に見合うだけの価値があると思います。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Tokyo Demo Fest 2021のShader Showdownに参加しました</title>
-      <link>https://gam0022.net/blog/2021/12/31/tdf2021-shader-showdown/</link>
-      <pubDate>Fri, 31 Dec 2021 00:00:00 +0900</pubDate>
-      
-      <guid>https://gam0022.net/blog/2021/12/31/tdf2021-shader-showdown/</guid>
-      <description>&lt;p&gt;12月11日～12日にオンラインで開催された&lt;a href=&#34;https://tokyodemofest.jp/&#34;&gt;Tokyo Demo Fest 2021&lt;/a&gt;（以下、TDF）に参加しました。&lt;/p&gt;
-
-&lt;p&gt;TDFは、日本国内で唯一のデモパーティです。
-リアルタイムに映像や音楽を生成するプログラムを「デモ」と言い、デモを鑑賞したり完成度を競ったりして楽しむイベントを「デモパーティ」と言います。
-「デモシーン」はデモやデモパーティを中心としたコンピューターのサブカルチャーです。&lt;/p&gt;
-
-&lt;p&gt;TDFのShader Showdownというイベントに競技者として参加しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-31-tdf2021-shader-showdown/Collage_Fotor_v3.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-31-tdf2021-shader-showdown/Collage_Fotor_v3.jpg&#34; alt=&#34;Collage_Fotor_v3&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;また、TDFのGLSL Graphics Compoにも参加したので、こちらは別記事にまとめました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://gam0022.net/blog/2021/12/20/tdf2021-glsl/&#34;&gt;Tokyo Demo Fest 2021のGLSL Graphics Compo優勝作品の解説 | gam0022.net&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;shader-showdownとは&#34;&gt;Shader Showdownとは&lt;/h1&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;TokyoDemoFestのShader Showdownは、世界的なDemoparty「Revision」と同じレギュレーションで開催します。&lt;br&gt;試合の放映はパーティー当日12/11-12となります。乞うご期待……！ &lt;a href=&#34;https://t.co/IlVue5npWz&#34;&gt;pic.twitter.com/IlVue5npWz&lt;/a&gt;&lt;/p&gt;&amp;mdash; Tokyo Demo Fest 2021 (2021/12/11-12) (@TokyoDemoFest) &lt;a href=&#34;https://twitter.com/TokyoDemoFest/status/1452275618997886976?ref_src=twsrc%5Etfw&#34;&gt;October 24, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;Shader Showdownとは25分間でシェーダーを書き、どちらの作品が良いかを決める競技です。&lt;/p&gt;
-
-&lt;p&gt;試合中は、一切のドキュメントの参照ができません。当然ながら必要な関数はすべて試合中に実装しないいけません。
-時間が25分しかないので、バグを生み出すと修正する時間はありません。世界的なDemoparty「Revision」に準拠しためちゃくちゃ厳しいレギュレーションでの開催でした。&lt;/p&gt;
-
-&lt;p&gt;1対1のトーナメント形式で開催され、試合の勝敗は観衆（ビジター）の投票によって決定します。今回は私を含めた8人でトーナメントを行いました。&lt;/p&gt;
-
-&lt;p&gt;対戦はGLSLのライブコーディングで行われます。&lt;a href=&#34;https://github.com/TheNuSan/Bonzomatic/releases/tag/v11&#34;&gt;Bonzomatic&lt;/a&gt;というアプリを利用し、対戦者の書いているコードやカーソルの位置が共有されます。
-Bonzomaticはシェーダーのライブコーディング専用のアプリです。&lt;/p&gt;
-
-&lt;p&gt;次の初期状態のサイケなトンネルはBonzomaticのデフォルトのシェーダーです。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-31-tdf2021-shader-showdown/bonzomatic-default.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-31-tdf2021-shader-showdown/bonzomatic-default.jpg&#34; alt=&#34;bonzomaticの初期状態&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;極座標による疑似3Dのシェーダーで汎用性に乏しいため、自分を含めてほどんどの競技者はまず初期状態のコードはコメントアウトするか消します。本当に無からシェーダーを書いています。&lt;/p&gt;
-
-&lt;p&gt;ビジターは対戦者が25分の制限時間の中でどのような戦略とアイデアをもってコードを書いていくかをすぐ隣でみているかのように体験できます。&lt;/p&gt;
-
-&lt;p&gt;詳しいGLSLライブコーディングの知識がなくても楽しめるよう、TDFでは対戦者がどのようなコードを書いているかのリアルタイムな解説があります。&lt;/p&gt;
-
-&lt;h1 id=&#34;ライブコーディングした作品解説&#34;&gt;ライブコーディングした作品解説&lt;/h1&gt;
-
-&lt;p&gt;今回のTDFのShader Showdownでライブコーディングした作品を簡単に解説します。&lt;/p&gt;
-
-&lt;p&gt;TDFのShader Showdownの全作品は&lt;a href=&#34;https://livecode.demozoo.org/event/2021_12_11_shader_showdown_tokyo_demofest.html&#34;&gt;livecode.demozoo.org&lt;/a&gt;にもアーカイブされています。&lt;/p&gt;
-
-&lt;h2 id=&#34;lightning-tunnel-quarter-final&#34;&gt;Lightning Tunnel | Quarter-Final&lt;/h2&gt;
-
-&lt;p&gt;準々決勝（Quarter-Final）の作品です。&lt;/p&gt;
-
-&lt;p&gt;稲妻が轟くトンネルをイメージして作りました。&lt;/p&gt;
-
-&lt;p&gt;ボリュームレンダリングをしてBloom感を出しています。ボリュームレンダリングの実装が雑なのでアーティファクトが発生しているのですが、むしろ雷の荒々しい感じが再現できて良かったです。&lt;/p&gt;
-
-&lt;p&gt;時間が余ったのでカメラのFoVのアニメーションをしたのですが、ちょっとワープっぽい効果になりました。&lt;/p&gt;
-
-&lt;p&gt;モデリングはIFSでやっています。IFSで狙った形状を出すことは困難なので、パラメーターは事前に調整をして暗記しておきました。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;25分でライブコーディングしたシェーダーです。&lt;br&gt;&lt;br&gt;This shader was coded in 25 minutes.&lt;br&gt;&lt;br&gt;Shader showdown quarter-final at &lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Bonzomatic?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Bonzomatic&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/LiveCoding?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#LiveCoding&lt;/a&gt; &lt;a href=&#34;https://t.co/WTw7tHVsbk&#34;&gt;pic.twitter.com/WTw7tHVsbk&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1469562828831195140?ref_src=twsrc%5Etfw&#34;&gt;December 11, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.shadertoy.com/view/sl3XWM&#34;&gt;Shadertoy&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://neort.io/art/c6qm3ls3p9f3hsje6360&#34;&gt;NEORT&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;YouTubeのアーカイブ（Day1の2:15頃）です。&lt;/p&gt;
-
-&lt;div class=&#34;movie-wrap&#34;&gt;
-&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/2s9KfMn1J9M?start=8114&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&#34;vj-feat-niko-14-semi-final&#34;&gt;VJ feat. Niko_14 | Semi-Final&lt;/h2&gt;
-
-&lt;p&gt;準決勝（Semi-Final）の作品です。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://twitter.com/himazin917&#34;&gt;Niko_14&lt;/a&gt;さんの音楽がとても素晴らしかったので、音楽と同期したVJに挑戦しました。&lt;/p&gt;
-
-&lt;p&gt;試合の前日に自分の試合の音楽担当はNiko_14さんと聞いたので、そのタイミングでVJをする決意をしました。&lt;/p&gt;
-
-&lt;p&gt;VJっぽい絵を狙ったことが無かったのですが、ほぼ狙い通りのバキバキな感じにできたので良かったです。
-シェーダーの構成としてはQuarter-Finalとほぼ同じで、IFSとボリュームレンダリングの組み合わせです。
-IFSのパラメーターは適当だったのですが、ちゃんと狙い通りの絵になったので良かったです。&lt;/p&gt;
-
-&lt;p&gt;色はFFT（音楽の周波数ごとのボリューム）に対応していて、低音が赤、中音が緑、高音が青に対応しています。
-キックの音が支配的だったので、キックに合わせて赤～ピンクっぽいビームが発生しています。&lt;/p&gt;
-
-&lt;p&gt;Twitterの動画の4秒頃のように、音が切り替わるタイミングでサウンドリアクティブになっているのが分かりやすいと思います。ぜひ音声をONにして再生してください！&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;25分でライブコーディングしたシェーダーです。&lt;br&gt;かっこいい音楽は &lt;a href=&#34;https://twitter.com/himazin917?ref_src=twsrc%5Etfw&#34;&gt;@himazin917&lt;/a&gt; さん制作です！&lt;br&gt;&lt;br&gt;This shader was coded in 25 minutes.&lt;br&gt;Sound by &lt;a href=&#34;https://twitter.com/himazin917?ref_src=twsrc%5Etfw&#34;&gt;@himazin917&lt;/a&gt;&lt;br&gt;&lt;br&gt;Shader showdown semi-final at &lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Bonzomatic?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Bonzomatic&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/LiveCoding?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#LiveCoding&lt;/a&gt; &lt;a href=&#34;https://t.co/HzUpd9le3t&#34;&gt;pic.twitter.com/HzUpd9le3t&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1469924900257562627?ref_src=twsrc%5Etfw&#34;&gt;December 12, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.shadertoy.com/view/NttSRS&#34;&gt;Shadertoy&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ShadertoyのSoundcloud連携が機能していないため、音楽はNiko_14さんのものではなく、仮です。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;YouTubeのアーカイブ（Day2の1:41頃）です。&lt;/p&gt;
-
-&lt;div class=&#34;movie-wrap&#34;&gt;
-&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/bp37xTVNRrM?start=6086&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;p&gt;VJっぽいバキバキとした絵の方向性やFFTを用いたサウンドリアクティブなシェーダーはこれまで挑戦したことのないジャンルだったので、新しい方向性を模索する良い経験になりました。&lt;/p&gt;
-
-&lt;p&gt;Semi-Finalでは&lt;a href=&#34;https://twitter.com/kamoshika_vrc&#34;&gt;Kamoshika&lt;/a&gt;さんに負けてしまったのですが、試合後のコメントによると反射の処理には&lt;a href=&#34;https://gam0022.net/blog/2021/06/08/unity-bible2/&#34;&gt;『Unityゲーム プログラミング・バイブル 2nd Generation』の自分の章&lt;/a&gt;を参考にしてくださったそうで、めちゃくちゃありがてぇ🙏となりました。&lt;/p&gt;
-
-&lt;p&gt;Jugem-Tさんも実況による盛り上げありがとうございました！&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;凄い画同士の殴り合いの中BGMもライブコーディングで生成してる(Niko_14氏)とんでもない光景になっててヤバい&lt;br&gt;&lt;br&gt;Shader Showdown準決勝 gam0022氏 vs Kamoshika氏&lt;br&gt;[LIVE]Tokyo Demo Fest 2021 Day2 &lt;a href=&#34;https://t.co/648ZNFJTxk&#34;&gt;https://t.co/648ZNFJTxk&lt;/a&gt; &lt;a href=&#34;https://twitter.com/YouTube?ref_src=twsrc%5Etfw&#34;&gt;@YouTube&lt;/a&gt;より &lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://t.co/atG6c8hWiK&#34;&gt;pic.twitter.com/atG6c8hWiK&lt;/a&gt;&lt;/p&gt;&amp;mdash; Jugem-T 𓆡作業中 (@Jugem_T) &lt;a href=&#34;https://twitter.com/Jugem_T/status/1469892859503734787?ref_src=twsrc%5Etfw&#34;&gt;December 12, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;感想&#34;&gt;感想&lt;/h1&gt;
-
-&lt;p&gt;大変でしたが、楽しかったです。&lt;/p&gt;
-
-&lt;p&gt;25分でできる範囲はかなり限られてくるので、詰め込める要素を取捨選択して、ミスをしないように実装するのは思っていたより難しく感じました。25分だとデバッグしている余裕はなくバグを生み出した瞬間に敗戦が濃厚になります。
-距離関数も普段はコピペしているので暗記も大変でした。回転行列くらいは導出できるのですが、sdBoxは導出していたら時間がまったく足りません。&lt;/p&gt;
-
-&lt;p&gt;正直に言うと、まさかここまでレベルの高い戦いになるとは思っておらず、参加者のみなさんが凄すぎてちょっと心が折れそうでした。&lt;/p&gt;
-
-&lt;p&gt;とくにFinal（決勝）の&lt;a href=&#34;https://twitter.com/kamoshika_vrc&#34;&gt;Kamoshika&lt;/a&gt; vs &lt;a href=&#34;https://twitter.com/phi16_&#34;&gt;phi16&lt;/a&gt; の戦いは印象深かったです。&lt;/p&gt;
-
-&lt;p&gt;Kamoshikaさんは蝶、phi16さんはライブゲームと、両者とも &amp;ldquo;生命&amp;rdquo; を誕生させていました。偶然にもテーマが一致していてちょっと面白かったです。&lt;/p&gt;
-
-&lt;p&gt;とにかく実装量がえげつなく、これをライブコーディングでやるんだ…と驚かされました。
-競技者として参加したことで、25分間でこの量をミスなく実装する困難さは痛いほど理解していたので、なおさら驚かされました。&lt;/p&gt;
-
-&lt;p&gt;両者ともミスなく作品を仕上げており、まさに決勝戦に相応しい素晴らしい戦いを見せていただきました🙏心の底から感動しました。&lt;/p&gt;
-
-&lt;p&gt;世界レベルの実力者の方々と戦えて本当に光栄でした！ありがとうございます！&lt;/p&gt;
-
-&lt;p&gt;Kamoshikaさん&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;25 minutes live coding at Shader Showdown Final.&lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/LiveCoding?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#LiveCoding&lt;/a&gt; &lt;a href=&#34;https://t.co/WeVq82f50E&#34;&gt;pic.twitter.com/WeVq82f50E&lt;/a&gt;&lt;/p&gt;&amp;mdash; Kamoshika (@kamoshika_vrc) &lt;a href=&#34;https://twitter.com/kamoshika_vrc/status/1470360600517971970?ref_src=twsrc%5Etfw&#34;&gt;December 13, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;phi16さん&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;und&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://t.co/qluYGj653s&#34;&gt;pic.twitter.com/qluYGj653s&lt;/a&gt;&lt;/p&gt;&amp;mdash; phi16 (@phi16&lt;em&gt;) &amp;lt;a href=&amp;ldquo;&lt;a href=&#34;https://twitter.com/phi16&#34;&gt;https://twitter.com/phi16&lt;/a&gt;&lt;/em&gt;/status/1470104161320849409?ref_src=twsrc%5Etfw&amp;rdquo;&amp;gt;December 12, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;記録 TDF2021 ShaderShowdown &lt;a href=&#34;https://t.co/mMcSoYwh5U&#34;&gt;https://t.co/mMcSoYwh5U&lt;/a&gt;&lt;/p&gt;&amp;mdash; phi16 (@phi16&lt;em&gt;) &amp;lt;a href=&amp;ldquo;&lt;a href=&#34;https://twitter.com/phi16&#34;&gt;https://twitter.com/phi16&lt;/a&gt;&lt;/em&gt;/status/1470415119708753921?ref_src=twsrc%5Etfw&amp;rdquo;&amp;gt;December 13, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;YouTubeのアーカイブ（Day2の4:27頃）です。&lt;/p&gt;
-
-&lt;p&gt;Finalでは私も実況者の一人として参加しています。&lt;/p&gt;
-
-&lt;div class=&#34;movie-wrap&#34;&gt;
-&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/bp37xTVNRrM?start=16030&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;おつかれさまでした！&lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://t.co/h2yXCGGBYa&#34;&gt;pic.twitter.com/h2yXCGGBYa&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1469999619409350657?ref_src=twsrc%5Etfw&#34;&gt;December 12, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;さいごに、関係者のみなさんに感謝を申し上げます。
-TDFのオーガナイザーの方々、Shader Showdownで対戦してくださったgyaboさん、norargsさん、Kamoshikaさん、0b5vrさん、phi16さん、sp4ghetさん、gazさん、実況のamagiさん、doxasさん、hiraiさんmurasaqiさん、音楽を担当したNiko_14さん、寝る前さん、h0ffman1さん、アーカイブ関連でpsenoghさん、Zavieさん、応援してくださった観戦者みなさん、本当にありがとうございました！&lt;/p&gt;
-
-&lt;h1 id=&#34;練習&#34;&gt;練習&lt;/h1&gt;
-
-&lt;p&gt;ライブコーディングの練習中の作品です。&lt;/p&gt;
-
-&lt;p&gt;Quarter-FinalのIFS+ボリュームレンダリングのアプローチは練習中に決めました。&lt;/p&gt;
-
-&lt;p&gt;トンネルのIFSのモデリングもよく見ると面影が残っています。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;情報量を追加（エンコード耐久テスト）&lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Raymarching?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Raymarching&lt;/a&gt; &lt;a href=&#34;https://t.co/uBg43zGOk6&#34;&gt;pic.twitter.com/uBg43zGOk6&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1453405601971666944?ref_src=twsrc%5Etfw&#34;&gt;October 27, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Diamond Variation 🔷 &lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Raymarching?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Raymarching&lt;/a&gt; &lt;a href=&#34;https://t.co/IAEhBgdW5s&#34;&gt;pic.twitter.com/IAEhBgdW5s&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1453768374312263683?ref_src=twsrc%5Etfw&#34;&gt;October 28, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/Shadertoy?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shadertoy&lt;/a&gt; にポートしました。&lt;br&gt;&lt;br&gt;&amp;quot;Diamond Tunnel&amp;quot; by gam0022&lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt;&lt;a href=&#34;https://t.co/oyyz8mop2x&#34;&gt;https://t.co/oyyz8mop2x&lt;/a&gt; &lt;a href=&#34;https://t.co/DXnqCAKY1Z&#34;&gt;pic.twitter.com/DXnqCAKY1Z&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1476576224768331776?ref_src=twsrc%5Etfw&#34;&gt;December 30, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -10,12 +10,368 @@
     <atom:link href="/tags/cg/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>[UE5] プロシージャルコンテンツ生成（PCG）最初に知っておきたいポイントと実践TIPS</title>
+      <link>https://gam0022.net/blog/2024/01/01/ue5-pcg-introduction-tips/</link>
+      <pubDate>Mon, 01 Jan 2024 14:00:00 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2024/01/01/ue5-pcg-introduction-tips/</guid>
+      <description>&lt;p&gt;新年あけましておめでとうございます！&lt;/p&gt;
+
+&lt;p&gt;大変遅刻しましたが、&lt;a href=&#34;https://qiita.com/advent-calendar/2023/ue&#34;&gt;Unreal Engine (UE) Advent Calendar 2023&lt;/a&gt;の13日目の記事です。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;UE5.2から&lt;a href=&#34;https://docs.unrealengine.com/5.3/ja/procedural-content-generation-overview/&#34;&gt;プロシージャルコンテンツ生成フレームワーク (PCG：Procedural Content Generation Framework) &lt;/a&gt;が追加されました。&lt;/p&gt;
+
+&lt;p&gt;PCGを利用すると、大量のStaticMeshの配置などの手動では大変な作業を自動化に役立ちます。&lt;/p&gt;
+
+&lt;p&gt;Houdini Engine for Unreal Engineでも同じことは可能ですが、UE内で作業が完結するため、よりイテレーションを回せることがメリットだと思います。&lt;/p&gt;
+
+&lt;p&gt;最近PCGを使う機会があったので、PCGについて最初に知りたかったポイントや、よく使うパターンの実践TIPSをまとめます。&lt;/p&gt;
+
+&lt;p&gt;執筆時のバージョンはUE5.3.2です。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/ogp.jpg&#34; alt=&#34;OGP画像&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;UE5のサンプルプロジェクトはGitHubに公開しています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gam0022/UE5_Examples&#34;&gt;github.com/gam0022/UE5_Examples&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gam0022/UE5_Examples/tree/main/Content/PCGExamples&#34;&gt;Content/PCGExamples&lt;/a&gt; フォルダを参照してください&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;pcgのセットアップ&#34;&gt;PCGのセットアップ&lt;/h1&gt;
+
+&lt;p&gt;以下のプラグインを有効化してください。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Procedural Content Generation Framework&lt;/li&gt;
+&lt;li&gt;Procedural Content Generation Framework Geometry Script Interop&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;pcgの基本的な使い方&#34;&gt;PCGの基本的な使い方&lt;/h1&gt;
+
+&lt;p&gt;PCGの基本的な使い方については、たくさんの入門記事があるため、今回は割愛します。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://historia.co.jp/archives/34360/&#34;&gt;[UE5] PCGの特徴と使い方｜株式会社ヒストリア&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://unrealengine.hatenablog.com/entry/2023/05/27/221601&#34;&gt;UE5 PCG（Procedural Content Generation）ガッツリ入門 - Let&amp;#39;s Enjoy Unreal Engine&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Level上にPCG Volumeを作成して、PCGのGraph InstanceにPCG Graphを設定します。&lt;/p&gt;
+
+&lt;h1 id=&#34;pcgの最初に知りたかったポイント&#34;&gt;PCGの最初に知りたかったポイント&lt;/h1&gt;
+
+&lt;h2 id=&#34;example01-シンプルなpcgの例&#34;&gt;Example01: シンプルなPCGの例&lt;/h2&gt;
+
+&lt;p&gt;Landscape上にランダムにMeshを配置し、Mesh同士がぶつからないようにするシンプルなPCGの例です。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example01-result.jpg&#34; alt=&#34;シンプルなPCGの例 Example01 結果&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example01-graph.png&#34; alt=&#34;シンプルなPCGの例 Example01 PCGGraph&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;このPCGでは、以下の4ステップの処理を行っています。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;ポイントの生成
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Get Landscape Data&lt;/code&gt; でLandscapeを取得&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Surface Sampler&lt;/code&gt; でLandscapeに対してポイントを生成&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ポイントの処理
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Transform Points&lt;/code&gt; でランダムな移動と回転&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ポイントのフィルター
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Bounds Modifier&lt;/code&gt; でバウンディングボックスを調整&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Self Pruning&lt;/code&gt; で自己干渉しているポイントを消去&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;StaticMeshを生成
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Static Mesh Spawner&lt;/code&gt; でStaticMeshを生成&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;PCGではポイントを生成してから、ポイントのAttributeを何かしらの方法で加工し、最後にStatic Mesh SpawnerでStaticMeshを生成という流れになります。&lt;/p&gt;
+
+&lt;p&gt;そのため、ポイントにどんなAttributeが存在していて、どのように値が変化するのかを意識することがとても重要です。&lt;/p&gt;
+
+&lt;p&gt;この4ステップの流れは複雑なPCGでもほとんど変わらない定型パターンになります。&lt;/p&gt;
+
+&lt;h2 id=&#34;inspect機能でattributeの内容を確認する&#34;&gt;Inspect機能でAttributeの内容を確認する&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;「ポイントのAttributeの内容をInspect機能で常に確認しよう」&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;この記事で一番伝えたかったポイントです。Attributeの変化を意識することが、PCGマスターへの近道です。&lt;/p&gt;
+
+&lt;p&gt;Houdiniの経験がある方は実感できるのではないでしょうか。&lt;/p&gt;
+
+&lt;p&gt;参考記事: &lt;a href=&#34;https://note.com/aoi/n/n3633a8fb6fc0&#34;&gt;絶対に挫折しないHoudini入門 4 - オブジェクトとジオメトリ｜aoi&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;PCGのポイントはAttributeを持っています。これらがAttributeの具体例です。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Position&lt;/li&gt;
+&lt;li&gt;Rotation&lt;/li&gt;
+&lt;li&gt;Scale&lt;/li&gt;
+&lt;li&gt;BoundsMin / BoundsMax&lt;/li&gt;
+&lt;li&gt;Color&lt;/li&gt;
+&lt;li&gt;Density&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Inspect機能は、ポイントのAttributeを内容を確認するための機能です。HoudiniのGeometry Spreadsheetに相当する機能です。&lt;/p&gt;
+
+&lt;p&gt;PCGの上部のタブから &lt;code&gt;No Debug object selected&lt;/code&gt; と書かれている項目をプルダウンで変更し、現在のPCG Graph名 / PCG Compornetを選んでください。
+ノードを右クリックしてInspectにチェックすると、そのノードの処理時点のPointの持つAttributeが表示されます。&lt;/p&gt;
+
+&lt;p&gt;ショートカットとして、ノードを選択してからAキーを押してもInspectが有効になります。&lt;/p&gt;
+
+&lt;p&gt;Inspect中のノードは左上に黄色い●が表示されます。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/pcg-inspect.png&#34; alt=&#34;Inspect機能&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;debug機能でビューポート上でポイントを確認する-self-pruningで重なりを除去&#34;&gt;Debug機能でビューポート上でポイントを確認する + Self Pruningで重なりを除去&lt;/h2&gt;
+
+&lt;p&gt;Debug機能はViewport上でポイントを可視化する機能です。ノードを右クリックしてDebugにチェックするか、Dキーを押すことで有効になります。&lt;/p&gt;
+
+&lt;p&gt;Debug中のノードは左上に青い●が表示されます。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/pcg-debug.png&#34; alt=&#34;Debug機能&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ビューポート上の白・黒・グレーの箱がDebugの表示です。&lt;/p&gt;
+
+&lt;p&gt;箱の色はDensityに対応しており、箱の大きさは &lt;code&gt;Scale&lt;/code&gt; と &lt;code&gt;BoundsMin / BoundsMax&lt;/code&gt; に対応します。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Self Pruning&lt;/code&gt; はポイントが持つバウンディングボックスのAttributeに対して判定が行われます。&lt;/p&gt;
+
+&lt;p&gt;そのため、ステップ3のポイントのフィルターでは、まず &lt;code&gt;Bounds Modifier&lt;/code&gt; でバウンディングボックスを調整してから &lt;code&gt;Self Pruning&lt;/code&gt; しています。&lt;/p&gt;
+
+&lt;p&gt;Inspect機能とDebug機能をつかって、ポイントのAttributeの変化を確認することが、PCGの作業効率アップやPCGへの理解度がアップにつながります。&lt;/p&gt;
+
+&lt;h1 id=&#34;pcgの実践tips&#34;&gt;PCGの実践TIPS&lt;/h1&gt;
+
+&lt;p&gt;PCGでよく使いそうなパターンの実践TIPSを紹介します。&lt;/p&gt;
+
+&lt;h2 id=&#34;example02-特定のstaticmeshを避けて配置&#34;&gt;Example02: 特定のStaticMeshを避けて配置&lt;/h2&gt;
+
+&lt;p&gt;特定のオブジェクトを避けて配置する例です。&lt;/p&gt;
+
+&lt;p&gt;まず手動でテーブルのStaticMeshを配置し、ActorのTagsに &lt;code&gt;SM_Table&lt;/code&gt; を設定します。&lt;/p&gt;
+
+&lt;p&gt;対応前：Example01のままだと、テーブルと椅子が重なり合ってしまいます。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example02-result-before.jpg&#34; alt=&#34;Example02: 対応前&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;対応後：重ならないようになりました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example02-result-after.jpg&#34; alt=&#34;Example02: 対応後&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;これがPCG Graphです。オレンジ色の枠で部分がExample01から新しく追加した処理です。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example02-graph1.png&#34; alt=&#34;Example02: Graphの全体&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;get-actor-dataの設定&#34;&gt;Get Actor Dataの設定&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example02-graph2.png&#34; alt=&#34;Example02: GraphのGet Actor Data&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Get Actor Dataはアクターを取得するノードです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Actor Filter: All World Acotrs&lt;/li&gt;
+&lt;li&gt;Must Overlap Self: ON（Volumeの範囲内だけに限定します）&lt;/li&gt;
+&lt;li&gt;Actor Selection Tag: SM_Talbe（StaticMeshに設定したタグを指定）&lt;/li&gt;
+&lt;li&gt;Select Multiple: ON（テーブルが複数ある場合はONにします。基本的にONで良いと思います）&lt;/li&gt;
+&lt;li&gt;Mode: Get Single Point&lt;/li&gt;
+&lt;li&gt;Merge Single Point Data: ON&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;differenceの設定&#34;&gt;Differenceの設定&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example02-graph3.png&#34; alt=&#34;Example02: GraphのDifference&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Differenceは差集合を計算するノードです。今回の例では、テーブルのバウンディングボックスと重なる椅子を削除します。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Density Function: Binary&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;example02のまとめ&#34;&gt;Example02のまとめ&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Get Actor Dataでは、Tagでフィルターすることで特定のActorやStaticMeshを取得できます。&lt;/li&gt;
+&lt;li&gt;Differenceを使うことで特定の範囲内のポイントを消去できます。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;example03-特定のstaticmeshの周囲に配置&#34;&gt;Example03: 特定のStaticMeshの周囲に配置&lt;/h2&gt;
+
+&lt;p&gt;岩を手動配置して、その周りに花を自動配置する例です。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example03-result.jpg&#34; alt=&#34;Example03: 結果&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;PCG Graphの全体図です。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example03-graph-all.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example03-graph-all.png&#34; alt=&#34;Example03: PCG Graphの全体図&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;岩の周囲にポイントを生成する&#34;&gt;岩の周囲にポイントを生成する&lt;/h3&gt;
+
+&lt;p&gt;まずは岩のアクターの周囲にポイントを生成します。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example03-graph1.png&#34; alt=&#34;Example03: バウンディングボックスを指定したSurfaceSampler&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Example02と同じようにTag指定で岩のActorを取得し、&lt;code&gt;Bounds Modifier&lt;/code&gt; でバウンディングボックスを5倍に拡大します。&lt;/p&gt;
+
+&lt;p&gt;Surface SamplerのBounding Shapeに拡大したバウンディングボックスを指定することで、岩の周囲にポイントを生成できます。&lt;/p&gt;
+
+&lt;p&gt;ポイントの生成範囲を調整する場合は &lt;code&gt;Bounds Modifier&lt;/code&gt; で5倍の数値を調整します。&lt;/p&gt;
+
+&lt;h3 id=&#34;distanceノードで岩からの距離に応じたdensityを設定する&#34;&gt;Distanceノードで岩からの距離に応じたDensityを設定する&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example03-graph-distance.png&#34; alt=&#34;Example03: Distanceノード&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;DistanceノードでTargetへのPointの距離を計算できます。&lt;/p&gt;
+
+&lt;p&gt;SetDensityをONにして、Maximum Distanceを指定することで、距離から0-1の範囲にDensityを設定できます。&lt;/p&gt;
+
+&lt;p&gt;DensityをOneMinusノードで反転してから、Density Filterで中心から離れたポイントを削除します。&lt;/p&gt;
+
+&lt;h3 id=&#34;distanceを調整&#34;&gt;Distanceを調整&lt;/h3&gt;
+
+&lt;p&gt;PowやMultiplyでDensityを調整します。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example03-graph-density-multiply.png&#34; alt=&#34;Example03: Distanceを調整&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;定数ノードの作成&#34;&gt;定数ノードの作成&lt;/h4&gt;
+
+&lt;p&gt;2.0や4.0の定数のノードを作成するには、Create Attributeノードを作成し、TypeをDoubeにし、Double Valueを調整します。&lt;/p&gt;
+
+&lt;p&gt;筆者は定数ノードの名前が分からずにしばらく悩みました😱&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/create-attribute-1.png&#34; alt=&#34;Create Attribute 作成&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/create-attribute-2.png&#34; alt=&#34;Create Attribute 設定&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;static-meshの生成&#34;&gt;Static Meshの生成&lt;/h3&gt;
+
+&lt;p&gt;最後にStatic Mesh SpawnerでStaticMeshを生成します。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example03-graph-staticmesh.png&#34; alt=&#34;Create Attribute 設定&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;example04-splineで囲んだ領域内に木を生やす&#34;&gt;Example04: Splineで囲んだ領域内に木を生やす&lt;/h2&gt;
+
+&lt;p&gt;Splineで囲んだ領域内に木を生やす例です。SplineとPCGを組み合わせるためにはブループリントが必要になります。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example04-result.jpg&#34; alt=&#34;Example04: 結果&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;PCG Graphの全体図です。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example04-graph-all.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example04-graph-all.png&#34; alt=&#34;Example04: PCG Graphの全体図&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;ブループリントの作成&#34;&gt;ブループリントの作成&lt;/h3&gt;
+
+&lt;p&gt;Actorクラスのブループリントを作成します。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example04-bp.png&#34; alt=&#34;Example04: ブループリント&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Splineを作成し、Component Tagsに &lt;code&gt;ForestZone&lt;/code&gt; と設定します。&lt;/p&gt;
+
+&lt;p&gt;木を生やす目的以外のSplineを使う場合も想定して、Splineの判別用にComponent Tagsを設定しています。&lt;/p&gt;
+
+&lt;p&gt;たとえば、道に木を生やしたくない場合、RoadのTagを持ったSpline上にポイントをサンプリングして、
+Example02で紹介したDifferenceノードで道にある木を削除するような使い方が可能になります。&lt;/p&gt;
+
+&lt;h3 id=&#34;spline上のポイント生成&#34;&gt;Spline上のポイント生成&lt;/h3&gt;
+
+&lt;p&gt;Splineの内側にポイント生成します。&lt;/p&gt;
+
+&lt;p&gt;まずは &lt;code&gt;Get Spline Data&lt;/code&gt; でブループリント内にあるSplineを取得します。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example04-graph-get_spline_data.png&#34; alt=&#34;Example04: Get Spline&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Actor TagsではなくComponent Tagsでフィルターするために、 &lt;code&gt;Filter By Tag&lt;/code&gt; ノードを使いました。&lt;/p&gt;
+
+&lt;p&gt;Component Tagsにした方が1つのActor内に複数のSplineを生成できるので使い勝手が良くなります。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example04-filter_by_tag.png&#34; alt=&#34;Example04: Filter By Tag&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Spline Sampler&lt;/code&gt; でSplineの内部にポイントを生成します。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example04-graph-spline_sampler.png&#34; alt=&#34;Example04: Spline Sampler&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Dimention: On Interior（Splineの内側を指定します）&lt;/li&gt;
+&lt;li&gt;Unbounded: ON&lt;/li&gt;
+&lt;li&gt;Interior Sampling Spacingで密度を調整します&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;landscape上へのプロジェクション&#34;&gt;Landscape上へのプロジェクション&lt;/h3&gt;
+
+&lt;p&gt;Spline上に生成したポイントを &lt;code&gt;Projection&lt;/code&gt; でランドスケープ上に移動します。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example04-graph-projection.png&#34; alt=&#34;Example04: Projection&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;木は上方向に真っ直ぐに生やしたいので、Project Rotations はOFFにしました。&lt;/p&gt;
+
+&lt;h3 id=&#34;重なりを除去-staticmesh生成&#34;&gt;重なりを除去 + StaticMesh生成&lt;/h3&gt;
+
+&lt;p&gt;Example01でも登場した Bounds Modifier と Self Pruning のコンボ技で重なり合ったポイントを消します。&lt;/p&gt;
+
+&lt;p&gt;最後に Static Mesh Spawner でStaticMeshを生成して完了です。&lt;/p&gt;
+
+&lt;p&gt;このあたりの処理は定形パターンですね。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example04-graph-static_mesh_spawnerpng.png&#34; alt=&#34;Example04: Projection&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;まとめ&#34;&gt;まとめ&lt;/h1&gt;
+
+&lt;p&gt;PCGの基本的なデバッグ方法やよくある処理のパターンを解説しました。&lt;/p&gt;
+
+&lt;p&gt;PCGの基本的な処理の流れとしては、ポイントを生成して、Attributeを処理してから、最後にStaticMeshを生成になります。&lt;/p&gt;
+
+&lt;p&gt;InspectやDebugを使いながらAttributeの変化を確認すれば、あまり迷わずに使いこなすことができると思います。&lt;/p&gt;
+
+&lt;p&gt;StaticMesh上へのポイント生成だったり、複雑なPCGを作成するためにサブグラフ化する方法なども紹介しようと思いましたが、記事が長くなりすぎるので別記事にしたいと思います。&lt;/p&gt;
+
+&lt;p&gt;それでは良いPCGライフを！&lt;/p&gt;
+
+&lt;h1 id=&#34;利用させていただいたasset&#34;&gt;利用させていただいたAsset&lt;/h1&gt;
+
+&lt;p&gt;記事のサンプル作成にあたり、以下のアセットを利用させていただきました。ありがとうございます！&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.unrealengine.com/marketplace/ja/product/landscape-pro-auto-generated-material&#34;&gt;Landscape Pro 2.0 Auto-Generated Material&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Quixel
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://quixel.com/megascans/home?assetId=wjglaj3s&#34;&gt;https://quixel.com/megascans/home?assetId=wjglaj3s&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://quixel.com/megascans/home?assetId=wjglai2s&#34;&gt;https://quixel.com/megascans/home?assetId=wjglai2s&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://quixel.com/megascans/home?assetId=veigfjmaw&#34;&gt;https://quixel.com/megascans/home?assetId=veigfjmaw&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
       <title>映画館でGLSLライブコーディングをしました（第10回新千歳空港国際アニメーション映画祭）</title>
       <link>https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/</link>
       <pubDate>Mon, 20 Nov 2023 10:50:40 +0900</pubDate>
       
       <guid>https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/</guid>
-      <description>&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;更新履歴&#34;&gt;更新履歴&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2023-12-29 YouTube動画を埋め込みました&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
 
 &lt;p&gt;11月2日～11月6日に開催された&lt;a href=&#34;https://airport-anifes.jp/&#34;&gt;第10回新千歳空港国際アニメーション映画祭&lt;/a&gt;でデモシーンの上映とGLSLのシェーダーライブコーディングをしました。&lt;/p&gt;
 
@@ -33,9 +389,17 @@
 &lt;p&gt;1つ目のプログラムでは、&lt;a href=&#34;https://twitter.com/FL1NE&#34;&gt;@FL1NE&lt;/a&gt;さんがデモシーンが生まれた歴史であったり、テクニカルクリエーションやそのイベントであるSESSIONSの説明を行いました。
 デモシーンの歴史について網羅されている資料は少なく、とても貴重な発表だと感じました。&lt;/p&gt;
 
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/1hOYpema_fg?si=UlFrrGRWBY1NzOod&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;p&gt;2つ目のプログラムでは、前半は@FL1NEさんが司会を務めながら映画館で国内外のデモシーンの上映を行い、後半は私と&lt;a href=&#34;https://twitter.com/Renardealer&#34;&gt;@Renardealer&lt;/a&gt;さんの2人でGLSLのシェーダーライブコーディングを行いました。
 映画館という超大画面＋最高の音響でのライブコーディングは本当に楽しかったです！！
 音楽も&lt;a href=&#34;https://twitter.com/himazin917&#34;&gt;@himazin917&lt;/a&gt;さんのSonic Piによるライブコーディングの演奏でした。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/B_Yst6SSVn0?si=Hzpq6Lqb6ulePhmy&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
 
 &lt;h1 id=&#34;デモシーン上映&#34;&gt;デモシーン上映&lt;/h1&gt;
 
@@ -3843,84 +4207,6 @@ int[MAX_BEAT_LEN * NOTE_VDIV] tmpIndexes;
 
 &lt;p&gt;最後に、世界的に大変な状況の中、オンラインでの開催のためにご尽力いただいた皆様に、心より感謝申し上げます。
 とても楽しく充実した3日間を過ごせました。来年はドイツでお会いしましょう！&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>近未来教育フォーラム2019でシェーダーライブコーディングをしました</title>
-      <link>https://gam0022.net/blog/2019/11/29/dhw/</link>
-      <pubDate>Fri, 29 Nov 2019 10:36:17 +0900</pubDate>
-      
-      <guid>https://gam0022.net/blog/2019/11/29/dhw/</guid>
-      <description>&lt;p&gt;2019/11/28にデジタルハリウッド大学で開催された&lt;a href=&#34;https://www.dhw.co.jp/forum/program.html&#34;&gt;近未来教育フォーラム&lt;/a&gt;の
-「The Real Time Live &amp;amp; Reception リアルタイムグラフィックスの世界とVTuberが牽引する新たな人類」というイベントに登壇しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://twitter.com/FL1NE&#34;&gt;@FL1NE&lt;/a&gt;さんと一緒にデモシーンについて話しました。
-私は簡単なシェーダーライブコーディングをしながらプログラミングによる形状のモデリングについて解説しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://twitter.com/o_ob/status/1200067621799903238&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-11-29-dhw/live_coding_init.jpg&#34; alt=&#34;シェーダーライブコーディング（初期）&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://twitter.com/songofsaya_/status/1199999036964474886&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2019-11-29-dhw/live_coding.jpg&#34; alt=&#34;シェーダーライブコーディング（完成）&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;レポート-2020-05-09追記&#34;&gt;レポート（2020/05/09追記）&lt;/h2&gt;
-
-&lt;p&gt;当日の様子のレポートが公開されました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.dhw.co.jp/forum/report/report01.html&#34;&gt;近未来教育フォーラム2019 -In Real Time- 公演レポート&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;シェーダーライブコーディングによる作品&#34;&gt;シェーダーライブコーディングによる作品&lt;/h2&gt;
-
-&lt;p&gt;WORMHOLEの前半に登場したフラクタルによる複雑な形状のトンネルのモデリングについてライブコーディングしながら解説しました。&lt;/p&gt;
-
-&lt;p&gt;通常の3DCGでは、ツールでモデリングした3Dモデルを読み込んで表示すると思いますが、デモシーンの一部の部門には容量制限があるので、
-WORMHOLEではシェーダーによるプログラミングによってプロシージャルにモデリングを行いました。&lt;/p&gt;
-
-&lt;p&gt;発表時間が限られていたので、ハラハラ・ドキドキでしたが、なんとか意図通りの形になって良かったです。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;WORMHOLEの前半に登場したフラクタルによる複雑な形状のトンネルのモデリングについてライブコーディングしながら解説しました。&lt;a href=&#34;https://twitter.com/hashtag/DHW?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DHW&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1200006025878749184?ref_src=twsrc%5Etfw&#34;&gt;November 28, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Gam師のレイマーチング始まってる。 &lt;a href=&#34;https://t.co/MHLrFmbLpL&#34;&gt;pic.twitter.com/MHLrFmbLpL&lt;/a&gt;&lt;/p&gt;&amp;mdash; さやちゃんぐbot (@songofsaya_) &lt;a href=&#34;https://twitter.com/songofsaya__/status/1199999036964474886?ref_src=twsrc%5Etfw&#34;&gt;November 28, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;動画&#34;&gt;動画&lt;/h3&gt;
-
-&lt;p&gt;YouTube配信のアーカイブが残っています。&lt;/p&gt;
-
-&lt;p&gt;34:46〜が自分のシェーダーライブコーディングでした。&lt;/p&gt;
-
-&lt;div class=&#34;movie-wrap&#34;&gt;
-&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/j0yRASXFvlQ?start=2086&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&#34;songofsaya-さんによる解説&#34;&gt;songofsaya_ さんによる解説&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://twitter.com/songofsaya_&#34;&gt;@songofsaya_&lt;/a&gt; さんがTwitterで解説をしてくださっていました。ありがとうございます！&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;四角形のパイプと書いたけど、再帰性があるからおそらくメンガーだろうなーと思っていたらメンガーでした。&lt;br&gt;そしてGam師ならではのfoldRotateが登場します。これがKanetaaaaa神だとpmodと名前が変わります。 &lt;a href=&#34;https://t.co/VFqKT2jVoq&#34;&gt;pic.twitter.com/VFqKT2jVoq&lt;/a&gt;&lt;/p&gt;&amp;mdash; さやちゃんぐbot (@songofsaya_) &lt;a href=&#34;https://twitter.com/songofsaya__/status/1200008658916007938?ref_src=twsrc%5Etfw&#34;&gt;November 28, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Gam師ならではのfoldRotateが登場します。これがKanetaaaaa神だとpmodと名前が変わります&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;正解です！&lt;/p&gt;
-
-&lt;h2 id=&#34;発表資料&#34;&gt;発表資料&lt;/h2&gt;
-
-&lt;p&gt;発表資料はFL1NEさんが作ってくれました。自分はライブコーディングのところを担当しました。&lt;/p&gt;
-
-&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;b3019de333a449a481ff2df647d2d098&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-
-&lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;
-
-&lt;p&gt;当日は&lt;a href=&#34;https://www.sli.do/&#34;&gt;sli.do&lt;/a&gt;で来場者の声がリアルタイムに見えるようになっていました。&lt;/p&gt;
-
-&lt;p&gt;sli.doや懇親会で、メガデモとシェーダーについて「楽しそう！」「自分でも作ってみたい」といった好意的な感想をいただけました！&lt;/p&gt;
-
-&lt;p&gt;シェーダやレイマーチングや3DCGに少しでも興味を持っていただけたのなら嬉しい限りです。ありがとうございました！&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;メガデモとシェーダーについて&lt;br&gt;「楽しそう！」「自分でも作ってみたい」&lt;br&gt;といった好意的な感想をいただけて嬉しい限りです☺️&lt;a href=&#34;https://twitter.com/hashtag/DHW?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DHW&lt;/a&gt; &lt;a href=&#34;https://t.co/BCkGVOiAdv&#34;&gt;pic.twitter.com/BCkGVOiAdv&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1200068188043501568?ref_src=twsrc%5Etfw&#34;&gt;November 28, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

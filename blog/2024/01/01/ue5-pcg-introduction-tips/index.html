@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme" content="hugo-academic">
+    <meta name="generator" content="Hugo 0.17" />
+    <meta name="author" content="@gam0022">
+    <meta name="description" content="ソフトウェアエンジニア / グラフィックスエンジニア">
+
+    <link rel="stylesheet" href="https://gam0022.net/css/highlight.min.css">
+    <link rel="stylesheet" href="https://gam0022.net/css/bootstrap.custom.css">
+    <link rel="stylesheet" href="https://gam0022.net/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://gam0022.net/css/academicons.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+    <link rel="stylesheet" href="https://gam0022.net/css/hugo-academic.css?2023-07-31-v2">
+    
+
+    
+    <link rel="alternate" href="https://gam0022.net/index.xml" type="application/rss+xml" title="gam0022.net">
+    <link rel="feed" href="https://gam0022.net/index.xml" type="application/rss+xml" title="gam0022.net">
+    
+    <link rel="shortcut icon" href="https://gam0022.net/img/favicon.png" type="image/png">
+    
+
+    <title>[UE5] プロシージャルコンテンツ生成（PCG）最初に知っておきたいポイントと実践TIPS | gam0022.net</title>
+
+    
+        <meta property="og:type" content="article">
+        <meta property="og:description" content="新年あけましておめでとうございます！
+
+大変遅刻しましたが、Unreal Engine (UE) Advent Calendar 2023の13日目の記事です。
+
+
+
+UE5.2からプロシージャルコンテンツ生成フレームワーク (PCG：Procedural Content Generation Framework) が追加されました。
+
+PCGを利用すると、大量のStaticMeshの配置などの手動では大変な作業を自動化に役立ちます。
+
+Houdini Engine for Unreal Engineでも同じことは可能ですが、UE内で作業が完結するため、よりイテレーションを回せることがメリットだと思います。
+
+最近PCGを使う機会があったので、PCGについて最初に知りたかったポイントや、よく使うパターンの実践TIPSをまとめます。
+
+執筆時のバージョンはUE5.3.2です。
+
+
+
+UE5のサンプルプロジェクトはGitHubに公開しています。
+
+
+github.com/gam0022/UE5_Examples
+
+
+Content/PCGExamples フォルダを参照してください
+
+
+
+">
+    
+
+    
+        <meta property="og:image" content="https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/ogp.jpg">
+        <meta name="twitter:card" content="summary_large_image">
+    
+
+    <meta property="fb:app_id" content="413045302370371">
+    <meta property="og:title" content="[UE5] プロシージャルコンテンツ生成（PCG）最初に知っておきたいポイントと実践TIPS | gam0022.net">
+    <meta property="og:url" content="https://gam0022.net/blog/2024/01/01/ue5-pcg-introduction-tips/">
+
+    <meta name="twitter:site" content="@gam0022">
+
+    <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'ja'}</script>
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents">
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.7";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <script>
+    (function() {
+      var cx = '014076568914435119268:lp0lsoyv6uk';
+      var gcse = document.createElement('script');
+      gcse.type = 'text/javascript';
+      gcse.async = true;
+      gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(gcse, s);
+    })();
+  </script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TEZN6LYHVZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TEZN6LYHVZ');
+</script>
+
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+    <div class="container">
+
+        
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://gam0022.net/">gam0022.net</a>
+        </div>
+
+        
+        <div class="collapse navbar-collapse" id="#navbar-collapse-1">
+
+            
+            <ul class="nav navbar-nav navbar-left">
+                
+                <li class="nav-item"><a href="https://gam0022.net/#top"><i class='fa fa-home'></i> Home</a></li>
+                
+                <li class="nav-item"><a href="https://gam0022.net/post/"><i class='fa fa-pencil-square-o'></i> Post</a></li>
+                
+                <li class="nav-item"><a href="https://gam0022.net/works"><i class='fa fa-photo'></i> Work</a></li>
+                
+            </ul>
+
+            
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item google-search-item"><gcse:searchbox-only></gcse:searchbox-only>
+</li>
+                
+                <li class="nav-item"><a href="https://gam0022.net/webgl/#raymarching_reflect"><i class='fa fa-flask'></i> WebGL</a></li>
+                
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-9">
+            <article class="article" itemscope itemtype="http://schema.org/Article">
+
+                
+
+                <h3 class="article-title" itemprop="name">[UE5] プロシージャルコンテンツ生成（PCG）最初に知っておきたいポイントと実践TIPS</h3>
+                
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2024-01-01 14:00:00 &#43;0900 JST" itemprop="datePublished">2024-01-01</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/ue5">UE5</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/unrealengine">UnrealEngine</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/unrealengine5">UnrealEngine5</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/procedural">Procedural</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/cg">CG</a>
+        
+    </span>
+    
+    
+
+    
+        
+
+<div class="share-box">
+    <div class="share_wrap">
+        <div class="share_button">
+            <a href="http://b.hatena.ne.jp/entry/https://gam0022.net/blog/2024/01/01/ue5-pcg-introduction-tips/" class="hatena-bookmark-button" data-hatena-bookmark-title="[UE5] プロシージャルコンテンツ生成（PCG）最初に知っておきたいポイントと実践TIPS" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+        </div>
+        <div class="share_button">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://gam0022.net/blog/2024/01/01/ue5-pcg-introduction-tips/" data-text="[UE5] プロシージャルコンテンツ生成（PCG）最初に知っておきたいポイントと実践TIPS" data-via="gam0022">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+        <div class="share_button">
+            <div class="g-plus" data-action="share" data-annotation="none"></div>
+        </div>
+        <div class="share_button">
+            <div class="fb-like" data-href="https://gam0022.net/blog/2024/01/01/ue5-pcg-introduction-tips/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+        </div>
+        <div class="share_button">
+          <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a><script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+        </div>
+    </div>
+</div>
+
+
+    
+
+</div>
+
+
+                <div class="article-style" itemprop="articleBody">
+                    <p>新年あけましておめでとうございます！</p>
+
+<p>大変遅刻しましたが、<a href="https://qiita.com/advent-calendar/2023/ue">Unreal Engine (UE) Advent Calendar 2023</a>の13日目の記事です。</p>
+
+<hr />
+
+<p>UE5.2から<a href="https://docs.unrealengine.com/5.3/ja/procedural-content-generation-overview/">プロシージャルコンテンツ生成フレームワーク (PCG：Procedural Content Generation Framework) </a>が追加されました。</p>
+
+<p>PCGを利用すると、大量のStaticMeshの配置などの手動では大変な作業を自動化に役立ちます。</p>
+
+<p>Houdini Engine for Unreal Engineでも同じことは可能ですが、UE内で作業が完結するため、よりイテレーションを回せることがメリットだと思います。</p>
+
+<p>最近PCGを使う機会があったので、PCGについて最初に知りたかったポイントや、よく使うパターンの実践TIPSをまとめます。</p>
+
+<p>執筆時のバージョンはUE5.3.2です。</p>
+
+<p><img src="/images/posts/2023-12-27-ue5-pcg-introduction-tips/ogp.jpg" alt="OGP画像" /></p>
+
+<p>UE5のサンプルプロジェクトはGitHubに公開しています。</p>
+
+<ul>
+<li><a href="https://github.com/gam0022/UE5_Examples">github.com/gam0022/UE5_Examples</a>
+
+<ul>
+<li><a href="https://github.com/gam0022/UE5_Examples/tree/main/Content/PCGExamples">Content/PCGExamples</a> フォルダを参照してください</li>
+</ul></li>
+</ul>
+
+<p></p>
+
+<h1 id="pcgのセットアップ">PCGのセットアップ</h1>
+
+<p>以下のプラグインを有効化してください。</p>
+
+<ul>
+<li>Procedural Content Generation Framework</li>
+<li>Procedural Content Generation Framework Geometry Script Interop</li>
+</ul>
+
+<h1 id="pcgの基本的な使い方">PCGの基本的な使い方</h1>
+
+<p>PCGの基本的な使い方については、たくさんの入門記事があるため、今回は割愛します。</p>
+
+<ul>
+<li><a href="https://historia.co.jp/archives/34360/">[UE5] PCGの特徴と使い方｜株式会社ヒストリア</a></li>
+<li><a href="https://unrealengine.hatenablog.com/entry/2023/05/27/221601">UE5 PCG（Procedural Content Generation）ガッツリ入門 - Let&#39;s Enjoy Unreal Engine</a></li>
+</ul>
+
+<p>Level上にPCG Volumeを作成して、PCGのGraph InstanceにPCG Graphを設定します。</p>
+
+<h1 id="pcgの最初に知りたかったポイント">PCGの最初に知りたかったポイント</h1>
+
+<h2 id="example01-シンプルなpcgの例">Example01: シンプルなPCGの例</h2>
+
+<p>Landscape上にランダムにMeshを配置し、Mesh同士がぶつからないようにするシンプルなPCGの例です。</p>
+
+<p><img src="/images/posts/2023-12-27-ue5-pcg-introduction-tips/example01-result.jpg" alt="シンプルなPCGの例 Example01 結果" /></p>
+
+<p><img src="/images/posts/2023-12-27-ue5-pcg-introduction-tips/example01-graph.png" alt="シンプルなPCGの例 Example01 PCGGraph" /></p>
+
+<p>このPCGでは、以下の4ステップの処理を行っています。</p>
+
+<ol>
+<li>ポイントの生成
+
+<ul>
+<li><code>Get Landscape Data</code> でLandscapeを取得</li>
+<li><code>Surface Sampler</code> でLandscapeに対してポイントを生成</li>
+</ul></li>
+<li>ポイントの処理
+
+<ul>
+<li><code>Transform Points</code> でランダムな移動と回転</li>
+</ul></li>
+<li>ポイントのフィルター
+
+<ul>
+<li><code>Bounds Modifier</code> でバウンディングボックスを調整</li>
+<li><code>Self Pruning</code> で自己干渉しているポイントを消去</li>
+</ul></li>
+<li>StaticMeshを生成
+
+<ul>
+<li><code>Static Mesh Spawner</code> でStaticMeshを生成</li>
+</ul></li>
+</ol>
+
+<p>PCGではポイントを生成してから、ポイントのAttributeを何かしらの方法で加工し、最後にStatic Mesh SpawnerでStaticMeshを生成という流れになります。</p>
+
+<p>そのため、ポイントにどんなAttributeが存在していて、どのように値が変化するのかを意識することがとても重要です。</p>
+
+<p>この4ステップの流れは複雑なPCGでもほとんど変わらない定型パターンになります。</p>
+
+<h2 id="inspect機能でattributeの内容を確認する">Inspect機能でAttributeの内容を確認する</h2>
+
+<p><strong>「ポイントのAttributeの内容をInspect機能で常に確認しよう」</strong></p>
+
+<p>この記事で一番伝えたかったポイントです。Attributeの変化を意識することが、PCGマスターへの近道です。</p>
+
+<p>Houdiniの経験がある方は実感できるのではないでしょうか。</p>
+
+<p>参考記事: <a href="https://note.com/aoi/n/n3633a8fb6fc0">絶対に挫折しないHoudini入門 4 - オブジェクトとジオメトリ｜aoi</a></p>
+
+<p>PCGのポイントはAttributeを持っています。これらがAttributeの具体例です。</p>
+
+<ul>
+<li>Position</li>
+<li>Rotation</li>
+<li>Scale</li>
+<li>BoundsMin / BoundsMax</li>
+<li>Color</li>
+<li>Density</li>
+</ul>
+
+<p>Inspect機能は、ポイントのAttributeを内容を確認するための機能です。HoudiniのGeometry Spreadsheetに相当する機能です。</p>
+
+<p>PCGの上部のタブから <code>No Debug object selected</code> と書かれている項目をプルダウンで変更し、現在のPCG Graph名 / PCG Compornetを選んでください。
+ノードを右クリックしてInspectにチェックすると、そのノードの処理時点のPointの持つAttributeが表示されます。</p>
+
+<p>ショートカットとして、ノードを選択してからAキーを押してもInspectが有効になります。</p>
+
+<p>Inspect中のノードは左上に黄色い●が表示されます。</p>
+
+<p><img src="/images/posts/2023-12-27-ue5-pcg-introduction-tips/pcg-inspect.png" alt="Inspect機能" /></p>
+
+<h2 id="debug機能でビューポート上でポイントを確認する-self-pruningで重なりを除去">Debug機能でビューポート上でポイントを確認する + Self Pruningで重なりを除去</h2>
+
+<p>Debug機能はViewport上でポイントを可視化する機能です。ノードを右クリックしてDebugにチェックするか、Dキーを押すことで有効になります。</p>
+
+<p>Debug中のノードは左上に青い●が表示されます。</p>
+
+<p><img src="/images/posts/2023-12-27-ue5-pcg-introduction-tips/pcg-debug.png" alt="Debug機能" /></p>
+
+<p>ビューポート上の白・黒・グレーの箱がDebugの表示です。</p>
+
+<p>箱の色はDensityに対応しており、箱の大きさは <code>Scale</code> と <code>BoundsMin / BoundsMax</code> に対応します。</p>
+
+<p><code>Self Pruning</code> はポイントが持つバウンディングボックスのAttributeに対して判定が行われます。</p>
+
+<p>そのため、ステップ3のポイントのフィルターでは、まず <code>Bounds Modifier</code> でバウンディングボックスを調整してから <code>Self Pruning</code> しています。</p>
+
+<p>Inspect機能とDebug機能をつかって、ポイントのAttributeの変化を確認することが、PCGの作業効率アップやPCGへの理解度がアップにつながります。</p>
+
+<h1 id="pcgの実践tips">PCGの実践TIPS</h1>
+
+<p>PCGでよく使いそうなパターンの実践TIPSを紹介します。</p>
+
+<h2 id="example02-特定のstaticmeshを避けて配置">Example02: 特定のStaticMeshを避けて配置</h2>
+
+<p>特定のオブジェクトを避けて配置する例です。</p>
+
+<p>まず手動でテーブルのStaticMeshを配置し、ActorのTagsに <code>SM_Table</code> を設定します。</p>
+
+<p>対応前：Example01のままだと、テーブルと椅子が重なり合ってしまいます。</p>
+
+<p><img src="/images/posts/2023-12-27-ue5-pcg-introduction-tips/example02-result-before.jpg" alt="Example02: 対応前" /></p>
+
+<p>対応後：重ならないようになりました。</p>
+
+<p><img src="/images/posts/2023-12-27-ue5-pcg-introduction-tips/example02-result-after.jpg" alt="Example02: 対応後" /></p>
+
+<p>これがPCG Graphです。オレンジ色の枠で部分がExample01から新しく追加した処理です。</p>
+
+<p><img src="/images/posts/2023-12-27-ue5-pcg-introduction-tips/example02-graph1.png" alt="Example02: Graphの全体" /></p>
+
+<h3 id="get-actor-dataの設定">Get Actor Dataの設定</h3>
+
+<p><img src="/images/posts/2023-12-27-ue5-pcg-introduction-tips/example02-graph2.png" alt="Example02: GraphのGet Actor Data" /></p>
+
+<p>Get Actor Dataはアクターを取得するノードです。</p>
+
+<ul>
+<li>Actor Filter: All World Acotrs</li>
+<li>Must Overlap Self: ON（Volumeの範囲内だけに限定します）</li>
+<li>Actor Selection Tag: SM_Talbe（StaticMeshに設定したタグを指定）</li>
+<li>Select Multiple: ON（テーブルが複数ある場合はONにします。基本的にONで良いと思います）</li>
+<li>Mode: Get Single Point</li>
+<li>Merge Single Point Data: ON</li>
+</ul>
+
+<h3 id="differenceの設定">Differenceの設定</h3>
+
+<p><img src="/images/posts/2023-12-27-ue5-pcg-introduction-tips/example02-graph3.png" alt="Example02: GraphのDifference" /></p>
+
+<p>Differenceは差集合を計算するノードです。今回の例では、テーブルのバウンディングボックスと重なる椅子を削除します。</p>
+
+<ul>
+<li>Density Function: Binary</li>
+</ul>
+
+<h3 id="example02のまとめ">Example02のまとめ</h3>
+
+<ul>
+<li>Get Actor Dataでは、Tagでフィルターすることで特定のActorやStaticMeshを取得できます。</li>
+<li>Differenceを使うことで特定の範囲内のポイントを消去できます。</li>
+</ul>
+
+<h2 id="example03-特定のstaticmeshの周囲に配置">Example03: 特定のStaticMeshの周囲に配置</h2>
+
+<p>岩を手動配置して、その周りに花を自動配置する例です。</p>
+
+<p><img src="/images/posts/2023-12-27-ue5-pcg-introduction-tips/example03-result.jpg" alt="Example03: 結果" /></p>
+
+<p>PCG Graphの全体図です。</p>
+
+<p><a href="/images/posts/2023-12-27-ue5-pcg-introduction-tips/example03-graph-all.png"><img src="/images/posts/2023-12-27-ue5-pcg-introduction-tips/example03-graph-all.png" alt="Example03: PCG Graphの全体図" /></a></p>
+
+<h3 id="岩の周囲にポイントを生成する">岩の周囲にポイントを生成する</h3>
+
+<p>まずは岩のアクターの周囲にポイントを生成します。</p>
+
+<p><img src="/images/posts/2023-12-27-ue5-pcg-introduction-tips/example03-graph1.png" alt="Example03: バウンディングボックスを指定したSurfaceSampler" /></p>
+
+<p>Example02と同じようにTag指定で岩のActorを取得し、<code>Bounds Modifier</code> でバウンディングボックスを5倍に拡大します。</p>
+
+<p>Surface SamplerのBounding Shapeに拡大したバウンディングボックスを指定することで、岩の周囲にポイントを生成できます。</p>
+
+<p>ポイントの生成範囲を調整する場合は <code>Bounds Modifier</code> で5倍の数値を調整します。</p>
+
+<h3 id="distanceノードで岩からの距離に応じたdensityを設定する">Distanceノードで岩からの距離に応じたDensityを設定する</h3>
+
+<p><img src="/images/posts/2023-12-27-ue5-pcg-introduction-tips/example03-graph-distance.png" alt="Example03: Distanceノード" /></p>
+
+<p>DistanceノードでTargetへのPointの距離を計算できます。</p>
+
+<p>SetDensityをONにして、Maximum Distanceを指定することで、距離から0-1の範囲にDensityを設定できます。</p>
+
+<p>DensityをOneMinusノードで反転してから、Density Filterで中心から離れたポイントを削除します。</p>
+
+<h3 id="distanceを調整">Distanceを調整</h3>
+
+<p>PowやMultiplyでDensityを調整します。</p>
+
+<p><img src="/images/posts/2023-12-27-ue5-pcg-introduction-tips/example03-graph-density-multiply.png" alt="Example03: Distanceを調整" /></p>
+
+<h4 id="定数ノードの作成">定数ノードの作成</h4>
+
+<p>2.0や4.0の定数のノードを作成するには、Create Attributeノードを作成し、TypeをDoubeにし、Double Valueを調整します。</p>
+
+<p>筆者は定数ノードの名前が分からずにしばらく悩みました😱</p>
+
+<p><img src="/images/posts/2023-12-27-ue5-pcg-introduction-tips/create-attribute-1.png" alt="Create Attribute 作成" /></p>
+
+<p><img src="/images/posts/2023-12-27-ue5-pcg-introduction-tips/create-attribute-2.png" alt="Create Attribute 設定" /></p>
+
+<h3 id="static-meshの生成">Static Meshの生成</h3>
+
+<p>最後にStatic Mesh SpawnerでStaticMeshを生成します。</p>
+
+<p><img src="/images/posts/2023-12-27-ue5-pcg-introduction-tips/example03-graph-staticmesh.png" alt="Create Attribute 設定" /></p>
+
+<h2 id="example04-splineで囲んだ領域内に木を生やす">Example04: Splineで囲んだ領域内に木を生やす</h2>
+
+<p>Splineで囲んだ領域内に木を生やす例です。SplineとPCGを組み合わせるためにはブループリントが必要になります。</p>
+
+<p><img src="/images/posts/2023-12-27-ue5-pcg-introduction-tips/example04-result.jpg" alt="Example04: 結果" /></p>
+
+<p>PCG Graphの全体図です。</p>
+
+<p><a href="/images/posts/2023-12-27-ue5-pcg-introduction-tips/example04-graph-all.png"><img src="/images/posts/2023-12-27-ue5-pcg-introduction-tips/example04-graph-all.png" alt="Example04: PCG Graphの全体図" /></a></p>
+
+<h3 id="ブループリントの作成">ブループリントの作成</h3>
+
+<p>Actorクラスのブループリントを作成します。</p>
+
+<p><img src="/images/posts/2023-12-27-ue5-pcg-introduction-tips/example04-bp.png" alt="Example04: ブループリント" /></p>
+
+<p>Splineを作成し、Component Tagsに <code>ForestZone</code> と設定します。</p>
+
+<p>木を生やす目的以外のSplineを使う場合も想定して、Splineの判別用にComponent Tagsを設定しています。</p>
+
+<p>たとえば、道に木を生やしたくない場合、RoadのTagを持ったSpline上にポイントをサンプリングして、
+Example02で紹介したDifferenceノードで道にある木を削除するような使い方が可能になります。</p>
+
+<h3 id="spline上のポイント生成">Spline上のポイント生成</h3>
+
+<p>Splineの内側にポイント生成します。</p>
+
+<p>まずは <code>Get Spline Data</code> でブループリント内にあるSplineを取得します。</p>
+
+<p><img src="/images/posts/2023-12-27-ue5-pcg-introduction-tips/example04-graph-get_spline_data.png" alt="Example04: Get Spline" /></p>
+
+<p>Actor TagsではなくComponent Tagsでフィルターするために、 <code>Filter By Tag</code> ノードを使いました。</p>
+
+<p>Component Tagsにした方が1つのActor内に複数のSplineを生成できるので使い勝手が良くなります。</p>
+
+<p><img src="/images/posts/2023-12-27-ue5-pcg-introduction-tips/example04-filter_by_tag.png" alt="Example04: Filter By Tag" /></p>
+
+<p><code>Spline Sampler</code> でSplineの内部にポイントを生成します。</p>
+
+<p><img src="/images/posts/2023-12-27-ue5-pcg-introduction-tips/example04-graph-spline_sampler.png" alt="Example04: Spline Sampler" /></p>
+
+<ul>
+<li>Dimention: On Interior（Splineの内側を指定します）</li>
+<li>Unbounded: ON</li>
+<li>Interior Sampling Spacingで密度を調整します</li>
+</ul>
+
+<h3 id="landscape上へのプロジェクション">Landscape上へのプロジェクション</h3>
+
+<p>Spline上に生成したポイントを <code>Projection</code> でランドスケープ上に移動します。</p>
+
+<p><img src="/images/posts/2023-12-27-ue5-pcg-introduction-tips/example04-graph-projection.png" alt="Example04: Projection" /></p>
+
+<p>木は上方向に真っ直ぐに生やしたいので、Project Rotations はOFFにしました。</p>
+
+<h3 id="重なりを除去-staticmesh生成">重なりを除去 + StaticMesh生成</h3>
+
+<p>Example01でも登場した Bounds Modifier と Self Pruning のコンボ技で重なり合ったポイントを消します。</p>
+
+<p>最後に Static Mesh Spawner でStaticMeshを生成して完了です。</p>
+
+<p>このあたりの処理は定形パターンですね。</p>
+
+<p><img src="/images/posts/2023-12-27-ue5-pcg-introduction-tips/example04-graph-static_mesh_spawnerpng.png" alt="Example04: Projection" /></p>
+
+<h1 id="まとめ">まとめ</h1>
+
+<p>PCGの基本的なデバッグ方法やよくある処理のパターンを解説しました。</p>
+
+<p>PCGの基本的な処理の流れとしては、ポイントを生成して、Attributeを処理してから、最後にStaticMeshを生成になります。</p>
+
+<p>InspectやDebugを使いながらAttributeの変化を確認すれば、あまり迷わずに使いこなすことができると思います。</p>
+
+<p>StaticMesh上へのポイント生成だったり、複雑なPCGを作成するためにサブグラフ化する方法なども紹介しようと思いましたが、記事が長くなりすぎるので別記事にしたいと思います。</p>
+
+<p>それでは良いPCGライフを！</p>
+
+<h1 id="利用させていただいたasset">利用させていただいたAsset</h1>
+
+<p>記事のサンプル作成にあたり、以下のアセットを利用させていただきました。ありがとうございます！</p>
+
+<ul>
+<li><a href="https://www.unrealengine.com/marketplace/ja/product/landscape-pro-auto-generated-material">Landscape Pro 2.0 Auto-Generated Material</a></li>
+<li>Quixel
+
+<ul>
+<li><a href="https://quixel.com/megascans/home?assetId=wjglaj3s">https://quixel.com/megascans/home?assetId=wjglaj3s</a></li>
+<li><a href="https://quixel.com/megascans/home?assetId=wjglai2s">https://quixel.com/megascans/home?assetId=wjglai2s</a></li>
+<li><a href="https://quixel.com/megascans/home?assetId=veigfjmaw">https://quixel.com/megascans/home?assetId=veigfjmaw</a></li>
+</ul></li>
+</ul>
+                </div>
+
+            </article>
+
+            
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2024-01-01 14:00:00 &#43;0900 JST" itemprop="datePublished">2024-01-01</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/ue5">UE5</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/unrealengine">UnrealEngine</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/unrealengine5">UnrealEngine5</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/procedural">Procedural</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/cg">CG</a>
+        
+    </span>
+    
+    
+
+    
+        
+
+<div class="share-box">
+    <div class="share_wrap">
+        <div class="share_button">
+            <a href="http://b.hatena.ne.jp/entry/https://gam0022.net/blog/2024/01/01/ue5-pcg-introduction-tips/" class="hatena-bookmark-button" data-hatena-bookmark-title="[UE5] プロシージャルコンテンツ生成（PCG）最初に知っておきたいポイントと実践TIPS" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+        </div>
+        <div class="share_button">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://gam0022.net/blog/2024/01/01/ue5-pcg-introduction-tips/" data-text="[UE5] プロシージャルコンテンツ生成（PCG）最初に知っておきたいポイントと実践TIPS" data-via="gam0022">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+        <div class="share_button">
+            <div class="g-plus" data-action="share" data-annotation="none"></div>
+        </div>
+        <div class="share_button">
+            <div class="fb-like" data-href="https://gam0022.net/blog/2024/01/01/ue5-pcg-introduction-tips/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+        </div>
+        <div class="share_button">
+          <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a><script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+        </div>
+    </div>
+</div>
+
+
+    
+
+</div>
+
+            <nav>
+    <ul class="pager">
+        
+        <li class="previous"><a href="https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/"><span aria-hidden="true">&larr;</span> 映画館でGLSLライブコーディングをしました（第10回新千歳空港国際アニメーション映画祭）</a></li>
+        
+
+        
+    </ul>
+</nav>
+
+            
+<section id="comments">
+    <div id="disqus_thread">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'gam0022-net';
+    var disqus_identifier = 'https:\/\/gam0022.net\/blog\/2024\/01\/01\/ue5-pcg-introduction-tips\/';
+    var disqus_title = '[UE5] プロシージャルコンテンツ生成（PCG）最初に知っておきたいポイントと実践TIPS';
+    var disqus_url = 'https:\/\/gam0022.net\/blog\/2024\/01\/01\/ue5-pcg-introduction-tips\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+</section>
+
+
+            <div class="row">
+    <h4 class="blog-title"><img src="/img/gam0022_splash.png" class="icon"> gam0022.net's Tag Cloud</h4>
+    <ul class="category-list">
+    <div class="widget tagcloud">
+        
+        <a href="https://gam0022.net/tags/1%e9%80%b1%e9%96%93%e3%81%a7%e9%96%93%e3%81%ab%e5%90%88%e3%82%8f%e3%81%9b%e3%82%8b" style="font-size: 12px;">1週間で間に合わせる(1)</a>
+        
+        <a href="https://gam0022.net/tags/apache" style="font-size: 12px;">apache(1)</a>
+        
+        <a href="https://gam0022.net/tags/ascii" style="font-size: 12px;">ascii(1)</a>
+        
+        <a href="https://gam0022.net/tags/bootstrap" style="font-size: 12px;">bootstrap(2)</a>
+        
+        <a href="https://gam0022.net/tags/c" style="font-size: 12px;">c#(1)</a>
+        
+        <a href="https://gam0022.net/tags/c&#43;&#43;" style="font-size: 12px;">c&#43;&#43;(1)</a>
+        
+        <a href="https://gam0022.net/tags/canvas" style="font-size: 12px;">canvas(1)</a>
+        
+        <a href="https://gam0022.net/tags/cg" style="font-size: 12px;">cg(37)</a>
+        
+        <a href="https://gam0022.net/tags/cgi" style="font-size: 12px;">cgi(2)</a>
+        
+        <a href="https://gam0022.net/tags/chrome" style="font-size: 12px;">chrome(1)</a>
+        
+        <a href="https://gam0022.net/tags/cocot" style="font-size: 12px;">cocot(1)</a>
+        
+        <a href="https://gam0022.net/tags/coffeescript" style="font-size: 12px;">coffeescript(1)</a>
+        
+        <a href="https://gam0022.net/tags/coins" style="font-size: 12px;">coins(3)</a>
+        
+        <a href="https://gam0022.net/tags/cojt" style="font-size: 12px;">cojt(4)</a>
+        
+        <a href="https://gam0022.net/tags/conoha" style="font-size: 12px;">conoha(2)</a>
+        
+        <a href="https://gam0022.net/tags/contest" style="font-size: 12px;">contest(1)</a>
+        
+        <a href="https://gam0022.net/tags/css" style="font-size: 12px;">css(1)</a>
+        
+        <a href="https://gam0022.net/tags/cuda" style="font-size: 12px;">cuda(5)</a>
+        
+        <a href="https://gam0022.net/tags/daigoroubot" style="font-size: 12px;">daigoroubot(1)</a>
+        
+        <a href="https://gam0022.net/tags/demo" style="font-size: 12px;">demo(1)</a>
+        
+        <a href="https://gam0022.net/tags/develop" style="font-size: 12px;">develop(1)</a>
+        
+        <a href="https://gam0022.net/tags/diary" style="font-size: 12px;">diary(5)</a>
+        
+        <a href="https://gam0022.net/tags/eclipse" style="font-size: 12px;">eclipse(3)</a>
+        
+        <a href="https://gam0022.net/tags/emscripten" style="font-size: 12px;">emscripten(1)</a>
+        
+        <a href="https://gam0022.net/tags/encoding" style="font-size: 12px;">encoding(1)</a>
+        
+        <a href="https://gam0022.net/tags/event" style="font-size: 12px;">event(24)</a>
+        
+        <a href="https://gam0022.net/tags/fp%e8%a9%a6%e9%a8%93" style="font-size: 12px;">fp試験(1)</a>
+        
+        <a href="https://gam0022.net/tags/gcc" style="font-size: 12px;">gcc(1)</a>
+        
+        <a href="https://gam0022.net/tags/gem" style="font-size: 12px;">gem(3)</a>
+        
+        <a href="https://gam0022.net/tags/git" style="font-size: 12px;">git(2)</a>
+        
+        <a href="https://gam0022.net/tags/github" style="font-size: 12px;">github(2)</a>
+        
+        <a href="https://gam0022.net/tags/glsl" style="font-size: 12px;">glsl(15)</a>
+        
+        <a href="https://gam0022.net/tags/glsl-snadbox" style="font-size: 12px;">glsl-snadbox(1)</a>
+        
+        <a href="https://gam0022.net/tags/gnuplot" style="font-size: 12px;">gnuplot(1)</a>
+        
+        <a href="https://gam0022.net/tags/gpu" style="font-size: 12px;">gpu(5)</a>
+        
+        <a href="https://gam0022.net/tags/heroku" style="font-size: 12px;">heroku(1)</a>
+        
+        <a href="https://gam0022.net/tags/hlsl" style="font-size: 12px;">hlsl(1)</a>
+        
+        <a href="https://gam0022.net/tags/homebrew" style="font-size: 12px;">homebrew(2)</a>
+        
+        <a href="https://gam0022.net/tags/houdini" style="font-size: 12px;">houdini(2)</a>
+        
+        <a href="https://gam0022.net/tags/hsp" style="font-size: 12px;">hsp(1)</a>
+        
+        <a href="https://gam0022.net/tags/html5" style="font-size: 12px;">html5(2)</a>
+        
+        <a href="https://gam0022.net/tags/http2" style="font-size: 12px;">http2(1)</a>
+        
+        <a href="https://gam0022.net/tags/https" style="font-size: 12px;">https(1)</a>
+        
+        <a href="https://gam0022.net/tags/hugo" style="font-size: 12px;">hugo(2)</a>
+        
+        <a href="https://gam0022.net/tags/isucon" style="font-size: 12px;">isucon(2)</a>
+        
+        <a href="https://gam0022.net/tags/iterm2" style="font-size: 12px;">iterm2(1)</a>
+        
+        <a href="https://gam0022.net/tags/java" style="font-size: 12px;">java(2)</a>
+        
+        <a href="https://gam0022.net/tags/javascript" style="font-size: 12px;">javascript(8)</a>
+        
+        <a href="https://gam0022.net/tags/keynote" style="font-size: 12px;">keynote(1)</a>
+        
+        <a href="https://gam0022.net/tags/kodelife" style="font-size: 12px;">kodelife(1)</a>
+        
+        <a href="https://gam0022.net/tags/korg-nanokontrol2" style="font-size: 12px;">korg-nanokontrol2(1)</a>
+        
+        <a href="https://gam0022.net/tags/kramdown" style="font-size: 12px;">kramdown(1)</a>
+        
+        <a href="https://gam0022.net/tags/latex" style="font-size: 12px;">latex(3)</a>
+        
+        <a href="https://gam0022.net/tags/lion" style="font-size: 12px;">lion(3)</a>
+        
+        <a href="https://gam0022.net/tags/livecoding" style="font-size: 12px;">livecoding(1)</a>
+        
+        <a href="https://gam0022.net/tags/llvm-gcc" style="font-size: 12px;">llvm-gcc(1)</a>
+        
+        <a href="https://gam0022.net/tags/mac-os-x" style="font-size: 12px;">mac-os-x(18)</a>
+        
+        <a href="https://gam0022.net/tags/markdown" style="font-size: 12px;">markdown(2)</a>
+        
+        <a href="https://gam0022.net/tags/mecab" style="font-size: 12px;">mecab(1)</a>
+        
+        <a href="https://gam0022.net/tags/mountain-lion" style="font-size: 12px;">mountain-lion(1)</a>
+        
+        <a href="https://gam0022.net/tags/moutain-lion" style="font-size: 12px;">moutain-lion(1)</a>
+        
+        <a href="https://gam0022.net/tags/neort" style="font-size: 12px;">neort(1)</a>
+        
+        <a href="https://gam0022.net/tags/nginx" style="font-size: 12px;">nginx(1)</a>
+        
+        <a href="https://gam0022.net/tags/normalizefm" style="font-size: 12px;">normalizefm(1)</a>
+        
+        <a href="https://gam0022.net/tags/ocaml" style="font-size: 12px;">ocaml(1)</a>
+        
+        <a href="https://gam0022.net/tags/octave" style="font-size: 12px;">octave(1)</a>
+        
+        <a href="https://gam0022.net/tags/octopress" style="font-size: 12px;">octopress(13)</a>
+        
+        <a href="https://gam0022.net/tags/opencv" style="font-size: 12px;">opencv(1)</a>
+        
+        <a href="https://gam0022.net/tags/optix" style="font-size: 12px;">optix(6)</a>
+        
+        <a href="https://gam0022.net/tags/passenger" style="font-size: 12px;">passenger(1)</a>
+        
+        <a href="https://gam0022.net/tags/procedural" style="font-size: 12px;">procedural(1)</a>
+        
+        <a href="https://gam0022.net/tags/programming" style="font-size: 12px;">programming(1)</a>
+        
+        <a href="https://gam0022.net/tags/rails" style="font-size: 12px;">rails(2)</a>
+        
+        <a href="https://gam0022.net/tags/rails4" style="font-size: 12px;">rails4(1)</a>
+        
+        <a href="https://gam0022.net/tags/raymarching" style="font-size: 12px;">raymarching(4)</a>
+        
+        <a href="https://gam0022.net/tags/revision" style="font-size: 12px;">revision(2)</a>
+        
+        <a href="https://gam0022.net/tags/rsync" style="font-size: 12px;">rsync(2)</a>
+        
+        <a href="https://gam0022.net/tags/ruby" style="font-size: 12px;">ruby(17)</a>
+        
+        <a href="https://gam0022.net/tags/ruby-c-extension" style="font-size: 12px;">ruby-c-extension(3)</a>
+        
+        <a href="https://gam0022.net/tags/ruby-on-rails" style="font-size: 12px;">ruby-on-rails(1)</a>
+        
+        <a href="https://gam0022.net/tags/rubygems" style="font-size: 12px;">rubygems(1)</a>
+        
+        <a href="https://gam0022.net/tags/rust" style="font-size: 12px;">rust(3)</a>
+        
+        <a href="https://gam0022.net/tags/rvm" style="font-size: 12px;">rvm(1)</a>
+        
+        <a href="https://gam0022.net/tags/sass/scss" style="font-size: 12px;">sass/scss(1)</a>
+        
+        <a href="https://gam0022.net/tags/serversmanvps" style="font-size: 12px;">serversmanvps(3)</a>
+        
+        <a href="https://gam0022.net/tags/sessions" style="font-size: 12px;">sessions(3)</a>
+        
+        <a href="https://gam0022.net/tags/shader" style="font-size: 12px;">shader(9)</a>
+        
+        <a href="https://gam0022.net/tags/shader-showdown" style="font-size: 12px;">shader-showdown(1)</a>
+        
+        <a href="https://gam0022.net/tags/shadergraph" style="font-size: 12px;">shadergraph(1)</a>
+        
+        <a href="https://gam0022.net/tags/shadertoy" style="font-size: 12px;">shadertoy(1)</a>
+        
+        <a href="https://gam0022.net/tags/slide" style="font-size: 12px;">slide(4)</a>
+        
+        <a href="https://gam0022.net/tags/sqlite3" style="font-size: 12px;">sqlite3(1)</a>
+        
+        <a href="https://gam0022.net/tags/ssh" style="font-size: 12px;">ssh(1)</a>
+        
+        <a href="https://gam0022.net/tags/study" style="font-size: 12px;">study(3)</a>
+        
+        <a href="https://gam0022.net/tags/techbooster" style="font-size: 12px;">techbooster(1)</a>
+        
+        <a href="https://gam0022.net/tags/terminal.app" style="font-size: 12px;">terminal.app(1)</a>
+        
+        <a href="https://gam0022.net/tags/textmeshpro" style="font-size: 12px;">textmeshpro(1)</a>
+        
+        <a href="https://gam0022.net/tags/theme" style="font-size: 12px;">theme(1)</a>
+        
+        <a href="https://gam0022.net/tags/three.js" style="font-size: 12px;">three.js(2)</a>
+        
+        <a href="https://gam0022.net/tags/tips" style="font-size: 12px;">tips(1)</a>
+        
+        <a href="https://gam0022.net/tags/tokyodemofest" style="font-size: 12px;">tokyodemofest(13)</a>
+        
+        <a href="https://gam0022.net/tags/trouble" style="font-size: 12px;">trouble(1)</a>
+        
+        <a href="https://gam0022.net/tags/twincal" style="font-size: 12px;">twincal(1)</a>
+        
+        <a href="https://gam0022.net/tags/twitter" style="font-size: 12px;">twitter(1)</a>
+        
+        <a href="https://gam0022.net/tags/typescript" style="font-size: 12px;">typescript(2)</a>
+        
+        <a href="https://gam0022.net/tags/ubuntu" style="font-size: 12px;">ubuntu(2)</a>
+        
+        <a href="https://gam0022.net/tags/ue5" style="font-size: 12px;">ue5(2)</a>
+        
+        <a href="https://gam0022.net/tags/unity" style="font-size: 12px;">unity(12)</a>
+        
+        <a href="https://gam0022.net/tags/unrealengine" style="font-size: 12px;">unrealengine(2)</a>
+        
+        <a href="https://gam0022.net/tags/unrealengine5" style="font-size: 12px;">unrealengine5(2)</a>
+        
+        <a href="https://gam0022.net/tags/urp" style="font-size: 12px;">urp(1)</a>
+        
+        <a href="https://gam0022.net/tags/utf-8-mac" style="font-size: 12px;">utf-8-mac(1)</a>
+        
+        <a href="https://gam0022.net/tags/uva-online-judge" style="font-size: 12px;">uva-online-judge(3)</a>
+        
+        <a href="https://gam0022.net/tags/vim" style="font-size: 12px;">vim(1)</a>
+        
+        <a href="https://gam0022.net/tags/vps" style="font-size: 12px;">vps(2)</a>
+        
+        <a href="https://gam0022.net/tags/vscode" style="font-size: 12px;">vscode(1)</a>
+        
+        <a href="https://gam0022.net/tags/web" style="font-size: 12px;">web(2)</a>
+        
+        <a href="https://gam0022.net/tags/webgl" style="font-size: 12px;">webgl(10)</a>
+        
+        <a href="https://gam0022.net/tags/webrick" style="font-size: 12px;">webrick(1)</a>
+        
+        <a href="https://gam0022.net/tags/windows" style="font-size: 12px;">windows(1)</a>
+        
+        <a href="https://gam0022.net/tags/windows-terminal" style="font-size: 12px;">windows-terminal(1)</a>
+        
+        <a href="https://gam0022.net/tags/x11" style="font-size: 12px;">x11(1)</a>
+        
+        <a href="https://gam0022.net/tags/x86" style="font-size: 12px;">x86(1)</a>
+        
+        <a href="https://gam0022.net/tags/xcode" style="font-size: 12px;">xcode(2)</a>
+        
+        <a href="https://gam0022.net/tags/zsh" style="font-size: 12px;">zsh(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%a2%e3%82%bb%e3%83%b3%e3%83%96%e3%83%a9" style="font-size: 12px;">アセンブラ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%a2%e3%83%95%e3%82%a3%e3%83%aa%e3%82%a8%e3%82%a4%e3%83%88" style="font-size: 12px;">アフィリエイト(3)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%b3%e3%83%9f%e3%82%b1" style="font-size: 12px;">コミケ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%b4" style="font-size: 12px;">ゴ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%b7%e3%82%a7%e3%83%bc%e3%83%80%e3%83%bc" style="font-size: 12px;">シェーダー(4)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%89%e3%83%a1%e3%82%a4%e3%83%b3" style="font-size: 12px;">ドメイン(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%8d%e3%82%bf" style="font-size: 12px;">ネタ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%91%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%b3%e3%82%b0" style="font-size: 12px;">パストレーシング(10)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%96%e3%83%ad%e3%82%b0%e9%81%8b%e5%96%b6" style="font-size: 12px;">ブログ運営(4)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%9a%e3%83%bc%e3%83%91%e3%83%bc%e3%82%af%e3%83%a9%e3%83%95%e3%83%88" style="font-size: 12px;">ペーパークラフト(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%9c%e3%83%bc%e3%83%b3%e3%83%87%e3%82%b8%e3%82%bf%e3%83%ab" style="font-size: 12px;">ボーンデジタル(2)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%a9%e3%82%a4%e3%83%96%e3%82%b3%e3%83%bc%e3%83%87%e3%82%a3%e3%83%b3%e3%82%b0" style="font-size: 12px;">ライブコーディング(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%aa%e3%83%a2%e3%83%bc%e3%83%88%e3%83%af%e3%83%bc%e3%82%af" style="font-size: 12px;">リモートワーク(3)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%b3%e3%82%b0" style="font-size: 12px;">レイトレーシング(9)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%88%e3%83%ac%e5%90%88%e5%ae%bf" style="font-size: 12px;">レイトレ合宿(9)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%9e%e3%83%bc%e3%83%81%e3%83%b3%e3%82%b0" style="font-size: 12px;">レイマーチング(26)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%85%a5%e9%96%80" style="font-size: 12px;">入門(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%87%ba%e7%89%88" style="font-size: 12px;">出版(2)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%88%9d%e5%bf%83%e8%80%85" style="font-size: 12px;">初心者(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%8b%89%e5%bc%b7%e4%bc%9a" style="font-size: 12px;">勉強会(7)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%8b%89%e5%bc%b7%e6%b3%95" style="font-size: 12px;">勉強法(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%8c%97%e6%9d%a1%e3%81%9d%e3%81%b5%e3%81%83" style="font-size: 12px;">北条そふぃ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%95%86%e5%93%81%e3%83%ac%e3%83%93%e3%83%a5%e3%83%bc" style="font-size: 12px;">商品レビュー(2)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%a4%a7%e4%ba%94%e9%83%8ebot" style="font-size: 12px;">大五郎bot(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%ae%a3%e4%bc%9d" style="font-size: 12px;">宣伝(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%b0%8f%e3%83%8d%e3%82%bf" style="font-size: 12px;">小ネタ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%8a%80%e8%a1%93%e6%9b%b8%e5%85%b8" style="font-size: 12px;">技術書典(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%97%a5%e6%9c%ac%e8%aa%9e" style="font-size: 12px;">日本語(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%97%a5%e8%a8%98" style="font-size: 12px;">日記(2)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%9b%b8%e7%b1%8d" style="font-size: 12px;">書籍(2)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%9c%ac" style="font-size: 12px;">本(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%a9%9f%e6%a2%b0%e8%aa%9e%e5%ba%8f%e8%ab%96" style="font-size: 12px;">機械語序論(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e7%94%9f%e6%b4%bb" style="font-size: 12px;">生活(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e7%99%ba%e8%a1%a8%e8%b3%87%e6%96%99" style="font-size: 12px;">発表資料(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e7%99%bb%e5%a3%87" style="font-size: 12px;">登壇(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e7%9b%b4%e5%89%8d%e5%af%be%e7%ad%96" style="font-size: 12px;">直前対策(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e7%a0%94%e7%a9%b6" style="font-size: 12px;">研究(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e7%ab%b6%e6%8a%80%e3%83%97%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%9f%e3%83%b3%e3%82%b0" style="font-size: 12px;">競技プログラミング(4)</a>
+        
+        <a href="https://gam0022.net/tags/%e8%b2%b7%e3%81%a3%e3%81%a6%e8%89%af%e3%81%8b%e3%81%a3%e3%81%9f%e3%82%82%e3%81%ae" style="font-size: 12px;">買って良かったもの(3)</a>
+        
+    </div>
+</ul>
+
+</div>
+
+
+
+
+
+
+<div class="row">
+    <div class="col section-heading">
+        <h1>Recent Posts</h1>
+        <p>最新記事</p>
+        <div class="col-md-12">
+  <div class="row">
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2024/01/01/ue5-pcg-introduction-tips/" itemprop="url">[UE5] プロシージャルコンテンツ生成（PCG）最初に知っておきたいポイントと実践TIPS</a></h3>
+      
+      <a href="https://gam0022.net/blog/2024/01/01/ue5-pcg-introduction-tips/">
+        <img src="https://gam0022.net///images/posts/2023-12-27-ue5-pcg-introduction-tips/ogp.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/" itemprop="url">映画館でGLSLライブコーディングをしました（第10回新千歳空港国際アニメーション映画祭）</a></h3>
+      
+      <a href="https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/">
+        <img src="https://gam0022.net///images/posts/2023-11-20-livecoding-airport-animefes2023/C20231104_0197.MP4_snapshot_17.56.475.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2023/10/30/tdf16ms0/" itemprop="url">TDF 16ms #0（2023）のGLSL Graphics Compoで3位入賞しました</a></h3>
+      
+      <a href="https://gam0022.net/blog/2023/10/30/tdf16ms0/">
+        <img src="https://gam0022.net///images/posts/2023-10-30-tdf16ms0/InfiniteKeys.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2023/09/20/rtcamp9/" itemprop="url">レイトレ合宿9で4次元立方体をテーマにしたアニメーションを作成しました</a></h3>
+      
+      <a href="https://gam0022.net/blog/2023/09/20/rtcamp9/">
+        <img src="https://gam0022.net///images/posts/2023-09-19-rtcamp9/218.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2023/08/07/unity-bible/" itemprop="url">『Unityバイブル R5夏号』の「Shader Graphの基本操作から発展的なテクニックまで」を執筆しました</a></h3>
+      
+      <a href="https://gam0022.net/blog/2023/08/07/unity-bible/">
+        <img src="https://gam0022.net///images/posts/2023-08-07-unity-bible/thumbnail.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2023/07/31/raymarching-in-ue5/" itemprop="url">Object Space Raymarching in Unreal Engine 5.2</a></h3>
+      
+      <a href="https://gam0022.net/blog/2023/07/31/raymarching-in-ue5/">
+        <img src="https://gam0022.net///images/posts/2023-07-30-raymarching-in-ue5/RaymarchingInUE5_thumbnail_v7.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2023/05/31/sessions2023-glsl-compo/" itemprop="url">SESSIONS 2023のGLSL Graphics Compoで準優勝しました（グラフィックス解説）</a></h3>
+      
+      <a href="https://gam0022.net/blog/2023/05/31/sessions2023-glsl-compo/">
+        <img src="https://gam0022.net///images/posts/2023-05-29-sessions2023-glsl-compo/TranscendentalCube.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2023/01/15/fp-study/" itemprop="url">FP試験のオススメ勉強法</a></h3>
+      
+      <a href="https://gam0022.net/blog/2023/01/15/fp-study/">
+        <img src="https://gam0022.net///images/posts/2023-01-15-fp-study/pass_certificate_1920x1080.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2022/12/25/unity-ink-shader/" itemprop="url">UnityのShaderGraphでインクシェーダーを作る</a></h3>
+      
+      <a href="https://gam0022.net/blog/2022/12/25/unity-ink-shader/">
+        <img src="https://gam0022.net///images/posts/2022-12-26-unity-ink-shader/main.png" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+  </div>
+
+  <div class="read-more">
+    <a href="/post" class="btn btn-primary btn-outline">Read more</a>
+  </div>
+</div>
+    </div>
+</div>
+
+            <footer class="site-footer">
+    <div class="container">
+        <p class="powered-by">
+
+            &copy; 2021 gam0022 &middot; 
+
+            Powered by the <a href="https://github.com/gam0022/hugo-academic" target="_blank">Customized Academic theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+            <span class="pull-right"><a href="#" id="back_to_top"><span class="button_icon"><i class="fa fa-chevron-up fa-2x" aria-hidden="true"></i></span></a></span>
+
+        </p>
+    </div>
+</footer>
+
+                    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+        <script src="https://gam0022.net/js/jquery-1.12.3.min.js"></script>
+        <script src="https://gam0022.net/js/bootstrap.custom.js"></script>
+        <script src="https://gam0022.net/js/hugo-academic.js?2023-09-20"></script>
+        
+
+        <script>
+            
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-84469205-1', 'auto');
+            ga('send', 'pageview');
+
+             
+            var links = document.querySelectorAll('a');
+            Array.prototype.map.call(links, function(item) {
+                if (item.host != document.location.host) {
+                    item.addEventListener('click', function() {
+                        var action = item.getAttribute('data-action') || 'follow';
+                        ga('send', 'event', 'outbound', action, item.href);
+                    });
+                }
+            });
+            
+
+            $(document).ready(function() {
+                $("#TableOfContents").addClass("bs-docs-sidebar affix");
+                $("#TableOfContents ul").addClass("nav nav-stacked");
+            });
+        </script>
+
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        
+        
+
+    </body>
+</html>
+
+        </div>
+        <div class="col-md-3">
+            <nav id="TableOfContents">
+<ul>
+<li><a href="#pcgのセットアップ">PCGのセットアップ</a></li>
+<li><a href="#pcgの基本的な使い方">PCGの基本的な使い方</a></li>
+<li><a href="#pcgの最初に知りたかったポイント">PCGの最初に知りたかったポイント</a>
+<ul>
+<li><a href="#example01-シンプルなpcgの例">Example01: シンプルなPCGの例</a></li>
+<li><a href="#inspect機能でattributeの内容を確認する">Inspect機能でAttributeの内容を確認する</a></li>
+<li><a href="#debug機能でビューポート上でポイントを確認する-self-pruningで重なりを除去">Debug機能でビューポート上でポイントを確認する + Self Pruningで重なりを除去</a></li>
+</ul></li>
+<li><a href="#pcgの実践tips">PCGの実践TIPS</a>
+<ul>
+<li><a href="#example02-特定のstaticmeshを避けて配置">Example02: 特定のStaticMeshを避けて配置</a>
+<ul>
+<li><a href="#get-actor-dataの設定">Get Actor Dataの設定</a></li>
+<li><a href="#differenceの設定">Differenceの設定</a></li>
+<li><a href="#example02のまとめ">Example02のまとめ</a></li>
+</ul></li>
+<li><a href="#example03-特定のstaticmeshの周囲に配置">Example03: 特定のStaticMeshの周囲に配置</a>
+<ul>
+<li><a href="#岩の周囲にポイントを生成する">岩の周囲にポイントを生成する</a></li>
+<li><a href="#distanceノードで岩からの距離に応じたdensityを設定する">Distanceノードで岩からの距離に応じたDensityを設定する</a></li>
+<li><a href="#distanceを調整">Distanceを調整</a>
+<ul>
+<li><a href="#定数ノードの作成">定数ノードの作成</a></li>
+</ul></li>
+<li><a href="#static-meshの生成">Static Meshの生成</a></li>
+</ul></li>
+<li><a href="#example04-splineで囲んだ領域内に木を生やす">Example04: Splineで囲んだ領域内に木を生やす</a>
+<ul>
+<li><a href="#ブループリントの作成">ブループリントの作成</a></li>
+<li><a href="#spline上のポイント生成">Spline上のポイント生成</a></li>
+<li><a href="#landscape上へのプロジェクション">Landscape上へのプロジェクション</a></li>
+<li><a href="#重なりを除去-staticmesh生成">重なりを除去 + StaticMesh生成</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#まとめ">まとめ</a></li>
+<li><a href="#利用させていただいたasset">利用させていただいたAsset</a></li>
+</ul>
+</nav>
+        </div>
+    </div>
+    
+</div>
