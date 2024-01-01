@@ -480,12 +480,14 @@ Content/PCGExamples フォルダを参照してください
 
 <p><img src="/images/posts/2023-12-27-ue5-pcg-introduction-tips/example04-bp.png" alt="Example04: ブループリント" /></p>
 
-<p>Splineを作成し、Component Tagsに <code>ForestZone</code> と設定します。</p>
+<p>ブループリント内にSplineを作成し、Component Tagsに <code>ForestZone</code> と設定します。</p>
 
 <p>木を生やす目的以外のSplineを使う場合も想定して、Splineの判別用にComponent Tagsを設定しています。</p>
 
 <p>たとえば、道に木を生やしたくない場合、RoadのTagを持ったSpline上にポイントをサンプリングして、
 Example02で紹介したDifferenceノードで道にある木を削除するような使い方が可能になります。</p>
+
+<p>次にブループリント内にPCG Componentを作成し、PCG Graphを指定します。</p>
 
 <h3 id="spline上のポイント生成">Spline上のポイント生成</h3>
 

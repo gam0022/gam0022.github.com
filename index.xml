@@ -283,12 +283,14 @@
 
 &lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example04-bp.png&#34; alt=&#34;Example04: ブループリント&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Splineを作成し、Component Tagsに &lt;code&gt;ForestZone&lt;/code&gt; と設定します。&lt;/p&gt;
+&lt;p&gt;ブループリント内にSplineを作成し、Component Tagsに &lt;code&gt;ForestZone&lt;/code&gt; と設定します。&lt;/p&gt;
 
 &lt;p&gt;木を生やす目的以外のSplineを使う場合も想定して、Splineの判別用にComponent Tagsを設定しています。&lt;/p&gt;
 
 &lt;p&gt;たとえば、道に木を生やしたくない場合、RoadのTagを持ったSpline上にポイントをサンプリングして、
 Example02で紹介したDifferenceノードで道にある木を削除するような使い方が可能になります。&lt;/p&gt;
+
+&lt;p&gt;次にブループリント内にPCG Componentを作成し、PCG Graphを指定します。&lt;/p&gt;
 
 &lt;h3 id=&#34;spline上のポイント生成&#34;&gt;Spline上のポイント生成&lt;/h3&gt;
 
