@@ -317,7 +317,7 @@ Example02で紹介したDifferenceノードで道にある木を削除するよ�
 
 &lt;h3 id=&#34;landscape上へのプロジェクション&#34;&gt;Landscape上へのプロジェクション&lt;/h3&gt;
 
-&lt;p&gt;Spline上に生成したポイントを &lt;code&gt;Projection&lt;/code&gt; でランドスケープ上に移動します。&lt;/p&gt;
+&lt;p&gt;Transform Pointsでランダム移動とZ軸上のランダム回転してから、Spline上に生成したポイントを &lt;code&gt;Projection&lt;/code&gt; でランドスケープ上に移動します。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2023-12-27-ue5-pcg-introduction-tips/example04-graph-projection.png&#34; alt=&#34;Example04: Projection&#34; /&gt;&lt;/p&gt;
 
