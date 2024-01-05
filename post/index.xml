@@ -245,7 +245,7 @@
 
 &lt;p&gt;DensityをOneMinusノードで反転してから、Density Filterで中心から離れたポイントを削除します。&lt;/p&gt;
 
-&lt;h3 id=&#34;でdensityを調整&#34;&gt;でDensityを調整&lt;/h3&gt;
+&lt;h3 id=&#34;densityの調整&#34;&gt;Densityの調整&lt;/h3&gt;
 
 &lt;p&gt;PowやMultiplyでDensityを調整します。&lt;/p&gt;
 
