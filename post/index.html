@@ -124,6 +124,67 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2024/05/29/gakumasu-mayuge-shader/" itemprop="url">学園アイドルマスターの眉毛のShaderをUnityで再現してみた</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2024-05-29 12:00:43 &#43;0900 JST" itemprop="datePublished">2024-05-29</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/unity">Unity</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/shader">Shader</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/cg">CG</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/urp">URP</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e6%a4%9c%e8%a8%bc">検証</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                ここ最近、<a href="https://gakuen.idolmaster-official.jp/">学園アイドルマスター（学マス）</a>の鼻や眉毛のシェーダーがTwitter（現X）で話題になっていました。</p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">学マス、鼻先の黒い点が横から見た時に消えるよう処理をしている<br><br>顔面全体の輪郭線を切ってるのもあって横顔で急な黒が浮いて悪目立ちしたり、鼻の頂点が欠けてシルエットの綺麗さが失われてしまうことに対する対処かな <a href="https://t.co/82TiB41IDR">pic.twitter.com/82TiB41IDR</a></p>&mdash; のすけ (@noske2801) <a href="https://twitter.com/noske2801/status/1791165446764495126?ref_src=twsrc%5Etfw">May 16, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">学マス、顔周りでいうと眉毛と目周りが正面からはステンシルして髪より前に見えているが回転させていくと横顔に近づくある程度の角度でフェードアウトしてく。キャラのデザインによっては横から見た時ステンシルしてる眉毛はチラつきが気になったりするのでとても真似したい <a href="https://t.co/8O7WjcbF9w">pic.twitter.com/8O7WjcbF9w</a></p>&mdash; とれ (@clubnemos) <a href="https://twitter.com/clubnemos/status/1791175839469740474?ref_src=twsrc%5Etfw">May 16, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p>鼻のアウトラインがカメラの角度で消えるのは実装は容易に思いつくのですが（カメラのViewベクトルと頭のforwardベクトルの内積からディゾルブ等）、
+眉毛が角度でフェードする処理（正面から見ると眉毛が前髪より手前に、横顔に近づくと眉毛がフェードアウトする処理）は実装がすぐには思いつきませんでした。</p>
+
+<p>技術的にも面白そうなテーマだと思ったので、Unityで再現することにしました。</p>
+
+<p><img src="/images/posts/2024-05-29-gakumasu-mayuge-shader/mayu.gif" alt="mayu.gif" /></p>
+
+<p>
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2024/05/29/gakumasu-mayuge-shader/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2024/01/01/ue5-pcg-introduction-tips/" itemprop="url">[UE5] プロシージャルコンテンツ生成（PCG）最初に知っておきたいポイントと実践TIPS</a></h3>
         
 
@@ -764,69 +825,6 @@
         </div>
         <p class="read-more">
             <a href="https://gam0022.net/blog/2022/12/25/unity-ink-shader/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2022/10/20/normalizefm/" itemprop="url">normalize.fmにゲスト出演しました</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2022-10-20 10:44:48 &#43;0900 JST" itemprop="datePublished">2022-10-20</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/normalizefm">normalizefm</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/cg">CG</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/unity">Unity</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/shader">Shader</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%b3%e3%82%b0">レイトレーシング</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%91%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%b3%e3%82%b0">パストレーシング</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/optix">OptiX</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%9e%e3%83%bc%e3%83%81%e3%83%b3%e3%82%b0">レイマーチング</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/cuda">CUDA</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/gpu">GPU</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%88%e3%83%ac%e5%90%88%e5%ae%bf">レイトレ合宿</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                <p><a href="https://normalize.fm/">normalize.fm</a>の第032回にゲスト出演させていただきました。</p>
-
-<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/normalizeFM?src=hash&amp;ref_src=twsrc%5Etfw">#normalizeFM</a> の新エピソード公開しました。<br>今回は <a href="https://twitter.com/gam0022?ref_src=twsrc%5Etfw">@gam0022</a> さんをゲストに、普段の収録と比較するとかなりテックな話題に寄った感じで、深い技術の話をいろいろうかがいました。<br><br>032. たゆまぬ努力とキャッチアップ<a href="https://t.co/acML0WOwYQ">https://t.co/acML0WOwYQ</a></p>&mdash; h_doxas (@h_doxas) <a href="https://twitter.com/h_doxas/status/1582287588978618369?ref_src=twsrc%5Etfw">October 18, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2022/10/20/normalizefm/" class="btn btn-primary btn-outline">
                 Read more
             </a>
         </p>

@@ -10,6 +10,148 @@
     <atom:link href="/tags/unity/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>学園アイドルマスターの眉毛のShaderをUnityで再現してみた</title>
+      <link>https://gam0022.net/blog/2024/05/29/gakumasu-mayuge-shader/</link>
+      <pubDate>Wed, 29 May 2024 12:00:43 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2024/05/29/gakumasu-mayuge-shader/</guid>
+      <description>&lt;p&gt;ここ最近、&lt;a href=&#34;https://gakuen.idolmaster-official.jp/&#34;&gt;学園アイドルマスター（学マス）&lt;/a&gt;の鼻や眉毛のシェーダーがTwitter（現X）で話題になっていました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;学マス、鼻先の黒い点が横から見た時に消えるよう処理をしている&lt;br&gt;&lt;br&gt;顔面全体の輪郭線を切ってるのもあって横顔で急な黒が浮いて悪目立ちしたり、鼻の頂点が欠けてシルエットの綺麗さが失われてしまうことに対する対処かな &lt;a href=&#34;https://t.co/82TiB41IDR&#34;&gt;pic.twitter.com/82TiB41IDR&lt;/a&gt;&lt;/p&gt;&amp;mdash; のすけ (@noske2801) &lt;a href=&#34;https://twitter.com/noske2801/status/1791165446764495126?ref_src=twsrc%5Etfw&#34;&gt;May 16, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;学マス、顔周りでいうと眉毛と目周りが正面からはステンシルして髪より前に見えているが回転させていくと横顔に近づくある程度の角度でフェードアウトしてく。キャラのデザインによっては横から見た時ステンシルしてる眉毛はチラつきが気になったりするのでとても真似したい &lt;a href=&#34;https://t.co/8O7WjcbF9w&#34;&gt;pic.twitter.com/8O7WjcbF9w&lt;/a&gt;&lt;/p&gt;&amp;mdash; とれ (@clubnemos) &lt;a href=&#34;https://twitter.com/clubnemos/status/1791175839469740474?ref_src=twsrc%5Etfw&#34;&gt;May 16, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;鼻のアウトラインがカメラの角度で消えるのは実装は容易に思いつくのですが（カメラのViewベクトルと頭のforwardベクトルの内積からディゾルブ等）、
+眉毛が角度でフェードする処理（正面から見ると眉毛が前髪より手前に、横顔に近づくと眉毛がフェードアウトする処理）は実装がすぐには思いつきませんでした。&lt;/p&gt;
+
+&lt;p&gt;技術的にも面白そうなテーマだと思ったので、Unityで再現することにしました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2024-05-29-gakumasu-mayuge-shader/mayu.gif&#34; alt=&#34;mayu.gif&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;unity-urp上の再現&#34;&gt;Unity URP上の再現&lt;/h1&gt;
+
+&lt;p&gt;Stencilを使うパターンと、Stencilを使わずにDepth Offsetするパターンの2つをUnity URP上で実装しました。&lt;/p&gt;
+
+&lt;p&gt;プロジェクトファイルはGitHubでも公開しました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gam0022/ShaderPlaygroundURP&#34;&gt;github.com/gam0022/ShaderPlaygroundURP&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;モデルの準備&#34;&gt;モデルの準備&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://unity-chan.com/&#34;&gt;UnityちゃんシリーズのSDトーコちゃん&lt;/a&gt;の3Dモデルを使わせていただきました。&lt;/p&gt;
+
+&lt;p&gt;眉毛のメッシュが顔のメッシュとマージされていたので、Blenderの練習も兼ねて眉毛を独立したメッシュとして分割しました。&lt;/p&gt;
+
+&lt;p&gt;Meshを独立させることで、Unity上で独立したパスとして描画ができます。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;使わせていただいた3DモデルはSDトーコちゃんです。&lt;a href=&#34;https://t.co/0THUJaTto6&#34;&gt;https://t.co/0THUJaTto6&lt;/a&gt;&lt;br&gt;&lt;br&gt;眉毛だけ独立したPassで描画したかったので、Blenderの練習も兼ねて眉毛の部分だけMeshを分割する調整をしました。 &lt;a href=&#34;https://t.co/GGSB62osG6&#34;&gt;pic.twitter.com/GGSB62osG6&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1793487696608067731?ref_src=twsrc%5Etfw&#34;&gt;May 23, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;stencilを使うパターン&#34;&gt;Stencilを使うパターン&lt;/h2&gt;
+
+&lt;p&gt;まずはStencilを使うパターンを実装しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;学マスの眉毛シェーダー※をUnity上で再現できた。&lt;br&gt;&lt;br&gt;※正面から見ると眉毛が前髪より手前に、横顔に近づくと眉毛がフェードアウトする処理&lt;br&gt;&lt;br&gt;眉毛でStencilを書き込み、前髪の1Pass目で眉毛ではない領域を不透明描画、前髪の2Pass目で眉毛の上から半透明描画してアルファを制御したら、うまくできた🎉 &lt;a href=&#34;https://t.co/DSVmsS66hd&#34;&gt;https://t.co/DSVmsS66hd&lt;/a&gt; &lt;a href=&#34;https://t.co/Gvvvq3LqsE&#34;&gt;pic.twitter.com/Gvvvq3LqsE&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1793477397150679423?ref_src=twsrc%5Etfw&#34;&gt;May 23, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;眉毛と前髪を特殊なシェーダーにして、前髪は2Passで描画しています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;眉毛でStencil（今回はStencil値を2）を書き込む&lt;/li&gt;
+&lt;li&gt;前髪の1Pass目で眉毛に重ならない領域（Comp NotEqual）を不透明描画&lt;/li&gt;
+&lt;li&gt;前髪の2Pass目で眉毛に重なった領域（Comp Equal）を半透明描画してアルファを制御&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;前髪の2Pass目を省略すると、眉毛が常に不透明度100%で描画されます。2Pass目によって前髪を眉毛の上からアルファブレンドすることで眉毛の不透明度を下げて半透明っぽくしています。&lt;/p&gt;
+
+&lt;h2 id=&#34;depth-offsetするパターン&#34;&gt;Depth Offsetするパターン&lt;/h2&gt;
+
+&lt;p&gt;Stencilは使わずにDepth Offsetするパターンでも実装しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;学マスの眉毛シェーダー、Stencilを使わないパターンもできた🎉&lt;br&gt;&lt;br&gt;眉毛だけ2Passで描画&lt;br&gt;・1Pass目：普通に不透明で描画&lt;br&gt;・2Pass目：View空間上でZ Offsetして前髪より手前に移動した状態でアルファブレンドで描画。アルファを顔の角度でフェード&lt;br&gt;&lt;br&gt;この方法が一番シンプルな気がします！ &lt;a href=&#34;https://t.co/r7niDobHzC&#34;&gt;pic.twitter.com/r7niDobHzC&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1794254337205764213?ref_src=twsrc%5Etfw&#34;&gt;May 25, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;眉毛だけ2Passで描画しています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;眉毛1Pass目：普通に不透明で描画&lt;/li&gt;
+&lt;li&gt;眉毛2Pass目：View空間上でDepth Offsetして前髪より手前に移動した状態でアルファブレンドで描画。アルファを顔の角度でフェード&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;非常にシンプルな実装です。&lt;/p&gt;
+
+&lt;p&gt;眉毛の2Pass目を省略すると通常の描画（前髪の隠れた眉毛は描画されない）になります。&lt;/p&gt;
+
+&lt;p&gt;2Pass目はDepth Offsetをして3D空間上で眉毛を前髪よりも手前に移動することで、実質的にZ Testの無効化と同じ効果があります。&lt;/p&gt;
+
+&lt;p&gt;Z Testを無効化しても同じ効果を得られますが、Z Testを無効化してしまうと背景や他のキャラクターまで眉毛が貫通して描画してしまうため、Depth Offsetの方が利点が多いように思います。&lt;/p&gt;
+
+&lt;p&gt;DepthのOffset量についてはパラメーターなどで調整可能にして、前髪より眉毛が手前になるべく小さい値にしています。&lt;/p&gt;
+
+&lt;p&gt;Depth Offsetのアプローチについては、こちらの中国語の記事で知りました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/696515379&#34;&gt;unity卡渲通过深度偏移实现透明眉毛 - 知乎&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Depth Offsetは頂点シェーダーでこのような処理をしています。&lt;/p&gt;
+
+&lt;p&gt;クリッピング空間上のZにしか影響を与えないように実装したので、深度情報のみが変化し、メッシュのシルエットは変化しません。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;// View空間上でDepth Offset
+// https://zhuanlan.zhihu.com/p/696515379
+float3 positionWS = TransformObjectToWorld(input.positionOS.xyz);
+float3 positionVS = mul(UNITY_MATRIX_V, float4(positionWS, 1.0)).xyz;
+
+// View空間上でDepth Offset
+positionVS.z += _DepthOffset;
+
+float4 positionHCS = TransformWViewToHClip(positionVS);
+float depth = positionHCS.z / positionHCS.w;
+output.positionHCS = TransformObjectToHClip(input.positionOS.xyz);
+
+// クリッピング空間上でオフセットされた深度を適用
+output.positionHCS.z = depth * output.positionHCS.w;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;この記事だけを読むと、前髪に被っている／被っていないで、眉毛の透明度が変化するのが不思議に思ったのですが、こちらのツイートで疑問が解決しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;前髪に隠れるように普通に眉描いて、その後から前髪の上から半透明でもう一度眉描けば、特別な仕組みは要らなそうですが&lt;br&gt;前髪に被ってるところは髪+眉のブレンドで、被ってないところは眉+眉のブレンドだからアルファ値がいくつでも眉の色がそのまま出ます &lt;a href=&#34;https://t.co/Dr85ppiivn&#34;&gt;https://t.co/Dr85ppiivn&lt;/a&gt;&lt;/p&gt;&amp;mdash; フィン (@phyn_ndk) &lt;a href=&#34;https://twitter.com/phyn_ndk/status/1793637537938113004?ref_src=twsrc%5Etfw&#34;&gt;May 23, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;シェーダー側では何か特別な処理をしなくても、眉毛をDepth Offset（もしくはZ Test無効）してアルファブレンドすれば自然に意図した結果になります。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;前髪に被ってるところ
+
+&lt;ul&gt;
+&lt;li&gt;髪+眉のブレンドなので、眉の不透明度は眉のアルファ値で変化&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;前髪に被ってないところ
+
+&lt;ul&gt;
+&lt;li&gt;眉+眉のブレンドなので、眉のアルファ値がいくつでも眉の色がそのままの色になる（眉の不透明度は100%で固定）&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;色々と頭を捻りましたが、最終的にはこんなシンプルな仕組みでも同じ効果が得られて、おもしろいなと思いました。&lt;/p&gt;
+
+&lt;h1 id=&#34;考察とまとめ&#34;&gt;考察とまとめ&lt;/h1&gt;
+
+&lt;p&gt;2パターン実装してみましたが、Depth Offsetするパターンの方が使い勝手の面でも性能面でも優位性がありそうだと思いました。&lt;/p&gt;
+
+&lt;p&gt;Stencilを使うアプローチでは、キャラクターが複数になったときに、顔が重なると破綻してしまいます。たとえば、キャラクターの頭が重なったときに、奥側のキャラクターの眉毛が手前のキャラクターの頭を貫通するということが起こり得ます。&lt;/p&gt;
+
+&lt;p&gt;Depth Offsetするパターンでは、こうした問題を回避できます。&lt;/p&gt;
+
+&lt;p&gt;描画負荷の面でも、眉毛の面積は前髪よりも小さいので、眉毛の方を2PassにするDepth Offsetの方がGPU負荷が低いと予想できます。&lt;/p&gt;
+
+&lt;p&gt;特殊な眉毛のキャラクターを描画をする機会があれば、DetphOffsetを使ってみたいと思いました。&lt;/p&gt;
+
+&lt;p&gt;ちなみに、目（眼球）のようにZ Test無効にすると眼球全体が最前面になって見た目が破綻する要素については、Depth Offsetでは難しいので、Stencilを使うしかない気がしました。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>『Unityバイブル R5夏号』の「Shader Graphの基本操作から発展的なテクニックまで」を執筆しました</title>
       <link>https://gam0022.net/blog/2023/08/07/unity-bible/</link>
       <pubDate>Mon, 07 Aug 2023 10:00:00 +0900</pubDate>

@@ -124,6 +124,67 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2024/05/29/gakumasu-mayuge-shader/" itemprop="url">学園アイドルマスターの眉毛のShaderをUnityで再現してみた</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2024-05-29 12:00:43 &#43;0900 JST" itemprop="datePublished">2024-05-29</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/unity">Unity</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/shader">Shader</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/cg">CG</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/urp">URP</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e6%a4%9c%e8%a8%bc">検証</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                ここ最近、<a href="https://gakuen.idolmaster-official.jp/">学園アイドルマスター（学マス）</a>の鼻や眉毛のシェーダーがTwitter（現X）で話題になっていました。</p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">学マス、鼻先の黒い点が横から見た時に消えるよう処理をしている<br><br>顔面全体の輪郭線を切ってるのもあって横顔で急な黒が浮いて悪目立ちしたり、鼻の頂点が欠けてシルエットの綺麗さが失われてしまうことに対する対処かな <a href="https://t.co/82TiB41IDR">pic.twitter.com/82TiB41IDR</a></p>&mdash; のすけ (@noske2801) <a href="https://twitter.com/noske2801/status/1791165446764495126?ref_src=twsrc%5Etfw">May 16, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">学マス、顔周りでいうと眉毛と目周りが正面からはステンシルして髪より前に見えているが回転させていくと横顔に近づくある程度の角度でフェードアウトしてく。キャラのデザインによっては横から見た時ステンシルしてる眉毛はチラつきが気になったりするのでとても真似したい <a href="https://t.co/8O7WjcbF9w">pic.twitter.com/8O7WjcbF9w</a></p>&mdash; とれ (@clubnemos) <a href="https://twitter.com/clubnemos/status/1791175839469740474?ref_src=twsrc%5Etfw">May 16, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p>鼻のアウトラインがカメラの角度で消えるのは実装は容易に思いつくのですが（カメラのViewベクトルと頭のforwardベクトルの内積からディゾルブ等）、
+眉毛が角度でフェードする処理（正面から見ると眉毛が前髪より手前に、横顔に近づくと眉毛がフェードアウトする処理）は実装がすぐには思いつきませんでした。</p>
+
+<p>技術的にも面白そうなテーマだと思ったので、Unityで再現することにしました。</p>
+
+<p><img src="/images/posts/2024-05-29-gakumasu-mayuge-shader/mayu.gif" alt="mayu.gif" /></p>
+
+<p>
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2024/05/29/gakumasu-mayuge-shader/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2023/08/07/unity-bible/" itemprop="url">『Unityバイブル R5夏号』の「Shader Graphの基本操作から発展的なテクニックまで」を執筆しました</a></h3>
         
 
