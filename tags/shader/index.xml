@@ -21,8 +21,9 @@
 
 &lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;学マス、顔周りでいうと眉毛と目周りが正面からはステンシルして髪より前に見えているが回転させていくと横顔に近づくある程度の角度でフェードアウトしてく。キャラのデザインによっては横から見た時ステンシルしてる眉毛はチラつきが気になったりするのでとても真似したい &lt;a href=&#34;https://t.co/8O7WjcbF9w&#34;&gt;pic.twitter.com/8O7WjcbF9w&lt;/a&gt;&lt;/p&gt;&amp;mdash; とれ (@clubnemos) &lt;a href=&#34;https://twitter.com/clubnemos/status/1791175839469740474?ref_src=twsrc%5Etfw&#34;&gt;May 16, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;鼻のアウトラインがカメラの角度で消えるのは実装は容易に思いつくのですが（カメラのViewベクトルと頭のforwardベクトルの内積からディゾルブ等）、
-眉毛が角度でフェードする処理（正面から見ると眉毛が前髪より手前に、横顔に近づくと眉毛がフェードアウトする処理）は実装がすぐには思いつきませんでした。&lt;/p&gt;
+&lt;p&gt;鼻のアウトラインがカメラの角度で消える実装は容易に思いつくのですが（カメラのViewベクトルと頭のforwardベクトルの内積からディゾルブ等）、&lt;/p&gt;
+
+&lt;p&gt;眉毛が角度でフェードする処理（正面から見ると眉毛が前髪より手前に、横顔に近づくと眉毛がフェードアウトする処理）の実装はすぐには思いつきませんでした。&lt;/p&gt;
 
 &lt;p&gt;技術的にも面白そうなテーマだと思ったので、Unityで再現することにしました。&lt;/p&gt;
 
