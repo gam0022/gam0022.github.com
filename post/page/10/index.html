@@ -124,6 +124,116 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/09/16/sqlite3-memo/" itemprop="url">SQLite3でハマった点まとめ</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2013-09-16 14:05:00 &#43;0900 JST" itemprop="datePublished">2013-09-16</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/ruby">Ruby</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/sqlite3">SQLite3</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                <a href="http://gam0022.net/app/tmg/">Twitter名刺ジェネレータ</a>を作るにあたって、
+ActiveRecord と SQLite3 を使ったので、勉強になったことを適当にメモします。</p>
+
+<p>関連記事</p>
+
+<ul>
+<li><a href="/blog/2013/09/16/canvas-memo/">Canvasでハマった点まとめ</a></li>
+</ul>
+
+<h1 id="activerecord-は-initialize-が遅すぎて-cgi-には使えない">ActiveRecord は initialize が遅すぎて CGI には使えない</h1>
+
+<p>ActiveRecord をCGIで単体で使おうとしたのですが、ActiveRecord の初期化に数秒かかってしまい、
+レスポンスが遅すぎて使い物になりませんでした。</p>
+
+<p>結局、<a href="https://github.com/gam0022/twitter-meishi-generator/blob/master/posts.rb">ActiveRecord の部分を生のSQLite3で再実装</a>しました。</p>
+
+<p>Rails のようにサーバが起動したらずっと同じプロセスで動作するようなものであれは、初期化が遅くても問題にはならないのですが、
+CGI のように、appache が毎回プロセスを起動するようなものだと、ActiveRecord を使うのは諦めたほうがいいようです。</p>
+
+<p>ActiveRecord の悪口になってしまいましたが、ActiveRecord そのものは本当に便利でした。</p>
+
+<p>テーブルの作成のために ActiveRecord を使うのはいいかもしれないと思いました。</p>
+
+<h1 id="sqlite3-を-cgi-で使うときはパーミッション注意">SQLite3 を CGI で使うときはパーミッション注意</h1>
+
+<p>SQLite3(というか、ActiveRecordの問題なのだろうか。要検証。) を CGI から使うときは、パーミッションに注意しないと、ハマります。</p>
+
+<p>以下のような例外が起きることが有りました。</p>
+
+<ul>
+<li><code>SQLite3::CantOpenException: unable to open database file</code></li>
+<li><code>SQLite3::ReadOnlyException: attempt to write a readonly database</code></li>
+</ul>
+
+<p>上のような例外が発生した場合、次のことを確認して下さい。</p>
+
+<ul>
+<li>データベースファイルのオーナーが appache のユーザになっているか？
+
+<ul>
+<li>appache のユーザとグループが <code>www-data</code> で、データベースのファイル名が <code>db/db.sqlite3</code> なら、以下のように変更する。</li>
+<li><code>chown www-data.www-data db/db.sqlite3</code></li>
+</ul></li>
+<li>データベースファイルを置くディレクトリのパーミッションが 777 になっているか?
+
+<ul>
+<li>例えば、データベースのファイル名が <code>db/db.sqlite3</code> なら、ディレクトリ<code>db</code>のパーミッションは 777 である必要があるようです。
+<a href="http://d.hatena.ne.jp/yun_kichi/20100113/1263362175">参考</a></li>
+</ul></li>
+</ul>
+
+<h1 id="sqlite3で-time-を渡す時には文字列にしないとダメ">SQLite3で、Time を渡す時には文字列にしないとダメ</h1>
+
+<p>Ruby で <code>sqlite3 gem</code> を使ってtableにプレースホルダを使って<code>insert</code> した時、
+<code>can't prepare Time</code>とかいうエラーが発生するときは、値を文字列に変換してやると解消するかもしれません。</p>
+
+<pre><code class="language-ruby"># Timeクラスを直接渡すと、can't prepare Time とか言われる例
+h = {:time =&gt; Time.now, :data = &quot;なんとかかんとか&quot;}
+db.execute(&quot;insert into table(time, data) values (:time, :data)&quot;, h)
+</code></pre>
+
+<p>次のように、Time クラスを直接渡さずに、明示的に文字列に変換してから渡すと解消するかもしれません。</p>
+
+<pre><code class="language-ruby"># Timeクラスを文字列に変換して渡すと解消するかも
+h = {:time =&gt; Time.now.to_s, :data = &quot;なんとかかんとか&quot;}
+db.execute(&quot;insert into table(time, data) values (:time, :data)&quot;, h)
+</code></pre>
+
+<p>
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2013/09/16/sqlite3-memo/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/08/26/programming-challenges-3/" itemprop="url">Programming Challenges 3</a></h3>
         
 
@@ -621,77 +731,6 @@ spinrfの実装 JavaScriptには、spinrfがないので、自分で実装する
         </div>
         <p class="read-more">
             <a href="https://gam0022.net/blog/2013/07/11/javascript-memo/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/07/09/programming-challenges-2/" itemprop="url">Programming Challenges 2</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2013-07-09 07:00:00 &#43;0900 JST" itemprop="datePublished">2013-07-09</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/%e7%ab%b6%e6%8a%80%e3%83%97%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%9f%e3%83%b3%e3%82%b0">競技プログラミング</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/uva-online-judge">Uva Online Judge</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                Uva Online Judgeで解いた問題を適当に解説します。</p>
-
-<p>2ということで、<a href="/blog/2013/06/06/programming-challenges-1/">前回</a>の続きです。</p>
-
-<h1 id="where-s-waldorf">Where&rsquo;s Waldorf?</h1>
-
-<h2 id="問題">問題</h2>
-
-<p><a href="http://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=31&amp;page=show_problem&amp;problem=951">10010 - Where&rsquo;s Waldorf?</a></p>
-
-<dl>
-<dt>問題</dt>
-<dd>MxNの広さの2次元の行列から単語を検索する問題。</dd>
-<dd>単語は、上、下、左、右、右上、左上、右下、左下の8通りの並び方がある。(縦読みや横読み的な)</dd>
-<dd>また、大文字と小文字は区別しない。</dd>
-<dt>入力</dt>
-<dd>書くのが面倒なので省略。</dd>
-<dt>出力</dt>
-<dd>見つけた単語の1文字目の座標</dd>
-</dl>
-
-<h2 id="解説">解説</h2>
-
-<p>特にアルゴリズムの工夫のしようもないので、総当りで解く。
-ちょっとした工夫としては、1文字目を見つけた次に最後の文字から照合すると、
-文字の座標的にありえないケースを早々に飛ばすことができる。</p>
-
-<p>大文字と小文字を区別しないので、入力を読み取るときにどちらかに統一する。</p>
-
-<p>
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2013/07/09/programming-challenges-2/" class="btn btn-primary btn-outline">
                 Read more
             </a>
         </p>

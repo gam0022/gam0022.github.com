@@ -7,8 +7,41 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>&amp;copy; 2021 gam0022</copyright>
-    <lastBuildDate>Wed, 29 May 2024 12:00:43 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 15 Aug 2024 10:38:57 +0900</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>LTC（Linearly Transformed Cosines）によるエリアライトのUnity URP実装の解説のスライド共有</title>
+      <link>https://gam0022.net/blog/2024/08/15/ltc-shader/</link>
+      <pubDate>Thu, 15 Aug 2024 10:38:57 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2024/08/15/ltc-shader/</guid>
+      <description>&lt;p&gt;昨日、8月14日に&lt;a href=&#34;https://connpass.com/event/325438/&#34;&gt;「ゆるゆるシェーダー交流会」&lt;/a&gt;が開催されました。&lt;/p&gt;
+
+&lt;p&gt;私は『LTC（Linearly Transformed Cosines）によるエリアライトのUnity URP実装』というタイトルでライトニングトーク（LT）を行いました。&lt;/p&gt;
+
+&lt;p&gt;Eric HeitzさんがSIGGRAPH 2016で発表した、エリアライトをリアルタイムに計算する手法をURP上で実装したので、その解説をしました。&lt;/p&gt;
+
+&lt;p&gt;以下に発表資料を共有します。&lt;/p&gt;
+
+&lt;div class=&#34;google-slide-wrap&#34;&gt;
+&lt;iframe src=&#34;https://docs.google.com/presentation/d/1OAey5wGU7BIKw7YOpILKz-Ymqv-jysgFeWpvJVVdXm0/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;1440&#34; height=&#34;839&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.google.com/presentation/d/1OAey5wGU7BIKw7YOpILKz-Ymqv-jysgFeWpvJVVdXm0/edit?usp=sharing&#34;&gt;スライドの直接リンク&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;Twitterのスレッドはこちらです。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Unity URP上でLTC（Linearly Transformed Cosines）によるエリアライトを実装してみました。&lt;br&gt;&lt;br&gt;パストレーシングと同じようなクオリティのエリアライトがリアルタイムで動作して感動しました！発明された方は偉大！ &lt;a href=&#34;https://t.co/usMWcc6BTO&#34;&gt;pic.twitter.com/usMWcc6BTO&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1812296534874284391?ref_src=twsrc%5Etfw&#34;&gt;July 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;この手法のコアなアイデアは、複雑なBRDF分布を単純なcos分布に線形変換し、cos分布上で解析的に積分するというものです。&lt;/p&gt;
+
+&lt;p&gt;エリアライトに必要なBRDFの積分を巧妙なトリックで処理しており、とても賢い手法で個人的には非常に感動しました。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>学園アイドルマスターの眉毛のShaderをUnityで再現してみた</title>
@@ -3515,180 +3548,6 @@ float midi(int ccNumber) {
 &lt;iframe sandbox=&#34;allow-popups allow-scripts allow-modals allow-forms allow-same-origin&#34; style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B004M8UZS8&amp;linkId=8165ff008f7ff356a2d6382883941aca&#34;&gt;&lt;/iframe&gt;
 
 &lt;p&gt;せっかくMIDIコンを買ったのに、とくにVJする機会もないので置物になってます。誰かVJに誘ってください。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>HugoをGitHub Pagesで公開し、2リポジトリ構成の管理を楽にする方法</title>
-      <link>https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/</link>
-      <pubDate>Sat, 07 May 2022 20:05:08 +0900</pubDate>
-      
-      <guid>https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/</guid>
-      <description>&lt;p&gt;本サイトのホスト先をConoHa VPSからGitHub Pagesに乗り換えました。&lt;/p&gt;
-
-&lt;p&gt;実は去年の5月に乗り換えていて、1年ほど運用して方針が固まったので記事にしました。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-05-07-hugo-on-github-pages/thumbnail.png&#34; alt=&#34;Hugo on GitHub Pages&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;vps-github-pagesの移行理由&#34;&gt;VPS→GitHub Pagesの移行理由&lt;/h1&gt;
-
-&lt;p&gt;お金です。費用の削減が目的です。&lt;/p&gt;
-
-&lt;p&gt;ConoHa VPSは月額1000円ほどの固定費がかかっていましたが、GitHub Pagesは無料です。&lt;/p&gt;
-
-&lt;p&gt;また、VPSだと急にブログにアクセスが増えた場合にスケールしづらい・費用がかかるなどの懸念もありました。&lt;/p&gt;
-
-&lt;h1 id=&#34;hugoをgithub-pagesにホスティングする&#34;&gt;HugoをGitHub Pagesにホスティングする&lt;/h1&gt;
-
-&lt;p&gt;GitHub Pagesは、GitHubが静的ウェブページのためのウェブホスティングサービスです。
-HTMLやCSSなどの静的ファイルをGitHubのリポジトリにコミットすることで静的サイトを公開できます。&lt;/p&gt;
-
-&lt;h2 id=&#34;2リポジトリ構成とは&#34;&gt;2リポジトリ構成とは&lt;/h2&gt;
-
-&lt;p&gt;GitHub Pagesでは、特定のブランチやディレクトリをサイトのルートとして指定できます。&lt;/p&gt;
-
-&lt;p&gt;ディレクトリ指定を考慮すると、大きく分けて2つのリポジトリ構成が考えられます。&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;リポジトリ1つ構成
-
-&lt;ul&gt;
-&lt;li&gt;Hugoのpublicディレクトリ以下を公開する設定&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;リポジトリ2つ構成（こっちを採用！！）
-
-&lt;ul&gt;
-&lt;li&gt;Hugoのプロジェクト（記事のマークダウンやHugoテンプレートなど）のリポジトリ&lt;/li&gt;
-&lt;li&gt;Hugoの生成物（HTMLやCSSなどの公開用の静的コンテンツ）のリポジトリ&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;最終的に2.のリポジトリ2つ構成に落ち着きました。&lt;/p&gt;
-
-&lt;p&gt;1.の方がシンプルですが、コミットの差分が多くなってしまい、文章校正などがやりづらいと思ったからです。&lt;/p&gt;
-
-&lt;p&gt;具体的には以下の2つのリポジトリ構成にしました。&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/gam0022/gam0022.github.com-source-hugo&#34;&gt;https://github.com/gam0022/gam0022.github.com-source-hugo&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Hugoのプロジェクト（記事のマークダウンやHugoテンプレートなど）のリポジトリ&lt;/li&gt;
-&lt;li&gt;2. のリポジトリをsubmoduleとして参照&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/gam0022/gam0022.github.com&#34;&gt;https://github.com/gam0022/gam0022.github.com&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Hugoの生成物（HTMLやCSSなどの公開用の静的コンテンツ）のリポジトリ&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;2リポジトリ構成のcommitをバッチで自動化&#34;&gt;2リポジトリ構成のcommitをバッチで自動化&lt;/h2&gt;
-
-&lt;p&gt;2リポジトリ構成ではコミットが面倒という問題がありました。&lt;/p&gt;
-
-&lt;p&gt;そこで簡単な.batを書いて、バッチを叩くだけで自動的に2リポジトリのcommitとpushができるようにしました。
-Windowsを利用している人は参考にしてください。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/gam0022/gam0022.github.com-source-hugo/blob/master/deploy.bat&#34;&gt;deploy.bat&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bat&#34;&gt;:: コミットメッセージ
-set msg=&amp;quot;Build %date% %time%&amp;quot;
-
-pushd public
-
-:: publicディレクトリを掃除
-git fetch -p
-git checkout -B master origin/master
-
-popd
-
-:: HTMLを生成
-hugo.exe
-
-pushd public
-
-:: HTML生成物をコミット
-git add .
-git commit -m %msg%
-git push origin HEAD
-
-popd
-
-:: ソースをコミット
-git add .
-git commit -m %msg%
-git push origin HEAD
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;カスタムドメインとssl化&#34;&gt;カスタムドメインとSSL化&lt;/h1&gt;
-
-&lt;p&gt;現在は独自ドメインのSSL化も簡単にできます。以前はCloudFlare等のCDNが必要でしたが、現在はCDNも不要です。&lt;/p&gt;
-
-&lt;p&gt;独自ドメインのSSL化に必要な設定は2つだけです。&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;GitHub側の設定&lt;/li&gt;
-&lt;li&gt;ドメインの管理ページ側のAレコード・CNAMEの設定&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;この記事の情報が古くなっている可能性もあるので、最新の情報は公式マニュアルも参照してください。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://docs.github.com/ja/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site&#34;&gt;GitHub Pages サイトのカスタムドメインを管理する&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;github側の設定&#34;&gt;GitHub側の設定&lt;/h2&gt;
-
-&lt;p&gt;リポジトリの &lt;code&gt;Settings &amp;gt; Pages &amp;gt; Custom domain&lt;/code&gt; からカスタムドメインを指定できます。&lt;/p&gt;
-
-&lt;p&gt;SSL証明書の更新まで自動的にGitHub Pages側でやってくれるので、本当にこれだけしかやることがないです。&lt;/p&gt;
-
-&lt;p&gt;SSL化したい場合には、 &lt;code&gt;Enforce HTTPS&lt;/code&gt; にチェックします。&lt;/p&gt;
-
-&lt;p&gt;マニュアルにも書かれていますが、DNSやHTTPSの変更が伝播するには、最大24時間かかるそうです。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-05-07-hugo-on-github-pages/github-custom-domain.png&#34; alt=&#34;GitHub側の設定&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;ドメインの管理ページ側のaレコード-cnameの設定&#34;&gt;ドメインの管理ページ側のAレコード・CNAMEの設定&lt;/h2&gt;
-
-&lt;p&gt;CNAMEとAレコードを設定して問題なく運用できています。&lt;/p&gt;
-
-&lt;p&gt;筆者はあまりネットワークに詳しくないので、間違っていたら教えてください。&lt;/p&gt;
-
-&lt;p&gt;Aレコード&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;185.199.108.153
-185.199.109.153
-185.199.110.153
-185.199.111.153
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;CNAME&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;gam0022.github.io.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-05-07-hugo-on-github-pages/google-domain.png&#34; alt=&#34;Google Domain&#34; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;まとめ&#34;&gt;まとめ&lt;/h1&gt;
-
-&lt;p&gt;Hugoのホスト先をVPSからGitHub Pagesに移行して固定費削減できました。&lt;/p&gt;
-
-&lt;p&gt;VPSではrsyncで即時に反映されていたのが、GitHub Pagesにしてから反映に数分かかるなど細かい不満はありますが、無料で使えているので許容範囲かなと思っています。&lt;/p&gt;
-
-&lt;h2 id=&#34;静的cms-ホスティングサービスを選ぶ理由&#34;&gt;静的CMS＋ホスティングサービスを選ぶ理由&lt;/h2&gt;
-
-&lt;p&gt;はてなブログなどのブログサービスへの移行も検討したことも過去にありますが、特定のサービスに依存したくないという考えから現在の構成に落ち着いています。&lt;/p&gt;
-
-&lt;p&gt;企業やサービスの寿命を考えると、10年後や20年後まで存続しているのか分からないので、特定の企業やサービスにロックインしたくありません。&lt;/p&gt;
-
-&lt;p&gt;その点で静的CMS + 適当なサービスにホスティングがブログの持続性（サービス終了のリスク回避）では最強だと考えています。&lt;/p&gt;
-
-&lt;p&gt;もしGitHub Pagesがサービス終了したとしても、その時はまたVPSにホスティングすれば良いだけです。&lt;/p&gt;
-
-&lt;p&gt;完全に余談ですが、ドメインは10年更新にしているので、筆者が死亡したとしてもしばらくサイトは消えないと思います。&lt;/p&gt;
-
-&lt;p&gt;それでは！&lt;/p&gt;</description>
     </item>
     
   </channel>

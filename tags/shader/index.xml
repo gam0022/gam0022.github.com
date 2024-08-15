@@ -10,6 +10,39 @@
     <atom:link href="/tags/shader/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>LTC（Linearly Transformed Cosines）によるエリアライトのUnity URP実装の解説のスライド共有</title>
+      <link>https://gam0022.net/blog/2024/08/15/ltc-shader/</link>
+      <pubDate>Thu, 15 Aug 2024 10:38:57 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2024/08/15/ltc-shader/</guid>
+      <description>&lt;p&gt;昨日、8月14日に&lt;a href=&#34;https://connpass.com/event/325438/&#34;&gt;「ゆるゆるシェーダー交流会」&lt;/a&gt;が開催されました。&lt;/p&gt;
+
+&lt;p&gt;私は『LTC（Linearly Transformed Cosines）によるエリアライトのUnity URP実装』というタイトルでライトニングトーク（LT）を行いました。&lt;/p&gt;
+
+&lt;p&gt;Eric HeitzさんがSIGGRAPH 2016で発表した、エリアライトをリアルタイムに計算する手法をURP上で実装したので、その解説をしました。&lt;/p&gt;
+
+&lt;p&gt;以下に発表資料を共有します。&lt;/p&gt;
+
+&lt;div class=&#34;google-slide-wrap&#34;&gt;
+&lt;iframe src=&#34;https://docs.google.com/presentation/d/1OAey5wGU7BIKw7YOpILKz-Ymqv-jysgFeWpvJVVdXm0/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;1440&#34; height=&#34;839&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.google.com/presentation/d/1OAey5wGU7BIKw7YOpILKz-Ymqv-jysgFeWpvJVVdXm0/edit?usp=sharing&#34;&gt;スライドの直接リンク&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;Twitterのスレッドはこちらです。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Unity URP上でLTC（Linearly Transformed Cosines）によるエリアライトを実装してみました。&lt;br&gt;&lt;br&gt;パストレーシングと同じようなクオリティのエリアライトがリアルタイムで動作して感動しました！発明された方は偉大！ &lt;a href=&#34;https://t.co/usMWcc6BTO&#34;&gt;pic.twitter.com/usMWcc6BTO&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1812296534874284391?ref_src=twsrc%5Etfw&#34;&gt;July 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;この手法のコアなアイデアは、複雑なBRDF分布を単純なcos分布に線形変換し、cos分布上で解析的に積分するというものです。&lt;/p&gt;
+
+&lt;p&gt;エリアライトに必要なBRDFの積分を巧妙なトリックで処理しており、とても賢い手法で個人的には非常に感動しました。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>学園アイドルマスターの眉毛のShaderをUnityで再現してみた</title>
       <link>https://gam0022.net/blog/2024/05/29/gakumasu-mayuge-shader/</link>
       <pubDate>Wed, 29 May 2024 12:00:43 +0900</pubDate>
