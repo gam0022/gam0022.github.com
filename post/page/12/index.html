@@ -124,6 +124,206 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/04/22/diary/" itemprop="url">近状報告</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2013-04-22 22:13:00 &#43;0900 JST" itemprop="datePublished">2013-04-22</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/diary">Diary</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                
+
+<p>近状報告です。</p>
+
+<p>早いもので大学生活も3年目に突入してしまいました。とりあえず最近についてダラダラ書きます。</p>
+
+<h1 id="twincalを2学期制に対応">TwinCalを2学期制に対応。</h1>
+
+<p><a href="http://gam0022.net/app/twincal/">TwinCal</a>を2学期制に対応しました。</p>
+
+<p>新Twinsにも履修情報をCSV出力する機能があるのですが、いざCSV出力してみると、
+科目番号しか出力されない仕様だったので、対応を諦めていました。</p>
+
+<p>しかし、kDBの履修データをを使うことで新Twinsへの対応することができました。</p>
+
+<ol>
+<li><a href="https://kdb.tsukuba.ac.jp/">kDB</a>には履修データがある。</li>
+<li>kDBは科目一覧のCSV出力機能がある。</li>
+</ol>
+
+<p>まず、kDBの2013年度の履修データをCSV出力して、SQlite3のデーブル化しました。</p>
+
+<p>全ての履修データをCSV出力したところ、5.3MBくらいある巨大なファイルが吐き出されました。</p>
+
+<p>しかも、変なCSVだったのでRuby標準ライブラリのCSVではパースできませんでした。</p>
+
+<p>最終的には、ダウンロードしたCSVをOpenOfficeで開いて保存することで、なんとかなりました。</p>
+
+<p>また、「実施学期」と「曜時限」のフォーマットがフリーダムなので、これをパースするのに苦労しました。</p>
+
+<h1 id="cojt">COJT</h1>
+
+<p>情報科学類では主専攻実験の替わりに<a href="http://inf.tsukuba.ac.jp/ET-COJT/">COJT</a>という授業をとれるのですが、
+COJTのソフトウェアコースを受講することになりました。</p>
+
+<p>COJTをとった理由は以下のようなものです。</p>
+
+<ul>
+<li>バイト先の先輩が勧めていた。</li>
+<li>1年間、専用の机をゲットできる。</li>
+<li>オープニングセレモニーなどで、豪華な食事を少ないお金や無料で食べることができる！</li>
+<li>企業が協賛しているので、個人ではできないようなお金のかかる実験もできる。</li>
+<li>面白そう。</li>
+</ul>
+
+<p>成果発表もあったりと普通の主専攻実験よりハードな気もしますが、やるからには頑張りたいと思います。</p>
+
+<h1 id="早期卒業">早期卒業</h1>
+
+<p>情報科学類では、以下の条件を満たすと早期卒業できる可能性があるそうなのですが、
+その条件を満たしていたようです。</p>
+
+<ul>
+<li>卒業要件科目を85単位以上履修</li>
+<li>成績が上位10％以内</li>
+</ul>
+
+<p>しかし、卒業研究とCOJTを並行して行いながら単位をとるのは難しそうだったので、早期卒業は諦めました。完。</p>
+
+<h1 id="メタルギアライジング">メタルギアライジング</h1>
+
+<p>実におもしろい。</p>
+
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2013/04/22/diary/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/03/21/dynamic-forward/" itemprop="url">coinsの環境を使ってDynamic Forward</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2013-03-21 11:17:00 &#43;0900 JST" itemprop="datePublished">2013-03-21</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/mac-os-x">Mac OS X</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/coins">coins</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                
+
+<p>Twinsなど学内向けのサイトにアクセスするためにLocalForwardを使っている人が多いようですが、
+DynamicForwardの方が汎用性が高くて便利なのに、使っている人が少ないような印象を受けるので紹介します。</p>
+
+<p>この記事の説明はあまり分かりやすくないので、単純に学外からTwinsを使いたいだけであれば、
+次の記事を参考にすれば良いと思います。</p>
+
+<p><a href="http://shkh.hatenablog.com/entry/2011/11/22/231233">MacでTWINSを学外から使う</a></p>
+
+<h1 id="接続の方法">接続の方法</h1>
+
+<h2 id="1-sshの設定をする">1.sshの設定をする</h2>
+
+<p>まず、<code>~/.ssh/config</code>を次のようにします。</p>
+
+<pre><code class="language-bash"># .ssh/config
+Host coins coins-p
+HostName www.coins.tsukuba.ac.jp
+User sxxxxxxx
+
+Host *-p
+DynamicForward 1080
+</code></pre>
+
+<p>上のように設定すると、</p>
+
+<ul>
+<li>普通にsshしたいだけならば、<code>ssh coins</code></li>
+<li>DynamicForwardしたいなら、<code>ssh coins-p</code></li>
+</ul>
+
+<p>となって捗ります。</p>
+
+<p>このように、*(アスタリスク)を使って設定を書くと、
+重複してサーバ名などの設定を書かないで済むというちょっとしたテクニックを使っています。</p>
+
+<h2 id="2-sokcsプロキシを使う">2.SOKCSプロキシを使う</h2>
+
+<p>この設定だと、<code>ssh coins-p</code>をしたときに、ローカルホストの1080番ポートにSOKCSプロキシサーバを割り当てると、
+学内向けのサイトも普通に見れるようになります。</p>
+
+<p>SOKCSプロキシの設定は Mac OS X (山ライオン)ならば、<code>ネットワーク環境設定</code>から下のスクリーンショットを参考にして行なってください。</p>
+
+<p>他の環境の人はググって調べてください。</p>
+
+<p><img src="/images/posts/2013-03-21-dynamic-forward.png" alt="SOKCSプロキシの設定" /></p>
+
+<h1 id="切断するとき">切断するとき</h1>
+
+<p>切断するときは、次の2つの両方の作業をしてください。</p>
+
+<ul>
+<li>sshの接続を切る。</li>
+<li>プロキシの設定を無効にする。</li>
+</ul>
+
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2013/03/21/dynamic-forward/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2013/03/12/computer-graphics/" itemprop="url">コンピュータグラフィックス基礎の成果報告</a></h3>
         
 
@@ -652,130 +852,6 @@ DISPLACEMENT(BASE, INDEX, SCALE)  注意点 ここがポイントなのですが
         </div>
         <p class="read-more">
             <a href="https://gam0022.net/blog/2012/12/26/x86-addressing-mode/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/12/19/javac/" itemprop="url">Mac OS Xでjavacやjavaで文字化けした場合の対処</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2012-12-19 23:40:00 &#43;0900 JST" itemprop="datePublished">2012-12-19</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/java">Java</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/encoding">Encoding</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/mac-os-x">Mac OS X</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                <p>Mac OS Xでjavacやjavaで文字化けした場合の対処ですが、
-次のように<code>~/.bash_profile</code>に<code>alias</code>を設定すれば、治ると思います。</p>
-
-<p>この例ではターミナルのエンコーディングがUTF-8という
-前提で設定しているので、UTF-8の部分は自分の環境に合わせて変更してください。</p>
-
-<pre><code class="language-bash"># ~/.bash_profile
-alias javac='javac -J-Dfile.encoding=UTF-8'
-alias java='java -Dfile.encoding=UTF-8'
-</code></pre>
-
-<p>最後に<code>source ~/.bash_profile</code>してね。</p>
-
-<p><em>私に関して言うと、Javaを書くときはEclipseを使うことにしたので、この設定はあまり役に立ってないね！</em></p>
-
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2012/12/19/javac/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/12/11/hsp-contest2012/" itemprop="url">HSPプログラミングコンテスト2012で秀和システム賞を受賞</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2012-12-11 12:42:00 &#43;0900 JST" itemprop="datePublished">2012-12-11</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/hsp">HSP</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                <p>HSPプログラミングコンテスト2012で秀和システム賞を受賞しました。</p>
-
-<p><a href="http://hsp.tv/contest2012/cntst_fresult.html#313">HSPプログラムコンテスト2012　入賞作品詳細</a></p>
-
-<p>入賞作品名はSoar(ソアー)で、女の子を落下しないように操作して、ひたすら上を目指すシンプルなゲームです。</p>
-
-<p>去年はこのコンテストに参加しなかったので、2年ぶりの参加でした。</p>
-
-<p>今年は<a href="http://www.ustream.tv/recorded/27086650">コンテストTV</a>などでも
-取り上げて貰えたので嬉しかったです。</p>
-
-<p>(開発期間が本当に3日くらいだったので、)不具合などを修正したら、
-ソースコードなどもGitHubなどに公開する予定です。</p>
-
-<p>技術的な点だと、キャラクターの移動の計算に速度を使ったり、
-床の移動に三角関数を用いたりして、滑らかな動きを実現しました。</p>
-
-<p>久しぶりにHSPを触りましたが、やっぱりこのくらいの規模のゲームを
-サクッと作るにはとても便利な言語ですね。</p>
-
-<p>最近ではJavaScriptに変換できたり、
-スマートフォン上にも簡単に移植できるようになっているようなので、
-期待が高まります。</p>
-
-<p>コンテストの主催者の方、審査員の方、協賛の方、Soarを遊んで下さった方、
-関係者さんに感謝です。来年も参加したいと思います。</p>
-
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2012/12/11/hsp-contest2012/" class="btn btn-primary btn-outline">
                 Read more
             </a>
         </p>

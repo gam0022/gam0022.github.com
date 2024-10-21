@@ -124,6 +124,195 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2016/04/09/qiita-raymarching/" itemprop="url">GPUをつかったリアルタイムなレイトレーシング</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2016-04-09 18:03:00 &#43;0900 JST" itemprop="datePublished">2016-04-09</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/webgl">WebGL</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/cg">CG</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%9e%e3%83%bc%e3%83%81%e3%83%b3%e3%82%b0">レイマーチング</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                <p>Qiitaに「GPUをつかったリアルタイムなレイトレーシング」の記事を2つ投稿しました。</p>
+
+<p>実際に動作するものはコチラです。WebGLなのでブラウザでそのまま動作します。</p>
+
+<ul>
+<li><a href="http://gam0022.net/webgl/#raymarching_reflect">reflect</a></li>
+<li><a href="http://gam0022.net/webgl/#raytracing_gem">gem</a></li>
+</ul>
+
+<p><blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Three.jsからGPUをつかったリアルタイムなレイトレーシング！<a href="https://t.co/zu5v2NXXeq">https://t.co/zu5v2NXXeq</a><br>WebGL Advent Calendar 15日目の記事です。 <a href="https://t.co/mwFZrFjJdf">pic.twitter.com/mwFZrFjJdf</a></p>&mdash; がむ (@gam0022) <a href="https://twitter.com/gam0022/status/676564561034481664">2015年12月15日</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p><blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">これがGPUの力！three.jsによるレイトレーシング 〜宝石編〜<a href="https://t.co/dU4bQOnpPg">https://t.co/dU4bQOnpPg</a><br>屈折のあるレイトレーシングをGLSLのフラグメントシェーダで実装した話を書きました。 <a href="https://t.co/HnEMg7mUwP">pic.twitter.com/HnEMg7mUwP</a></p>&mdash; がむ (@gam0022) <a href="https://twitter.com/gam0022/status/692856764081897472">2016年1月28日</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p>レイトレーシングは膨大な計算が必要で、一般的にはリアルタイムに行うことは困難です。</p>
+
+<p>WebGLのフラグメントシェーダでレイトレーシングを実装することで、GPUの力を利用してリアルタイムに処理しようというものです。</p>
+
+<p>記事で紹介している例は、iPhone6のような携帯端末でもリアルタイムに動作するくらい軽量です。</p>
+
+<p>さらに面白い特徴として、ラスタライザでは難しい、相互の鏡面反射、2回以上の屈折、無限の繰り返しも実現しています。</p>
+
+<p>ラスタライザで鏡面反射するためには、<a href="https://wgld.org/d/webgl/w044.html">キューブ環境マッピング</a>がよく用いられます。
+環境マッピングとは、周囲の景色を立方体のテクスチャに入れておいて、それを参照して反射して写り込んだ景色をフェッチします。
+しかし、環境マッピングだけでは、床も球体も鏡面反射するような、相互に鏡面反射するシーンは実現できません。</p>
+
+<p>また屈折も環境マッピングで実現できるのですが、<a href="http://www.4gamer.net/games/032/G003263/20130207052/">環境マッピングで2回以上の屈折させるのは難しい課題</a>になります。</p>
+
+<p>レイトレーシングではカメラからスクリーンの全ピクセルに対して光のシュミレーションをするため、
+環境マッピングでは難しかった鏡面反射や屈折の問題を簡単に解決できるというわけです！</p>
+
+<p>1つ目の記事ではレイトレーシングではなく、厳密にはレイマーチングを使っています。
+レイマーチングはレイトレーシングの1種です。レイマーチングでは、シーンを距離関数で定義します。
+シーンを距離関数で定義することで、<code>mod</code> 演算を利用した物体を無限に繰り返すことができます。</p>
+
+<p>昔はレイトレーシングで1枚の絵を描画するために一晩のような長い時間が必要でした。
+それが今やリアルタイムにWebブラウザ上で動作するなんて、すごい時代になりましたね。</p>
+
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2016/04/09/qiita-raymarching/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/" itemprop="url">#TokyoDemoFest 2016 の GLSL Graphics Compo で3位入賞！</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2016-02-24 08:19:00 &#43;0900 JST" itemprop="datePublished">2016-02-24</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/event">event</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/demo">demo</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/cg">CG</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                <h1 id="はじめに">はじめに</h1>
+
+<p>2016-02-20〜21に開催された<a href="http://tokyodemofest.jp/2016/">Tokyo Demo Fest 2016</a>に参加しました。</p>
+
+<p>Tokyo Demo Festとは、このようなイベントです（公式ページからの引用）。</p>
+
+<blockquote>
+<p>Tokyo Demo Fest は日本で唯一のデモパーティです。 デモパーティは、コンピュータを用いたプログラミングとアートに 興味のある人々が日本中、世界中から一堂に会し、 デモ作品のコンペティションやセミナーなどを行います。 また、イベント開催中は集まった様々な人たちとの交流が深められます。</p>
+</blockquote>
+
+<p>私は&rdquo;Carbon&rdquo;という作品をGLSL Graphics Compoに提出して、3位入賞してきました！</p>
+
+<p>さらに、<a href="threejs.org">three.js</a>の作者であり、<a href="http://glslsandbox.com/">GLSL Sandbox</a>の作者でもある<a href="http://mrdoob.com/">Mr.Doob</a>と握手してきました！</p>
+
+<p>今回が初参加でしたが、本当に最高のイベントでした！楽しかったです。
+オーガナイザーのみなさん、参加者のみなさん、ありがとうございました！</p>
+
+<p>全体のレポートについては、<a href="https://twitter.com/h_doxas">@h_doxas</a>さんの記事がとても分かりやすいです。</p>
+
+<p><blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">WebGL 総本山を更新しました ＞ 超ハイレベルな作品が入り乱れた Tokyo Demo Fest 2016！ 大興奮の２日間をレポート！ - WebGL 総本山 <a href="https://t.co/ZeYrYoLiz2">https://t.co/ZeYrYoLiz2</a> <a href="https://t.co/e3XFwpIrCD">pic.twitter.com/e3XFwpIrCD</a></p>&mdash; h_doxas (@h_doxas) <a href="https://twitter.com/h_doxas/status/701988774117376004">2016, 2月 23</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p>この記事では、GLSL Graphics Compoで発表した&rdquo;Carbon&rdquo;という作品の裏話と、個人的に印象に残った思い出などを話します。</p>
+
+<h1 id="carbon-製作秘話">Carbon 製作秘話</h1>
+
+<p>Compo（コンポ）とは、一定の制約の中で映像や音楽の作品を製作し、投票によって順位をつけるイベントです。</p>
+
+<p>今年のGLSL Graphics Compoでは、<a href="http://glslsandbox.com/">GLSL Sandbox</a>上で動作する映像作品の順位を競いました。</p>
+
+<p>GLSL Sandboxで動作させるためには、フラグメントシェーダだけで作品を実装する必要があります。
+当然ですが、立体データや画像データは読み込めないので、コードだけでなんとかする必要があります。</p>
+
+<p>私は&rdquo;Carbon&rdquo;というタイトルで作品を提出して3位入賞しました。
+今年のGLSL Graphics Compoはレベルが高かったので、入賞できて嬉しかったです。</p>
+
+<p>コチラから動くデモをご覧になれます！</p>
+
+<ul>
+<li><a href="https://www.shadertoy.com/view/MsG3Wy">Shadertoy - Carbon [TDF2016] - Final Version</a></li>
+<li><a href="http://glslsandbox.com/e#30972.0">GLSL Sandbox - Carbon - TDF Submited Version</a></li>
+</ul>
+
+<!--[Carbon](/images/posts/2016-02-24-tokyo-demo-fest/carbon-blue.png)-->
+
+<p><img src="/images/posts/2016-02-24-tokyo-demo-fest/carbon-neo-blue.png" alt="Carbon - Blue" />
+<img src="/images/posts/2016-02-24-tokyo-demo-fest/carbon-neo-green.png" alt="Carbon - Green" />
+<img src="/images/posts/2016-02-24-tokyo-demo-fest/carbon-neo-red.png" alt="Carbon - Red" />
+<img src="/images/posts/2016-02-24-tokyo-demo-fest/carbon-neo-violet.png" alt="Carbon - Violet" /></p>
+
+<p><blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">GLSL Compo に 「Carbon」という作品を出しました！<a href="https://t.co/UOqE3FvFyW">https://t.co/UOqE3FvFyW</a><a href="https://t.co/JxkH3LtI4t">https://t.co/JxkH3LtI4t</a><a href="https://twitter.com/hashtag/TokyoDemoFest?src=hash">#TokyoDemoFest</a> <a href="https://t.co/yfkJBzQllD">pic.twitter.com/yfkJBzQllD</a></p>&mdash; がむ@TDF最高だった (@gam0022) <a href="https://twitter.com/gam0022/status/701327225224736768">2016, 2月 21</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p><blockquote class="twitter-tweet" data-conversation="none" data-lang="ja"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/TokyoDemoFest?src=hash">#TokyoDemoFest</a> の &quot;Carbon&quot; の回路にglow効果をつけたのでスクショ撮り直した。Shadertoyにも反映。<a href="https://t.co/zeIZhsc8zT">https://t.co/zeIZhsc8zT</a> <a href="https://t.co/Q4UKTCfAsP">pic.twitter.com/Q4UKTCfAsP</a></p>&mdash; がむ@TDF最高だった (@gam0022) <a href="https://twitter.com/gam0022/status/703612944903372800">2016年2月27日</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p><blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">私の「Carbon」が GLSL Compo で入賞しました👏<br>ありがとうございます！ <a href="https://twitter.com/hashtag/TokyoDemoFest?src=hash">#TokyoDemoFest</a><a href="https://t.co/f7LoEYWzFq">https://t.co/f7LoEYWzFq</a> <a href="https://t.co/SIel9DKA6n">pic.twitter.com/SIel9DKA6n</a></p>&mdash; がむ@TDF最高だった (@gam0022) <a href="https://twitter.com/gam0022/status/701362103928487937">2016年2月21日</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p>今回もレイマーチングによる作品です。</p>
+
+<p>距離関数（distance function）は、Mandelboxというフラクタル図形を mod でループさせただけなので、非常にお手軽です。</p>
+
+<p>
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2016/02/16/glsl-tech/" itemprop="url">GLSL シェーダテクニック勉強会 #GLSLTechで登壇しました</a></h3>
         
 
@@ -557,115 +746,6 @@ chokudaiさんの生コーディングが見れたり、iwiwiさんのサイン�
         </div>
         <p class="read-more">
             <a href="https://gam0022.net/blog/2014/08/03/klab-alm/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2014/08/03/coins-lt-0/" itemprop="url">coinsLT #0 で発表しました</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2014-08-03 11:03:00 &#43;0900 JST" itemprop="datePublished">2014-08-03</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/%e5%8b%89%e5%bc%b7%e4%bc%9a">勉強会</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/javascript">JavaScript</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                <a href="https://atnd.org/events/51236">coinsLT #0</a> で three.js についてのLTをしました。</p>
-
-<p><iframe src="//www.slideshare.net/slideshow/embed_code/35917660" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/shohosoda9/threejs-35917660" title="three.js の紹介" target="_blank">three.js の紹介</a> </strong> from <strong><a href="http://www.slideshare.net/shohosoda9" target="_blank">Sho Hosoda</a></strong> </div></p>
-
-<p>
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2014/08/03/coins-lt-0/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2014/06/15/javascript-and-coffeescript/" itemprop="url">JavaScriptとCoffeeScriptのメモ</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2014-06-15 06:50:00 &#43;0900 JST" itemprop="datePublished">2014-06-15</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/javascript">JavaScript</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/coffeescript">CoffeeScript</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/rails">Rails</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                <h1 id="はじめに">はじめに</h1>
-
-<p>卒研で <a href="http://threejs.org/">three.js</a> という3DCGのライブラリを使って何か開発することしたので、JavaScript について勉強しました。</p>
-
-<p>また、CoffeeScript という、コンパイルするとJavaScriptのコードに変換される言語についても使ってみることにしたので、
-これについても勉強しました。</p>
-
-<p>忘れてしまうと勿体無く思うので、備忘録です。</p>
-
-<p>この記事では、</p>
-
-<ol>
-<li>JavaScriptを勉強する上で重要だと思われる概念</li>
-<li>CoffeScript の学び方</li>
-<li>Rails で CoffeeScript を使う時のメモ</li>
-</ol>
-
-<p>を紹介します。</p>
-
-<p>
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2014/06/15/javascript-and-coffeescript/" class="btn btn-primary btn-outline">
                 Read more
             </a>
         </p>
