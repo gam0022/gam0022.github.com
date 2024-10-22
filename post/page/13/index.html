@@ -124,6 +124,64 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/12/26/x86-addressing-mode/" itemprop="url">x86のアドレッシングモードでハマった</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2012-12-26 23:05:00 &#43;0900 JST" itemprop="datePublished">2012-12-26</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/x86">X86</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%82%a2%e3%82%bb%e3%83%b3%e3%83%96%e3%83%a9">アセンブラ</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e6%a9%9f%e6%a2%b0%e8%aa%9e%e5%ba%8f%e8%ab%96">機械語序論</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                なぜx86 大学の機械語序論という授業でx86(x86_64ではない)でアセンブラを書いています。
+x86のアドレッシングモードが難しかったので復習を兼ねてまとめます。
+やりたかったこと 授業でfib(10)を求めてebxに格納する課題がありました。
+方針としては、aというシンボルのデータ領域を、アドレッシングモードを使って配列のように扱い、 フィボナッチ数列を計算することにしました。
+わかりやすくRubyで書くとこんな方針です。</p>
+
+<h1 id="fib-rb-a-1-1-0-0-0-0-0-0-0-0-0-8-each-i-a-i-2-a-i-1-a-i-puts-a-10-アセンブラでa-i-2-やa-i-1-を参照する必要があったので-アドレッシングモードを利用したいと思ったわけです">fib.rb a = <a href="0..8">1, 1, 0, 0, 0, 0, 0, 0, 0, 0</a>.each {|i| a[i+2] = a[i+1] + a[i]} puts a[10]  アセンブラでa[i+2]やa[i+1]を参照する必要があったので、 アドレッシングモードを利用したいと思ったわけです。</h1>
+
+<p>x86のアドレッシングモード 授業の資料によると、x86 では、以下のアドレッシングができるそうです。
+BASE+(INDEX*SCALE)+DISPLACEMENT   DISPLACEMENT: アドレス、もしくはベースレジスタからのオフセットを示す。定数。 BASE: ベースレジスタ INDEX: インデックスレジスタ、配列の添え字のようなもの SCALE: 2,4,8 のいずれか。配列要素のサイズを指定する。  そして、これを次のように記述するらしいです。
+DISPLACEMENT(BASE, INDEX, SCALE)  注意点 ここがポイントなのですが、
+アドレッシングモードを利用するときには必ず型を守らなくてはいけません。
+特に、 BASEをレジスタにするのを忘れて エラーになるケースが多いような気がします。
+コンパイラはjunk errorとか適当なエラーメッセージしか出してくれないので、 何がいけないのか分からずに苦労しました。
+ DISPLACEMENTには定数を指定する。 BASEとINDEXにはレジスタを指定する。 DISPLACEMENTはバイト単位(long型の配列なら、添字*4を指定する)。  これらを踏まえると、%eaxにインデックス、%ecxに配列arrayの先頭アドレスを格納したとき、 array[%eax+2]を参照するためには、次のようにする必要がありました。
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2012/12/26/x86-addressing-mode/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/12/19/javac/" itemprop="url">Mac OS Xでjavacやjavaで文字化けした場合の対処</a></h3>
         
 
@@ -760,63 +818,6 @@ desc &quot;Deploy website via rsync&quot; task :rsync do exclude = &quot;&quot; 
         </div>
         <p class="read-more">
             <a href="https://gam0022.net/blog/2012/08/11/use-rsync-iconv-option/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/08/10/make-categories-on-otcpress/" itemprop="url">Octopressでカテゴリーの一覧みたいのを実装する</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2012-08-10 12:24:00 &#43;0900 JST" itemprop="datePublished">2012-08-10</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/octopress">Octopress</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/%e6%97%a5%e6%9c%ac%e8%aa%9e">日本語</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%82%b4">ゴ</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                Octopressはそれなりに高機能なのにも関わらず、なぜかカテゴリーの一覧を表示する機能がありませんでした。
-仕方ないので、自分で実装することにしました。
-今回の記事は、次の画像のようなカテゴリーの一覧をサイドバーに表示するまでのメモです。
-前提知識として、Octopressのサイドバーをカスタマイズするためには、次の2つの作業が必要です。 ここでは、categoriesという名前のサイドバーを追加します。
- source/_includes/asides/categories.htmlというファイルを作る。 _config.ymlのdefault_asides:にasides/categories.htmlを加える。ex.  あとは、1,のsource/_includes/asides/categories.htmlにカテゴリーの一覧を表示する機能をうまく実装しなくてはなりません。
-siteというグローバル変数のダンプを手がかりに、site.categoriesというハッシュが存在することがわかりました。
-JekyllのLiquidテンプレートエンジンの文法がよくわからないので、以下のサイトなどを参考にして学習しました。
- <a href="http://wiki.shopify.com/UsingLiquid">http://wiki.shopify.com/UsingLiquid</a> <a href="http://melborne.github.com/2012/05/13/first-step-of-jekyll/">http://melborne.github.com/2012/05/13/first-step-of-jekyll/</a> for item in hash すると、item[0]にキー名、item[1]に値が入る  しかし、site.categoriesはカテゴリー名をキーとして値が記事の本文のHTMLへの参照(?)の配列としたハッシュになっており、 そのままではURLが取得できず、カテゴリー名からURLに変換する処理をLiquidの文法だけで実装するのは無理だと気が付きました。
-で、どうしたかというと、Liquidを拡張しました。Jekyll::Filtersにメソッドを定義すると、Liquidからそのメソッドを呼び出せるようになります。
-最終的に、_config.ymlを編集後、 source/_includes/asides/categories.htmlとplugins/category_generator.rbを次のようにしたら、うまくいきました。
-source/_includes/asides/categories.html source/_includes/asides/categories.html はこれだけです。
-{.{ の.は消してください。
-&lt;section class=&quot;well&quot;&gt; &lt;ul id=&quot;categorys&quot; class=&quot;nav nav-list&quot;&gt; &lt;li class=&quot;nav-header&quot;&gt;Categorys&lt;/li&gt; {.{ site.categories | site_categories_links }} &lt;/ul&gt; &lt;/section&gt;  plugins/category_generator.rb plugins/category_generator.rbのJekyll::Filtersにsite_categories_linksというメソッドを追加します。
-module Jekyll module Filters # Outputs a list of categories as comma-separated &lt;a&gt; links. This is used # to output the category list for site&rsquo;s all categories.
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2012/08/10/make-categories-on-otcpress/" class="btn btn-primary btn-outline">
                 Read more
             </a>
         </p>

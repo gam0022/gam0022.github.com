@@ -124,6 +124,96 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2019/03/04/porting-from-shadertoy-to-glslsandbox/" itemprop="url">先頭にコピペするだけ！Shadertoy → GLSL Sandbox / NEORT の移植用ヘッダーコードの紹介</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2019-03-04 09:01:07 &#43;0900 JST" itemprop="datePublished">2019-03-04</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/glsl">GLSL</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e5%b0%8f%e3%83%8d%e3%82%bf">小ネタ</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%9e%e3%83%bc%e3%83%81%e3%83%b3%e3%82%b0">レイマーチング</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/shadertoy">Shadertoy</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/glsl-snadbox">GLSL Snadbox</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/neort">NEORT</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                更新履歴</p>
+
+<ul>
+<li>2021-11-16 backbufferとマウスの対応</li>
+<li>2023-05-02 twigl(classic 300es)について追記</li>
+</ul>
+
+<p><a href="https://www.shadertoy.com/">Shadertoy</a>のコードを<a href="http://glslsandbox.com/">GLSL Sandbox</a>に一発で移植するコードを思いつきました。</p>
+
+<p>以下のコードをShadertoyのコードの先頭にコピペするだけで、元のコードには一切手を加えずにGLSL Sandbox用のコードに変換できます。</p>
+
+<pre><code class="language-cpp">// BEGIN: shadertoy porting template
+// https://gam0022.net/blog/2019/03/04/porting-from-shadertoy-to-glslsandbox/
+precision highp float;
+
+uniform vec2 resolution;
+uniform float time;
+uniform vec2 mouse;
+uniform sampler2D backbuffer;
+
+#define iResolution resolution
+#define iTime time
+#define iMouse (vec4(mouse, 0.5, 0.5) * resolution.xyxy)
+#define iChannel0 backbuffer
+#define texture texture2D
+
+void mainImage(out vec4 fragColor, in vec2 fragCoord);
+
+void main(void) {
+    vec4 col;
+    mainImage(col, gl_FragCoord.xy);
+    gl_FragColor = col;
+}
+// END: shadertoy porting template
+</code></pre>
+
+<p>Shadertoyのマルチパスやテクスチャ機能をつかったShaderの移植はできませんが、普通の1パスのShaderなら移植できると思います。</p>
+
+<p>ぜひ使ってみてください！</p>
+
+<p>
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2019/03/04/porting-from-shadertoy-to-glslsandbox/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2018/12/24/vscode-glslsandbox/" itemprop="url">GLSL Compoに役立つ！GLSL Sandbox互換のVSCode拡張『Shader Toy』の紹介</a></h3>
         
 
@@ -782,66 +872,6 @@ SIGGRAPH 2017で発表された研究者など、グラフィック分野の最�
         </div>
         <p class="read-more">
             <a href="https://gam0022.net/blog/2017/12/11/get-ray-from-camera-matrix/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2017/11/17/https-support/" itemprop="url">Let&#39;s EncryptでHTTPS対応しました</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2017-11-17 10:13:23 &#43;0900 JST" itemprop="datePublished">2017-11-17</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/conoha">ConoHa</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/ubuntu">Ubuntu</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/nginx">nginx</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/https">HTTPS</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/http2">HTTP2</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%96%e3%83%ad%e3%82%b0%e9%81%8b%e5%96%b6">ブログ運営</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                当サイト（<a href="https://gam0022.net/">gam0022.net</a>）を<a href="https://letsencrypt.org/">Let&rsquo;s Encrypt</a>でHTTPS対応しました。</p>
-
-<p><img src="/images/posts/2017-11-15-https-support.png" alt="HTTP対応" /></p>
-
-<p>Let&rsquo;s EncryptによるHTTPSの設定はcertbotというコマンドラインツールを利用しました。
-nginxの設定変更でHTTP/2対応もできました。
-どちらも驚くほど簡単で拍子抜けしました。</p>
-
-<p>はてなブックマークの数が0にリセットされてしまいましたが、仕方がないので諦めました。</p>
-
-<p>
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2017/11/17/https-support/" class="btn btn-primary btn-outline">
                 Read more
             </a>
         </p>

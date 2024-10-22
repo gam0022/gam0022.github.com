@@ -7,8 +7,374 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>&amp;copy; 2021 gam0022</copyright>
-    <lastBuildDate>Mon, 21 Oct 2024 13:10:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 23 Oct 2024 00:50:00 +0900</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>レイトレ合宿10でポータルをテーマにしたアニメーションを作成しました</title>
+      <link>https://gam0022.net/blog/2024/10/23/rtcamp10/</link>
+      <pubDate>Wed, 23 Oct 2024 00:50:00 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2024/10/23/rtcamp10/</guid>
+      <description>&lt;p&gt;10月11日(金)～10月13日(日)に熱海の初島で開催された&lt;a href=&#34;https://sites.google.com/view/rtcamp10&#34;&gt;レイトレ合宿10&lt;/a&gt;に参加しました。&lt;/p&gt;
+
+&lt;p&gt;私はポータルをテーマにしたアニメーションを作成しました。&lt;/p&gt;
+
+&lt;p&gt;前半はプリミティブな屋内シーン、後半はレイマーチングを用いた複雑なジオメトリーの屋外シーンと、対照的な2つのシーンを作成しました。&lt;/p&gt;
+
+&lt;p&gt;水銀のような不思議な球体がポータルで2つのシーンを移動するという、少しストーリー性のあるアニメーションを目指しました。&lt;/p&gt;
+
+&lt;p&gt;自作のレンダラーで &lt;strong&gt;256秒の制限時間&lt;/strong&gt; でレンダリングして同率6位（22人中）をいただきました！&lt;/p&gt;
+
+&lt;p&gt;次の動画は合宿運営側で制限時間内にレンダリングしたものです。&lt;/p&gt;
+
+&lt;video playsinline=&#34;&#34; loop=&#34;&#34; muted=&#34;&#34; controls=&#34;&#34; width=&#34;100%&#34; src=&#34;https://gam0022.net/images/posts/2024-10-20-rtcamp10/redflash_gam0022_gpu.mp4&#34; poster=&#34;/images/posts/2024-10-20-rtcamp10/200.jpg&#34;&gt;&lt;/video&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; 10に参加して、同率6位でした！&lt;br&gt;&lt;br&gt;添付の動画は、制限時間256秒で実際にレンダリングされたものです。&lt;br&gt;&lt;br&gt;ポータル用のBSDFを実装し、レンダラー本体のポータル専用処理を最小限に抑えました。&lt;br&gt;&lt;br&gt;今年もレイマーチングとポリゴンが混在するシーンに対応しました！&lt;br&gt;&lt;br&gt;みなさまお疲れ様でした！ &lt;a href=&#34;https://t.co/fzaxSYTA6C&#34;&gt;pic.twitter.com/fzaxSYTA6C&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845357806406283371?ref_src=twsrc%5Etfw&#34;&gt;October 13, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;時間制限なしで、「4K解像度 + 0.5倍速 + 最後のフェードアウト演出あり」でレンダリングした動画をYouTubeにアップロードしました。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/AvjOInfFRh0?si=kYcDkfmNEN9tltjV&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&#34;レイトレ合宿とは&#34;&gt;レイトレ合宿とは？&lt;/h1&gt;
+
+&lt;p&gt;レイトレ合宿は、オフラインレンダリングのオフライン集会です。&lt;/p&gt;
+
+&lt;p&gt;この合宿の本戦では、参加者が自作のオフラインレンダラーを用いて、美しいレンダリング画像を競い合います。
+参加者は自分の技術力と創造力を駆使して、他にはない独自のレンダラーを開発します。&lt;/p&gt;
+
+&lt;p&gt;毎年レンダリングの制限時間が短縮されるため、その制限の中でどれだけ高品質な動画（もしくは画像）を生成できるかが試されます。&lt;/p&gt;
+
+&lt;p&gt;合宿は本戦だけでなく、セミナーやレクリエーションも充実しており、参加者同士の交流や知識の共有も行われます。
+セミナーでは最新の技術動向やトレンドが紹介され、レクリエーションではレイトレに関連するユニークな内容が催されます。&lt;/p&gt;
+
+&lt;p&gt;なお、開催地は毎年ランダムにサンプリングされます。
+去年のお寺での質素な合宿とは対照的に、今年は熱海の初島のリゾートホテルでのラグジュアリーな合宿でした。分散は高そうです。&lt;/p&gt;
+
+&lt;p&gt;去年のレポートはこちらです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gam0022.net/blog/2023/09/20/rtcamp9/&#34;&gt;レイトレ合宿9で4次元立方体をテーマにしたアニメーションを作成しました | gam0022.net&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;天候にも恵まれて、島や海の風景はとても綺麗でした。&lt;/p&gt;
+
+&lt;p&gt;当日の詳細な様子については、&lt;a href=&#34;https://x.com/TTRS_Yoshi_CG&#34;&gt;@TTRS_Yoshi_CG&lt;/a&gt;さんによるレポートがとても参考になります。
+ぜひ合わせて読んでください。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;はてなブログに投稿しました&lt;br&gt;レイトレ合宿10参加記 - TTRS_Yoshiのブログ &lt;a href=&#34;https://t.co/mMWUlTnqWK&#34;&gt;https://t.co/mMWUlTnqWK&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E3%81%AF%E3%81%A6%E3%81%AA%E3%83%96%E3%83%AD%E3%82%B0?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#はてなブログ&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yoshi’s Dreann (@TTRS_Yoshi_CG) &lt;a href=&#34;https://twitter.com/TTRS_Yoshi_CG/status/1846405469507932193?ref_src=twsrc%5Etfw&#34;&gt;October 16, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;本戦の自作レンダラーの紹介&#34;&gt;本戦の自作レンダラーの紹介&lt;/h1&gt;
+
+&lt;p&gt;GPUレンダラーをOptiXで開発しました。レンダラーの名前はredflashです。&lt;/p&gt;
+
+&lt;p&gt;こちらがレンダラーのプレゼン資料です。&lt;/p&gt;
+
+&lt;div class=&#34;google-slide-wrap&#34;&gt;
+&lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vTJxINrFwO7x5cMHgml-DDgPCS125yE1vM0-vys5lddcUguCEWK8u4TkFD6qZiSsQPnokoseKHZ4JP6/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;1440&#34; height=&#34;839&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.google.com/presentation/d/1IRcyHyze1QlRMq5KFJQLhltmN2310svw-IMybdgobKY/edit#slide=id.gbd0ef54b81_0_79&#34;&gt;Google Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://speakerdeck.com/gam0022/rtcamp10&#34;&gt;Speaker Deck&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;レンダラーのGitHubリポジトリはこちらです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gam0022/redflash_rtcamp10&#34;&gt;github.com/gam0022/redflash_rtcamp10&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;本戦の実行環境&#34;&gt;本戦の実行環境&lt;/h2&gt;
+
+&lt;p&gt;レイトレ合宿10の本戦では、AWSのEC2環境上で自作のレンダラーを実行する必要があります。インスタンスタイプの選択肢は以下の通りです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;GPUレンダラーの場合: g5.xlarge（私はこちらを選択）&lt;/li&gt;
+&lt;li&gt;CPUレンダラーの場合: c7i.metal-48xl&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;昨年は2台のインスタンスが利用できましたが、今年はシンプルに1台構成に戻りました。&lt;/p&gt;
+
+&lt;p&gt;1台に戻った理由は聞いていませんが、レンダラーの実行が複雑すぎたからかもしれません。&lt;/p&gt;
+
+&lt;p&gt;詳細なレギュレーションは&lt;a href=&#34;https://github.com/shocker-0x15/rtcamp10_setup/blob/main/exec_env_spec.md&#34;&gt;こちら&lt;/a&gt;に記載があります。&lt;/p&gt;
+
+&lt;h2 id=&#34;ポータルの実装&#34;&gt;ポータルの実装&lt;/h2&gt;
+
+&lt;p&gt;今年は「ポータル」をテーマに選びました。&lt;/p&gt;
+
+&lt;p&gt;他の人と被らなそうな、ビジュアル的にも面白いテーマを選んだつもりでしたが、3位のSamuelさんとテーマが被ってしまったのは予想外でした。&lt;/p&gt;
+
+&lt;p&gt;ポータルの実装方法としてはシンプルなアプローチを取りました。2つのシーンを用意し、レイがポータルを通過することでシーンをトグルさせるようにしました。&lt;/p&gt;
+
+&lt;p&gt;ポータル用のBSDFを用意し、シーンの切り替えはBSDF内で行うことで、レンダラー本体のポータル専用処理を最小限に抑えました。&lt;/p&gt;
+
+&lt;p&gt;箇条書きにすると、以下の流れです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;シーンを2つ用意
+
+&lt;ul&gt;
+&lt;li&gt;OptiXのSceneGraphを2つ用意&lt;/li&gt;
+&lt;li&gt;scene0（前半の屋内）とscene1（後半の屋外）&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;rtPayload構造体にscene_idを定義
+
+&lt;ul&gt;
+&lt;li&gt;scene_idでトレースするシーンを切り替え&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ポータル用の特殊なBSDFを用意
+
+&lt;ul&gt;
+&lt;li&gt;レイは直進させる&lt;/li&gt;
+&lt;li&gt;scene_idを0と1で反転させる&lt;/li&gt;
+&lt;li&gt;BSDF実装の補足
+
+&lt;ul&gt;
+&lt;li&gt;closest_hit 関数の定義は共通&lt;/li&gt;
+&lt;li&gt;BSDFのサンプル方向・pdf計算をCallableProgramで切り替えできる設計&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;この手法はとくに参考にしたものはなく、脳内のアイデアをそのまま実装したところ、2日程度で実現できました。&lt;/p&gt;
+
+&lt;p&gt;2つのシーン間でレイが接続されているため、外の景色が床のエリアライトとして反映されます。こちらはスライド用にレンダリングした画像です。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2024-10-20-rtcamp10/portal.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2024-10-20-rtcamp10/portal.jpg&#34; alt=&#34;ポータルのエリアライト&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;前半の屋内シーンについて&#34;&gt;前半の屋内シーンについて&lt;/h2&gt;
+
+&lt;p&gt;デノイザーを活用しているとはいえ、ノイズがほとんどない綺麗なレンダリング結果にできました。その点については非常に満足しています。&lt;/p&gt;
+
+&lt;p&gt;屋内シーンのエリアライトについては、当初&lt;a href=&#34;https://gam0022.net/blog/2024/08/15/ltc-shader/&#34;&gt;LTC（Linearly Transformed Cosines）&lt;/a&gt;の利用も検討しましたが、
+通常のパストレーシングでも十分に綺麗にレンダリングできることが分かったため、今回はLTCを使用しませんでした。&lt;/p&gt;
+
+&lt;p&gt;ポリゴン数の少ないシンプルなシーンにしたため、レイのサンプリング回数を十分に稼ぐことができました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2024-10-20-rtcamp10/scene0.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2024-10-20-rtcamp10/scene0.gif&#34; alt=&#34;前半シーンのライトのアニメーション&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;部屋のMeshなどはBlenderのGeometry Nodesを使用してPlaneを押し出すことで簡単に作成しました。&lt;/p&gt;
+
+&lt;p&gt;レイトレ合宿とは関係ありませんが、BlenderのGeometry Nodesを実験していた様子です。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;zh&#34; dir=&#34;ltr&#34;&gt;Blender Geometry Nodes 完全理解！（大嘘） &lt;a href=&#34;https://t.co/jQEeCpACL8&#34;&gt;pic.twitter.com/jQEeCpACL8&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1841129249979449510?ref_src=twsrc%5Etfw&#34;&gt;October 1, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;後半の屋外シーンのレイマーチングの高速化について&#34;&gt;後半の屋外シーンのレイマーチングの高速化について&lt;/h2&gt;
+
+&lt;p&gt;レイマーチングではBVHなどの空間分割による交差判定の高速化ができないため、速度面ではかなり不利です。&lt;/p&gt;
+
+&lt;p&gt;後半のシーンを屋外にした理由は、屋外シーンなら少ないサンプリングでも高周波ノイズが目立たないだろうという思惑があったためです。&lt;/p&gt;
+
+&lt;p&gt;昨年実装した&lt;a href=&#34;https://diglib.eg.org/bitstream/handle/10.2312/egs20231014/057-060.pdf?sequence=1&amp;amp;isAllowed=y&#34;&gt;[Bán &amp;amp; Valasek 23] Automatic Step Size Relaxation in Sphere Tracing&lt;/a&gt;については、シーンとの相性が悪く、むしろ速度が落ちてしまったため、泣く泣く無効化しました。同著者のレイマーチングに関する新しい論文は今年は出ていないようでした。&lt;/p&gt;
+
+&lt;p&gt;レイマーチングのプリミティブごとに衝突条件を調整したり、epsを距離に応じてアダプティブに変更したりと地道なチューニングを行った結果、ノイズの少ない結果を得ることができました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2024-10-20-rtcamp10/1200.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2024-10-20-rtcamp10/1200.jpg&#34; alt=&#34;最後のカット&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;本戦の感想&#34;&gt;本戦の感想&lt;/h2&gt;
+
+&lt;p&gt;本戦について、今年も色々なアプローチや切り口に挑戦されている方が多く、個性を感じるレンダラーが多かったです。&lt;/p&gt;
+
+&lt;p&gt;個人的に印象的だったのは、次の3作品でした。&lt;/p&gt;
+
+&lt;h3 id=&#34;shockerさん-ボリュームメトリック-コースティクス&#34;&gt;Shockerさん：ボリュームメトリック・コースティクス&lt;/h3&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; 10終わりました～！&lt;br&gt;ボリューメトリック・スペクトラルなLVC-BPTを実装して指向性光源による光の経路の可視化・コースティクスのレンダリングを行いました。&lt;br&gt;1位でした！&lt;a href=&#34;https://t.co/gycurLPqsW&#34;&gt;https://t.co/gycurLPqsW&lt;/a&gt; &lt;a href=&#34;https://t.co/afs0U4TeZ9&#34;&gt;pic.twitter.com/afs0U4TeZ9&lt;/a&gt;&lt;/p&gt;&amp;mdash; Shocker (@Shocker_0x15) &lt;a href=&#34;https://twitter.com/Shocker_0x15/status/1845387260260474924?ref_src=twsrc%5Etfw&#34;&gt;October 13, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;shinji-ogakiさん-geometry-processing-nodesによるfur-generator&#34;&gt;Shinji Ogakiさん：Geometry Processing NodesによるFur Generator&lt;/h3&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; (Ray Tracing Camp) is an event where participants use their own renderer to generate animations within 256 seconds, competing on skill and the quality of their work.&lt;br&gt;&lt;br&gt;(&lt;a href=&#34;https://t.co/9Bj44pqBvo&#34;&gt;https://t.co/9Bj44pqBvo&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Here is my submission🙂 &lt;a href=&#34;https://t.co/uMD1wOcrEE&#34;&gt;pic.twitter.com/uMD1wOcrEE&lt;/a&gt;&lt;/p&gt;&amp;mdash; Shinji Ogaki (@ShinjiOgaki) &lt;a href=&#34;https://twitter.com/ShinjiOgaki/status/1846078025273954812?ref_src=twsrc%5Etfw&#34;&gt;October 15, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;samuel-huang-初参加-さん-ポータルと本格的に作り込まれたエディター環境&#34;&gt;Samuel Huang（初参加！）さん：ポータルと本格的に作り込まれたエディター環境&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://raytracing.jp/rtcamp10/movie/Ether__Samuel_Huang__GPU.mp4&#34;&gt;動画リンク&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;セミナー&#34;&gt;セミナー&lt;/h1&gt;
+
+&lt;p&gt;今回のレイトレ合宿10では、参加者全員（&lt;strong&gt;24人！&lt;/strong&gt;）がセミナーを発表をしました。&lt;/p&gt;
+
+&lt;p&gt;私は「つぶやきGLSL解読！」という内容で発表を行いました。&lt;/p&gt;
+
+&lt;p&gt;このセミナーでは、GLSLのコードをリアルタイムで編集しながら口頭で解説する形式を取りました。やや異色のセミナー形式をとりました。&lt;/p&gt;
+
+&lt;p&gt;スライド資料は補助的に使っただけなので、スライドの情報だけでは伝わらない部分が多いと思いますが、雰囲気だけでも伝われば幸いです。&lt;/p&gt;
+
+&lt;div class=&#34;google-slide-wrap&#34;&gt;
+&lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vSFRS9tepyqET4G_WH4masZffHYa-U8BSafrptmwePDqo59U0DMsoztnp3SWENY6DtVxDST-dloZkc7/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;1440&#34; height=&#34;839&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.google.com/presentation/d/1cyUxFuOa-5OTdOu2v9XfczwpI-HGx1c4G716FbvPez0/edit#slide=id.g27a8e85b88a_0_0&#34;&gt;Google Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://speakerdeck.com/gam0022/decode-twigl&#34;&gt;Speaker Deck&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;セミナーの感想&#34;&gt;セミナーの感想&lt;/h2&gt;
+
+&lt;p&gt;参加者のバックグラウンドもさまざまだったため、さまざまな分野の興味深い話を聞くことができて、非常に楽しかったです。&lt;/p&gt;
+
+&lt;p&gt;私は以下の3つの発表に票を入れました。&lt;/p&gt;
+
+&lt;h3 id=&#34;知られざるnanの世界-by-hole-ベストプレゼンター賞&#34;&gt;知られざるNaNの世界 by hole（🏆 ベストプレゼンター賞）&lt;/h3&gt;
+
+&lt;p&gt;NaN自体は広く知られていますが、詳しい情報については自分も含めてほとんどの人が知らないことが多かったため、非常に楽しめる発表でした。&lt;/p&gt;
+
+&lt;p&gt;発表中に「へぇ～」と心の中で20回くらい叫んでしまいました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;レイトレ合宿10でNaNとInfについての話をしました。&lt;br&gt;qNaNとsNaNの違いやNaN-Boxingといった、知ってる人にとっては常識だけど知らない人も多い、みたいな話題を取り上げました。&lt;br&gt;僕自身、まだまだ勉強中なので突っ込みください！&lt;a href=&#34;https://t.co/r05vnreh1h&#34;&gt;https://t.co/r05vnreh1h&lt;/a&gt;&lt;/p&gt;&amp;mdash; hole (@h013) &lt;a href=&#34;https://twitter.com/h013/status/1846092543773356383?ref_src=twsrc%5Etfw&#34;&gt;October 15, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;gpu-hash-tableについて-by-nishiki&#34;&gt;GPU Hash Tableについて by Nishiki&lt;/h3&gt;
+
+&lt;iframe class=&#34;speakerdeck-iframe&#34; frameborder=&#34;0&#34; src=&#34;https://speakerdeck.com/player/554aaceac0f44ec790c18bb7e33366e4&#34; title=&#34;GPU Hash Table | レイトレ合宿10&#34; allowfullscreen=&#34;true&#34; style=&#34;border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;&#34; data-ratio=&#34;1.7777777777777777&#34;&gt;&lt;/iframe&gt;
+
+&lt;h3 id=&#34;overlapped-multi-view-rendering-by-samuel-huang&#34;&gt;Overlapped Multi-View Rendering by Samuel Huang&lt;/h3&gt;
+
+&lt;p&gt;ポータルの実装についての発表でした。&lt;/p&gt;
+
+&lt;p&gt;（スライドは現時点では非公開）&lt;/p&gt;
+
+&lt;h1 id=&#34;nanを讃える歌-silent-nan&#34;&gt;NaNを讃える歌 &amp;ldquo;Silent NaN&amp;rdquo;&lt;/h1&gt;
+
+&lt;p&gt;1日目のセミナーの後、唐突に非常に眩しいケミカルライトが配られ、「NaNを讃える歌 &amp;ldquo;Silent NaN&amp;rdquo;」が流れました。&lt;/p&gt;
+
+&lt;p&gt;ペンライトを振りながらNaNを讃える歌を口ずさむ集団は、異様な光景で非常にシュールでした。&lt;/p&gt;
+
+&lt;p&gt;それに加えて、曲のクオリティも異常に高く、とても良い曲だなと思いました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;今回の &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; では &lt;a href=&#34;https://twitter.com/ykozw88?ref_src=twsrc%5Etfw&#34;&gt;@ykozw88&lt;/a&gt; さんといっしょに&amp;quot;AI&amp;quot;の力を借りてNaNを讃える歌 &amp;quot;Silent NaN&amp;quot; をつくりました&lt;a href=&#34;https://t.co/oGPaefork2&#34;&gt;https://t.co/oGPaefork2&lt;/a&gt;&lt;br&gt;&lt;br&gt;&amp;quot;No solution, just a NaN star.&amp;quot;、&amp;quot;Live with ambiguity.&amp;quot;あたりがお気に入りの歌詞です。&lt;/p&gt;&amp;mdash; hole (@h013) &lt;a href=&#34;https://twitter.com/h013/status/1845629474144141809?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;qme&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/7u0dgH8O5h&#34;&gt;pic.twitter.com/7u0dgH8O5h&lt;/a&gt;&lt;/p&gt;&amp;mdash; ハガ (@hagat) &lt;a href=&#34;https://twitter.com/hagat/status/1844748184758944240?ref_src=twsrc%5Etfw&#34;&gt;October 11, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;スポンザのジグソーパズル&#34;&gt;スポンザのジグソーパズル&lt;/h1&gt;
+
+&lt;p&gt;レイトレ合宿では、毎年ユニークなレクリエーションが開催されます。&lt;/p&gt;
+
+&lt;p&gt;今年のレクリエーションは「Sponzaのジグソーパズル」でした。&lt;/p&gt;
+
+&lt;p&gt;レクリエーションの内容は直前まで秘密にされていたため、参加者は「一体何が起きるんだろう？」という気持ちで臨むことになりました。&lt;/p&gt;
+
+&lt;p&gt;昨年は難易度が高すぎる「マテリアル神経衰弱」、過去には本格的な「レイトレ検定」などが開催されました。&lt;/p&gt;
+
+&lt;p&gt;今年は各チーム3人に分かれ、チーム対抗で「500ピースのSponzaのジグソーパズル」を1時間で組み立てるというものでした。&lt;/p&gt;
+
+&lt;p&gt;Sponzaは旗の部分は色がついているものの、影など同じような色の領域も多いため、ジグソーパズルとしての難易度は高めです。&lt;/p&gt;
+
+&lt;p&gt;500ピースのパズルを1時間で組み立てることは不可能だったので、勝敗は完成したピースの数で決めることになりました。&lt;/p&gt;
+
+&lt;p&gt;私たちのチームと優勝チームのピース数はほぼ同じだったのですが、最終的には私がチーム代表としてじゃんけんをし、敗北しました… 😭&lt;/p&gt;
+
+&lt;p&gt;今年は惜しいところまで勝ち進めていたので、非常に残念でした。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Sponzaのジグソーパズル🧩難しすぎる😱 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/NBhu0qc5mC&#34;&gt;pic.twitter.com/NBhu0qc5mC&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845004022857511076?ref_src=twsrc%5Etfw&#34;&gt;October 12, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Yoshi’s Dreamさんは帰宅後に7時間かけて完成させていました！&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Crytek Sponzaパズル(500 pieces)完成！&lt;br&gt;&lt;br&gt;所要時間: 7時間 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/0QxcQ1uvw9&#34;&gt;pic.twitter.com/0QxcQ1uvw9&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yoshi’s Dreann (@TTRS_Yoshi_CG) &lt;a href=&#34;https://twitter.com/TTRS_Yoshi_CG/status/1845715482953072906?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;全体の感想&#34;&gt;全体の感想&lt;/h1&gt;
+
+&lt;p&gt;今年も参加者の方々から多くの刺激を受けることができました！&lt;/p&gt;
+
+&lt;p&gt;本戦やセミナーで様々な知識を吸収できたことはもちろん、今年のレクリエーションもレイトレに関連したユニークな内容で非常に楽しめました。&lt;/p&gt;
+
+&lt;p&gt;素晴らしいイベントを開催してくださった運営の方々、そして他の参加者の皆さん、本当にありがとうございました！&lt;/p&gt;
+
+&lt;h1 id=&#34;初島-熱海の観光&#34;&gt;初島～熱海の観光&lt;/h1&gt;
+
+&lt;p&gt;最後にレイトレ合宿に関する主に私のツイートをまとめます。&lt;/p&gt;
+
+&lt;p&gt;今回の初島のホテルは、海や夜空の景色が絶景で、料理もとても美味しかったので、最高でした！&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;温泉シャーク♨️🦈 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/F8GEuF5Pr3&#34;&gt;pic.twitter.com/F8GEuF5Pr3&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1844582100910931976?ref_src=twsrc%5Etfw&#34;&gt;October 11, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ラーメンとザンギ食べる &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/LOrmEjZDO6&#34;&gt;pic.twitter.com/LOrmEjZDO6&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1844583043912303040?ref_src=twsrc%5Etfw&#34;&gt;October 11, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;リサとガスパール &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/PPPDzZGGRp&#34;&gt;pic.twitter.com/PPPDzZGGRp&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1844606844532293658?ref_src=twsrc%5Etfw&#34;&gt;October 11, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;部屋が広い！海が見える！ &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/uRpABVdR4W&#34;&gt;pic.twitter.com/uRpABVdR4W&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1844623714387677691?ref_src=twsrc%5Etfw&#34;&gt;October 11, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;絶景を背景にセミナー中🌅 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/vwFIYI12YM&#34;&gt;pic.twitter.com/vwFIYI12YM&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1844653730182144346?ref_src=twsrc%5Etfw&#34;&gt;October 11, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;qme&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/7u0dgH8O5h&#34;&gt;pic.twitter.com/7u0dgH8O5h&lt;/a&gt;&lt;/p&gt;&amp;mdash; ハガ (@hagat) &lt;a href=&#34;https://twitter.com/hagat/status/1844748184758944240?ref_src=twsrc%5Etfw&#34;&gt;October 11, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;zxx&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://t.co/5KWu7oEjOC&#34;&gt;pic.twitter.com/5KWu7oEjOC&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1844883945831399878?ref_src=twsrc%5Etfw&#34;&gt;October 11, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;景色が最高すぎる &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/KBGu7g02oX&#34;&gt;pic.twitter.com/KBGu7g02oX&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1844883584001396974?ref_src=twsrc%5Etfw&#34;&gt;October 11, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;朝食 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/eZ5P1ZPvuT&#34;&gt;pic.twitter.com/eZ5P1ZPvuT&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1844881535188734181?ref_src=twsrc%5Etfw&#34;&gt;October 11, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;昼ごはん &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/9OaLyMUiyj&#34;&gt;pic.twitter.com/9OaLyMUiyj&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1844945037769220497?ref_src=twsrc%5Etfw&#34;&gt;October 12, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;天気が良いので散歩が気持ちいい &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/Yw2LGzJK5G&#34;&gt;pic.twitter.com/Yw2LGzJK5G&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1844945512639889564?ref_src=twsrc%5Etfw&#34;&gt;October 12, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Sponzaのジグソーパズル🧩難しすぎる😱 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/NBhu0qc5mC&#34;&gt;pic.twitter.com/NBhu0qc5mC&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845004022857511076?ref_src=twsrc%5Etfw&#34;&gt;October 12, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;本線開始！ &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/jocWrgrieF&#34;&gt;pic.twitter.com/jocWrgrieF&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845004305322893564?ref_src=twsrc%5Etfw&#34;&gt;October 12, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;アウトドアレイトレ合宿すごすぎる🚣 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/QlcE3a72xX&#34;&gt;pic.twitter.com/QlcE3a72xX&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845027947863998899?ref_src=twsrc%5Etfw&#34;&gt;October 12, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;おはようございます🌞 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/lxNak7HakI&#34;&gt;pic.twitter.com/lxNak7HakI&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845219114056605802?ref_src=twsrc%5Etfw&#34;&gt;October 12, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;続き &lt;a href=&#34;https://t.co/DWUTWcBOSR&#34;&gt;pic.twitter.com/DWUTWcBOSR&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845224386804187525?ref_src=twsrc%5Etfw&#34;&gt;October 12, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;セミナー最終日！ &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/GWcTN1O2RG&#34;&gt;pic.twitter.com/GWcTN1O2RG&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845241098354163949?ref_src=twsrc%5Etfw&#34;&gt;October 12, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;朝食ビュッフェ &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/ObzeXIvnnb&#34;&gt;pic.twitter.com/ObzeXIvnnb&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845251310448410865?ref_src=twsrc%5Etfw&#34;&gt;October 12, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;最後のセミナーが始まっています &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/xSxlsyyKOZ&#34;&gt;pic.twitter.com/xSxlsyyKOZ&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845269552948715541?ref_src=twsrc%5Etfw&#34;&gt;October 13, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;閉会式 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/iRUy14mA6P&#34;&gt;pic.twitter.com/iRUy14mA6P&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845283790358446559?ref_src=twsrc%5Etfw&#34;&gt;October 13, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;qme&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/3k2LmCUYo5&#34;&gt;pic.twitter.com/3k2LmCUYo5&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845305806260142560?ref_src=twsrc%5Etfw&#34;&gt;October 13, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;お昼とおやつ &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/O2WsX58K3q&#34;&gt;pic.twitter.com/O2WsX58K3q&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845349276509159590?ref_src=twsrc%5Etfw&#34;&gt;October 13, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;私は延泊したので、ここからは延長戦です。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;zxx&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://t.co/1O2ZSyXJtZ&#34;&gt;pic.twitter.com/1O2ZSyXJtZ&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845620115456630793?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;バー🍷 &lt;a href=&#34;https://t.co/IsCHTNw7sy&#34;&gt;pic.twitter.com/IsCHTNw7sy&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845620403076751495?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;iPhoneで撮影できるほど星もよく見えました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;iPhone 14で撮影した星空🌌&lt;br&gt;&lt;br&gt;人工的な光源がなく、空気が綺麗で、天気が良かったので肉眼でも同じくらい星が見えました。&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/rqo99NG0oa&#34;&gt;pic.twitter.com/rqo99NG0oa&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845493218160628192?ref_src=twsrc%5Etfw&#34;&gt;October 13, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;朝食&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; 延長戦 &lt;a href=&#34;https://t.co/H56Q6kh7kr&#34;&gt;pic.twitter.com/H56Q6kh7kr&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845621303103160714?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;zxx&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://t.co/3dcfWDZWkb&#34;&gt;pic.twitter.com/3dcfWDZWkb&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845628814979928105?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;密漁禁止🈲⚠️ &lt;a href=&#34;https://t.co/G6DzzAncXP&#34;&gt;pic.twitter.com/G6DzzAncXP&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845650784169742589?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;写真だと分かりづらいですが、船の通った後の海面が周囲より明るい青色になる現象に気が付きました。
+まだまだCGで再現しきれていないネタは多そうだなという発見がありました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;さよなら初島👋 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/F5hEMEqeGB&#34;&gt;pic.twitter.com/F5hEMEqeGB&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845653815145754984?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;近距離でカモメを撮影できました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;qme&#34; dir=&#34;ltr&#34;&gt;🐦 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/JgcEnw60Pz&#34;&gt;pic.twitter.com/JgcEnw60Pz&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845656461252476936?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;スコット本店 &lt;a href=&#34;https://t.co/2Nq2U90dnh&#34;&gt;pic.twitter.com/2Nq2U90dnh&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845681195532853308?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;東京に戻る前にMOA美術館に行きました。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;MOA美術館から初島が見える &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/FPmNJWvpB8&#34;&gt;pic.twitter.com/FPmNJWvpB8&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845693313455985104?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;zxx&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://t.co/4Ub6ZScNN8&#34;&gt;pic.twitter.com/4Ub6ZScNN8&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845716710684557680?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;花弁が貝殻になってるこっちの方が分かりやすそう &lt;a href=&#34;https://t.co/YWI1Z9Prcd&#34;&gt;pic.twitter.com/YWI1Z9Prcd&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845730786382950722?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;MOA美術館、建築も見応えがあった &lt;a href=&#34;https://t.co/jFNCj0huYF&#34;&gt;pic.twitter.com/jFNCj0huYF&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845758201222123645?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;NEW ガッパ &lt;a href=&#34;https://t.co/bxMCkvFFSJ&#34;&gt;pic.twitter.com/bxMCkvFFSJ&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845761915714462109?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;初島は東京からアクセスが良く、海がとても綺麗だったので、また行きたいと思いました。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>新千歳空港国際アニメーション映画祭のNEW CHITOSE 30 Seconds部門に『Transcendental Cube』が入選しました</title>
@@ -2831,328 +3197,6 @@ PBRパラメーターを制御するだけのお手軽な実装ですが、思�
 
 &lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/normalizeFM?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#normalizeFM&lt;/a&gt; の新エピソード公開しました。&lt;br&gt;今回は &lt;a href=&#34;https://twitter.com/gam0022?ref_src=twsrc%5Etfw&#34;&gt;@gam0022&lt;/a&gt; さんをゲストに、普段の収録と比較するとかなりテックな話題に寄った感じで、深い技術の話をいろいろうかがいました。&lt;br&gt;&lt;br&gt;032. たゆまぬ努力とキャッチアップ&lt;a href=&#34;https://t.co/acML0WOwYQ&#34;&gt;https://t.co/acML0WOwYQ&lt;/a&gt;&lt;/p&gt;&amp;mdash; h_doxas (@h_doxas) &lt;a href=&#34;https://twitter.com/h_doxas/status/1582287588978618369?ref_src=twsrc%5Etfw&#34;&gt;October 18, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>レイトレ合宿8参加レポート</title>
-      <link>https://gam0022.net/blog/2022/10/17/rtcamp8/</link>
-      <pubDate>Mon, 17 Oct 2022 10:00:00 +0900</pubDate>
-      
-      <guid>https://gam0022.net/blog/2022/10/17/rtcamp8/</guid>
-      <description>&lt;p&gt;9月2日(金)～9月4日(日)に沖縄本島で開催された&lt;a href=&#34;https://sites.google.com/view/raytracingcamp8/&#34;&gt;レイトレ合宿8&lt;/a&gt;に参加しました。&lt;/p&gt;
-
-&lt;p&gt;自作のレンダラーでこんな動画を &lt;strong&gt;10分の制限時間&lt;/strong&gt; でレンダリングして5位をいただきました！&lt;/p&gt;
-
-&lt;div class=&#34;movie-wrap&#34;&gt;
-&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/c7JqEpaR658&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;レイマーチングとポリゴンをハイブリッドに描画できる単方向パストレーシングのレンダラーをOptiXで開発して16人中7位でした。&lt;br&gt;&lt;br&gt;レンダリング時間は10分（1フレーム2秒）だったので、&lt;br&gt;NEEやMISなどサンプリングの高速化も行いました。&lt;br&gt;&lt;br&gt;動画は本戦で実際に出力されたファイルです。&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/LDgKL7gLsY&#34;&gt;pic.twitter.com/LDgKL7gLsY&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1566269176314220544?ref_src=twsrc%5Etfw&#34;&gt;September 4, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;コロナの影響もあり、3年ぶりのレイトレ合宿でした…！&lt;/p&gt;
-
-&lt;p&gt;台風11号がちょうど沖縄に直撃してしまい、天候には恵まれなかったのは残念でしたが、とても充実した合宿でした。&lt;/p&gt;
-
-&lt;p&gt;合宿の様子や雰囲気を詳しく知りたい方は、Ki_NaN_komotiさんのブログ記事がオススメです。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;２週間ぐらい経ちましたがレイトレ合宿の参加レポートを書きました&lt;br&gt;&lt;br&gt;レンダラー開発記とレイトレ合宿の様子を書いています&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt;&lt;a href=&#34;https://t.co/Fhtvuz9n2H&#34;&gt;https://t.co/Fhtvuz9n2H&lt;/a&gt;&lt;/p&gt;&amp;mdash; Ki_NaN_komoti (@Kinakomoti2357) &lt;a href=&#34;https://twitter.com/Kinakomoti2357/status/1571122433763184640?ref_src=twsrc%5Etfw&#34;&gt;September 17, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;本戦用のレンダラーの解説&#34;&gt;本戦用のレンダラーの解説&lt;/h1&gt;
-
-&lt;p&gt;こちらが本戦のプレゼン資料です。&lt;/p&gt;
-
-&lt;div class=&#34;google-slide-wrap&#34;&gt;
-&lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vTTvbJ3UILqFymar8yG4VOomRdeJzfeS8zoehGZruGQCmq8A2cQ4rru3WYfZdi3xRD4PkE3yamqRHjt/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;1440&#34; height=&#34;839&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;p&gt;GitHubに&lt;a href=&#34;https://github.com/gam0022/redflash_rtcamp8&#34;&gt;リポジトリ&lt;/a&gt;も公開しています。急いで実装したので品質は低いです。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/blog/2019/09/18/rtcamp7/&#34;&gt;前回のレイトレ合宿7&lt;/a&gt;で開発したRedflashというレンダラーを動画に対応させました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/slide_p2.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/slide_p2.png&#34; alt=&#34;スライド 基本機能&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;前回までにこれらの基本的な機能は実装していました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;単方向のパストレーシング&lt;/li&gt;
-&lt;li&gt;Disney BRDF&lt;/li&gt;
-&lt;li&gt;NEE&lt;/li&gt;
-&lt;li&gt;MIS&lt;/li&gt;
-&lt;li&gt;レイマーチングの衝突判定（OptiXのカスタムプリミティブとして実装）&lt;/li&gt;
-&lt;li&gt;ACES Filmic Tone Mapping&lt;/li&gt;
-&lt;li&gt;Deep Learning Denoising（ディープラーニングによるデノイザー、OptiXを使えば簡単に利用できる）&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;今年から静止画部門が廃止されたので、動画部門への対応を行いました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;アニメーション（シーンの動的な更新）&lt;/li&gt;
-&lt;li&gt;動画のための画像の連番出力&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;レンダラーの出力設定&#34;&gt;レンダラーの出力設定&lt;/h2&gt;
-
-&lt;p&gt;出力解像度の高さ・フレーム数の多さは、分かりやすくアピールポイントになるので、ギリギリを攻めました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;解像度は1920x1080&lt;/li&gt;
-&lt;li&gt;フレーム数は300（30FPS * 10秒）&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;制限時間は10分（600秒）なので、1フレームあたりの時間は2秒でした。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;長さは3秒以上10秒以下&lt;/code&gt; というレギュレーションだったので、上限の10秒にしました。&lt;/p&gt;
-
-&lt;p&gt;パストレーシングの場合はゆったりしたアニメーションの方が映えそうなので、60FPSではなく30FPSにしました。
-普通のPCのモニターのリフレッシュレートは60Hzだと思うので、24FPSなど中途半端なのは選択肢から除外していました。&lt;/p&gt;
-
-&lt;p&gt;PNGの保存（エンコード＋ファイル保存）と、レンダリングは別スレッドで並列実行するようにしました。
-解像度は2160pにするとPNGのエンコード時間がレンダリングよりもボトルネックになるので1080pを選びました。&lt;/p&gt;
-
-&lt;p&gt;前回のレイトレ合宿7の本戦の静止画部門では、1フレームに60秒使えました。
-使える時間が30分の1まで急激に短くなったのは大変でした。&lt;/p&gt;
-
-&lt;p&gt;さらに実行環境（AWSのEC2インスタンス）も大幅にスペックダウンしていたのも痛手でした。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;p3.16xlarge（レイトレ合宿7）&lt;/li&gt;
-&lt;li&gt;g4dn.xlarge（レイトレ合宿8）&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;g4dn.xlargeではRTコアが使えるようになったようですが、レイマーチングが主なので自分の場合は恩恵があまりありませんでした…&lt;/p&gt;
-
-&lt;h2 id=&#34;optixのバージョンについて&#34;&gt;OptiXのバージョンについて&lt;/h2&gt;
-
-&lt;p&gt;今回は最新のOptiX7でレンダラーを実装しようと思ったのですが、最終的には前回と同じOptiX6で提出しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/&#34;&gt;アドベントカレンダー&lt;/a&gt;ではOptiX7で実装をしていました。&lt;/p&gt;
-
-&lt;p&gt;OptiX7ではなぜかポリゴンとレイマーチングのプリミティブを混在するとパフォーマンスが異常に悪化する問題が発生してしまい、これを解決する方法が見つからず、提出まで時間もなかったので諦めてOptiX6を採用しました。&lt;/p&gt;
-
-&lt;p&gt;もしパフォーマンスの問題を解決できたとしても、OptiX7はかなり低レイヤーのAPIになっていたので、何かしらのラッパーを開発しないと使うのは大変に思いました。セットアップするだけでもかなり大量のコードの実装が必要でした。&lt;/p&gt;
-
-&lt;h2 id=&#34;アニメーション要素&#34;&gt;アニメーション要素&lt;/h2&gt;
-
-&lt;p&gt;10秒の尺に3種類のアニメーション要素を詰め込みました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ライトのアニメーション&lt;/li&gt;
-&lt;li&gt;レイマーチングのパラメーターのアニメーション&lt;/li&gt;
-&lt;li&gt;マテリアルのアニメーション&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;動画の内容もそれぞれのアニメーションの要素を1つ1つ紹介するような感じにしました。&lt;/p&gt;
-
-&lt;h3 id=&#34;ライトのアニメーション&#34;&gt;ライトのアニメーション&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/light_animation_960.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/light_animation_960.gif&#34; alt=&#34;ライトのアニメーション&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;2つのポイントライトをアニメーションしました。&lt;/p&gt;
-
-&lt;p&gt;OptiX6系では以下のようにmarkDirtyしてからlaunchすることでアクセラレーション構造を更新できました。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;light_group-&amp;gt;getAcceleration()-&amp;gt;markDirty();
-light_group-&amp;gt;getContext()-&amp;gt;launch(0, 0, 0);
-
-top_group_light-&amp;gt;getAcceleration()-&amp;gt;markDirty();
-top_group_light-&amp;gt;getContext()-&amp;gt;launch(0, 0, 0);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;シーン内のプリミティブの数が少ないので、このあたりは工夫しなくてもパフォーマンス上の問題はありませんでした。&lt;/p&gt;
-
-&lt;p&gt;NEE用にライトの情報の構造体の配列（ComputeShaderのStructuredBufferのようなもの）を渡しているので、これも毎フレーム更新が必要でした。&lt;/p&gt;
-
-&lt;h3 id=&#34;レイマーチングのパラメーターのアニメーション&#34;&gt;レイマーチングのパラメーターのアニメーション&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/raymarching-animation_960.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/raymarching-animation_960.gif&#34; alt=&#34;レイマーチングのパラメーターのアニメーション&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;せっかくレイマーチングでフラクタル（Mandelboxの軽量版）を描画しているので、フラクタルのパラメーターをアニメーションさせてみました。&lt;/p&gt;
-
-&lt;p&gt;CUDAでtimeを受け取るようにして、timeを元にパラメーターをアニメーションしているだけなので、とても簡単に実装できました。&lt;/p&gt;
-
-&lt;h3 id=&#34;マテリアルのアニメーション&#34;&gt;マテリアルのアニメーション&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/menger_960.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/menger_960.gif&#34; alt=&#34;マテリアルのアニメーション&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;マテリアルのパラメーターをアニメーション可能にして、ここではEmissiveをアニメーションさせるようにしました。&lt;/p&gt;
-
-&lt;p&gt;Emissiveのアニメーションが映えるように、MengerSpongeにしました。平面が多いので光の反射が綺麗に見せられるかなと思ってこうなりました。
-roughnessなどひたすら微調整して、最終的に気に入るルックにできました。&lt;/p&gt;
-
-&lt;p&gt;実装的にはマテリアルのパラメーターを更新する専用のCallable Program（OptiX用語で関数ポインターのようなもの）を定義しました。&lt;/p&gt;
-
-&lt;p&gt;CUDAの関数で好き勝手にアニメーションできるようにしました。&lt;/p&gt;
-
-&lt;h2 id=&#34;アダプティブなeps&#34;&gt;アダプティブなeps&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/zoom-out_960.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/zoom-out_960.gif&#34; alt=&#34;ズームアウト&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;前回のレイトレ合宿に引き続き、今回もアダプティブなeps計算をしています。&lt;/p&gt;
-
-&lt;p&gt;カメラからの距離に応じてレイマーチングの衝突判定につかうepsを変化させることで、実質的なLODのようなことをしています。&lt;/p&gt;
-
-&lt;p&gt;カメラ距離が変化してもちょうど良い感じのディテールでフラクタルを描画することができました。&lt;/p&gt;
-
-&lt;h2 id=&#34;デバッグ機能&#34;&gt;デバッグ機能&lt;/h2&gt;
-
-&lt;h3 id=&#34;wasd機能&#34;&gt;WASD機能&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/wasd-v1.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/wasd-v1.gif&#34; alt=&#34;WASD機能&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;いい感じのカメラアングルを探るためにWASDでカメラを移動できるようにしました。&lt;/p&gt;
-
-&lt;p&gt;余談ですが、Unityのシーンビューの右クリックでも同じようなことができます。Unityでカメラワークを実装するときもこの機能をよく活用しています。&lt;/p&gt;
-
-&lt;h3 id=&#34;デバッグ用のレンダラー&#34;&gt;デバッグ用のレンダラー&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/redflash_debug_render.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/redflash_debug_render.gif&#34; alt=&#34;デバッグ用のレンダラー&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;パストレーシングで描画すると処理が重くてフレーム落ちするのでアニメーションの確認には適しません。&lt;/p&gt;
-
-&lt;p&gt;アニメーションをリアルタイムに確認できるように、レンダリングの品質を落としたデバッグ用のレンダラーも実装しました。&lt;/p&gt;
-
-&lt;h2 id=&#34;awsの上限緩和申請は早めにやろう&#34;&gt;AWSの上限緩和申請は早めにやろう&lt;/h2&gt;
-
-&lt;p&gt;AWSの上限緩和申請（4vCPU）は時間がかかる場合もあるので、提出直前にやるのは良くなかったです。&lt;/p&gt;
-
-&lt;p&gt;他の参加者からはすぐに申請が通ったという声も聞いたので、自分だけ担当者ガチャに外れただけの可能性はあります。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;AWSの上限緩和申請(4vCPU)、1週間くらいかかったな&lt;br&gt;&lt;br&gt;申請: 2022/08/23 1:49&lt;br&gt;承認: 2022/08/29 10:37&lt;br&gt;&lt;br&gt;もっと事前にやっておくべきだった…&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1564068725212360704?ref_src=twsrc%5Etfw&#34;&gt;August 29, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;セミナー資料&#34;&gt;セミナー資料&lt;/h1&gt;
-
-&lt;p&gt;レイトレ合宿ではセミナーも行われます。&lt;/p&gt;
-
-&lt;p&gt;今年は参加者全員で発表を行ったので、朝から晩までたくさんのセミナーを聞くことができました。&lt;/p&gt;
-
-&lt;div class=&#34;google-slide-wrap&#34;&gt;
-&lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vSdZQILhwkXvTsW024mmgc5V0G0sdFY2CQ1a5GtN953__e5drmPzBqVqr1qin2EtZOelzu6cl9IT9M2/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;1440&#34; height=&#34;839&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;p&gt;私は「レイマーチングのすすめ」という発表をしました。&lt;/p&gt;
-
-&lt;p&gt;過去資料を参照しながら、レイマーチングについて個人的に意外だと感じる部分や、Shadertoyなどで使わているテクニックについて、広く浅く紹介しました。&lt;/p&gt;
-
-&lt;p&gt;口頭での説明が前提の発表なので、資料だけでは分かりにくいと思いますが、雰囲気だけでも伝わればと思います。&lt;/p&gt;
-
-&lt;h1 id=&#34;印象に残った作品&#34;&gt;印象に残った作品&lt;/h1&gt;
-
-&lt;p&gt;どの作品も工夫があって面白かったのですが、その中でも個人的にかなり印象に残った作品をピックアップしました。&lt;/p&gt;
-
-&lt;p&gt;たた (@8picoz) さんがRust 100%のGPUレンダラーを開発していて、前々回のレイトレ合宿までは私もRustを使っていたということもあり、個人的にとても参考にしたいと思いました。
-Vulkanのレイトレーシング機能をつかっていて、VulkanではSPIR-Vというシェーダーの中間コードの仕組みが使えるようになっているので、任意の言語でシェーダーを実装できるようになりました。
-SPIR-Vをつかうことで、GPUコードもRustで実装をしたそうです。すごい良さそう！&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;こんな感じの動画をレンダリングして11位でした！ &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/aSEekYHQgr&#34;&gt;pic.twitter.com/aSEekYHQgr&lt;/a&gt;&lt;/p&gt;&amp;mdash; たた (@8picoz) &lt;a href=&#34;https://twitter.com/8picoz/status/1566239120065982465?ref_src=twsrc%5Etfw&#34;&gt;September 4, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;うしお (@ushiostarfish) さんはNeRFで絵を出していました。
-既存の機械学習のライブラリを使わずに、CUDAでスクラッチ実装したとのことだったので、個人的にとても驚きした。
-学習のための写真も自分で苦労して撮影したという裏話も聞けて良かったです。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;一発ネタのNeRFで、もはやレイトレなのか分からなくなってきましたが、思いのほか反響があってよかったです！&lt;br&gt;実装と解説スライドなどこちらにあります&lt;a href=&#34;https://t.co/YdeNXrIYBF&#34;&gt;https://t.co/YdeNXrIYBF&lt;/a&gt;&lt;br&gt;&lt;br&gt;運営の皆さま、今年も大変お疲れ様でございました！大変充実したイベントをありがとうございました！&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt;&lt;/p&gt;&amp;mdash; うしお (@ushiostarfish) &lt;a href=&#34;https://twitter.com/ushiostarfish/status/1568187460596953093?ref_src=twsrc%5Etfw&#34;&gt;September 9, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;Shocker (@Shocker_0x15) さんのNeural Radiance Cachingをボリュームに適用して高速化をしていました。
-他の参加者と差別化できていて、結果も綺麗ですごいと思いました。機械学習の波がレイトレ合宿にも来ているのを感じました。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;3年ぶりの &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; 8でMulti-scatteringな雲の動画をレンダリングして1位を頂きました！&lt;br&gt;普通にやると重すぎて間に合わないのでNeural Radiance Cachingをボリュームに適用して高速化しました。&lt;br&gt;&lt;br&gt;レンダラー紹介スライド&lt;a href=&#34;https://t.co/ry4W70XcgI&#34;&gt;https://t.co/ry4W70XcgI&lt;/a&gt; &lt;a href=&#34;https://t.co/82OFf5rYue&#34;&gt;pic.twitter.com/82OFf5rYue&lt;/a&gt;&lt;/p&gt;&amp;mdash; Shocker (@Shocker_0x15) &lt;a href=&#34;https://twitter.com/Shocker_0x15/status/1566267613440684033?ref_src=twsrc%5Etfw&#34;&gt;September 4, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;hole (@h013) はゴールベースコースティクスを実装していました。分散の発生する処理がほとんどなく、Deterministicに結果が決まるそうで、ノイズがまったくないめちゃくちゃ綺麗な結果でした。
-他の参加者と違うアプローチで差別化ができていて、結果もめちゃくちゃ綺麗でいいなと思いました。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;レイトレ合宿終わりました。皆さんありがとうござました！&lt;br&gt;&lt;br&gt;僕はコースティクスを実装し、こんな感じの動画をレンダリングして４位でした。 &lt;br&gt;&lt;br&gt; &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/NbHutC9KtB&#34;&gt;pic.twitter.com/NbHutC9KtB&lt;/a&gt;&lt;/p&gt;&amp;mdash; hole (@h013) &lt;a href=&#34;https://twitter.com/h013/status/1566238238959759361?ref_src=twsrc%5Etfw&#34;&gt;September 4, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;Shinji Ogaki (@ShinjiOgaki) さんはCPUレンダラーかつデノイズしないという条件で、ノイズがまったくない綺麗な絵を出していて、圧倒的な実装力の違いを見せつけられました。強者の風格をとても感じる作品でした。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;記事はまる一日で3000くらい閲覧があったようなので、合宿に興味がある人が多いのかも？&lt;br&gt;せっかくなので、少し尺の長い動画を載せておきます。&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/generative?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#generative&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/creativecoding?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#creativecoding&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/processing?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#processing&lt;/a&gt; &lt;a href=&#34;https://t.co/RqMLxaUIMX&#34;&gt;pic.twitter.com/RqMLxaUIMX&lt;/a&gt;&lt;/p&gt;&amp;mdash; Shinji Ogaki (@ShinjiOgaki) &lt;a href=&#34;https://twitter.com/ShinjiOgaki/status/1566909271043817472?ref_src=twsrc%5Etfw&#34;&gt;September 5, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;感想&#34;&gt;感想&lt;/h1&gt;
-
-&lt;p&gt;年々と制限時間が短くなっているのに、ほとんどの参加者はノイズのない綺麗なレンダリング結果を出していて、参加者のレベルがどんどんインフレしているのを感じました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/time-limit.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/time-limit.png&#34; alt=&#34;レイトレ合宿の時間制限の遷移&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;もはやノイズの少ない絵を出すだけでは差別化が難しいので、それぞれの参加者がユニークな切り口で勝負してくるハイレベルな戦いでした。&lt;/p&gt;
-
-&lt;p&gt;今年のセミナーは参加者全員で発表しました。参加者のバックグラウンドもさまざまだったので、いろんな分野の興味深い話や深い話を聞くことができて楽しかったです。&lt;/p&gt;
-
-&lt;p&gt;レイトレ合宿の運営の方々、その他の参加者のみなさん、本当にありがとうございました！&lt;/p&gt;
-
-&lt;h1 id=&#34;写真コーナー&#34;&gt;写真コーナー&lt;/h1&gt;
-
-&lt;p&gt;天候には恵まれませんでしたが、ホテルがめちゃくちゃ豪華だったり、美味しいご飯を食べたりして沖縄を満喫しました。&lt;/p&gt;
-
-&lt;p&gt;写真から雰囲気が少しでも伝われば幸いです。&lt;/p&gt;
-
-&lt;p&gt;ホテルは棟ごと貸し切りをしました！まるでレンダリング用のシーンのようにピカピカなお部屋でした！すごい！&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-1.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-1.jpg&#34; alt=&#34;ホテルの様子&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-2.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-2.jpg&#34; alt=&#34;ホテルの様子&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-3.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-3.jpg&#34; alt=&#34;ホテルの様子&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-4.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-4.jpg&#34; alt=&#34;ホテルの様子&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-5.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-5.jpg&#34; alt=&#34;ホテルの様子&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-6.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/hotel-6.jpg&#34; alt=&#34;ホテルの様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;沖縄の料理なども堪能しました。合宿自体は2泊でしたが、個人的に延泊して4泊したので料理の写真が多くなっています。&lt;/p&gt;
-
-&lt;p&gt;しまぶた屋　地酒の飲み比べ
-&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-1.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-1.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;海ぶどう　茶碗蒸し
-&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-2.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-2.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;なかゆくい　ハブ酒
-&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-3.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-3.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;なかゆくい　マンゴーのかき氷
-&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-4.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-4.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;アメリカ食堂
-&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-5.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-5.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;タコライスcafe きじむなぁ
-&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-6.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-6.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;琉球ダイニング 桃香
-&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-7.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-7.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;沖縄のブルーシールアイスクリーム BLUE SEAL
-&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-8.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-8.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-9.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-9.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;ステーキハウス88
-&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-10.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-10.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-11.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-11.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;土～夢 ごはんカフェ 琉球ガラス村店（ドーム）
-食器がおしゃれ
-&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-12.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/food-12.jpg&#34; alt=&#34;沖縄の料理の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;琉球ガラス村のエントランス
-&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/sightseeing-1.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/sightseeing-1.jpg&#34; alt=&#34;沖縄の観光の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;DMMかりゆし水族館
-&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/sightseeing-2.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/sightseeing-2.jpg&#34; alt=&#34;沖縄の観光の様子&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/sightseeing-3.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/sightseeing-3.jpg&#34; alt=&#34;沖縄の観光の様子&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/sightseeing-4.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/sightseeing-4.jpg&#34; alt=&#34;沖縄の観光の様子&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/sightseeing-5.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/sightseeing-5.jpg&#34; alt=&#34;沖縄の観光の様子&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/sightseeing-6.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/sightseeing-6.jpg&#34; alt=&#34;沖縄の観光の様子&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/sightseeing-7.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/sightseeing-7.jpg&#34; alt=&#34;沖縄の観光の様子&#34; /&gt;&lt;/a&gt;
-&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/sightseeing-8.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/sightseeing-8.jpg&#34; alt=&#34;沖縄の観光の様子&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;本戦の景品です。組み立て式の時計でした。グリニッチ天文台で購入したものだそうです。
-&lt;a href=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/gift.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-09-26-rtcamp8/gift.jpg&#34; alt=&#34;景品&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;!--
-
-# 関連商品
-
-レンダラー名の由来となった楽曲です。プリパラを見てください。
-
-&lt;iframe sandbox=&#34;allow-popups allow-scripts allow-modals allow-forms allow-same-origin&#34; style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B06Y3Z1PTK&amp;linkId=e1fef8b2771937a4232c7850b5dca2da&#34;&gt;&lt;/iframe&gt;
-
---&gt;</description>
     </item>
     
   </channel>
