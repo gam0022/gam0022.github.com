@@ -10,6 +10,220 @@
     <atom:link href="/tags/cg/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>SESSIONS 2024のRealtime Graphicsコンペティションで3位入賞しました（グラフィックス解説）</title>
+      <link>https://gam0022.net/blog/2024/12/02/sessions2024-guardian/</link>
+      <pubDate>Mon, 02 Dec 2024 20:00:00 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2024/12/02/sessions2024-guardian/</guid>
+      <description>
+
+&lt;p&gt;この記事は&lt;a href=&#34;https://adventar.org/calendars/10732&#34;&gt;SESSIONS Advent Calendar 2024&lt;/a&gt;の2日目の記事です。&lt;/p&gt;
+
+&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+
+&lt;p&gt;2024年11月16日～17日に日本科学未来館で開催された&lt;a href=&#34;https://sessions-party.com/events/sessions-2024/&#34;&gt;SESSIONS 2024&lt;/a&gt;に参加し、Realtime Graphicsコンペティションで3位をいただきました！&lt;/p&gt;
+
+&lt;p&gt;SESSIONS 2024では、Realtime Graphicsコンペティションに作品を提出した他、セミナーとShader Jamの解説を行わせていただきました。
+セミナーとShader Jamについては別の記事で紹介する予定です。&lt;/p&gt;
+
+&lt;p&gt;この記事では、Realtime Graphicsコンペティションの提出作品である『GUARDI▲N』のグラフィックス（主に距離関数によるモデリング）について解説をします。&lt;/p&gt;
+
+&lt;h1 id=&#34;guardi-nについて&#34;&gt;GUARDI▲Nについて&lt;/h1&gt;
+
+&lt;p&gt;『GUARDI▲N』は「特撮」をコンセプトのデモ作品（Browser Demo）です。&lt;/p&gt;
+
+&lt;p&gt;2人でチーム制作を行い、映像とストーリーは私（gam0022）が担当し、音楽はHADHADさんが担当しました。&lt;/p&gt;
+
+&lt;p&gt;当初のアイデアは「天使vs悪魔」の映画的なストーリーを持つデモを作りたいというものでしたが、最終的には「特撮」の要素に振り切ることにしました。ガーディアンが天使のリングを持つのは初期設定の名残りです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=T-V3mHlsgzQ&#34;&gt;📺️YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://t.co/nXZkIBYdnC&#34;&gt;💬Pouet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://x.com/gam0022/status/1858308509856678328&#34;&gt;🐦️X/Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gam0022.net/webgl/#demoscne_guardian&#34;&gt;🌍️Online version&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/T-V3mHlsgzQ?si=1-AUgqum39BhrvsZ&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&amp;quot;GUARDI▲N&amp;quot; by &lt;a href=&#34;https://twitter.com/gam0022?ref_src=twsrc%5Etfw&#34;&gt;@gam0022&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://twitter.com/katai5plate?ref_src=twsrc%5Etfw&#34;&gt;@katai5plate&lt;/a&gt;&lt;br&gt;&lt;br&gt;3rd Place in Realtime Graphics Competition at &lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; 2024&lt;a href=&#34;https://twitter.com/SESSIONS_Party?ref_src=twsrc%5Etfw&#34;&gt;@SESSIONS_Party&lt;/a&gt; 2024のリアルタイムGraphicsコンポで3位に入賞しました！&lt;br&gt;&lt;br&gt;映像は自作のWebGLエンジンによる24KB制限です。&lt;br&gt;&lt;br&gt;「特撮」をコンセプトにしました。 &lt;a href=&#34;https://t.co/wDVVRXWX26&#34;&gt;pic.twitter.com/wDVVRXWX26&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1858308509856678328?ref_src=twsrc%5Etfw&#34;&gt;November 18, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Realtime Graphics Competitionで3位🥉をいただきました！ありがとうございます！&lt;br&gt;&lt;br&gt; &lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; &lt;a href=&#34;https://t.co/jhPsIPW867&#34;&gt;pic.twitter.com/jhPsIPW867&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1858103266183442445?ref_src=twsrc%5Etfw&#34;&gt;November 17, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;制作環境&#34;&gt;制作環境&lt;/h1&gt;
+
+&lt;p&gt;『GUARDI▲N』は自作のWebGLエンジンによるデモです。&lt;/p&gt;
+
+&lt;p&gt;音声のみ外部ファイル（mp3ファイル）で、映像は24KBのHTMLファイルで構成されています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/file-size.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/file-size.jpg&#34; alt=&#34;ファイルサイズ&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Revision 2020用に開発した「Chromatiq」という名前のシンプルなWebGLエンジンを再利用しました。&lt;/p&gt;
+
+&lt;p&gt;「Chromatiq」はShadertoyのようなFullScreenQuadにマルチパスな描画ができるとてもシンプルなWebGLエンジンです。&lt;/p&gt;
+
+&lt;p&gt;イメージとしてはGLSLエディターを排除したスタンドアローンなShadertoyが近いかもしれません。&lt;/p&gt;
+
+&lt;p&gt;「Chromatiq」の詳細については以下の記事で説明しています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gam0022.net/blog/2020/04/30/revision2020/&#34;&gt;Revision2020 PC 64K Intro 優勝作品『RE: SIMULATED』の技術解説 | gam0022.net&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;4年前からの変更点として、&lt;a href=&#34;https://lil-gui.georgealways.com/#&#34;&gt;lil-gui&lt;/a&gt;から&lt;a href=&#34;https://tweakpane.github.io/docs/&#34;&gt;Tweakpane&lt;/a&gt;に乗り換えました。&lt;/p&gt;
+
+&lt;p&gt;Tweakpaneの方がスライダーが圧倒的に使い勝手が良く、小数点以下の細かい数字も調整できるため、制作効率が改善しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/editor.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/editor.png&#34; alt=&#34;Editor画面&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Tweakpaneは&lt;a href=&#34;https://normalize.fm/056/&#34;&gt;normalize.fmの#56&lt;/a&gt;で知りました。個人的には超オススメです！&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/normalizeFM?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#normalizeFM&lt;/a&gt; で知ったけど良さそう。&lt;a href=&#34;https://t.co/D5A4eFNZjU&#34;&gt;https://t.co/D5A4eFNZjU&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1751515480735785026?ref_src=twsrc%5Etfw&#34;&gt;January 28, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;ビルや街の距離関数&#34;&gt;ビルや街の距離関数&lt;/h1&gt;
+
+&lt;p&gt;ビルや街の地形の距離関数はMandelboxをベースにしています。&lt;/p&gt;
+
+&lt;h2 id=&#34;完成カット&#34;&gt;完成カット&lt;/h2&gt;
+
+&lt;p&gt;当初のコンセプトは「天使vs悪魔」でしたので、空に浮遊する巨大な空中都市をイメージしながらモデリングを行いました。&lt;/p&gt;
+
+&lt;p&gt;しかし、途中から「特撮」に方向転換したため、天界という設定を残しつつも、「特撮」に合うような現代的なビルのジオメトリーとマテリアルに調整しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/city-final-1.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/city-final-1.jpg&#34; alt=&#34;街 完成 カット1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/city-final-2.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/city-final-2.jpg&#34; alt=&#34;街 完成 カット2&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/city-final-3.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/city-final-3.jpg&#34; alt=&#34;街 完成 カット3&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;unityでの下書き&#34;&gt;Unityでの下書き&lt;/h2&gt;
+
+&lt;p&gt;ビルのような突起のついたMandelboxをベースに、Unityを使ってパラメーターを調整しながら街の形状に仕上げました。&lt;/p&gt;
+
+&lt;p&gt;球体でMandelboxの上部を切り取ることで、完成カットの街のような形状にしています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/city-unity-1.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/city-unity-1.jpg&#34; alt=&#34;街 Unity上の下書き カット1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/city-unity-2.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/city-unity-2.jpg&#34; alt=&#34;街 Unity上の下書き カット2&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;制作途中の様子&#34;&gt;制作途中の様子&lt;/h2&gt;
+
+&lt;p&gt;制作途中の様子です。最初は中東風のジオメトリーでした。途中で鉄と錆を使ったスチームパンク風のマテリアルも試していました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/city-wip-1.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/city-wip-1.jpg&#34; alt=&#34;街 WIP カット1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;マテリアルについても鉄と錆によるスチームパンクのような渋い方向性も試していました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/city-wip-2.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/city-wip-2.jpg&#34; alt=&#34;街 WIP カット2&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/city-wip-3.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/city-wip-3.jpg&#34; alt=&#34;街 WIP カット3&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;ガーディアンの距離関数&#34;&gt;ガーディアンの距離関数&lt;/h1&gt;
+
+&lt;p&gt;ガーディアンの距離関数はIFS（Iterated Function System）による折りたたみを使用しています。&lt;/p&gt;
+
+&lt;p&gt;forループ内で空間を適当に回転や並行移動させ、最後にBoxの距離関数を評価しています。&lt;/p&gt;
+
+&lt;p&gt;このアプローチは『Transcendental Cube』と完全に同じですので、IFSに興味がある方は以下の記事もご覧ください。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gam0022.net/blog/2023/05/31/sessions2023-glsl-compo/&#34;&gt;SESSIONS 2023のGLSL Graphics Compoで準優勝しました（グラフィックス解説） | gam0022.net&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;UnityでIFSのパラメーターを調整しながらガーディアンのイメージに近づけていきました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/guardian-unity-1.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/guardian-unity-1.jpg&#34; alt=&#34;ガーディアン Unity上の下書き カット1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;制作の最初期には金色と黒色の百式風カラーリングも試しましたが、最終的には白と金色のカラーリングに決定しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/guardian-prototype-2.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/guardian-prototype-2.jpg&#34; alt=&#34;ガーディアン プロトタイプ カット2&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/guardian-prototype-4.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/guardian-prototype-4.jpg&#34; alt=&#34;ガーディアン プロトタイプ カット4&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;モデリングについては、最初期の案がそのまま最終版となりました。&lt;/p&gt;
+
+&lt;p&gt;最終版には、天使の要素として天使のリングを追加しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/guardian-wip-1.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/guardian-wip-1.jpg&#34; alt=&#34;ガーディアン WIP カット1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/guardian-wip-2.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/guardian-wip-2.jpg&#34; alt=&#34;ガーディアン WIP カット2&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;戦闘機の距離関数&#34;&gt;戦闘機の距離関数&lt;/h1&gt;
+
+&lt;p&gt;作品の中盤で怪獣に全滅させられてしまう戦闘機もIFSによる折りたたみを使用しています&lt;/p&gt;
+
+&lt;p&gt;同じ天界の陣営であるため、雰囲気を統一するために戦闘機とガーディアンに同じIFSのアプローチを採用しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/fighter-unity-1.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/fighter-unity-1.jpg&#34; alt=&#34;戦闘機 Unity上の下書き カット1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;video playsinline=&#34;&#34; loop=&#34;&#34; muted=&#34;&#34; controls=&#34;&#34; autoplay=&#34;&#34; width=&#34;100%&#34; src=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/fighter-movie-1.mp4&#34; poster=&#34;/images/posts/2024-12-02-sessions2024-guardian/fighter-movie-1.jpg&#34;&gt;&lt;/video&gt;
+
+&lt;h1 id=&#34;怪獣の距離関数&#34;&gt;怪獣の距離関数&lt;/h1&gt;
+
+&lt;p&gt;怪獣（ボス）もIFSを使用しています。&lt;/p&gt;
+
+&lt;p&gt;元の距離関数はガーディアンと同様にBoxですが、Smooth Unionを使って角を丸め、生物の有機的なイメージに近づけました。&lt;/p&gt;
+
+&lt;p&gt;こちらもUnityでIFSのパラメーターを調整し、怪獣のイメージに仕上げました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/boss-unity-1.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/boss-unity-1.jpg&#34; alt=&#34;怪獣 Unity上の下書き カット1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/boss-wip-1.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/boss-wip-1.jpg&#34; alt=&#34;怪獣 WIP カット1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;初期案では目玉がありませんでした。&lt;/p&gt;
+
+&lt;video playsinline=&#34;&#34; loop=&#34;&#34; muted=&#34;&#34; controls=&#34;&#34; autoplay=&#34;&#34; width=&#34;100%&#34; src=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/boss-prototype-1.mp4&#34; poster=&#34;/images/posts/2024-12-02-sessions2024-guardian/boss-prototype-1.jpg&#34;&gt;&lt;/video&gt;
+
+&lt;p&gt;ボスがレーザーで破壊されるアニメーションは、IFSの平行移動のパラメーターで実現しました。&lt;/p&gt;
+
+&lt;video playsinline=&#34;&#34; loop=&#34;&#34; muted=&#34;&#34; controls=&#34;&#34; autoplay=&#34;&#34; width=&#34;100%&#34; src=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/boss-death-1.mp4&#34; poster=&#34;/images/posts/2024-12-02-sessions2024-guardian/boss-death-1.jpg&#34;&gt;&lt;/video&gt;
+
+&lt;h1 id=&#34;距離関数によるモデリングまとめ&#34;&gt;距離関数によるモデリングまとめ&lt;/h1&gt;
+
+&lt;p&gt;Mandelboxから生み出したビルや街については、個人的にはかなり自信作です。今回のデモで終わらせるのはもったいないので、何か別の作品でもぜひ活用してみたいと考えています。&lt;/p&gt;
+
+&lt;p&gt;ガーディアン、戦闘機、怪獣の3要素にはいずれもIFS（Iterated Function System）を使用しました。&lt;/p&gt;
+
+&lt;p&gt;怪獣はよくあるIFS感が強すぎたので、可能ならもうひと工夫が必要だったかもしれません。&lt;/p&gt;
+
+&lt;p&gt;ここ数年でIFSを多用しているため、次回作では別のアプローチも検討したいと思います。一方で、IFSにはまだ未開拓の可能性があると感じています。&lt;/p&gt;
+
+&lt;h1 id=&#34;振り返り&#34;&gt;振り返り&lt;/h1&gt;
+
+&lt;p&gt;かなり短期間の制作スケジュールでしたが、最終的にはなんとか形になったので良かったと思います。&lt;/p&gt;
+
+&lt;p&gt;10月の前半は&lt;a href=&#34;https://gam0022.net/blog/2024/10/23/rtcamp10/&#34;&gt;レイトレ合宿 10&lt;/a&gt;などで忙しく、SESSIONSへの着手が遅れてしまいました。&lt;/p&gt;
+
+&lt;p&gt;今回は映像に登場する要素の距離関数によるモデリングを完全に固めてから、最後にカメラワークと演出をつけるという制作フローで映像を制作しました。なんとか最終的には形になりましたが、仕上げの工程の時間がほとんど無くなってしまったのは反省点です。&lt;/p&gt;
+
+&lt;p&gt;これまでの作品も多少ストーリー性はありましたが、アブストラクトなモデリングが多かったため、特撮という非アブストラクトなテーマで映像を作るのにはかなり苦労しました。『Transcendental Cube』では通常のカメラワークを乱数で生成していましたが、今回はカットごとにカメラワークを調整する必要があったため、過去作品と比べると工数が大幅に増えました。&lt;/p&gt;
+
+&lt;p&gt;Code Graphics（GLSL Graphics）Compoのように映像を1パスで作成したため（※ポストエフェクトや半透明は別パスにしました）、GLSLが巨大化し、コンパイル時間の増加でイテレーション効率が低下したのも課題でした。&lt;/p&gt;
+
+&lt;p&gt;ストーリー性のある複雑な作品を作る場合には、3D空間上にオブジェクトを配置し、オブジェクトスペースのレイマーチングを行えるような仕組みを構築するべきだと改めて感じました。&lt;/p&gt;
+
+&lt;p&gt;今回は音楽が間に合わなかった場合、Code Graphicsで提出する可能性もあったため、1パスで進めることにしました。&lt;/p&gt;
+
+&lt;p&gt;音楽担当のHADHADさんへの相談も締切直前になってしまいましたが、特撮感のある力強い曲を短期間で作っていただき、とても感謝しています。ありがとうございました🙏&lt;/p&gt;
+
+&lt;h1 id=&#34;おわりに&#34;&gt;おわりに&lt;/h1&gt;
+
+&lt;p&gt;SESSIONS 2024は最高のイベントでした！&lt;/p&gt;
+
+&lt;p&gt;会場の雰囲気や臨場感を肌で直接感じることができ、やはりオフラインイベントには特別な魅力があると再認識できました。&lt;/p&gt;
+
+&lt;p&gt;実際に参加者と話をしたり、作品についての感想やアイデアを交換したりすることで、新たな視点やインスピレーションを得ることができました。&lt;/p&gt;
+
+&lt;p&gt;また、会場の音響や再生環境が例年より大幅に改善されていた点も非常に良かったです。&lt;/p&gt;
+
+&lt;p&gt;今年から刷新された応募カテゴリーにより、ProcessingやジェネVJ界隈の人々も参加し、例年以上の盛り上がりを感じました。&lt;/p&gt;
+
+&lt;p&gt;SESSIONS 2024の運営や準備をしてくださったオーガナイザーの皆さん、そして参加者の皆さん、本当にありがとうございました！&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>レイトレ合宿10でポータルをテーマにしたアニメーションを作成しました</title>
       <link>https://gam0022.net/blog/2024/10/23/rtcamp10/</link>
       <pubDate>Wed, 23 Oct 2024 00:50:00 +0900</pubDate>
@@ -3043,184 +3257,6 @@ IFSやMod Repetitionと乱数の組み合わせによる非連続な距離関数
 &lt;h1 id=&#34;まとめ&#34;&gt;まとめ&lt;/h1&gt;
 
 &lt;p&gt;レイマーチングはめちゃくちゃ遅いので、レイトレ合宿のようにレンダリング時間がシビアなら悪手かもしれません。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Tokyo Demo Fest 2021のShader Showdownに参加しました</title>
-      <link>https://gam0022.net/blog/2021/12/31/tdf2021-shader-showdown/</link>
-      <pubDate>Fri, 31 Dec 2021 00:00:00 +0900</pubDate>
-      
-      <guid>https://gam0022.net/blog/2021/12/31/tdf2021-shader-showdown/</guid>
-      <description>&lt;p&gt;12月11日～12日にオンラインで開催された&lt;a href=&#34;https://tokyodemofest.jp/&#34;&gt;Tokyo Demo Fest 2021&lt;/a&gt;（以下、TDF）に参加しました。&lt;/p&gt;
-
-&lt;p&gt;TDFは、日本国内で唯一のデモパーティです。
-リアルタイムに映像や音楽を生成するプログラムを「デモ」と言い、デモを鑑賞したり完成度を競ったりして楽しむイベントを「デモパーティ」と言います。
-「デモシーン」はデモやデモパーティを中心としたコンピューターのサブカルチャーです。&lt;/p&gt;
-
-&lt;p&gt;TDFのShader Showdownというイベントに競技者として参加しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-31-tdf2021-shader-showdown/Collage_Fotor_v3.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-31-tdf2021-shader-showdown/Collage_Fotor_v3.jpg&#34; alt=&#34;Collage_Fotor_v3&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;また、TDFのGLSL Graphics Compoにも参加したので、こちらは別記事にまとめました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://gam0022.net/blog/2021/12/20/tdf2021-glsl/&#34;&gt;Tokyo Demo Fest 2021のGLSL Graphics Compo優勝作品の解説 | gam0022.net&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;shader-showdownとは&#34;&gt;Shader Showdownとは&lt;/h1&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;TokyoDemoFestのShader Showdownは、世界的なDemoparty「Revision」と同じレギュレーションで開催します。&lt;br&gt;試合の放映はパーティー当日12/11-12となります。乞うご期待……！ &lt;a href=&#34;https://t.co/IlVue5npWz&#34;&gt;pic.twitter.com/IlVue5npWz&lt;/a&gt;&lt;/p&gt;&amp;mdash; Tokyo Demo Fest 2021 (2021/12/11-12) (@TokyoDemoFest) &lt;a href=&#34;https://twitter.com/TokyoDemoFest/status/1452275618997886976?ref_src=twsrc%5Etfw&#34;&gt;October 24, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;Shader Showdownとは25分間でシェーダーを書き、どちらの作品が良いかを決める競技です。&lt;/p&gt;
-
-&lt;p&gt;試合中は、一切のドキュメントの参照ができません。当然ながら必要な関数はすべて試合中に実装しないいけません。
-時間が25分しかないので、バグを生み出すと修正する時間はありません。世界的なDemoparty「Revision」に準拠しためちゃくちゃ厳しいレギュレーションでの開催でした。&lt;/p&gt;
-
-&lt;p&gt;1対1のトーナメント形式で開催され、試合の勝敗は観衆（ビジター）の投票によって決定します。今回は私を含めた8人でトーナメントを行いました。&lt;/p&gt;
-
-&lt;p&gt;対戦はGLSLのライブコーディングで行われます。&lt;a href=&#34;https://github.com/TheNuSan/Bonzomatic/releases/tag/v11&#34;&gt;Bonzomatic&lt;/a&gt;というアプリを利用し、対戦者の書いているコードやカーソルの位置が共有されます。
-Bonzomaticはシェーダーのライブコーディング専用のアプリです。&lt;/p&gt;
-
-&lt;p&gt;次の初期状態のサイケなトンネルはBonzomaticのデフォルトのシェーダーです。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2021-12-31-tdf2021-shader-showdown/bonzomatic-default.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2021-12-31-tdf2021-shader-showdown/bonzomatic-default.jpg&#34; alt=&#34;bonzomaticの初期状態&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;極座標による疑似3Dのシェーダーで汎用性に乏しいため、自分を含めてほどんどの競技者はまず初期状態のコードはコメントアウトするか消します。本当に無からシェーダーを書いています。&lt;/p&gt;
-
-&lt;p&gt;ビジターは対戦者が25分の制限時間の中でどのような戦略とアイデアをもってコードを書いていくかをすぐ隣でみているかのように体験できます。&lt;/p&gt;
-
-&lt;p&gt;詳しいGLSLライブコーディングの知識がなくても楽しめるよう、TDFでは対戦者がどのようなコードを書いているかのリアルタイムな解説があります。&lt;/p&gt;
-
-&lt;h1 id=&#34;ライブコーディングした作品解説&#34;&gt;ライブコーディングした作品解説&lt;/h1&gt;
-
-&lt;p&gt;今回のTDFのShader Showdownでライブコーディングした作品を簡単に解説します。&lt;/p&gt;
-
-&lt;p&gt;TDFのShader Showdownの全作品は&lt;a href=&#34;https://livecode.demozoo.org/event/2021_12_11_shader_showdown_tokyo_demofest.html&#34;&gt;livecode.demozoo.org&lt;/a&gt;にもアーカイブされています。&lt;/p&gt;
-
-&lt;h2 id=&#34;lightning-tunnel-quarter-final&#34;&gt;Lightning Tunnel | Quarter-Final&lt;/h2&gt;
-
-&lt;p&gt;準々決勝（Quarter-Final）の作品です。&lt;/p&gt;
-
-&lt;p&gt;稲妻が轟くトンネルをイメージして作りました。&lt;/p&gt;
-
-&lt;p&gt;ボリュームレンダリングをしてBloom感を出しています。ボリュームレンダリングの実装が雑なのでアーティファクトが発生しているのですが、むしろ雷の荒々しい感じが再現できて良かったです。&lt;/p&gt;
-
-&lt;p&gt;時間が余ったのでカメラのFoVのアニメーションをしたのですが、ちょっとワープっぽい効果になりました。&lt;/p&gt;
-
-&lt;p&gt;モデリングはIFSでやっています。IFSで狙った形状を出すことは困難なので、パラメーターは事前に調整をして暗記しておきました。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;25分でライブコーディングしたシェーダーです。&lt;br&gt;&lt;br&gt;This shader was coded in 25 minutes.&lt;br&gt;&lt;br&gt;Shader showdown quarter-final at &lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Bonzomatic?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Bonzomatic&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/LiveCoding?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#LiveCoding&lt;/a&gt; &lt;a href=&#34;https://t.co/WTw7tHVsbk&#34;&gt;pic.twitter.com/WTw7tHVsbk&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1469562828831195140?ref_src=twsrc%5Etfw&#34;&gt;December 11, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.shadertoy.com/view/sl3XWM&#34;&gt;Shadertoy&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://neort.io/art/c6qm3ls3p9f3hsje6360&#34;&gt;NEORT&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;YouTubeのアーカイブ（Day1の2:15頃）です。&lt;/p&gt;
-
-&lt;div class=&#34;movie-wrap&#34;&gt;
-&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/2s9KfMn1J9M?start=8114&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&#34;vj-feat-niko-14-semi-final&#34;&gt;VJ feat. Niko_14 | Semi-Final&lt;/h2&gt;
-
-&lt;p&gt;準決勝（Semi-Final）の作品です。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://twitter.com/himazin917&#34;&gt;Niko_14&lt;/a&gt;さんの音楽がとても素晴らしかったので、音楽と同期したVJに挑戦しました。&lt;/p&gt;
-
-&lt;p&gt;試合の前日に自分の試合の音楽担当はNiko_14さんと聞いたので、そのタイミングでVJをする決意をしました。&lt;/p&gt;
-
-&lt;p&gt;VJっぽい絵を狙ったことが無かったのですが、ほぼ狙い通りのバキバキな感じにできたので良かったです。
-シェーダーの構成としてはQuarter-Finalとほぼ同じで、IFSとボリュームレンダリングの組み合わせです。
-IFSのパラメーターは適当だったのですが、ちゃんと狙い通りの絵になったので良かったです。&lt;/p&gt;
-
-&lt;p&gt;色はFFT（音楽の周波数ごとのボリューム）に対応していて、低音が赤、中音が緑、高音が青に対応しています。
-キックの音が支配的だったので、キックに合わせて赤～ピンクっぽいビームが発生しています。&lt;/p&gt;
-
-&lt;p&gt;Twitterの動画の4秒頃のように、音が切り替わるタイミングでサウンドリアクティブになっているのが分かりやすいと思います。ぜひ音声をONにして再生してください！&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;25分でライブコーディングしたシェーダーです。&lt;br&gt;かっこいい音楽は &lt;a href=&#34;https://twitter.com/himazin917?ref_src=twsrc%5Etfw&#34;&gt;@himazin917&lt;/a&gt; さん制作です！&lt;br&gt;&lt;br&gt;This shader was coded in 25 minutes.&lt;br&gt;Sound by &lt;a href=&#34;https://twitter.com/himazin917?ref_src=twsrc%5Etfw&#34;&gt;@himazin917&lt;/a&gt;&lt;br&gt;&lt;br&gt;Shader showdown semi-final at &lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Bonzomatic?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Bonzomatic&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/LiveCoding?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#LiveCoding&lt;/a&gt; &lt;a href=&#34;https://t.co/HzUpd9le3t&#34;&gt;pic.twitter.com/HzUpd9le3t&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1469924900257562627?ref_src=twsrc%5Etfw&#34;&gt;December 12, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.shadertoy.com/view/NttSRS&#34;&gt;Shadertoy&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ShadertoyのSoundcloud連携が機能していないため、音楽はNiko_14さんのものではなく、仮です。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;YouTubeのアーカイブ（Day2の1:41頃）です。&lt;/p&gt;
-
-&lt;div class=&#34;movie-wrap&#34;&gt;
-&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/bp37xTVNRrM?start=6086&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;p&gt;VJっぽいバキバキとした絵の方向性やFFTを用いたサウンドリアクティブなシェーダーはこれまで挑戦したことのないジャンルだったので、新しい方向性を模索する良い経験になりました。&lt;/p&gt;
-
-&lt;p&gt;Semi-Finalでは&lt;a href=&#34;https://twitter.com/kamoshika_vrc&#34;&gt;Kamoshika&lt;/a&gt;さんに負けてしまったのですが、試合後のコメントによると反射の処理には&lt;a href=&#34;https://gam0022.net/blog/2021/06/08/unity-bible2/&#34;&gt;『Unityゲーム プログラミング・バイブル 2nd Generation』の自分の章&lt;/a&gt;を参考にしてくださったそうで、めちゃくちゃありがてぇ🙏となりました。&lt;/p&gt;
-
-&lt;p&gt;Jugem-Tさんも実況による盛り上げありがとうございました！&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;凄い画同士の殴り合いの中BGMもライブコーディングで生成してる(Niko_14氏)とんでもない光景になっててヤバい&lt;br&gt;&lt;br&gt;Shader Showdown準決勝 gam0022氏 vs Kamoshika氏&lt;br&gt;[LIVE]Tokyo Demo Fest 2021 Day2 &lt;a href=&#34;https://t.co/648ZNFJTxk&#34;&gt;https://t.co/648ZNFJTxk&lt;/a&gt; &lt;a href=&#34;https://twitter.com/YouTube?ref_src=twsrc%5Etfw&#34;&gt;@YouTube&lt;/a&gt;より &lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://t.co/atG6c8hWiK&#34;&gt;pic.twitter.com/atG6c8hWiK&lt;/a&gt;&lt;/p&gt;&amp;mdash; Jugem-T 𓆡作業中 (@Jugem_T) &lt;a href=&#34;https://twitter.com/Jugem_T/status/1469892859503734787?ref_src=twsrc%5Etfw&#34;&gt;December 12, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;感想&#34;&gt;感想&lt;/h1&gt;
-
-&lt;p&gt;大変でしたが、楽しかったです。&lt;/p&gt;
-
-&lt;p&gt;25分でできる範囲はかなり限られてくるので、詰め込める要素を取捨選択して、ミスをしないように実装するのは思っていたより難しく感じました。25分だとデバッグしている余裕はなくバグを生み出した瞬間に敗戦が濃厚になります。
-距離関数も普段はコピペしているので暗記も大変でした。回転行列くらいは導出できるのですが、sdBoxは導出していたら時間がまったく足りません。&lt;/p&gt;
-
-&lt;p&gt;正直に言うと、まさかここまでレベルの高い戦いになるとは思っておらず、参加者のみなさんが凄すぎてちょっと心が折れそうでした。&lt;/p&gt;
-
-&lt;p&gt;とくにFinal（決勝）の&lt;a href=&#34;https://twitter.com/kamoshika_vrc&#34;&gt;Kamoshika&lt;/a&gt; vs &lt;a href=&#34;https://twitter.com/phi16_&#34;&gt;phi16&lt;/a&gt; の戦いは印象深かったです。&lt;/p&gt;
-
-&lt;p&gt;Kamoshikaさんは蝶、phi16さんはライブゲームと、両者とも &amp;ldquo;生命&amp;rdquo; を誕生させていました。偶然にもテーマが一致していてちょっと面白かったです。&lt;/p&gt;
-
-&lt;p&gt;とにかく実装量がえげつなく、これをライブコーディングでやるんだ…と驚かされました。
-競技者として参加したことで、25分間でこの量をミスなく実装する困難さは痛いほど理解していたので、なおさら驚かされました。&lt;/p&gt;
-
-&lt;p&gt;両者ともミスなく作品を仕上げており、まさに決勝戦に相応しい素晴らしい戦いを見せていただきました🙏心の底から感動しました。&lt;/p&gt;
-
-&lt;p&gt;世界レベルの実力者の方々と戦えて本当に光栄でした！ありがとうございます！&lt;/p&gt;
-
-&lt;p&gt;Kamoshikaさん&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;25 minutes live coding at Shader Showdown Final.&lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/LiveCoding?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#LiveCoding&lt;/a&gt; &lt;a href=&#34;https://t.co/WeVq82f50E&#34;&gt;pic.twitter.com/WeVq82f50E&lt;/a&gt;&lt;/p&gt;&amp;mdash; Kamoshika (@kamoshika_vrc) &lt;a href=&#34;https://twitter.com/kamoshika_vrc/status/1470360600517971970?ref_src=twsrc%5Etfw&#34;&gt;December 13, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;phi16さん&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;und&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://t.co/qluYGj653s&#34;&gt;pic.twitter.com/qluYGj653s&lt;/a&gt;&lt;/p&gt;&amp;mdash; phi16 (@phi16&lt;em&gt;) &amp;lt;a href=&amp;ldquo;&lt;a href=&#34;https://twitter.com/phi16&#34;&gt;https://twitter.com/phi16&lt;/a&gt;&lt;/em&gt;/status/1470104161320849409?ref_src=twsrc%5Etfw&amp;rdquo;&amp;gt;December 12, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;記録 TDF2021 ShaderShowdown &lt;a href=&#34;https://t.co/mMcSoYwh5U&#34;&gt;https://t.co/mMcSoYwh5U&lt;/a&gt;&lt;/p&gt;&amp;mdash; phi16 (@phi16&lt;em&gt;) &amp;lt;a href=&amp;ldquo;&lt;a href=&#34;https://twitter.com/phi16&#34;&gt;https://twitter.com/phi16&lt;/a&gt;&lt;/em&gt;/status/1470415119708753921?ref_src=twsrc%5Etfw&amp;rdquo;&amp;gt;December 13, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;YouTubeのアーカイブ（Day2の4:27頃）です。&lt;/p&gt;
-
-&lt;p&gt;Finalでは私も実況者の一人として参加しています。&lt;/p&gt;
-
-&lt;div class=&#34;movie-wrap&#34;&gt;
-&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/bp37xTVNRrM?start=16030&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;おつかれさまでした！&lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://t.co/h2yXCGGBYa&#34;&gt;pic.twitter.com/h2yXCGGBYa&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1469999619409350657?ref_src=twsrc%5Etfw&#34;&gt;December 12, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;さいごに、関係者のみなさんに感謝を申し上げます。
-TDFのオーガナイザーの方々、Shader Showdownで対戦してくださったgyaboさん、norargsさん、Kamoshikaさん、0b5vrさん、phi16さん、sp4ghetさん、gazさん、実況のamagiさん、doxasさん、hiraiさんmurasaqiさん、音楽を担当したNiko_14さん、寝る前さん、h0ffman1さん、アーカイブ関連でpsenoghさん、Zavieさん、応援してくださった観戦者みなさん、本当にありがとうございました！&lt;/p&gt;
-
-&lt;h1 id=&#34;練習&#34;&gt;練習&lt;/h1&gt;
-
-&lt;p&gt;ライブコーディングの練習中の作品です。&lt;/p&gt;
-
-&lt;p&gt;Quarter-FinalのIFS+ボリュームレンダリングのアプローチは練習中に決めました。&lt;/p&gt;
-
-&lt;p&gt;トンネルのIFSのモデリングもよく見ると面影が残っています。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;情報量を追加（エンコード耐久テスト）&lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Raymarching?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Raymarching&lt;/a&gt; &lt;a href=&#34;https://t.co/uBg43zGOk6&#34;&gt;pic.twitter.com/uBg43zGOk6&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1453405601971666944?ref_src=twsrc%5Etfw&#34;&gt;October 27, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Diamond Variation 🔷 &lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Raymarching?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Raymarching&lt;/a&gt; &lt;a href=&#34;https://t.co/IAEhBgdW5s&#34;&gt;pic.twitter.com/IAEhBgdW5s&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1453768374312263683?ref_src=twsrc%5Etfw&#34;&gt;October 28, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/Shadertoy?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shadertoy&lt;/a&gt; にポートしました。&lt;br&gt;&lt;br&gt;&amp;quot;Diamond Tunnel&amp;quot; by gam0022&lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt;&lt;a href=&#34;https://t.co/oyyz8mop2x&#34;&gt;https://t.co/oyyz8mop2x&lt;/a&gt; &lt;a href=&#34;https://t.co/DXnqCAKY1Z&#34;&gt;pic.twitter.com/DXnqCAKY1Z&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1476576224768331776?ref_src=twsrc%5Etfw&#34;&gt;December 30, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

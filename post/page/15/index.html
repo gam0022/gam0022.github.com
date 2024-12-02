@@ -124,6 +124,63 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/07/24/configure-the-css-with-bootstrap-theme/" itemprop="url">Octopressでbootstrap-themeにしたとき、sass/custom/_styles.scssが反映されなくなった件について</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2012-07-24 22:50:00 &#43;0900 JST" itemprop="datePublished">2012-07-24</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/octopress">Octopress</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/css">CSS</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/sass/scss">SASS/SCSS</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/theme">theme</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/bootstrap">bootstrap</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                Octopressでbootstrap-themeにしたとき、sass/custom/_styles.scssが反映されなくなった件について 前回、Octopressのテーマをカスタマイズするという記事で、 Octopressにbootstrap-themeを導入しました。
+ If you want to add or override styles, edit sass/custom/_styles.scss. This stylesheet is imported last, so you can override styles with the cascade.
+ 上の文はOctopressの公式からの引用で、本来であればsass/custom/_styles.scss に書いたSCSSが最終的にオーバーライドされて適用されるはずです。
+しかし、このテーマを導入してから、sass/custom/_styles.scssに書いたSCSS(CSS)が反映されなくなってしまいました。
+OctopressのCSS生成の仕組み Octopressでは、sass以下のディレクトリにある.scssファイルを読み取り、 最終的なCSSを生成しているようです。(たぶん)
+SCSSとは、CSSメタ言語のことで、要するにCSSを生成するための言語です。
+本題のsass/custom/_styles.scssが反映されない原因は単純で、 sass/bootstrap/bootstrap.scssを見たら、sass/custom/_styles.scsがimportされていませんでした。
+というわけで、sass/bootstrap/bootstrap.scssの最終行に次のような感じでimport文を追加することで解決します。
+// Custom @import &quot;custom/colors&quot;; @import &quot;custom/fonts&quot;; @import &quot;custom/layout&quot;; @import &quot;custom/styles&quot;;  後は、sass/custom/_styles.scsに好きな設定を書けばOKです。ひとまず、こんな感じにしました。
+// This File is imported last, and will override other styles in the cascade // Add styles here to make changes without digging in too much div.
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2012/07/24/configure-the-css-with-bootstrap-theme/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/07/23/run-octopress-on-a-vps-using-rsync/" itemprop="url">Rsyncを使ってOctopressをVPS上で公開する</a></h3>
         
 
