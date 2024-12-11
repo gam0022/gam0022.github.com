@@ -124,6 +124,106 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/07/26/run-ruby-cgi-on-serversman-at-vps/" itemprop="url">ServersMan@VPSでRubyのCGIを実行するまでのメモ</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2012-07-26 00:11:00 &#43;0900 JST" itemprop="datePublished">2012-07-26</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/apache">Apache</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/serversmanvps">ServersMan@VPS</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/ruby">Ruby</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/cgi">CGI</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                
+
+<p>ServersMan@VPS(Ubuntu)でRubyのCGIを実行するまでのメモです。</p>
+
+<h2 id="apache2をインストールする">apache2をインストールする</h2>
+
+<p>apt-getかaptitudeでインストールすればいいと思います。</p>
+
+<pre><code class="language-bash">sudo aptitude install apache2   
+</code></pre>
+
+<h2 id="addhandlerを設定する">AddHandlerを設定する</h2>
+
+<p><code>/etc/apache2/mods-enabled/mime.conf</code>にAddHandlerを設定します。</p>
+
+<p><code>#AddHandler cgi-script .cgi</code>という行があるので、
+見つけてコメントアウトを解除して、次のように書き換えればいいと思います。</p>
+
+<pre><code>AddHandler cgi-script .cgi .rb
+</code></pre>
+
+<h2 id="options-execcgiを設定する">Options +ExecCGIを設定する</h2>
+
+<p><code>/etc/apache2/sites-available/default</code>でOptions +ExecCGIを設定します。</p>
+
+<pre><code>&lt;Directory /var/www/html/&gt;
+    #Options Indexes FollowSymLinks MultiViews 
+    Options Indexes FollowSymLinks MultiViews ExecCGI
+    AllowOverride None
+    Order allow,deny
+    allow from all
+&lt;/Directory&gt;
+</code></pre>
+
+<h2 id="apache2を再起動する">apache2を再起動する</h2>
+
+<p>上の2つのファイルを編集したら、apacheを再起動して設定を反映させます。</p>
+
+<pre><code class="language-bash">sudo /etc/init.d/apache2 restart    
+</code></pre>
+
+<h2 id="ruby-cgiのパーミッションを755にする">Ruby CGIのパーミッションを755にする</h2>
+
+<pre><code class="language-bash">cd /var/www/html
+chmod 755 test.rb
+</code></pre>
+
+<p>これでたぶん動くようになります。</p>
+
+<p>ね？簡単でしょ？</p>
+
+<h2 id="うまくいかないときは">うまくいかないときは</h2>
+
+<p><code>/var/log/apache2/error.log</code>のエラーメッセージを見ましょう。</p>
+
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2012/07/26/run-ruby-cgi-on-serversman-at-vps/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/07/24/configure-the-css-with-bootstrap-theme/" itemprop="url">Octopressでbootstrap-themeにしたとき、sass/custom/_styles.scssが反映されなくなった件について</a></h3>
         
 

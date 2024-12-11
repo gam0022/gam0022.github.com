@@ -7,8 +7,122 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>&amp;copy; 2021 gam0022</copyright>
-    <lastBuildDate>Mon, 02 Dec 2024 22:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 11 Dec 2024 23:30:00 +0900</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>SESSIONS 2024参加記録（セミナー登壇・ShaderJam解説・Realtime Graphics）</title>
+      <link>https://gam0022.net/blog/2024/12/11/sessions2024-summary/</link>
+      <pubDate>Wed, 11 Dec 2024 23:30:00 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2024/12/11/sessions2024-summary/</guid>
+      <description>&lt;p&gt;これは&lt;a href=&#34;https://adventar.org/calendars/10732&#34;&gt;SESSIONS Advent Calendar 2024&lt;/a&gt;の11日目の記事です。&lt;/p&gt;
+
+&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+
+&lt;p&gt;2024年11月16日～17日に日本科学未来館で開催された&lt;a href=&#34;https://sessions-party.com/events/sessions-2024/&#34;&gt;SESSIONS 2024&lt;/a&gt;に参加しました。&lt;/p&gt;
+
+&lt;p&gt;今回のSESSIONSでは3つのプログラムに携わったので、それぞれ簡単に説明します。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Realtime Graphicsコンペティションに作品提出&lt;/li&gt;
+&lt;li&gt;セミナー登壇&lt;/li&gt;
+&lt;li&gt;Shader Jamの解説&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;なお、SESSIONSの様子は&lt;a href=&#34;https://www.youtube.com/@SESSIONS_Party&#34;&gt;公式のYouTubeチャンネル&lt;/a&gt;でアーカイブされています。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;realtime-graphicsコンペティションに作品提出&#34;&gt;Realtime Graphicsコンペティションに作品提出&lt;/h1&gt;
+
+&lt;p&gt;2日目のRealtime Graphicsコンペティションに『GUARDI▲N』という「特撮」をコンセプトにしたBrowser Demoを投稿して3位をいただきました。&lt;/p&gt;
+
+&lt;p&gt;2名のチーム制作を行い、映像とストーリーは私（gam0022）が担当し、音楽はHADHADさんが担当しました。&lt;/p&gt;
+
+&lt;p&gt;詳細については、以下の記事をご覧ください。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gam0022.net/blog/2024/12/02/sessions2024-guardian/&#34;&gt;SESSIONS 2024のRealtime Graphicsコンペティションで3位入賞しました（グラフィックス解説） | gam0022.net&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&amp;quot;GUARDI▲N&amp;quot; by &lt;a href=&#34;https://twitter.com/gam0022?ref_src=twsrc%5Etfw&#34;&gt;@gam0022&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://twitter.com/katai5plate?ref_src=twsrc%5Etfw&#34;&gt;@katai5plate&lt;/a&gt;&lt;br&gt;&lt;br&gt;3rd Place in Realtime Graphics Competition at &lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; 2024&lt;a href=&#34;https://twitter.com/SESSIONS_Party?ref_src=twsrc%5Etfw&#34;&gt;@SESSIONS_Party&lt;/a&gt; 2024のリアルタイムGraphicsコンポで3位に入賞しました！&lt;br&gt;&lt;br&gt;映像は自作のWebGLエンジンによる24KB制限です。&lt;br&gt;&lt;br&gt;「特撮」をコンセプトにしました。 &lt;a href=&#34;https://t.co/wDVVRXWX26&#34;&gt;pic.twitter.com/wDVVRXWX26&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1858308509856678328?ref_src=twsrc%5Etfw&#34;&gt;November 18, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;セミナー登壇-レイマーチングの距離関数を極める&#34;&gt;セミナー登壇「レイマーチングの距離関数を極める！」&lt;/h1&gt;
+
+&lt;p&gt;2日目の朝に「レイマーチングの距離関数を極める！」というセミナーで発表しました。&lt;/p&gt;
+
+&lt;p&gt;レイマーチングの距離関数のモデリングにおいてハマりがちな罠だったり、あまり知られていなそうなテクニックや小ネタをTwitter（X）で募集し、それらを簡単に解説しました。&lt;/p&gt;
+
+&lt;p&gt;ネタを提供していただいたみなさん（敬称略: @c5h12 @Kinakomoti2357 @Appletea_VRC @suzuki_ith @butadiene121 @shr_id @kamoshika_vrc）、本当にありがとうございました！&lt;/p&gt;
+
+&lt;p&gt;距離関数では平行移動や回転のために座標を逆操作する必要があるため、混乱しやすいと思うのですが、距離関数によるモデリングにおいては、 &lt;strong&gt;「オブジェクトそのものではなく、空間の方を操作している」&lt;/strong&gt; という基本を思い出すことが重要ということが、この発表で一番伝えたい点でした。&lt;/p&gt;
+
+&lt;p&gt;さまざまな話題が出てきましたが、空間を操作しているという基本に立ち返ると、多くの問題の解決の糸口となることが多いと感じています。&lt;/p&gt;
+
+&lt;p&gt;このセミナーを通じて、参加者の皆さんに少しでも役立つ情報を提供できたなら幸いです。&lt;/p&gt;
+
+&lt;div class=&#34;google-slide-wrap&#34;&gt;
+&lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vSdXEePaddAxc0hAOjyF3PlfQAXs2NAHn4LOQpQNT8MHLlr2G4Xd-8vDTSqNlT6lVPAM0QGN4rX9bro/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;1440&#34; height=&#34;839&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;動画のアーカイブはこちらです。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/UaWxTNwFSBc?si=m6q0CkZebzxocH3N&amp;amp;start=55&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34;  referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreenn&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;セミナー3: 「レイマーチングの距離関数を極める！」の発表資料です！&lt;br&gt;&lt;br&gt;Googleスライド版&lt;a href=&#34;https://t.co/PTyaGZR9kS&#34;&gt;https://t.co/PTyaGZR9kS&lt;/a&gt;&lt;br&gt;&lt;br&gt;Speaker Deck版&lt;a href=&#34;https://t.co/RBhgstXSiD&#34;&gt;https://t.co/RBhgstXSiD&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1858007444896756222?ref_src=twsrc%5Etfw&#34;&gt;November 17, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.google.com/presentation/d/1yQgHPNS2H0UkODCxCVnHnzsmdn5nLBXfXaUHv2Kgpbw/edit#slide=id.p&#34;&gt;Googleスライド版&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://speakerdeck.com/gam0022/mastering-distance-functions&#34;&gt;Speaker Deck版&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;shader-jamの解説&#34;&gt;Shader Jamの解説&lt;/h1&gt;
+
+&lt;p&gt;1日目のShader Jamというイベントの解説とオペレーションの一部を行いました。&lt;/p&gt;
+
+&lt;p&gt;Shader Jamは大人数でGLSLのシェーダーを書き、1時間ほどの時間でリアルタイムに作品を作っていくイベントです。&lt;/p&gt;
+
+&lt;p&gt;たくさんのシェーダー作品がリアルタイムに実装され、作り上げられていく様子はまさに圧巻でした。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/QfQglocVFTk?si=zbYZrc5mebwt_aIc&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;今回SESSIONSのShader Jamでは国内外から合計13人のGLSLコーダーが参加しました！&lt;/p&gt;
+
+&lt;p&gt;13人分の初見のシェーダーを瞬時に理解しながらリアルタイムに解説するのは自分にとってはかなり大変でしたが、少しでも来場者の理解の助けになっていたら幸いです。&lt;/p&gt;
+
+&lt;p&gt;頑張ればもう少し上手に解説できた気もするという反省もありますが、今後もっと経験を積んで、より上手に解説できることを目標にしたいです。&lt;/p&gt;
+
+&lt;p&gt;どのシェーダーもユニークで素晴らしかったのですが、個人的に印象的だったのはRenardさんのComputeShaderを使ったパーティクルの作品、Kinakomotiさんのパストレーシングの作品、そしてKamoshikaさんのLog-polar Mappingの作品です。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/glsl?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#glsl&lt;/a&gt;&lt;br&gt;Shader Jamで書いたやつ&lt;br&gt;evvvvil,wrighter先生達のコードを見ただけの付け焼刃compute shaderだったけど可能性を感じた &lt;a href=&#34;https://t.co/W2UQViP6bo&#34;&gt;pic.twitter.com/W2UQViP6bo&lt;/a&gt;&lt;/p&gt;&amp;mdash; Renard (@Renard_VRC) &lt;a href=&#34;https://twitter.com/Renard_VRC/status/1857810156131856566?ref_src=twsrc%5Etfw&#34;&gt;November 16, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; &lt;br&gt;Sessionsでshaderjamをやらせて頂きました&lt;br&gt;壁紙製造機(?)shaderです &lt;a href=&#34;https://t.co/ZcA1kcJ7W7&#34;&gt;pic.twitter.com/ZcA1kcJ7W7&lt;/a&gt;&lt;/p&gt;&amp;mdash; kiNaNkomoti (@Kinakomoti2357) &lt;a href=&#34;https://twitter.com/Kinakomoti2357/status/1858192661192245529?ref_src=twsrc%5Etfw&#34;&gt;November 17, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Shader Jamで書いたやつです！&lt;br&gt;歪んだリングを組み合わせた物体をレイマーチングで描画しました。&lt;a href=&#34;https://t.co/zqqXrZLe4m&#34;&gt;https://t.co/zqqXrZLe4m&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt;&lt;br&gt;&lt;br&gt;(Shader Jamの音は Niko_14さん &lt;a href=&#34;https://twitter.com/himazin917?ref_src=twsrc%5Etfw&#34;&gt;@himazin917&lt;/a&gt; が作ってくださいました！) &lt;a href=&#34;https://t.co/S28qM1Jpgs&#34;&gt;pic.twitter.com/S28qM1Jpgs&lt;/a&gt;&lt;/p&gt;&amp;mdash; Kamoshika (@kamoshika_vrc) &lt;a href=&#34;https://twitter.com/kamoshika_vrc/status/1858848861164630386?ref_src=twsrc%5Etfw&#34;&gt;November 19, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Shader JamのすべてのGLSLシェーダーはtotetmattさんによってアーカイブされているので、興味があればぜひご覧ください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://livecode.demozoo.org/event/2024_11_16_shader_jam_sessions.html#mc&#34;&gt;Sessions 2024-11-16 Shader Jam ◈ livecode.demozoo.org&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;まとめ&#34;&gt;まとめ&lt;/h1&gt;
+
+&lt;p&gt;SESSIONS 2024は本当に素晴らしいイベントでした。&lt;/p&gt;
+
+&lt;p&gt;セミナーの発表やShader Jamの解説など、新たな形でイベントに貢献できたことは貴重な経験となりました。&lt;/p&gt;
+
+&lt;p&gt;会場の雰囲気や臨場感を直接肌で感じることができ、オフラインイベントの特別な魅力を再認識することができました。&lt;/p&gt;
+
+&lt;p&gt;参加者との交流を通じて、作品に対する感想やアイデアの交換を行い、新たな視点やインスピレーションを得ることができました。また、会場の音響や再生環境が例年より大幅に改善されていた点も非常に良かったです。&lt;/p&gt;
+
+&lt;p&gt;さらに、今年から刷新された応募カテゴリーにより、ProcessingやジェネVJなど多様な分野の参加者が集まり、例年以上の盛り上がりを感じることができました。&lt;/p&gt;
+
+&lt;p&gt;SESSIONS 2024の運営や準備をしてくださったオーガナイザーの皆さん、そして参加者の皆さん、本当にありがとうございました。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>SESSIONS 2024のRealtime Graphicsコンペティションで3位入賞しました（グラフィックス解説）</title>
@@ -24,8 +138,13 @@
 
 &lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/IMG_4279.HEIC&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/IMG_4279.jpg&#34; alt=&#34;ファイルサイズ&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;SESSIONS 2024では、Realtime Graphicsコンペティションに作品を提出した他、セミナーとShader Jamの解説を行わせていただきました。
-セミナーとShader Jamについては別の記事で紹介する予定です。&lt;/p&gt;
+&lt;p&gt;SESSIONS 2024では、Realtime Graphicsコンペティションに作品を提出した他、セミナーとShader Jamの解説を行わせていただきました。&lt;/p&gt;
+
+&lt;p&gt;セミナーとShader Jamについてはこちらの記事で紹介しました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[SESSIONS 2024参加記録（セミナー登壇・ShaderJam解説・Realtime Graphics） | gam0022.net]((&lt;a href=&#34;https://gam0022.net/blog/2024/12/11/sessions2024-summary/&#34;&gt;https://gam0022.net/blog/2024/12/11/sessions2024-summary/&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;この記事では、Realtime Graphicsコンペティションの提出作品である『GUARDI▲N』のグラフィックス（主に距離関数によるモデリング）について解説をします。&lt;/p&gt;
 
@@ -3235,191 +3354,6 @@ FP試験で出題される内容には傾向があるので、頻出の問題だ
 &lt;p&gt;また、真剣に試験勉強をしたのは学生ぶりだったので懐かしい気持ちになりました。&lt;/p&gt;
 
 &lt;p&gt;本記事がFPを受けようと思っている人・受ける人に少しでも役に立てば幸いです。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>UnityのShaderGraphでインクシェーダーを作る</title>
-      <link>https://gam0022.net/blog/2022/12/25/unity-ink-shader/</link>
-      <pubDate>Sun, 25 Dec 2022 23:03:44 +0900</pubDate>
-      
-      <guid>https://gam0022.net/blog/2022/12/25/unity-ink-shader/</guid>
-      <description>&lt;p&gt;これは&lt;a href=&#34;https://qiita.com/advent-calendar/2022/unity&#34;&gt;Unity Advent Calendar 2022&lt;/a&gt;の22日目の記事です。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;スプラトゥーン3、けっこう面白いですね。過去作の1,2は未プレイでしたが、3からスプラデビューしました。&lt;/p&gt;
-
-&lt;p&gt;スプラ3で遊びながら、インクシェーダーの実装方法に興味が出てきたので、UnityのShaderGraphでそれっぽいものを実装してみました。&lt;/p&gt;
-
-&lt;p&gt;ShaderGraphの基本機能だけで構成されており、ノードの量も少なめにしました。&lt;/p&gt;
-
-&lt;p&gt;ShaderGraphの基本操作は解説しませんが、なるべく丁寧に説明をしたつもりなので、ShaderGraphの入門記事として参考にしてください！&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;UnityのShaderGraphでインクシェーダーを試作&lt;a href=&#34;https://twitter.com/hashtag/Unity3D?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Unity3D&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/ShaderGraph?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ShaderGraph&lt;/a&gt; &lt;a href=&#34;https://t.co/PHxIkfnkiQ&#34;&gt;pic.twitter.com/PHxIkfnkiQ&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1606141695724204032?ref_src=twsrc%5Etfw&#34;&gt;December 23, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/ink-shader.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/ink-shader.gif&#34; alt=&#34;インクシェーダー&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;色変更&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/ink-shader-color.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/ink-shader-color.gif&#34; alt=&#34;インクシェーダー 色変更&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;しきい値の調整&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/ink-shader-threshold.gif&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/ink-shader-threshold.gif&#34; alt=&#34;インクシェーダー しきい値の調整&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Unityプロジェクト
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/gam0022/ShaderPlaygroundURP&#34;&gt;github.com/gam0022/ShaderPlaygroundURP&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://gam0022.net/ShaderPlaygroundURP/&#34;&gt;WebGLデモ&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;WASDと右クリックのドラッグでカメラ操作&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;shadergraph全体&#34;&gt;ShaderGraph全体&lt;/h1&gt;
-
-&lt;p&gt;ShaderGraphの全体です。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/InkNoise.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/InkNoise.png&#34; alt=&#34;ShaderGraph全体&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;ShaderGraphのスクロール領域を含めてキャプチャするために &lt;a href=&#34;https://github.com/Cyanilux/ShaderGraphToPNG&#34;&gt;Cyanilux/ShaderGraphToPNG&lt;/a&gt; というUnityのパッケージを利用しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;完璧なソリューションがありました。&lt;br&gt;Unity2021.3.15f1 + URP12.1.8 でも完璧に動作！&lt;a href=&#34;https://t.co/3J2qsrye8s&#34;&gt;https://t.co/3J2qsrye8s&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1607359807710978049?ref_src=twsrc%5Etfw&#34;&gt;December 26, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;!--
-文字が小さくてすみません。
-
-※2回に分けてスクリーンショットを撮影してMSペイントで手動結合しました。3回以上分割して撮影すればもっと高解像度にできるのですが、手間がかかるので諦めました。
-いい感じにウィンドウのスクロール領域を含めて一発でスクリーンショットを撮る方法があれば教えてください。
-
-[![ShaderGraph全体](/images/posts/2022-12-26-unity-ink-shader/shader-graph-all.png)](/images/posts/2022-12-26-unity-ink-shader/shader-graph-all.png)
---&gt;
-
-&lt;h2 id=&#34;基本方針&#34;&gt;基本方針&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;URPのLitグラフに与えるBaseColorやSmoothnessや法線をいい感じに制御してインクっぽくする
-
-&lt;ul&gt;
-&lt;li&gt;カスタムなシェーディングはしない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;インクの高さマップはGradient Noiseからプロシージャル生成
-
-&lt;ul&gt;
-&lt;li&gt;インタラクティブなインク制御は未対応&lt;/li&gt;
-&lt;li&gt;RenderTextureを生成してペイントするようなアプローチでインタラクティブにできそう（今後の課題）&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;チュートリアル&#34;&gt;チュートリアル&lt;/h1&gt;
-
-&lt;p&gt;そこまで規模の大きくないShaderGraphですが、理解しやすいように1ステップごと解説します。&lt;/p&gt;
-
-&lt;h2 id=&#34;ステップ1-pbrテクスチャに対応&#34;&gt;ステップ1. PBRテクスチャに対応&lt;/h2&gt;
-
-&lt;p&gt;まずはPBRテクスチャに対応します。&lt;/p&gt;
-
-&lt;p&gt;PBRテクスチャは以下のサイトからお借りしました。とても良い感じのCC0ライセンスの床のタイル素材を利用させていただきました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://polyhaven.com/a/cobblestone_floor_08&#34;&gt;Cobblestone Floor 08 Texture • Poly Haven&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;これがPBRテクスチャをプロパティにして、ShaderGraphの各種PBRパラメーターを渡すだけのShaderGraphです。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/1-armtex.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/1-armtex.png&#34; alt=&#34;PBRテクスチャに対応&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;BaseColor&lt;/code&gt; や &lt;code&gt;Normal&lt;/code&gt; はそのままノードを繋げるだけでOKです。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Metallic/Smoothness/Ambient Occlusion&lt;/code&gt; だけ少し工夫がいります。&lt;/p&gt;
-
-&lt;p&gt;Poly Havenのテクスチャは &lt;code&gt;Ambient Occlusion/Roughness/Metallic&lt;/code&gt;（以下、ARMテクスチャ）がRGBに格納されているようなので、RGBの順番をBGRのように並び替える必要があります。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Smoothness = 1 - Roughness&lt;/code&gt; の関係があるので &lt;code&gt;One Minus&lt;/code&gt; ノードで変換します。&lt;/p&gt;
-
-&lt;p&gt;これでPoly Havenから落としてきたARMテクスチャに対応したShaderGraphができました。&lt;/p&gt;
-
-&lt;h2 id=&#34;ステップ2-uvのタイリング&#34;&gt;ステップ2. UVのタイリング&lt;/h2&gt;
-
-&lt;p&gt;ここから最終的なインクシェーダーのShaderGraphをステップごとに解説します。&lt;/p&gt;
-
-&lt;p&gt;まずUVのタイリングですが、単純にUVに定数を乗算しているだけです。今回は下地のテクスチャ用とインク用で独立してタイリングできるようにしました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/2-uv.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/2-uv.png&#34; alt=&#34;UVのタイリング&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;ステップ3-インクの高さマップ用のノイズ生成&#34;&gt;ステップ3. インクの高さマップ用のノイズ生成&lt;/h2&gt;
-
-&lt;p&gt;インクの高さマップはGradient Noiseから生成します。時間でアニメーションさせるために2つのGradient Noiseを線形補間で合成しています。&lt;/p&gt;
-
-&lt;p&gt;1つ目のGradient NoiseのUVは固定させておいて、2つ目のGradient NoiseのUVはtimeでスクロールさせています。&lt;/p&gt;
-
-&lt;p&gt;非常にシンプルな処理ですが、意外にもそれなりにインクっぽく見えるのではないでしょうか？&lt;/p&gt;
-
-&lt;p&gt;余談になりますが、ShaderGraphのGradient Noiseはシェーダーでプロシージャル生成しているのでGPU負荷も高いと思います。実用するなら軽量化のためにテクスチャのサンプリングに置き換えた方がいいかもしれません。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/3-noise.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/3-noise.png&#34; alt=&#34;インクの高さマップ用のノイズ生成&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;ステップ4-凹凸を考慮したインク判定のしきい値&#34;&gt;ステップ4. 凹凸を考慮したインク判定のしきい値&lt;/h2&gt;
-
-&lt;p&gt;ステップ3. でインクの高さマップを生成しました。この高さマップがしきい値以上ならインクの領域と見なすようにします。&lt;/p&gt;
-
-&lt;p&gt;インク判定のしきい値は定数でも良いのですが、高さマップを考慮してブロックの溝など低い部分の方がインクになりやすくします。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/4-threshold.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/4-threshold.png&#34; alt=&#34;インクの高さマップ用のノイズ生成&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;高さマップの影響力はプロパティで制御できるようにしました。&lt;/p&gt;
-
-&lt;p&gt;高さマップの考慮がないと真っ平らなPlaneにインクが乗っているようで、雑コラ感・馴染まない感があります。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/height-intensity-off.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/height-intensity-off.png&#34; alt=&#34;高さマップの考慮なし&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;高さマップを考慮すると、ブロックの凹凸を考慮してインクが広がるので、リアリティを少し向上できます。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/height-intensity-on.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/height-intensity-on.png&#34; alt=&#34;高さマップの考慮あり&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;ステップ5-インクのマスク生成&#34;&gt;ステップ5. インクのマスク生成&lt;/h2&gt;
-
-&lt;p&gt;「ステップ3のインクの高さマップ」から「ステップ4のしきい値」を引き算することで、インクのマスク画像を生成します。&lt;/p&gt;
-
-&lt;p&gt;そのままだとコントラストが薄いので、Powerノードでコントラストを強めに調整します。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/5-1-ink-mask.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/5-1-ink-mask.png&#34; alt=&#34;インクのマスク生成&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;インクのマスクマップをLerpの引数にして、各種PBRパラメーターにインク用の値をブレンドします。
-元はARMテクスチャの値をそのままPBRパラメーターとして渡していましたが、間にLerpノードを挟み込んで、インク用の &lt;code&gt;Ambient Occlusion/Roughness/Metallic&lt;/code&gt; をブレンドできるようにしました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/5-2-ink-mask.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/5-2-ink-mask.png&#34; alt=&#34;インク用の設定をブレンド&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;BaseMapも同じようにLerpします。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/5-3-ink-mask.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/5-3-ink-mask.png&#34; alt=&#34;インク用の設定をブレンド(BaseMap)&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;ステップ6-法線の生成&#34;&gt;ステップ6. 法線の生成&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/6-normal.png&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-12-26-unity-ink-shader/6-normal.png&#34; alt=&#34;法線の生成&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;ステップ3のインクの高さマップから法線を生成します。Normal From Heightノードがあるので利用します。&lt;/p&gt;
-
-&lt;p&gt;ステップ5のインクのマスクでは高さマップの影響で高周波成分が現れてしまうので滑らかな法線ができず、法線生成には不適切です。しきい値を引き算する前のGradient Noiseの値をNormal From Heightノードに繋ぎます。&lt;/p&gt;
-
-&lt;p&gt;今回もPowerノードでコントラストを調整可能にしました。SaturateノードではなくMaximumノードを利用しているのでは、 &lt;code&gt;Clamp(x, 0, INF)&lt;/code&gt; にしたいからです。&lt;/p&gt;
-
-&lt;p&gt;マスク画像の結果は &lt;code&gt;[0-1]&lt;/code&gt; に正規化する必要がありますが、法線生成のHeightマップであれば最大値の制限は不要だと思ったからです。&lt;/p&gt;
-
-&lt;p&gt;以上がインク用のシェーダーの解説でした。&lt;/p&gt;
-
-&lt;h1 id=&#34;まとめ&#34;&gt;まとめ&lt;/h1&gt;
-
-&lt;p&gt;ShaderGraphだけでノーコードのインクシェーダーを試作しました。
-PBRパラメーターを制御するだけのお手軽な実装ですが、思ったよりも良い見た目になったので満足です。&lt;/p&gt;
-
-&lt;p&gt;今回はインクのマスクにGradient Noiseを利用しましたが、RenderTextureをシェーダー外部から与えればインタラクティブにインクを塗ったりもできると思います。&lt;/p&gt;</description>
     </item>
     
   </channel>

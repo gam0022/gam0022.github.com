@@ -10,6 +10,120 @@
     <atom:link href="/tags/cg/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>SESSIONS 2024参加記録（セミナー登壇・ShaderJam解説・Realtime Graphics）</title>
+      <link>https://gam0022.net/blog/2024/12/11/sessions2024-summary/</link>
+      <pubDate>Wed, 11 Dec 2024 23:30:00 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2024/12/11/sessions2024-summary/</guid>
+      <description>&lt;p&gt;これは&lt;a href=&#34;https://adventar.org/calendars/10732&#34;&gt;SESSIONS Advent Calendar 2024&lt;/a&gt;の11日目の記事です。&lt;/p&gt;
+
+&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+
+&lt;p&gt;2024年11月16日～17日に日本科学未来館で開催された&lt;a href=&#34;https://sessions-party.com/events/sessions-2024/&#34;&gt;SESSIONS 2024&lt;/a&gt;に参加しました。&lt;/p&gt;
+
+&lt;p&gt;今回のSESSIONSでは3つのプログラムに携わったので、それぞれ簡単に説明します。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Realtime Graphicsコンペティションに作品提出&lt;/li&gt;
+&lt;li&gt;セミナー登壇&lt;/li&gt;
+&lt;li&gt;Shader Jamの解説&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;なお、SESSIONSの様子は&lt;a href=&#34;https://www.youtube.com/@SESSIONS_Party&#34;&gt;公式のYouTubeチャンネル&lt;/a&gt;でアーカイブされています。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;realtime-graphicsコンペティションに作品提出&#34;&gt;Realtime Graphicsコンペティションに作品提出&lt;/h1&gt;
+
+&lt;p&gt;2日目のRealtime Graphicsコンペティションに『GUARDI▲N』という「特撮」をコンセプトにしたBrowser Demoを投稿して3位をいただきました。&lt;/p&gt;
+
+&lt;p&gt;2名のチーム制作を行い、映像とストーリーは私（gam0022）が担当し、音楽はHADHADさんが担当しました。&lt;/p&gt;
+
+&lt;p&gt;詳細については、以下の記事をご覧ください。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gam0022.net/blog/2024/12/02/sessions2024-guardian/&#34;&gt;SESSIONS 2024のRealtime Graphicsコンペティションで3位入賞しました（グラフィックス解説） | gam0022.net&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&amp;quot;GUARDI▲N&amp;quot; by &lt;a href=&#34;https://twitter.com/gam0022?ref_src=twsrc%5Etfw&#34;&gt;@gam0022&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://twitter.com/katai5plate?ref_src=twsrc%5Etfw&#34;&gt;@katai5plate&lt;/a&gt;&lt;br&gt;&lt;br&gt;3rd Place in Realtime Graphics Competition at &lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; 2024&lt;a href=&#34;https://twitter.com/SESSIONS_Party?ref_src=twsrc%5Etfw&#34;&gt;@SESSIONS_Party&lt;/a&gt; 2024のリアルタイムGraphicsコンポで3位に入賞しました！&lt;br&gt;&lt;br&gt;映像は自作のWebGLエンジンによる24KB制限です。&lt;br&gt;&lt;br&gt;「特撮」をコンセプトにしました。 &lt;a href=&#34;https://t.co/wDVVRXWX26&#34;&gt;pic.twitter.com/wDVVRXWX26&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1858308509856678328?ref_src=twsrc%5Etfw&#34;&gt;November 18, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;セミナー登壇-レイマーチングの距離関数を極める&#34;&gt;セミナー登壇「レイマーチングの距離関数を極める！」&lt;/h1&gt;
+
+&lt;p&gt;2日目の朝に「レイマーチングの距離関数を極める！」というセミナーで発表しました。&lt;/p&gt;
+
+&lt;p&gt;レイマーチングの距離関数のモデリングにおいてハマりがちな罠だったり、あまり知られていなそうなテクニックや小ネタをTwitter（X）で募集し、それらを簡単に解説しました。&lt;/p&gt;
+
+&lt;p&gt;ネタを提供していただいたみなさん（敬称略: @c5h12 @Kinakomoti2357 @Appletea_VRC @suzuki_ith @butadiene121 @shr_id @kamoshika_vrc）、本当にありがとうございました！&lt;/p&gt;
+
+&lt;p&gt;距離関数では平行移動や回転のために座標を逆操作する必要があるため、混乱しやすいと思うのですが、距離関数によるモデリングにおいては、 &lt;strong&gt;「オブジェクトそのものではなく、空間の方を操作している」&lt;/strong&gt; という基本を思い出すことが重要ということが、この発表で一番伝えたい点でした。&lt;/p&gt;
+
+&lt;p&gt;さまざまな話題が出てきましたが、空間を操作しているという基本に立ち返ると、多くの問題の解決の糸口となることが多いと感じています。&lt;/p&gt;
+
+&lt;p&gt;このセミナーを通じて、参加者の皆さんに少しでも役立つ情報を提供できたなら幸いです。&lt;/p&gt;
+
+&lt;div class=&#34;google-slide-wrap&#34;&gt;
+&lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vSdXEePaddAxc0hAOjyF3PlfQAXs2NAHn4LOQpQNT8MHLlr2G4Xd-8vDTSqNlT6lVPAM0QGN4rX9bro/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;1440&#34; height=&#34;839&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;動画のアーカイブはこちらです。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/UaWxTNwFSBc?si=m6q0CkZebzxocH3N&amp;amp;start=55&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34;  referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreenn&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;セミナー3: 「レイマーチングの距離関数を極める！」の発表資料です！&lt;br&gt;&lt;br&gt;Googleスライド版&lt;a href=&#34;https://t.co/PTyaGZR9kS&#34;&gt;https://t.co/PTyaGZR9kS&lt;/a&gt;&lt;br&gt;&lt;br&gt;Speaker Deck版&lt;a href=&#34;https://t.co/RBhgstXSiD&#34;&gt;https://t.co/RBhgstXSiD&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1858007444896756222?ref_src=twsrc%5Etfw&#34;&gt;November 17, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.google.com/presentation/d/1yQgHPNS2H0UkODCxCVnHnzsmdn5nLBXfXaUHv2Kgpbw/edit#slide=id.p&#34;&gt;Googleスライド版&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://speakerdeck.com/gam0022/mastering-distance-functions&#34;&gt;Speaker Deck版&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;shader-jamの解説&#34;&gt;Shader Jamの解説&lt;/h1&gt;
+
+&lt;p&gt;1日目のShader Jamというイベントの解説とオペレーションの一部を行いました。&lt;/p&gt;
+
+&lt;p&gt;Shader Jamは大人数でGLSLのシェーダーを書き、1時間ほどの時間でリアルタイムに作品を作っていくイベントです。&lt;/p&gt;
+
+&lt;p&gt;たくさんのシェーダー作品がリアルタイムに実装され、作り上げられていく様子はまさに圧巻でした。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/QfQglocVFTk?si=zbYZrc5mebwt_aIc&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;今回SESSIONSのShader Jamでは国内外から合計13人のGLSLコーダーが参加しました！&lt;/p&gt;
+
+&lt;p&gt;13人分の初見のシェーダーを瞬時に理解しながらリアルタイムに解説するのは自分にとってはかなり大変でしたが、少しでも来場者の理解の助けになっていたら幸いです。&lt;/p&gt;
+
+&lt;p&gt;頑張ればもう少し上手に解説できた気もするという反省もありますが、今後もっと経験を積んで、より上手に解説できることを目標にしたいです。&lt;/p&gt;
+
+&lt;p&gt;どのシェーダーもユニークで素晴らしかったのですが、個人的に印象的だったのはRenardさんのComputeShaderを使ったパーティクルの作品、Kinakomotiさんのパストレーシングの作品、そしてKamoshikaさんのLog-polar Mappingの作品です。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/glsl?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#glsl&lt;/a&gt;&lt;br&gt;Shader Jamで書いたやつ&lt;br&gt;evvvvil,wrighter先生達のコードを見ただけの付け焼刃compute shaderだったけど可能性を感じた &lt;a href=&#34;https://t.co/W2UQViP6bo&#34;&gt;pic.twitter.com/W2UQViP6bo&lt;/a&gt;&lt;/p&gt;&amp;mdash; Renard (@Renard_VRC) &lt;a href=&#34;https://twitter.com/Renard_VRC/status/1857810156131856566?ref_src=twsrc%5Etfw&#34;&gt;November 16, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; &lt;br&gt;Sessionsでshaderjamをやらせて頂きました&lt;br&gt;壁紙製造機(?)shaderです &lt;a href=&#34;https://t.co/ZcA1kcJ7W7&#34;&gt;pic.twitter.com/ZcA1kcJ7W7&lt;/a&gt;&lt;/p&gt;&amp;mdash; kiNaNkomoti (@Kinakomoti2357) &lt;a href=&#34;https://twitter.com/Kinakomoti2357/status/1858192661192245529?ref_src=twsrc%5Etfw&#34;&gt;November 17, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Shader Jamで書いたやつです！&lt;br&gt;歪んだリングを組み合わせた物体をレイマーチングで描画しました。&lt;a href=&#34;https://t.co/zqqXrZLe4m&#34;&gt;https://t.co/zqqXrZLe4m&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt;&lt;br&gt;&lt;br&gt;(Shader Jamの音は Niko_14さん &lt;a href=&#34;https://twitter.com/himazin917?ref_src=twsrc%5Etfw&#34;&gt;@himazin917&lt;/a&gt; が作ってくださいました！) &lt;a href=&#34;https://t.co/S28qM1Jpgs&#34;&gt;pic.twitter.com/S28qM1Jpgs&lt;/a&gt;&lt;/p&gt;&amp;mdash; Kamoshika (@kamoshika_vrc) &lt;a href=&#34;https://twitter.com/kamoshika_vrc/status/1858848861164630386?ref_src=twsrc%5Etfw&#34;&gt;November 19, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Shader JamのすべてのGLSLシェーダーはtotetmattさんによってアーカイブされているので、興味があればぜひご覧ください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://livecode.demozoo.org/event/2024_11_16_shader_jam_sessions.html#mc&#34;&gt;Sessions 2024-11-16 Shader Jam ◈ livecode.demozoo.org&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;まとめ&#34;&gt;まとめ&lt;/h1&gt;
+
+&lt;p&gt;SESSIONS 2024は本当に素晴らしいイベントでした。&lt;/p&gt;
+
+&lt;p&gt;セミナーの発表やShader Jamの解説など、新たな形でイベントに貢献できたことは貴重な経験となりました。&lt;/p&gt;
+
+&lt;p&gt;会場の雰囲気や臨場感を直接肌で感じることができ、オフラインイベントの特別な魅力を再認識することができました。&lt;/p&gt;
+
+&lt;p&gt;参加者との交流を通じて、作品に対する感想やアイデアの交換を行い、新たな視点やインスピレーションを得ることができました。また、会場の音響や再生環境が例年より大幅に改善されていた点も非常に良かったです。&lt;/p&gt;
+
+&lt;p&gt;さらに、今年から刷新された応募カテゴリーにより、ProcessingやジェネVJなど多様な分野の参加者が集まり、例年以上の盛り上がりを感じることができました。&lt;/p&gt;
+
+&lt;p&gt;SESSIONS 2024の運営や準備をしてくださったオーガナイザーの皆さん、そして参加者の皆さん、本当にありがとうございました。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>SESSIONS 2024のRealtime Graphicsコンペティションで3位入賞しました（グラフィックス解説）</title>
       <link>https://gam0022.net/blog/2024/12/02/sessions2024-guardian/</link>
       <pubDate>Mon, 02 Dec 2024 22:00:00 +0900</pubDate>
@@ -23,8 +137,13 @@
 
 &lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/IMG_4279.HEIC&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/IMG_4279.jpg&#34; alt=&#34;ファイルサイズ&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;SESSIONS 2024では、Realtime Graphicsコンペティションに作品を提出した他、セミナーとShader Jamの解説を行わせていただきました。
-セミナーとShader Jamについては別の記事で紹介する予定です。&lt;/p&gt;
+&lt;p&gt;SESSIONS 2024では、Realtime Graphicsコンペティションに作品を提出した他、セミナーとShader Jamの解説を行わせていただきました。&lt;/p&gt;
+
+&lt;p&gt;セミナーとShader Jamについてはこちらの記事で紹介しました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[SESSIONS 2024参加記録（セミナー登壇・ShaderJam解説・Realtime Graphics） | gam0022.net]((&lt;a href=&#34;https://gam0022.net/blog/2024/12/11/sessions2024-summary/&#34;&gt;https://gam0022.net/blog/2024/12/11/sessions2024-summary/&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;この記事では、Realtime Graphicsコンペティションの提出作品である『GUARDI▲N』のグラフィックス（主に距離関数によるモデリング）について解説をします。&lt;/p&gt;
 
@@ -2919,361 +3038,6 @@ SPIR-Vをつかうことで、GPUコードもRustで実装をしたそうです�
 &lt;iframe sandbox=&#34;allow-popups allow-scripts allow-modals allow-forms allow-same-origin&#34; style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B06Y3Z1PTK&amp;linkId=e1fef8b2771937a4232c7850b5dca2da&#34;&gt;&lt;/iframe&gt;
 
 --&gt;</description>
-    </item>
-    
-    <item>
-      <title>速度比較！レイマーチングvsレイキャスティング</title>
-      <link>https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/</link>
-      <pubDate>Mon, 08 Aug 2022 02:12:50 +0900</pubDate>
-      
-      <guid>https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/</guid>
-      <description>&lt;p&gt;これは&lt;a href=&#34;https://sites.google.com/view/raytracingcamp8&#34;&gt;レイトレ合宿8&lt;/a&gt;のアドベントカレンダーです。&lt;/p&gt;
-
-&lt;p&gt;レイマーチングはレイキャスティングと比べて遅いと感じていましたが、なるべく同じ条件で計測した場合に実際どのくらい差があるのか比較してみました。&lt;/p&gt;
-
-&lt;h1 id=&#34;検証内容の概要&#34;&gt;検証内容の概要&lt;/h1&gt;
-
-&lt;p&gt;メンガーのスポンジをレイマーチングとレイキャスティングでそれぞれ交差判定を実装し、フラクタルの深度を1～4に変化しながら計測しました。&lt;/p&gt;
-
-&lt;p&gt;次の画像はレイマーチングによる深度4のメンガーのスポンジです。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raymarching_i4_s256_l300.png&#34; alt=&#34;レイマーチング 深度4 300ステップ&#34; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;計測結果のサマリー&#34;&gt;計測結果のサマリー&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;先に結果から発表すると、なんとレイマーチングはレイキャスティングの15～20倍くらい遅いようでした。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;ここまで遅いなんてショック😨…&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/result_graph.png&#34; alt=&#34;計測結果の棒グラフ&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;256サンプリング時のレンダリング時間（秒）&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&#34;left&#34;&gt;フラクタルの深度&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;1&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;2&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;3&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;4&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;レイマーチング&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;8.85388秒 &lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raymarching_i1_s256.png&#34; alt=&#34;レイマーチング 深度1&#34; /&gt;&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9.00077秒 &lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raymarching_i2_s256.png&#34; alt=&#34;レイマーチング 深度2&#34; /&gt;&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9.14309秒 &lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raymarching_i3_s256.png&#34; alt=&#34;レイマーチング 深度3&#34; /&gt;&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9.29724秒 &lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raymarching_i4_s256.png&#34; alt=&#34;レイマーチング 深度4&#34; /&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;レイキャスティング&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.445493秒 &lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raycast_i1_s256.png&#34; alt=&#34;レイキャスティング 深度1&#34; /&gt;&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.466056秒 &lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raycast_i2_s256.png&#34; alt=&#34;レイキャスティング 深度2&#34; /&gt;&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.50258秒 &lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raycast_i3_s256.png&#34; alt=&#34;レイキャスティング 深度3&#34; /&gt;&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.602458秒 &lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raycast_i4_s256.png&#34; alt=&#34;レイキャスティング 深度4&#34; /&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;検証内容の詳細&#34;&gt;検証内容の詳細&lt;/h1&gt;
-
-&lt;h2 id=&#34;検証pcのスペック&#34;&gt;検証PCのスペック&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;OS: Windows 11&lt;/li&gt;
-&lt;li&gt;CPU: Core i7-12700K&lt;/li&gt;
-&lt;li&gt;GPU: GeForce RTX 3080&lt;/li&gt;
-&lt;li&gt;メモリ: 64GB (3200MHz)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;このピカピカ光るPCで検証しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;my new gear&amp;hellip; &lt;a href=&#34;https://t.co/eS2MbH7OKc&#34;&gt;pic.twitter.com/eS2MbH7OKc&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1546700194305437696?ref_src=twsrc%5Etfw&#34;&gt;July 12, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;共通条件&#34;&gt;共通条件&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;レンダラーはNVIDIA OptiX 7.5上で実装&lt;/li&gt;
-&lt;li&gt;256サンプリングする時間を計測
-
-&lt;ul&gt;
-&lt;li&gt;1回のoptixLaunchで256サンプリング&lt;/li&gt;
-&lt;li&gt;Ray generationプログラム（CUDAの関数）の中で256回ループ&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;出力解像度は1920x1080&lt;/li&gt;
-&lt;li&gt;計測時間の詳細
-
-&lt;ul&gt;
-&lt;li&gt;シーンの初期化やBVHの構築は含まない&lt;/li&gt;
-&lt;li&gt;optixLaunchの実行時間を計測&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;シェーディングはパストレーシング
-
-&lt;ul&gt;
-&lt;li&gt;マテリアルは拡散反射のみ&lt;/li&gt;
-&lt;li&gt;NEEやMISはしないシンプルなパストレーシング&lt;/li&gt;
-&lt;li&gt;反射の最大深度は5&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;シーン全体で2つのGAS
-
-&lt;ul&gt;
-&lt;li&gt;床（巨大なカスタムプリミティブのSphere）のGASが1つ&lt;/li&gt;
-&lt;li&gt;メンガーのスポンジのGASが1つ&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;レイマーチング&#34;&gt;レイマーチング&lt;/h2&gt;
-
-&lt;p&gt;レイマーチングは繰り返しの計算によって数値的に衝突判定を解く手法で、Sphere Tracingとも呼ばれます。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;レイマーチングの最大ステップ回数（マーチングループのループ数）は100&lt;/li&gt;
-&lt;li&gt;Intersectionプログラム（CUDAの関数）としてレイマーチングを実装
-
-&lt;ul&gt;
-&lt;li&gt;詳細は&lt;a href=&#34;https://gam0022.net/blog/2019/08/05/optix-raymarching-pathtracing/&#34;&gt;過去の記事&lt;/a&gt;を参照&lt;/li&gt;
-&lt;li&gt;Optix6の内容なので、Optix7対応のために実装を多少修正&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;高速化のためにカメラからレイは飛ばさずに、バウンディングボックス（AABB）からレイを飛ばす
-
-&lt;ul&gt;
-&lt;li&gt;AABBは最適になるようにギリギリに設定&lt;/li&gt;
-&lt;li&gt;カスタムプリミティブ全体で1つのAABB&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;レイキャスティング&#34;&gt;レイキャスティング&lt;/h2&gt;
-
-&lt;p&gt;今回のレイキャスティングとは、レイと三角形の解析的な交差判定のことです。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;メンガースポンジはHoudiniでモデリング
-
-&lt;ul&gt;
-&lt;li&gt;詳細は&lt;a href=&#34;https://gam0022.net/blog/2018/06/08/houdini/&#34;&gt;過去の記事&lt;/a&gt;を参照&lt;/li&gt;
-&lt;li&gt;フラクタルの深度を指定可能にアップデート（ツイート参照）&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Houdiniからobjで出力して自作のレンダラーで読み込み
-
-&lt;ul&gt;
-&lt;li&gt;OptiX7.xではobjのローダーが無かったので自作…&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;OptiXのビルトインの機能で衝突判定
-
-&lt;ul&gt;
-&lt;li&gt;OptiX上では三角ポリゴンの集合として表現&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;OptiXの機能でGAS（Geometry acceleration structure）を構築
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;RTコアによるレイトレーシングのハードウェアアクセラレーションあり&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;フラクタルの再帰回数を自由に増やせるようになった。&lt;br&gt;HoudiniのTOPs Feedback Loopの良い使用例ですね。 &lt;a href=&#34;https://t.co/yTR60S5vgC&#34;&gt;https://t.co/yTR60S5vgC&lt;/a&gt; &lt;a href=&#34;https://t.co/OifBfoTCFa&#34;&gt;pic.twitter.com/OifBfoTCFa&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1556203400257503232?ref_src=twsrc%5Etfw&#34;&gt;August 7, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;結果詳細&#34;&gt;結果詳細&lt;/h1&gt;
-
-&lt;p&gt;改めて計測結果を見てみましょう。&lt;/p&gt;
-
-&lt;h2 id=&#34;レンダリング時間&#34;&gt;レンダリング時間&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/result_graph.png&#34; alt=&#34;計測結果の棒グラフ&#34; /&gt;&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&#34;left&#34;&gt;フラクタルの深度&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;1&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;2&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;3&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;4&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;レイマーチング&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;8.85388&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9.00077&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9.14309&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9.29724&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;レイキャスティング&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.445493&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.466056&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.50258&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.602458&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;レンダリング時間以外&#34;&gt;レンダリング時間以外&lt;/h2&gt;
-
-&lt;p&gt;レンダリング時間以外のデータです。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;GAS（Geometry Acceleration Structure）の構築時間（秒）
-
-&lt;ul&gt;
-&lt;li&gt;レイキャスティングのみの結果&lt;/li&gt;
-&lt;li&gt;レイマーチングではAABBはできてもBVHを構築できない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;ポリゴンの頂点数&lt;/li&gt;
-&lt;li&gt;レイマーチングがレイキャスティングの何倍の時間がかかっているか&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&#34;left&#34;&gt;フラクタルの深度&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;1&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;2&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;3&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;4&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;GASの構築時間（秒）&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.0008289&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.0010064&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.0030907&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;0.0135217&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;ポリゴンの頂点数&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;480&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;9600&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;192000&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;3840000&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;倍率（Raymarching / Raycasting）&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;19.87434146&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;19.31263625&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;18.19230769&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;15.4321795&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;GASの構築は思ったより速いんですね。380万頂点でも0.01秒で完了しているのは驚きです。&lt;/p&gt;
-
-&lt;p&gt;ポリゴンの頂点数は指数で増加しても描画時間は大きく変わらないので、Acceleration Structureは本当に偉大ですね🙏&lt;/p&gt;
-
-&lt;p&gt;倍率について、フラクタルの深度が増えればレイマーチングの方が有利だと予想していましたが、予想通りにその傾向はありました。
-ですが、思ったよりも差が縮まらないんだというのが率直な感想です。&lt;/p&gt;
-
-&lt;h2 id=&#34;レンダリング結果&#34;&gt;レンダリング結果&lt;/h2&gt;
-
-&lt;p&gt;大きなサイズのレンダリング結果です。&lt;/p&gt;
-
-&lt;p&gt;異なるアルゴリズムでモデリングしているので、ジオメトリーは完全一致ではありません。&lt;/p&gt;
-
-&lt;p&gt;記事を書いている途中で発覚しましたが、レイマーチングのステップ回数100では上部の法線とレイの角度が急な箇所でエラーが起きていました。
-サムネではステップ回数300に増やして再レンダリングして15.7267秒でした。&lt;/p&gt;
-
-&lt;h3 id=&#34;レイマーチング-深度1&#34;&gt;レイマーチング 深度1&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raymarching_i1_s256.png&#34; alt=&#34;レイマーチング 深度1&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;レイマーチング-深度2&#34;&gt;レイマーチング 深度2&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raymarching_i2_s256.png&#34; alt=&#34;レイマーチング 深度2&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;レイマーチング-深度3&#34;&gt;レイマーチング 深度3&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raymarching_i3_s256.png&#34; alt=&#34;レイマーチング 深度3&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;レイマーチング-深度4&#34;&gt;レイマーチング 深度4&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raymarching_i4_s256.png&#34; alt=&#34;レイマーチング 深度4&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;レイキャスティング-深度1&#34;&gt;レイキャスティング 深度1&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raycast_i1_s256.png&#34; alt=&#34;レイキャスティング 深度1&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;レイキャスティング-深度2&#34;&gt;レイキャスティング 深度2&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raycast_i2_s256.png&#34; alt=&#34;レイキャスティング 深度2&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;レイキャスティング-深度3&#34;&gt;レイキャスティング 深度3&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raycast_i3_s256.png&#34; alt=&#34;レイキャスティング 深度3&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;レイキャスティング-深度4&#34;&gt;レイキャスティング 深度4&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2022-08-08-raymarching-vs-raycasting/raycast_i4_s256.png&#34; alt=&#34;レイキャスティング 深度4&#34; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;レイマーチングの高速化手法&#34;&gt;レイマーチングの高速化手法&lt;/h1&gt;
-
-&lt;p&gt;レイマーチングの高速化手法を軽く調べてみました。&lt;/p&gt;
-
-&lt;p&gt;EnhancedSphereTracingやAccelerating Sphere Tracingはレイマーチングのステップを少し大きく調整してステップ数を減らす手法です。
-IFSやMod Repetitionと乱数の組み合わせによる非連続な距離関数だとうまくいかない気もしていますが、ちゃんと試したことはないので分かりません。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;EnhancedSphereTracing [Benjamin Keinert 2014]
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://erleuchtet.org/~cupe/permanent/enhanced_sphere_tracing.pdf&#34;&gt;論文&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://qiita.com/Hirai0827/items/eddcb73a1976c3088b88&#34;&gt;日本語解説 by @lucknknock さん&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Accelerating Sphere Tracing [Csaba Bálint 2018]
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.researchgate.net/publication/331547302_Accelerating_Sphere_Tracing&#34;&gt;論文&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://qiita.com/Hirai0827/items/e05e13f343357d648b1b&#34;&gt;日本語解説 by @lucknknock さん&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Cone Marchingは非連続な距離関数でもおそらく適用できそうです。
-低解像度でDepthを計算しておいて、高解像度でDepthを引き継いでレイマーチングをすることで、トータルで距離関数の評価回数をかなり削減できます。
-しかし、プライマリレイにしか適用できないため、パストレーシングでは効果が低そうです。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.fulcrum-demo.org/wp-content/uploads/2012/04/Cone_Marching_Mandelbox_by_Seven_Fulcrum_LongVersion.pdf&#34;&gt;Cone_Marching_Mandelbox_by_Seven_Fulcrum&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://jp.gamesindustry.biz/article/1803/18032802/&#34;&gt;［GDC 2018］Cone Marching法で描くフラクタルVRの世界「CORAL」&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;このあたりはよく読んでいません。自分のための備忘録です。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;A Geometric Method for Accelerated Sphere Tracing of Implicit Surfaces [Csaba Bálint 2021]
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://cyber.bibl.u-szeged.hu/index.php/actcybern/article/view/4203&#34;&gt;論文&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;後で読む&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Real-Time Rendering of Complex Fractals
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://link.springer.com/chapter/10.1007/978-1-4842-7185-8_33&#34;&gt;リンク&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Real-Time Renderingの章らしいが、単なるレイマーチングの紹介かもしれない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Area Lights in Signed Distance Function Scenes
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://diglib.eg.org/bitstream/handle/10.2312/egs20191021/085-088.pdf?sequence=1&amp;amp;isAllowed=y&#34;&gt;論文&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;衝突判定ではないが気になるのでメモ&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;まとめ&#34;&gt;まとめ&lt;/h1&gt;
-
-&lt;p&gt;レイマーチングはめちゃくちゃ遅いので、レイトレ合宿のようにレンダリング時間がシビアなら悪手かもしれません。&lt;/p&gt;</description>
     </item>
     
   </channel>

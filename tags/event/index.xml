@@ -10,6 +10,120 @@
     <atom:link href="/tags/event/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>SESSIONS 2024参加記録（セミナー登壇・ShaderJam解説・Realtime Graphics）</title>
+      <link>https://gam0022.net/blog/2024/12/11/sessions2024-summary/</link>
+      <pubDate>Wed, 11 Dec 2024 23:30:00 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2024/12/11/sessions2024-summary/</guid>
+      <description>&lt;p&gt;これは&lt;a href=&#34;https://adventar.org/calendars/10732&#34;&gt;SESSIONS Advent Calendar 2024&lt;/a&gt;の11日目の記事です。&lt;/p&gt;
+
+&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+
+&lt;p&gt;2024年11月16日～17日に日本科学未来館で開催された&lt;a href=&#34;https://sessions-party.com/events/sessions-2024/&#34;&gt;SESSIONS 2024&lt;/a&gt;に参加しました。&lt;/p&gt;
+
+&lt;p&gt;今回のSESSIONSでは3つのプログラムに携わったので、それぞれ簡単に説明します。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Realtime Graphicsコンペティションに作品提出&lt;/li&gt;
+&lt;li&gt;セミナー登壇&lt;/li&gt;
+&lt;li&gt;Shader Jamの解説&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;なお、SESSIONSの様子は&lt;a href=&#34;https://www.youtube.com/@SESSIONS_Party&#34;&gt;公式のYouTubeチャンネル&lt;/a&gt;でアーカイブされています。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;realtime-graphicsコンペティションに作品提出&#34;&gt;Realtime Graphicsコンペティションに作品提出&lt;/h1&gt;
+
+&lt;p&gt;2日目のRealtime Graphicsコンペティションに『GUARDI▲N』という「特撮」をコンセプトにしたBrowser Demoを投稿して3位をいただきました。&lt;/p&gt;
+
+&lt;p&gt;2名のチーム制作を行い、映像とストーリーは私（gam0022）が担当し、音楽はHADHADさんが担当しました。&lt;/p&gt;
+
+&lt;p&gt;詳細については、以下の記事をご覧ください。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gam0022.net/blog/2024/12/02/sessions2024-guardian/&#34;&gt;SESSIONS 2024のRealtime Graphicsコンペティションで3位入賞しました（グラフィックス解説） | gam0022.net&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&amp;quot;GUARDI▲N&amp;quot; by &lt;a href=&#34;https://twitter.com/gam0022?ref_src=twsrc%5Etfw&#34;&gt;@gam0022&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://twitter.com/katai5plate?ref_src=twsrc%5Etfw&#34;&gt;@katai5plate&lt;/a&gt;&lt;br&gt;&lt;br&gt;3rd Place in Realtime Graphics Competition at &lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; 2024&lt;a href=&#34;https://twitter.com/SESSIONS_Party?ref_src=twsrc%5Etfw&#34;&gt;@SESSIONS_Party&lt;/a&gt; 2024のリアルタイムGraphicsコンポで3位に入賞しました！&lt;br&gt;&lt;br&gt;映像は自作のWebGLエンジンによる24KB制限です。&lt;br&gt;&lt;br&gt;「特撮」をコンセプトにしました。 &lt;a href=&#34;https://t.co/wDVVRXWX26&#34;&gt;pic.twitter.com/wDVVRXWX26&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1858308509856678328?ref_src=twsrc%5Etfw&#34;&gt;November 18, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;セミナー登壇-レイマーチングの距離関数を極める&#34;&gt;セミナー登壇「レイマーチングの距離関数を極める！」&lt;/h1&gt;
+
+&lt;p&gt;2日目の朝に「レイマーチングの距離関数を極める！」というセミナーで発表しました。&lt;/p&gt;
+
+&lt;p&gt;レイマーチングの距離関数のモデリングにおいてハマりがちな罠だったり、あまり知られていなそうなテクニックや小ネタをTwitter（X）で募集し、それらを簡単に解説しました。&lt;/p&gt;
+
+&lt;p&gt;ネタを提供していただいたみなさん（敬称略: @c5h12 @Kinakomoti2357 @Appletea_VRC @suzuki_ith @butadiene121 @shr_id @kamoshika_vrc）、本当にありがとうございました！&lt;/p&gt;
+
+&lt;p&gt;距離関数では平行移動や回転のために座標を逆操作する必要があるため、混乱しやすいと思うのですが、距離関数によるモデリングにおいては、 &lt;strong&gt;「オブジェクトそのものではなく、空間の方を操作している」&lt;/strong&gt; という基本を思い出すことが重要ということが、この発表で一番伝えたい点でした。&lt;/p&gt;
+
+&lt;p&gt;さまざまな話題が出てきましたが、空間を操作しているという基本に立ち返ると、多くの問題の解決の糸口となることが多いと感じています。&lt;/p&gt;
+
+&lt;p&gt;このセミナーを通じて、参加者の皆さんに少しでも役立つ情報を提供できたなら幸いです。&lt;/p&gt;
+
+&lt;div class=&#34;google-slide-wrap&#34;&gt;
+&lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vSdXEePaddAxc0hAOjyF3PlfQAXs2NAHn4LOQpQNT8MHLlr2G4Xd-8vDTSqNlT6lVPAM0QGN4rX9bro/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;1440&#34; height=&#34;839&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;動画のアーカイブはこちらです。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/UaWxTNwFSBc?si=m6q0CkZebzxocH3N&amp;amp;start=55&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34;  referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreenn&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;セミナー3: 「レイマーチングの距離関数を極める！」の発表資料です！&lt;br&gt;&lt;br&gt;Googleスライド版&lt;a href=&#34;https://t.co/PTyaGZR9kS&#34;&gt;https://t.co/PTyaGZR9kS&lt;/a&gt;&lt;br&gt;&lt;br&gt;Speaker Deck版&lt;a href=&#34;https://t.co/RBhgstXSiD&#34;&gt;https://t.co/RBhgstXSiD&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1858007444896756222?ref_src=twsrc%5Etfw&#34;&gt;November 17, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.google.com/presentation/d/1yQgHPNS2H0UkODCxCVnHnzsmdn5nLBXfXaUHv2Kgpbw/edit#slide=id.p&#34;&gt;Googleスライド版&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://speakerdeck.com/gam0022/mastering-distance-functions&#34;&gt;Speaker Deck版&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;shader-jamの解説&#34;&gt;Shader Jamの解説&lt;/h1&gt;
+
+&lt;p&gt;1日目のShader Jamというイベントの解説とオペレーションの一部を行いました。&lt;/p&gt;
+
+&lt;p&gt;Shader Jamは大人数でGLSLのシェーダーを書き、1時間ほどの時間でリアルタイムに作品を作っていくイベントです。&lt;/p&gt;
+
+&lt;p&gt;たくさんのシェーダー作品がリアルタイムに実装され、作り上げられていく様子はまさに圧巻でした。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/QfQglocVFTk?si=zbYZrc5mebwt_aIc&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;今回SESSIONSのShader Jamでは国内外から合計13人のGLSLコーダーが参加しました！&lt;/p&gt;
+
+&lt;p&gt;13人分の初見のシェーダーを瞬時に理解しながらリアルタイムに解説するのは自分にとってはかなり大変でしたが、少しでも来場者の理解の助けになっていたら幸いです。&lt;/p&gt;
+
+&lt;p&gt;頑張ればもう少し上手に解説できた気もするという反省もありますが、今後もっと経験を積んで、より上手に解説できることを目標にしたいです。&lt;/p&gt;
+
+&lt;p&gt;どのシェーダーもユニークで素晴らしかったのですが、個人的に印象的だったのはRenardさんのComputeShaderを使ったパーティクルの作品、Kinakomotiさんのパストレーシングの作品、そしてKamoshikaさんのLog-polar Mappingの作品です。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/glsl?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#glsl&lt;/a&gt;&lt;br&gt;Shader Jamで書いたやつ&lt;br&gt;evvvvil,wrighter先生達のコードを見ただけの付け焼刃compute shaderだったけど可能性を感じた &lt;a href=&#34;https://t.co/W2UQViP6bo&#34;&gt;pic.twitter.com/W2UQViP6bo&lt;/a&gt;&lt;/p&gt;&amp;mdash; Renard (@Renard_VRC) &lt;a href=&#34;https://twitter.com/Renard_VRC/status/1857810156131856566?ref_src=twsrc%5Etfw&#34;&gt;November 16, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; &lt;br&gt;Sessionsでshaderjamをやらせて頂きました&lt;br&gt;壁紙製造機(?)shaderです &lt;a href=&#34;https://t.co/ZcA1kcJ7W7&#34;&gt;pic.twitter.com/ZcA1kcJ7W7&lt;/a&gt;&lt;/p&gt;&amp;mdash; kiNaNkomoti (@Kinakomoti2357) &lt;a href=&#34;https://twitter.com/Kinakomoti2357/status/1858192661192245529?ref_src=twsrc%5Etfw&#34;&gt;November 17, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Shader Jamで書いたやつです！&lt;br&gt;歪んだリングを組み合わせた物体をレイマーチングで描画しました。&lt;a href=&#34;https://t.co/zqqXrZLe4m&#34;&gt;https://t.co/zqqXrZLe4m&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt;&lt;br&gt;&lt;br&gt;(Shader Jamの音は Niko_14さん &lt;a href=&#34;https://twitter.com/himazin917?ref_src=twsrc%5Etfw&#34;&gt;@himazin917&lt;/a&gt; が作ってくださいました！) &lt;a href=&#34;https://t.co/S28qM1Jpgs&#34;&gt;pic.twitter.com/S28qM1Jpgs&lt;/a&gt;&lt;/p&gt;&amp;mdash; Kamoshika (@kamoshika_vrc) &lt;a href=&#34;https://twitter.com/kamoshika_vrc/status/1858848861164630386?ref_src=twsrc%5Etfw&#34;&gt;November 19, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Shader JamのすべてのGLSLシェーダーはtotetmattさんによってアーカイブされているので、興味があればぜひご覧ください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://livecode.demozoo.org/event/2024_11_16_shader_jam_sessions.html#mc&#34;&gt;Sessions 2024-11-16 Shader Jam ◈ livecode.demozoo.org&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;まとめ&#34;&gt;まとめ&lt;/h1&gt;
+
+&lt;p&gt;SESSIONS 2024は本当に素晴らしいイベントでした。&lt;/p&gt;
+
+&lt;p&gt;セミナーの発表やShader Jamの解説など、新たな形でイベントに貢献できたことは貴重な経験となりました。&lt;/p&gt;
+
+&lt;p&gt;会場の雰囲気や臨場感を直接肌で感じることができ、オフラインイベントの特別な魅力を再認識することができました。&lt;/p&gt;
+
+&lt;p&gt;参加者との交流を通じて、作品に対する感想やアイデアの交換を行い、新たな視点やインスピレーションを得ることができました。また、会場の音響や再生環境が例年より大幅に改善されていた点も非常に良かったです。&lt;/p&gt;
+
+&lt;p&gt;さらに、今年から刷新された応募カテゴリーにより、ProcessingやジェネVJなど多様な分野の参加者が集まり、例年以上の盛り上がりを感じることができました。&lt;/p&gt;
+
+&lt;p&gt;SESSIONS 2024の運営や準備をしてくださったオーガナイザーの皆さん、そして参加者の皆さん、本当にありがとうございました。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>SESSIONS 2024のRealtime Graphicsコンペティションで3位入賞しました（グラフィックス解説）</title>
       <link>https://gam0022.net/blog/2024/12/02/sessions2024-guardian/</link>
       <pubDate>Mon, 02 Dec 2024 22:00:00 +0900</pubDate>
@@ -23,8 +137,13 @@
 
 &lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/IMG_4279.HEIC&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2024-12-02-sessions2024-guardian/IMG_4279.jpg&#34; alt=&#34;ファイルサイズ&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;SESSIONS 2024では、Realtime Graphicsコンペティションに作品を提出した他、セミナーとShader Jamの解説を行わせていただきました。
-セミナーとShader Jamについては別の記事で紹介する予定です。&lt;/p&gt;
+&lt;p&gt;SESSIONS 2024では、Realtime Graphicsコンペティションに作品を提出した他、セミナーとShader Jamの解説を行わせていただきました。&lt;/p&gt;
+
+&lt;p&gt;セミナーとShader Jamについてはこちらの記事で紹介しました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[SESSIONS 2024参加記録（セミナー登壇・ShaderJam解説・Realtime Graphics） | gam0022.net]((&lt;a href=&#34;https://gam0022.net/blog/2024/12/11/sessions2024-summary/&#34;&gt;https://gam0022.net/blog/2024/12/11/sessions2024-summary/&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;この記事では、Realtime Graphicsコンペティションの提出作品である『GUARDI▲N』のグラフィックス（主に距離関数によるモデリング）について解説をします。&lt;/p&gt;
 
@@ -2798,130 +2917,6 @@ WORMHOLEではシェーダーによるプログラミングによってプロシ
 
 &lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;発表者が8人もいたのにそれぞれ自分の興味のある分野を紹介していて、&lt;br&gt;内容の重複がほとんど無かったのすごい  &lt;a href=&#34;https://twitter.com/hashtag/mercarigdc?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#mercarigdc&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ@GDC登壇した (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1113439372072738826?ref_src=twsrc%5Etfw&#34;&gt;2019年4月3日&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>GDC2019で登壇しました &amp; iq先生にお会いしました</title>
-      <link>https://gam0022.net/blog/2019/03/28/gdc2019/</link>
-      <pubDate>Thu, 28 Mar 2019 09:06:34 +0900</pubDate>
-      
-      <guid>https://gam0022.net/blog/2019/03/28/gdc2019/</guid>
-      <description>&lt;p&gt;先週（3/18〜3/22）、アメリカのサンフランシスコで開催された&lt;a href=&#34;https://gdc.tech.ubm.com/2019/&#34;&gt;GDC2019&lt;/a&gt;に参加しました。&lt;/p&gt;
-
-&lt;p&gt;GDCは初参加でしたが、スポンサーセッションで登壇したり、Unity本社でUnity Profilerのミーティングを行ったり、
-Meetupに参加して海外のシェーダーやWebGLのエンジニアと交流したり、Stadiaの遅延を味わったりと、セッションの聴講だけでなく貴重な体験をたくさんできました！&lt;/p&gt;
-
-&lt;h2 id=&#34;スポンサーセッションでの登壇&#34;&gt;スポンサーセッションでの登壇&lt;/h2&gt;
-
-&lt;p&gt;Google と KLab の2社の合同セッション&lt;a href=&#34;https://schedule.gdconf.com/session/real-world-techniques-and-best-practices-for-optimizing-android-games-presented-by-google/865328&#34;&gt;Real-World Techniques and Best Practices for Optimizing Android Games&lt;/a&gt;で登壇しました。&lt;/p&gt;
-
-&lt;p&gt;前半はGoogleのFrancescoさんが「Android Common Performance Pitfalls」というタイトルで「Androidのパフォーマンスチューニングのはまりどころ」を紹介しました。&lt;/p&gt;
-
-&lt;p&gt;後半はKLabから私（&lt;a href=&#34;http://twitter.com/gam0022&#34;&gt;@gam0022&lt;/a&gt;）、&lt;a href=&#34;https://twitter.com/ohomagic&#34;&gt;@ohomagic&lt;/a&gt; さん、&lt;a href=&#34;https://twitter.com/hnw&#34;&gt;@hnw&lt;/a&gt; さんの3人で
-「Continuous Profiling for Android Game Performance Optimization」というタイトルで「CI/CDと連携したモバイル（Android）向けUnity製ゲームの自動プロファイリングシステムの構築方法」について紹介しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;3月にサンフランシスコで開催される &lt;a href=&#34;https://twitter.com/hashtag/GDC2019?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GDC2019&lt;/a&gt; で登壇します！&lt;br&gt;&lt;br&gt;自動プロファイリングシステムによる&lt;br&gt;Unity製Androidゲームの継続的なパフォーマンスチューニングについて、&lt;br&gt;弊社KLabの取り組みをご紹介します😊&lt;a href=&#34;https://t.co/NEiOPRHKPe&#34;&gt;https://t.co/NEiOPRHKPe&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ@GDC登壇した (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1097302593338933248?ref_src=twsrc%5Etfw&#34;&gt;2019年2月18日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;一応 Presenter です&lt;a href=&#34;https://twitter.com/hashtag/GDC19?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GDC19&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/GDC2019?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GDC2019&lt;/a&gt; &lt;a href=&#34;https://t.co/Eq6pcDpKuN&#34;&gt;pic.twitter.com/Eq6pcDpKuN&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ@GDC登壇した (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1107810588774686720?ref_src=twsrc%5Etfw&#34;&gt;2019年3月19日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;資料と動画は近日公開する予定ですので、乞うご期待ください！&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;unity本社でunity-profilerのミーティング&#34;&gt;Unity本社でUnity Profilerのミーティング&lt;/h2&gt;
-
-&lt;p&gt;Unity本社でProfilerを開発しているエンジニアと直に話す機会をいただきました！&lt;/p&gt;
-
-&lt;p&gt;経緯としては、KLabがGDCでUnityのプロファイリングの自動化について発表したことがUnityの日本担当ディレクターの&lt;a href=&#34;https://twitter.com/pigeon6&#34;&gt;大前さん&lt;/a&gt;にも伝わって、突発的にMTGが決まりました。&lt;/p&gt;
-
-&lt;p&gt;KLabを含めた2社のエンジニアがUnity Profilerの不満や困っている点や疑問点を開発者に伝えたり、質問に答えていただきました。&lt;/p&gt;
-
-&lt;p&gt;開発体制などからUnityが本気でProfilerを改善しようとしている姿勢が伝わりましたし、開発中の新しいプロファイリング機能の画面のデモなどを見せていただくこともできました。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;そういえば、昨日はUnity本社に入ることができました &lt;a href=&#34;https://t.co/FQE9XicF0u&#34;&gt;pic.twitter.com/FQE9XicF0u&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ@GDC登壇した (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1108801919328280576?ref_src=twsrc%5Etfw&#34;&gt;2019年3月21日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;shadertoy-meetup-webgl-meetup&#34;&gt;Shadertoy Meetup &amp;amp; WebGL Meetup&lt;/h2&gt;
-
-&lt;p&gt;GDCは世界中のデベロッパーが一堂に会する場という側面もあり、会期中にたくさんのMeetupが開催されます。&lt;/p&gt;
-
-&lt;p&gt;2つのMeetupに参加しました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.meetup.com/ja-JP/San-Francisco-shadertoy/events/259451027/&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&amp;frasl;&lt;sub&gt;19&lt;/sub&gt; San Francisco Shadertoy meetup&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.meetup.com/ja-JP/Silicon-Valley-HTML5-WebGL-Meetup/events/258963508/&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&amp;frasl;&lt;sub&gt;20&lt;/sub&gt; WebGL/WebVR at GDC!&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Shadertoy Meetupでは、尊敬するデベロッパーとたくさんお会いできて感動の連続でした。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Shadertoy Meetup (at &lt;a href=&#34;https://twitter.com/figmadesign?ref_src=twsrc%5Etfw&#34;&gt;@FigmaDesign&lt;/a&gt; in San Francisco, CA) &lt;a href=&#34;https://t.co/sn0p4r9oUr&#34;&gt;https://t.co/sn0p4r9oUr&lt;/a&gt; &lt;a href=&#34;https://t.co/jiZLwtyyHO&#34;&gt;pic.twitter.com/jiZLwtyyHO&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ@GDC登壇した (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1108195113866592262?ref_src=twsrc%5Etfw&#34;&gt;2019年3月20日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://shadertoy.com&#34;&gt;Shadertoy&lt;/a&gt;の創設者であり、世界的に&lt;a href=&#34;https://www.youtube.com/watch?v=_YWMGuh15nE&amp;amp;t=4s&#34;&gt;有名な 4K byte デモのElevated&lt;/a&gt;の作者であり、
-数多くのレイマーチングの作品や知見を発信したりと、シェーダーコーディング界の伝説の人物である iq 氏とお会いすることができました！&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;A photo with &lt;a href=&#34;https://twitter.com/iquilezles?ref_src=twsrc%5Etfw&#34;&gt;@iquilezles&lt;/a&gt; &lt;a href=&#34;https://t.co/QOBiNnS0vz&#34;&gt;pic.twitter.com/QOBiNnS0vz&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ@GDC登壇した (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1108196240582283266?ref_src=twsrc%5Etfw&#34;&gt;2019年3月20日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/mrdoob/three.js/&#34;&gt;three.js&lt;/a&gt;の作者の mrdoob さんともお会いできました！&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Photo with &lt;a href=&#34;https://twitter.com/mrdoob?ref_src=twsrc%5Etfw&#34;&gt;@mrdoob&lt;/a&gt; and guys &lt;a href=&#34;https://t.co/NhMGXRoq5N&#34;&gt;pic.twitter.com/NhMGXRoq5N&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ@GDC登壇した (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1109347535762579456?ref_src=twsrc%5Etfw&#34;&gt;2019年3月23日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://madebyevan.com/webgl-water/&#34;&gt;WebGL Water&lt;/a&gt;で有名な Evan さんともお会いできました！&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Photo with &lt;a href=&#34;https://twitter.com/evanwallace?ref_src=twsrc%5Etfw&#34;&gt;@evanwallace&lt;/a&gt; 🤝 &lt;a href=&#34;https://t.co/qCTfHAtkbk&#34;&gt;pic.twitter.com/qCTfHAtkbk&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ@GDC登壇した (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1108239451002527744?ref_src=twsrc%5Etfw&#34;&gt;2019年3月20日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;Shadertoy Meetupでは、iq先生による直伝のレイマーチング講座もありました。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Live raymarching coding by &lt;a href=&#34;https://twitter.com/iquilezles?ref_src=twsrc%5Etfw&#34;&gt;@iquilezles&lt;/a&gt; &lt;a href=&#34;https://t.co/BPtUc4lcYC&#34;&gt;pic.twitter.com/BPtUc4lcYC&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ@GDC登壇した (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1108197363355521024?ref_src=twsrc%5Etfw&#34;&gt;2019年3月20日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;他にも自分のシェーダーの解説を交えた自己紹介タイムもありました。見たことがあるシェーダーの作者が目の前にいる！！という感動体験をしました。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;自分のShaderを解説するタイム &lt;a href=&#34;https://t.co/t8LJILE8Iz&#34;&gt;pic.twitter.com/t8LJILE8Iz&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ@GDC登壇した (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1108207473242988544?ref_src=twsrc%5Etfw&#34;&gt;2019年3月20日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;WebGL/WebVR Meetupでもたくさんの方々と交流できました。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;２つ目のパーティ (@ Gather in San Francisco, CA) &lt;a href=&#34;https://t.co/9hZBzeLtnW&#34;&gt;https://t.co/9hZBzeLtnW&lt;/a&gt; &lt;a href=&#34;https://t.co/Bidy2oHM6n&#34;&gt;pic.twitter.com/Bidy2oHM6n&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ@GDC登壇した (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1108571298383491072?ref_src=twsrc%5Etfw&#34;&gt;2019年3月21日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;写真を撮るのを忘れてしまいましたが、サンフランシスコのWebGLをつかった家の間取りをシュミュレーションするWebアプリを開発しているスタートアップのエンジニアや、
-パストレーシングのデノイズをPh.Dで研究・日本への留学など経歴を経て、現在はとある企業で働いているエンジニア、A-FrameでWebAR作品をつくったりAndroidアプリを開発している気の良いおっちゃんなど、様々な方々と交流できました。&lt;/p&gt;
-
-&lt;h2 id=&#34;expo&#34;&gt;EXPO&lt;/h2&gt;
-
-&lt;p&gt;発表されたばかりのStadiaの遅延を体験しました！&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Stadiaでアサシンクリード遊んできた！！&lt;br&gt;&lt;br&gt;個人的には遅延はそんなに気にならなかったなぁ。対戦ゲームでも相手が同じだけ遅延してたら問題なさそうなレベルな気がする🤔 &lt;a href=&#34;https://twitter.com/hashtag/GDC19?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GDC19&lt;/a&gt; &lt;a href=&#34;https://t.co/eUfh0tNZHu&#34;&gt;pic.twitter.com/eUfh0tNZHu&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ@GDC登壇した (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1109178878507929601?ref_src=twsrc%5Etfw&#34;&gt;2019年3月22日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;alt.ctrl.GDCの面白いゲームを体験したりしました。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;椅子を入力インターフェースにした斬新なゲーム &lt;a href=&#34;https://twitter.com/hashtag/GDC19?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GDC19&lt;/a&gt; &lt;a href=&#34;https://t.co/iwAemqwGu4&#34;&gt;pic.twitter.com/iwAemqwGu4&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ@GDC登壇した (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1109180096642834432?ref_src=twsrc%5Etfw&#34;&gt;2019年3月22日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;セッション&#34;&gt;セッション&lt;/h2&gt;
-
-&lt;p&gt;レンダリングやレイトレ関連のセッションを中心に聞きました。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ATAAは&lt;br&gt;前のフレームが使える時はTAA、&lt;br&gt;使えない時はFXAA、&lt;br&gt;メッシュのエッジの部分はレイトレーシングでスーパーサンプリングするハイブリット手法らしい。&lt;br&gt;&lt;br&gt;筋の良さそうな手法だなぁ。&lt;br&gt;&lt;br&gt; &lt;a href=&#34;https://twitter.com/hashtag/GDC19?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GDC19&lt;/a&gt; &lt;a href=&#34;https://t.co/0JhLYtT8Jg&#34;&gt;pic.twitter.com/0JhLYtT8Jg&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ@GDC登壇した (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1109164831767040000?ref_src=twsrc%5Etfw&#34;&gt;2019年3月22日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;個人的に Math for Game Developers: Curves Revisited というベジェ曲線などについて深掘りしていくセッションが良かったです。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;GDC2日目&lt;br&gt;&lt;br&gt;1発目はMath for Game Developers: Curves Revisited&lt;a href=&#34;https://t.co/njEArNFbLR&#34;&gt;https://t.co/njEArNFbLR&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ@GDC登壇した (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1108053297762430977?ref_src=twsrc%5Etfw&#34;&gt;2019年3月19日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;mercari-gdc-2019-報告会&#34;&gt;Mercari GDC 2019 報告会&lt;/h2&gt;
-
-&lt;p&gt;来週4/3の&lt;a href=&#34;https://mercaridev.connpass.com/event/123663/&#34;&gt;Mercari GDC 2019 報告会&lt;/a&gt;に発表者として参加します。&lt;/p&gt;
-
-&lt;p&gt;面白かったセッション（レンダリングやレイトレ関連）の紹介や登壇したセッションの詳細については、この勉強会でお話しようと思っています。&lt;/p&gt;</description>
     </item>
     
   </channel>
