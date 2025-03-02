@@ -29,16 +29,30 @@
 
     
         <meta property="og:type" content="article">
-        <meta property="og:description" content="このブログで、カテゴリーに濁点を含んだ日本語を使うと、カテゴリーの一覧などからカテゴリーのページにリンクしたとき、 404エラーになってしまう問題が起きました。
+        <meta property="og:description" content="このブログで、カテゴリーに濁点を含んだ日本語を使うと、カテゴリーの一覧などからカテゴリーのページにリンクしたとき、
+404エラーになってしまう問題が起きました。
+
 原因は、このブログの開発環境にありました。
-このブログは静的コンテンツなのですが、次のような手順でブログを運営しています。 (Rakefileで自動化されていますが、内部ではこうなっています)
- ローカル(Mac OS X)でブログを生成する。 サーバ(Ubuntu)にRsyncで生成したブログをアップロードする。  Mac OS X では、ファイル名のエンコードにUTF-8-MACを使っているので、 そのままアップロードすると、サーバ上のファイル名もUTF-8-MACになります。 しかし、ファイル自体のエンコードはUTF-8でURLをパーセントエンコーディングしていないので、 リンク先が見つからなくなってしまうようです。
+
+このブログは静的コンテンツなのですが、次のような手順でブログを運営しています。
+(Rakefileで自動化されていますが、内部ではこうなっています)
+
+
+ローカル(Mac OS X)でブログを生成する。
+サーバ(Ubuntu)にRsyncで生成したブログをアップロードする。
+
+
+Mac OS X では、ファイル名のエンコードにUTF-8-MACを使っているので、
+そのままアップロードすると、サーバ上のファイル名もUTF-8-MACになります。
+しかし、ファイル自体のエンコードはUTF-8でURLをパーセントエンコーディングしていないので、
+リンク先が見つからなくなってしまうようです。
+
 UTF-8-MAC問題について詳しく知りたい人は、こちらなどが勉強になるとおもいます。
-解決方法は簡単で、Rsyncでアップロードするときに、--iconvオプションを使い、 ファイル名をUTF-8-MACからUTF-8に変換すれば治ります。
-Rsyncのバージョンを3にする Rsyncの--iconvオプションが使えるのは、Rsync3からなのでアップデートします。
-# brew tap homebrew/dupes #リポジトリを追加（2019/06/20追記。この手順は不要になりました。） brew install libiconv #iconvオプションを使うために必須のよう brew install rsync  念のため、サーバ側(Ubuntu)のrsync3にします。
-aptitude install rsync  Rakefileを修正する Rakefileのok_failed system...の行を書き換えます。
-desc &quot;Deploy website via rsync&quot; task :rsync do exclude = &quot;&quot; if File.exists?(&#39;./rsync-exclude&#39;) exclude = &quot;--exclude-from &#39;#{File.expand_path(&#39;./rsync-exclude&#39;)}&#39;&quot; end puts &quot;## Deploying website via Rsync&quot; #ok_failed system(&quot;rsync -avze &#39;ssh -p #{ssh_port}&#39; #{exclude} #{&quot;--delete&quot; unless rsync_delete == false} #{public_dir}/ #{ssh_user}:#{document_root}&quot;) ok_failed system(&quot;rsync --iconv=UTF-8-MAC,UTF-8 -avze &#39;ssh -p #{ssh_port}&#39; #{exclude} #{&quot;--delete&quot; unless rsync_delete == false} #{public_dir}/ #{ssh_user}:#{document_root}&quot;) end  完。 これでうまくいきました。">
+
+解決方法は簡単で、Rsyncでアップロードするときに、--iconvオプションを使い、
+ファイル名をUTF-8-MACからUTF-8に変換すれば治ります。
+
+">
     
 
     
@@ -190,9 +204,7 @@ desc &quot;Deploy website via rsync&quot; task :rsync do exclude = &quot;&quot; 
 
 
         <div class="article-style" itemprop="articleBody">
-            
-
-<p>このブログで、カテゴリーに濁点を含んだ日本語を使うと、カテゴリーの一覧などからカテゴリーのページにリンクしたとき、
+            <p>このブログで、カテゴリーに濁点を含んだ日本語を使うと、カテゴリーの一覧などからカテゴリーのページにリンクしたとき、
 404エラーになってしまう問題が起きました。</p>
 
 <p>原因は、このブログの開発環境にありました。</p>
@@ -214,6 +226,8 @@ desc &quot;Deploy website via rsync&quot; task :rsync do exclude = &quot;&quot; 
 
 <p>解決方法は簡単で、Rsyncでアップロードするときに、<code>--iconv</code>オプションを使い、
 ファイル名を<code>UTF-8-MAC</code>から<code>UTF-8</code>に変換すれば治ります。</p>
+
+<p></p>
 
 <h3 id="rsyncのバージョンを3にする">Rsyncのバージョンを3にする</h3>
 
@@ -266,6 +280,11 @@ OK
 
 <p>「ゴゴゴゴ…」</p>
 
+<h1 id="コメント-アーカイブ">コメント（アーカイブ）</h1>
+
+<p>※Disqusのコメントをクローズしたため、アーカイブとして画像を残しました。</p>
+
+<p><img src="/images/posts/2012-08-11-use-rsync-iconv-option/disqus_comments.png" alt="Disqusのコメントのアーカイブ" /></p>
         </div>
 
     </article>
@@ -337,27 +356,6 @@ OK
 </nav>
 
     
-<section id="comments">
-    <div id="disqus_thread">
-        <div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_shortname = 'gam0022-net';
-    var disqus_identifier = 'https:\/\/gam0022.net\/blog\/2012\/08\/11\/use-rsync-iconv-option\/';
-    var disqus_title = 'カテゴリー名に濁点を含んだ日本語が使えない問題を解決する(Rsyncのiconvオプションを使う)';
-    var disqus_url = 'https:\/\/gam0022.net\/blog\/2012\/08\/11\/use-rsync-iconv-option\/';
-
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    </div>
-</section>
-
-
     <div class="row">
     <h4 class="blog-title"><img src="/img/gam0022_splash.png" class="icon"> gam0022.net's Tag Cloud</h4>
     <ul class="category-list">

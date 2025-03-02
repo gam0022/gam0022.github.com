@@ -450,6 +450,12 @@ h1レベルの見出しに正規表現でアンカーリンクをつけるよう
 
 <h1 id="見出し2">見出し2</h1>
 
+<h1 id="追記">追記</h1>
+
+<p>Markdownのパーサをkramdownに変更したら、見出しにアンカーリンクではないですが、idが自動的に振られるようになりました。</p>
+
+<p><a href="https://gam0022.net/blog/2013/05/27/kramdown/">https://gam0022.net/blog/2013/05/27/kramdown/</a></p>
+
             
         </div>
         <p class="read-more">
@@ -546,18 +552,30 @@ h1レベルの見出しに正規表現でアンカーリンクをつけるよう
 
         <div class="article-style" itemprop="articleBody">
             
-                このブログで、カテゴリーに濁点を含んだ日本語を使うと、カテゴリーの一覧などからカテゴリーのページにリンクしたとき、 404エラーになってしまう問題が起きました。
-原因は、このブログの開発環境にありました。
-このブログは静的コンテンツなのですが、次のような手順でブログを運営しています。 (Rakefileで自動化されていますが、内部ではこうなっています)
- ローカル(Mac OS X)でブログを生成する。 サーバ(Ubuntu)にRsyncで生成したブログをアップロードする。  Mac OS X では、ファイル名のエンコードにUTF-8-MACを使っているので、 そのままアップロードすると、サーバ上のファイル名もUTF-8-MACになります。 しかし、ファイル自体のエンコードはUTF-8でURLをパーセントエンコーディングしていないので、 リンク先が見つからなくなってしまうようです。
-UTF-8-MAC問題について詳しく知りたい人は、こちらなどが勉強になるとおもいます。
-解決方法は簡単で、Rsyncでアップロードするときに、&ndash;iconvオプションを使い、 ファイル名をUTF-8-MACからUTF-8に変換すれば治ります。
-Rsyncのバージョンを3にする Rsyncの&ndash;iconvオプションが使えるのは、Rsync3からなのでアップデートします。</p>
+                このブログで、カテゴリーに濁点を含んだ日本語を使うと、カテゴリーの一覧などからカテゴリーのページにリンクしたとき、
+404エラーになってしまう問題が起きました。</p>
 
-<h1 id="brew-tap-homebrew-dupes-リポジトリを追加-2019-06-20追記-この手順は不要になりました-brew-install-libiconv-iconvオプションを使うために必須のよう-brew-install-rsync-念のため-サーバ側-ubuntu-のrsync3にします">brew tap homebrew/dupes #リポジトリを追加（2019/06/20追記。この手順は不要になりました。） brew install libiconv #iconvオプションを使うために必須のよう brew install rsync  念のため、サーバ側(Ubuntu)のrsync3にします。</h1>
+<p>原因は、このブログの開発環境にありました。</p>
 
-<p>aptitude install rsync  Rakefileを修正する Rakefileのok_failed system&hellip;の行を書き換えます。
-desc &quot;Deploy website via rsync&quot; task :rsync do exclude = &quot;&quot; if File.exists?(&lsquo;./rsync-exclude&rsquo;) exclude = &quot;&ndash;exclude-from &lsquo;#{File.expand_path(&lsquo;./rsync-exclude&rsquo;)}&rsquo;&quot; end puts &quot;## Deploying website via Rsync&quot; #ok_failed system(&quot;rsync -avze &lsquo;ssh -p #{ssh_port}&rsquo; #{exclude} #{&quot;&ndash;delete&quot; unless rsync_delete == false} #{public_dir}/ #{ssh_user}:#{document_root}&quot;) ok_failed system(&quot;rsync &ndash;iconv=UTF-8-MAC,UTF-8 -avze &lsquo;ssh -p #{ssh_port}&rsquo; #{exclude} #{&quot;&ndash;delete&quot; unless rsync_delete == false} #{public_dir}/ #{ssh_user}:#{document_root}&quot;) end  完。 これでうまくいきました。
+<p>このブログは静的コンテンツなのですが、次のような手順でブログを運営しています。
+(Rakefileで自動化されていますが、内部ではこうなっています)</p>
+
+<ul>
+<li>ローカル(Mac OS X)でブログを生成する。</li>
+<li>サーバ(Ubuntu)にRsyncで生成したブログをアップロードする。</li>
+</ul>
+
+<p>Mac OS X では、ファイル名のエンコードに<code>UTF-8-MAC</code>を使っているので、
+そのままアップロードすると、サーバ上のファイル名も<code>UTF-8-MAC</code>になります。
+しかし、ファイル自体のエンコードは<code>UTF-8</code>でURLをパーセントエンコーディングしていないので、
+リンク先が見つからなくなってしまうようです。</p>
+
+<p>UTF-8-MAC問題について詳しく知りたい人は、<a href="http://d.hatena.ne.jp/miau/20110805/1312555736">こちら</a>などが勉強になるとおもいます。</p>
+
+<p>解決方法は簡単で、Rsyncでアップロードするときに、<code>--iconv</code>オプションを使い、
+ファイル名を<code>UTF-8-MAC</code>から<code>UTF-8</code>に変換すれば治ります。</p>
+
+<p>
             
         </div>
         <p class="read-more">
@@ -605,7 +623,7 @@ desc &quot;Deploy website via rsync&quot; task :rsync do exclude = &quot;&quot; 
 仕方ないので、自分で実装することにしました。
 今回の記事は、次の画像のようなカテゴリーの一覧をサイドバーに表示するまでのメモです。
 前提知識として、Octopressのサイドバーをカスタマイズするためには、次の2つの作業が必要です。 ここでは、categoriesという名前のサイドバーを追加します。
- source/_includes/asides/categories.htmlというファイルを作る。 _config.ymlのdefault_asides:にasides/categories.htmlを加える。ex.  あとは、1,のsource/_includes/asides/categories.htmlにカテゴリーの一覧を表示する機能をうまく実装しなくてはなりません。
+ source/_includes/asides/categories.htmlというファイルを作る。 _config.ymlのdefault_asides:にasides/categories.htmlを加える。ex.   あとは、1,のsource/_includes/asides/categories.htmlにカテゴリーの一覧を表示する機能をうまく実装しなくてはなりません。
 siteというグローバル変数のダンプを手がかりに、site.categoriesというハッシュが存在することがわかりました。
 JekyllのLiquidテンプレートエンジンの文法がよくわからないので、以下のサイトなどを参考にして学習しました。
  <a href="http://wiki.shopify.com/UsingLiquid">http://wiki.shopify.com/UsingLiquid</a> <a href="http://melborne.github.com/2012/05/13/first-step-of-jekyll/">http://melborne.github.com/2012/05/13/first-step-of-jekyll/</a> for item in hash すると、item[0]にキー名、item[1]に値が入る  しかし、site.categoriesはカテゴリー名をキーとして値が記事の本文のHTMLへの参照(?)の配列としたハッシュになっており、 そのままではURLが取得できず、カテゴリー名からURLに変換する処理をLiquidの文法だけで実装するのは無理だと気が付きました。

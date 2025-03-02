@@ -735,7 +735,13 @@ rsync --iconv=UTF-8-MAC,UTF-8 -avzc --delete --exclude-from=rsync-exclude ${dir}
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://yet.unresolved.xyz/blog/2015/01/04/migrate-blog-to-hugo-from-octopress/&#34;&gt;ブログをOctopressからHugoに移行した&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://deeeet.com/writing/2014/12/25/hugo/&#34;&gt;OctopressからHugoへ移行した | SOTA&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;コメント-アーカイブ&#34;&gt;コメント（アーカイブ）&lt;/h1&gt;
+
+&lt;p&gt;※Disqusのコメントをクローズしたため、アーカイブとして画像を残しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2016-09-25-migrated-from-octopress-to-hugo/disqus_comments.png&#34; alt=&#34;Disqusのコメントのアーカイブ&#34; /&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -29,11 +29,12 @@
 
     
         <meta property="og:type" content="article">
-        <meta property="og:description" content=" タイトルの通りなのですが、h1レベルの見出しにアンカーリンクをつけるようにOctopressを改造しました。
+        <meta property="og:description" content="タイトルの通りなのですが、h1レベルの見出しにアンカーリンクをつけるようにOctopressを改造しました。
 ``の19行目を次のように修正して、 h1レベルの見出しに正規表現でアンカーリンクをつけるようにしました。
 # plugins/octopress_filters.rb @@ -16,7 &#43;16,7 @@ module OctopressFilters end def post_filter(input) input = unwrap(input) - RubyPants.new(input).to_html &#43; RubyPants.new(input).to_html.gsub(/&lt;h1&gt;([^&lt;].*[^&gt;])&lt;\/h1&gt;/, &#39;&lt;h1&gt;&lt;a name=&quot;\1&quot; href=&quot;#\1&quot;&gt;\1&lt;/a&gt;&lt;/h1&gt;&#39;) end end  修正するべき場所がここで本当に良いのか微妙ですが、とりあえず思った通りに動いているので良しとします。
 以下、見出しのテスト
-見出し1 見出し2 ">
+見出し1 見出し2 追記 Markdownのパーサをkramdownに変更したら、見出しにアンカーリンクではないですが、idが自動的に振られるようになりました。
+https://gam0022.net/blog/2013/05/27/kramdown/">
     
 
     
@@ -205,6 +206,12 @@ h1レベルの見出しに正規表現でアンカーリンクをつけるよう
 
 <h1 id="見出し2">見出し2</h1>
 
+<h1 id="追記">追記</h1>
+
+<p>Markdownのパーサをkramdownに変更したら、見出しにアンカーリンクではないですが、idが自動的に振られるようになりました。</p>
+
+<p><a href="https://gam0022.net/blog/2013/05/27/kramdown/">https://gam0022.net/blog/2013/05/27/kramdown/</a></p>
+
         </div>
 
     </article>
@@ -270,27 +277,6 @@ h1レベルの見出しに正規表現でアンカーリンクをつけるよう
 </nav>
 
     
-<section id="comments">
-    <div id="disqus_thread">
-        <div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_shortname = 'gam0022-net';
-    var disqus_identifier = 'https:\/\/gam0022.net\/blog\/2013\/02\/05\/header-anchor\/';
-    var disqus_title = 'Octopressの見出しにアンカーリンクをつけるように改造';
-    var disqus_url = 'https:\/\/gam0022.net\/blog\/2013\/02\/05\/header-anchor\/';
-
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    </div>
-</section>
-
-
     <div class="row">
     <h4 class="blog-title"><img src="/img/gam0022_splash.png" class="icon"> gam0022.net's Tag Cloud</h4>
     <ul class="category-list">

@@ -212,7 +212,13 @@ rsync --iconv=UTF-8-MAC,UTF-8 -avzc --delete --exclude-from=rsync-exclude ${dir}
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://yet.unresolved.xyz/blog/2015/01/04/migrate-blog-to-hugo-from-octopress/&#34;&gt;ブログをOctopressからHugoに移行した&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://deeeet.com/writing/2014/12/25/hugo/&#34;&gt;OctopressからHugoへ移行した | SOTA&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;コメント-アーカイブ&#34;&gt;コメント（アーカイブ）&lt;/h1&gt;
+
+&lt;p&gt;※Disqusのコメントをクローズしたため、アーカイブとして画像を残しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2016-09-25-migrated-from-octopress-to-hugo/disqus_comments.png&#34; alt=&#34;Disqusのコメントのアーカイブ&#34; /&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -543,6 +549,10 @@ $$&lt;/p&gt;
 &lt;p&gt;上の式を元に計算すると、次のような波形を得られます。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2013.02.11_ftdt.png&#34; alt=&#34;FTDTで計算した波動関数&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;コメント&#34;&gt;コメント&lt;/h2&gt;
+
+&lt;p&gt;FDTDの記事なのかMathJax.rbの記事なのかわからない&lt;/p&gt;
 </description>
     </item>
     
@@ -577,6 +587,12 @@ h1レベルの見出しに正規表現でアンカーリンクをつけるよう
 &lt;h1 id=&#34;見出し1&#34;&gt;見出し1&lt;/h1&gt;
 
 &lt;h1 id=&#34;見出し2&#34;&gt;見出し2&lt;/h1&gt;
+
+&lt;h1 id=&#34;追記&#34;&gt;追記&lt;/h1&gt;
+
+&lt;p&gt;Markdownのパーサをkramdownに変更したら、見出しにアンカーリンクではないですが、idが自動的に振られるようになりました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/blog/2013/05/27/kramdown/&#34;&gt;https://gam0022.net/blog/2013/05/27/kramdown/&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -606,9 +622,7 @@ h1レベルの見出しに正規表現でアンカーリンクをつけるよう
       <pubDate>Sat, 11 Aug 2012 10:38:00 +0900</pubDate>
       
       <guid>https://gam0022.net/blog/2012/08/11/use-rsync-iconv-option/</guid>
-      <description>
-
-&lt;p&gt;このブログで、カテゴリーに濁点を含んだ日本語を使うと、カテゴリーの一覧などからカテゴリーのページにリンクしたとき、
+      <description>&lt;p&gt;このブログで、カテゴリーに濁点を含んだ日本語を使うと、カテゴリーの一覧などからカテゴリーのページにリンクしたとき、
 404エラーになってしまう問題が起きました。&lt;/p&gt;
 
 &lt;p&gt;原因は、このブログの開発環境にありました。&lt;/p&gt;
@@ -630,6 +644,8 @@ h1レベルの見出しに正規表現でアンカーリンクをつけるよう
 
 &lt;p&gt;解決方法は簡単で、Rsyncでアップロードするときに、&lt;code&gt;--iconv&lt;/code&gt;オプションを使い、
 ファイル名を&lt;code&gt;UTF-8-MAC&lt;/code&gt;から&lt;code&gt;UTF-8&lt;/code&gt;に変換すれば治ります。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;rsyncのバージョンを3にする&#34;&gt;Rsyncのバージョンを3にする&lt;/h3&gt;
 
@@ -681,7 +697,12 @@ OK
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;「ゴゴゴゴ…」&lt;/p&gt;
-</description>
+
+&lt;h1 id=&#34;コメント-アーカイブ&#34;&gt;コメント（アーカイブ）&lt;/h1&gt;
+
+&lt;p&gt;※Disqusのコメントをクローズしたため、アーカイブとして画像を残しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2012-08-11-use-rsync-iconv-option/disqus_comments.png&#34; alt=&#34;Disqusのコメントのアーカイブ&#34; /&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -707,6 +728,8 @@ OK
 &lt;li&gt;&lt;code&gt;source/_includes/asides/categories.html&lt;/code&gt;というファイルを作る。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;_config.yml&lt;/code&gt;の&lt;code&gt;default_asides:&lt;/code&gt;に&lt;code&gt;asides/categories.html&lt;/code&gt;を加える。&lt;a href=&#34;https://github.com/gam0022/gam0022.net/commit/8cdfa189385461b1c5beef6e8956e721c113514f#diff-0&#34;&gt;ex.&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;!--moore--&gt;
 
 &lt;p&gt;あとは、1,の&lt;code&gt;source/_includes/asides/categories.html&lt;/code&gt;にカテゴリーの一覧を表示する機能をうまく実装しなくてはなりません。&lt;/p&gt;
 

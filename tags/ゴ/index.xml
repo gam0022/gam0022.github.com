@@ -33,6 +33,8 @@
 &lt;li&gt;&lt;code&gt;_config.yml&lt;/code&gt;の&lt;code&gt;default_asides:&lt;/code&gt;に&lt;code&gt;asides/categories.html&lt;/code&gt;を加える。&lt;a href=&#34;https://github.com/gam0022/gam0022.net/commit/8cdfa189385461b1c5beef6e8956e721c113514f#diff-0&#34;&gt;ex.&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;!--moore--&gt;
+
 &lt;p&gt;あとは、1,の&lt;code&gt;source/_includes/asides/categories.html&lt;/code&gt;にカテゴリーの一覧を表示する機能をうまく実装しなくてはなりません。&lt;/p&gt;
 
 &lt;p&gt;siteというグローバル変数のダンプを手がかりに、&lt;code&gt;site.categories&lt;/code&gt;というハッシュが存在することがわかりました。&lt;/p&gt;

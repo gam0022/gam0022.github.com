@@ -33,7 +33,7 @@
 仕方ないので、自分で実装することにしました。
 今回の記事は、次の画像のようなカテゴリーの一覧をサイドバーに表示するまでのメモです。
 前提知識として、Octopressのサイドバーをカスタマイズするためには、次の2つの作業が必要です。 ここでは、categoriesという名前のサイドバーを追加します。
- source/_includes/asides/categories.htmlというファイルを作る。 _config.ymlのdefault_asides:にasides/categories.htmlを加える。ex.  あとは、1,のsource/_includes/asides/categories.htmlにカテゴリーの一覧を表示する機能をうまく実装しなくてはなりません。
+ source/_includes/asides/categories.htmlというファイルを作る。 _config.ymlのdefault_asides:にasides/categories.htmlを加える。ex.   あとは、1,のsource/_includes/asides/categories.htmlにカテゴリーの一覧を表示する機能をうまく実装しなくてはなりません。
 siteというグローバル変数のダンプを手がかりに、site.categoriesというハッシュが存在することがわかりました。
 JekyllのLiquidテンプレートエンジンの文法がよくわからないので、以下のサイトなどを参考にして学習しました。
  http://wiki.shopify.com/UsingLiquid http://melborne.github.com/2012/05/13/first-step-of-jekyll/ for item in hash すると、item[0]にキー名、item[1]に値が入る  しかし、site.categoriesはカテゴリー名をキーとして値が記事の本文のHTMLへの参照(?)の配列としたハッシュになっており、 そのままではURLが取得できず、カテゴリー名からURLに変換する処理をLiquidの文法だけで実装するのは無理だと気が付きました。
@@ -210,6 +210,8 @@ module Jekyll module Filters # Outputs a list of categories as comma-separated &
 <li><code>_config.yml</code>の<code>default_asides:</code>に<code>asides/categories.html</code>を加える。<a href="https://github.com/gam0022/gam0022.net/commit/8cdfa189385461b1c5beef6e8956e721c113514f#diff-0">ex.</a></li>
 </ol>
 
+<!--moore-->
+
 <p>あとは、1,の<code>source/_includes/asides/categories.html</code>にカテゴリーの一覧を表示する機能をうまく実装しなくてはなりません。</p>
 
 <p>siteというグローバル変数のダンプを手がかりに、<code>site.categories</code>というハッシュが存在することがわかりました。</p>
@@ -341,27 +343,6 @@ end
 </nav>
 
     
-<section id="comments">
-    <div id="disqus_thread">
-        <div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_shortname = 'gam0022-net';
-    var disqus_identifier = 'https:\/\/gam0022.net\/blog\/2012\/08\/10\/make-categories-on-otcpress\/';
-    var disqus_title = 'Octopressでカテゴリーの一覧みたいのを実装する';
-    var disqus_url = 'https:\/\/gam0022.net\/blog\/2012\/08\/10\/make-categories-on-otcpress\/';
-
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    </div>
-</section>
-
-
     <div class="row">
     <h4 class="blog-title"><img src="/img/gam0022_splash.png" class="icon"> gam0022.net's Tag Cloud</h4>
     <ul class="category-list">
