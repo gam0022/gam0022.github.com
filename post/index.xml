@@ -229,9 +229,9 @@ msdf-atlas-gen.exe -format png -uniformcellconstraint square4 -imageout &amp;quo
 
 &lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;がむさんと私のVJやたらと重かったの共有したPCがお互いのソフトをバックグラウンドで動かしてたのが原因だったの面白かった&lt;br&gt;&lt;br&gt;お互いリソースを食い合うVJ&lt;/p&gt;&amp;mdash; kinankomoti (@Kinakomoti2357) &lt;a href=&#34;https://twitter.com/Kinakomoti2357/status/1903475130418020585?ref_src=twsrc%5Etfw&#34;&gt;March 22, 2025&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;本来はもっと滑らかなアニメーションやカメラワークになる想定でした。&lt;/p&gt;
+&lt;p&gt;本番では処理落ちをモーションブラーや2Dパターンのアニメーションで誤魔化しましたが、本来はもっと滑らかなアニメーションやカメラワークを実現する予定でした。&lt;/p&gt;
 
-&lt;p&gt;参考までに意図したフレームレートで再生されたリハーサル時の動画を貼っておきます。&lt;/p&gt;
+&lt;p&gt;意図したフレームレートで再生されたリハーサル時の動画から、特にGPU負荷の高いシーン（再生位置：21分53秒）を以下に掲載します。&lt;/p&gt;
 
 &lt;div class=&#34;movie-wrap&#34;&gt;
 &lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/YVTtvUtDMto?si=A4MyFHJtKz6dsQHQ&amp;amp;start=1313&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34;  referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreenn&gt;&lt;/iframe&gt;
