@@ -124,6 +124,56 @@
     
     <div class="article-list-item" itemscope itemprop="blogPost">
         
+        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/08/20/run-daigoroubot/" itemprop="url">大五郎bot(@daigoroubot)を動かすためのメモ</a></h3>
+        
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2012-08-20 13:28:00 &#43;0900 JST" itemprop="datePublished">2012-08-20</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/daigoroubot">daigoroubot</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/mecab">MeCab</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/mac-os-x">Mac OS X</a>
+        
+    </span>
+    
+    
+
+    
+
+</div>
+
+        <div class="article-style" itemprop="articleBody">
+            
+                @daigoroubotをMac OS Xで動かすまでのメモです。 なんて需要が無さそうな記事なんだ!
+Rubyとgemををインストール とりあえず、バージョンは次のような感じで。インストール方法はこれを参考にしてください。
+ ruby 1.9.3p194 gem 1.8.24  required gems gem install oauth json sqlite3 twitter tweetstream unicode_math  MeCabを使えるようにしておく homebrewを導入しているなら、これでok。
+Mac用のメモですが、Ubuntuならbrewの代わりにapt-getなど、環境に合わせた適当なパッケージ管理システムにすれば普通に動くと思います。
+brew install mecab mecab-ipadic  MeCabのRubyバインディングをする  ここからbrewで入れたMeCabと同じバージョンのRubyバインディングをダウンロードする。 tar -jxf mecab-ruby-xxx.tar.gzなどで解凍。 READMEの指示通りに作業する。  もし次のようなエラーが出たら、extconf.rbを編集する必要があるよう。
+(参考:MacPortsで、mecabと、mecab-rubyのインストール)
+dyld: lazy symbol binding failed: Symbol not found: __ZN5MeCab12getLastErrorEv Referenced from: /Users/kobayashi/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/site_ruby/1.8/i686-darwin10.7.0/MeCab.bundle Expected in: flat namespace dyld: Symbol not found: __ZN5MeCab12getLastErrorEv Referenced from: /Users/kobayashi/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/site_ruby/1.8/i686-darwin10.7.0/MeCab.bundle Expected in: flat namespace  extconf.
+            
+        </div>
+        <p class="read-more">
+            <a href="https://gam0022.net/blog/2012/08/20/run-daigoroubot/" class="btn btn-primary btn-outline">
+                Read more
+            </a>
+        </p>
+    </div>
+    <hr>
+    
+    <div class="article-list-item" itemscope itemprop="blogPost">
+        
         <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/08/15/octopress-path/" itemprop="url">Octopressでパスを指定するときのテクニック</a></h3>
         
 
@@ -683,72 +733,6 @@ Mac OSXでTerminalをexitしたら閉じるようにする方法を参考しま�
         </div>
         <p class="read-more">
             <a href="https://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/" class="btn btn-primary btn-outline">
-                Read more
-            </a>
-        </p>
-    </div>
-    <hr>
-    
-    <div class="article-list-item" itemscope itemprop="blogPost">
-        
-        <h3 class="article-title" itemprop="name"><a href="https://gam0022.net/blog/2012/07/27/getting-started-with-ruby-on-rails-on-mac/" itemprop="url">MacでRuby on Railsの開発環境を作るまで</a></h3>
-        
-
-<div class="article-metadata">
-
-    <span class="article-date">
-        <time datetime="2012-07-27 06:34:00 &#43;0900 JST" itemprop="datePublished">2012-07-27</time>
-    </span>
-
-    
-    
-    
-    <span class="article-tags">
-        <i class="fa fa-tags"></i>
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/mac-os-x">Mac OS X</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/ruby-on-rails">Ruby on Rails</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/rvm">rvm</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/gem">gem</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/gcc">gcc</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/xcode">xcode</a>, 
-        
-        <a class="article-tag-link" href="https://gam0022.net/tags/llvm-gcc">llvm-gcc</a>
-        
-    </span>
-    
-    
-
-    
-
-</div>
-
-        <div class="article-style" itemprop="articleBody">
-            
-                MacでRuby on Railsの開発環境を作るまで 先日、1世代前のMac Book Air 13インチモデルを入手しました。
-設定を弄りまくっている真っ最中ですが、 まずはMacでRuby on Railsの開発環境を作るまでをまとめます。
-今回の記事を一言でまとめると、「RAILSINSTALLERは神」です。
-おおまかな手順を説明すると、次のような感じです。
-せっかくなので、正解と失敗の２通りの方法を紹介します。
-失敗 Xcode4.4経由でgccを入れると、LLVMベースのgccが入ってしまい、rvmでコケます。
- XcodeをAppStoreからインストールする。 Xcode-&gt; Preferences-&gt; Downloads から、Command Line Tools をインストールする。 (ここでなんとなくhomebrewをインストールする。) rvmを公式ページのように$ curl -L <a href="https://get.rvm.io">https://get.rvm.io</a> | bash -s stable &ndash;rubyとかでインストールする。 rvmのインストールは完了するが、rubyのコンパイルに失敗する。 $ rvm requirementsをしたら、Xcodeを4.1にダウングレードするか、Xcodeをアンインストールしてosx-gcc-installerをインストールしろと言われる。 Xcodeを入れなおすのも消すのもめんどくさい ＼(&#94;o&#94;)／ｵﾜﾀ  正解 最初からRAILSINSTALLERを使っていれば、これだけで終了しました。Xcode4.4と共存もできます。
- RAILSINSTALLER でrvmをインストールする。 rvmでrubyをインストールする。 rvmで適当にgemsetを作って使う。 3.で作ったgemsetに、gemでrailsを入れる。  正解例を詳しく RAILSINSTALLER でrvmをインストールする リンクからRailsInstallerをインストールします。
-GUIでとっても簡単にインストールできます。ゆとり仕様です。
-あまりちゃんと確認しませんでしたが、この段階で最新のRubyとRailsが入った環境になります。
-最新でないRubyやRailsが欲しいときは、次のような感じで作業すればいいと思います。
-rvmでrubyをインストールする Ruby1.9.2が欲しければ、$ rvm install 1.9.2をします。
-なんで1.9.2にしたか言うと、Octopressを使いたいからです。ご了承ください。
-rvmの超基本的な使い方 rvm listでインストールしたrubyの一覧を表示します。
-$ rvm list rvm rubies ruby-1.
-            
-        </div>
-        <p class="read-more">
-            <a href="https://gam0022.net/blog/2012/07/27/getting-started-with-ruby-on-rails-on-mac/" class="btn btn-primary btn-outline">
                 Read more
             </a>
         </p>

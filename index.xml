@@ -7,8 +7,290 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>&amp;copy; 2021 gam0022</copyright>
-    <lastBuildDate>Wed, 11 Dec 2024 23:30:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 16 Apr 2025 09:00:00 +0900</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>draw(tokyo); #2でVJデビュー！（GLSLライブコーディング）</title>
+      <link>https://gam0022.net/blog/2025/04/16/draw2/</link>
+      <pubDate>Wed, 16 Apr 2025 09:00:00 +0900</pubDate>
+      
+      <guid>https://gam0022.net/blog/2025/04/16/draw2/</guid>
+      <description>&lt;p&gt;3/22に渋谷のCIRCUS TOKYOでオーディオビジュアルイベント&lt;a href=&#34;https://function-draw.com/tokyo2&#34;&gt;draw(tokyo);#2&lt;/a&gt;が開催されました。&lt;/p&gt;
+
+&lt;p&gt;私は&lt;a href=&#34;https://x.com/toufu0301&#34;&gt;とうふおさおい&lt;/a&gt;さんのVJとして出演し、Sh4derJockeyを使ったGLSLライブコーディングによるVJを行いました。&lt;/p&gt;
+
+&lt;p&gt;初めてのVJでしたが、オーディエンスの反応なども感じられて、とても楽しくVJできました。&lt;/p&gt;
+
+&lt;p&gt;想定外のトラブルはありつつも、全体としては満足できる結果になったので良かったです。&lt;/p&gt;
+
+&lt;p&gt;会場に足を運んでくださった皆さん、クルーやスタッフの方々、最高のイベントをありがとうございました！！&lt;/p&gt;
+
+&lt;p&gt;本記事では、VJの技術的な要素や当日の振り返りを紹介します。&lt;/p&gt;
+
+&lt;h1 id=&#34;パフォーマンスの動画&#34;&gt;パフォーマンスの動画&lt;/h1&gt;
+
+&lt;p&gt;友人に撮影してもらった動画をつなぎ合わせたダイジェスト版はこちらです。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/WNBRxQE55NE?si=cTud1nD9U_d4n9Oa&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34;  referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreenn&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;本番時のフルバージョンの画面録画です。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/JZLX5l94lCA?si=dO1kT8MESDHx4Tye&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34;  referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreenn&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;本番では処理落ちが発生してしまったため、処理落ちのないリハーサル時の動画も紹介します。画面の点滅も控えめなので、本番時より目に優しいと思います。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/YVTtvUtDMto?si=A4MyFHJtKz6dsQHQ&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34;  referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreenn&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&#34;目指したもの&#34;&gt;目指したもの&lt;/h1&gt;
+
+&lt;p&gt;新千歳空港国際アニメーション映画祭で見た「パソコン音楽クラブ x Renard」のVJが最高すぎたので、これを目標にしました。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/rKY-w3Ss8fE?si=TW8BiDCD-KmN6Wak&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34;  referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreenn&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;最初に2Dのパターンから作り、次に3Dのレイマーチング行うことで、少しずつ絵が完成していくビルドアップ的な要素を見せつつ、曲の盛り上がりに合わせて2Dと3Dの素材を組み合わせるという全体的なVJの構成を参考にしました。&lt;/p&gt;
+
+&lt;p&gt;何も無い状態から0からライブコーディングするわけではなく、シェーダーのベース部分を事前に作り込んでおいて、パラメーターやコンポジット処理をリアルタムに編集するような形式にしました。&lt;/p&gt;
+
+&lt;p&gt;初のVJだったので、なるべく失敗のリスクを軽減したいのと、曲に合わせて絵を変化させるために自分の余裕を持たせたいという意図があり、結果的に正解だったと思います。&lt;/p&gt;
+
+&lt;h1 id=&#34;sh4derjockeyのプロジェクト&#34;&gt;Sh4derJockeyのプロジェクト&lt;/h1&gt;
+
+&lt;p&gt;Sh4derJockeyのプロジェクトはGitHubに公開しました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gam0022/draw2&#34;&gt;github.com/gam0022/draw2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;基本的なレイヤーは以下の3つです。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;2Dのパターン&lt;/li&gt;
+&lt;li&gt;3Dのレイマーチングのライブコーディング用のシーン&lt;/li&gt;
+&lt;li&gt;3Dの&lt;a href=&#34;https://www.youtube.com/watch?v=194E3UWj870&#34;&gt;Transcendental Cube&lt;/a&gt;の移植シーン&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;これらの3レイヤーをコンポジットのレイヤーで合成したり、複数レイヤーのポストエフェクトが重ねがけを可能にしました。&lt;/p&gt;
+
+&lt;p&gt;特にGlitchポストエフェクトは、色収差をベースにカスタマイズしたもので個人的にお気に入りです。
+通常の色収差は画面端ほど強度が強くなりますが、ボロノイやCyclic Noiseなどの複数のノイズパターンを合成して色収差ができるようにしました。ノイズの強度はMIDIコンで細かく制御できます。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;最強にかっこいいGlitch🔥&lt;a href=&#34;https://twitter.com/hashtag/function_draw?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#function_draw&lt;/a&gt; &lt;a href=&#34;https://t.co/RudBTR9vl4&#34;&gt;https://t.co/RudBTR9vl4&lt;/a&gt; &lt;a href=&#34;https://t.co/GGer0GO5eV&#34;&gt;pic.twitter.com/GGer0GO5eV&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1904552820369690658?ref_src=twsrc%5Etfw&#34;&gt;March 25, 2025&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;sh4derjockeyでのフォントの描画&#34;&gt;Sh4derJockeyでのフォントの描画&lt;/h2&gt;
+
+&lt;p&gt;フォントは以下の2種類を使用しました。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://booth.pm/ja/items/6128508&#34;&gt;レシートフォント - mikannoki-font - BOOTH&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://fonts.google.com/specimen/Orbitron&#34;&gt;Orbitron Designed by Matt McInerney&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Sh4derJockeyにはフォントのレンダリング機能がないため、&lt;a href=&#34;https://github.com/Chlumsky/msdf-atlas-gen&#34;&gt;msdf-atlas-gen&lt;/a&gt;を使ってフォントのアトラステクスチャを生成しました。&lt;/p&gt;
+
+&lt;p&gt;このツールは&lt;a href=&#34;https://x.com/kanetaaaaa&#34;&gt;かねた&lt;/a&gt;さんに教えてもらいました🙏&lt;/p&gt;
+
+&lt;p&gt;msdf-atlas-genのGitHub ReleasesにはWindows用のビルド済みバイナリが配布されているので、パスの通った場所に&lt;code&gt;msdf-atlas-gen.exe&lt;/code&gt;を配置し、以下のように利用しました。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;msdf-atlas-gen.exe -format png -uniformcellconstraint square4 -imageout &amp;quot;font_receipt_all.png&amp;quot; -font &amp;quot;レシートフォント.ttf&amp;quot; -allglyphs -type mtsdf
+msdf-atlas-gen.exe -format png -uniformcellconstraint square4 -imageout &amp;quot;font_orbitron_ascii.png&amp;quot; -font &amp;quot;Orbitron-VariableFont_wght.ttf&amp;quot; -type mtsdf
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;以下のオプションを指定しました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-uniformcellconstraint square4&lt;/code&gt; : 等幅なアトラステクスチャにする&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-type mtsdf&lt;/code&gt; : Multi-channel signed distance fieldを指定&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;msdf-atlas-genでは、フォントに収録されていない文字のスペースが詰められてしまうため、ASCIIコードとテクスチャアトラスのインデックスがずれる問題が発生しました。&lt;/p&gt;
+
+&lt;p&gt;この問題はGLSL側でインデックスをオフセットすることで対処しましたが、存在しない文字のテクスチャアトラスを空白として残すオプションがあると便利だと感じました。&lt;/p&gt;
+
+&lt;p&gt;フォントの描画（適切なUVを計算してアトラスをサンプリング）は、&lt;a href=&#34;https://github.com/Forenard/VJ-at-lambda-2023-06-10/blob/main/Shader/font.glsl&#34;&gt;Renardさんのソースコード&lt;/a&gt;を参考にカスタマイズしました。&lt;/p&gt;
+
+&lt;p&gt;msdf-atlas-genが生成するテクスチャのアルファは滑らかなグラデーションになっていたため、2値化して使用するようにしました。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;@@ -223,11 +223,11 @@ float Print_Char(vec2 uv, int id) {
+         dist -= 0.5;
+     }
+     float sig = fwidth(dist);
+-    float c = smoothstep(-sig, sig, dist) * col.a * float(id != 0);
++    float c = smoothstep(-sig, sig, dist) * step(0.5, col.a) * float(id != 0);
+     if (Font_Style == STYLE_OUTLINE || Font_Style == STYLE_OUTLINE_ITALIC) {
+         dist -= 0.2;
+         sig = fwidth(dist);
+-        c -= smoothstep(-sig, sig, dist) * col.a * float(id != 0);
++        c -= smoothstep(-sig, sig, dist) * step(0.5, col.a) * float(id != 0);
+     }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;また、msdf-atlas-genが生成するテクスチャは左上がインデックス0に対応しますが、参考にしたコードは左下に対応していたため、上下を反転する改造を行いました。&lt;/p&gt;
+
+&lt;h1 id=&#34;vjの技術構成&#34;&gt;VJの技術構成&lt;/h1&gt;
+
+&lt;p&gt;VJで使用したソフトウェアやハードウェアを以下の図にまとめました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/draw2_system.png&#34; alt=&#34;構成図&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/slerpyyy/sh4der-jockey&#34;&gt;Sh4derJockey&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;GLSLでライブコーディングを行うためのソフトウェア&lt;/li&gt;
+&lt;li&gt;マルチパスやテクスチャが使える&lt;/li&gt;
+&lt;li&gt;MIDIコントローラーなども使える&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ETCLabs/Sound2Light&#34;&gt;Sound2Light&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;音を解析してBPMなどを取得できるソフトウェア&lt;/li&gt;
+&lt;li&gt;Renardさんに教えてもらった&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;図には記載していませんが、GLSLのエディターとしてVSCodeを使用しました。&lt;/p&gt;
+
+&lt;p&gt;また、Sh4derJockeyの画面にVSCodeのコードを合成するため、OBSのクロマキー合成を活用しました。&lt;/p&gt;
+
+&lt;p&gt;さらに、VJ画面をHDMI出力する際にもOBSの全画面プロジェクター機能を利用しました。&lt;/p&gt;
+
+&lt;p&gt;VJの使用ソフトウェアは「パソコン音楽クラブ x Renard」とほぼ同じだと思います。&lt;/p&gt;
+
+&lt;h2 id=&#34;sound2lightからsh4derjockeyへのbpmの自動同期システム&#34;&gt;Sound2LightからSh4derJockeyへのBPMの自動同期システム&lt;/h2&gt;
+
+&lt;p&gt;Sound2LightはOSC（Open Sound Control）プロトコルでBPM情報を他のソフトウェアに送信できます。しかし、Sh4derJockeyは外部からの情報をMIDIでしか受け取れません。&lt;/p&gt;
+
+&lt;p&gt;そこで、OSCからMIDIに信号を変換する仕組みをNode.jsで実装しました。&lt;/p&gt;
+
+&lt;p&gt;MIDI信号は7bit（0～127）の範囲でしか送信できないため、BPM情報を下位7bitと上位7bitに分割し、2つのMIDI CCチャンネルで送信しました。&lt;/p&gt;
+
+&lt;p&gt;仮想オーディオデバイスの必要性に気づかず試行錯誤しましたが、RenardさんのアドバイスでloopMIDIを導入して解決しました。&lt;/p&gt;
+
+&lt;p&gt;ソースコードをGitHubで公開し、READMEに使い方を詳しく記載しました。興味のある方はGitHubを見てください。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gam0022/osc-to-midi.js&#34;&gt;github.com/gam0022/osc-to-midi.js&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;オーディオインターフェイスの導入&#34;&gt;オーディオインターフェイスの導入&lt;/h2&gt;
+
+&lt;p&gt;DJの音源を取得する方法がわからなかったため、&lt;a href=&#34;https://x.com/0b5vr&#34;&gt;0b5vr&lt;/a&gt;さんに相談し、&lt;a href=&#34;https://amzn.to/42Adfgg&#34;&gt;Behringer U-PHONO UFO202&lt;/a&gt;というオーディオインターフェイスを購入しました。&lt;/p&gt;
+
+&lt;p&gt;UFO202を使って、DJミキサーからRCAケーブルで出力されるアナログ音源をデジタル音源に変換しました。&lt;/p&gt;
+
+&lt;div class=&#34;kaerebalink-box&#34; style=&#34;text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;&#34;&gt;&lt;div class=&#34;kaerebalink-image&#34; style=&#34;float:left;margin:0 15px 10px 0;&#34;&gt;&lt;a href=&#34;https://hb.afl.rakuten.co.jp/hgc/g0000014.uo1a9aa4.g0000014.uo1aa66b/kaereba_main_202504150316354973?pc=https%3A%2F%2Fproduct.rakuten.co.jp%2Fproduct%2F-%2Ffbc1d98f472e340fe1f0af43fd2c33b4%2F&amp;m=http%3A%2F%2Fm.product.rakuten.co.jp%2Fproduct%2Ffbc1d98f472e340fe1f0af43fd2c33b4%2F&amp;rafcid=wsc_i_ps_1087413314923222742&#34; target=&#34;_blank&#34; &gt;&lt;img src=&#34;https://thumbnail.image.rakuten.co.jp/ran/img/3001/0004/033/653/030/601/30010004033653030601_1.jpg?_ex=320x320&#34; style=&#34;border: none;&#34; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;kaerebalink-info&#34; style=&#34;line-height:120%;zoom: 1;overflow: hidden;&#34;&gt;&lt;div class=&#34;kaerebalink-name&#34; style=&#34;margin-bottom:10px;line-height:120%&#34;&gt;&lt;a href=&#34;https://hb.afl.rakuten.co.jp/hgc/g0000014.uo1a9aa4.g0000014.uo1aa66b/kaereba_main_202504150316354973?pc=https%3A%2F%2Fproduct.rakuten.co.jp%2Fproduct%2F-%2Ffbc1d98f472e340fe1f0af43fd2c33b4%2F&amp;m=http%3A%2F%2Fm.product.rakuten.co.jp%2Fproduct%2Ffbc1d98f472e340fe1f0af43fd2c33b4%2F&amp;rafcid=wsc_i_ps_1087413314923222742&#34; target=&#34;_blank&#34; &gt;BEHRINGER 2入力2出力USBオーディオインターフェース UFO202&lt;/a&gt;&lt;div class=&#34;kaerebalink-powered-date&#34; style=&#34;font-size:8pt;margin-top:5px;font-family:verdana;line-height:120%&#34;&gt;posted with &lt;a href=&#34;https://kaereba.com&#34; rel=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;カエレバ&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;kaerebalink-detail&#34; style=&#34;margin-bottom:5px;&#34;&gt;&lt;/div&gt;&lt;div class=&#34;kaerebalink-link1&#34; style=&#34;margin-top:10px;&#34;&gt;&lt;div class=&#34;shoplinkrakuten&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_k_01.gif&#39;) 0 -50px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;https://hb.afl.rakuten.co.jp/hgc/g0000014.uo1a9aa4.g0000014.uo1aa66b/kaereba_main_202504150316354973?pc=https%3A%2F%2Fproduct.rakuten.co.jp%2Fproduct%2F-%2Ffbc1d98f472e340fe1f0af43fd2c33b4%2F&amp;m=http%3A%2F%2Fm.product.rakuten.co.jp%2Fproduct%2Ffbc1d98f472e340fe1f0af43fd2c33b4%2F&amp;rafcid=wsc_i_ps_1087413314923222742&#34; target=&#34;_blank&#34; &gt;楽天市場で購入&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;shoplinkamazon&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_k_01.gif&#39;) 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;https://www.amazon.co.jp/gp/search?keywords=Behringer%20U-PHONO%20UFO202&amp;__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&amp;tag=gam00220c-22&#34; target=&#34;_blank&#34; &gt;Amazonで購入&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;shoplinkyahoo&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_k_01.gif&#39;) 0 -150px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3737095&amp;pid=891162462&amp;vc_url=http%3A%2F%2Fsearch.shopping.yahoo.co.jp%2Fsearch%3Fp%3DBehringer%2520U-PHONO%2520UFO202&amp;vcptn=kaereba&#34; target=&#34;_blank&#34; &gt;Yahooショッピングで購入&lt;img src=&#34;//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3737095&amp;pid=891162462&#34; height=&#34;1&#34; width=&#34;1&#34; border=&#34;0&#34;&gt;&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;shoplinkseven&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_k_01.gif&#39;) 0 -100px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3737095&amp;pid=891162462&amp;vc_url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3Fkeyword%3DBehringer%2520U-PHONO%2520UFO202%26searchKeywordFlg%3D1&amp;vcptn=kaereba&#34; target=&#34;_blank&#34; &gt;7netで購入&lt;img src=&#34;//ad.jp.ap.valuecommerce.com/servlet/atq/gifbanner?sid=3737095&amp;pid=891162462&#34; height=&#34;1&#34; width=&#34;1&#34; border=&#34;0&#34;&gt;&lt;/a&gt;&lt;/div&gt;                                       &lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;booklink-footer&#34; style=&#34;clear: left&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;midiコントローラーのボタン設定&#34;&gt;MIDIコントローラーのボタン設定&lt;/h2&gt;
+
+&lt;p&gt;KORGの&lt;a href=&#34;https://amzn.to/42zrlhP&#34;&gt;nanoKONTROL2&lt;/a&gt;というMIDIコントローラーを使用しましたが、設定にいくつか苦労しました。&lt;/p&gt;
+
+&lt;p&gt;インターネット上にVJやMIDIコンの情報が少なく、試行錯誤が必要でした。最終的には&lt;a href=&#34;https://x.com/Kinakomoti2357&#34;&gt;きなこ餅&lt;/a&gt;さんのアドバイスで解決できました🙏&lt;/p&gt;
+
+&lt;p&gt;以下にポイントをまとめます。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;MIDI信号にはCC（スライダー）とnote（ボタン）の2種類があり、nanoKONTROL2の工場出荷時には全部CCになっている
+
+&lt;ul&gt;
+&lt;li&gt;ボタンとしてMIDIコンをするためには、&lt;a href=&#34;https://www.korg.com/jp/support/download/software/0/159/533/&#34;&gt;専用ソフト（nanoKONTROL2/KORG KONTROL EDITOR）&lt;/a&gt;でnoteに設定する必要がある&lt;/li&gt;
+&lt;li&gt;nanoKONTROL2側に設定が書き込まれるので、PCごとに設定する必要はない&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/KORG_KONTROL_EDITOR.png&#34; alt=&#34;KORG_KONTROL_EDITOR&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Windows10/11はMIDIデバイスを10個までしか認識できない問題があり、MIDI Driver Uninstall Utilityで不要なMIDIデバイスを削除する必要がある
+
+&lt;ul&gt;
+&lt;li&gt;自分の場合はKORG KONTROL EDITORがnanoKONTROL2を認識できない問題が発生した&lt;/li&gt;
+&lt;li&gt;参考: &lt;a href=&#34;https://note.com/bluembler/n/n20e7c5544e53&#34;&gt;KORG nanoKONTROL2が認識しなかった話&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;詳細は後日、別の記事にまとめる予定です。&lt;/p&gt;
+
+&lt;div class=&#34;kaerebalink-box&#34; style=&#34;text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;&#34;&gt;&lt;div class=&#34;kaerebalink-image&#34; style=&#34;float:left;margin:0 15px 10px 0;&#34;&gt;&lt;a href=&#34;https://hb.afl.rakuten.co.jp/hgc/g0000014.uo1a9aa4.g0000014.uo1aa66b/kaereba_main_202504150310458941?pc=https%3A%2F%2Fproduct.rakuten.co.jp%2Fproduct%2F-%2Ff044da28797a92e15f159a56edd0414b%2F&amp;m=http%3A%2F%2Fm.product.rakuten.co.jp%2Fproduct%2Ff044da28797a92e15f159a56edd0414b%2F&amp;rafcid=wsc_i_ps_1087413314923222742&#34; target=&#34;_blank&#34; &gt;&lt;img src=&#34;https://thumbnail.image.rakuten.co.jp/ran/img/1001/0004/959/112/081/086/10010004959112081086_1.jpg?_ex=320x320&#34; style=&#34;border: none;&#34; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;kaerebalink-info&#34; style=&#34;line-height:120%;zoom: 1;overflow: hidden;&#34;&gt;&lt;div class=&#34;kaerebalink-name&#34; style=&#34;margin-bottom:10px;line-height:120%&#34;&gt;&lt;a href=&#34;https://hb.afl.rakuten.co.jp/hgc/g0000014.uo1a9aa4.g0000014.uo1aa66b/kaereba_main_202504150310458941?pc=https%3A%2F%2Fproduct.rakuten.co.jp%2Fproduct%2F-%2Ff044da28797a92e15f159a56edd0414b%2F&amp;m=http%3A%2F%2Fm.product.rakuten.co.jp%2Fproduct%2Ff044da28797a92e15f159a56edd0414b%2F&amp;rafcid=wsc_i_ps_1087413314923222742&#34; target=&#34;_blank&#34; &gt;KORG コルグ nanoKONTROL2 BK ブラック&lt;/a&gt;&lt;div class=&#34;kaerebalink-powered-date&#34; style=&#34;font-size:8pt;margin-top:5px;font-family:verdana;line-height:120%&#34;&gt;posted with &lt;a href=&#34;https://kaereba.com&#34; rel=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;カエレバ&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;kaerebalink-detail&#34; style=&#34;margin-bottom:5px;&#34;&gt;&lt;/div&gt;&lt;div class=&#34;kaerebalink-link1&#34; style=&#34;margin-top:10px;&#34;&gt;&lt;div class=&#34;shoplinkrakuten&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_k_01.gif&#39;) 0 -50px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;https://hb.afl.rakuten.co.jp/hgc/g0000014.uo1a9aa4.g0000014.uo1aa66b/kaereba_main_202504150310458941?pc=https%3A%2F%2Fproduct.rakuten.co.jp%2Fproduct%2F-%2Ff044da28797a92e15f159a56edd0414b%2F&amp;m=http%3A%2F%2Fm.product.rakuten.co.jp%2Fproduct%2Ff044da28797a92e15f159a56edd0414b%2F&amp;rafcid=wsc_i_ps_1087413314923222742&#34; target=&#34;_blank&#34; &gt;楽天市場で購入&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;shoplinkamazon&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_k_01.gif&#39;) 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;https://www.amazon.co.jp/gp/search?keywords=nanoKONTROL2&amp;__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&amp;tag=gam00220c-22&#34; target=&#34;_blank&#34; &gt;Amazonで購入&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;shoplinkyahoo&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_k_01.gif&#39;) 0 -150px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3737095&amp;pid=891162462&amp;vc_url=http%3A%2F%2Fsearch.shopping.yahoo.co.jp%2Fsearch%3Fp%3DnanoKONTROL2&amp;vcptn=kaereba&#34; target=&#34;_blank&#34; &gt;Yahooショッピングで購入&lt;img src=&#34;//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3737095&amp;pid=891162462&#34; height=&#34;1&#34; width=&#34;1&#34; border=&#34;0&#34;&gt;&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;shoplinkseven&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_k_01.gif&#39;) 0 -100px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3737095&amp;pid=891162462&amp;vc_url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3Fkeyword%3DnanoKONTROL2%26searchKeywordFlg%3D1&amp;vcptn=kaereba&#34; target=&#34;_blank&#34; &gt;7netで購入&lt;img src=&#34;//ad.jp.ap.valuecommerce.com/servlet/atq/gifbanner?sid=3737095&amp;pid=891162462&#34; height=&#34;1&#34; width=&#34;1&#34; border=&#34;0&#34;&gt;&lt;/a&gt;&lt;/div&gt;                                     &lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;booklink-footer&#34; style=&#34;clear: left&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;当日のトラブル発生&#34;&gt;当日のトラブル発生！&lt;/h1&gt;
+
+&lt;p&gt;WindowsノートPCを持っていなかったので、当日はきなこ餅さんからノートPCをレンタルして使わせていただきました🙇（圧倒的感謝）&lt;/p&gt;
+
+&lt;p&gt;ただし、不幸なトラブルにより、処理落ちが発生してしまいました🥹&lt;/p&gt;
+
+&lt;p&gt;原因は、同一PC内で異なるWindowsアカウントを使ってそれぞれVJソフトを起動していたため、バックグラウンドでGPUリソースが競合してしまったことです。あまり詳しくないのですが、Windowsではアカウントにログインしていない状態でもバックグラウンドでGPUを使用する仕様のようでした。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;がむさんと私のVJやたらと重かったの共有したPCがお互いのソフトをバックグラウンドで動かしてたのが原因だったの面白かった&lt;br&gt;&lt;br&gt;お互いリソースを食い合うVJ&lt;/p&gt;&amp;mdash; kinankomoti (@Kinakomoti2357) &lt;a href=&#34;https://twitter.com/Kinakomoti2357/status/1903475130418020585?ref_src=twsrc%5Etfw&#34;&gt;March 22, 2025&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;本来はもっと滑らかなアニメーションやカメラワークになる想定でした。&lt;/p&gt;
+
+&lt;p&gt;参考までに意図したフレームレートで再生されたリハーサル時の動画を貼っておきます。&lt;/p&gt;
+
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/YVTtvUtDMto?si=A4MyFHJtKz6dsQHQ&amp;amp;start=1313&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34;  referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreenn&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;また、OBSのレイアウト設定に問題があり、Sh4derJockeyの画面が少し下にずれてしまい、画面上部に白い余白ができてしまいました。&lt;/p&gt;
+
+&lt;p&gt;とはいえ、本番のPCでのVJはぶっつけ本番だったため、オーディオインターフェイスやMIDIコントローラーを問題なく使用できただけでもラッキーだったと感じています。&lt;/p&gt;
+
+&lt;p&gt;小さな失敗もありましたが、致命的な問題にはならなかったのが幸いでした。次回のVJではこうした点に気をつけたいと思います。&lt;/p&gt;
+
+&lt;h1 id=&#34;まとめ&#34;&gt;まとめ&lt;/h1&gt;
+
+&lt;p&gt;draw(tokyo); #2での初VJは、多くの方々のサポートのおかげで無事にやり遂げることができました。協力してくださった皆さんに心から感謝しています。本当にありがとうございました！&lt;/p&gt;
+
+&lt;p&gt;とうふおさおいさんの素晴らしいDJパフォーマンスのおかげで、私自身も楽しみながらVJができました。&lt;/p&gt;
+
+&lt;p&gt;まだまだVJとしては未熟ですが、今回が初めての一歩となり、VJの楽しさや雰囲気をしっかり感じることができたと思います。次の機会があれば、ぜひまた挑戦したいです！&lt;/p&gt;
+
+&lt;p&gt;実は3年ほど前からVJに憧れがあり「いつかVJをやってみたい」と漠然と考えていました。まさかこんな素晴らしいイベントでVJデビューできるとは思ってもみなかったので、本当に嬉しく、良い思い出になりました。本当にお誘いありがとうございました！&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;3年越しの伏線を回収した&lt;br&gt;（VJのお誘いをいただけて本当に感謝しています）&lt;a href=&#34;https://twitter.com/hashtag/function_draw?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#function_draw&lt;/a&gt; &lt;a href=&#34;https://t.co/fijBlpCjq0&#34;&gt;https://t.co/fijBlpCjq0&lt;/a&gt; &lt;a href=&#34;https://t.co/ZTvTTSKBER&#34;&gt;pic.twitter.com/ZTvTTSKBER&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1904194416044294478?ref_src=twsrc%5Etfw&#34;&gt;March 24, 2025&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;他の演者の記事紹介&#34;&gt;他の演者の記事紹介&lt;/h1&gt;
+
+&lt;p&gt;他の演者の方々のパフォーマンスも最高でした。技術解説や振り返り記事のリンクを紹介します。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://shivaduke28.hatenablog.com/entry/2025/03/25/205506&#34;&gt;Rectorについて - shivaduke28’s blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://note.com/monoton_music/n/nae24acb2298f&#34;&gt;draw(tokyo); #2 後記 「演奏するビジュアル」｜monoton&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://note.com/sainakey5/n/nf9b7f1ef5e5a&#34;&gt;【自作VJソフト】「ジェネラティブVJ　やり方」と draw(tokyo); #2 と気持ち ｜Saina&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://butadiene.hatenablog.com/entry/2025/03/24/233041&#34;&gt;自分の撮った写真数千枚を使って、リアルタイムに画像を生成してくれるVJツールを作った話 - Butadiene Works&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://scrapbox.io/0b5vr/20250322_draw(tokyo);_%232_Live_Coding&#34;&gt;20250322 draw(tokyo); #2 Live Coding | 0b5vr&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://x.com/ore_ukonpower/status/1903886119047205336&#34;&gt;x.com/ore_ukonpower/status/1903886119047205336&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;写真&#34;&gt;写真&lt;/h1&gt;
+
+&lt;p&gt;友人に撮影してもらったVJ中の写真です。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/PXL_20250322_075002256.PORTRAIT.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/PXL_20250322_075002256.PORTRAIT.jpg&#34; alt=&#34;PXL_20250322_075002256.PORTRAIT&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/PXL_20250322_075042891.MP.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/PXL_20250322_075042891.MP.jpg&#34; alt=&#34;PXL_20250322_075042891.MP&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/PXL_20250322_075130158.NIGHT.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/PXL_20250322_075130158.NIGHT.jpg&#34; alt=&#34;PXL_20250322_075130158.NIGHT&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/PXL_20250322_075139920.NIGHT.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/PXL_20250322_075139920.NIGHT.jpg&#34; alt=&#34;PXL_20250322_075139920.NIGHT&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/PXL_20250322_075332869.PORTRAIT.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/PXL_20250322_075332869.PORTRAIT.jpg&#34; alt=&#34;PXL_20250322_075332869.PORTRAIT&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/PXL_20250322_075600776.NIGHT.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/PXL_20250322_075600776.NIGHT.jpg&#34; alt=&#34;PXL_20250322_075600776.NIGHT&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/PXL_20250322_075710213.NIGHT.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/PXL_20250322_075710213.NIGHT.jpg&#34; alt=&#34;PXL_20250322_075710213.NIGHT&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/PXL_20250322_075748895.NIGHT.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/PXL_20250322_075748895.NIGHT.jpg&#34; alt=&#34;PXL_20250322_075748895.NIGHT&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/PXL_20250322_075821809.PORTRAIT.ORIGINAL.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/PXL_20250322_075821809.PORTRAIT.ORIGINAL.jpg&#34; alt=&#34;PXL_20250322_075821809.PORTRAIT.ORIGINAL&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/PXL_20250322_080319396.PORTRAIT.ORIGINAL.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/PXL_20250322_080319396.PORTRAIT.ORIGINAL.jpg&#34; alt=&#34;PXL_20250322_080319396.PORTRAIT.ORIGINAL&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/PXL_20250322_080409969.NIGHT.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/PXL_20250322_080409969.NIGHT.jpg&#34; alt=&#34;PXL_20250322_080409969.NIGHT&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/PXL_20250322_080431371.NIGHT.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/PXL_20250322_080431371.NIGHT.jpg&#34; alt=&#34;PXL_20250322_080431371.NIGHT&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/L1000169.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/L1000169.jpg&#34; alt=&#34;L1000169&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/L1000180.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/L1000180.jpg&#34; alt=&#34;L1000180&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/L1000181.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/L1000181.jpg&#34; alt=&#34;L1000181&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/L1000182.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/L1000182.jpg&#34; alt=&#34;L1000182&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/L1000183.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/L1000183.jpg&#34; alt=&#34;L1000183&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/L1000199.jpg&#34;&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/L1000199.jpg&#34; alt=&#34;L1000199&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>SESSIONS 2024参加記録（セミナー登壇・ShaderJam解説・Realtime Graphics）</title>
@@ -3216,150 +3498,6 @@ ApproximateLightという独自の手法を用いたグローバルイルミネ�
 &lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; &lt;br&gt;SESSIONSのGLSL compに海賊放送をモチーフにした作品を提出させて頂きました&lt;a href=&#34;https://t.co/DZx5NNzNAJ&#34;&gt;https://t.co/DZx5NNzNAJ&lt;/a&gt; &lt;a href=&#34;https://t.co/HrncS23PrC&#34;&gt;pic.twitter.com/HrncS23PrC&lt;/a&gt;&lt;/p&gt;&amp;mdash; KiNaNkomoti (@Kinakomoti2357) &lt;a href=&#34;https://twitter.com/Kinakomoti2357/status/1652677355901706240?ref_src=twsrc%5Etfw&#34;&gt;April 30, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Just released S͎E͎A͎W͎A͎L͎L͎ &lt;a href=&#34;https://twitter.com/SESSIONS_Party?ref_src=twsrc%5Etfw&#34;&gt;@SESSIONS_Party&lt;/a&gt;, a quick &lt;a href=&#34;https://twitter.com/hashtag/BladeRunner2049?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#BladeRunner2049&lt;/a&gt; inspired shader doodle I did a while back. Check out the final version on &lt;a href=&#34;https://twitter.com/Shadertoy?ref_src=twsrc%5Etfw&#34;&gt;@Shadertoy&lt;/a&gt; ✨: &lt;a href=&#34;https://t.co/ypBZWvp6oD&#34;&gt;https://t.co/ypBZWvp6oD&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/demoscene?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#demoscene&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#shader&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/brutalism?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#brutalism&lt;/a&gt; &lt;a href=&#34;https://t.co/WczF1MLuDm&#34;&gt;pic.twitter.com/WczF1MLuDm&lt;/a&gt;&lt;/p&gt;&amp;mdash; LJ (@LJ_1102) &lt;a href=&#34;https://twitter.com/LJ_1102/status/1653088310988881923?ref_src=twsrc%5Etfw&#34;&gt;May 1, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>FP試験のオススメ勉強法</title>
-      <link>https://gam0022.net/blog/2023/01/15/fp-study/</link>
-      <pubDate>Sun, 15 Jan 2023 14:40:44 +0900</pubDate>
-      
-      <guid>https://gam0022.net/blog/2023/01/15/fp-study/</guid>
-      <description>&lt;p&gt;来週1/22はFP試験だそうですね！試験を受ける方はがんばってください！&lt;/p&gt;
-
-&lt;p&gt;去年の1月試験でFP3級、5月試験でFP2級をそれぞれ一発で合格したので、勉強方法と心構えをメモしておこうと思います。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;FP2級&amp;lt;&amp;lt;完全合格&amp;gt;&amp;gt;&lt;br&gt;&lt;br&gt;多少は税金や金融に詳しくなりました。 &lt;a href=&#34;https://t.co/dYiCkMKbCx&#34;&gt;pic.twitter.com/dYiCkMKbCx&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1541958117470023681?ref_src=twsrc%5Etfw&#34;&gt;June 29, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;fpを取得した理由&#34;&gt;FPを取得した理由&lt;/h1&gt;
-
-&lt;p&gt;友達に誘われて一緒に受けたというのが一番の理由だったのですが、マネーリテラシーを向上させることができたので受けて良かったと改めて思いました。&lt;/p&gt;
-
-&lt;p&gt;FP試験は6分野から出題され、かなり試験範囲が広いです。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ライフプランニングと資金計画&lt;/li&gt;
-&lt;li&gt;リスク管理&lt;/li&gt;
-&lt;li&gt;金融資産運用&lt;/li&gt;
-&lt;li&gt;タックスプランニング&lt;/li&gt;
-&lt;li&gt;不動産&lt;/li&gt;
-&lt;li&gt;相続・事業承継&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;私は会社員のプログラマーとして働いていて、とくに税金関係の知識がまったくありませんでした。&lt;/p&gt;
-
-&lt;p&gt;会社員をしていると税金の納税は会社が代わりにやってくれるので、税金の計算方法について以前の私はあまりにも無頓着でした。&lt;/p&gt;
-
-&lt;p&gt;源泉徴収や控除というものを知らず、源泉徴収票の見方も分かりませんでした。&lt;/p&gt;
-
-&lt;p&gt;また、不動産の知識も日常生活において視野を広げ、世界を見る解像度を上げることに役立ったように思います。&lt;/p&gt;
-
-&lt;p&gt;たとえば、近所で家を建て替えた時に道路の幅が広がっていたのを見て、これは&lt;a href=&#34;https://suumo.jp/article/oyakudachi/oyaku/chumon/c_knowhow/set_back/&#34;&gt;セットバック&lt;/a&gt;だったんだと気がついたり、
-建物の上の方が斜めなっているのは建築基準法第56条の&lt;a href=&#34;https://ameblo.jp/zen-com/entry-12401014004.html&#34;&gt;道路斜線制限&lt;/a&gt;によるものだったんだなぁと思いながら散歩できるようになりました。&lt;/p&gt;
-
-&lt;p&gt;不動産の相続税の評価は路線価で計算されるので、相続税対策でタワーマンションを購入する人もいるのかなど納得しました（※相続税制度改正で是正されるそうですが）。&lt;/p&gt;
-
-&lt;p&gt;FP試験を勉強していると、タワーマンションの例のように不動産と相続など、別分野の知識が相互にリンクして繋がることも多く、個人的には楽しく勉強がしやすいと思いました。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;効率的な勉強方法&#34;&gt;効率的な勉強方法&lt;/h1&gt;
-
-&lt;p&gt;勉強時間の限られた社会人に向けて個人的に効率の良かったFP試験の勉強方法を紹介します。&lt;/p&gt;
-
-&lt;p&gt;勉強方法やFP2級も3級もあまり変わりませんでした。FP2級は3級より知識が深掘りされますが、出題範囲は基本的に一緒です。&lt;/p&gt;
-
-&lt;h2 id=&#34;過去問が最重要&#34;&gt;過去問が最重要&lt;/h2&gt;
-
-&lt;p&gt;まずは過去問を解いてどのあたりが出題されるのか把握するのが良いと思います。とくにFP試験がはじめてなら過去問は重要だと思います。&lt;/p&gt;
-
-&lt;p&gt;たくさんの参考書が出版されていますが、FP試験は出題範囲がとても広く、最初から最後まで全部理解して覚えようとすると時間がかかります。
-FP試験で出題される内容には傾向があるので、頻出の問題だけ押さえれば十分に合格可能です。
-参考書を隅から隅まで網羅して覚えようとするのはタイムパフォーマンスが悪いです。&lt;/p&gt;
-
-&lt;p&gt;※網羅的に勉強する方法を否定する意図はありませんが、あくまで勉強時間が限られている場合は時間効率を意識することも大切だと思います。&lt;/p&gt;
-
-&lt;p&gt;FP試験の過去問と回答は公式ページにも掲載されています。ありがたいですね。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.jafp.or.jp/exam/mohan/&#34;&gt;試験問題・模範解答 | 日本FP協会&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;さらにオススメは過去問道場というサイトです。Webブラウザ上で過去問に挑戦できるサイトで、素晴らしいことに解説付きです。有料レベルのサイトだと思うのですが、なんと無料で利用できます。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://fp3-siken.com/kakomon.php&#34;&gt;FP3級 過去問道場🥋 (学科)【完全解説付】｜FP3級ドットコム&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://fp2-siken.com/kakomon.php&#34;&gt;FP2級 過去問道場🥋 (学科)【完全解説付】｜FP2級ドットコム&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;FP3級は問題数が少ないのでゆっくり解いても時間が余ると思うのですが、FP2級は問題数が多いので時間配分にも注意する必要があります。&lt;/p&gt;
-
-&lt;p&gt;FP2級では時間配分まで意識しながら過去問を解いていきましょう。&lt;/p&gt;
-
-&lt;p&gt;基本的に過去問道場を利用して解くのが良いと思いますが、FP2級なら過去問を紙に印刷して本番と同じ制限時間で解く練習を最低1回はしておくのがオススメです。
-家にプリンターがなくてもコンビニにネットプリントで印刷できます。&lt;/p&gt;
-
-&lt;p&gt;注意点として古すぎる過去問は避けるべきです。FP試験の内容は法改正に応じて変更されるので、直近1,2年の過去問に絞った方が無難だと思いました。&lt;/p&gt;
-
-&lt;h2 id=&#34;youtubeを利用した学習法&#34;&gt;YouTubeを利用した学習法&lt;/h2&gt;
-
-&lt;p&gt;FP試験ではどうしても細かい数値などを暗記しないと解けない問題が多く出題されます。&lt;/p&gt;
-
-&lt;p&gt;私はおーちゃんさんのYouTubeを移動中などに聞いて暗記問題を記憶しました。とくに「耳で覚える耳ラジオ」シリーズは語呂合わせで効率的に暗記ができるのでオススメです。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=aCrjd-qEzLE&amp;amp;list=PL3ZRB2iLEZ18Ixufc6NCCWYluepCXb29o&#34;&gt;FP2級3級 ライフプランと資金計画編「耳で覚える耳ラジオ」&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/aCrjd-qEzLE&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;h2 id=&#34;参考書&#34;&gt;参考書&lt;/h2&gt;
-
-&lt;p&gt;上で紹介したおーちゃんさんが企画協力している参考書を買いました。YouTubeの語呂合わせなど共通しているので良かったです。
-過去問などを解いていく中で、掘り下げて理解を深めたい箇所だけ参考書を読む使い方をしました。&lt;/p&gt;
-
-&lt;p&gt;自分の印象としては、FP3級については過去問とYouTubeだけでも十分に合格できると思ったのですが、FP2級では問われる知識がより深く細かくなってくるので、FP2級からは参考書も必須だと思います。&lt;/p&gt;
-
-&lt;div class=&#34;booklink-box&#34; style=&#34;text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;&#34;&gt;&lt;div class=&#34;booklink-image&#34; style=&#34;float:left;margin:0 15px 10px 0;&#34;&gt;&lt;a href=&#34;https://hb.afl.rakuten.co.jp/hgc/117c8a81.32450c02.117c8a82.14f884ba/yomereba_main_20241219225042438?pc=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F17489847%2F%3Frafcid%3Dwsc_b_bs_1051722217600006323%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F&#34; target=&#34;_blank&#34; &gt;&lt;img src=&#34;https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/3710/9784839983710_1_2.jpg?_ex=200x200&#34; style=&#34;border: none;&#34; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;booklink-info&#34; style=&#34;line-height:120%;zoom: 1;overflow: hidden;&#34;&gt;&lt;div class=&#34;booklink-name&#34; style=&#34;margin-bottom:10px;line-height:120%&#34;&gt;&lt;a href=&#34;https://hb.afl.rakuten.co.jp/hgc/117c8a81.32450c02.117c8a82.14f884ba/yomereba_main_20241219225042438?pc=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F17489847%2F%3Frafcid%3Dwsc_b_bs_1051722217600006323%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F&#34; target=&#34;_blank&#34; &gt;イメージで攻略　わかる！受かる！！ FP3級　テキスト＆問題集　2023-2024年版（’23年9月、‘24年1月、5月試験対応）／分冊式／問題集全問（学科・実技）WEB学習対応！／YouTubeチャンネルおーちゃんTVとのコラボ動画付き]&lt;/a&gt;&lt;div class=&#34;booklink-powered-date&#34; style=&#34;font-size:8pt;margin-top:5px;font-family:verdana;line-height:120%&#34;&gt;posted with &lt;a href=&#34;https://yomereba.com&#34; rel=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;ヨメレバ&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;booklink-detail&#34; style=&#34;margin-bottom:5px;&#34;&gt;マイナビ出版FP試験対策プロジェクト マイナビ出版 2023年05月31日    &lt;/div&gt;&lt;div class=&#34;booklink-link2&#34; style=&#34;margin-top:10px;&#34;&gt;&lt;div class=&#34;shoplinkrakuten&#34; style=&#34;display:inline;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 -50px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;https://hb.afl.rakuten.co.jp/hgc/117c8a81.32450c02.117c8a82.14f884ba/yomereba_main_20241219225042438?pc=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F17489847%2F%3Frafcid%3Dwsc_b_bs_1051722217600006323%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F&#34; target=&#34;_blank&#34; &gt;楽天ブックスで購入&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;shoplinkrakukobo&#34; style=&#34;display:inline;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 -50px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;http://hb.afl.rakuten.co.jp/hgc/117c8a81.32450c02.117c8a82.14f884ba/yomereba_main_20241219225042438?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F4a5b9e1360153be28cad30a24d54c791%2F%3Frafcid%3Dwsc_k_eb_1051722217600006323%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F&#34; target=&#34;_blank&#34; &gt;楽天koboで購入&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;shoplinkamazon&#34; style=&#34;display:inline;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;https://www.amazon.co.jp/exec/obidos/asin/4839983712/gam00220c-22/&#34; target=&#34;_blank&#34; &gt;Amazonで購入&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;shoplinkkindle&#34; style=&#34;display:inline;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;https://www.amazon.co.jp/gp/search?keywords=%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8%E3%81%A7%E6%94%BB%E7%95%A5%E3%80%80%E3%82%8F%E3%81%8B%E3%82%8B%EF%BC%81%E5%8F%97%E3%81%8B%E3%82%8B%EF%BC%81%EF%BC%81%20FP3%E7%B4%9A%E3%80%80%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%EF%BC%86%E5%95%8F%E9%A1%8C%E9%9B%86%E3%80%802023-2024%E5%B9%B4%E7%89%88%EF%BC%88%E2%80%9923%E5%B9%B49%E6%9C%88%E3%80%81%E2%80%9824%E5%B9%B41%E6%9C%88%E3%80%815%E6%9C%88%E8%A9%A6%E9%A8%93%E5%AF%BE%E5%BF%9C%EF%BC%89%EF%BC%8F%E5%88%86%E5%86%8A%E5%BC%8F%EF%BC%8F%E5%95%8F%E9%A1%8C%E9%9B%86%E5%85%A8%E5%95%8F%EF%BC%88%E5%AD%A6%E7%A7%91%E3%83%BB%E5%AE%9F%E6%8A%80%EF%BC%89WEB%E5%AD%A6%E7%BF%92%E5%AF%BE%E5%BF%9C%EF%BC%81%EF%BC%8FYouTube%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB%E3%81%8A%E3%83%BC%E3%81%A1%E3%82%83%E3%82%93TV%E3%81%A8%E3%81%AE%E3%82%B3%E3%83%A9%E3%83%9C%E5%8B%95%E7%94%BB%E4%BB%98%E3%81%8D%5D&amp;__mk_ja_JP=%83J%83%5E%83J%83i&amp;url=node%3D2275256051&amp;tag=gam00220c-22&#34; target=&#34;_blank&#34; &gt;Kindleで購入&lt;/a&gt;&lt;/div&gt;                &lt;div class=&#34;shoplinkseven&#34; style=&#34;display:inline;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 -100px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3737095&amp;pid=891162441&amp;vc_url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3FsearchKeywordFlg%3D1%26keyword%3D9784839983710&amp;vcptn=kaereba&#34; target=&#34;_blank&#34; &gt;7netで購入&lt;img src=&#34;//ad.jp.ap.valuecommerce.com/servlet/atq/gifbanner?sid=3737095&amp;pid=891162441&#34; height=&#34;1&#34; width=&#34;1&#34; border=&#34;0&#34;&gt;&lt;/a&gt;&lt;/div&gt;                 &lt;div class=&#34;shoplinkkino&#34; style=&#34;display:inline;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 -350px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3737095&amp;pid=891162443&amp;vc_url=http%3A%2F%2Fwww.kinokuniya.co.jp%2Ff%2Fdsg-01-9784839983710&amp;vcptn=kaereba&#34; target=&#34;_blank&#34; &gt;紀伊國屋書店で購入&lt;img src=&#34;//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3737095&amp;pid=891162443&#34; height=&#34;1&#34; width=&#34;1&#34; border=&#34;0&#34;&gt;&lt;/a&gt;&lt;/div&gt;       &lt;div class=&#34;shoplinkebj&#34; style=&#34;display:inline;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 -450px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3737095&amp;pid=891162444&amp;vc_url=https%3A%2F%2Febookjapan.yahoo.co.jp%2Fbooks%2F767728%2FA004205448%2F%3Fdealerid%3D30064%26utm_source%3Dasp%26utm_medium%3Dmedi%26utm_campaign%3Drate_yome&amp;vcptn=kaereba&#34; target=&#34;_blank&#34; &gt;ebookjapanで購入&lt;img src=&#34;//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3737095&amp;pid=891162444&#34; height=&#34;1&#34; width=&#34;1&#34; border=&#34;0&#34;&gt;&lt;/a&gt;&lt;/div&gt;      &lt;div class=&#34;shoplinktoshokan&#34; style=&#34;display:inline;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 -300px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;http://calil.jp/book/4839983712&#34; target=&#34;_blank&#34; &gt;図書館で探す&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;booklink-footer&#34; style=&#34;clear: left&#34;&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&#34;booklink-box&#34; style=&#34;text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;&#34;&gt;&lt;div class=&#34;booklink-image&#34; style=&#34;float:left;margin:0 15px 10px 0;&#34;&gt;&lt;a href=&#34;https://hb.afl.rakuten.co.jp/hgc/117c8a81.32450c02.117c8a82.14f884ba/yomereba_main_202412192251166275?pc=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F17489846%2F%3Frafcid%3Dwsc_b_bs_1051722217600006323%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F&#34; target=&#34;_blank&#34; &gt;&lt;img src=&#34;https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/3727/9784839983727_1_2.jpg?_ex=200x200&#34; style=&#34;border: none;&#34; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;booklink-info&#34; style=&#34;line-height:120%;zoom: 1;overflow: hidden;&#34;&gt;&lt;div class=&#34;booklink-name&#34; style=&#34;margin-bottom:10px;line-height:120%&#34;&gt;&lt;a href=&#34;https://hb.afl.rakuten.co.jp/hgc/117c8a81.32450c02.117c8a82.14f884ba/yomereba_main_202412192251166275?pc=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F17489846%2F%3Frafcid%3Dwsc_b_bs_1051722217600006323%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F&#34; target=&#34;_blank&#34; &gt;イメージで攻略 わかる！受かる！！FP2級AFP　テキスト＆問題集　 2023-2024年版（’23年9月、‘24年1月、5月試験対応）／分冊式／問題集全問（学科・実技）WEB学習対応！／YouTubeチャンネルおーちゃんTVとのコラボ動画付き&lt;/a&gt;&lt;div class=&#34;booklink-powered-date&#34; style=&#34;font-size:8pt;margin-top:5px;font-family:verdana;line-height:120%&#34;&gt;posted with &lt;a href=&#34;https://yomereba.com&#34; rel=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;ヨメレバ&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;booklink-detail&#34; style=&#34;margin-bottom:5px;&#34;&gt;マイナビ出版FP試験対策プロジェクト マイナビ出版 2023年05月31日    &lt;/div&gt;&lt;div class=&#34;booklink-link2&#34; style=&#34;margin-top:10px;&#34;&gt;&lt;div class=&#34;shoplinkrakuten&#34; style=&#34;display:inline;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 -50px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;https://hb.afl.rakuten.co.jp/hgc/117c8a81.32450c02.117c8a82.14f884ba/yomereba_main_202412192251166275?pc=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F17489846%2F%3Frafcid%3Dwsc_b_bs_1051722217600006323%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F&#34; target=&#34;_blank&#34; &gt;楽天ブックスで購入&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;shoplinkrakukobo&#34; style=&#34;display:inline;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 -50px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;http://hb.afl.rakuten.co.jp/hgc/117c8a81.32450c02.117c8a82.14f884ba/yomereba_main_202412192251166275?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F70e42551a9693a57a164c530dbd49214%2F%3Frafcid%3Dwsc_k_eb_1051722217600006323%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F&#34; target=&#34;_blank&#34; &gt;楽天koboで購入&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;shoplinkamazon&#34; style=&#34;display:inline;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;https://www.amazon.co.jp/exec/obidos/asin/4839983720/gam00220c-22/&#34; target=&#34;_blank&#34; &gt;Amazonで購入&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;shoplinkkindle&#34; style=&#34;display:inline;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;https://www.amazon.co.jp/gp/search?keywords=%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8%E3%81%A7%E6%94%BB%E7%95%A5%20%E3%82%8F%E3%81%8B%E3%82%8B%EF%BC%81%E5%8F%97%E3%81%8B%E3%82%8B%EF%BC%81%EF%BC%81FP2%E7%B4%9AAFP%E3%80%80%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%EF%BC%86%E5%95%8F%E9%A1%8C%E9%9B%86%E3%80%80%202023-2024%E5%B9%B4%E7%89%88%EF%BC%88%E2%80%9923%E5%B9%B49%E6%9C%88%E3%80%81%E2%80%9824%E5%B9%B41%E6%9C%88%E3%80%815%E6%9C%88%E8%A9%A6%E9%A8%93%E5%AF%BE%E5%BF%9C%EF%BC%89%EF%BC%8F%E5%88%86%E5%86%8A%E5%BC%8F%EF%BC%8F%E5%95%8F%E9%A1%8C%E9%9B%86%E5%85%A8%E5%95%8F%EF%BC%88%E5%AD%A6%E7%A7%91%E3%83%BB%E5%AE%9F%E6%8A%80%EF%BC%89WEB%E5%AD%A6%E7%BF%92%E5%AF%BE%E5%BF%9C%EF%BC%81%EF%BC%8FYouTube%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB%E3%81%8A%E3%83%BC%E3%81%A1%E3%82%83%E3%82%93TV%E3%81%A8%E3%81%AE%E3%82%B3%E3%83%A9%E3%83%9C%E5%8B%95%E7%94%BB%E4%BB%98%E3%81%8D&amp;__mk_ja_JP=%83J%83%5E%83J%83i&amp;url=node%3D2275256051&amp;tag=gam00220c-22&#34; target=&#34;_blank&#34; &gt;Kindleで購入&lt;/a&gt;&lt;/div&gt;                &lt;div class=&#34;shoplinkseven&#34; style=&#34;display:inline;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 -100px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3737095&amp;pid=891162441&amp;vc_url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3FsearchKeywordFlg%3D1%26keyword%3D9784839983727&amp;vcptn=kaereba&#34; target=&#34;_blank&#34; &gt;7netで購入&lt;img src=&#34;//ad.jp.ap.valuecommerce.com/servlet/atq/gifbanner?sid=3737095&amp;pid=891162441&#34; height=&#34;1&#34; width=&#34;1&#34; border=&#34;0&#34;&gt;&lt;/a&gt;&lt;/div&gt;                 &lt;div class=&#34;shoplinkkino&#34; style=&#34;display:inline;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 -350px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3737095&amp;pid=891162443&amp;vc_url=http%3A%2F%2Fwww.kinokuniya.co.jp%2Ff%2Fdsg-01-9784839983727&amp;vcptn=kaereba&#34; target=&#34;_blank&#34; &gt;紀伊國屋書店で購入&lt;img src=&#34;//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3737095&amp;pid=891162443&#34; height=&#34;1&#34; width=&#34;1&#34; border=&#34;0&#34;&gt;&lt;/a&gt;&lt;/div&gt;       &lt;div class=&#34;shoplinkebj&#34; style=&#34;display:inline;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 -450px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3737095&amp;pid=891162444&amp;vc_url=https%3A%2F%2Febookjapan.yahoo.co.jp%2Fbooks%2F768823%2FA004224451%2F%3Fdealerid%3D30064%26utm_source%3Dasp%26utm_medium%3Dmedi%26utm_campaign%3Drate_yome&amp;vcptn=kaereba&#34; target=&#34;_blank&#34; &gt;ebookjapanで購入&lt;img src=&#34;//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3737095&amp;pid=891162444&#34; height=&#34;1&#34; width=&#34;1&#34; border=&#34;0&#34;&gt;&lt;/a&gt;&lt;/div&gt;      &lt;div class=&#34;shoplinktoshokan&#34; style=&#34;display:inline;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 -300px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;http://calil.jp/book/4839983720&#34; target=&#34;_blank&#34; &gt;図書館で探す&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;booklink-footer&#34; style=&#34;clear: left&#34;&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&#34;試験当日までに買うもの&#34;&gt;試験当日までに買うもの&lt;/h2&gt;
-
-&lt;p&gt;これらは試験前に購入しておきましょう。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;電卓（定数乗算ができ、ボタンが大きく押しやすいもの）&lt;/li&gt;
-&lt;li&gt;腕時計（AppleWatchはNG)&lt;/li&gt;
-&lt;li&gt;鉛筆・消しゴム&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;電卓&#34;&gt;電卓&lt;/h3&gt;
-
-&lt;p&gt;電卓もダイソーのもので十分ですが、キーボードと同じようにボタンが小さすぎると押しづらいのでコンパクトサイズは避けましょう。&lt;/p&gt;
-
-&lt;p&gt;また、定数計算（定数乗算）できるものを選びましょう。FP試験ではキャッシュフロー表の計算に「定数乗算」を頻繁に利用するためです。&lt;/p&gt;
-
-&lt;p&gt;定数乗算を利用すると &lt;code&gt;100*(1.2^3)&lt;/code&gt; のような計算を &lt;code&gt;1.2*100===&lt;/code&gt; で計算できます。&lt;/p&gt;
-
-&lt;h3 id=&#34;腕時計&#34;&gt;腕時計&lt;/h3&gt;
-
-&lt;p&gt;AppleWatchなどのスマートウォッチは持ち込み不可で、時計のない試験会場もあるので腕時計は買っておきましょう。&lt;/p&gt;
-
-&lt;p&gt;普段はAppleWatchを使っているので、自分はダイソーで適当なやつを買いました。&lt;/p&gt;
-
-&lt;h3 id=&#34;鉛筆-消しゴム&#34;&gt;鉛筆・消しゴム&lt;/h3&gt;
-
-&lt;p&gt;私はマークシート用のシャープペンを買いました。鉛筆削りが不要で、鉛筆よりもマークシートの記入がしやすいのでオススメです。&lt;/p&gt;
-
-&lt;div class=&#34;kaerebalink-box&#34; style=&#34;text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;&#34;&gt;&lt;div class=&#34;kaerebalink-image&#34; style=&#34;float:left;margin:0 15px 10px 0;&#34;&gt;&lt;a href=&#34;https://hb.afl.rakuten.co.jp/hgc/g0000014.uo1a9aa4.g0000014.uo1aa66b/kaereba_main_202412192257073236?pc=https%3A%2F%2Fproduct.rakuten.co.jp%2Fproduct%2F-%2Fdf44736a6434d389711639f9a142f87c%2F&amp;m=http%3A%2F%2Fm.product.rakuten.co.jp%2Fproduct%2Fdf44736a6434d389711639f9a142f87c%2F&amp;rafcid=wsc_i_ps_1087413314923222742&#34; target=&#34;_blank&#34; &gt;&lt;img src=&#34;https://thumbnail.image.rakuten.co.jp/ran/img/1001/0004/902/506/311/467/10010004902506311467_1.jpg?_ex=320x320&#34; style=&#34;border: none;&#34; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;kaerebalink-info&#34; style=&#34;line-height:120%;zoom: 1;overflow: hidden;&#34;&gt;&lt;div class=&#34;kaerebalink-name&#34; style=&#34;margin-bottom:10px;line-height:120%&#34;&gt;&lt;a href=&#34;https://hb.afl.rakuten.co.jp/hgc/g0000014.uo1a9aa4.g0000014.uo1aa66b/kaereba_main_202412192257073236?pc=https%3A%2F%2Fproduct.rakuten.co.jp%2Fproduct%2F-%2Fdf44736a6434d389711639f9a142f87c%2F&amp;m=http%3A%2F%2Fm.product.rakuten.co.jp%2Fproduct%2Fdf44736a6434d389711639f9a142f87c%2F&amp;rafcid=wsc_i_ps_1087413314923222742&#34; target=&#34;_blank&#34; &gt;ぺんてる マークシートセット ネイビー XAM113ST-C(1セット)&lt;/a&gt;&lt;div class=&#34;kaerebalink-powered-date&#34; style=&#34;font-size:8pt;margin-top:5px;font-family:verdana;line-height:120%&#34;&gt;posted with &lt;a href=&#34;https://kaereba.com&#34; rel=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;カエレバ&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;kaerebalink-detail&#34; style=&#34;margin-bottom:5px;&#34;&gt;&lt;/div&gt;&lt;div class=&#34;kaerebalink-link1&#34; style=&#34;margin-top:10px;&#34;&gt;&lt;div class=&#34;shoplinkrakuten&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_k_01.gif&#39;) 0 -50px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;https://hb.afl.rakuten.co.jp/hgc/g0000014.uo1a9aa4.g0000014.uo1aa66b/kaereba_main_202412192257073236?pc=https%3A%2F%2Fproduct.rakuten.co.jp%2Fproduct%2F-%2Fdf44736a6434d389711639f9a142f87c%2F&amp;m=http%3A%2F%2Fm.product.rakuten.co.jp%2Fproduct%2Fdf44736a6434d389711639f9a142f87c%2F&amp;rafcid=wsc_i_ps_1087413314923222742&#34; target=&#34;_blank&#34; &gt;楽天市場で購入&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;shoplinkamazon&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_k_01.gif&#39;) 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;https://www.amazon.co.jp/gp/search?keywords=%E3%83%9E%E3%83%BC%E3%82%AF%E3%82%B7%E3%83%BC%E3%83%88%E7%94%A8%20%E3%82%B7%E3%83%A3%E3%83%BC%E3%83%97%E3%83%9A%E3%83%B3&amp;__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&amp;tag=gam00220c-22&#34; target=&#34;_blank&#34; &gt;Amazonで購入&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;shoplinkyahoo&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_k_01.gif&#39;) 0 -150px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3737095&amp;pid=891162274&amp;vc_url=http%3A%2F%2Fsearch.shopping.yahoo.co.jp%2Fsearch%3Fp%3D%25E3%2583%259E%25E3%2583%25BC%25E3%2582%25AF%25E3%2582%25B7%25E3%2583%25BC%25E3%2583%2588%25E7%2594%25A8%2520%25E3%2582%25B7%25E3%2583%25A3%25E3%2583%25BC%25E3%2583%2597%25E3%2583%259A%25E3%2583%25B3&amp;vcptn=kaereba&#34; target=&#34;_blank&#34; &gt;Yahooショッピングで購入&lt;img src=&#34;//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3737095&amp;pid=891162274&#34; height=&#34;1&#34; width=&#34;1&#34; border=&#34;0&#34;&gt;&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;shoplinkseven&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_k_01.gif&#39;) 0 -100px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3737095&amp;pid=891162462&amp;vc_url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3Fkeyword%3D%25E3%2583%259E%25E3%2583%25BC%25E3%2582%25AF%25E3%2582%25B7%25E3%2583%25BC%25E3%2583%2588%25E7%2594%25A8%2520%25E3%2582%25B7%25E3%2583%25A3%25E3%2583%25BC%25E3%2583%2597%25E3%2583%259A%25E3%2583%25B3%26searchKeywordFlg%3D1&amp;vcptn=kaereba&#34; target=&#34;_blank&#34; &gt;7netで購入&lt;img src=&#34;//ad.jp.ap.valuecommerce.com/servlet/atq/gifbanner?sid=3737095&amp;pid=891162462&#34; height=&#34;1&#34; width=&#34;1&#34; border=&#34;0&#34;&gt;&lt;/a&gt;&lt;/div&gt;                                      &lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;booklink-footer&#34; style=&#34;clear: left&#34;&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&#34;まとめ&#34;&gt;まとめ&lt;/h1&gt;
-
-&lt;p&gt;FP試験で多少はマネーリテラシーが身についたような気がするので受験して良かったです。会社員で確定申告をしないような人でも、住宅購入など金額の大きい重要な判断、親の相続などの場面では多少は役立つような気がしました。&lt;/p&gt;
-
-&lt;p&gt;また、真剣に試験勉強をしたのは学生ぶりだったので懐かしい気持ちになりました。&lt;/p&gt;
-
-&lt;p&gt;本記事がFPを受けようと思っている人・受ける人に少しでも役に立てば幸いです。&lt;/p&gt;</description>
     </item>
     
   </channel>

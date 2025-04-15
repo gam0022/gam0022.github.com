@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme" content="hugo-academic">
+    <meta name="generator" content="Hugo 0.17" />
+    <meta name="author" content="@gam0022">
+    <meta name="description" content="ソフトウェアエンジニア / グラフィックスエンジニア">
+
+    <link rel="stylesheet" href="https://gam0022.net/css/highlight.min.css">
+    <link rel="stylesheet" href="https://gam0022.net/css/bootstrap.custom.css">
+    <link rel="stylesheet" href="https://gam0022.net/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://gam0022.net/css/academicons.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+    <link rel="stylesheet" href="https://gam0022.net/css/hugo-academic.css?2023-07-31-v2">
+    
+
+    
+    <link rel="alternate" href="https://gam0022.net/index.xml" type="application/rss+xml" title="gam0022.net">
+    <link rel="feed" href="https://gam0022.net/index.xml" type="application/rss+xml" title="gam0022.net">
+    
+    <link rel="shortcut icon" href="https://gam0022.net/img/favicon.png" type="image/png">
+    
+
+    <title>draw(tokyo); #2でVJデビュー！（GLSLライブコーディング） | gam0022.net</title>
+
+    
+        <meta property="og:type" content="article">
+        <meta property="og:description" content="3/22に渋谷のCIRCUS TOKYOでオーディオビジュアルイベントdraw(tokyo);#2が開催されました。
+
+私はとうふおさおいさんのVJとして出演し、Sh4derJockeyを使ったGLSLライブコーディングによるVJを行いました。
+
+初めてのVJでしたが、オーディエンスの反応なども感じられて、とても楽しくVJできました。
+
+想定外のトラブルはありつつも、全体としては満足できる結果になったので良かったです。
+
+会場に足を運んでくださった皆さん、クルーやスタッフの方々、最高のイベントをありがとうございました！！
+
+本記事では、VJの技術的な要素や当日の振り返りを紹介します。
+
+パフォーマンスの動画
+
+友人に撮影してもらった動画をつなぎ合わせたダイジェスト版はこちらです。
+
+
+
+
+
+">
+    
+
+    
+        <meta property="og:image" content="https://gam0022.net/images/posts/2025-04-12-draw2/youtube.jpg">
+        <meta name="twitter:card" content="summary_large_image">
+    
+
+    <meta property="fb:app_id" content="413045302370371">
+    <meta property="og:title" content="draw(tokyo); #2でVJデビュー！（GLSLライブコーディング） | gam0022.net">
+    <meta property="og:url" content="https://gam0022.net/blog/2025/04/16/draw2/">
+
+    <meta name="twitter:site" content="@gam0022">
+
+    <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'ja'}</script>
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents">
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.7";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <script>
+    (function() {
+      var cx = '014076568914435119268:lp0lsoyv6uk';
+      var gcse = document.createElement('script');
+      gcse.type = 'text/javascript';
+      gcse.async = true;
+      gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(gcse, s);
+    })();
+  </script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TEZN6LYHVZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TEZN6LYHVZ');
+</script>
+
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+    <div class="container">
+
+        
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://gam0022.net/">gam0022.net</a>
+        </div>
+
+        
+        <div class="collapse navbar-collapse" id="#navbar-collapse-1">
+
+            
+            <ul class="nav navbar-nav navbar-left">
+                
+                <li class="nav-item"><a href="https://gam0022.net/#top"><i class='fa fa-home'></i> Home</a></li>
+                
+                <li class="nav-item"><a href="https://gam0022.net/post/"><i class='fa fa-pencil-square-o'></i> Post</a></li>
+                
+                <li class="nav-item"><a href="https://gam0022.net/works"><i class='fa fa-photo'></i> Work</a></li>
+                
+            </ul>
+
+            
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item google-search-item"><gcse:searchbox-only></gcse:searchbox-only>
+</li>
+                
+                <li class="nav-item"><a href="https://gam0022.net/webgl/#raymarching_reflect"><i class='fa fa-flask'></i> WebGL</a></li>
+                
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-9">
+            <article class="article" itemscope itemtype="http://schema.org/Article">
+
+                
+
+                <h3 class="article-title" itemprop="name">draw(tokyo); #2でVJデビュー！（GLSLライブコーディング）</h3>
+                
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2025-04-16 09:00:00 &#43;0900 JST" itemprop="datePublished">2025-04-16</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/event">event</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/cg">CG</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%9e%e3%83%bc%e3%83%81%e3%83%b3%e3%82%b0">レイマーチング</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/glsl">GLSL</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/vj">VJ</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/livecoding">LiveCoding</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/function_draw">function_draw</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/drawtokyo">draw(tokyo)</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/sh4derjockey">Sh4derJockey</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/sound2light">Sound2Light</a>
+        
+    </span>
+    
+    
+
+    
+        
+
+<div class="share-box">
+    <div class="share_wrap">
+        <div class="share_button">
+            <a href="http://b.hatena.ne.jp/entry/https://gam0022.net/blog/2025/04/16/draw2/" class="hatena-bookmark-button" data-hatena-bookmark-title="draw(tokyo); #2でVJデビュー！（GLSLライブコーディング）" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+        </div>
+        <div class="share_button">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://gam0022.net/blog/2025/04/16/draw2/" data-text="draw(tokyo); #2でVJデビュー！（GLSLライブコーディング）" data-via="gam0022">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+        <div class="share_button">
+            <div class="g-plus" data-action="share" data-annotation="none"></div>
+        </div>
+        <div class="share_button">
+            <div class="fb-like" data-href="https://gam0022.net/blog/2025/04/16/draw2/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+        </div>
+        <div class="share_button">
+          <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a><script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+        </div>
+    </div>
+</div>
+
+
+    
+
+</div>
+
+
+                <div class="article-style" itemprop="articleBody">
+                    <p>3/22に渋谷のCIRCUS TOKYOでオーディオビジュアルイベント<a href="https://function-draw.com/tokyo2">draw(tokyo);#2</a>が開催されました。</p>
+
+<p>私は<a href="https://x.com/toufu0301">とうふおさおい</a>さんのVJとして出演し、Sh4derJockeyを使ったGLSLライブコーディングによるVJを行いました。</p>
+
+<p>初めてのVJでしたが、オーディエンスの反応なども感じられて、とても楽しくVJできました。</p>
+
+<p>想定外のトラブルはありつつも、全体としては満足できる結果になったので良かったです。</p>
+
+<p>会場に足を運んでくださった皆さん、クルーやスタッフの方々、最高のイベントをありがとうございました！！</p>
+
+<p>本記事では、VJの技術的な要素や当日の振り返りを紹介します。</p>
+
+<h1 id="パフォーマンスの動画">パフォーマンスの動画</h1>
+
+<p>友人に撮影してもらった動画をつなぎ合わせたダイジェスト版はこちらです。</p>
+
+<div class="movie-wrap">
+<iframe width="1920" height="1080" src="https://www.youtube.com/embed/WNBRxQE55NE?si=cTud1nD9U_d4n9Oa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  referrerpolicy="strict-origin-when-cross-origin" allowfullscreenn></iframe>
+</div>
+
+<p></p>
+
+<p>本番時のフルバージョンの画面録画です。</p>
+
+<div class="movie-wrap">
+<iframe width="1920" height="1080" src="https://www.youtube.com/embed/JZLX5l94lCA?si=dO1kT8MESDHx4Tye" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  referrerpolicy="strict-origin-when-cross-origin" allowfullscreenn></iframe>
+</div>
+
+<p>本番では処理落ちが発生してしまったため、処理落ちのないリハーサル時の動画も紹介します。画面の点滅も控えめなので、本番時より目に優しいと思います。</p>
+
+<div class="movie-wrap">
+<iframe width="1920" height="1080" src="https://www.youtube.com/embed/YVTtvUtDMto?si=A4MyFHJtKz6dsQHQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  referrerpolicy="strict-origin-when-cross-origin" allowfullscreenn></iframe>
+</div>
+
+<h1 id="目指したもの">目指したもの</h1>
+
+<p>新千歳空港国際アニメーション映画祭で見た「パソコン音楽クラブ x Renard」のVJが最高すぎたので、これを目標にしました。</p>
+
+<div class="movie-wrap">
+<iframe width="1920" height="1080" src="https://www.youtube.com/embed/rKY-w3Ss8fE?si=TW8BiDCD-KmN6Wak" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  referrerpolicy="strict-origin-when-cross-origin" allowfullscreenn></iframe>
+</div>
+
+<p>最初に2Dのパターンから作り、次に3Dのレイマーチング行うことで、少しずつ絵が完成していくビルドアップ的な要素を見せつつ、曲の盛り上がりに合わせて2Dと3Dの素材を組み合わせるという全体的なVJの構成を参考にしました。</p>
+
+<p>何も無い状態から0からライブコーディングするわけではなく、シェーダーのベース部分を事前に作り込んでおいて、パラメーターやコンポジット処理をリアルタムに編集するような形式にしました。</p>
+
+<p>初のVJだったので、なるべく失敗のリスクを軽減したいのと、曲に合わせて絵を変化させるために自分の余裕を持たせたいという意図があり、結果的に正解だったと思います。</p>
+
+<h1 id="sh4derjockeyのプロジェクト">Sh4derJockeyのプロジェクト</h1>
+
+<p>Sh4derJockeyのプロジェクトはGitHubに公開しました。</p>
+
+<ul>
+<li><a href="https://github.com/gam0022/draw2">github.com/gam0022/draw2</a></li>
+</ul>
+
+<p>基本的なレイヤーは以下の3つです。</p>
+
+<ol>
+<li>2Dのパターン</li>
+<li>3Dのレイマーチングのライブコーディング用のシーン</li>
+<li>3Dの<a href="https://www.youtube.com/watch?v=194E3UWj870">Transcendental Cube</a>の移植シーン</li>
+</ol>
+
+<p>これらの3レイヤーをコンポジットのレイヤーで合成したり、複数レイヤーのポストエフェクトが重ねがけを可能にしました。</p>
+
+<p>特にGlitchポストエフェクトは、色収差をベースにカスタマイズしたもので個人的にお気に入りです。
+通常の色収差は画面端ほど強度が強くなりますが、ボロノイやCyclic Noiseなどの複数のノイズパターンを合成して色収差ができるようにしました。ノイズの強度はMIDIコンで細かく制御できます。</p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">最強にかっこいいGlitch🔥<a href="https://twitter.com/hashtag/function_draw?src=hash&amp;ref_src=twsrc%5Etfw">#function_draw</a> <a href="https://t.co/RudBTR9vl4">https://t.co/RudBTR9vl4</a> <a href="https://t.co/GGer0GO5eV">pic.twitter.com/GGer0GO5eV</a></p>&mdash; がむ (@gam0022) <a href="https://twitter.com/gam0022/status/1904552820369690658?ref_src=twsrc%5Etfw">March 25, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<h2 id="sh4derjockeyでのフォントの描画">Sh4derJockeyでのフォントの描画</h2>
+
+<p>フォントは以下の2種類を使用しました。</p>
+
+<ol>
+<li><a href="https://booth.pm/ja/items/6128508">レシートフォント - mikannoki-font - BOOTH</a></li>
+<li><a href="https://fonts.google.com/specimen/Orbitron">Orbitron Designed by Matt McInerney</a></li>
+</ol>
+
+<p>Sh4derJockeyにはフォントのレンダリング機能がないため、<a href="https://github.com/Chlumsky/msdf-atlas-gen">msdf-atlas-gen</a>を使ってフォントのアトラステクスチャを生成しました。</p>
+
+<p>このツールは<a href="https://x.com/kanetaaaaa">かねた</a>さんに教えてもらいました🙏</p>
+
+<p>msdf-atlas-genのGitHub ReleasesにはWindows用のビルド済みバイナリが配布されているので、パスの通った場所に<code>msdf-atlas-gen.exe</code>を配置し、以下のように利用しました。</p>
+
+<pre><code class="language-bash">msdf-atlas-gen.exe -format png -uniformcellconstraint square4 -imageout &quot;font_receipt_all.png&quot; -font &quot;レシートフォント.ttf&quot; -allglyphs -type mtsdf
+msdf-atlas-gen.exe -format png -uniformcellconstraint square4 -imageout &quot;font_orbitron_ascii.png&quot; -font &quot;Orbitron-VariableFont_wght.ttf&quot; -type mtsdf
+</code></pre>
+
+<p>以下のオプションを指定しました。</p>
+
+<ul>
+<li><code>-uniformcellconstraint square4</code> : 等幅なアトラステクスチャにする</li>
+<li><code>-type mtsdf</code> : Multi-channel signed distance fieldを指定</li>
+</ul>
+
+<p>msdf-atlas-genでは、フォントに収録されていない文字のスペースが詰められてしまうため、ASCIIコードとテクスチャアトラスのインデックスがずれる問題が発生しました。</p>
+
+<p>この問題はGLSL側でインデックスをオフセットすることで対処しましたが、存在しない文字のテクスチャアトラスを空白として残すオプションがあると便利だと感じました。</p>
+
+<p>フォントの描画（適切なUVを計算してアトラスをサンプリング）は、<a href="https://github.com/Forenard/VJ-at-lambda-2023-06-10/blob/main/Shader/font.glsl">Renardさんのソースコード</a>を参考にカスタマイズしました。</p>
+
+<p>msdf-atlas-genが生成するテクスチャのアルファは滑らかなグラデーションになっていたため、2値化して使用するようにしました。</p>
+
+<pre><code class="language-cpp">@@ -223,11 +223,11 @@ float Print_Char(vec2 uv, int id) {
+         dist -= 0.5;
+     }
+     float sig = fwidth(dist);
+-    float c = smoothstep(-sig, sig, dist) * col.a * float(id != 0);
++    float c = smoothstep(-sig, sig, dist) * step(0.5, col.a) * float(id != 0);
+     if (Font_Style == STYLE_OUTLINE || Font_Style == STYLE_OUTLINE_ITALIC) {
+         dist -= 0.2;
+         sig = fwidth(dist);
+-        c -= smoothstep(-sig, sig, dist) * col.a * float(id != 0);
++        c -= smoothstep(-sig, sig, dist) * step(0.5, col.a) * float(id != 0);
+     }
+</code></pre>
+
+<p>また、msdf-atlas-genが生成するテクスチャは左上がインデックス0に対応しますが、参考にしたコードは左下に対応していたため、上下を反転する改造を行いました。</p>
+
+<h1 id="vjの技術構成">VJの技術構成</h1>
+
+<p>VJで使用したソフトウェアやハードウェアを以下の図にまとめました。</p>
+
+<p><img src="/images/posts/2025-04-12-draw2/draw2_system.png" alt="構成図" /></p>
+
+<ul>
+<li><a href="https://github.com/slerpyyy/sh4der-jockey">Sh4derJockey</a>
+
+<ul>
+<li>GLSLでライブコーディングを行うためのソフトウェア</li>
+<li>マルチパスやテクスチャが使える</li>
+<li>MIDIコントローラーなども使える</li>
+</ul></li>
+<li><a href="https://github.com/ETCLabs/Sound2Light">Sound2Light</a>
+
+<ul>
+<li>音を解析してBPMなどを取得できるソフトウェア</li>
+<li>Renardさんに教えてもらった</li>
+</ul></li>
+</ul>
+
+<p>図には記載していませんが、GLSLのエディターとしてVSCodeを使用しました。</p>
+
+<p>また、Sh4derJockeyの画面にVSCodeのコードを合成するため、OBSのクロマキー合成を活用しました。</p>
+
+<p>さらに、VJ画面をHDMI出力する際にもOBSの全画面プロジェクター機能を利用しました。</p>
+
+<p>VJの使用ソフトウェアは「パソコン音楽クラブ x Renard」とほぼ同じだと思います。</p>
+
+<h2 id="sound2lightからsh4derjockeyへのbpmの自動同期システム">Sound2LightからSh4derJockeyへのBPMの自動同期システム</h2>
+
+<p>Sound2LightはOSC（Open Sound Control）プロトコルでBPM情報を他のソフトウェアに送信できます。しかし、Sh4derJockeyは外部からの情報をMIDIでしか受け取れません。</p>
+
+<p>そこで、OSCからMIDIに信号を変換する仕組みをNode.jsで実装しました。</p>
+
+<p>MIDI信号は7bit（0～127）の範囲でしか送信できないため、BPM情報を下位7bitと上位7bitに分割し、2つのMIDI CCチャンネルで送信しました。</p>
+
+<p>仮想オーディオデバイスの必要性に気づかず試行錯誤しましたが、RenardさんのアドバイスでloopMIDIを導入して解決しました。</p>
+
+<p>ソースコードをGitHubで公開し、READMEに使い方を詳しく記載しました。興味のある方はGitHubを見てください。</p>
+
+<ul>
+<li><a href="https://github.com/gam0022/osc-to-midi.js">github.com/gam0022/osc-to-midi.js</a></li>
+</ul>
+
+<h2 id="オーディオインターフェイスの導入">オーディオインターフェイスの導入</h2>
+
+<p>DJの音源を取得する方法がわからなかったため、<a href="https://x.com/0b5vr">0b5vr</a>さんに相談し、<a href="https://amzn.to/42Adfgg">Behringer U-PHONO UFO202</a>というオーディオインターフェイスを購入しました。</p>
+
+<p>UFO202を使って、DJミキサーからRCAケーブルで出力されるアナログ音源をデジタル音源に変換しました。</p>
+
+<div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;"><div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a href="https://hb.afl.rakuten.co.jp/hgc/g0000014.uo1a9aa4.g0000014.uo1aa66b/kaereba_main_202504150316354973?pc=https%3A%2F%2Fproduct.rakuten.co.jp%2Fproduct%2F-%2Ffbc1d98f472e340fe1f0af43fd2c33b4%2F&m=http%3A%2F%2Fm.product.rakuten.co.jp%2Fproduct%2Ffbc1d98f472e340fe1f0af43fd2c33b4%2F&rafcid=wsc_i_ps_1087413314923222742" target="_blank" ><img src="https://thumbnail.image.rakuten.co.jp/ran/img/3001/0004/033/653/030/601/30010004033653030601_1.jpg?_ex=320x320" style="border: none;" /></a></div><div class="kaerebalink-info" style="line-height:120%;zoom: 1;overflow: hidden;"><div class="kaerebalink-name" style="margin-bottom:10px;line-height:120%"><a href="https://hb.afl.rakuten.co.jp/hgc/g0000014.uo1a9aa4.g0000014.uo1aa66b/kaereba_main_202504150316354973?pc=https%3A%2F%2Fproduct.rakuten.co.jp%2Fproduct%2F-%2Ffbc1d98f472e340fe1f0af43fd2c33b4%2F&m=http%3A%2F%2Fm.product.rakuten.co.jp%2Fproduct%2Ffbc1d98f472e340fe1f0af43fd2c33b4%2F&rafcid=wsc_i_ps_1087413314923222742" target="_blank" >BEHRINGER 2入力2出力USBオーディオインターフェース UFO202</a><div class="kaerebalink-powered-date" style="font-size:8pt;margin-top:5px;font-family:verdana;line-height:120%">posted with <a href="https://kaereba.com" rel="nofollow" target="_blank">カエレバ</a></div></div><div class="kaerebalink-detail" style="margin-bottom:5px;"></div><div class="kaerebalink-link1" style="margin-top:10px;"><div class="shoplinkrakuten" style="margin-right:5px;background: url('//img.yomereba.com/kz_k_01.gif') 0 -50px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;"><a href="https://hb.afl.rakuten.co.jp/hgc/g0000014.uo1a9aa4.g0000014.uo1aa66b/kaereba_main_202504150316354973?pc=https%3A%2F%2Fproduct.rakuten.co.jp%2Fproduct%2F-%2Ffbc1d98f472e340fe1f0af43fd2c33b4%2F&m=http%3A%2F%2Fm.product.rakuten.co.jp%2Fproduct%2Ffbc1d98f472e340fe1f0af43fd2c33b4%2F&rafcid=wsc_i_ps_1087413314923222742" target="_blank" >楽天市場で購入</a></div><div class="shoplinkamazon" style="margin-right:5px;background: url('//img.yomereba.com/kz_k_01.gif') 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;"><a href="https://www.amazon.co.jp/gp/search?keywords=Behringer%20U-PHONO%20UFO202&__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&tag=gam00220c-22" target="_blank" >Amazonで購入</a></div><div class="shoplinkyahoo" style="margin-right:5px;background: url('//img.yomereba.com/kz_k_01.gif') 0 -150px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;"><a href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3737095&pid=891162462&vc_url=http%3A%2F%2Fsearch.shopping.yahoo.co.jp%2Fsearch%3Fp%3DBehringer%2520U-PHONO%2520UFO202&vcptn=kaereba" target="_blank" >Yahooショッピングで購入<img src="//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3737095&pid=891162462" height="1" width="1" border="0"></a></div><div class="shoplinkseven" style="margin-right:5px;background: url('//img.yomereba.com/kz_k_01.gif') 0 -100px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;"><a href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3737095&pid=891162462&vc_url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3Fkeyword%3DBehringer%2520U-PHONO%2520UFO202%26searchKeywordFlg%3D1&vcptn=kaereba" target="_blank" >7netで購入<img src="//ad.jp.ap.valuecommerce.com/servlet/atq/gifbanner?sid=3737095&pid=891162462" height="1" width="1" border="0"></a></div>                                       </div></div><div class="booklink-footer" style="clear: left"></div></div>
+
+<h2 id="midiコントローラーのボタン設定">MIDIコントローラーのボタン設定</h2>
+
+<p>KORGの<a href="https://amzn.to/42zrlhP">nanoKONTROL2</a>というMIDIコントローラーを使用しましたが、設定にいくつか苦労しました。</p>
+
+<p>インターネット上にVJやMIDIコンの情報が少なく、試行錯誤が必要でした。最終的には<a href="https://x.com/Kinakomoti2357">きなこ餅</a>さんのアドバイスで解決できました🙏</p>
+
+<p>以下にポイントをまとめます。</p>
+
+<ul>
+<li>MIDI信号にはCC（スライダー）とnote（ボタン）の2種類があり、nanoKONTROL2の工場出荷時には全部CCになっている
+
+<ul>
+<li>ボタンとしてMIDIコンをするためには、<a href="https://www.korg.com/jp/support/download/software/0/159/533/">専用ソフト（nanoKONTROL2/KORG KONTROL EDITOR）</a>でnoteに設定する必要がある</li>
+<li>nanoKONTROL2側に設定が書き込まれるので、PCごとに設定する必要はない</li>
+<li><img src="/images/posts/2025-04-12-draw2/KORG_KONTROL_EDITOR.png" alt="KORG_KONTROL_EDITOR" /></li>
+</ul></li>
+<li>Windows10/11はMIDIデバイスを10個までしか認識できない問題があり、MIDI Driver Uninstall Utilityで不要なMIDIデバイスを削除する必要がある
+
+<ul>
+<li>自分の場合はKORG KONTROL EDITORがnanoKONTROL2を認識できない問題が発生した</li>
+<li>参考: <a href="https://note.com/bluembler/n/n20e7c5544e53">KORG nanoKONTROL2が認識しなかった話</a></li>
+</ul></li>
+</ul>
+
+<p>詳細は後日、別の記事にまとめる予定です。</p>
+
+<div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;"><div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a href="https://hb.afl.rakuten.co.jp/hgc/g0000014.uo1a9aa4.g0000014.uo1aa66b/kaereba_main_202504150310458941?pc=https%3A%2F%2Fproduct.rakuten.co.jp%2Fproduct%2F-%2Ff044da28797a92e15f159a56edd0414b%2F&m=http%3A%2F%2Fm.product.rakuten.co.jp%2Fproduct%2Ff044da28797a92e15f159a56edd0414b%2F&rafcid=wsc_i_ps_1087413314923222742" target="_blank" ><img src="https://thumbnail.image.rakuten.co.jp/ran/img/1001/0004/959/112/081/086/10010004959112081086_1.jpg?_ex=320x320" style="border: none;" /></a></div><div class="kaerebalink-info" style="line-height:120%;zoom: 1;overflow: hidden;"><div class="kaerebalink-name" style="margin-bottom:10px;line-height:120%"><a href="https://hb.afl.rakuten.co.jp/hgc/g0000014.uo1a9aa4.g0000014.uo1aa66b/kaereba_main_202504150310458941?pc=https%3A%2F%2Fproduct.rakuten.co.jp%2Fproduct%2F-%2Ff044da28797a92e15f159a56edd0414b%2F&m=http%3A%2F%2Fm.product.rakuten.co.jp%2Fproduct%2Ff044da28797a92e15f159a56edd0414b%2F&rafcid=wsc_i_ps_1087413314923222742" target="_blank" >KORG コルグ nanoKONTROL2 BK ブラック</a><div class="kaerebalink-powered-date" style="font-size:8pt;margin-top:5px;font-family:verdana;line-height:120%">posted with <a href="https://kaereba.com" rel="nofollow" target="_blank">カエレバ</a></div></div><div class="kaerebalink-detail" style="margin-bottom:5px;"></div><div class="kaerebalink-link1" style="margin-top:10px;"><div class="shoplinkrakuten" style="margin-right:5px;background: url('//img.yomereba.com/kz_k_01.gif') 0 -50px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;"><a href="https://hb.afl.rakuten.co.jp/hgc/g0000014.uo1a9aa4.g0000014.uo1aa66b/kaereba_main_202504150310458941?pc=https%3A%2F%2Fproduct.rakuten.co.jp%2Fproduct%2F-%2Ff044da28797a92e15f159a56edd0414b%2F&m=http%3A%2F%2Fm.product.rakuten.co.jp%2Fproduct%2Ff044da28797a92e15f159a56edd0414b%2F&rafcid=wsc_i_ps_1087413314923222742" target="_blank" >楽天市場で購入</a></div><div class="shoplinkamazon" style="margin-right:5px;background: url('//img.yomereba.com/kz_k_01.gif') 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;"><a href="https://www.amazon.co.jp/gp/search?keywords=nanoKONTROL2&__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&tag=gam00220c-22" target="_blank" >Amazonで購入</a></div><div class="shoplinkyahoo" style="margin-right:5px;background: url('//img.yomereba.com/kz_k_01.gif') 0 -150px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;"><a href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3737095&pid=891162462&vc_url=http%3A%2F%2Fsearch.shopping.yahoo.co.jp%2Fsearch%3Fp%3DnanoKONTROL2&vcptn=kaereba" target="_blank" >Yahooショッピングで購入<img src="//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3737095&pid=891162462" height="1" width="1" border="0"></a></div><div class="shoplinkseven" style="margin-right:5px;background: url('//img.yomereba.com/kz_k_01.gif') 0 -100px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;"><a href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3737095&pid=891162462&vc_url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3Fkeyword%3DnanoKONTROL2%26searchKeywordFlg%3D1&vcptn=kaereba" target="_blank" >7netで購入<img src="//ad.jp.ap.valuecommerce.com/servlet/atq/gifbanner?sid=3737095&pid=891162462" height="1" width="1" border="0"></a></div>                                     </div></div><div class="booklink-footer" style="clear: left"></div></div>
+
+<h1 id="当日のトラブル発生">当日のトラブル発生！</h1>
+
+<p>WindowsノートPCを持っていなかったので、当日はきなこ餅さんからノートPCをレンタルして使わせていただきました🙇（圧倒的感謝）</p>
+
+<p>ただし、不幸なトラブルにより、処理落ちが発生してしまいました🥹</p>
+
+<p>原因は、同一PC内で異なるWindowsアカウントを使ってそれぞれVJソフトを起動していたため、バックグラウンドでGPUリソースが競合してしまったことです。あまり詳しくないのですが、Windowsではアカウントにログインしていない状態でもバックグラウンドでGPUを使用する仕様のようでした。</p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">がむさんと私のVJやたらと重かったの共有したPCがお互いのソフトをバックグラウンドで動かしてたのが原因だったの面白かった<br><br>お互いリソースを食い合うVJ</p>&mdash; kinankomoti (@Kinakomoti2357) <a href="https://twitter.com/Kinakomoti2357/status/1903475130418020585?ref_src=twsrc%5Etfw">March 22, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p>本来はもっと滑らかなアニメーションやカメラワークになる想定でした。</p>
+
+<p>参考までに意図したフレームレートで再生されたリハーサル時の動画を貼っておきます。</p>
+
+<div class="movie-wrap">
+<iframe width="1920" height="1080" src="https://www.youtube.com/embed/YVTtvUtDMto?si=A4MyFHJtKz6dsQHQ&amp;start=1313" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  referrerpolicy="strict-origin-when-cross-origin" allowfullscreenn></iframe>
+</div>
+
+<p>また、OBSのレイアウト設定に問題があり、Sh4derJockeyの画面が少し下にずれてしまい、画面上部に白い余白ができてしまいました。</p>
+
+<p>とはいえ、本番のPCでのVJはぶっつけ本番だったため、オーディオインターフェイスやMIDIコントローラーを問題なく使用できただけでもラッキーだったと感じています。</p>
+
+<p>小さな失敗もありましたが、致命的な問題にはならなかったのが幸いでした。次回のVJではこうした点に気をつけたいと思います。</p>
+
+<h1 id="まとめ">まとめ</h1>
+
+<p>draw(tokyo); #2での初VJは、多くの方々のサポートのおかげで無事にやり遂げることができました。協力してくださった皆さんに心から感謝しています。本当にありがとうございました！</p>
+
+<p>とうふおさおいさんの素晴らしいDJパフォーマンスのおかげで、私自身も楽しみながらVJができました。</p>
+
+<p>まだまだVJとしては未熟ですが、今回が初めての一歩となり、VJの楽しさや雰囲気をしっかり感じることができたと思います。次の機会があれば、ぜひまた挑戦したいです！</p>
+
+<p>実は3年ほど前からVJに憧れがあり「いつかVJをやってみたい」と漠然と考えていました。まさかこんな素晴らしいイベントでVJデビューできるとは思ってもみなかったので、本当に嬉しく、良い思い出になりました。本当にお誘いありがとうございました！</p>
+
+<p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">3年越しの伏線を回収した<br>（VJのお誘いをいただけて本当に感謝しています）<a href="https://twitter.com/hashtag/function_draw?src=hash&amp;ref_src=twsrc%5Etfw">#function_draw</a> <a href="https://t.co/fijBlpCjq0">https://t.co/fijBlpCjq0</a> <a href="https://t.co/ZTvTTSKBER">pic.twitter.com/ZTvTTSKBER</a></p>&mdash; がむ (@gam0022) <a href="https://twitter.com/gam0022/status/1904194416044294478?ref_src=twsrc%5Etfw">March 24, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<h1 id="他の演者の記事紹介">他の演者の記事紹介</h1>
+
+<p>他の演者の方々のパフォーマンスも最高でした。技術解説や振り返り記事のリンクを紹介します。</p>
+
+<ul>
+<li><a href="https://shivaduke28.hatenablog.com/entry/2025/03/25/205506">Rectorについて - shivaduke28’s blog</a></li>
+<li><a href="https://note.com/monoton_music/n/nae24acb2298f">draw(tokyo); #2 後記 「演奏するビジュアル」｜monoton</a></li>
+<li><a href="https://note.com/sainakey5/n/nf9b7f1ef5e5a">【自作VJソフト】「ジェネラティブVJ　やり方」と draw(tokyo); #2 と気持ち ｜Saina</a></li>
+<li><a href="https://butadiene.hatenablog.com/entry/2025/03/24/233041">自分の撮った写真数千枚を使って、リアルタイムに画像を生成してくれるVJツールを作った話 - Butadiene Works</a></li>
+<li><a href="https://scrapbox.io/0b5vr/20250322_draw(tokyo);_%232_Live_Coding">20250322 draw(tokyo); #2 Live Coding | 0b5vr</a></li>
+<li><a href="https://x.com/ore_ukonpower/status/1903886119047205336">x.com/ore_ukonpower/status/1903886119047205336</a></li>
+</ul>
+
+<h1 id="写真">写真</h1>
+
+<p>友人に撮影してもらったVJ中の写真です。</p>
+
+<p><a href="/images/posts/2025-04-12-draw2/PXL_20250322_075002256.PORTRAIT.jpg"><img src="/images/posts/2025-04-12-draw2/PXL_20250322_075002256.PORTRAIT.jpg" alt="PXL_20250322_075002256.PORTRAIT" /></a>
+<a href="/images/posts/2025-04-12-draw2/PXL_20250322_075042891.MP.jpg"><img src="/images/posts/2025-04-12-draw2/PXL_20250322_075042891.MP.jpg" alt="PXL_20250322_075042891.MP" /></a>
+<a href="/images/posts/2025-04-12-draw2/PXL_20250322_075130158.NIGHT.jpg"><img src="/images/posts/2025-04-12-draw2/PXL_20250322_075130158.NIGHT.jpg" alt="PXL_20250322_075130158.NIGHT" /></a>
+<a href="/images/posts/2025-04-12-draw2/PXL_20250322_075139920.NIGHT.jpg"><img src="/images/posts/2025-04-12-draw2/PXL_20250322_075139920.NIGHT.jpg" alt="PXL_20250322_075139920.NIGHT" /></a>
+<a href="/images/posts/2025-04-12-draw2/PXL_20250322_075332869.PORTRAIT.jpg"><img src="/images/posts/2025-04-12-draw2/PXL_20250322_075332869.PORTRAIT.jpg" alt="PXL_20250322_075332869.PORTRAIT" /></a>
+<a href="/images/posts/2025-04-12-draw2/PXL_20250322_075600776.NIGHT.jpg"><img src="/images/posts/2025-04-12-draw2/PXL_20250322_075600776.NIGHT.jpg" alt="PXL_20250322_075600776.NIGHT" /></a>
+<a href="/images/posts/2025-04-12-draw2/PXL_20250322_075710213.NIGHT.jpg"><img src="/images/posts/2025-04-12-draw2/PXL_20250322_075710213.NIGHT.jpg" alt="PXL_20250322_075710213.NIGHT" /></a>
+<a href="/images/posts/2025-04-12-draw2/PXL_20250322_075748895.NIGHT.jpg"><img src="/images/posts/2025-04-12-draw2/PXL_20250322_075748895.NIGHT.jpg" alt="PXL_20250322_075748895.NIGHT" /></a>
+<a href="/images/posts/2025-04-12-draw2/PXL_20250322_075821809.PORTRAIT.ORIGINAL.jpg"><img src="/images/posts/2025-04-12-draw2/PXL_20250322_075821809.PORTRAIT.ORIGINAL.jpg" alt="PXL_20250322_075821809.PORTRAIT.ORIGINAL" /></a>
+<a href="/images/posts/2025-04-12-draw2/PXL_20250322_080319396.PORTRAIT.ORIGINAL.jpg"><img src="/images/posts/2025-04-12-draw2/PXL_20250322_080319396.PORTRAIT.ORIGINAL.jpg" alt="PXL_20250322_080319396.PORTRAIT.ORIGINAL" /></a>
+<a href="/images/posts/2025-04-12-draw2/PXL_20250322_080409969.NIGHT.jpg"><img src="/images/posts/2025-04-12-draw2/PXL_20250322_080409969.NIGHT.jpg" alt="PXL_20250322_080409969.NIGHT" /></a>
+<a href="/images/posts/2025-04-12-draw2/PXL_20250322_080431371.NIGHT.jpg"><img src="/images/posts/2025-04-12-draw2/PXL_20250322_080431371.NIGHT.jpg" alt="PXL_20250322_080431371.NIGHT" /></a>
+<a href="/images/posts/2025-04-12-draw2/L1000169.jpg"><img src="/images/posts/2025-04-12-draw2/L1000169.jpg" alt="L1000169" /></a>
+<a href="/images/posts/2025-04-12-draw2/L1000180.jpg"><img src="/images/posts/2025-04-12-draw2/L1000180.jpg" alt="L1000180" /></a>
+<a href="/images/posts/2025-04-12-draw2/L1000181.jpg"><img src="/images/posts/2025-04-12-draw2/L1000181.jpg" alt="L1000181" /></a>
+<a href="/images/posts/2025-04-12-draw2/L1000182.jpg"><img src="/images/posts/2025-04-12-draw2/L1000182.jpg" alt="L1000182" /></a>
+<a href="/images/posts/2025-04-12-draw2/L1000183.jpg"><img src="/images/posts/2025-04-12-draw2/L1000183.jpg" alt="L1000183" /></a>
+<a href="/images/posts/2025-04-12-draw2/L1000199.jpg"><img src="/images/posts/2025-04-12-draw2/L1000199.jpg" alt="L1000199" /></a></p>
+                </div>
+
+            </article>
+
+            
+
+<div class="article-metadata">
+
+    <span class="article-date">
+        <time datetime="2025-04-16 09:00:00 &#43;0900 JST" itemprop="datePublished">2025-04-16</time>
+    </span>
+
+    
+    
+    
+    <span class="article-tags">
+        <i class="fa fa-tags"></i>
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/event">event</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/cg">CG</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%9e%e3%83%bc%e3%83%81%e3%83%b3%e3%82%b0">レイマーチング</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/glsl">GLSL</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/vj">VJ</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/livecoding">LiveCoding</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/function_draw">function_draw</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/drawtokyo">draw(tokyo)</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/sh4derjockey">Sh4derJockey</a>, 
+        
+        <a class="article-tag-link" href="https://gam0022.net/tags/sound2light">Sound2Light</a>
+        
+    </span>
+    
+    
+
+    
+        
+
+<div class="share-box">
+    <div class="share_wrap">
+        <div class="share_button">
+            <a href="http://b.hatena.ne.jp/entry/https://gam0022.net/blog/2025/04/16/draw2/" class="hatena-bookmark-button" data-hatena-bookmark-title="draw(tokyo); #2でVJデビュー！（GLSLライブコーディング）" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+        </div>
+        <div class="share_button">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://gam0022.net/blog/2025/04/16/draw2/" data-text="draw(tokyo); #2でVJデビュー！（GLSLライブコーディング）" data-via="gam0022">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+        <div class="share_button">
+            <div class="g-plus" data-action="share" data-annotation="none"></div>
+        </div>
+        <div class="share_button">
+            <div class="fb-like" data-href="https://gam0022.net/blog/2025/04/16/draw2/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+        </div>
+        <div class="share_button">
+          <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a><script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+        </div>
+    </div>
+</div>
+
+
+    
+
+</div>
+
+            <nav>
+    <ul class="pager">
+        
+        <li class="previous"><a href="https://gam0022.net/blog/2024/12/11/sessions2024-summary/"><span aria-hidden="true">&larr;</span> SESSIONS 2024参加記録（セミナー登壇・ShaderJam解説・Realtime Graphics）</a></li>
+        
+
+        
+    </ul>
+</nav>
+
+            
+            <div class="row">
+    <h4 class="blog-title"><img src="/img/gam0022_splash.png" class="icon"> gam0022.net's Tag Cloud</h4>
+    <ul class="category-list">
+    <div class="widget tagcloud">
+        
+        <a href="https://gam0022.net/tags/1%e9%80%b1%e9%96%93%e3%81%a7%e9%96%93%e3%81%ab%e5%90%88%e3%82%8f%e3%81%9b%e3%82%8b" style="font-size: 12px;">1週間で間に合わせる(1)</a>
+        
+        <a href="https://gam0022.net/tags/apache" style="font-size: 12px;">apache(1)</a>
+        
+        <a href="https://gam0022.net/tags/ascii" style="font-size: 12px;">ascii(1)</a>
+        
+        <a href="https://gam0022.net/tags/bootstrap" style="font-size: 12px;">bootstrap(2)</a>
+        
+        <a href="https://gam0022.net/tags/c" style="font-size: 12px;">c#(1)</a>
+        
+        <a href="https://gam0022.net/tags/c&#43;&#43;" style="font-size: 12px;">c&#43;&#43;(1)</a>
+        
+        <a href="https://gam0022.net/tags/canvas" style="font-size: 12px;">canvas(1)</a>
+        
+        <a href="https://gam0022.net/tags/cg" style="font-size: 12px;">cg(45)</a>
+        
+        <a href="https://gam0022.net/tags/cgi" style="font-size: 12px;">cgi(2)</a>
+        
+        <a href="https://gam0022.net/tags/chrome" style="font-size: 12px;">chrome(1)</a>
+        
+        <a href="https://gam0022.net/tags/cocot" style="font-size: 12px;">cocot(1)</a>
+        
+        <a href="https://gam0022.net/tags/coffeescript" style="font-size: 12px;">coffeescript(1)</a>
+        
+        <a href="https://gam0022.net/tags/coins" style="font-size: 12px;">coins(3)</a>
+        
+        <a href="https://gam0022.net/tags/cojt" style="font-size: 12px;">cojt(4)</a>
+        
+        <a href="https://gam0022.net/tags/conoha" style="font-size: 12px;">conoha(2)</a>
+        
+        <a href="https://gam0022.net/tags/contest" style="font-size: 12px;">contest(1)</a>
+        
+        <a href="https://gam0022.net/tags/css" style="font-size: 12px;">css(1)</a>
+        
+        <a href="https://gam0022.net/tags/cuda" style="font-size: 12px;">cuda(6)</a>
+        
+        <a href="https://gam0022.net/tags/daigoroubot" style="font-size: 12px;">daigoroubot(1)</a>
+        
+        <a href="https://gam0022.net/tags/demo" style="font-size: 12px;">demo(1)</a>
+        
+        <a href="https://gam0022.net/tags/develop" style="font-size: 12px;">develop(1)</a>
+        
+        <a href="https://gam0022.net/tags/diary" style="font-size: 12px;">diary(5)</a>
+        
+        <a href="https://gam0022.net/tags/drawtokyo" style="font-size: 12px;">drawtokyo(1)</a>
+        
+        <a href="https://gam0022.net/tags/eclipse" style="font-size: 12px;">eclipse(3)</a>
+        
+        <a href="https://gam0022.net/tags/emscripten" style="font-size: 12px;">emscripten(1)</a>
+        
+        <a href="https://gam0022.net/tags/encoding" style="font-size: 12px;">encoding(1)</a>
+        
+        <a href="https://gam0022.net/tags/event" style="font-size: 12px;">event(29)</a>
+        
+        <a href="https://gam0022.net/tags/fp%e8%a9%a6%e9%a8%93" style="font-size: 12px;">fp試験(1)</a>
+        
+        <a href="https://gam0022.net/tags/function_draw" style="font-size: 12px;">function_draw(1)</a>
+        
+        <a href="https://gam0022.net/tags/gcc" style="font-size: 12px;">gcc(1)</a>
+        
+        <a href="https://gam0022.net/tags/gem" style="font-size: 12px;">gem(3)</a>
+        
+        <a href="https://gam0022.net/tags/git" style="font-size: 12px;">git(2)</a>
+        
+        <a href="https://gam0022.net/tags/github" style="font-size: 12px;">github(2)</a>
+        
+        <a href="https://gam0022.net/tags/glsl" style="font-size: 12px;">glsl(20)</a>
+        
+        <a href="https://gam0022.net/tags/glsl-snadbox" style="font-size: 12px;">glsl-snadbox(1)</a>
+        
+        <a href="https://gam0022.net/tags/gnuplot" style="font-size: 12px;">gnuplot(1)</a>
+        
+        <a href="https://gam0022.net/tags/gpu" style="font-size: 12px;">gpu(6)</a>
+        
+        <a href="https://gam0022.net/tags/heroku" style="font-size: 12px;">heroku(1)</a>
+        
+        <a href="https://gam0022.net/tags/hlsl" style="font-size: 12px;">hlsl(1)</a>
+        
+        <a href="https://gam0022.net/tags/homebrew" style="font-size: 12px;">homebrew(2)</a>
+        
+        <a href="https://gam0022.net/tags/houdini" style="font-size: 12px;">houdini(2)</a>
+        
+        <a href="https://gam0022.net/tags/hsp" style="font-size: 12px;">hsp(1)</a>
+        
+        <a href="https://gam0022.net/tags/html5" style="font-size: 12px;">html5(2)</a>
+        
+        <a href="https://gam0022.net/tags/http2" style="font-size: 12px;">http2(1)</a>
+        
+        <a href="https://gam0022.net/tags/https" style="font-size: 12px;">https(1)</a>
+        
+        <a href="https://gam0022.net/tags/hugo" style="font-size: 12px;">hugo(2)</a>
+        
+        <a href="https://gam0022.net/tags/isucon" style="font-size: 12px;">isucon(2)</a>
+        
+        <a href="https://gam0022.net/tags/iterm2" style="font-size: 12px;">iterm2(1)</a>
+        
+        <a href="https://gam0022.net/tags/java" style="font-size: 12px;">java(2)</a>
+        
+        <a href="https://gam0022.net/tags/javascript" style="font-size: 12px;">javascript(8)</a>
+        
+        <a href="https://gam0022.net/tags/keynote" style="font-size: 12px;">keynote(1)</a>
+        
+        <a href="https://gam0022.net/tags/kodelife" style="font-size: 12px;">kodelife(1)</a>
+        
+        <a href="https://gam0022.net/tags/korg-nanokontrol2" style="font-size: 12px;">korg-nanokontrol2(1)</a>
+        
+        <a href="https://gam0022.net/tags/kramdown" style="font-size: 12px;">kramdown(1)</a>
+        
+        <a href="https://gam0022.net/tags/latex" style="font-size: 12px;">latex(3)</a>
+        
+        <a href="https://gam0022.net/tags/lion" style="font-size: 12px;">lion(3)</a>
+        
+        <a href="https://gam0022.net/tags/livecoding" style="font-size: 12px;">livecoding(3)</a>
+        
+        <a href="https://gam0022.net/tags/llvm-gcc" style="font-size: 12px;">llvm-gcc(1)</a>
+        
+        <a href="https://gam0022.net/tags/mac-os-x" style="font-size: 12px;">mac-os-x(18)</a>
+        
+        <a href="https://gam0022.net/tags/markdown" style="font-size: 12px;">markdown(2)</a>
+        
+        <a href="https://gam0022.net/tags/mecab" style="font-size: 12px;">mecab(1)</a>
+        
+        <a href="https://gam0022.net/tags/mountain-lion" style="font-size: 12px;">mountain-lion(1)</a>
+        
+        <a href="https://gam0022.net/tags/moutain-lion" style="font-size: 12px;">moutain-lion(1)</a>
+        
+        <a href="https://gam0022.net/tags/neort" style="font-size: 12px;">neort(1)</a>
+        
+        <a href="https://gam0022.net/tags/nginx" style="font-size: 12px;">nginx(1)</a>
+        
+        <a href="https://gam0022.net/tags/normalize.fm" style="font-size: 12px;">normalize.fm(1)</a>
+        
+        <a href="https://gam0022.net/tags/normalizefm" style="font-size: 12px;">normalizefm(1)</a>
+        
+        <a href="https://gam0022.net/tags/ocaml" style="font-size: 12px;">ocaml(1)</a>
+        
+        <a href="https://gam0022.net/tags/octave" style="font-size: 12px;">octave(1)</a>
+        
+        <a href="https://gam0022.net/tags/octopress" style="font-size: 12px;">octopress(13)</a>
+        
+        <a href="https://gam0022.net/tags/opencv" style="font-size: 12px;">opencv(1)</a>
+        
+        <a href="https://gam0022.net/tags/optix" style="font-size: 12px;">optix(7)</a>
+        
+        <a href="https://gam0022.net/tags/passenger" style="font-size: 12px;">passenger(1)</a>
+        
+        <a href="https://gam0022.net/tags/procedural" style="font-size: 12px;">procedural(1)</a>
+        
+        <a href="https://gam0022.net/tags/programming" style="font-size: 12px;">programming(1)</a>
+        
+        <a href="https://gam0022.net/tags/rails" style="font-size: 12px;">rails(2)</a>
+        
+        <a href="https://gam0022.net/tags/rails4" style="font-size: 12px;">rails4(1)</a>
+        
+        <a href="https://gam0022.net/tags/raymarching" style="font-size: 12px;">raymarching(4)</a>
+        
+        <a href="https://gam0022.net/tags/realtime-graphics" style="font-size: 12px;">realtime-graphics(2)</a>
+        
+        <a href="https://gam0022.net/tags/revision" style="font-size: 12px;">revision(2)</a>
+        
+        <a href="https://gam0022.net/tags/rsync" style="font-size: 12px;">rsync(2)</a>
+        
+        <a href="https://gam0022.net/tags/ruby" style="font-size: 12px;">ruby(17)</a>
+        
+        <a href="https://gam0022.net/tags/ruby-c-extension" style="font-size: 12px;">ruby-c-extension(3)</a>
+        
+        <a href="https://gam0022.net/tags/ruby-on-rails" style="font-size: 12px;">ruby-on-rails(1)</a>
+        
+        <a href="https://gam0022.net/tags/rubygems" style="font-size: 12px;">rubygems(1)</a>
+        
+        <a href="https://gam0022.net/tags/rust" style="font-size: 12px;">rust(3)</a>
+        
+        <a href="https://gam0022.net/tags/rvm" style="font-size: 12px;">rvm(1)</a>
+        
+        <a href="https://gam0022.net/tags/sass/scss" style="font-size: 12px;">sass/scss(1)</a>
+        
+        <a href="https://gam0022.net/tags/serversmanvps" style="font-size: 12px;">serversmanvps(3)</a>
+        
+        <a href="https://gam0022.net/tags/sessions" style="font-size: 12px;">sessions(7)</a>
+        
+        <a href="https://gam0022.net/tags/sh4derjockey" style="font-size: 12px;">sh4derjockey(1)</a>
+        
+        <a href="https://gam0022.net/tags/shader" style="font-size: 12px;">shader(11)</a>
+        
+        <a href="https://gam0022.net/tags/shader-jam" style="font-size: 12px;">shader-jam(1)</a>
+        
+        <a href="https://gam0022.net/tags/shader-showdown" style="font-size: 12px;">shader-showdown(1)</a>
+        
+        <a href="https://gam0022.net/tags/shadergraph" style="font-size: 12px;">shadergraph(1)</a>
+        
+        <a href="https://gam0022.net/tags/shadertoy" style="font-size: 12px;">shadertoy(1)</a>
+        
+        <a href="https://gam0022.net/tags/slide" style="font-size: 12px;">slide(4)</a>
+        
+        <a href="https://gam0022.net/tags/sound2light" style="font-size: 12px;">sound2light(1)</a>
+        
+        <a href="https://gam0022.net/tags/sqlite3" style="font-size: 12px;">sqlite3(1)</a>
+        
+        <a href="https://gam0022.net/tags/ssh" style="font-size: 12px;">ssh(1)</a>
+        
+        <a href="https://gam0022.net/tags/study" style="font-size: 12px;">study(3)</a>
+        
+        <a href="https://gam0022.net/tags/techbooster" style="font-size: 12px;">techbooster(1)</a>
+        
+        <a href="https://gam0022.net/tags/terminal.app" style="font-size: 12px;">terminal.app(1)</a>
+        
+        <a href="https://gam0022.net/tags/textmeshpro" style="font-size: 12px;">textmeshpro(1)</a>
+        
+        <a href="https://gam0022.net/tags/theme" style="font-size: 12px;">theme(1)</a>
+        
+        <a href="https://gam0022.net/tags/three.js" style="font-size: 12px;">three.js(2)</a>
+        
+        <a href="https://gam0022.net/tags/tips" style="font-size: 12px;">tips(1)</a>
+        
+        <a href="https://gam0022.net/tags/tokyodemofest" style="font-size: 12px;">tokyodemofest(17)</a>
+        
+        <a href="https://gam0022.net/tags/trouble" style="font-size: 12px;">trouble(1)</a>
+        
+        <a href="https://gam0022.net/tags/twincal" style="font-size: 12px;">twincal(1)</a>
+        
+        <a href="https://gam0022.net/tags/twitter" style="font-size: 12px;">twitter(1)</a>
+        
+        <a href="https://gam0022.net/tags/typescript" style="font-size: 12px;">typescript(2)</a>
+        
+        <a href="https://gam0022.net/tags/ubuntu" style="font-size: 12px;">ubuntu(2)</a>
+        
+        <a href="https://gam0022.net/tags/ue5" style="font-size: 12px;">ue5(2)</a>
+        
+        <a href="https://gam0022.net/tags/unity" style="font-size: 12px;">unity(14)</a>
+        
+        <a href="https://gam0022.net/tags/unrealengine" style="font-size: 12px;">unrealengine(2)</a>
+        
+        <a href="https://gam0022.net/tags/unrealengine5" style="font-size: 12px;">unrealengine5(2)</a>
+        
+        <a href="https://gam0022.net/tags/urp" style="font-size: 12px;">urp(3)</a>
+        
+        <a href="https://gam0022.net/tags/utf-8-mac" style="font-size: 12px;">utf-8-mac(1)</a>
+        
+        <a href="https://gam0022.net/tags/uva-online-judge" style="font-size: 12px;">uva-online-judge(3)</a>
+        
+        <a href="https://gam0022.net/tags/vim" style="font-size: 12px;">vim(1)</a>
+        
+        <a href="https://gam0022.net/tags/vj" style="font-size: 12px;">vj(1)</a>
+        
+        <a href="https://gam0022.net/tags/vps" style="font-size: 12px;">vps(2)</a>
+        
+        <a href="https://gam0022.net/tags/vscode" style="font-size: 12px;">vscode(1)</a>
+        
+        <a href="https://gam0022.net/tags/web" style="font-size: 12px;">web(2)</a>
+        
+        <a href="https://gam0022.net/tags/webgl" style="font-size: 12px;">webgl(10)</a>
+        
+        <a href="https://gam0022.net/tags/webrick" style="font-size: 12px;">webrick(1)</a>
+        
+        <a href="https://gam0022.net/tags/windows" style="font-size: 12px;">windows(1)</a>
+        
+        <a href="https://gam0022.net/tags/windows-terminal" style="font-size: 12px;">windows-terminal(1)</a>
+        
+        <a href="https://gam0022.net/tags/x11" style="font-size: 12px;">x11(1)</a>
+        
+        <a href="https://gam0022.net/tags/x86" style="font-size: 12px;">x86(1)</a>
+        
+        <a href="https://gam0022.net/tags/xcode" style="font-size: 12px;">xcode(2)</a>
+        
+        <a href="https://gam0022.net/tags/zsh" style="font-size: 12px;">zsh(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%86%e3%82%8b%e3%82%86%e3%82%8b%e3%82%b7%e3%82%a7%e3%83%bc%e3%83%80%e3%83%bc%e4%ba%a4%e6%b5%81%e4%bc%9a" style="font-size: 12px;">ゆるゆるシェーダー交流会(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%a2%e3%82%bb%e3%83%b3%e3%83%96%e3%83%a9" style="font-size: 12px;">アセンブラ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%a2%e3%83%95%e3%82%a3%e3%83%aa%e3%82%a8%e3%82%a4%e3%83%88" style="font-size: 12px;">アフィリエイト(3)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%b3%e3%83%9f%e3%82%b1" style="font-size: 12px;">コミケ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%b4" style="font-size: 12px;">ゴ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%82%b7%e3%82%a7%e3%83%bc%e3%83%80%e3%83%bc" style="font-size: 12px;">シェーダー(4)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%89%e3%83%a1%e3%82%a4%e3%83%b3" style="font-size: 12px;">ドメイン(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%8d%e3%82%bf" style="font-size: 12px;">ネタ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%91%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%b3%e3%82%b0" style="font-size: 12px;">パストレーシング(11)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%96%e3%83%ad%e3%82%b0%e9%81%8b%e5%96%b6" style="font-size: 12px;">ブログ運営(4)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%9a%e3%83%bc%e3%83%91%e3%83%bc%e3%82%af%e3%83%a9%e3%83%95%e3%83%88" style="font-size: 12px;">ペーパークラフト(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%9c%e3%83%bc%e3%83%b3%e3%83%87%e3%82%b8%e3%82%bf%e3%83%ab" style="font-size: 12px;">ボーンデジタル(2)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%a9%e3%82%a4%e3%83%96%e3%82%b3%e3%83%bc%e3%83%87%e3%82%a3%e3%83%b3%e3%82%b0" style="font-size: 12px;">ライブコーディング(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%aa%e3%83%a2%e3%83%bc%e3%83%88%e3%83%af%e3%83%bc%e3%82%af" style="font-size: 12px;">リモートワーク(3)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%b3%e3%82%b0" style="font-size: 12px;">レイトレーシング(10)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%88%e3%83%ac%e5%90%88%e5%ae%bf" style="font-size: 12px;">レイトレ合宿(10)</a>
+        
+        <a href="https://gam0022.net/tags/%e3%83%ac%e3%82%a4%e3%83%9e%e3%83%bc%e3%83%81%e3%83%b3%e3%82%b0" style="font-size: 12px;">レイマーチング(32)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%85%a5%e9%96%80" style="font-size: 12px;">入門(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%87%ba%e7%89%88" style="font-size: 12px;">出版(2)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%88%9d%e5%bf%83%e8%80%85" style="font-size: 12px;">初心者(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%8b%89%e5%bc%b7%e4%bc%9a" style="font-size: 12px;">勉強会(7)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%8b%89%e5%bc%b7%e6%b3%95" style="font-size: 12px;">勉強法(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%8c%97%e6%9d%a1%e3%81%9d%e3%81%b5%e3%81%83" style="font-size: 12px;">北条そふぃ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%95%86%e5%93%81%e3%83%ac%e3%83%93%e3%83%a5%e3%83%bc" style="font-size: 12px;">商品レビュー(2)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%a4%a7%e4%ba%94%e9%83%8ebot" style="font-size: 12px;">大五郎bot(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%ae%a3%e4%bc%9d" style="font-size: 12px;">宣伝(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e5%b0%8f%e3%83%8d%e3%82%bf" style="font-size: 12px;">小ネタ(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%8a%80%e8%a1%93%e6%9b%b8%e5%85%b8" style="font-size: 12px;">技術書典(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%97%a5%e6%9c%ac%e8%aa%9e" style="font-size: 12px;">日本語(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%97%a5%e8%a8%98" style="font-size: 12px;">日記(2)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%9b%b8%e7%b1%8d" style="font-size: 12px;">書籍(2)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%9c%ac" style="font-size: 12px;">本(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%a4%9c%e8%a8%bc" style="font-size: 12px;">検証(2)</a>
+        
+        <a href="https://gam0022.net/tags/%e6%a9%9f%e6%a2%b0%e8%aa%9e%e5%ba%8f%e8%ab%96" style="font-size: 12px;">機械語序論(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e7%94%9f%e6%b4%bb" style="font-size: 12px;">生活(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e7%99%ba%e8%a1%a8%e8%b3%87%e6%96%99" style="font-size: 12px;">発表資料(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e7%99%bb%e5%a3%87" style="font-size: 12px;">登壇(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e7%9b%b4%e5%89%8d%e5%af%be%e7%ad%96" style="font-size: 12px;">直前対策(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e7%a0%94%e7%a9%b6" style="font-size: 12px;">研究(1)</a>
+        
+        <a href="https://gam0022.net/tags/%e7%ab%b6%e6%8a%80%e3%83%97%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%9f%e3%83%b3%e3%82%b0" style="font-size: 12px;">競技プログラミング(4)</a>
+        
+        <a href="https://gam0022.net/tags/%e8%b2%b7%e3%81%a3%e3%81%a6%e8%89%af%e3%81%8b%e3%81%a3%e3%81%9f%e3%82%82%e3%81%ae" style="font-size: 12px;">買って良かったもの(3)</a>
+        
+    </div>
+</ul>
+
+</div>
+
+
+
+
+
+
+<div class="row">
+    <div class="col section-heading">
+        <h1>Recent Posts</h1>
+        <p>最新記事</p>
+        <div class="col-md-12">
+  <div class="row">
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2025/04/16/draw2/" itemprop="url">draw(tokyo); #2でVJデビュー！（GLSLライブコーディング）</a></h3>
+      
+      <a href="https://gam0022.net/blog/2025/04/16/draw2/">
+        <img src="https://gam0022.net///images/posts/2025-04-12-draw2/youtube.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2024/12/11/sessions2024-summary/" itemprop="url">SESSIONS 2024参加記録（セミナー登壇・ShaderJam解説・Realtime Graphics）</a></h3>
+      
+      <a href="https://gam0022.net/blog/2024/12/11/sessions2024-summary/">
+        <img src="https://gam0022.net///images/posts/2024-12-03-sessions2024-summary/seminar-photo.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2024/12/02/sessions2024-guardian/" itemprop="url">SESSIONS 2024のRealtime Graphicsコンペティションで3位入賞しました（グラフィックス解説）</a></h3>
+      
+      <a href="https://gam0022.net/blog/2024/12/02/sessions2024-guardian/">
+        <img src="https://gam0022.net///images/posts/2024-12-02-sessions2024-guardian/IMG_4279.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2024/10/23/rtcamp10/" itemprop="url">レイトレ合宿10でポータルをテーマにしたアニメーションを作成しました</a></h3>
+      
+      <a href="https://gam0022.net/blog/2024/10/23/rtcamp10/">
+        <img src="https://gam0022.net///images/posts/2024-10-20-rtcamp10/200.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2024/10/21/airport-anifes2024-nc30s/" itemprop="url">新千歳空港国際アニメーション映画祭のNEW CHITOSE 30 Seconds部門に『Transcendental Cube』が入選しました</a></h3>
+      
+      <a href="https://gam0022.net/blog/2024/10/21/airport-anifes2024-nc30s/">
+        <img src="https://gam0022.net///images/posts/2024-10-20-airport-anifes2024-nc30s/twitter_1920x1080.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2024/10/21/livecoding-sn13/" itemprop="url">『WebGL 総本山 &#43; normalize.fm あわせて１３周年感謝祭』でGLSLライブコーディングしました</a></h3>
+      
+      <a href="https://gam0022.net/blog/2024/10/21/livecoding-sn13/">
+        <img src="https://gam0022.net///images/posts/2024-10-20-livecoding-sn13/livecoding.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2024/08/15/ltc-shader/" itemprop="url">LTC（Linearly Transformed Cosines）によるエリアライトのUnity URP実装の解説のスライド共有</a></h3>
+      
+      <a href="https://gam0022.net/blog/2024/08/15/ltc-shader/">
+        <img src="https://gam0022.net///images/posts/2024-08-15-ltc-shader/slide-top.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2024/05/29/gakumasu-mayuge-shader/" itemprop="url">学園アイドルマスターの眉毛のShaderをUnityで再現してみた</a></h3>
+      
+      <a href="https://gam0022.net/blog/2024/05/29/gakumasu-mayuge-shader/">
+        <img src="https://gam0022.net///images/posts/2024-05-29-gakumasu-mayuge-shader/mayu.png" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+    <div class="col-6 col-sm-4" itemscope itemprop="blogPost">
+      <h3 class="article-title" itemprop="name" style="font-size: 16px; height: 80px;"><a href="https://gam0022.net/blog/2024/01/01/ue5-pcg-introduction-tips/" itemprop="url">[UE5] プロシージャルコンテンツ生成（PCG）最初に知っておきたいポイントと実践TIPS</a></h3>
+      
+      <a href="https://gam0022.net/blog/2024/01/01/ue5-pcg-introduction-tips/">
+        <img src="https://gam0022.net///images/posts/2023-12-27-ue5-pcg-introduction-tips/ogp.jpg" class="article-banner" itemprop="image">
+      </a>
+      
+    </div>
+    
+  </div>
+
+  <div class="read-more">
+    <a href="/post" class="btn btn-primary btn-outline">Read more</a>
+  </div>
+</div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col section-heading">
+        <h1>Books</h1>
+        <p>ブログ執筆者の著書</p>
+        <div class="booklink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;"><div class="booklink-image" style="float:left;margin:0 15px 10px 0;"><a href="https://hb.afl.rakuten.co.jp/hgc/117c8a81.32450c02.117c8a82.14f884ba/yomereba_main_202412192309199444?pc=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F17588439%2F%3Frafcid%3Dwsc_b_bs_1051722217600006323%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F" target="_blank" ><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/5689/9784862465689_1_3.jpg?_ex=200x200" style="border: none;" /></a></div><div class="booklink-info" style="line-height:120%;zoom: 1;overflow: hidden;"><div class="booklink-name" style="margin-bottom:10px;line-height:120%"><a href="https://hb.afl.rakuten.co.jp/hgc/117c8a81.32450c02.117c8a82.14f884ba/yomereba_main_202412192309199444?pc=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F17588439%2F%3Frafcid%3Dwsc_b_bs_1051722217600006323%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F" target="_blank" >Unityバイブル R5夏号</a><div class="booklink-powered-date" style="font-size:8pt;margin-top:5px;font-family:verdana;line-height:120%">posted with <a href="https://yomereba.com" rel="nofollow" target="_blank">ヨメレバ</a></div></div><div class="booklink-detail" style="margin-bottom:5px;">kakunpc/室星 亮太/細田 翔/山本 剛史/小林 慶祐/長谷川 孝二 ボーンデジタル 2023年08月29日頃    </div><div class="booklink-link2" style="margin-top:10px;"><div class="shoplinkrakuten" style="margin-right:5px;background: url('//img.yomereba.com/kz_y.gif') 0 -50px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;"><a href="https://hb.afl.rakuten.co.jp/hgc/117c8a81.32450c02.117c8a82.14f884ba/yomereba_main_202412192309199444?pc=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F17588439%2F%3Frafcid%3Dwsc_b_bs_1051722217600006323%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F" target="_blank" >楽天ブックスで購入</a></div><div class="shoplinkamazon" style="margin-right:5px;background: url('//img.yomereba.com/kz_y.gif') 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;"><a href="https://www.amazon.co.jp/exec/obidos/asin/4862465684/gam00220c-22/" target="_blank" >Amazonで購入</a></div><div class="shoplinkkindle" style="margin-right:5px;background: url('//img.yomereba.com/kz_y.gif') 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;"><a href="https://www.amazon.co.jp/gp/search?keywords=Unity%E3%83%90%E3%82%A4%E3%83%96%E3%83%AB%20R5%E5%A4%8F%E5%8F%B7&__mk_ja_JP=%83J%83%5E%83J%83i&url=node%3D2275256051&tag=gam00220c-22" target="_blank" >Kindleで購入</a></div>            	  <div class="shoplinkseven" style="margin-right:5px;background: url('//img.yomereba.com/kz_y.gif') 0 -100px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;"><a href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3737095&pid=891162441&vc_url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3FsearchKeywordFlg%3D1%26keyword%3D9784862465689&vcptn=kaereba" target="_blank" >7netで購入<img src="//ad.jp.ap.valuecommerce.com/servlet/atq/gifbanner?sid=3737095&pid=891162441" height="1" width="1" border="0"></a></div>            	  <div class="shoplinkkino" style="margin-right:5px;background: url('//img.yomereba.com/kz_y.gif') 0 -350px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;"><a href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3737095&pid=891162443&vc_url=http%3A%2F%2Fwww.kinokuniya.co.jp%2Ff%2Fdsg-01-9784862465689&vcptn=kaereba" target="_blank" >紀伊國屋書店で購入<img src="//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3737095&pid=891162443" height="1" width="1" border="0"></a></div>	  	  	  <div class="shoplinktoshokan" style="margin-right:5px;background: url('//img.yomereba.com/kz_y.gif') 0 -300px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;"><a href="http://calil.jp/book/4862465684" target="_blank" >図書館で探す</a></div>	</div></div><div class="booklink-footer" style="clear: left"></div></div>
+        <div class="booklink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;"><div class="booklink-image" style="float:left;margin:0 15px 10px 0;"><a href="https://hb.afl.rakuten.co.jp/hgc/117c8a81.32450c02.117c8a82.14f884ba/yomereba_main_202412192310480768?pc=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F16742438%2F%3Frafcid%3Dwsc_b_bs_1051722217600006323%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F" target="_blank" ><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/5078/9784862465078.jpg?_ex=200x200" style="border: none;" /></a></div><div class="booklink-info" style="line-height:120%;zoom: 1;overflow: hidden;"><div class="booklink-name" style="margin-bottom:10px;line-height:120%"><a href="https://hb.afl.rakuten.co.jp/hgc/117c8a81.32450c02.117c8a82.14f884ba/yomereba_main_202412192310480768?pc=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F16742438%2F%3Frafcid%3Dwsc_b_bs_1051722217600006323%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F" target="_blank" >Unity ゲーム プログラミング・バイブル 2nd Generation</a><div class="booklink-powered-date" style="font-size:8pt;margin-top:5px;font-family:verdana;line-height:120%">posted with <a href="https://yomereba.com" rel="nofollow" target="_blank">ヨメレバ</a></div></div><div class="booklink-detail" style="margin-bottom:5px;">森 哲哉/布留川 英一/西森 丈俊/車谷 勇人/一條 貴彰/打田 恭平 ボーンデジタル 2021年06月29日頃    </div><div class="booklink-link2" style="margin-top:10px;"><div class="shoplinkrakuten" style="margin-right:5px;background: url('//img.yomereba.com/kz_y.gif') 0 -50px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;"><a href="https://hb.afl.rakuten.co.jp/hgc/117c8a81.32450c02.117c8a82.14f884ba/yomereba_main_202412192310480768?pc=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F16742438%2F%3Frafcid%3Dwsc_b_bs_1051722217600006323%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F" target="_blank" >楽天ブックスで購入</a></div><div class="shoplinkamazon" style="margin-right:5px;background: url('//img.yomereba.com/kz_y.gif') 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;"><a href="https://www.amazon.co.jp/exec/obidos/asin/4862465072/gam00220c-22/" target="_blank" >Amazonで購入</a></div><div class="shoplinkkindle" style="margin-right:5px;background: url('//img.yomereba.com/kz_y.gif') 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;"><a href="https://www.amazon.co.jp/gp/search?keywords=Unity%20%E3%82%B2%E3%83%BC%E3%83%A0%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%BB%E3%83%90%E3%82%A4%E3%83%96%E3%83%AB%202nd%20Generation&__mk_ja_JP=%83J%83%5E%83J%83i&url=node%3D2275256051&tag=gam00220c-22" target="_blank" >Kindleで購入</a></div>            	  <div class="shoplinkseven" style="margin-right:5px;background: url('//img.yomereba.com/kz_y.gif') 0 -100px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;"><a href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3737095&pid=891162441&vc_url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3FsearchKeywordFlg%3D1%26keyword%3D9784862465078&vcptn=kaereba" target="_blank" >7netで購入<img src="//ad.jp.ap.valuecommerce.com/servlet/atq/gifbanner?sid=3737095&pid=891162441" height="1" width="1" border="0"></a></div>            	  <div class="shoplinkkino" style="margin-right:5px;background: url('//img.yomereba.com/kz_y.gif') 0 -350px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;"><a href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3737095&pid=891162443&vc_url=http%3A%2F%2Fwww.kinokuniya.co.jp%2Ff%2Fdsg-01-9784862465078&vcptn=kaereba" target="_blank" >紀伊國屋書店で購入<img src="//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3737095&pid=891162443" height="1" width="1" border="0"></a></div>	  	  	  <div class="shoplinktoshokan" style="margin-right:5px;background: url('//img.yomereba.com/kz_y.gif') 0 -300px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;"><a href="http://calil.jp/book/4862465072" target="_blank" >図書館で探す</a></div>	</div></div><div class="booklink-footer" style="clear: left"></div></div>
+    </div>
+</div>
+
+
+            <footer class="site-footer">
+    <div class="container">
+        <p class="powered-by">
+
+            &copy; 2021 gam0022 &middot; 
+
+            Powered by the <a href="https://github.com/gam0022/hugo-academic" target="_blank">Customized Academic theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+            <span class="pull-right"><a href="#" id="back_to_top"><span class="button_icon"><i class="fa fa-chevron-up fa-2x" aria-hidden="true"></i></span></a></span>
+
+        </p>
+    </div>
+</footer>
+
+                    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+        <script src="https://gam0022.net/js/jquery-1.12.3.min.js"></script>
+        <script src="https://gam0022.net/js/bootstrap.custom.js"></script>
+        <script src="https://gam0022.net/js/hugo-academic.js?2023-09-20"></script>
+        
+
+        <script>
+            
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-84469205-1', 'auto');
+            ga('send', 'pageview');
+
+             
+            var links = document.querySelectorAll('a');
+            Array.prototype.map.call(links, function(item) {
+                if (item.host != document.location.host) {
+                    item.addEventListener('click', function() {
+                        var action = item.getAttribute('data-action') || 'follow';
+                        ga('send', 'event', 'outbound', action, item.href);
+                    });
+                }
+            });
+            
+
+            $(document).ready(function() {
+                $("#TableOfContents").addClass("bs-docs-sidebar affix");
+                $("#TableOfContents ul").addClass("nav nav-stacked");
+            });
+        </script>
+
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        
+        
+
+    </body>
+</html>
+
+        </div>
+        <div class="col-md-3">
+            <nav id="TableOfContents">
+<ul>
+<li><a href="#パフォーマンスの動画">パフォーマンスの動画</a></li>
+<li><a href="#目指したもの">目指したもの</a></li>
+<li><a href="#sh4derjockeyのプロジェクト">Sh4derJockeyのプロジェクト</a>
+<ul>
+<li><a href="#sh4derjockeyでのフォントの描画">Sh4derJockeyでのフォントの描画</a></li>
+</ul></li>
+<li><a href="#vjの技術構成">VJの技術構成</a>
+<ul>
+<li><a href="#sound2lightからsh4derjockeyへのbpmの自動同期システム">Sound2LightからSh4derJockeyへのBPMの自動同期システム</a></li>
+<li><a href="#オーディオインターフェイスの導入">オーディオインターフェイスの導入</a></li>
+<li><a href="#midiコントローラーのボタン設定">MIDIコントローラーのボタン設定</a></li>
+</ul></li>
+<li><a href="#当日のトラブル発生">当日のトラブル発生！</a></li>
+<li><a href="#まとめ">まとめ</a></li>
+<li><a href="#他の演者の記事紹介">他の演者の記事紹介</a></li>
+<li><a href="#写真">写真</a></li>
+</ul>
+</nav>
+        </div>
+    </div>
+    
+</div>
