@@ -65,6 +65,38 @@
 
 &lt;p&gt;初のVJだったので、なるべく失敗のリスクを軽減したいのと、曲に合わせて絵を変化させるために自分の余裕を持たせたいという意図があり、結果的に正解だったと思います。&lt;/p&gt;
 
+&lt;h1 id=&#34;vjのシステム図&#34;&gt;VJのシステム図&lt;/h1&gt;
+
+&lt;p&gt;VJで使用したソフトウェアやハードウェアを次の図にまとめました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/draw2_system.png&#34; alt=&#34;構成図&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;主要なソフトウェアは2つです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/slerpyyy/sh4der-jockey&#34;&gt;Sh4derJockey&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;GLSLでライブコーディングを行うためのソフトウェア&lt;/li&gt;
+&lt;li&gt;マルチパスやテクスチャが使える&lt;/li&gt;
+&lt;li&gt;MIDIコントローラーなども使える&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ETCLabs/Sound2Light&#34;&gt;Sound2Light&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;音を解析してBPMなどを取得できるソフトウェア&lt;/li&gt;
+&lt;li&gt;Renardさんに教えてもらった&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;図には記載していませんが、GLSLのエディターとしてVSCodeを使用しました。&lt;/p&gt;
+
+&lt;p&gt;また、Sh4derJockeyの画面にVSCodeのコードを合成するため、OBSのクロマキー合成を活用しました。&lt;/p&gt;
+
+&lt;p&gt;さらに、VJ画面をHDMI出力する際にもOBSの全画面プロジェクター機能を利用しました。&lt;/p&gt;
+
+&lt;p&gt;VJの使用ソフトウェアは「パソコン音楽クラブ x Renard」とほぼ同じだと思います。&lt;/p&gt;
+
 &lt;h1 id=&#34;sh4derjockeyのプロジェクト&#34;&gt;Sh4derJockeyのプロジェクト&lt;/h1&gt;
 
 &lt;p&gt;Sh4derJockeyのプロジェクトはGitHubに公開しました。&lt;/p&gt;
@@ -142,37 +174,7 @@ msdf-atlas-gen.exe -format png -uniformcellconstraint square4 -imageout &amp;quo
 
 &lt;p&gt;また、msdf-atlas-genが生成するテクスチャは左上がインデックス0に対応しますが、参考にしたコードは左下に対応していたため、上下を反転する改造を行いました。&lt;/p&gt;
 
-&lt;h1 id=&#34;vjの技術構成&#34;&gt;VJの技術構成&lt;/h1&gt;
-
-&lt;p&gt;VJで使用したソフトウェアやハードウェアを以下の図にまとめました。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gam0022.net/images/posts/2025-04-12-draw2/draw2_system.png&#34; alt=&#34;構成図&#34; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/slerpyyy/sh4der-jockey&#34;&gt;Sh4derJockey&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;GLSLでライブコーディングを行うためのソフトウェア&lt;/li&gt;
-&lt;li&gt;マルチパスやテクスチャが使える&lt;/li&gt;
-&lt;li&gt;MIDIコントローラーなども使える&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ETCLabs/Sound2Light&#34;&gt;Sound2Light&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;音を解析してBPMなどを取得できるソフトウェア&lt;/li&gt;
-&lt;li&gt;Renardさんに教えてもらった&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;図には記載していませんが、GLSLのエディターとしてVSCodeを使用しました。&lt;/p&gt;
-
-&lt;p&gt;また、Sh4derJockeyの画面にVSCodeのコードを合成するため、OBSのクロマキー合成を活用しました。&lt;/p&gt;
-
-&lt;p&gt;さらに、VJ画面をHDMI出力する際にもOBSの全画面プロジェクター機能を利用しました。&lt;/p&gt;
-
-&lt;p&gt;VJの使用ソフトウェアは「パソコン音楽クラブ x Renard」とほぼ同じだと思います。&lt;/p&gt;
-
-&lt;h2 id=&#34;sound2lightからsh4derjockeyへのbpmの自動同期システム&#34;&gt;Sound2LightからSh4derJockeyへのBPMの自動同期システム&lt;/h2&gt;
+&lt;h1 id=&#34;sound2lightからsh4derjockeyへのbpmの自動同期システム&#34;&gt;Sound2LightからSh4derJockeyへのBPMの自動同期システム&lt;/h1&gt;
 
 &lt;p&gt;Sound2LightはOSC（Open Sound Control）プロトコルでBPM情報を他のソフトウェアに送信できます。しかし、Sh4derJockeyは外部からの情報をMIDIでしか受け取れません。&lt;/p&gt;
 
@@ -188,7 +190,7 @@ msdf-atlas-gen.exe -format png -uniformcellconstraint square4 -imageout &amp;quo
 &lt;li&gt;&lt;a href=&#34;https://github.com/gam0022/osc-to-midi.js&#34;&gt;github.com/gam0022/osc-to-midi.js&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;オーディオインターフェイスの導入&#34;&gt;オーディオインターフェイスの導入&lt;/h2&gt;
+&lt;h1 id=&#34;オーディオインターフェイスの導入&#34;&gt;オーディオインターフェイスの導入&lt;/h1&gt;
 
 &lt;p&gt;DJの音源を取得する方法がわからなかったため、&lt;a href=&#34;https://x.com/0b5vr&#34;&gt;0b5vr&lt;/a&gt;さんに相談し、&lt;a href=&#34;https://amzn.to/42Adfgg&#34;&gt;Behringer U-PHONO UFO202&lt;/a&gt;というオーディオインターフェイスを購入しました。&lt;/p&gt;
 
@@ -196,7 +198,7 @@ msdf-atlas-gen.exe -format png -uniformcellconstraint square4 -imageout &amp;quo
 
 &lt;div class=&#34;kaerebalink-box&#34; style=&#34;text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;&#34;&gt;&lt;div class=&#34;kaerebalink-image&#34; style=&#34;float:left;margin:0 15px 10px 0;&#34;&gt;&lt;a href=&#34;https://hb.afl.rakuten.co.jp/hgc/g0000014.uo1a9aa4.g0000014.uo1aa66b/kaereba_main_202504150316354973?pc=https%3A%2F%2Fproduct.rakuten.co.jp%2Fproduct%2F-%2Ffbc1d98f472e340fe1f0af43fd2c33b4%2F&amp;m=http%3A%2F%2Fm.product.rakuten.co.jp%2Fproduct%2Ffbc1d98f472e340fe1f0af43fd2c33b4%2F&amp;rafcid=wsc_i_ps_1087413314923222742&#34; target=&#34;_blank&#34; &gt;&lt;img src=&#34;https://thumbnail.image.rakuten.co.jp/ran/img/3001/0004/033/653/030/601/30010004033653030601_1.jpg?_ex=320x320&#34; style=&#34;border: none;&#34; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;kaerebalink-info&#34; style=&#34;line-height:120%;zoom: 1;overflow: hidden;&#34;&gt;&lt;div class=&#34;kaerebalink-name&#34; style=&#34;margin-bottom:10px;line-height:120%&#34;&gt;&lt;a href=&#34;https://hb.afl.rakuten.co.jp/hgc/g0000014.uo1a9aa4.g0000014.uo1aa66b/kaereba_main_202504150316354973?pc=https%3A%2F%2Fproduct.rakuten.co.jp%2Fproduct%2F-%2Ffbc1d98f472e340fe1f0af43fd2c33b4%2F&amp;m=http%3A%2F%2Fm.product.rakuten.co.jp%2Fproduct%2Ffbc1d98f472e340fe1f0af43fd2c33b4%2F&amp;rafcid=wsc_i_ps_1087413314923222742&#34; target=&#34;_blank&#34; &gt;BEHRINGER 2入力2出力USBオーディオインターフェース UFO202&lt;/a&gt;&lt;div class=&#34;kaerebalink-powered-date&#34; style=&#34;font-size:8pt;margin-top:5px;font-family:verdana;line-height:120%&#34;&gt;posted with &lt;a href=&#34;https://kaereba.com&#34; rel=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;カエレバ&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;kaerebalink-detail&#34; style=&#34;margin-bottom:5px;&#34;&gt;&lt;/div&gt;&lt;div class=&#34;kaerebalink-link1&#34; style=&#34;margin-top:10px;&#34;&gt;&lt;div class=&#34;shoplinkrakuten&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_k_01.gif&#39;) 0 -50px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;https://hb.afl.rakuten.co.jp/hgc/g0000014.uo1a9aa4.g0000014.uo1aa66b/kaereba_main_202504150316354973?pc=https%3A%2F%2Fproduct.rakuten.co.jp%2Fproduct%2F-%2Ffbc1d98f472e340fe1f0af43fd2c33b4%2F&amp;m=http%3A%2F%2Fm.product.rakuten.co.jp%2Fproduct%2Ffbc1d98f472e340fe1f0af43fd2c33b4%2F&amp;rafcid=wsc_i_ps_1087413314923222742&#34; target=&#34;_blank&#34; &gt;楽天市場で購入&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;shoplinkamazon&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_k_01.gif&#39;) 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;https://www.amazon.co.jp/gp/search?keywords=Behringer%20U-PHONO%20UFO202&amp;__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&amp;tag=gam00220c-22&#34; target=&#34;_blank&#34; &gt;Amazonで購入&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;shoplinkyahoo&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_k_01.gif&#39;) 0 -150px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3737095&amp;pid=891162462&amp;vc_url=http%3A%2F%2Fsearch.shopping.yahoo.co.jp%2Fsearch%3Fp%3DBehringer%2520U-PHONO%2520UFO202&amp;vcptn=kaereba&#34; target=&#34;_blank&#34; &gt;Yahooショッピングで購入&lt;img src=&#34;//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3737095&amp;pid=891162462&#34; height=&#34;1&#34; width=&#34;1&#34; border=&#34;0&#34;&gt;&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;shoplinkseven&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_k_01.gif&#39;) 0 -100px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3737095&amp;pid=891162462&amp;vc_url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3Fkeyword%3DBehringer%2520U-PHONO%2520UFO202%26searchKeywordFlg%3D1&amp;vcptn=kaereba&#34; target=&#34;_blank&#34; &gt;7netで購入&lt;img src=&#34;//ad.jp.ap.valuecommerce.com/servlet/atq/gifbanner?sid=3737095&amp;pid=891162462&#34; height=&#34;1&#34; width=&#34;1&#34; border=&#34;0&#34;&gt;&lt;/a&gt;&lt;/div&gt;                                       &lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;booklink-footer&#34; style=&#34;clear: left&#34;&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;midiコントローラーのボタン設定&#34;&gt;MIDIコントローラーのボタン設定&lt;/h2&gt;
+&lt;h1 id=&#34;midiコントローラーのボタン設定の苦労&#34;&gt;MIDIコントローラーのボタン設定の苦労&lt;/h1&gt;
 
 &lt;p&gt;KORGの&lt;a href=&#34;https://amzn.to/42zrlhP&#34;&gt;nanoKONTROL2&lt;/a&gt;というMIDIコントローラーを使用しましたが、設定に苦労しました。&lt;/p&gt;
 
