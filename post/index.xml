@@ -177,7 +177,7 @@ msdf-atlas-gen.exe -format png -uniformcellconstraint square4 -imageout &amp;quo
 
 &lt;p&gt;MIDI信号は7bit（0～127）の範囲でしか送信できないため、BPM情報を下位7bitと上位7bitに分割し、2つのMIDI CCチャンネルで送信しました。&lt;/p&gt;
 
-&lt;p&gt;仮想オーディオデバイスの必要性に気づかず試行錯誤しましたが、RenardさんのアドバイスでloopMIDIを導入して解決しました。&lt;/p&gt;
+&lt;p&gt;仮想オーディオデバイスの必要性に気づかず試行錯誤しましたが、Renardさんのアドバイスで&lt;a href=&#34;https://www.tobias-erichsen.de/software/loopmidi.html&#34;&gt;loopMIDI&lt;/a&gt;を導入して解決しました。&lt;/p&gt;
 
 &lt;p&gt;ソースコードをGitHubで公開し、READMEに使い方を詳しく記載しました。興味のある方はGitHubを見てください。&lt;/p&gt;
 
