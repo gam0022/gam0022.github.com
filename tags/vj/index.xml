@@ -174,7 +174,7 @@ msdf-atlas-gen.exe -format png -uniformcellconstraint square4 -imageout &amp;quo
 
 &lt;p&gt;また、msdf-atlas-genが生成するテクスチャは左上がインデックス0に対応しますが、参考にしたコードは左下に対応していたため、上下を反転する改造を行いました。&lt;/p&gt;
 
-&lt;h1 id=&#34;sound2lightからsh4derjockeyへのbpmの自動同期システム&#34;&gt;Sound2LightからSh4derJockeyへのBPMの自動同期システム&lt;/h1&gt;
+&lt;h1 id=&#34;sound2light-sh4derjockey-のbpm自動同期システム&#34;&gt;Sound2Light → Sh4derJockey のBPM自動同期システム&lt;/h1&gt;
 
 &lt;p&gt;Sound2LightはOSC（Open Sound Control）プロトコルでBPM情報を他のソフトウェアに送信できます。しかし、Sh4derJockeyは外部からの情報をMIDIでしか受け取れません。&lt;/p&gt;
 
