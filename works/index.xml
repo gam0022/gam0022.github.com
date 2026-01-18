@@ -1,23 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Works | gam0022.net</title>
-    <link>http://localhost:1313/works/</link>
-      <atom:link href="http://localhost:1313/works/index.xml" rel="self" type="application/rss+xml" />
-    <description>Works</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 28 Sep 2016 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
-      <title>Works</title>
-      <link>http://localhost:1313/works/</link>
-    </image>
-    
-    <item>
-      <title>Slackに返信・引用ボタンを追加するChrome拡張</title>
-      <link>http://localhost:1313/works/slack-reply-and-quote-button/</link>
-      <pubDate>Wed, 28 Sep 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/works/slack-reply-and-quote-button/</guid>
-      <description>&lt;img alt=&#34;Slack Reply Button&#34; src=&#34;icon.png&#34; class=&#34;right&#34;&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Works | gam0022.net</title><link>https://gam0022.net/works/</link><atom:link href="https://gam0022.net/works/index.xml" rel="self" type="application/rss+xml"/><description>Works</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Works</title><link>https://gam0022.net/works/</link></image><item><title>Slackに返信・引用ボタンを追加するChrome拡張</title><link>https://gam0022.net/works/slack-reply-and-quote-button/</link><pubDate>Wed, 28 Sep 2016 00:00:00 +0000</pubDate><guid>https://gam0022.net/works/slack-reply-and-quote-button/</guid><description>&lt;img alt="Slack Reply Button" src="icon.png" class="right"&gt;
 &lt;p&gt;Slackを使っていて、こんな不便を感じたことはありませんか？&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;特定のメッセージに対して返信したいのに、返信ボタンが無い…&lt;/li&gt;
@@ -26,274 +7,160 @@
 &lt;/ul&gt;
 &lt;p&gt;これらの問題を解決するGoogle Chromeの拡張を開発しました！
 Chromeウェブストアから簡単に導入できます。&lt;/p&gt;
-&lt;div class=&#34;read-more&#34;&gt;
-  &lt;a href=&#34;https://chrome.google.com/webstore/detail/slack-%E8%BF%94%E4%BF%A1%E5%BC%95%E7%94%A8%E3%83%9C%E3%82%BF%E3%83%B3slack-reply/cechhipifmcinmnnjnlichjigoabokbg?hl=ja&#34; class=&#34;btn btn-primary btn-outline&#34;&gt;Slack 返信引用ボタン(Slack Reply and Quote Button) - Chrome ウェブストア&lt;/a&gt;
+&lt;div class="read-more"&gt;
+&lt;a href="https://chrome.google.com/webstore/detail/slack-%E8%BF%94%E4%BF%A1%E5%BC%95%E7%94%A8%E3%83%9C%E3%82%BF%E3%83%B3slack-reply/cechhipifmcinmnnjnlichjigoabokbg?hl=ja" class="btn btn-primary btn-outline"&gt;Slack 返信引用ボタン(Slack Reply and Quote Button) - Chrome ウェブストア&lt;/a&gt;
 &lt;/div&gt;
-&lt;h2 id=&#34;機能紹介&#34;&gt;機能紹介&lt;/h2&gt;
+&lt;h2 id="機能紹介"&gt;機能紹介&lt;/h2&gt;
 &lt;p&gt;以下の3種類のボタンがあります。&lt;/p&gt;
-&lt;ol start=&#34;2&#34;&gt;
+&lt;ol start="2"&gt;
 &lt;li&gt;Mentionボタンを使うと、返信ができます。&lt;/li&gt;
 &lt;li&gt;Replyボタンを使うと、引用+返信を素早くできます。&lt;/li&gt;
 &lt;li&gt;Quoteボタンを使うと、引用のみができます。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;また、文字を選択した状態でReplay・Quoteボタンを押すと、部分引用ができます。&lt;/p&gt;
-&lt;h3 id=&#34;返信ボタン--mention-button&#34;&gt;返信ボタン / Mention Button&lt;/h3&gt;
+&lt;h3 id="返信ボタン--mention-button"&gt;返信ボタン / Mention Button&lt;/h3&gt;
 &lt;p&gt;Mentionボタンを使うと、返信ができます。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;&lt;img alt=&#34;Mentionボタンを使うと、引用はせずに返信のみができます&#34;
-           src=&#34;http://localhost:1313/works/slack-reply-and-quote-button/mention.gif&#34;
-           loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;&lt;img alt="Mentionボタンを使うと、引用はせずに返信のみができます"
+src="https://gam0022.net/works/slack-reply-and-quote-button/mention.gif"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h3 id=&#34;返信引用ボタン--replay-button&#34;&gt;返信+引用ボタン / Replay Button&lt;/h3&gt;
+&lt;h3 id="返信引用ボタン--replay-button"&gt;返信+引用ボタン / Replay Button&lt;/h3&gt;
 &lt;p&gt;Replyボタンを使うと、引用+返信を素早くできます。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;&lt;img alt=&#34;Replyボタンを使うと、特定のメッセージに対しての引用と返信を素早くできます&#34;
-           src=&#34;http://localhost:1313/works/slack-reply-and-quote-button/replay.gif&#34;
-           loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;&lt;img alt="Replyボタンを使うと、特定のメッセージに対しての引用と返信を素早くできます"
+src="https://gam0022.net/works/slack-reply-and-quote-button/replay.gif"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h3 id=&#34;引用ボタン--quote-button&#34;&gt;引用ボタン / Quote Button&lt;/h3&gt;
+&lt;h3 id="引用ボタン--quote-button"&gt;引用ボタン / Quote Button&lt;/h3&gt;
 &lt;p&gt;Quoteボタンを使うと、引用のみができます。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;&lt;img alt=&#34;Quoteボタンを使うと、相手に通知を飛ばさずに引用のみができます&#34;
-           src=&#34;http://localhost:1313/works/slack-reply-and-quote-button/quote.gif&#34;
-           loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;&lt;img alt="Quoteボタンを使うと、相手に通知を飛ばさずに引用のみができます"
+src="https://gam0022.net/works/slack-reply-and-quote-button/quote.gif"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h3 id=&#34;部分引用&#34;&gt;部分引用&lt;/h3&gt;
+&lt;h3 id="部分引用"&gt;部分引用&lt;/h3&gt;
 &lt;p&gt;文字を選択した状態でReplay・Quoteボタンを押すと、部分引用ができます。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;&lt;img alt=&#34;文字を選択した状態でReplayやQuoteボタンを押すと、部分引用ができます&#34;
-           src=&#34;http://localhost:1313/works/slack-reply-and-quote-button/quote-sub.gif&#34;
-           loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;&lt;img alt="文字を選択した状態でReplayやQuoteボタンを押すと、部分引用ができます"
+src="https://gam0022.net/works/slack-reply-and-quote-button/quote-sub.gif"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h3 id=&#34;tips&#34;&gt;Tips&lt;/h3&gt;
+&lt;h3 id="tips"&gt;Tips&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Replyボタンの引用は、&amp;gt; による引用となります&lt;/li&gt;
 &lt;li&gt;Replyボタンの引用は、4行以上または装飾のあるメッセージに対してはURLでの引用になります&lt;/li&gt;
 &lt;li&gt;Quoteボタンの引用は、URLでの引用になります&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;ソースコード&#34;&gt;ソースコード&lt;/h2&gt;
+&lt;h2 id="ソースコード"&gt;ソースコード&lt;/h2&gt;
 &lt;p&gt;GitHubで公開しています。PRをお待ちしております。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;バージョンアップ方法&#34;&gt;バージョンアップ方法&lt;/h2&gt;
+&lt;h2 id="バージョンアップ方法"&gt;バージョンアップ方法&lt;/h2&gt;
 &lt;p&gt;Slackのバージョンアップによって拡張が動かなくなった場合には、拡張のアップデートの適用によって治る場合があります。&lt;/p&gt;
 &lt;p&gt;以下の手順で拡張をアップデートしてください。&lt;/p&gt;
-&lt;h3 id=&#34;1-chromeの拡張機能の管理画面を開きます&#34;&gt;1. Chromeの拡張機能の管理画面を開きます&lt;/h3&gt;
+&lt;h3 id="1-chromeの拡張機能の管理画面を開きます"&gt;1. Chromeの拡張機能の管理画面を開きます&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;メニュー &amp;gt; その他のツール &amp;gt; 拡張機能&lt;/code&gt;を選択します。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;Chromeの拡張機能の管理画面を開きます&#34; 
-               srcset=&#34;http://localhost:1313/works/slack-reply-and-quote-button/update-1_hu_ed1ca991afc482cc.webp 320w, http://localhost:1313/works/slack-reply-and-quote-button/update-1_hu_2432f14f464e23a.webp 480w, http://localhost:1313/works/slack-reply-and-quote-button/update-1_hu_1386414e0b137bea.webp 578w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/works/slack-reply-and-quote-button/update-1_hu_ed1ca991afc482cc.webp&#34;
-               width=&#34;578&#34;
-               height=&#34;475&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="Chromeの拡張機能の管理画面を開きます"
+srcset="https://gam0022.net/works/slack-reply-and-quote-button/update-1_hu_ed1ca991afc482cc.webp 320w, https://gam0022.net/works/slack-reply-and-quote-button/update-1_hu_2432f14f464e23a.webp 480w, https://gam0022.net/works/slack-reply-and-quote-button/update-1_hu_1386414e0b137bea.webp 578w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/works/slack-reply-and-quote-button/update-1_hu_ed1ca991afc482cc.webp"
+width="578"
+height="475"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h3 id=&#34;2-更新を行います&#34;&gt;2. 更新を行います&lt;/h3&gt;
+&lt;h3 id="2-更新を行います"&gt;2. 更新を行います&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;「デベロッパーモード」をONにします&lt;/li&gt;
 &lt;li&gt;「拡張機能を今すぐ更新」ボタンをクリックします&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;Chromeの拡張機能の管理画面を開きます&#34; 
-               srcset=&#34;http://localhost:1313/works/slack-reply-and-quote-button/update-2_hu_ccdcd3cb3e6bf072.webp 320w, http://localhost:1313/works/slack-reply-and-quote-button/update-2_hu_d66acc9082e7d402.webp 480w, http://localhost:1313/works/slack-reply-and-quote-button/update-2_hu_343ea126253971b8.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/works/slack-reply-and-quote-button/update-2_hu_ccdcd3cb3e6bf072.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;280&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="Chromeの拡張機能の管理画面を開きます"
+srcset="https://gam0022.net/works/slack-reply-and-quote-button/update-2_hu_ccdcd3cb3e6bf072.webp 320w, https://gam0022.net/works/slack-reply-and-quote-button/update-2_hu_d66acc9082e7d402.webp 480w, https://gam0022.net/works/slack-reply-and-quote-button/update-2_hu_343ea126253971b8.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/works/slack-reply-and-quote-button/update-2_hu_ccdcd3cb3e6bf072.webp"
+width="760"
+height="280"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;以上の手順でChromeの拡張のアップデートが完了します。&lt;/p&gt;
-&lt;h2 id=&#34;編集履歴&#34;&gt;編集履歴&lt;/h2&gt;
+&lt;h2 id="編集履歴"&gt;編集履歴&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;2016/12/26: 
+&lt;li&gt;2016/12/26:
 &lt;/li&gt;
 &lt;li&gt;2017/12/24: バージョンアップ方法を追記しました&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;コメントアーカイブ&#34;&gt;コメント（アーカイブ）&lt;/h2&gt;
+&lt;h2 id="コメントアーカイブ"&gt;コメント（アーカイブ）&lt;/h2&gt;
 &lt;p&gt;※Disqusのコメントをクローズしたため、アーカイブとして画像を残しました。&lt;/p&gt;
 &lt;!-- ![Disqusのコメントのアーカイブ](disqus_comments.png) --&gt;
-&lt;!-- &lt;figure class=&#34;full-width-img&#34;&gt;&lt;img src=&#34;http://localhost:1313/works/slack-reply-and-quote-button/disqus_comments.png&#34;
-    alt=&#34;Disqusのコメントのアーカイブ&#34;&gt;&lt;figcaption&gt;
-      &lt;p&gt;Disqusのコメントのアーカイブ&lt;/p&gt;
-    &lt;/figcaption&gt;
+&lt;!-- &lt;figure class="full-width-img"&gt;&lt;img src="https://gam0022.net/works/slack-reply-and-quote-button/disqus_comments.png"
+alt="Disqusのコメントのアーカイブ"&gt;&lt;figcaption&gt;
+&lt;p&gt;Disqusのコメントのアーカイブ&lt;/p&gt;
+&lt;/figcaption&gt;
 &lt;/figure&gt;
- --&gt;
-&lt;img src=&#34;disqus_comments.png&#34; alt=&#34;Disqusのコメントのアーカイブ&#34;&gt;</description>
-    </item>
-    
-    <item>
-      <title>大五郎（Ｕ＾ω＾）BOT の説明書</title>
-      <link>http://localhost:1313/works/daigoroubot/</link>
-      <pubDate>Mon, 10 Dec 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/works/daigoroubot/</guid>
-      <description>&lt;h2 id=&#34;大五郎botとは&#34;&gt;大五郎BOTとは？&lt;/h2&gt;
+--&gt;
+&lt;img src="disqus_comments.png" alt="Disqusのコメントのアーカイブ"&gt;</description></item><item><title>大五郎（Ｕ＾ω＾）BOT の説明書</title><link>https://gam0022.net/works/daigoroubot/</link><pubDate>Mon, 10 Dec 2012 00:00:00 +0000</pubDate><guid>https://gam0022.net/works/daigoroubot/</guid><description>&lt;h2 id="大五郎botとは"&gt;大五郎BOTとは？&lt;/h2&gt;
 &lt;p&gt;知っている人は知っているTwitterBotです。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;大五郎（Ｕ＾ω＾）BOT&#34; 
-               srcset=&#34;http://localhost:1313/works/daigoroubot/daigoroubot_hu_c5d254ed2052bd30.webp 300w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/works/daigoroubot/daigoroubot_hu_c5d254ed2052bd30.webp&#34;
-               width=&#34;300&#34;
-               height=&#34;300&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="大五郎（Ｕ＾ω＾）BOT"
+srcset="https://gam0022.net/works/daigoroubot/daigoroubot_hu_c5d254ed2052bd30.webp 300w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/works/daigoroubot/daigoroubot_hu_c5d254ed2052bd30.webp"
+width="300"
+height="300"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;マルコフ連鎖で適当につぶやいたりリプをしたり、挨拶や任意のキーワードに反応します。&lt;/p&gt;
 &lt;p&gt;つくば市の天気予報機能、電卓機能、n進数変換器など便利な機能を搭載しています。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://twitter.com/daigoroubot&#34; class=&#34;twitter-follow-button&#34; data-show-count=&#34;false&#34;&gt;Follow @daigoroubot&lt;/a&gt;&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://twitter.com/daigoroubot" class="twitter-follow-button" data-show-count="false"&gt;Follow @daigoroubot&lt;/a&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
 &lt;p&gt;
 &lt;/p&gt;
-&lt;h2 id=&#34;名言集&#34;&gt;名言集&lt;/h2&gt;
+&lt;h2 id="名言集"&gt;名言集&lt;/h2&gt;
 &lt;p&gt;色々あって、
 から BAN されてしまいました。&lt;/p&gt;
 &lt;p&gt;替わりに、
 に登録してます。&lt;/p&gt;
-&lt;h2 id=&#34;機能紹介&#34;&gt;機能紹介&lt;/h2&gt;
-&lt;h3 id=&#34;つくば市の天気予報機能&#34;&gt;つくば市の天気予報機能&lt;/h3&gt;
-&lt;h4 id=&#34;例&#34;&gt;例&lt;/h4&gt;
+&lt;h2 id="機能紹介"&gt;機能紹介&lt;/h2&gt;
+&lt;h3 id="つくば市の天気予報機能"&gt;つくば市の天気予報機能&lt;/h3&gt;
+&lt;h4 id="例"&gt;例&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;@daigoroubot 天気&lt;/code&gt;=&amp;gt; &lt;code&gt;今日のつくばの天気は、晴れなのだ。最高気温9℃なのだ。http://goo.gl/IPAuV&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;@daigoroubot 明日 天気&lt;/code&gt;=&amp;gt; &lt;code&gt;明日のつくばの天気は、晴れなのだ。最高気温9℃、最低気温-1℃なのだ。http://goo.gl/IPAuV&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;解説&#34;&gt;解説&lt;/h4&gt;
+&lt;h4 id="解説"&gt;解説&lt;/h4&gt;
 &lt;p&gt;つくば市の天気予報機能なので、&lt;strong&gt;茨城県つくば市の天気にしか対応していません&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;(今日|明日|明後日)&lt;/code&gt;のつくば市の天気に対応しています。&lt;/p&gt;
 &lt;p&gt;日を省略した場合、午後3時までは今日の天気、それより後は明日の天気を教えてくれます。&lt;/p&gt;
 &lt;p&gt;天気の情報は、livedoorの
-
 から取得しています。&lt;/p&gt;
-&lt;h3 id=&#34;教室検索機能&#34;&gt;教室検索機能&lt;/h3&gt;
+&lt;h3 id="教室検索機能"&gt;教室検索機能&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;筑波大学の全学の授業に対応した検索機能です。&lt;/li&gt;
 &lt;li&gt;検索範囲は、現在が春Aモジュールならば、春Aの全ての授業となります。&lt;/li&gt;
@@ -305,7 +172,7 @@ Chromeウェブストアから簡単に導入できます。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;検索結果が140文字を超えるときは、複数のツイートに分けて結果を返します。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;例-1&#34;&gt;例&lt;/h4&gt;
+&lt;h4 id="例-1"&gt;例&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;@daigoroubot システムプロ&lt;/code&gt; =&amp;gt; &lt;code&gt;GB31401 システムプログラム 春AB 水1,2 3A306&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;@daigoroubot 力学&lt;/code&gt; =&amp;gt;&lt;/li&gt;
@@ -319,8 +186,8 @@ FF17514 力学A 春ABC 水2/金1 3A301&lt;/pre&gt;
 FG10414 力学I 春AB 金3,4 3L201
 FG10424 力学I 春AB 木3,4 3A202
 GB11214 力学 春AB 金3,4 3A416&lt;/pre&gt;
-&lt;h3 id=&#34;電卓機能&#34;&gt;電卓機能&lt;/h3&gt;
-&lt;h4 id=&#34;例-2&#34;&gt;例&lt;/h4&gt;
+&lt;h3 id="電卓機能"&gt;電卓機能&lt;/h3&gt;
+&lt;h4 id="例-2"&gt;例&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;@daigoroubot 1+1&lt;/code&gt;=&amp;gt; &lt;code&gt;2&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;@daigoroubot ３たす３は？&lt;/code&gt; =&amp;gt; &lt;code&gt;6&lt;/code&gt;&lt;/li&gt;
@@ -335,12 +202,12 @@ GB11214 力学 春AB 金3,4 3A416&lt;/pre&gt;
 &lt;li&gt;&lt;code&gt;@daigoroubot log10(100)&lt;/code&gt; =&amp;gt; &lt;code&gt;2.0&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;@daigoroubot log2(1024)&lt;/code&gt; =&amp;gt; &lt;code&gt;10.0&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;解説-1&#34;&gt;解説&lt;/h4&gt;
+&lt;h4 id="解説-1"&gt;解説&lt;/h4&gt;
 &lt;p&gt;基本的にはirbみたいな感じに使ってください。&lt;/p&gt;
 &lt;p&gt;技術的な点だと、Rubyのセーフレベル4などで作ったSandbox環境の中で&lt;code&gt;eval&lt;/code&gt;して、
 スレッドを使って設定した時間でタイムアウトするようになっています。&lt;/p&gt;
-&lt;h3 id=&#34;n進数変換器&#34;&gt;n進数変換器&lt;/h3&gt;
-&lt;h4 id=&#34;例-3&#34;&gt;例&lt;/h4&gt;
+&lt;h3 id="n進数変換器"&gt;n進数変換器&lt;/h3&gt;
+&lt;h4 id="例-3"&gt;例&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;@daigoroubot 0xFF&lt;/code&gt; =&amp;gt; &lt;code&gt;255&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;@daigoroubot 0b111&lt;/code&gt; =&amp;gt; &lt;code&gt;7&lt;/code&gt;&lt;/li&gt;
@@ -348,49 +215,49 @@ GB11214 力学 春AB 金3,4 3A416&lt;/pre&gt;
 &lt;li&gt;&lt;code&gt;@daigoroubot 1024を2進数に&lt;/code&gt; =&amp;gt; &lt;code&gt;1024 = 10000000000(2進数)&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;@daigoroubot ffは16進数で&lt;/code&gt; =&amp;gt; &lt;code&gt;ff(16進数) = 255&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;解説-2&#34;&gt;解説&lt;/h4&gt;
+&lt;h4 id="解説-2"&gt;解説&lt;/h4&gt;
 &lt;p&gt;なんと2進数から36進数までに対応しています！&lt;/p&gt;
-&lt;h2 id=&#34;えりたんbot-との連携&#34;&gt;えりたんBOT との連携&lt;/h2&gt;
+&lt;h2 id="えりたんbot-との連携"&gt;えりたんBOT との連携&lt;/h2&gt;
 &lt;p&gt;
-（作者: 
+（作者:
 ）と連携し、時々散歩に誘ったり誘われたり、誘いを拒んだりします。&lt;/p&gt;
 &lt;p&gt;午後2時から7時の間に発動します。&lt;/p&gt;
-&lt;h2 id=&#34;設定&#34;&gt;設定&lt;/h2&gt;
+&lt;h2 id="設定"&gt;設定&lt;/h2&gt;
 &lt;p&gt;大五郎にDMを送ることでいくつかの機能を設定できます。&lt;/p&gt;
 &lt;p&gt;設定に成功・失敗した場合は、大五郎はDMに返信します。&lt;/p&gt;
-&lt;h3 id=&#34;挨拶の停止と開始&#34;&gt;挨拶の停止と開始&lt;/h3&gt;
+&lt;h3 id="挨拶の停止と開始"&gt;挨拶の停止と開始&lt;/h3&gt;
 &lt;p&gt;大五郎の挨拶が鬱陶しいときに利用してください。&lt;/p&gt;
 &lt;p&gt;挨拶を含め、大五郎が一方的に話しかけることがなくなります。（停止状態でもリプをすれば返事をします。）&lt;/p&gt;
-&lt;h4 id=&#34;停止方法&#34;&gt;停止方法&lt;/h4&gt;
+&lt;h4 id="停止方法"&gt;停止方法&lt;/h4&gt;
 &lt;p&gt;次のようなDMを送ってください。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;挨拶するな&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;挨拶しないで&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;開始方法初期状態&#34;&gt;開始方法(初期状態)&lt;/h4&gt;
+&lt;h4 id="開始方法初期状態"&gt;開始方法(初期状態)&lt;/h4&gt;
 &lt;p&gt;次のようなDMを送ってください。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;挨拶&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;挨拶して&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;学習の停止と開始&#34;&gt;学習の停止と開始&lt;/h3&gt;
+&lt;h3 id="学習の停止と開始"&gt;学習の停止と開始&lt;/h3&gt;
 &lt;p&gt;大五郎はTLの発言から言葉を学習するので、稀にパクリツイートをすることがあります。&lt;/p&gt;
 &lt;p&gt;パクリツイートをされたくない場合に利用してください。&lt;/p&gt;
-&lt;h4 id=&#34;停止方法-1&#34;&gt;停止方法&lt;/h4&gt;
+&lt;h4 id="停止方法-1"&gt;停止方法&lt;/h4&gt;
 &lt;p&gt;次のようなDMを送ってください。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;学習停止&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;学習しないで&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;パクツイするな&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;開始方法初期状態-1&#34;&gt;開始方法(初期状態)&lt;/h4&gt;
+&lt;h4 id="開始方法初期状態-1"&gt;開始方法(初期状態)&lt;/h4&gt;
 &lt;p&gt;次のようなDMを送ってください。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;学習開始&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;学習して&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;パクツイして&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;開発方法など&#34;&gt;開発方法など&lt;/h2&gt;
+&lt;h2 id="開発方法など"&gt;開発方法など&lt;/h2&gt;
 &lt;p&gt;大五郎はRuby1.9.3で開発されており、月額490円のVPS上で動いています。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;直前の2単語によるマルコフ連鎖。&lt;/li&gt;
@@ -398,9 +265,4 @@ GB11214 力学 春AB 金3,4 3A416&lt;/pre&gt;
 &lt;li&gt;他のbotに比べれば、設定ファイルでけっこう柔軟に設定できる感じの設計。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;ソースコードは
-に置いてます。&lt;/p&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+に置いてます。&lt;/p&gt;</description></item></channel></rss>
