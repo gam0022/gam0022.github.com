@@ -1,23 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>VSCode | gam0022.net</title>
-    <link>http://localhost:1313/tags/vscode/</link>
-      <atom:link href="http://localhost:1313/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
-    <description>VSCode</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Dec 2018 23:59:59 +0900</lastBuildDate>
-    <image>
-      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
-      <title>VSCode</title>
-      <link>http://localhost:1313/tags/vscode/</link>
-    </image>
-    
-    <item>
-      <title>GLSL Compoに役立つ！GLSL Sandbox互換のVSCode拡張『Shader Toy』の紹介</title>
-      <link>http://localhost:1313/blog/2018/12/24/vscode-glslsandbox/</link>
-      <pubDate>Mon, 24 Dec 2018 23:59:59 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2018/12/24/vscode-glslsandbox/</guid>
-      <description>&lt;p&gt;これは
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>VSCode | gam0022.net</title><link>https://gam0022.net/tags/vscode/</link><atom:link href="https://gam0022.net/tags/vscode/index.xml" rel="self" type="application/rss+xml"/><description>VSCode</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Dec 2018 23:59:59 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>VSCode</title><link>https://gam0022.net/tags/vscode/</link></image><item><title>GLSL Compoに役立つ！GLSL Sandbox互換のVSCode拡張『Shader Toy』の紹介</title><link>https://gam0022.net/blog/2018/12/24/vscode-glslsandbox/</link><pubDate>Mon, 24 Dec 2018 23:59:59 +0900</pubDate><guid>https://gam0022.net/blog/2018/12/24/vscode-glslsandbox/</guid><description>&lt;p&gt;これは
 の24日目の記事です。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;みなさんはGLSL Sandboxのシェーダーをローカルで編集したりgitで管理したいと思ったことはありませんか？&lt;/p&gt;
@@ -32,53 +13,38 @@
 どちらのコードも修正なしにそのまま動作できます！&lt;/p&gt;
 &lt;p&gt;WindowsとMacの両方に対応しています。&lt;/p&gt;
 &lt;p&gt;次の画像は
- by 
+by
 （
- GLSL Compo優勝作品）をVSCode上で動作させた様子です。&lt;/p&gt;
+GLSL Compo優勝作品）をVSCode上で動作させた様子です。&lt;/p&gt;
 &lt;p&gt;
 &lt;/p&gt;
-&lt;h2 id=&#34;導入方法と使い方&#34;&gt;導入方法と使い方&lt;/h2&gt;
+&lt;h2 id="導入方法と使い方"&gt;導入方法と使い方&lt;/h2&gt;
 &lt;p&gt;導入方法と使い方は簡単です。&lt;/p&gt;
-&lt;h3 id=&#34;導入方法&#34;&gt;導入方法&lt;/h3&gt;
+&lt;h3 id="導入方法"&gt;導入方法&lt;/h3&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;install&#34; 
-               srcset=&#34;http://localhost:1313/blog/2018/12/24/vscode-glslsandbox/install_hu_a5353c7e09258719.webp 320w, http://localhost:1313/blog/2018/12/24/vscode-glslsandbox/install_hu_2eb2d485b7b1a687.webp 379w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2018/12/24/vscode-glslsandbox/install_hu_a5353c7e09258719.webp&#34;
-               width=&#34;379&#34;
-               height=&#34;301&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="install"
+srcset="https://gam0022.net/blog/2018/12/24/vscode-glslsandbox/install_hu_a5353c7e09258719.webp 320w, https://gam0022.net/blog/2018/12/24/vscode-glslsandbox/install_hu_2eb2d485b7b1a687.webp 379w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2018/12/24/vscode-glslsandbox/install_hu_a5353c7e09258719.webp"
+width="379"
+height="301"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;拡張機能のウィンドウを開く&lt;/li&gt;
 &lt;li&gt;「shadertoy」で検索&lt;/li&gt;
 &lt;li&gt;インストールボタンを押す&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;使い方&#34;&gt;使い方&lt;/h3&gt;
+&lt;h3 id="使い方"&gt;使い方&lt;/h3&gt;
 &lt;p&gt;GLSLのコードを編集した状態でコマンドパレットから「Shader Toy: GLSL Preview」を開くだけです。&lt;/p&gt;
 &lt;p&gt;GLSLのコードを認識しないときは、「Shader Toy: GLSL Preview」を閉じてから再実行すると認識できる場合があります。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;※以降の内容はポエム・個人的なメモです。あまり有益な情報はありませんのでご注意ください。&lt;/p&gt;
-&lt;h2 id=&#34;glsl-sandbox互換の理由&#34;&gt;GLSL Sandbox互換の理由&lt;/h2&gt;
+&lt;h2 id="glsl-sandbox互換の理由"&gt;GLSL Sandbox互換の理由&lt;/h2&gt;
 &lt;p&gt;ところで、『Shader Toy』という名前なのに、なぜGLSL Sandboxにも対応しているのでしょうか？&lt;/p&gt;
 &lt;p&gt;元々は Shadertoy互換の拡張だったのですが、次のPull Requestで私がGLSL Sandbox互換を追加しました💪&lt;/p&gt;
 &lt;ul&gt;
@@ -87,7 +53,7 @@
 &lt;/ul&gt;
 &lt;p&gt;拡張の名前から考えて、GLSL Sandbox互換の機能追加が受け入れられるか心配でしたが、爆速でマージしていただけました！
 stevensonaさんありがとうございます🙏&lt;/p&gt;
-&lt;h2 id=&#34;開発動機&#34;&gt;開発動機&lt;/h2&gt;
+&lt;h2 id="開発動機"&gt;開発動機&lt;/h2&gt;
 &lt;p&gt;Tokyo Demo Fest 2018のライブコーディングバトルの練習のために、
 ローカル上で他人に見られないようにglslfanのコードを書きたいというのが開発の動機でした。&lt;/p&gt;
 &lt;p&gt;ライブコーディングというのは、その場でコーディングを行うということです。
@@ -97,30 +63,24 @@ stevensonaさんありがとうございます🙏&lt;/p&gt;
 他人のシェーダコーディングをある程度リアルタイムに覗き見できることを特徴としています。
 リアルタイムに配信する機能は素晴らしいのですが、ライブコーディングの練習をしている様子を一般公開したくなかったので、
 ローカル上でGLSLのコードを編集できる環境を構築するために、「Shader Toy」拡張を改造しようと思いました。&lt;/p&gt;
-&lt;h2 id=&#34;glsl-compo優勝者と準優勝者のお役に立てた&#34;&gt;GLSL Compo優勝者と準優勝者のお役に立てた&lt;/h2&gt;
+&lt;h2 id="glsl-compo優勝者と準優勝者のお役に立てた"&gt;GLSL Compo優勝者と準優勝者のお役に立てた&lt;/h2&gt;
 &lt;p&gt;本家にPull Requestを送る前に
 をTwitterで公開していました。&lt;/p&gt;
 &lt;p&gt;その結果、GLSL Compoの1位と2位の方々に利用していただき、お役に立てたようで嬉しいです😆&lt;/p&gt;
 &lt;p&gt;GLSL Compo1位のkanetaさんのツイート&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;法線求める時forでインライン展開押さえるのすご..&lt;br&gt;GLSL Grapherと&lt;a href=&#34;https://twitter.com/gam0022?ref_src=twsrc%5Etfw&#34;&gt;@gam0022&lt;/a&gt;先生の拡張は僕もめっちゃ使いました!&lt;/p&gt;&amp;mdash; かねた (@kanetaaaaa) &lt;a href=&#34;https://twitter.com/kanetaaaaa/status/1074471599804301312?ref_src=twsrc%5Etfw&#34;&gt;2018年12月17日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;法線求める時forでインライン展開押さえるのすご..&lt;br&gt;GLSL Grapherと&lt;a href="https://twitter.com/gam0022?ref_src=twsrc%5Etfw"&gt;@gam0022&lt;/a&gt;先生の拡張は僕もめっちゃ使いました!&lt;/p&gt;&amp;mdash; かねた (@kanetaaaaa) &lt;a href="https://twitter.com/kanetaaaaa/status/1074471599804301312?ref_src=twsrc%5Etfw"&gt;2018年12月17日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;p&gt;GLSL Compo2位のsetchiさんのツイート&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ブログ更新しました &amp;gt; &lt;a href=&#34;https://twitter.com/hashtag/TokyoFemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoFemoFest&lt;/a&gt; 2018 の GLSL Graphics Compo で2位入賞しました&lt;a href=&#34;https://t.co/XyntUxDCGD&#34;&gt;https://t.co/XyntUxDCGD&lt;/a&gt;&lt;/p&gt;&amp;mdash; setchi (@setchi) &lt;a href=&#34;https://twitter.com/setchi/status/1074469119481663489?ref_src=twsrc%5Etfw&#34;&gt;2018年12月17日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-
-
-  
-  &lt;blockquote class=&#34;border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6&#34;&gt;
-    &lt;p&gt;VSCode 上で GLSL 環境を探していたときに、ちょうど gam0022 先生が GLSL Sandbox 互換の VSCode 拡張を公開していたのでありがたく使わせていただきました！&lt;/p&gt;
-
-  &lt;/blockquote&gt;
-
-&lt;h2 id=&#34;ライブコーディングバトルで優勝できた&#34;&gt;ライブコーディングバトルで優勝できた&lt;/h2&gt;
+&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;ブログ更新しました &amp;gt; &lt;a href="https://twitter.com/hashtag/TokyoFemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#TokyoFemoFest&lt;/a&gt; 2018 の GLSL Graphics Compo で2位入賞しました&lt;a href="https://t.co/XyntUxDCGD"&gt;https://t.co/XyntUxDCGD&lt;/a&gt;&lt;/p&gt;&amp;mdash; setchi (@setchi) &lt;a href="https://twitter.com/setchi/status/1074469119481663489?ref_src=twsrc%5Etfw"&gt;2018年12月17日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;VSCode 上で GLSL 環境を探していたときに、ちょうど gam0022 先生が GLSL Sandbox 互換の VSCode 拡張を公開していたのでありがたく使わせていただきました！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="ライブコーディングバトルで優勝できた"&gt;ライブコーディングバトルで優勝できた&lt;/h2&gt;
 &lt;p&gt;&lt;del&gt;本拡張をつかった練習の成果によって、&lt;/del&gt; ライブコーディングバトルで優勝しました😉&lt;/p&gt;
 &lt;p&gt;こんな感じの作品をGLSLのシェーダーだけで40分でつくりました！&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;シェーダーライブコーディングバトルの優勝作品です！&lt;br&gt;ありがとうございました！&lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/tdf2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#tdf2018&lt;/a&gt;&lt;a href=&#34;https://t.co/MJwbIWFOMl&#34;&gt;https://t.co/MJwbIWFOMl&lt;/a&gt; &lt;a href=&#34;https://t.co/LVr2LYvUgi&#34;&gt;pic.twitter.com/LVr2LYvUgi&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1068782247711465472?ref_src=twsrc%5Etfw&#34;&gt;2018年12月1日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;シェーダーライブコーディングバトルの優勝作品です！&lt;br&gt;ありがとうございました！&lt;a href="https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/tdf2018?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#tdf2018&lt;/a&gt;&lt;a href="https://t.co/MJwbIWFOMl"&gt;https://t.co/MJwbIWFOMl&lt;/a&gt; &lt;a href="https://t.co/LVr2LYvUgi"&gt;pic.twitter.com/LVr2LYvUgi&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1068782247711465472?ref_src=twsrc%5Etfw"&gt;2018年12月1日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;p&gt;（本当はを大会前日まで
 、ライブコーディングの練習はほとんどできませんでした😇）&lt;/p&gt;
 &lt;p&gt;競技中に私の画面が真っ白になってしまい、
@@ -136,49 +96,45 @@ stevensonaさんありがとうございます🙏&lt;/p&gt;
 さん、そして右下が私
 の作品です。
 どの作品もレベルが高くて、みんな凄すぎますね👏&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ライブコーティングバトルの最終成果物 &lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://t.co/CpIWIhcqoH&#34;&gt;pic.twitter.com/CpIWIhcqoH&lt;/a&gt;&lt;/p&gt;&amp;mdash; kaiware style🌱 (@kaiware007) &lt;a href=&#34;https://twitter.com/kaiware007/status/1068777639333126144?ref_src=twsrc%5Etfw&#34;&gt;2018年12月1日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;ライブコーティングバトルの最終成果物 &lt;a href="https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href="https://t.co/CpIWIhcqoH"&gt;pic.twitter.com/CpIWIhcqoH&lt;/a&gt;&lt;/p&gt;&amp;mdash; kaiware style🌱 (@kaiware007) &lt;a href="https://twitter.com/kaiware007/status/1068777639333126144?ref_src=twsrc%5Etfw"&gt;2018年12月1日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;p&gt;IGN JAPAN様にライブコーディングバトルを含めたTDFの1日目の様子をご紹介いただきました。興味がある方は是非ご覧ください。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;shadertoyとglsl-sandboxのマウスの違い&#34;&gt;ShadertoyとGLSL Sandboxのマウスの違い&lt;/h2&gt;
+&lt;h2 id="shadertoyとglsl-sandboxのマウスの違い"&gt;ShadertoyとGLSL Sandboxのマウスの違い&lt;/h2&gt;
 &lt;p&gt;開発する中でShadertoyとGLSL Sandboxのマウスの扱いの違いに苦しめられたので、後学のためにメモを残します。&lt;/p&gt;
 &lt;p&gt;ShadertoyとGLSL Sandboxを相互に移植にする際などに参考にしてください。&lt;/p&gt;
 &lt;p&gt;本拡張では以下のマウスの扱いの違いを考慮して実装しました。&lt;/p&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;Shadertoy&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;GLSL Sandbox&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;uniform定義&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;uniform vec4 iMouse;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;uniform vec2 mouse;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;解説（日本語）&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;ピクセル座標系のマウス座標。&lt;br&gt;xy: 現在のマウス座標 (左クリック時に更新)&lt;br&gt;zw: マウスのクリック状態&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;0〜1に正規化したマウス座標。&lt;br&gt;xy: 現在のマウス座標（毎フレーム更新）&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Explanation（English）&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;mouse pixel coords. &lt;br&gt;xy: current (if MLB down), &lt;br&gt;zw: click&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;mouse normalized coords. &lt;br&gt;xy: current&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;xyの値域&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;0〜解像度&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;0〜1&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="text-align: left"&gt;&lt;/th&gt;
+&lt;th style="text-align: left"&gt;Shadertoy&lt;/th&gt;
+&lt;th style="text-align: left"&gt;GLSL Sandbox&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;uniform定義&lt;/td&gt;
+&lt;td style="text-align: left"&gt;uniform vec4 iMouse;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;uniform vec2 mouse;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;解説（日本語）&lt;/td&gt;
+&lt;td style="text-align: left"&gt;ピクセル座標系のマウス座標。&lt;br&gt;xy: 現在のマウス座標 (左クリック時に更新)&lt;br&gt;zw: マウスのクリック状態&lt;/td&gt;
+&lt;td style="text-align: left"&gt;0〜1に正規化したマウス座標。&lt;br&gt;xy: 現在のマウス座標（毎フレーム更新）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;Explanation（English）&lt;/td&gt;
+&lt;td style="text-align: left"&gt;mouse pixel coords. &lt;br&gt;xy: current (if MLB down), &lt;br&gt;zw: click&lt;/td&gt;
+&lt;td style="text-align: left"&gt;mouse normalized coords. &lt;br&gt;xy: current&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;xyの値域&lt;/td&gt;
+&lt;td style="text-align: left"&gt;0〜解像度&lt;/td&gt;
+&lt;td style="text-align: left"&gt;0〜1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description></item></channel></rss>

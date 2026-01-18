@@ -1,37 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Study | gam0022.net</title>
-    <link>http://localhost:1313/tags/study/</link>
-      <atom:link href="http://localhost:1313/tags/study/index.xml" rel="self" type="application/rss+xml" />
-    <description>Study</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Feb 2014 13:55:00 +0900</lastBuildDate>
-    <image>
-      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
-      <title>Study</title>
-      <link>http://localhost:1313/tags/study/</link>
-    </image>
-    
-    <item>
-      <title>COJTの成果発表を終えて</title>
-      <link>http://localhost:1313/blog/2014/02/01/cojt/</link>
-      <pubDate>Sat, 01 Feb 2014 13:55:00 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2014/02/01/cojt/</guid>
-      <description>&lt;h2 id=&#34;cojtとは&#34;&gt;COJTとは&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Study | gam0022.net</title><link>https://gam0022.net/tags/study/</link><atom:link href="https://gam0022.net/tags/study/index.xml" rel="self" type="application/rss+xml"/><description>Study</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Feb 2014 13:55:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Study</title><link>https://gam0022.net/tags/study/</link></image><item><title>COJTの成果発表を終えて</title><link>https://gam0022.net/blog/2014/02/01/cojt/</link><pubDate>Sat, 01 Feb 2014 13:55:00 +0900</pubDate><guid>https://gam0022.net/blog/2014/02/01/cojt/</guid><description>&lt;h2 id="cojtとは"&gt;COJTとは&lt;/h2&gt;
 &lt;p&gt;1/31に、筑波大学キャンパスOJT(以下COJT)という大学の産学連携の授業の成果発表をしてきました。&lt;/p&gt;
 &lt;p&gt;COJTには、ソフトウェアコースとハードウェアコースがあり、私はソフトウェアコースの方を受講しました。&lt;/p&gt;
 &lt;p&gt;ソフトウェアコースでは、アクセル社のAG4というグラッフィクスLSIで動作するゲームの開発と発表を行いました。&lt;/p&gt;
 &lt;p&gt;ハードウェアコースは、FPGAを使って各自好きな回路を作成したようです。&lt;/p&gt;
-&lt;h2 id=&#34;開発したゲームについて&#34;&gt;開発したゲームについて&lt;/h2&gt;
+&lt;h2 id="開発したゲームについて"&gt;開発したゲームについて&lt;/h2&gt;
 &lt;p&gt;私たちのチームは「大五郎の冒険」という横スクロールアクションゲームを作りました。&lt;/p&gt;
 &lt;p&gt;主人公は「大五郎」という犬で、行方不明になった、飼い主の「えりたん」を探しに冒険する、というストーリでした。&lt;/p&gt;
 &lt;p&gt;知っている人は知っていると思いますが、「大五郎」も「えりたん」もTwitterのBotなので、
 攻撃方法や技は Twitter のお気に入りやリツイートなどをモチーフにしました。&lt;/p&gt;
 &lt;p&gt;スクリーンショットを貼るのが面倒なので、Twitterのツイートを埋め込みます。&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;ja&#34;&gt;&lt;p&gt;【お知らせ】大五郎とえりたんが登場するアクションゲームを作りました！&amp;#10;1/31(金) 4・5限の時間にCOJTルーム(3C203)で遊べます！ぜひ見に来て下さい！ &lt;a href=&#34;https://twitter.com/search?q=%23daigoroubot&amp;amp;src=hash&#34;&gt;#daigoroubot&lt;/a&gt; &lt;a href=&#34;http://t.co/tYAP0cvvwa&#34;&gt;pic.twitter.com/tYAP0cvvwa&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/statuses/428066152917381120&#34;&gt;2014, 1月 28&lt;/a&gt;&lt;/blockquote&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;ja&#34;&gt;&lt;p&gt;【明日】大五郎とえりたんが登場するアクションゲームを作りました！ 1/31(金) 4・5限の時間にCOJTルーム(3C203)で遊べます！ぜひ見に来て下さい！ &lt;a href=&#34;https://twitter.com/search?q=%23daigoroubot&amp;amp;src=hash&#34;&gt;#daigoroubot&lt;/a&gt; &lt;a href=&#34;http://t.co/yMsYfx9TmU&#34;&gt;pic.twitter.com/yMsYfx9TmU&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/statuses/428761820925423616&#34;&gt;2014, 1月 30&lt;/a&gt;&lt;/blockquote&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;ja&#34;&gt;&lt;p&gt;COJTなう！ &lt;a href=&#34;http://t.co/AZNyWpdUSr&#34;&gt;pic.twitter.com/AZNyWpdUSr&lt;/a&gt;&lt;/p&gt;&amp;mdash; atk (@hhelibe0207) &lt;a href=&#34;https://twitter.com/hhelibe0207/statuses/429111570275119105&#34;&gt;2014, 1月 31&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;【お知らせ】大五郎とえりたんが登場するアクションゲームを作りました！&amp;#10;1/31(金) 4・5限の時間にCOJTルーム(3C203)で遊べます！ぜひ見に来て下さい！ &lt;a href="https://twitter.com/search?q=%23daigoroubot&amp;amp;src=hash"&gt;#daigoroubot&lt;/a&gt; &lt;a href="http://t.co/tYAP0cvvwa"&gt;pic.twitter.com/tYAP0cvvwa&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/statuses/428066152917381120"&gt;2014, 1月 28&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;【明日】大五郎とえりたんが登場するアクションゲームを作りました！ 1/31(金) 4・5限の時間にCOJTルーム(3C203)で遊べます！ぜひ見に来て下さい！ &lt;a href="https://twitter.com/search?q=%23daigoroubot&amp;amp;src=hash"&gt;#daigoroubot&lt;/a&gt; &lt;a href="http://t.co/yMsYfx9TmU"&gt;pic.twitter.com/yMsYfx9TmU&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/statuses/428761820925423616"&gt;2014, 1月 30&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;COJTなう！ &lt;a href="http://t.co/AZNyWpdUSr"&gt;pic.twitter.com/AZNyWpdUSr&lt;/a&gt;&lt;/p&gt;&amp;mdash; atk (@hhelibe0207) &lt;a href="https://twitter.com/hhelibe0207/statuses/429111570275119105"&gt;2014, 1月 31&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;p&gt;説明書もあるので、アップロードしておきます。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -39,8 +20,8 @@
 &lt;/ul&gt;
 &lt;p&gt;画面はとてもゆるふわ系で明るい感じですが、難易度は鬼畜です。&lt;/p&gt;
 &lt;p&gt;それを想定して、30回コンティニュー可能にしました。&lt;/p&gt;
-&lt;h2 id=&#34;開発中のこと&#34;&gt;開発中のこと&lt;/h2&gt;
-&lt;h3 id=&#34;全体の流れ&#34;&gt;全体の流れ&lt;/h3&gt;
+&lt;h2 id="開発中のこと"&gt;開発中のこと&lt;/h2&gt;
+&lt;h3 id="全体の流れ"&gt;全体の流れ&lt;/h3&gt;
 &lt;p&gt;大学の後期の授業のプロジェクトだったので、10月から1月の4ヶ月の開発期間でした。&lt;/p&gt;
 &lt;p&gt;4ヶ月というと長いような感じがしますが、この間にAG4での開発を覚えるための課題があったり、
 ゲームの企画を考えたり、冬休みや就活などがあったので、実際に集中して開発できたのは、冬休み明けの1ヶ月くらいでした。&lt;/p&gt;
@@ -49,69 +30,54 @@
 &lt;p&gt;採用されなかった企画の人は、くじ引きで採用された企画の人とペアを組んで開発しました。
 ちなみに、講師の独断と偏見によって、企画は選定は行われました。&lt;/p&gt;
 &lt;p&gt;私の企画は幸いなことに審査を通過して、好きなゲームを開発することができました。&lt;/p&gt;
-&lt;h4 id=&#34;音声収録&#34;&gt;音声収録&lt;/h4&gt;
+&lt;h4 id="音声収録"&gt;音声収録&lt;/h4&gt;
 &lt;p&gt;また、1月の10日に、実際にスタジオまで行って、ゲーム用の音声をプロ声優の
 さんに収録して頂きました。&lt;/p&gt;
 &lt;p&gt;プロの声優さんは、本当にすごかったです。テンションが上がりました。&lt;/p&gt;
 &lt;p&gt;少年から幼女、犬まで、あらゆる役を完璧に演じてしまったので感動しました。&lt;/p&gt;
 &lt;p&gt;この音声収録ができただけでも、この授業を受けた価値があったなと思いました。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;音声収録風景&#34; 
-               srcset=&#34;http://localhost:1313/blog/2014/02/01/cojt/voice_hu_848845ec0b3b5eff.webp 320w, http://localhost:1313/blog/2014/02/01/cojt/voice_hu_3b42a6959064955d.webp 480w, http://localhost:1313/blog/2014/02/01/cojt/voice_hu_2529165d1245bf5a.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2014/02/01/cojt/voice_hu_848845ec0b3b5eff.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;570&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="音声収録風景"
+srcset="https://gam0022.net/blog/2014/02/01/cojt/voice_hu_848845ec0b3b5eff.webp 320w, https://gam0022.net/blog/2014/02/01/cojt/voice_hu_3b42a6959064955d.webp 480w, https://gam0022.net/blog/2014/02/01/cojt/voice_hu_2529165d1245bf5a.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2014/02/01/cojt/voice_hu_848845ec0b3b5eff.webp"
+width="760"
+height="570"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h3 id=&#34;技術的なこと&#34;&gt;技術的なこと&lt;/h3&gt;
+&lt;h3 id="技術的なこと"&gt;技術的なこと&lt;/h3&gt;
 &lt;p&gt;AG4に対応したコンパイラがCしか無くて苦労しました。(しかも古いC89とかの古い規格でした。)&lt;/p&gt;
 &lt;p&gt;動的デバッグもできなかったので、モダンな開発方法に慣れた私にとっては非常に辛いものでした。&lt;/p&gt;
 &lt;p&gt;allocなどで動的にメモリを確保することもできなかったので、Taskシステムというのを私のチームは採用することにしました。&lt;/p&gt;
-&lt;h4 id=&#34;taskシステム&#34;&gt;Taskシステム&lt;/h4&gt;
-&lt;h5 id=&#34;継承&#34;&gt;継承&lt;/h5&gt;
+&lt;h4 id="taskシステム"&gt;Taskシステム&lt;/h4&gt;
+&lt;h5 id="継承"&gt;継承&lt;/h5&gt;
 &lt;p&gt;例えばアクションゲームであれば、自機や敵やブロックを管理するときに、x,y座標やw,hの大きさなどは共通する情報なので、
 これはBaseObjectのフィールドとして保持しておいて、自機ならHPやら弾の数などを派生クラスのフィールドとして保持しておきたい場面があると思います。&lt;/p&gt;
 &lt;p&gt;要するに継承がしたかったわけですが、これは union を使って解決しました。&lt;/p&gt;
 &lt;p&gt;Taskという struct を BaseObject として、Task の中に Data という union 型のフィールドを用意しました。
 union には 派生クラス用のフィールドを保持する PlayerData や EnemyData などの struct を入れることで、継承っぽいことをしました。&lt;/p&gt;
 &lt;p&gt;union の実用的な使い方を生まれて初めて実践したような気がします。&lt;/p&gt;
-&lt;h5 id=&#34;動的確保&#34;&gt;動的確保&lt;/h5&gt;
+&lt;h5 id="動的確保"&gt;動的確保&lt;/h5&gt;
 &lt;p&gt;継承っぽいことをすることで、ゲーム内の全てのオブジェクトを Task という struct で管理できるようになりました。&lt;/p&gt;
 &lt;p&gt;動的確保については、Task 型の配列をあらかじめ配列として十分な数を確保しておいて、
 allocTask() という関数で、未使用な配列の要素のポインタを返すようにます。&lt;/p&gt;
 &lt;p&gt;不要になった Task は、destoryFlag を立てておいて、allocTask() が呼ばれた時に、
 destoryFlag が立った要素を返すようにすれば、簡単なGCっぽいこともできて完璧でした。&lt;/p&gt;
-&lt;h4 id=&#34;github-の-organization&#34;&gt;GitHub の Organization&lt;/h4&gt;
+&lt;h4 id="github-の-organization"&gt;GitHub の Organization&lt;/h4&gt;
 &lt;p&gt;GitHub の Organization を初めてまともに利用しましたが、簡単に利用できました。&lt;/p&gt;
 &lt;p&gt;pull request とかするよりは断然楽だったと思います。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;キャラクターの動き&#34;&gt;キャラクターの動き&lt;/h4&gt;
+&lt;h4 id="キャラクターの動き"&gt;キャラクターの動き&lt;/h4&gt;
 &lt;p&gt;COJTに実際に見学した人しか分からないとは思いますが、大五郎の動きがすごいヌルヌルしていてよく出来ていたと思います。(手前味噌すぎる。)&lt;/p&gt;
 &lt;p&gt;大五郎のモーションについては相方が全部やってくれました。大五郎の3Dモデルを作成して、MMDでモーションを作って、2Dにレンダリングしました。&lt;/p&gt;
-&lt;h2 id=&#34;投票結果&#34;&gt;投票結果&lt;/h2&gt;
+&lt;h2 id="投票結果"&gt;投票結果&lt;/h2&gt;
 &lt;p&gt;成果発表では、見学者の投票によってゲームの順位が決められるのですが、
 私たちのチームは残念ながら上位1,2チームに入賞することはできまんでした。
 (上位1チームは打ち上げ無料、2チームは成績がA+ という特典がありました。)&lt;/p&gt;
@@ -125,27 +91,19 @@ destoryFlag が立った要素を返すようにすれば、簡単なGCっぽい
 楽しんでくれる人も多いだろうという思惑があったのですが、その点に頼りすぎてしまった様な気がします。&lt;/p&gt;
 &lt;p&gt;難易度はものすごく高くしたつもりでしたが、半分くらいの人が最終面までクリアして、エンディングに辿り着いたので、
 その点は想定していたくらいの難易度にできて、とても良かったと思います。&lt;/p&gt;
-&lt;h2 id=&#34;最後に&#34;&gt;最後に&lt;/h2&gt;
+&lt;h2 id="最後に"&gt;最後に&lt;/h2&gt;
 &lt;p&gt;総合的に考えると、COJTを受講して良かったと思います。&lt;/p&gt;
 &lt;p&gt;前に
 というエントリーを書いたので、詳しくはそちらを参照してください。&lt;/p&gt;
 &lt;p&gt;授業の内容というよりは、3編成やTAなどの新しい人脈が増えて良かったという点ですごい価値がありました。&lt;/p&gt;
 &lt;p&gt;ちょっとしたデスマーチ感も個人的にはすごく楽しかったです!!
 レッドブル美味しい!!&lt;/p&gt;
-&lt;h2 id=&#34;他のチームのエントリー&#34;&gt;他のチームのエントリー&lt;/h2&gt;
+&lt;h2 id="他のチームのエントリー"&gt;他のチームのエントリー&lt;/h2&gt;
 &lt;p&gt;1位のチームの人のエントリーです。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>インタラクティブCGの成果報告</title>
-      <link>http://localhost:1313/blog/2014/01/18/interactive-cg/</link>
-      <pubDate>Sat, 18 Jan 2014 16:54:00 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2014/01/18/interactive-cg/</guid>
-      <description>&lt;h2 id=&#34;近状報告&#34;&gt;近状報告&lt;/h2&gt;
+&lt;/ul&gt;</description></item><item><title>インタラクティブCGの成果報告</title><link>https://gam0022.net/blog/2014/01/18/interactive-cg/</link><pubDate>Sat, 18 Jan 2014 16:54:00 +0900</pubDate><guid>https://gam0022.net/blog/2014/01/18/interactive-cg/</guid><description>&lt;h2 id="近状報告"&gt;近状報告&lt;/h2&gt;
 &lt;p&gt;早いもので大学3年の授業が終わってCOJTを残すのみとなってしまいました。&lt;/p&gt;
 &lt;p&gt;一昨日成績開示があったのですが、卒業に必要な単位のうち取り切っていないのは、
 卒業研究と技術英語と体育だけなので、実質的に大学の授業は取り終わったに等しいです。&lt;/p&gt;
@@ -153,108 +111,72 @@ destoryFlag が立った要素を返すようにすれば、簡単なGCっぽい
 今学期で一番楽しい授業だったと思うので、振り返ってみます。&lt;/p&gt;
 &lt;p&gt;ちなみに、去年にも
 を書いていました。&lt;/p&gt;
-&lt;h2 id=&#34;インタラクティブcgとは&#34;&gt;インタラクティブCGとは&lt;/h2&gt;
+&lt;h2 id="インタラクティブcgとは"&gt;インタラクティブCGとは&lt;/h2&gt;
 &lt;p&gt;基本的には、C++で OpenGL と FLTK を使ってゴリゴリCG関係のプログラミングをする感じでした。&lt;/p&gt;
 &lt;p&gt;この授業の面白い特徴として、毎回の課題で受講者全員で投票を行うコンテストがありました。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;コンテストで上位3名に入賞すると、図書カードがゲットできます！！&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;結論から言うと、全3回のコンテストで、3回とも入賞することができました!!&lt;/p&gt;
 &lt;p&gt;これはこれまで誰も成し遂げたことがない未踏の快挙らしいです。&lt;/p&gt;
 &lt;p&gt;全3回の課題を振り返ってみます。&lt;/p&gt;
-&lt;h3 id=&#34;課題1-impressionist&#34;&gt;課題1 Impressionist&lt;/h3&gt;
-&lt;h4 id=&#34;課題の概要&#34;&gt;課題の概要&lt;/h4&gt;
+&lt;h3 id="課題1-impressionist"&gt;課題1 Impressionist&lt;/h3&gt;
+&lt;h4 id="課題の概要"&gt;課題の概要&lt;/h4&gt;
 &lt;p&gt;説明が面倒なので、授業の課題の概要から引用します。&lt;/p&gt;
-
-
-
-  
-  &lt;blockquote class=&#34;border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6&#34;&gt;
-    &lt;h4 id=&#34;impressionist-印象派風に画像をレンダリングするプログラム&#34;&gt;Impressionist ～印象派風に画像をレンダリングするプログラム～&lt;/h4&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;h4 id="impressionist-印象派風に画像をレンダリングするプログラム"&gt;Impressionist ～印象派風に画像をレンダリングするプログラム～&lt;/h4&gt;
 &lt;p&gt;印象派（Impressionist）というプログラムは印象派の書いた絵のような画像を作り出すインタラクティブなプログラムです。印象派画像を作り出すために、ユーザは画像を読み込み空白のピクセルキャンバスに一連の“ブラシストローク”を書き込む。これらのブラシストロークはもとの画像から色を取り込み、以下のサンプルのような、絵画のような感じを作り出す。要は写真から、油絵風の画像を作る。&lt;/p&gt;
-
-  &lt;/blockquote&gt;
-
-&lt;h4 id=&#34;成果物&#34;&gt;成果物&lt;/h4&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="成果物"&gt;成果物&lt;/h4&gt;
 &lt;p&gt;星型のブラシを実装して、2匹のトラの画像を加工して、こんな画像を作りました。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;Impressionist - Tiger&#34; 
-               srcset=&#34;http://localhost:1313/blog/2014/01/18/interactive-cg/impressionist_hu_6fb27a4af119df7a.webp 320w, http://localhost:1313/blog/2014/01/18/interactive-cg/impressionist_hu_28936224e1c15509.webp 480w, http://localhost:1313/blog/2014/01/18/interactive-cg/impressionist_hu_90c19be8646a4e5a.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2014/01/18/interactive-cg/impressionist_hu_6fb27a4af119df7a.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;570&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="Impressionist - Tiger"
+srcset="https://gam0022.net/blog/2014/01/18/interactive-cg/impressionist_hu_6fb27a4af119df7a.webp 320w, https://gam0022.net/blog/2014/01/18/interactive-cg/impressionist_hu_28936224e1c15509.webp 480w, https://gam0022.net/blog/2014/01/18/interactive-cg/impressionist_hu_90c19be8646a4e5a.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2014/01/18/interactive-cg/impressionist_hu_6fb27a4af119df7a.webp"
+width="760"
+height="570"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h4 id=&#34;コンテスト結果&#34;&gt;コンテスト結果&lt;/h4&gt;
+&lt;h4 id="コンテスト結果"&gt;コンテスト結果&lt;/h4&gt;
 &lt;p&gt;3位に入賞して、図書館500円分をゲットしました。&lt;/p&gt;
 &lt;p&gt;正直、この課題は元の画像を選ぶセンスが90%くらいな気がしました。&lt;/p&gt;
-&lt;h3 id=&#34;課題2-modeler&#34;&gt;課題2 Modeler&lt;/h3&gt;
-&lt;h4 id=&#34;課題の概要-1&#34;&gt;課題の概要&lt;/h4&gt;
+&lt;h3 id="課題2-modeler"&gt;課題2 Modeler&lt;/h3&gt;
+&lt;h4 id="課題の概要-1"&gt;課題の概要&lt;/h4&gt;
 &lt;p&gt;だいたいこんな感じの課題でした。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;OpenGL でプリミティブを描画する関数を作る。例えば、トーラス型(ドーナッツ型)など。&lt;/li&gt;
 &lt;li&gt;それを組合せて何かモデルを作る。&lt;/li&gt;
 &lt;li&gt;rotate や translate でモデルを可動させてアニメーションを作る。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h4 id=&#34;成果物-1&#34;&gt;成果物&lt;/h4&gt;
+&lt;h4 id="成果物-1"&gt;成果物&lt;/h4&gt;
 &lt;p&gt;ライオンがドーナッツを追いかけて走るアニメーションを作りました。&lt;/p&gt;
 &lt;p&gt;版権的にヤバそうなのは気のせいです。&lt;/p&gt;
 &lt;p&gt;ドーナッツ型は座標計算して、3角メッシュで表現しています。
 が参考になりました。&lt;/p&gt;
 &lt;p&gt;実は、足の部分は回転体になっているのですが、楕円球で十分だったような気がします。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;&lt;img alt=&#34;Modeler - Lion&#34;
-           src=&#34;http://localhost:1313/blog/2014/01/18/interactive-cg/modeler.gif&#34;
-           loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;&lt;img alt="Modeler - Lion"
+src="https://gam0022.net/blog/2014/01/18/interactive-cg/modeler.gif"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h4 id=&#34;コンテスト結果-1&#34;&gt;コンテスト結果&lt;/h4&gt;
+&lt;h4 id="コンテスト結果-1"&gt;コンテスト結果&lt;/h4&gt;
 &lt;p&gt;2位に入賞して、図書館500円分をゲットしました。&lt;/p&gt;
 &lt;p&gt;gifアニメのサイズが2MB以上になってしまって、焦りました。&lt;/p&gt;
-&lt;h3 id=&#34;課題3-raytracer&#34;&gt;課題3 RayTracer&lt;/h3&gt;
-&lt;h4 id=&#34;課題の概要-2&#34;&gt;課題の概要&lt;/h4&gt;
+&lt;h3 id="課題3-raytracer"&gt;課題3 RayTracer&lt;/h3&gt;
+&lt;h4 id="課題の概要-2"&gt;課題の概要&lt;/h4&gt;
 &lt;p&gt;だいたいこんな感じの課題でした。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;POV-Ray 互換のアプリをC++で実装する（さすがにゼロベースではキツイので、雛形みたいのはありました）&lt;/li&gt;
 &lt;li&gt;POV-Ray ファイルを作って、1. のプログラムで描画させる&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;POV-Ray というのは、レイトレーシングソフトウェアのことです。&lt;/p&gt;
-&lt;h4 id=&#34;成果物-2&#34;&gt;成果物&lt;/h4&gt;
+&lt;h4 id="成果物-2"&gt;成果物&lt;/h4&gt;
 &lt;p&gt;1.のPOV-Ray 互換のアプリに、こんな機能を実装しました。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;trimesh（3角メッシュの集合）の描画&lt;/li&gt;
@@ -267,43 +189,20 @@ destoryFlag が立った要素を返すようにすれば、簡単なGCっぽい
 &lt;p&gt;光源の設定をするのが非常に大変でした。&lt;/p&gt;
 &lt;p&gt;下の画像は、アンチエイリアスするために、2倍で描画して、Macのプレビューで縮小したものです。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;RayTracer - Ruby&#34; 
-               srcset=&#34;http://localhost:1313/blog/2014/01/18/interactive-cg/raytracer_hu_12dd758fdfd2f971.webp 320w, http://localhost:1313/blog/2014/01/18/interactive-cg/raytracer_hu_7f11f7da6630304f.webp 480w, http://localhost:1313/blog/2014/01/18/interactive-cg/raytracer_hu_31c368fb39f59d2e.webp 512w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2014/01/18/interactive-cg/raytracer_hu_12dd758fdfd2f971.webp&#34;
-               width=&#34;512&#34;
-               height=&#34;512&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="RayTracer - Ruby"
+srcset="https://gam0022.net/blog/2014/01/18/interactive-cg/raytracer_hu_12dd758fdfd2f971.webp 320w, https://gam0022.net/blog/2014/01/18/interactive-cg/raytracer_hu_7f11f7da6630304f.webp 480w, https://gam0022.net/blog/2014/01/18/interactive-cg/raytracer_hu_31c368fb39f59d2e.webp 512w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2014/01/18/interactive-cg/raytracer_hu_12dd758fdfd2f971.webp"
+width="512"
+height="512"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h4 id=&#34;コンテスト結果-2&#34;&gt;コンテスト結果&lt;/h4&gt;
-&lt;p&gt;1位に入賞しました。まだ、図書カードは貰ってないので、早く欲しいです（2015/12/16追記。受け取れないうちに大学を卒業してしまいました…）。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>コンピュータグラフィックス基礎の成果報告</title>
-      <link>http://localhost:1313/blog/2013/03/12/computer-graphics/</link>
-      <pubDate>Tue, 12 Mar 2013 23:28:00 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2013/03/12/computer-graphics/</guid>
-      <description>&lt;p&gt;久々の更新です。&lt;/p&gt;
+&lt;h4 id="コンテスト結果-2"&gt;コンテスト結果&lt;/h4&gt;
+&lt;p&gt;1位に入賞しました。まだ、図書カードは貰ってないので、早く欲しいです（2015/12/16追記。受け取れないうちに大学を卒業してしまいました…）。&lt;/p&gt;</description></item><item><title>コンピュータグラフィックス基礎の成果報告</title><link>https://gam0022.net/blog/2013/03/12/computer-graphics/</link><pubDate>Tue, 12 Mar 2013 23:28:00 +0900</pubDate><guid>https://gam0022.net/blog/2013/03/12/computer-graphics/</guid><description>&lt;p&gt;久々の更新です。&lt;/p&gt;
 &lt;p&gt;早いもので大学2年の授業が終わって春休みになってしまいました。&lt;/p&gt;
 &lt;p&gt;3学期には、
 という授業を履修したのですが、
@@ -313,591 +212,275 @@ destoryFlag が立った要素を返すようにすれば、簡単なGCっぽい
 &lt;p&gt;ソースコードなどはすべて
 にあるので、
 気になる人はぜひ見てね!&lt;/p&gt;
-&lt;h2 id=&#34;課題3-asteroids&#34;&gt;課題3 ASTEROIDS&lt;/h2&gt;
+&lt;h2 id="課題3-asteroids"&gt;課題3 ASTEROIDS&lt;/h2&gt;
 &lt;p&gt;OpenGLを使ってアニメーションを作るという課題があったので、
 全方位シューティングゲームを作ってみました。&lt;/p&gt;
 &lt;p&gt;技術的な点だと、自機、隕石、弾の3つは、慣性移動、衝突判定、描画などは共通の処理でできるので、
 この3つを&lt;code&gt;object&lt;/code&gt;という構造体1つで管理して、同じような処理を何度も書かないようにしました。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;title画面&#34; 
-               srcset=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/3/title_hu_506e32c00451dc61.webp 320w, http://localhost:1313/blog/2013/03/12/computer-graphics/3/title_hu_ab40d72366c92ffb.webp 480w, http://localhost:1313/blog/2013/03/12/computer-graphics/3/title_hu_6bf69f91dd88c1c3.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/3/title_hu_506e32c00451dc61.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;606&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="title画面"
+srcset="https://gam0022.net/blog/2013/03/12/computer-graphics/3/title_hu_506e32c00451dc61.webp 320w, https://gam0022.net/blog/2013/03/12/computer-graphics/3/title_hu_ab40d72366c92ffb.webp 480w, https://gam0022.net/blog/2013/03/12/computer-graphics/3/title_hu_6bf69f91dd88c1c3.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2013/03/12/computer-graphics/3/title_hu_506e32c00451dc61.webp"
+width="760"
+height="606"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;!-- more --&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;プレイ中&#34; 
-               srcset=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/3/playing_hu_d6c1039ffe7eb31a.webp 320w, http://localhost:1313/blog/2013/03/12/computer-graphics/3/playing_hu_ec16a29103db197f.webp 480w, http://localhost:1313/blog/2013/03/12/computer-graphics/3/playing_hu_44560fdf818d2ea8.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/3/playing_hu_d6c1039ffe7eb31a.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;606&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="プレイ中"
+srcset="https://gam0022.net/blog/2013/03/12/computer-graphics/3/playing_hu_d6c1039ffe7eb31a.webp 320w, https://gam0022.net/blog/2013/03/12/computer-graphics/3/playing_hu_ec16a29103db197f.webp 480w, https://gam0022.net/blog/2013/03/12/computer-graphics/3/playing_hu_44560fdf818d2ea8.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2013/03/12/computer-graphics/3/playing_hu_d6c1039ffe7eb31a.webp"
+width="760"
+height="606"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;ゲームオーバー&#34; 
-               srcset=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/3/gameover_hu_59e859b37d19a120.webp 320w, http://localhost:1313/blog/2013/03/12/computer-graphics/3/gameover_hu_8d0d0afdd4aceb95.webp 480w, http://localhost:1313/blog/2013/03/12/computer-graphics/3/gameover_hu_3695d624b93e6075.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/3/gameover_hu_59e859b37d19a120.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;606&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="ゲームオーバー"
+srcset="https://gam0022.net/blog/2013/03/12/computer-graphics/3/gameover_hu_59e859b37d19a120.webp 320w, https://gam0022.net/blog/2013/03/12/computer-graphics/3/gameover_hu_8d0d0afdd4aceb95.webp 480w, https://gam0022.net/blog/2013/03/12/computer-graphics/3/gameover_hu_3695d624b93e6075.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2013/03/12/computer-graphics/3/gameover_hu_59e859b37d19a120.webp"
+width="760"
+height="606"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h2 id=&#34;課題4-立体の展開図&#34;&gt;課題4 立体の展開図&lt;/h2&gt;
+&lt;h2 id="課題4-立体の展開図"&gt;課題4 立体の展開図&lt;/h2&gt;
 &lt;p&gt;OpenGLの回転と平行移動を駆使して、立体の展開図のアニメーションを作りました。&lt;/p&gt;
 &lt;p&gt;まずは立方体の展開図。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;立方体-1&#34; 
-               srcset=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/4/img1_1_hu_a2d8bf68f7396e47.webp 320w, http://localhost:1313/blog/2013/03/12/computer-graphics/4/img1_1_hu_a63f4a38682d1dde.webp 480w, http://localhost:1313/blog/2013/03/12/computer-graphics/4/img1_1_hu_c8e0dbe55b530b4f.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/4/img1_1_hu_a2d8bf68f7396e47.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;606&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;立方体-2&#34; 
-               srcset=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/4/img1_2_hu_8b6b028f198d9dd2.webp 320w, http://localhost:1313/blog/2013/03/12/computer-graphics/4/img1_2_hu_d06234865054f639.webp 480w, http://localhost:1313/blog/2013/03/12/computer-graphics/4/img1_2_hu_aa02b3b4d7f494f8.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/4/img1_2_hu_8b6b028f198d9dd2.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;606&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;立方体-3&#34; 
-               srcset=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/4/img1_3_hu_6dde9081a42e585f.webp 320w, http://localhost:1313/blog/2013/03/12/computer-graphics/4/img1_3_hu_4471bb1fd10c7f62.webp 480w, http://localhost:1313/blog/2013/03/12/computer-graphics/4/img1_3_hu_e25061ca92c52c75.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/4/img1_3_hu_6dde9081a42e585f.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;606&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="立方体-1"
+srcset="https://gam0022.net/blog/2013/03/12/computer-graphics/4/img1_1_hu_a2d8bf68f7396e47.webp 320w, https://gam0022.net/blog/2013/03/12/computer-graphics/4/img1_1_hu_a63f4a38682d1dde.webp 480w, https://gam0022.net/blog/2013/03/12/computer-graphics/4/img1_1_hu_c8e0dbe55b530b4f.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2013/03/12/computer-graphics/4/img1_1_hu_a2d8bf68f7396e47.webp"
+width="760"
+height="606"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="立方体-2"
+srcset="https://gam0022.net/blog/2013/03/12/computer-graphics/4/img1_2_hu_8b6b028f198d9dd2.webp 320w, https://gam0022.net/blog/2013/03/12/computer-graphics/4/img1_2_hu_d06234865054f639.webp 480w, https://gam0022.net/blog/2013/03/12/computer-graphics/4/img1_2_hu_aa02b3b4d7f494f8.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2013/03/12/computer-graphics/4/img1_2_hu_8b6b028f198d9dd2.webp"
+width="760"
+height="606"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="立方体-3"
+srcset="https://gam0022.net/blog/2013/03/12/computer-graphics/4/img1_3_hu_6dde9081a42e585f.webp 320w, https://gam0022.net/blog/2013/03/12/computer-graphics/4/img1_3_hu_4471bb1fd10c7f62.webp 480w, https://gam0022.net/blog/2013/03/12/computer-graphics/4/img1_3_hu_e25061ca92c52c75.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2013/03/12/computer-graphics/4/img1_3_hu_6dde9081a42e585f.webp"
+width="760"
+height="606"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;正12面体となると、座標の計算が大変でしたが、気合で実装しました。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;正12面体-1&#34; 
-               srcset=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/4/img2_1_hu_53fdcfcaad8acb93.webp 320w, http://localhost:1313/blog/2013/03/12/computer-graphics/4/img2_1_hu_1ef738a90af1d063.webp 480w, http://localhost:1313/blog/2013/03/12/computer-graphics/4/img2_1_hu_35692bab9207ed76.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/4/img2_1_hu_53fdcfcaad8acb93.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;606&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;正12面体-2&#34; 
-               srcset=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/4/img2_2_hu_66fed767221dda1e.webp 320w, http://localhost:1313/blog/2013/03/12/computer-graphics/4/img2_2_hu_19d5b5015a9feaff.webp 480w, http://localhost:1313/blog/2013/03/12/computer-graphics/4/img2_2_hu_8482734c93f227e3.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/4/img2_2_hu_66fed767221dda1e.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;606&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;正12面体-3&#34; 
-               srcset=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/4/img2_3_hu_f205179116dcd028.webp 320w, http://localhost:1313/blog/2013/03/12/computer-graphics/4/img2_3_hu_db11dad7f515aaf3.webp 480w, http://localhost:1313/blog/2013/03/12/computer-graphics/4/img2_3_hu_30600e569cb2551e.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/4/img2_3_hu_f205179116dcd028.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;606&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;正12面体-4&#34; 
-               srcset=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/4/img2_4_hu_af7ab660d6fee2b5.webp 320w, http://localhost:1313/blog/2013/03/12/computer-graphics/4/img2_4_hu_fd13c5b0c9132633.webp 480w, http://localhost:1313/blog/2013/03/12/computer-graphics/4/img2_4_hu_2bdb7d54979131a2.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/4/img2_4_hu_af7ab660d6fee2b5.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;606&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="正12面体-1"
+srcset="https://gam0022.net/blog/2013/03/12/computer-graphics/4/img2_1_hu_53fdcfcaad8acb93.webp 320w, https://gam0022.net/blog/2013/03/12/computer-graphics/4/img2_1_hu_1ef738a90af1d063.webp 480w, https://gam0022.net/blog/2013/03/12/computer-graphics/4/img2_1_hu_35692bab9207ed76.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2013/03/12/computer-graphics/4/img2_1_hu_53fdcfcaad8acb93.webp"
+width="760"
+height="606"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="正12面体-2"
+srcset="https://gam0022.net/blog/2013/03/12/computer-graphics/4/img2_2_hu_66fed767221dda1e.webp 320w, https://gam0022.net/blog/2013/03/12/computer-graphics/4/img2_2_hu_19d5b5015a9feaff.webp 480w, https://gam0022.net/blog/2013/03/12/computer-graphics/4/img2_2_hu_8482734c93f227e3.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2013/03/12/computer-graphics/4/img2_2_hu_66fed767221dda1e.webp"
+width="760"
+height="606"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="正12面体-3"
+srcset="https://gam0022.net/blog/2013/03/12/computer-graphics/4/img2_3_hu_f205179116dcd028.webp 320w, https://gam0022.net/blog/2013/03/12/computer-graphics/4/img2_3_hu_db11dad7f515aaf3.webp 480w, https://gam0022.net/blog/2013/03/12/computer-graphics/4/img2_3_hu_30600e569cb2551e.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2013/03/12/computer-graphics/4/img2_3_hu_f205179116dcd028.webp"
+width="760"
+height="606"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="正12面体-4"
+srcset="https://gam0022.net/blog/2013/03/12/computer-graphics/4/img2_4_hu_af7ab660d6fee2b5.webp 320w, https://gam0022.net/blog/2013/03/12/computer-graphics/4/img2_4_hu_fd13c5b0c9132633.webp 480w, https://gam0022.net/blog/2013/03/12/computer-graphics/4/img2_4_hu_2bdb7d54979131a2.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2013/03/12/computer-graphics/4/img2_4_hu_af7ab660d6fee2b5.webp"
+width="760"
+height="606"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h2 id=&#34;課題5-ベジエ曲線&#34;&gt;課題5 ベジエ曲線&lt;/h2&gt;
+&lt;h2 id="課題5-ベジエ曲線"&gt;課題5 ベジエ曲線&lt;/h2&gt;
 &lt;p&gt;マウスで制御点を入力してベジエ曲線を描く課題です。&lt;/p&gt;
 &lt;p&gt;定義式をプログラムにするだけの簡単なお仕事でした。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;制御点が３次のベジエ曲線&#34; 
-               srcset=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/5/img1_hu_3413187ec665efa7.webp 320w, http://localhost:1313/blog/2013/03/12/computer-graphics/5/img1_hu_18128b9a7addfac2.webp 480w, http://localhost:1313/blog/2013/03/12/computer-graphics/5/img1_hu_f9080aecb5f22f12.webp 680w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/5/img1_hu_3413187ec665efa7.webp&#34;
-               width=&#34;680&#34;
-               height=&#34;702&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="制御点が３次のベジエ曲線"
+srcset="https://gam0022.net/blog/2013/03/12/computer-graphics/5/img1_hu_3413187ec665efa7.webp 320w, https://gam0022.net/blog/2013/03/12/computer-graphics/5/img1_hu_18128b9a7addfac2.webp 480w, https://gam0022.net/blog/2013/03/12/computer-graphics/5/img1_hu_f9080aecb5f22f12.webp 680w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2013/03/12/computer-graphics/5/img1_hu_3413187ec665efa7.webp"
+width="680"
+height="702"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;オプションとして3次元バージョンにも挑戦しました。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;制御点が３次のベジエ曲線の3次元&#34; 
-               srcset=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/5/img2_hu_ca6fbe8d9e26feeb.webp 320w, http://localhost:1313/blog/2013/03/12/computer-graphics/5/img2_hu_2c4a226e44e2fa12.webp 480w, http://localhost:1313/blog/2013/03/12/computer-graphics/5/img2_hu_77b99e560b4b1020.webp 680w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/5/img2_hu_ca6fbe8d9e26feeb.webp&#34;
-               width=&#34;680&#34;
-               height=&#34;702&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="制御点が３次のベジエ曲線の3次元"
+srcset="https://gam0022.net/blog/2013/03/12/computer-graphics/5/img2_hu_ca6fbe8d9e26feeb.webp 320w, https://gam0022.net/blog/2013/03/12/computer-graphics/5/img2_hu_2c4a226e44e2fa12.webp 480w, https://gam0022.net/blog/2013/03/12/computer-graphics/5/img2_hu_77b99e560b4b1020.webp 680w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2013/03/12/computer-graphics/5/img2_hu_ca6fbe8d9e26feeb.webp"
+width="680"
+height="702"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h2 id=&#34;課題7-objファイルで立体を表現&#34;&gt;課題7 OBJファイルで立体を表現&lt;/h2&gt;
+&lt;h2 id="課題7-objファイルで立体を表現"&gt;課題7 OBJファイルで立体を表現&lt;/h2&gt;
 &lt;p&gt;OBJファイルという、頂点と面の2つの情報で立体を表す立体図形のフォーマットがあるのですが、
 このOBJファイルを出力するプログラムを作りました。&lt;/p&gt;
 &lt;p&gt;ちなみに、OBJファイルを描画するプログラムは先生の方で用意してくれました。&lt;/p&gt;
 &lt;p&gt;球体は普通にやると頂点部分で例外処理があって面倒ですが、頂点部分に複数の頂点がくるようにして楽しました。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;球体&#34; 
-               srcset=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/7/sphere_hu_1cce82a3f22e4ec0.webp 320w, http://localhost:1313/blog/2013/03/12/computer-graphics/7/sphere_hu_801bb3dcc3ca1961.webp 375w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/7/sphere_hu_1cce82a3f22e4ec0.webp&#34;
-               width=&#34;375&#34;
-               height=&#34;373&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="球体"
+srcset="https://gam0022.net/blog/2013/03/12/computer-graphics/7/sphere_hu_1cce82a3f22e4ec0.webp 320w, https://gam0022.net/blog/2013/03/12/computer-graphics/7/sphere_hu_801bb3dcc3ca1961.webp 375w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2013/03/12/computer-graphics/7/sphere_hu_1cce82a3f22e4ec0.webp"
+width="375"
+height="373"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;Wikipediaにトーラスの式があるので、それを参考にして作りました。&lt;/p&gt;
 &lt;p&gt;球の課題の式の定義部分を変更するだけで、できたので楽でした。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;トーラス&#34; 
-               srcset=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/7/torus_hu_314274e137dcffd8.webp 320w, http://localhost:1313/blog/2013/03/12/computer-graphics/7/torus_hu_7dc0c68f392d6f08.webp 414w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/7/torus_hu_314274e137dcffd8.webp&#34;
-               width=&#34;414&#34;
-               height=&#34;407&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="トーラス"
+srcset="https://gam0022.net/blog/2013/03/12/computer-graphics/7/torus_hu_314274e137dcffd8.webp 320w, https://gam0022.net/blog/2013/03/12/computer-graphics/7/torus_hu_7dc0c68f392d6f08.webp 414w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2013/03/12/computer-graphics/7/torus_hu_314274e137dcffd8.webp"
+width="414"
+height="407"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;3角関数で半径を変化させて、適当な回転体を作りました。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;回転体&#34; 
-               srcset=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/7/revolution_1_hu_90a89a91872afe0a.webp 320w, http://localhost:1313/blog/2013/03/12/computer-graphics/7/revolution_1_hu_ecfd7e6497c18e6e.webp 426w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/7/revolution_1_hu_90a89a91872afe0a.webp&#34;
-               width=&#34;426&#34;
-               height=&#34;415&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="回転体"
+srcset="https://gam0022.net/blog/2013/03/12/computer-graphics/7/revolution_1_hu_90a89a91872afe0a.webp 320w, https://gam0022.net/blog/2013/03/12/computer-graphics/7/revolution_1_hu_ecfd7e6497c18e6e.webp 426w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2013/03/12/computer-graphics/7/revolution_1_hu_90a89a91872afe0a.webp"
+width="426"
+height="415"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;また、マウスで入力した線から任意の回転体を作ったりしました。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;UFO&#34; 
-               srcset=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/7/ufo_hu_d71c15476bb7fb7.webp 320w, http://localhost:1313/blog/2013/03/12/computer-graphics/7/ufo_hu_4d63a2e0e2f7c755.webp 480w, http://localhost:1313/blog/2013/03/12/computer-graphics/7/ufo_hu_274c919b3810cb09.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/7/ufo_hu_d71c15476bb7fb7.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;485&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;コマ&#34; 
-               srcset=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/7/koma_hu_4dd5d74b39a820b4.webp 320w, http://localhost:1313/blog/2013/03/12/computer-graphics/7/koma_hu_8e8402c7ce3bb8ad.webp 480w, http://localhost:1313/blog/2013/03/12/computer-graphics/7/koma_hu_436198e048c82ad1.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/7/koma_hu_4dd5d74b39a820b4.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;497&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;グラス&#34; 
-               srcset=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/7/cup_hu_88c0314d4aefab69.webp 320w, http://localhost:1313/blog/2013/03/12/computer-graphics/7/cup_hu_9fbfbdf55ea7d608.webp 480w, http://localhost:1313/blog/2013/03/12/computer-graphics/7/cup_hu_b840160f0c621438.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/7/cup_hu_88c0314d4aefab69.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;485&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;hoge&#34; 
-               srcset=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/7/hoge_hu_8683756e19284ef4.webp 320w, http://localhost:1313/blog/2013/03/12/computer-graphics/7/hoge_hu_10c28580099595f7.webp 480w, http://localhost:1313/blog/2013/03/12/computer-graphics/7/hoge_hu_a2ea124a212b2489.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/7/hoge_hu_8683756e19284ef4.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;548&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="UFO"
+srcset="https://gam0022.net/blog/2013/03/12/computer-graphics/7/ufo_hu_d71c15476bb7fb7.webp 320w, https://gam0022.net/blog/2013/03/12/computer-graphics/7/ufo_hu_4d63a2e0e2f7c755.webp 480w, https://gam0022.net/blog/2013/03/12/computer-graphics/7/ufo_hu_274c919b3810cb09.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2013/03/12/computer-graphics/7/ufo_hu_d71c15476bb7fb7.webp"
+width="760"
+height="485"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="コマ"
+srcset="https://gam0022.net/blog/2013/03/12/computer-graphics/7/koma_hu_4dd5d74b39a820b4.webp 320w, https://gam0022.net/blog/2013/03/12/computer-graphics/7/koma_hu_8e8402c7ce3bb8ad.webp 480w, https://gam0022.net/blog/2013/03/12/computer-graphics/7/koma_hu_436198e048c82ad1.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2013/03/12/computer-graphics/7/koma_hu_4dd5d74b39a820b4.webp"
+width="760"
+height="497"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="グラス"
+srcset="https://gam0022.net/blog/2013/03/12/computer-graphics/7/cup_hu_88c0314d4aefab69.webp 320w, https://gam0022.net/blog/2013/03/12/computer-graphics/7/cup_hu_9fbfbdf55ea7d608.webp 480w, https://gam0022.net/blog/2013/03/12/computer-graphics/7/cup_hu_b840160f0c621438.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2013/03/12/computer-graphics/7/cup_hu_88c0314d4aefab69.webp"
+width="760"
+height="485"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="hoge"
+srcset="https://gam0022.net/blog/2013/03/12/computer-graphics/7/hoge_hu_8683756e19284ef4.webp 320w, https://gam0022.net/blog/2013/03/12/computer-graphics/7/hoge_hu_10c28580099595f7.webp 480w, https://gam0022.net/blog/2013/03/12/computer-graphics/7/hoge_hu_a2ea124a212b2489.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2013/03/12/computer-graphics/7/hoge_hu_8683756e19284ef4.webp"
+width="760"
+height="548"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;また、マウスで線を描くときに下から上に線を引くと、面が裏返るので、それを利用してプリンみたいなのも作りました。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;プリン&#34; 
-               srcset=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/7/pudding_hu_8a008b2c6fc425a3.webp 320w, http://localhost:1313/blog/2013/03/12/computer-graphics/7/pudding_hu_95002f0fd178544a.webp 375w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/7/pudding_hu_8a008b2c6fc425a3.webp&#34;
-               width=&#34;375&#34;
-               height=&#34;373&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="プリン"
+srcset="https://gam0022.net/blog/2013/03/12/computer-graphics/7/pudding_hu_8a008b2c6fc425a3.webp 320w, https://gam0022.net/blog/2013/03/12/computer-graphics/7/pudding_hu_95002f0fd178544a.webp 375w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2013/03/12/computer-graphics/7/pudding_hu_8a008b2c6fc425a3.webp"
+width="375"
+height="373"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h2 id=&#34;課題9-レイトレーシング&#34;&gt;課題9 レイトレーシング&lt;/h2&gt;
+&lt;h2 id="課題9-レイトレーシング"&gt;課題9 レイトレーシング&lt;/h2&gt;
 &lt;p&gt;レイトレーシングをやりました。&lt;/p&gt;
 &lt;p&gt;普通にやるとつまらないので、いろいろ工夫しました。&lt;/p&gt;
 &lt;ul&gt;
@@ -907,237 +490,102 @@ destoryFlag が立った要素を返すようにすれば、簡単なGCっぽい
 &lt;li&gt;Zbuffer的な概念を取り入れて、球が床に食い込んでも重なっても大丈夫なように&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;レイトレーシング1&#34; 
-               srcset=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/9/img3-1_hu_bfa4e45b3348c80d.webp 320w, http://localhost:1313/blog/2013/03/12/computer-graphics/9/img3-1_hu_51715d89e4f9740a.webp 480w, http://localhost:1313/blog/2013/03/12/computer-graphics/9/img3-1_hu_8c8aa9dc4f1f8282.webp 680w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/9/img3-1_hu_bfa4e45b3348c80d.webp&#34;
-               width=&#34;680&#34;
-               height=&#34;702&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;レイトレーシング2&#34; 
-               srcset=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/9/img3-2_hu_4d7151ccbad7fd0c.webp 320w, http://localhost:1313/blog/2013/03/12/computer-graphics/9/img3-2_hu_2d26553583504162.webp 480w, http://localhost:1313/blog/2013/03/12/computer-graphics/9/img3-2_hu_63e467b9e1167deb.webp 680w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/9/img3-2_hu_4d7151ccbad7fd0c.webp&#34;
-               width=&#34;680&#34;
-               height=&#34;702&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;レイトレーシング3&#34; 
-               srcset=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/9/img3-3_hu_1d52ede2418f9d26.webp 320w, http://localhost:1313/blog/2013/03/12/computer-graphics/9/img3-3_hu_e1d0113719658ba9.webp 480w, http://localhost:1313/blog/2013/03/12/computer-graphics/9/img3-3_hu_eb415440a4177df3.webp 592w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/9/img3-3_hu_1d52ede2418f9d26.webp&#34;
-               width=&#34;592&#34;
-               height=&#34;614&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;レイトレーシング4&#34; 
-               srcset=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/9/img3-4_hu_cfc4623f4a891fd1.webp 320w, http://localhost:1313/blog/2013/03/12/computer-graphics/9/img3-4_hu_b276ac30b682b2f6.webp 480w, http://localhost:1313/blog/2013/03/12/computer-graphics/9/img3-4_hu_d556e7ad4923036c.webp 680w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/9/img3-4_hu_cfc4623f4a891fd1.webp&#34;
-               width=&#34;680&#34;
-               height=&#34;702&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;レイトレーシング5&#34; 
-               srcset=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/9/img3-5_hu_3e37c384260ce707.webp 320w, http://localhost:1313/blog/2013/03/12/computer-graphics/9/img3-5_hu_61117a4a20a477bc.webp 480w, http://localhost:1313/blog/2013/03/12/computer-graphics/9/img3-5_hu_6eaa4d3c25a0c878.webp 680w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/9/img3-5_hu_3e37c384260ce707.webp&#34;
-               width=&#34;680&#34;
-               height=&#34;702&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;レイトレーシング6&#34; 
-               srcset=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/9/img4-1_hu_6d9eec64dcfbb527.webp 320w, http://localhost:1313/blog/2013/03/12/computer-graphics/9/img4-1_hu_e0d0df59325bde94.webp 480w, http://localhost:1313/blog/2013/03/12/computer-graphics/9/img4-1_hu_a9d52541434f3a8f.webp 680w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/9/img4-1_hu_6d9eec64dcfbb527.webp&#34;
-               width=&#34;680&#34;
-               height=&#34;702&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="レイトレーシング1"
+srcset="https://gam0022.net/blog/2013/03/12/computer-graphics/9/img3-1_hu_bfa4e45b3348c80d.webp 320w, https://gam0022.net/blog/2013/03/12/computer-graphics/9/img3-1_hu_51715d89e4f9740a.webp 480w, https://gam0022.net/blog/2013/03/12/computer-graphics/9/img3-1_hu_8c8aa9dc4f1f8282.webp 680w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2013/03/12/computer-graphics/9/img3-1_hu_bfa4e45b3348c80d.webp"
+width="680"
+height="702"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="レイトレーシング2"
+srcset="https://gam0022.net/blog/2013/03/12/computer-graphics/9/img3-2_hu_4d7151ccbad7fd0c.webp 320w, https://gam0022.net/blog/2013/03/12/computer-graphics/9/img3-2_hu_2d26553583504162.webp 480w, https://gam0022.net/blog/2013/03/12/computer-graphics/9/img3-2_hu_63e467b9e1167deb.webp 680w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2013/03/12/computer-graphics/9/img3-2_hu_4d7151ccbad7fd0c.webp"
+width="680"
+height="702"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="レイトレーシング3"
+srcset="https://gam0022.net/blog/2013/03/12/computer-graphics/9/img3-3_hu_1d52ede2418f9d26.webp 320w, https://gam0022.net/blog/2013/03/12/computer-graphics/9/img3-3_hu_e1d0113719658ba9.webp 480w, https://gam0022.net/blog/2013/03/12/computer-graphics/9/img3-3_hu_eb415440a4177df3.webp 592w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2013/03/12/computer-graphics/9/img3-3_hu_1d52ede2418f9d26.webp"
+width="592"
+height="614"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="レイトレーシング4"
+srcset="https://gam0022.net/blog/2013/03/12/computer-graphics/9/img3-4_hu_cfc4623f4a891fd1.webp 320w, https://gam0022.net/blog/2013/03/12/computer-graphics/9/img3-4_hu_b276ac30b682b2f6.webp 480w, https://gam0022.net/blog/2013/03/12/computer-graphics/9/img3-4_hu_d556e7ad4923036c.webp 680w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2013/03/12/computer-graphics/9/img3-4_hu_cfc4623f4a891fd1.webp"
+width="680"
+height="702"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="レイトレーシング5"
+srcset="https://gam0022.net/blog/2013/03/12/computer-graphics/9/img3-5_hu_3e37c384260ce707.webp 320w, https://gam0022.net/blog/2013/03/12/computer-graphics/9/img3-5_hu_61117a4a20a477bc.webp 480w, https://gam0022.net/blog/2013/03/12/computer-graphics/9/img3-5_hu_6eaa4d3c25a0c878.webp 680w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2013/03/12/computer-graphics/9/img3-5_hu_3e37c384260ce707.webp"
+width="680"
+height="702"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="レイトレーシング6"
+srcset="https://gam0022.net/blog/2013/03/12/computer-graphics/9/img4-1_hu_6d9eec64dcfbb527.webp 320w, https://gam0022.net/blog/2013/03/12/computer-graphics/9/img4-1_hu_e0d0df59325bde94.webp 480w, https://gam0022.net/blog/2013/03/12/computer-graphics/9/img4-1_hu_a9d52541434f3a8f.webp 680w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2013/03/12/computer-graphics/9/img4-1_hu_6d9eec64dcfbb527.webp"
+width="680"
+height="702"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h2 id=&#34;課題10-布のシュミレーション&#34;&gt;課題10 布のシュミレーション&lt;/h2&gt;
+&lt;h2 id="課題10-布のシュミレーション"&gt;課題10 布のシュミレーション&lt;/h2&gt;
 &lt;p&gt;Mass-Spring モデルによる簡易的な布の物理シミュレーションをしました。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;布のシュミレーション&#34; 
-               srcset=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/10/img1_hu_76fe283a15ab6a12.webp 320w, http://localhost:1313/blog/2013/03/12/computer-graphics/10/img1_hu_f8e1f39fc4cf8036.webp 480w, http://localhost:1313/blog/2013/03/12/computer-graphics/10/img1_hu_db5a60030e8941f8.webp 680w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/10/img1_hu_76fe283a15ab6a12.webp&#34;
-               width=&#34;680&#34;
-               height=&#34;702&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="布のシュミレーション"
+srcset="https://gam0022.net/blog/2013/03/12/computer-graphics/10/img1_hu_76fe283a15ab6a12.webp 320w, https://gam0022.net/blog/2013/03/12/computer-graphics/10/img1_hu_f8e1f39fc4cf8036.webp 480w, https://gam0022.net/blog/2013/03/12/computer-graphics/10/img1_hu_db5a60030e8941f8.webp 680w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2013/03/12/computer-graphics/10/img1_hu_76fe283a15ab6a12.webp"
+width="680"
+height="702"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;球体との衝突判定を追加してみたのが次です。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;布のシュミレーション(球との衝突)&#34; 
-               srcset=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/10/img2_hu_c993cb21aa9eb1fb.webp 320w, http://localhost:1313/blog/2013/03/12/computer-graphics/10/img2_hu_8f9aa656a1d9d102.webp 480w, http://localhost:1313/blog/2013/03/12/computer-graphics/10/img2_hu_ce0f2cea4ab57dfa.webp 680w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2013/03/12/computer-graphics/10/img2_hu_c993cb21aa9eb1fb.webp&#34;
-               width=&#34;680&#34;
-               height=&#34;702&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="布のシュミレーション(球との衝突)"
+srcset="https://gam0022.net/blog/2013/03/12/computer-graphics/10/img2_hu_c993cb21aa9eb1fb.webp 320w, https://gam0022.net/blog/2013/03/12/computer-graphics/10/img2_hu_8f9aa656a1d9d102.webp 480w, https://gam0022.net/blog/2013/03/12/computer-graphics/10/img2_hu_ce0f2cea4ab57dfa.webp 680w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2013/03/12/computer-graphics/10/img2_hu_c993cb21aa9eb1fb.webp"
+width="680"
+height="702"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;h2 id="まとめ"&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;こうして振り返ると、かなり色々な課題に挑戦しましたが、どれも楽しかったです。&lt;/p&gt;
-&lt;p&gt;CGを自分の研究としてもいいなーとか思ってしまいました。&lt;/p&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;p&gt;CGを自分の研究としてもいいなーとか思ってしまいました。&lt;/p&gt;</description></item></channel></rss>

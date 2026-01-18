@@ -1,23 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Vim | gam0022.net</title>
-    <link>http://localhost:1313/tags/vim/</link>
-      <atom:link href="http://localhost:1313/tags/vim/index.xml" rel="self" type="application/rss+xml" />
-    <description>Vim</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 28 Jul 2012 00:01:00 +0900</lastBuildDate>
-    <image>
-      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
-      <title>Vim</title>
-      <link>http://localhost:1313/tags/vim/</link>
-    </image>
-    
-    <item>
-      <title>Linux(Ubuntu)からOS Xへ開発環境を移すときにしたこと</title>
-      <link>http://localhost:1313/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/</link>
-      <pubDate>Sat, 28 Jul 2012 00:01:00 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/</guid>
-      <description>&lt;p&gt;とりあえず次のような感じになりました。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vim | gam0022.net</title><link>https://gam0022.net/tags/vim/</link><atom:link href="https://gam0022.net/tags/vim/index.xml" rel="self" type="application/rss+xml"/><description>Vim</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 28 Jul 2012 00:01:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Vim</title><link>https://gam0022.net/tags/vim/</link></image><item><title>Linux(Ubuntu)からOS Xへ開発環境を移すときにしたこと</title><link>https://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/</link><pubDate>Sat, 28 Jul 2012 00:01:00 +0900</pubDate><guid>https://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/</guid><description>&lt;p&gt;とりあえず次のような感じになりました。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;ターミナル
 :Terminal.app&lt;/li&gt;
@@ -29,96 +10,80 @@
 :git&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Mac初心者が躓かないように、この順番で作業すればうまくいくという順番で紹介していきます。&lt;/p&gt;
-&lt;h3 id=&#34;terminalapp&#34;&gt;Terminal.app&lt;/h3&gt;
+&lt;h3 id="terminalapp"&gt;Terminal.app&lt;/h3&gt;
 &lt;p&gt;Terminal.appはMacOSに標準で入っている端末です。&lt;/p&gt;
 &lt;p&gt;最終的にはこんな感じになりました。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;Terminal.app&#34; 
-               srcset=&#34;http://localhost:1313/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/2012.7.28_terminal_hu_c212c4e707f03596.webp 320w, http://localhost:1313/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/2012.7.28_terminal_hu_bf2ee45b8d562134.webp 480w, http://localhost:1313/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/2012.7.28_terminal_hu_e8bc1d2f876c8cd7.webp 715w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/2012.7.28_terminal_hu_c212c4e707f03596.webp&#34;
-               width=&#34;715&#34;
-               height=&#34;502&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="Terminal.app"
+srcset="https://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/2012.7.28_terminal_hu_c212c4e707f03596.webp 320w, https://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/2012.7.28_terminal_hu_bf2ee45b8d562134.webp 480w, https://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/2012.7.28_terminal_hu_e8bc1d2f876c8cd7.webp 715w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/2012.7.28_terminal_hu_c212c4e707f03596.webp"
+width="715"
+height="502"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h4 id=&#34;外観を変える&#34;&gt;外観を変える&lt;/h4&gt;
+&lt;h4 id="外観を変える"&gt;外観を変える&lt;/h4&gt;
 &lt;p&gt;外観を変えるために、&lt;code&gt;環境設定 &amp;gt; 設定&lt;/code&gt;でProという設定を使うことにしました。&lt;/p&gt;
 &lt;p&gt;フォントを&lt;code&gt;Monaco 13pt.&lt;/code&gt;にして、&lt;code&gt;テキストをアンチエイリアス処理&lt;/code&gt;を有効にしました。&lt;/p&gt;
-&lt;h4 id=&#34;bash95profile-を設定する&#34;&gt;.bash_profile を設定する&lt;/h4&gt;
+&lt;h4 id="bash95profile-を設定する"&gt;.bash_profile を設定する&lt;/h4&gt;
 &lt;p&gt;これまでの常識では、&lt;code&gt;~/.bashrc&lt;/code&gt;に書いた設定が端末の起動時に読み込まれるものと思っていたのですが、
 macの場合は&lt;code&gt;~/.bashrc&lt;/code&gt;は無効になっており、ログイン時だけ&lt;code&gt;~/.bash_profile&lt;/code&gt;が読み込まれるようです。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;要するにMacのTerminalの設定は&lt;code&gt;~/.bash_profile&lt;/code&gt;に書けばいいということです。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;設定の反映が必要であれば&lt;code&gt;$ source ~/.bash_profile&lt;/code&gt;を実行すればいいことなので、
 ログイン時でも端末起動時でもそれほど影響はないです。&lt;/p&gt;
 &lt;p&gt;前の環境の&lt;code&gt;.bashrc&lt;/code&gt;は禍々しくて見せられませんが、&lt;code&gt;.bash_profile&lt;/code&gt;をこんな感じで書いていきます。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## パスの設定とか&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$PATH&lt;/span&gt;:&lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt;/bin
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 便利なエイリアスとか&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ll&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;ls -alF&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;ls&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;emacs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;vim&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## lsに色を付ける =&amp;gt; http://jmblog.jp/archives/307&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;CLICOLOR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;LSCOLORS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;DxGxcxdxCxegedabagacad
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## プロンプトも色を付ける&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;PS1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;\[\033[36m\][\u@\h:\[\033[33m\]\w\[\033[36m\]]\[\033[0m\] \$ &amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;exitでタブやウィンドウを閉じるようにする&#34;&gt;exitでタブやウィンドウを閉じるようにする&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;## パスの設定とか&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$PATH&lt;/span&gt;:&lt;span class="nv"&gt;$HOME&lt;/span&gt;/bin
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;## 便利なエイリアスとか&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;alias&lt;/span&gt; &lt;span class="nv"&gt;ll&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;ls -alF&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;alias&lt;/span&gt; &lt;span class="nv"&gt;l&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;ls&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;alias&lt;/span&gt; &lt;span class="nv"&gt;emacs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;vim&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;## lsに色を付ける =&amp;gt; http://jmblog.jp/archives/307&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;CLICOLOR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;LSCOLORS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;DxGxcxdxCxegedabagacad
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;## プロンプトも色を付ける&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;PS1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;\[\033[36m\][\u@\h:\[\033[33m\]\w\[\033[36m\]]\[\033[0m\] \$ &amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="exitでタブやウィンドウを閉じるようにする"&gt;exitでタブやウィンドウを閉じるようにする&lt;/h4&gt;
 &lt;p&gt;なぜかデフォルトでは&lt;code&gt;exit&lt;/code&gt;しても画面が残ってしまうので、設定を変えます。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;~/Library/Preferences/com.apple.Terminal.plist&lt;/code&gt;の&lt;code&gt;Root &amp;gt; Window Settings &amp;gt; (任意のテーマ) &amp;gt; shellExitAction&lt;/code&gt;の値を&lt;code&gt;1&lt;/code&gt;(Number)に変更します。&lt;/p&gt;
 &lt;p&gt;
 を参考しました。&lt;/p&gt;
-&lt;h4 id=&#34;コンピュータ名を変更する&#34;&gt;コンピュータ名を変更する&lt;/h4&gt;
+&lt;h4 id="コンピュータ名を変更する"&gt;コンピュータ名を変更する&lt;/h4&gt;
 &lt;p&gt;&lt;code&gt;システム環境設定 &amp;gt; 共有&lt;/code&gt;からコンピュータ名を変更できます。&lt;/p&gt;
 &lt;p&gt;私は&lt;code&gt;silent&lt;/code&gt;とかいう適当な名前を付けました。静音性が高いといいなという願いを込めて。&lt;/p&gt;
-&lt;h3 id=&#34;gccをインストール&#34;&gt;gccをインストール&lt;/h3&gt;
+&lt;h3 id="gccをインストール"&gt;gccをインストール&lt;/h3&gt;
 &lt;p&gt;gccがないとパッケージ管理システムでコンパイルができないので、
 最初にgccは入れておくべきです。&lt;/p&gt;
-&lt;h4 id=&#34;xcodeからgccをインストールする方法&#34;&gt;Xcodeからgccをインストールする方法。&lt;/h4&gt;
+&lt;h4 id="xcodeからgccをインストールする方法"&gt;Xcodeからgccをインストールする方法。&lt;/h4&gt;
 &lt;p&gt;これでgccが使えるようになりますが、LLVMベースのgccが入ってしまい、
-
 りして厄介かもしれません。&lt;/p&gt;
 &lt;p&gt;(でもMacを入手したら、Xcode使ってみたいですよね。)&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;XcodeをAppStoreからインストールする。&lt;/li&gt;
 &lt;li&gt;Xcode-&amp;gt; Preferences-&amp;gt; Downloads から、Command Line Tools をインストールする。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h4 id=&#34;osx-gcc-installerからgccをインストールする方法&#34;&gt;osx-gcc-installerからgccをインストールする方法&lt;/h4&gt;
+&lt;h4 id="osx-gcc-installerからgccをインストールする方法"&gt;osx-gcc-installerからgccをインストールする方法&lt;/h4&gt;
 &lt;p&gt;試してませんが、
 があるので簡単に導入できるのではないかと思います。&lt;/p&gt;
-&lt;h3 id=&#34;homebrewをインストール&#34;&gt;homebrewをインストール&lt;/h3&gt;
+&lt;h3 id="homebrewをインストール"&gt;homebrewをインストール&lt;/h3&gt;
 &lt;p&gt;パッケージ管理システムにはhomebrewを使うことにしました。&lt;/p&gt;
 &lt;p&gt;
 のコピペですが、これを叩けばhomebrewをインストールできます。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ ruby &amp;lt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;curl -fsSk https://raw.github.com/mxcl/homebrew/go&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$ ruby &amp;lt;&lt;span class="o"&gt;(&lt;/span&gt;curl -fsSk https://raw.github.com/mxcl/homebrew/go&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;MacにはRuby1.8が最初から入っているので、心配は不要です。(しかし1.8かよ)&lt;/p&gt;
-&lt;h3 id=&#34;gitをインストール&#34;&gt;gitをインストール&lt;/h3&gt;
+&lt;h3 id="gitをインストール"&gt;gitをインストール&lt;/h3&gt;
 &lt;p&gt;homebrewが入ったら、gitのインストールは簡単です。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;brew install git&lt;/code&gt;で終わりです。&lt;/p&gt;
 &lt;p&gt;このあと紹介するVundleが良い例ですが、gitを使う機会は割と多いです。&lt;/p&gt;
-&lt;h3 id=&#34;vim&#34;&gt;Vim&lt;/h3&gt;
-&lt;h4 id=&#34;vimの設定の移行&#34;&gt;Vimの設定の移行&lt;/h4&gt;
+&lt;h3 id="vim"&gt;Vim&lt;/h3&gt;
+&lt;h4 id="vimの設定の移行"&gt;Vimの設定の移行&lt;/h4&gt;
 &lt;p&gt;前の環境ではvimのプラグインを
 で管理していたので、
 これだけでVimの環境は引き継げました。&lt;/p&gt;
@@ -128,7 +93,7 @@ macの場合は&lt;code&gt;~/.bashrc&lt;/code&gt;は無効になっており、�
 &lt;li&gt;&lt;code&gt;$ vim +BundleInstall +qall&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Vundleマジ神。&lt;/p&gt;
-&lt;h4 id=&#34;カラースキマーの設定&#34;&gt;カラースキマーの設定&lt;/h4&gt;
+&lt;h4 id="カラースキマーの設定"&gt;カラースキマーの設定&lt;/h4&gt;
 &lt;p&gt;Ubuntuでは特に設定をしなくてもvimに色がついてたんですが、
 どこでカラースキマーが定義されていたんでしょうかね。&lt;/p&gt;
 &lt;p&gt;私は
@@ -138,11 +103,6 @@ macの場合は&lt;code&gt;~/.bashrc&lt;/code&gt;は無効になっており、�
 &lt;li&gt;&lt;code&gt;~/.vim/colors&lt;/code&gt;に&lt;code&gt;mv&lt;/code&gt;する。&lt;/li&gt;
 &lt;li&gt;以下を&lt;code&gt;~/.vimrc&lt;/code&gt;に書き加える。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;syntax&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;on&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;colorscheme&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;desert&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これで最低限文化的なMac環境ができました。&lt;/p&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-vim" data-lang="vim"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;syntax&lt;/span&gt; &lt;span class="nx"&gt;on&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;colorscheme&lt;/span&gt; &lt;span class="nx"&gt;desert&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これで最低限文化的なMac環境ができました。&lt;/p&gt;</description></item></channel></rss>

@@ -1,33 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Encoding | gam0022.net</title>
-    <link>http://localhost:1313/tags/encoding/</link>
-      <atom:link href="http://localhost:1313/tags/encoding/index.xml" rel="self" type="application/rss+xml" />
-    <description>Encoding</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 19 Dec 2012 23:40:00 +0900</lastBuildDate>
-    <image>
-      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
-      <title>Encoding</title>
-      <link>http://localhost:1313/tags/encoding/</link>
-    </image>
-    
-    <item>
-      <title>Mac OS Xでjavacやjavaで文字化けした場合の対処</title>
-      <link>http://localhost:1313/blog/2012/12/19/javac/</link>
-      <pubDate>Wed, 19 Dec 2012 23:40:00 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2012/12/19/javac/</guid>
-      <description>&lt;p&gt;Mac OS Xでjavacやjavaで文字化けした場合の対処ですが、
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Encoding | gam0022.net</title><link>https://gam0022.net/tags/encoding/</link><atom:link href="https://gam0022.net/tags/encoding/index.xml" rel="self" type="application/rss+xml"/><description>Encoding</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 19 Dec 2012 23:40:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Encoding</title><link>https://gam0022.net/tags/encoding/</link></image><item><title>Mac OS Xでjavacやjavaで文字化けした場合の対処</title><link>https://gam0022.net/blog/2012/12/19/javac/</link><pubDate>Wed, 19 Dec 2012 23:40:00 +0900</pubDate><guid>https://gam0022.net/blog/2012/12/19/javac/</guid><description>&lt;p&gt;Mac OS Xでjavacやjavaで文字化けした場合の対処ですが、
 次のように&lt;code&gt;~/.bash_profile&lt;/code&gt;に&lt;code&gt;alias&lt;/code&gt;を設定すれば、治ると思います。&lt;/p&gt;
 &lt;p&gt;この例ではターミナルのエンコーディングがUTF-8という
 前提で設定しているので、UTF-8の部分は自分の環境に合わせて変更してください。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## ~/.bash_profile&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;javac&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;javac -J-Dfile.encoding=UTF-8&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;java&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;java -Dfile.encoding=UTF-8&amp;#39;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;## ~/.bash_profile&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;alias&lt;/span&gt; &lt;span class="nv"&gt;javac&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;javac -J-Dfile.encoding=UTF-8&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;alias&lt;/span&gt; &lt;span class="nv"&gt;java&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;java -Dfile.encoding=UTF-8&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;最後に&lt;code&gt;source ~/.bash_profile&lt;/code&gt;してね。&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;私に関して言うと、Javaを書くときはEclipseを使うことにしたので、この設定はあまり役に立ってないね！&lt;/em&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;p&gt;&lt;em&gt;私に関して言うと、Javaを書くときはEclipseを使うことにしたので、この設定はあまり役に立ってないね！&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>

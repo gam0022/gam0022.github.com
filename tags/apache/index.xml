@@ -1,52 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Apache | gam0022.net</title>
-    <link>http://localhost:1313/tags/apache/</link>
-      <atom:link href="http://localhost:1313/tags/apache/index.xml" rel="self" type="application/rss+xml" />
-    <description>Apache</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 26 Jul 2012 00:11:00 +0900</lastBuildDate>
-    <image>
-      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
-      <title>Apache</title>
-      <link>http://localhost:1313/tags/apache/</link>
-    </image>
-    
-    <item>
-      <title>ServersMan@VPSでRubyのCGIを実行するまでのメモ</title>
-      <link>http://localhost:1313/blog/2012/07/26/run-ruby-cgi-on-serversman-at-vps/</link>
-      <pubDate>Thu, 26 Jul 2012 00:11:00 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2012/07/26/run-ruby-cgi-on-serversman-at-vps/</guid>
-      <description>&lt;p&gt;ServersMan@VPS(Ubuntu)でRubyのCGIを実行するまでのメモです。&lt;/p&gt;
-&lt;h3 id=&#34;apache2をインストールする&#34;&gt;apache2をインストールする&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache | gam0022.net</title><link>https://gam0022.net/tags/apache/</link><atom:link href="https://gam0022.net/tags/apache/index.xml" rel="self" type="application/rss+xml"/><description>Apache</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 26 Jul 2012 00:11:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Apache</title><link>https://gam0022.net/tags/apache/</link></image><item><title>ServersMan@VPSでRubyのCGIを実行するまでのメモ</title><link>https://gam0022.net/blog/2012/07/26/run-ruby-cgi-on-serversman-at-vps/</link><pubDate>Thu, 26 Jul 2012 00:11:00 +0900</pubDate><guid>https://gam0022.net/blog/2012/07/26/run-ruby-cgi-on-serversman-at-vps/</guid><description>&lt;p&gt;ServersMan@VPS(Ubuntu)でRubyのCGIを実行するまでのメモです。&lt;/p&gt;
+&lt;h3 id="apache2をインストールする"&gt;apache2をインストールする&lt;/h3&gt;
 &lt;p&gt;apt-getかaptitudeでインストールすればいいと思います。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo aptitude install apache2	
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;addhandlerを設定する&#34;&gt;AddHandlerを設定する&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo aptitude install apache2
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="addhandlerを設定する"&gt;AddHandlerを設定する&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;/etc/apache2/mods-enabled/mime.conf&lt;/code&gt;にAddHandlerを設定します。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;#AddHandler cgi-script .cgi&lt;/code&gt;という行があるので、
 見つけてコメントアウトを解除して、次のように書き換えればいいと思います。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AddHandler cgi-script .cgi .rb
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;options-execcgiを設定する&#34;&gt;Options +ExecCGIを設定する&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;AddHandler cgi-script .cgi .rb
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="options-execcgiを設定する"&gt;Options +ExecCGIを設定する&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;/etc/apache2/sites-available/default&lt;/code&gt;でOptions +ExecCGIを設定します。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;ne&#34;&gt;Directory&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;var&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;www&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;html&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;c1&#34;&gt;#Options Indexes FollowSymLinks MultiViews &lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;n&#34;&gt;Options&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Indexes&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FollowSymLinks&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MultiViews&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ExecCGI&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;n&#34;&gt;AllowOverride&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;None&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;n&#34;&gt;Order&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;allow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;deny&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;n&#34;&gt;allow&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;all&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;ne&#34;&gt;Directory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;apache2を再起動する&#34;&gt;apache2を再起動する&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-gdscript3" data-lang="gdscript3"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="ne"&gt;Directory&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;var&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;www&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;&lt;span class="o"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;#Options Indexes FollowSymLinks MultiViews &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;Options&lt;/span&gt; &lt;span class="n"&gt;Indexes&lt;/span&gt; &lt;span class="n"&gt;FollowSymLinks&lt;/span&gt; &lt;span class="n"&gt;MultiViews&lt;/span&gt; &lt;span class="n"&gt;ExecCGI&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;AllowOverride&lt;/span&gt; &lt;span class="n"&gt;None&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;Order&lt;/span&gt; &lt;span class="n"&gt;allow&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;deny&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;allow&lt;/span&gt; &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;all&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="ne"&gt;Directory&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="apache2を再起動する"&gt;apache2を再起動する&lt;/h3&gt;
 &lt;p&gt;上の2つのファイルを編集したら、apacheを再起動して設定を反映させます。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo /etc/init.d/apache2 restart	
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;ruby-cgiのパーミッションを755にする&#34;&gt;Ruby CGIのパーミッションを755にする&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /var/www/html
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chmod &lt;span class=&#34;m&#34;&gt;755&lt;/span&gt; test.rb
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo /etc/init.d/apache2 restart
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="ruby-cgiのパーミッションを755にする"&gt;Ruby CGIのパーミッションを755にする&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; /var/www/html
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;chmod &lt;span class="m"&gt;755&lt;/span&gt; test.rb
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これでたぶん動くようになります。&lt;/p&gt;
 &lt;p&gt;ね？簡単でしょ？&lt;/p&gt;
-&lt;h3 id=&#34;うまくいかないときは&#34;&gt;うまくいかないときは&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;/var/log/apache2/error.log&lt;/code&gt;のエラーメッセージを見ましょう。&lt;/p&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;h3 id="うまくいかないときは"&gt;うまくいかないときは&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;/var/log/apache2/error.log&lt;/code&gt;のエラーメッセージを見ましょう。&lt;/p&gt;</description></item></channel></rss>

@@ -1,23 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>TechBooster | gam0022.net</title>
-    <link>http://localhost:1313/tags/techbooster/</link>
-      <atom:link href="http://localhost:1313/tags/techbooster/index.xml" rel="self" type="application/rss+xml" />
-    <description>TechBooster</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 06 Apr 2017 12:00:00 +0900</lastBuildDate>
-    <image>
-      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
-      <title>TechBooster</title>
-      <link>http://localhost:1313/tags/techbooster/</link>
-    </image>
-    
-    <item>
-      <title>WebGLパストレーシングを技術書典2のためにブラッシュアップ</title>
-      <link>http://localhost:1313/blog/2017/04/06/webgl-pathtracing-tbf2/</link>
-      <pubDate>Thu, 06 Apr 2017 12:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2017/04/06/webgl-pathtracing-tbf2/</guid>
-      <description>&lt;p&gt;4/9（日）にアキバ・スクエアで開催される
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TechBooster | gam0022.net</title><link>https://gam0022.net/tags/techbooster/</link><atom:link href="https://gam0022.net/tags/techbooster/index.xml" rel="self" type="application/rss+xml"/><description>TechBooster</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 06 Apr 2017 12:00:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>TechBooster</title><link>https://gam0022.net/tags/techbooster/</link></image><item><title>WebGLパストレーシングを技術書典2のためにブラッシュアップ</title><link>https://gam0022.net/blog/2017/04/06/webgl-pathtracing-tbf2/</link><pubDate>Thu, 06 Apr 2017 12:00:00 +0900</pubDate><guid>https://gam0022.net/blog/2017/04/06/webgl-pathtracing-tbf2/</guid><description>&lt;p&gt;4/9（日）にアキバ・スクエアで開催される
 に参加します。
 技術書典は技術書のみを扱うコミケようなイベントです。&lt;/p&gt;
 &lt;p&gt;
@@ -29,11 +10,11 @@
 &lt;/ul&gt;
 &lt;p&gt;
 &lt;/p&gt;
-&lt;h2 id=&#34;パストレーシングとは&#34;&gt;パストレーシングとは？&lt;/h2&gt;
+&lt;h2 id="パストレーシングとは"&gt;パストレーシングとは？&lt;/h2&gt;
 &lt;p&gt;パストレーシングは3Dの描画手法のひとつで、現実世界に近い光の振る舞いをシミュレートすることで、大域照明を考慮した写実的なレンダリングを可能にします。
 実際にハリウッド映画などの写実的なCGの多くには、パストレーシングやパストレーシングを発展した手法が採用されています。
 写実的なレンダリングができる反面、処理時間が膨大にかかるという弱点があります。&lt;/p&gt;
-&lt;h2 id=&#34;本の内容&#34;&gt;本の内容&lt;/h2&gt;
+&lt;h2 id="本の内容"&gt;本の内容&lt;/h2&gt;
 &lt;p&gt;私の章ではパストレーシングのGPU実装による高速化について紹介します。
 しかも単純な高速化ではなく、ブラウザ上で3DCGを扱うWebAPIであるWebGLによりGPU実装することで、
 ブラウザ上で動作するインタラクティブなパストレーシングを実現します。&lt;/p&gt;
@@ -45,7 +26,7 @@ Qiitaには書ききれなかったパストレーシングの基礎や原理の
 &lt;/ul&gt;
 &lt;p&gt;なるべく敷居を下げるために専門用語を解説しつつ、説明が長く過ぎず短すぎず丁度いい分量になるように意識して執筆しました。
 読者ターゲットは、単純なレイトレーシングは分かっているけれども、パストレーシングは難しい…という人を想定しています。&lt;/p&gt;
-&lt;h2 id=&#34;webglパストレーシングのデモ&#34;&gt;WebGLパストレーシングのデモ&lt;/h2&gt;
+&lt;h2 id="webglパストレーシングのデモ"&gt;WebGLパストレーシングのデモ&lt;/h2&gt;
 &lt;p&gt;開発したWebGLパストレーサ（パストレーシングのプログラム）はブラウザ上で動かせるので、良ければ触っていただけると嬉しいです。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -54,12 +35,12 @@ Qiitaには書ききれなかったパストレーシングの基礎や原理の
 &lt;p&gt;シーンエディット機能を搭載しており、オブジェクトの位置やスケール、マテリアルをリアルタイムに編集・プレビューできます。
 マテリアルのBRDFとしては完全鏡面反射・完全拡散反射・GGX・屈折面に対応しています。
 マテリアルのColor / Roughness / Emissionにはテクスチャを指定することもできます。&lt;/p&gt;
-&lt;h2 id=&#34;技術書典2のためのブラッシュアップ&#34;&gt;技術書典2のためのブラッシュアップ&lt;/h2&gt;
+&lt;h2 id="技術書典2のためのブラッシュアップ"&gt;技術書典2のためのブラッシュアップ&lt;/h2&gt;
 &lt;p&gt;執筆にあたってコードを見返したところ、様々なバグを見つけたので、原稿と平行してバグ修正に取り組んでいました。
 睡眠時間と引き換えにして、なんとかバグを取り除き、レンダリングの品質を大きく改善できました！&lt;/p&gt;
 &lt;p&gt;この記事では、本の宣伝もかねて「どのようなミスがあり、どのように修正をしたのか」を簡単に紹介します。&lt;/p&gt;
 &lt;p&gt;原稿を書くのは大変ですが、思考とコードを整理できたので、個人的に得るものが大きかったと感じます。&lt;/p&gt;
-&lt;h3 id=&#34;修正箇所一覧&#34;&gt;修正箇所一覧&lt;/h3&gt;
+&lt;h3 id="修正箇所一覧"&gt;修正箇所一覧&lt;/h3&gt;
 &lt;p&gt;以下が修正箇所です。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;バグ修正
@@ -95,7 +76,7 @@ Qiitaには書ききれなかったパストレーシングの基礎や原理の
 &lt;/ul&gt;
 &lt;p&gt;詳細は
 をご覧ください。&lt;/p&gt;
-&lt;h3 id=&#34;結果&#34;&gt;結果&lt;/h3&gt;
+&lt;h3 id="結果"&gt;結果&lt;/h3&gt;
 &lt;p&gt;ブラッシュアップしたパストレーサのレンダリング結果を紹介します。&lt;/p&gt;
 &lt;p&gt;
 &lt;/p&gt;
@@ -119,7 +100,7 @@ Qiitaには書ききれなかったパストレーシングの基礎や原理の
 &lt;p&gt;
 &lt;/p&gt;
 &lt;p&gt;箱を積み重ねたテーブルのシーンです。前回と同じシーンですがノイズが完全に無くなりました。&lt;/p&gt;
-&lt;h3 id=&#34;今後やりたいこと&#34;&gt;今後やりたいこと&lt;/h3&gt;
+&lt;h3 id="今後やりたいこと"&gt;今後やりたいこと&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;コーネルボックスのような光源が小さいシーンの収束が遅すぎるので、
 をする&lt;/li&gt;
@@ -128,7 +109,7 @@ Qiitaには書ききれなかったパストレーシングの基礎や原理の
 &lt;li&gt;箱と球体以外のプリミティブに対応させる&lt;/li&gt;
 &lt;li&gt;どんなに良いGPUを使っていても、1秒間に60サンプリングに制限されてしまう仕様なので、GPU性能に合わせて単位時間あたりのサンプリング数を増減できる仕組み&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;最後に&#34;&gt;最後に&lt;/h2&gt;
+&lt;h2 id="最後に"&gt;最後に&lt;/h2&gt;
 &lt;p&gt;技術書典2と『Think Web』を宜しくお願いします！&lt;/p&gt;
 &lt;p&gt;以下のようなテーマについて、各技術のスペシャリストが全力で執筆しています。&lt;/p&gt;
 &lt;ul&gt;
@@ -137,8 +118,4 @@ Qiitaには書ききれなかったパストレーシングの基礎や原理の
 &lt;li&gt;Google Cloud Datastore などデータベース関連技術&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;自分の章はニッチすぎると思いますが、明らかに1000円以上の量と質のあるお得な本になっていると思います！&lt;/p&gt;
-&lt;p&gt;お時間がありましたら、ぜひいらしてください！&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;p&gt;お時間がありましたら、ぜひいらしてください！&lt;/p&gt;</description></item></channel></rss>
