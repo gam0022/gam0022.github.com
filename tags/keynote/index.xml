@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Keynote | gam0022.net</title><link>http://gam0022.net/tags/keynote/</link><atom:link href="http://gam0022.net/tags/keynote/index.xml" rel="self" type="application/rss+xml"/><description>Keynote</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 21 Apr 2014 09:01:00 +0900</lastBuildDate><image><url>http://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Keynote</title><link>http://gam0022.net/tags/keynote/</link></image><item><title>Keynoteで綺麗な数式を使う</title><link>http://gam0022.net/blog/2014/04/21/latexit/</link><pubDate>Mon, 21 Apr 2014 09:01:00 +0900</pubDate><guid>http://gam0022.net/blog/2014/04/21/latexit/</guid><description>&lt;p&gt;研究室が始まって、輪講用のスライドをヒイヒイ言いながら作っていた時のことです。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Keynote | gam0022.net</title><link>https://gam0022.net/tags/keynote/</link><atom:link href="https://gam0022.net/tags/keynote/index.xml" rel="self" type="application/rss+xml"/><description>Keynote</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 21 Apr 2014 09:01:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Keynote</title><link>https://gam0022.net/tags/keynote/</link></image><item><title>Keynoteで綺麗な数式を使う</title><link>https://gam0022.net/blog/2014/04/21/latexit/</link><pubDate>Mon, 21 Apr 2014 09:01:00 +0900</pubDate><guid>https://gam0022.net/blog/2014/04/21/latexit/</guid><description>&lt;p&gt;研究室が始まって、輪講用のスライドをヒイヒイ言いながら作っていた時のことです。&lt;/p&gt;
 &lt;p&gt;Keynote には、PowerPointの数式エディタ的な機能が無いらしいのです。&lt;/p&gt;
 &lt;p&gt;どうにかして数式を埋め込みたかったので、方法を調べました。&lt;/p&gt;
 &lt;p&gt;
@@ -6,9 +6,9 @@
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="600 keynoteに数式"
-srcset="http://gam0022.net/blog/2014/04/21/latexit/keynote-1_hu_798945bbc7f199db.webp 320w, http://gam0022.net/blog/2014/04/21/latexit/keynote-1_hu_de41edf4e96db46b.webp 480w, http://gam0022.net/blog/2014/04/21/latexit/keynote-1_hu_ad5a68b777c7a13a.webp 760w"
+srcset="https://gam0022.net/blog/2014/04/21/latexit/keynote-1_hu_798945bbc7f199db.webp 320w, https://gam0022.net/blog/2014/04/21/latexit/keynote-1_hu_de41edf4e96db46b.webp 480w, https://gam0022.net/blog/2014/04/21/latexit/keynote-1_hu_ad5a68b777c7a13a.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2014/04/21/latexit/keynote-1_hu_798945bbc7f199db.webp"
+src="https://gam0022.net/blog/2014/04/21/latexit/keynote-1_hu_798945bbc7f199db.webp"
 width="760"
 height="559"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -28,9 +28,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="600 LaTexiTの設定"
-srcset="http://gam0022.net/blog/2014/04/21/latexit/latexit-config_hu_ef254f6a9e866480.webp 320w, http://gam0022.net/blog/2014/04/21/latexit/latexit-config_hu_f1660df7a7b527bf.webp 480w, http://gam0022.net/blog/2014/04/21/latexit/latexit-config_hu_4fc5cc6cf9927e32.webp 680w"
+srcset="https://gam0022.net/blog/2014/04/21/latexit/latexit-config_hu_ef254f6a9e866480.webp 320w, https://gam0022.net/blog/2014/04/21/latexit/latexit-config_hu_f1660df7a7b527bf.webp 480w, https://gam0022.net/blog/2014/04/21/latexit/latexit-config_hu_4fc5cc6cf9927e32.webp 680w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2014/04/21/latexit/latexit-config_hu_ef254f6a9e866480.webp"
+src="https://gam0022.net/blog/2014/04/21/latexit/latexit-config_hu_ef254f6a9e866480.webp"
 width="680"
 height="591"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -44,9 +44,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="600 LaTexiTの使い方"
-srcset="http://gam0022.net/blog/2014/04/21/latexit/latexit-usage_hu_ffd9cc519833eb5d.webp 320w, http://gam0022.net/blog/2014/04/21/latexit/latexit-usage_hu_6ec0c626a2e297b2.webp 480w, http://gam0022.net/blog/2014/04/21/latexit/latexit-usage_hu_8c858e59c18a5317.webp 760w"
+srcset="https://gam0022.net/blog/2014/04/21/latexit/latexit-usage_hu_ffd9cc519833eb5d.webp 320w, https://gam0022.net/blog/2014/04/21/latexit/latexit-usage_hu_6ec0c626a2e297b2.webp 480w, https://gam0022.net/blog/2014/04/21/latexit/latexit-usage_hu_8c858e59c18a5317.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2014/04/21/latexit/latexit-usage_hu_ffd9cc519833eb5d.webp"
+src="https://gam0022.net/blog/2014/04/21/latexit/latexit-usage_hu_ffd9cc519833eb5d.webp"
 width="760"
 height="567"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -61,9 +61,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="600 数式のコピー"
-srcset="http://gam0022.net/blog/2014/04/21/latexit/latexit-copy_hu_9be49808be0ec765.webp 320w, http://gam0022.net/blog/2014/04/21/latexit/latexit-copy_hu_d9dc4ec2ac61d9f2.webp 480w, http://gam0022.net/blog/2014/04/21/latexit/latexit-copy_hu_abd24c02c40611e.webp 760w"
+srcset="https://gam0022.net/blog/2014/04/21/latexit/latexit-copy_hu_9be49808be0ec765.webp 320w, https://gam0022.net/blog/2014/04/21/latexit/latexit-copy_hu_d9dc4ec2ac61d9f2.webp 480w, https://gam0022.net/blog/2014/04/21/latexit/latexit-copy_hu_abd24c02c40611e.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2014/04/21/latexit/latexit-copy_hu_9be49808be0ec765.webp"
+src="https://gam0022.net/blog/2014/04/21/latexit/latexit-copy_hu_9be49808be0ec765.webp"
 width="760"
 height="567"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -83,9 +83,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="600 数式番号を指定する"
-srcset="http://gam0022.net/blog/2014/04/21/latexit/latexit-setcounter_hu_1ebd2b28128f4775.webp 320w, http://gam0022.net/blog/2014/04/21/latexit/latexit-setcounter_hu_ca7a0ce73b4db9bf.webp 480w, http://gam0022.net/blog/2014/04/21/latexit/latexit-setcounter_hu_b972d516708bf320.webp 760w"
+srcset="https://gam0022.net/blog/2014/04/21/latexit/latexit-setcounter_hu_1ebd2b28128f4775.webp 320w, https://gam0022.net/blog/2014/04/21/latexit/latexit-setcounter_hu_ca7a0ce73b4db9bf.webp 480w, https://gam0022.net/blog/2014/04/21/latexit/latexit-setcounter_hu_b972d516708bf320.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2014/04/21/latexit/latexit-setcounter_hu_1ebd2b28128f4775.webp"
+src="https://gam0022.net/blog/2014/04/21/latexit/latexit-setcounter_hu_1ebd2b28128f4775.webp"
 width="760"
 height="426"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;

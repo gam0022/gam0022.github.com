@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Zsh | gam0022.net</title><link>http://gam0022.net/tags/zsh/</link><atom:link href="http://gam0022.net/tags/zsh/index.xml" rel="self" type="application/rss+xml"/><description>Zsh</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 23 May 2013 12:30:00 +0900</lastBuildDate><image><url>http://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Zsh</title><link>http://gam0022.net/tags/zsh/</link></image><item><title>bashからzshに乗り換えた</title><link>http://gam0022.net/blog/2013/05/23/zsh/</link><pubDate>Thu, 23 May 2013 12:30:00 +0900</pubDate><guid>http://gam0022.net/blog/2013/05/23/zsh/</guid><description>&lt;p&gt;特に理由はなかったのですが、便利という噂を聞いてbashからzshに乗り換えました。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Zsh | gam0022.net</title><link>https://gam0022.net/tags/zsh/</link><atom:link href="https://gam0022.net/tags/zsh/index.xml" rel="self" type="application/rss+xml"/><description>Zsh</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 23 May 2013 12:30:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Zsh</title><link>https://gam0022.net/tags/zsh/</link></image><item><title>bashからzshに乗り換えた</title><link>https://gam0022.net/blog/2013/05/23/zsh/</link><pubDate>Thu, 23 May 2013 12:30:00 +0900</pubDate><guid>https://gam0022.net/blog/2013/05/23/zsh/</guid><description>&lt;p&gt;特に理由はなかったのですが、便利という噂を聞いてbashからzshに乗り換えました。&lt;/p&gt;
 &lt;p&gt;
 &lt;figure &gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="iTerm2 &amp;#43; zsh"
-srcset="http://gam0022.net/blog/2013/05/23/zsh/2013-05-23-zsh_hu_eb5c42df6954fcbe.webp 320w, http://gam0022.net/blog/2013/05/23/zsh/2013-05-23-zsh_hu_90bcc500dfd43335.webp 480w, http://gam0022.net/blog/2013/05/23/zsh/2013-05-23-zsh_hu_4773d283be7f8d93.webp 596w"
+srcset="https://gam0022.net/blog/2013/05/23/zsh/2013-05-23-zsh_hu_eb5c42df6954fcbe.webp 320w, https://gam0022.net/blog/2013/05/23/zsh/2013-05-23-zsh_hu_90bcc500dfd43335.webp 480w, https://gam0022.net/blog/2013/05/23/zsh/2013-05-23-zsh_hu_4773d283be7f8d93.webp 596w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2013/05/23/zsh/2013-05-23-zsh_hu_eb5c42df6954fcbe.webp"
+src="https://gam0022.net/blog/2013/05/23/zsh/2013-05-23-zsh_hu_eb5c42df6954fcbe.webp"
 width="596"
 height="760"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;

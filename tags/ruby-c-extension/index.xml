@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ruby C-Extension | gam0022.net</title><link>http://gam0022.net/tags/ruby-c-extension/</link><atom:link href="http://gam0022.net/tags/ruby-c-extension/index.xml" rel="self" type="application/rss+xml"/><description>Ruby C-Extension</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 22 Oct 2013 14:17:00 +0900</lastBuildDate><image><url>http://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Ruby C-Extension</title><link>http://gam0022.net/tags/ruby-c-extension/</link></image><item><title>Rubyで関数型プログラミングをするための ImmutableList gem を公開</title><link>http://gam0022.net/blog/2013/10/22/immutable-list-gem/</link><pubDate>Tue, 22 Oct 2013 14:17:00 +0900</pubDate><guid>http://gam0022.net/blog/2013/10/22/immutable-list-gem/</guid><description>&lt;h2 id="immutablelist-gem-とは"&gt;ImmutableList gem とは&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ruby C-Extension | gam0022.net</title><link>https://gam0022.net/tags/ruby-c-extension/</link><atom:link href="https://gam0022.net/tags/ruby-c-extension/index.xml" rel="self" type="application/rss+xml"/><description>Ruby C-Extension</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 22 Oct 2013 14:17:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Ruby C-Extension</title><link>https://gam0022.net/tags/ruby-c-extension/</link></image><item><title>Rubyで関数型プログラミングをするための ImmutableList gem を公開</title><link>https://gam0022.net/blog/2013/10/22/immutable-list-gem/</link><pubDate>Tue, 22 Oct 2013 14:17:00 +0900</pubDate><guid>https://gam0022.net/blog/2013/10/22/immutable-list-gem/</guid><description>&lt;h2 id="immutablelist-gem-とは"&gt;ImmutableList gem とは&lt;/h2&gt;
 &lt;p&gt;Immutable な LinkedList を Ruby で使うためのライブラリです。&lt;/p&gt;
 &lt;p&gt;C-Extension なので、Rubyで実装したものに比べて動作が高速です。&lt;/p&gt;
 &lt;p&gt;Ruby の &lt;code&gt;Array&lt;/code&gt; は 配列で実装されているため、
@@ -138,7 +138,7 @@
 &lt;li&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;1つ目の記事と内容がほとんど同じですが、クラス名やインストール方法が変わったので、記事を書き直しました。&lt;/p&gt;</description></item><item><title>RubyでLinkedListを使うためのC拡張を作った</title><link>http://gam0022.net/blog/2013/08/19/ruby-linkedlist/</link><pubDate>Mon, 19 Aug 2013 21:25:00 +0900</pubDate><guid>http://gam0022.net/blog/2013/08/19/ruby-linkedlist/</guid><description>&lt;h2 id="追記"&gt;追記&lt;/h2&gt;
+&lt;p&gt;1つ目の記事と内容がほとんど同じですが、クラス名やインストール方法が変わったので、記事を書き直しました。&lt;/p&gt;</description></item><item><title>RubyでLinkedListを使うためのC拡張を作った</title><link>https://gam0022.net/blog/2013/08/19/ruby-linkedlist/</link><pubDate>Mon, 19 Aug 2013 21:25:00 +0900</pubDate><guid>https://gam0022.net/blog/2013/08/19/ruby-linkedlist/</guid><description>&lt;h2 id="追記"&gt;追記&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;10/7 RubyGemsとして公開。クラス名はImmutableListに変更。
 &lt;ul&gt;
@@ -297,7 +297,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$ ruby extconf.rb
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$ make
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$ make install
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Rubyの改造してThread#joinのTimeoutで例外を発生させる</title><link>http://gam0022.net/blog/2013/08/18/ruby-thread-join/</link><pubDate>Sun, 18 Aug 2013 17:15:00 +0900</pubDate><guid>http://gam0022.net/blog/2013/08/18/ruby-thread-join/</guid><description>&lt;h2 id="ぼっちupcamp"&gt;ぼっちupcamp&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Rubyの改造してThread#joinのTimeoutで例外を発生させる</title><link>https://gam0022.net/blog/2013/08/18/ruby-thread-join/</link><pubDate>Sun, 18 Aug 2013 17:15:00 +0900</pubDate><guid>https://gam0022.net/blog/2013/08/18/ruby-thread-join/</guid><description>&lt;h2 id="ぼっちupcamp"&gt;ぼっちupcamp&lt;/h2&gt;
 &lt;p&gt;
 に参加しようと思ったのですが、
 諸事情により行けなくなったので、一人で何か作ってました。&lt;/p&gt;

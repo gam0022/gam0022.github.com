@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>LiveCoding | gam0022.net</title><link>http://gam0022.net/tags/livecoding/</link><atom:link href="http://gam0022.net/tags/livecoding/index.xml" rel="self" type="application/rss+xml"/><description>LiveCoding</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 16 Apr 2025 09:00:00 +0900</lastBuildDate><image><url>http://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>LiveCoding</title><link>http://gam0022.net/tags/livecoding/</link></image><item><title>draw(tokyo); #2でVJデビュー！（GLSLライブコーディング）</title><link>http://gam0022.net/blog/2025/04/16/draw2/</link><pubDate>Wed, 16 Apr 2025 09:00:00 +0900</pubDate><guid>http://gam0022.net/blog/2025/04/16/draw2/</guid><description>&lt;p&gt;3/22に渋谷のCIRCUS TOKYOでオーディオビジュアルイベント
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>LiveCoding | gam0022.net</title><link>https://gam0022.net/tags/livecoding/</link><atom:link href="https://gam0022.net/tags/livecoding/index.xml" rel="self" type="application/rss+xml"/><description>LiveCoding</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 16 Apr 2025 09:00:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>LiveCoding</title><link>https://gam0022.net/tags/livecoding/</link></image><item><title>draw(tokyo); #2でVJデビュー！（GLSLライブコーディング）</title><link>https://gam0022.net/blog/2025/04/16/draw2/</link><pubDate>Wed, 16 Apr 2025 09:00:00 +0900</pubDate><guid>https://gam0022.net/blog/2025/04/16/draw2/</guid><description>&lt;p&gt;3/22に渋谷のCIRCUS TOKYOでオーディオビジュアルイベント
 が開催されました。&lt;/p&gt;
 &lt;p&gt;私は
 さんのVJとして出演し、Sh4derJockeyを使ったGLSLライブコーディングによるVJを行いました。&lt;/p&gt;
@@ -35,9 +35,9 @@
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="構成図"
-srcset="http://gam0022.net/blog/2025/04/16/draw2/draw2_system_hu_bdf145f67808345e.webp 320w, http://gam0022.net/blog/2025/04/16/draw2/draw2_system_hu_4597d2e482831462.webp 480w, http://gam0022.net/blog/2025/04/16/draw2/draw2_system_hu_154a8aab7a333e03.webp 760w"
+srcset="https://gam0022.net/blog/2025/04/16/draw2/draw2_system_hu_bdf145f67808345e.webp 320w, https://gam0022.net/blog/2025/04/16/draw2/draw2_system_hu_4597d2e482831462.webp 480w, https://gam0022.net/blog/2025/04/16/draw2/draw2_system_hu_154a8aab7a333e03.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2025/04/16/draw2/draw2_system_hu_bdf145f67808345e.webp"
+src="https://gam0022.net/blog/2025/04/16/draw2/draw2_system_hu_bdf145f67808345e.webp"
 width="760"
 height="438"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -158,9 +158,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="KORG_KONTROL_EDITOR"
-srcset="http://gam0022.net/blog/2025/04/16/draw2/KORG_KONTROL_EDITOR_hu_2125df59f6df8bca.webp 320w, http://gam0022.net/blog/2025/04/16/draw2/KORG_KONTROL_EDITOR_hu_89c37e8ccf21be9b.webp 480w, http://gam0022.net/blog/2025/04/16/draw2/KORG_KONTROL_EDITOR_hu_e9ebf8d269f8f02d.webp 760w"
+srcset="https://gam0022.net/blog/2025/04/16/draw2/KORG_KONTROL_EDITOR_hu_2125df59f6df8bca.webp 320w, https://gam0022.net/blog/2025/04/16/draw2/KORG_KONTROL_EDITOR_hu_89c37e8ccf21be9b.webp 480w, https://gam0022.net/blog/2025/04/16/draw2/KORG_KONTROL_EDITOR_hu_e9ebf8d269f8f02d.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2025/04/16/draw2/KORG_KONTROL_EDITOR_hu_2125df59f6df8bca.webp"
+src="https://gam0022.net/blog/2025/04/16/draw2/KORG_KONTROL_EDITOR_hu_2125df59f6df8bca.webp"
 width="760"
 height="309"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -228,7 +228,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;h2 id="写真"&gt;写真&lt;/h2&gt;
 &lt;p&gt;友人に撮影してもらったVJ中の写真です。&lt;/p&gt;
 &lt;p&gt;
-&lt;/p&gt;</description></item><item><title>『WebGL 総本山 + normalize.fm あわせて１３周年感謝祭』でGLSLライブコーディングしました</title><link>http://gam0022.net/blog/2024/10/21/livecoding-sn13/</link><pubDate>Mon, 21 Oct 2024 13:00:20 +0900</pubDate><guid>http://gam0022.net/blog/2024/10/21/livecoding-sn13/</guid><description>&lt;p&gt;
+&lt;/p&gt;</description></item><item><title>『WebGL 総本山 + normalize.fm あわせて１３周年感謝祭』でGLSLライブコーディングしました</title><link>https://gam0022.net/blog/2024/10/21/livecoding-sn13/</link><pubDate>Mon, 21 Oct 2024 13:00:20 +0900</pubDate><guid>https://gam0022.net/blog/2024/10/21/livecoding-sn13/</guid><description>&lt;p&gt;
 の夜の部のShader JamsでGLSLのシェーダーライブコーディングしました。&lt;/p&gt;
 &lt;p&gt;#normalizeFM のロゴの形状だけを使って4つのシーンを作りました。&lt;/p&gt;
 &lt;p&gt;音楽も
@@ -247,7 +247,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;blockquote class="twitter-tweet"&gt;&lt;p lang="zxx" dir="ltr"&gt;&lt;a href="https://t.co/NO3pktKtGD"&gt;pic.twitter.com/NO3pktKtGD&lt;/a&gt;&lt;/p&gt;&amp;mdash; Renard (@Renard_VRC) &lt;a href="https://twitter.com/Renard_VRC/status/1840061611895337291?ref_src=twsrc%5Etfw"&gt;September 28, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;h3 id="さいごに"&gt;さいごに&lt;/h3&gt;
 &lt;p&gt;normalize.fmは初回から全話聞いているくらい熱烈なファンだったので、ライブコーディングのお誘いをいただき、大変光栄でした！とても楽しかったです！&lt;/p&gt;
-&lt;p&gt;イベントにご参加いただいた方々、ありがとうございました！&lt;/p&gt;</description></item><item><title>映画館でGLSLライブコーディングをしました（第10回新千歳空港国際アニメーション映画祭）</title><link>http://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/</link><pubDate>Mon, 20 Nov 2023 10:50:40 +0900</pubDate><guid>http://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/</guid><description>&lt;h2 id="更新履歴"&gt;更新履歴&lt;/h2&gt;
+&lt;p&gt;イベントにご参加いただいた方々、ありがとうございました！&lt;/p&gt;</description></item><item><title>映画館でGLSLライブコーディングをしました（第10回新千歳空港国際アニメーション映画祭）</title><link>https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/</link><pubDate>Mon, 20 Nov 2023 10:50:40 +0900</pubDate><guid>https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/</guid><description>&lt;h2 id="更新履歴"&gt;更新履歴&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;2023-12-29 YouTube動画を埋め込みました&lt;/li&gt;
 &lt;/ul&gt;
@@ -259,9 +259,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="GLSLライブコーディング@第10回新千歳空港国際アニメーション映画祭"
-srcset="http://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0197.MP4_snapshot_17.56.475_hu_dc7dc8260b85037a.webp 320w, http://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0197.MP4_snapshot_17.56.475_hu_8f27c39df6bc14b9.webp 480w, http://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0197.MP4_snapshot_17.56.475_hu_57fb85f1025d1d6e.webp 760w"
+srcset="https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0197.MP4_snapshot_17.56.475_hu_dc7dc8260b85037a.webp 320w, https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0197.MP4_snapshot_17.56.475_hu_8f27c39df6bc14b9.webp 480w, https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0197.MP4_snapshot_17.56.475_hu_57fb85f1025d1d6e.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0197.MP4_snapshot_17.56.475_hu_dc7dc8260b85037a.webp"
+src="https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0197.MP4_snapshot_17.56.475_hu_dc7dc8260b85037a.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -298,9 +298,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="映画館で上映されたWORMHOLE"
-srcset="http://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_13.14.026_hu_53d3e61dbe492eb3.webp 320w, http://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_13.14.026_hu_3e1c66a364a8d77b.webp 480w, http://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_13.14.026_hu_653036949b076fd4.webp 760w"
+srcset="https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_13.14.026_hu_53d3e61dbe492eb3.webp 320w, https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_13.14.026_hu_3e1c66a364a8d77b.webp 480w, https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_13.14.026_hu_653036949b076fd4.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_13.14.026_hu_53d3e61dbe492eb3.webp"
+src="https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_13.14.026_hu_53d3e61dbe492eb3.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -316,9 +316,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="映画館で上映された2nd Stage BOSS"
-srcset="http://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_46.17.407_hu_f8815976fff79fe7.webp 320w, http://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_46.17.407_hu_b5583b99825ef53e.webp 480w, http://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_46.17.407_hu_44fb9511011ff3b0.webp 760w"
+srcset="https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_46.17.407_hu_f8815976fff79fe7.webp 320w, https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_46.17.407_hu_b5583b99825ef53e.webp 480w, https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_46.17.407_hu_44fb9511011ff3b0.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_46.17.407_hu_f8815976fff79fe7.webp"
+src="https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_46.17.407_hu_f8815976fff79fe7.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;

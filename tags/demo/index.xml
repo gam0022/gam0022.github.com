@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Demo | gam0022.net</title><link>http://gam0022.net/tags/demo/</link><atom:link href="http://gam0022.net/tags/demo/index.xml" rel="self" type="application/rss+xml"/><description>Demo</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 24 Feb 2016 08:19:00 +0900</lastBuildDate><image><url>http://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Demo</title><link>http://gam0022.net/tags/demo/</link></image><item><title>#TokyoDemoFest 2016 の GLSL Graphics Compo で3位入賞！</title><link>http://gam0022.net/blog/2016/02/24/tokyo-demo-fest/</link><pubDate>Wed, 24 Feb 2016 08:19:00 +0900</pubDate><guid>http://gam0022.net/blog/2016/02/24/tokyo-demo-fest/</guid><description>&lt;h2 id="はじめに"&gt;はじめに&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Demo | gam0022.net</title><link>https://gam0022.net/tags/demo/</link><atom:link href="https://gam0022.net/tags/demo/index.xml" rel="self" type="application/rss+xml"/><description>Demo</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 24 Feb 2016 08:19:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Demo</title><link>https://gam0022.net/tags/demo/</link></image><item><title>#TokyoDemoFest 2016 の GLSL Graphics Compo で3位入賞！</title><link>https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/</link><pubDate>Wed, 24 Feb 2016 08:19:00 +0900</pubDate><guid>https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/</guid><description>&lt;h2 id="はじめに"&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;2016-02-20〜21に開催された
 に参加しました。&lt;/p&gt;
 &lt;p&gt;Tokyo Demo Festとは、このようなイベントです（公式ページからの引用）。&lt;/p&gt;
@@ -38,9 +38,9 @@
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="Carbon - Blue"
-srcset="http://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-blue_hu_e29fc24110652bbc.webp 320w, http://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-blue_hu_24684109b433c015.webp 480w, http://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-blue_hu_1d1dfd09a4787772.webp 760w"
+srcset="https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-blue_hu_e29fc24110652bbc.webp 320w, https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-blue_hu_24684109b433c015.webp 480w, https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-blue_hu_1d1dfd09a4787772.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-blue_hu_e29fc24110652bbc.webp"
+src="https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-blue_hu_e29fc24110652bbc.webp"
 width="760"
 height="426"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -49,9 +49,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="Carbon - Green"
-srcset="http://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-green_hu_83b3366824008f46.webp 320w, http://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-green_hu_3d016326a0af949b.webp 480w, http://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-green_hu_e8a9229243fabf6a.webp 760w"
+srcset="https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-green_hu_83b3366824008f46.webp 320w, https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-green_hu_3d016326a0af949b.webp 480w, https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-green_hu_e8a9229243fabf6a.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-green_hu_83b3366824008f46.webp"
+src="https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-green_hu_83b3366824008f46.webp"
 width="760"
 height="387"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -60,9 +60,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="Carbon - Red"
-srcset="http://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-red_hu_293b6d8e4e83d725.webp 320w, http://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-red_hu_13291e87e3f3f64e.webp 480w, http://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-red_hu_ae20ea890d5573f2.webp 760w"
+srcset="https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-red_hu_293b6d8e4e83d725.webp 320w, https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-red_hu_13291e87e3f3f64e.webp 480w, https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-red_hu_ae20ea890d5573f2.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-red_hu_293b6d8e4e83d725.webp"
+src="https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-red_hu_293b6d8e4e83d725.webp"
 width="760"
 height="426"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -71,9 +71,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="Carbon - Violet"
-srcset="http://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-violet_hu_ddc716408a008cae.webp 320w, http://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-violet_hu_676fe04f74c2df44.webp 480w, http://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-violet_hu_3f31fc1c6bd78481.webp 760w"
+srcset="https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-violet_hu_ddc716408a008cae.webp 320w, https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-violet_hu_676fe04f74c2df44.webp 480w, https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-violet_hu_3f31fc1c6bd78481.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-violet_hu_ddc716408a008cae.webp"
+src="https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-violet_hu_ddc716408a008cae.webp"
 width="760"
 height="424"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;

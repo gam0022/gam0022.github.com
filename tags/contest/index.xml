@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Contest | gam0022.net</title><link>http://gam0022.net/tags/contest/</link><atom:link href="http://gam0022.net/tags/contest/index.xml" rel="self" type="application/rss+xml"/><description>Contest</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Feb 2014 13:55:00 +0900</lastBuildDate><image><url>http://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Contest</title><link>http://gam0022.net/tags/contest/</link></image><item><title>COJTの成果発表を終えて</title><link>http://gam0022.net/blog/2014/02/01/cojt/</link><pubDate>Sat, 01 Feb 2014 13:55:00 +0900</pubDate><guid>http://gam0022.net/blog/2014/02/01/cojt/</guid><description>&lt;h2 id="cojtとは"&gt;COJTとは&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Contest | gam0022.net</title><link>https://gam0022.net/tags/contest/</link><atom:link href="https://gam0022.net/tags/contest/index.xml" rel="self" type="application/rss+xml"/><description>Contest</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Feb 2014 13:55:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Contest</title><link>https://gam0022.net/tags/contest/</link></image><item><title>COJTの成果発表を終えて</title><link>https://gam0022.net/blog/2014/02/01/cojt/</link><pubDate>Sat, 01 Feb 2014 13:55:00 +0900</pubDate><guid>https://gam0022.net/blog/2014/02/01/cojt/</guid><description>&lt;h2 id="cojtとは"&gt;COJTとは&lt;/h2&gt;
 &lt;p&gt;1/31に、筑波大学キャンパスOJT(以下COJT)という大学の産学連携の授業の成果発表をしてきました。&lt;/p&gt;
 &lt;p&gt;COJTには、ソフトウェアコースとハードウェアコースがあり、私はソフトウェアコースの方を受講しました。&lt;/p&gt;
 &lt;p&gt;ソフトウェアコースでは、アクセル社のAG4というグラッフィクスLSIで動作するゲームの開発と発表を行いました。&lt;/p&gt;
@@ -41,9 +41,9 @@
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="音声収録風景"
-srcset="http://gam0022.net/blog/2014/02/01/cojt/voice_hu_848845ec0b3b5eff.webp 320w, http://gam0022.net/blog/2014/02/01/cojt/voice_hu_3b42a6959064955d.webp 480w, http://gam0022.net/blog/2014/02/01/cojt/voice_hu_2529165d1245bf5a.webp 760w"
+srcset="https://gam0022.net/blog/2014/02/01/cojt/voice_hu_848845ec0b3b5eff.webp 320w, https://gam0022.net/blog/2014/02/01/cojt/voice_hu_3b42a6959064955d.webp 480w, https://gam0022.net/blog/2014/02/01/cojt/voice_hu_2529165d1245bf5a.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2014/02/01/cojt/voice_hu_848845ec0b3b5eff.webp"
+src="https://gam0022.net/blog/2014/02/01/cojt/voice_hu_848845ec0b3b5eff.webp"
 width="760"
 height="570"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nginx | gam0022.net</title><link>http://gam0022.net/tags/nginx/</link><atom:link href="http://gam0022.net/tags/nginx/index.xml" rel="self" type="application/rss+xml"/><description>Nginx</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 17 Nov 2017 10:13:23 +0900</lastBuildDate><image><url>http://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Nginx</title><link>http://gam0022.net/tags/nginx/</link></image><item><title>Let's EncryptでHTTPS対応しました</title><link>http://gam0022.net/blog/2017/11/17/https-support/</link><pubDate>Fri, 17 Nov 2017 10:13:23 +0900</pubDate><guid>http://gam0022.net/blog/2017/11/17/https-support/</guid><description>&lt;p&gt;当サイト（
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nginx | gam0022.net</title><link>https://gam0022.net/tags/nginx/</link><atom:link href="https://gam0022.net/tags/nginx/index.xml" rel="self" type="application/rss+xml"/><description>Nginx</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 17 Nov 2017 10:13:23 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Nginx</title><link>https://gam0022.net/tags/nginx/</link></image><item><title>Let's EncryptでHTTPS対応しました</title><link>https://gam0022.net/blog/2017/11/17/https-support/</link><pubDate>Fri, 17 Nov 2017 10:13:23 +0900</pubDate><guid>https://gam0022.net/blog/2017/11/17/https-support/</guid><description>&lt;p&gt;当サイト（
 ）を
 でHTTPS対応しました。&lt;/p&gt;
 &lt;p&gt;
@@ -6,9 +6,9 @@
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="HTTP対応"
-srcset="http://gam0022.net/blog/2017/11/17/https-support/2017-11-15-https-support_hu_af92576d3944ec57.webp 320w, http://gam0022.net/blog/2017/11/17/https-support/2017-11-15-https-support_hu_7f62485bd7fb83c1.webp 480w, http://gam0022.net/blog/2017/11/17/https-support/2017-11-15-https-support_hu_fd0e3db20ff3106c.webp 760w"
+srcset="https://gam0022.net/blog/2017/11/17/https-support/2017-11-15-https-support_hu_af92576d3944ec57.webp 320w, https://gam0022.net/blog/2017/11/17/https-support/2017-11-15-https-support_hu_7f62485bd7fb83c1.webp 480w, https://gam0022.net/blog/2017/11/17/https-support/2017-11-15-https-support_hu_fd0e3db20ff3106c.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2017/11/17/https-support/2017-11-15-https-support_hu_af92576d3944ec57.webp"
+src="https://gam0022.net/blog/2017/11/17/https-support/2017-11-15-https-support_hu_af92576d3944ec57.webp"
 width="760"
 height="510"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sound2Light | gam0022.net</title><link>http://gam0022.net/tags/sound2light/</link><atom:link href="http://gam0022.net/tags/sound2light/index.xml" rel="self" type="application/rss+xml"/><description>Sound2Light</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 16 Apr 2025 09:00:00 +0900</lastBuildDate><image><url>http://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Sound2Light</title><link>http://gam0022.net/tags/sound2light/</link></image><item><title>draw(tokyo); #2でVJデビュー！（GLSLライブコーディング）</title><link>http://gam0022.net/blog/2025/04/16/draw2/</link><pubDate>Wed, 16 Apr 2025 09:00:00 +0900</pubDate><guid>http://gam0022.net/blog/2025/04/16/draw2/</guid><description>&lt;p&gt;3/22に渋谷のCIRCUS TOKYOでオーディオビジュアルイベント
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sound2Light | gam0022.net</title><link>https://gam0022.net/tags/sound2light/</link><atom:link href="https://gam0022.net/tags/sound2light/index.xml" rel="self" type="application/rss+xml"/><description>Sound2Light</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 16 Apr 2025 09:00:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Sound2Light</title><link>https://gam0022.net/tags/sound2light/</link></image><item><title>draw(tokyo); #2でVJデビュー！（GLSLライブコーディング）</title><link>https://gam0022.net/blog/2025/04/16/draw2/</link><pubDate>Wed, 16 Apr 2025 09:00:00 +0900</pubDate><guid>https://gam0022.net/blog/2025/04/16/draw2/</guid><description>&lt;p&gt;3/22に渋谷のCIRCUS TOKYOでオーディオビジュアルイベント
 が開催されました。&lt;/p&gt;
 &lt;p&gt;私は
 さんのVJとして出演し、Sh4derJockeyを使ったGLSLライブコーディングによるVJを行いました。&lt;/p&gt;
@@ -35,9 +35,9 @@
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="構成図"
-srcset="http://gam0022.net/blog/2025/04/16/draw2/draw2_system_hu_bdf145f67808345e.webp 320w, http://gam0022.net/blog/2025/04/16/draw2/draw2_system_hu_4597d2e482831462.webp 480w, http://gam0022.net/blog/2025/04/16/draw2/draw2_system_hu_154a8aab7a333e03.webp 760w"
+srcset="https://gam0022.net/blog/2025/04/16/draw2/draw2_system_hu_bdf145f67808345e.webp 320w, https://gam0022.net/blog/2025/04/16/draw2/draw2_system_hu_4597d2e482831462.webp 480w, https://gam0022.net/blog/2025/04/16/draw2/draw2_system_hu_154a8aab7a333e03.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2025/04/16/draw2/draw2_system_hu_bdf145f67808345e.webp"
+src="https://gam0022.net/blog/2025/04/16/draw2/draw2_system_hu_bdf145f67808345e.webp"
 width="760"
 height="438"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -158,9 +158,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="KORG_KONTROL_EDITOR"
-srcset="http://gam0022.net/blog/2025/04/16/draw2/KORG_KONTROL_EDITOR_hu_2125df59f6df8bca.webp 320w, http://gam0022.net/blog/2025/04/16/draw2/KORG_KONTROL_EDITOR_hu_89c37e8ccf21be9b.webp 480w, http://gam0022.net/blog/2025/04/16/draw2/KORG_KONTROL_EDITOR_hu_e9ebf8d269f8f02d.webp 760w"
+srcset="https://gam0022.net/blog/2025/04/16/draw2/KORG_KONTROL_EDITOR_hu_2125df59f6df8bca.webp 320w, https://gam0022.net/blog/2025/04/16/draw2/KORG_KONTROL_EDITOR_hu_89c37e8ccf21be9b.webp 480w, https://gam0022.net/blog/2025/04/16/draw2/KORG_KONTROL_EDITOR_hu_e9ebf8d269f8f02d.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2025/04/16/draw2/KORG_KONTROL_EDITOR_hu_2125df59f6df8bca.webp"
+src="https://gam0022.net/blog/2025/04/16/draw2/KORG_KONTROL_EDITOR_hu_2125df59f6df8bca.webp"
 width="760"
 height="309"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;

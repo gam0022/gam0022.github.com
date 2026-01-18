@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Gnuplot | gam0022.net</title><link>http://gam0022.net/tags/gnuplot/</link><atom:link href="http://gam0022.net/tags/gnuplot/index.xml" rel="self" type="application/rss+xml"/><description>Gnuplot</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 31 Dec 2012 17:02:00 +0900</lastBuildDate><image><url>http://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Gnuplot</title><link>http://gam0022.net/tags/gnuplot/</link></image><item><title>gnuplotでCSVファイルを読み込む方法とmultiplotの注意点</title><link>http://gam0022.net/blog/2012/12/31/gnuplot-tips/</link><pubDate>Mon, 31 Dec 2012 17:02:00 +0900</pubDate><guid>http://gam0022.net/blog/2012/12/31/gnuplot-tips/</guid><description>&lt;p&gt;シュミレーション物理とかいう授業で、
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Gnuplot | gam0022.net</title><link>https://gam0022.net/tags/gnuplot/</link><atom:link href="https://gam0022.net/tags/gnuplot/index.xml" rel="self" type="application/rss+xml"/><description>Gnuplot</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 31 Dec 2012 17:02:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Gnuplot</title><link>https://gam0022.net/tags/gnuplot/</link></image><item><title>gnuplotでCSVファイルを読み込む方法とmultiplotの注意点</title><link>https://gam0022.net/blog/2012/12/31/gnuplot-tips/</link><pubDate>Mon, 31 Dec 2012 17:02:00 +0900</pubDate><guid>https://gam0022.net/blog/2012/12/31/gnuplot-tips/</guid><description>&lt;p&gt;シュミレーション物理とかいう授業で、
 座標のデータ(天体の膨張のシュミレーションらしい)をCSV形式に出力して
 それをエクセルで分散図として表示する課題があったのですが、
 あえてgnuplotでやってみました。&lt;/p&gt;
@@ -42,9 +42,9 @@ MatLabのsubplotのような機能です。
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="gnuplot_test"
-srcset="http://gam0022.net/blog/2012/12/31/gnuplot-tips/2012.12.31_gnuplot_hu_32bcc60f8afb5c6b.webp 320w, http://gam0022.net/blog/2012/12/31/gnuplot-tips/2012.12.31_gnuplot_hu_45cd0cbed2cc085c.webp 360w"
+srcset="https://gam0022.net/blog/2012/12/31/gnuplot-tips/2012.12.31_gnuplot_hu_32bcc60f8afb5c6b.webp 320w, https://gam0022.net/blog/2012/12/31/gnuplot-tips/2012.12.31_gnuplot_hu_45cd0cbed2cc085c.webp 360w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2012/12/31/gnuplot-tips/2012.12.31_gnuplot_hu_32bcc60f8afb5c6b.webp"
+src="https://gam0022.net/blog/2012/12/31/gnuplot-tips/2012.12.31_gnuplot_hu_32bcc60f8afb5c6b.webp"
 width="360"
 height="252"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;

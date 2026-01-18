@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rsync | gam0022.net</title><link>http://gam0022.net/tags/rsync/</link><atom:link href="http://gam0022.net/tags/rsync/index.xml" rel="self" type="application/rss+xml"/><description>Rsync</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 11 Aug 2012 10:38:00 +0900</lastBuildDate><image><url>http://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Rsync</title><link>http://gam0022.net/tags/rsync/</link></image><item><title>カテゴリー名に濁点を含んだ日本語が使えない問題を解決する(Rsyncのiconvオプションを使う)</title><link>http://gam0022.net/blog/2012/08/11/use-rsync-iconv-option/</link><pubDate>Sat, 11 Aug 2012 10:38:00 +0900</pubDate><guid>http://gam0022.net/blog/2012/08/11/use-rsync-iconv-option/</guid><description>&lt;p&gt;このブログで、カテゴリーに濁点を含んだ日本語を使うと、カテゴリーの一覧などからカテゴリーのページにリンクしたとき、
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rsync | gam0022.net</title><link>https://gam0022.net/tags/rsync/</link><atom:link href="https://gam0022.net/tags/rsync/index.xml" rel="self" type="application/rss+xml"/><description>Rsync</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 11 Aug 2012 10:38:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Rsync</title><link>https://gam0022.net/tags/rsync/</link></image><item><title>カテゴリー名に濁点を含んだ日本語が使えない問題を解決する(Rsyncのiconvオプションを使う)</title><link>https://gam0022.net/blog/2012/08/11/use-rsync-iconv-option/</link><pubDate>Sat, 11 Aug 2012 10:38:00 +0900</pubDate><guid>https://gam0022.net/blog/2012/08/11/use-rsync-iconv-option/</guid><description>&lt;p&gt;このブログで、カテゴリーに濁点を含んだ日本語を使うと、カテゴリーの一覧などからカテゴリーのページにリンクしたとき、
 404エラーになってしまう問題が起きました。&lt;/p&gt;
 &lt;p&gt;原因は、このブログの開発環境にありました。&lt;/p&gt;
 &lt;p&gt;このブログは静的コンテンツなのですが、次のような手順でブログを運営しています。
@@ -57,14 +57,14 @@
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="Disqusのコメントのアーカイブ"
-srcset="http://gam0022.net/blog/2012/08/11/use-rsync-iconv-option/disqus_comments_hu_3b71a278ad5d6cbd.webp 320w, http://gam0022.net/blog/2012/08/11/use-rsync-iconv-option/disqus_comments_hu_65db7281d5c0e500.webp 480w, http://gam0022.net/blog/2012/08/11/use-rsync-iconv-option/disqus_comments_hu_905132d5c92f4775.webp 760w"
+srcset="https://gam0022.net/blog/2012/08/11/use-rsync-iconv-option/disqus_comments_hu_3b71a278ad5d6cbd.webp 320w, https://gam0022.net/blog/2012/08/11/use-rsync-iconv-option/disqus_comments_hu_65db7281d5c0e500.webp 480w, https://gam0022.net/blog/2012/08/11/use-rsync-iconv-option/disqus_comments_hu_905132d5c92f4775.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2012/08/11/use-rsync-iconv-option/disqus_comments_hu_3b71a278ad5d6cbd.webp"
+src="https://gam0022.net/blog/2012/08/11/use-rsync-iconv-option/disqus_comments_hu_3b71a278ad5d6cbd.webp"
 width="760"
 height="302"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;</description></item><item><title>Rsyncを使ってOctopressをVPS上で公開する</title><link>http://gam0022.net/blog/2012/07/23/run-octopress-on-a-vps-using-rsync/</link><pubDate>Mon, 23 Jul 2012 10:02:00 +0900</pubDate><guid>http://gam0022.net/blog/2012/07/23/run-octopress-on-a-vps-using-rsync/</guid><description>&lt;p&gt;今回もOctopressに関する記事です。&lt;/p&gt;
+&lt;/p&gt;</description></item><item><title>Rsyncを使ってOctopressをVPS上で公開する</title><link>https://gam0022.net/blog/2012/07/23/run-octopress-on-a-vps-using-rsync/</link><pubDate>Mon, 23 Jul 2012 10:02:00 +0900</pubDate><guid>https://gam0022.net/blog/2012/07/23/run-octopress-on-a-vps-using-rsync/</guid><description>&lt;p&gt;今回もOctopressに関する記事です。&lt;/p&gt;
 &lt;p&gt;先日、Octopressを使ってGithubPages上にブログを運営しましたが、
 気が変わってレンタルしているVPS上で運営したくなりました。&lt;/p&gt;
 &lt;p&gt;Octopressでは&lt;code&gt;rake deploy&lt;/code&gt;を叩くだけでRsyncを使い自分のサーバ上にコンテンツを同期することができるので、

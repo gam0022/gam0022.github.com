@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lion | gam0022.net</title><link>http://gam0022.net/tags/lion/</link><atom:link href="http://gam0022.net/tags/lion/index.xml" rel="self" type="application/rss+xml"/><description>Lion</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 Aug 2012 11:17:00 +0900</lastBuildDate><image><url>http://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Lion</title><link>http://gam0022.net/tags/lion/</link></image><item><title>Macを使い始めて最初に入れたアプリケーションたち</title><link>http://gam0022.net/blog/2012/08/01/installed-applications-on-os-x/</link><pubDate>Wed, 01 Aug 2012 11:17:00 +0900</pubDate><guid>http://gam0022.net/blog/2012/08/01/installed-applications-on-os-x/</guid><description>&lt;p&gt;Mac Book Airを使い出してから、1週間を経過しました。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lion | gam0022.net</title><link>https://gam0022.net/tags/lion/</link><atom:link href="https://gam0022.net/tags/lion/index.xml" rel="self" type="application/rss+xml"/><description>Lion</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 Aug 2012 11:17:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Lion</title><link>https://gam0022.net/tags/lion/</link></image><item><title>Macを使い始めて最初に入れたアプリケーションたち</title><link>https://gam0022.net/blog/2012/08/01/installed-applications-on-os-x/</link><pubDate>Wed, 01 Aug 2012 11:17:00 +0900</pubDate><guid>https://gam0022.net/blog/2012/08/01/installed-applications-on-os-x/</guid><description>&lt;p&gt;Mac Book Airを使い出してから、1週間を経過しました。&lt;/p&gt;
 &lt;p&gt;まともにMacを使ったことがなかったのですが、1週間でかなり慣れました。&lt;/p&gt;
 &lt;p&gt;ひとまず、1週間の間にインストールしたソフトをまとめてみます。&lt;/p&gt;
 &lt;p&gt;こんなのも便利だよというのがあれば教えてください。&lt;/p&gt;
@@ -61,7 +61,7 @@
 &lt;p&gt;憶測ですが、osx-gcc-installerからgccを入れれば、rvm経由でRuby on Rails環境を苦労なく作れたかもしれません。&lt;/p&gt;
 &lt;h3 id="最後に"&gt;最後に&lt;/h3&gt;
 &lt;p&gt;無料と聞いて、Mountain Lion を入れてしまいました。&lt;/p&gt;
-&lt;p&gt;Macを1週間しか使ってないせいか、通知センターの有無くらいしか違いがわからない…&lt;/p&gt;</description></item><item><title>Mac(Lion)でアプリケーション内でウィンドウを切り替える方法</title><link>http://gam0022.net/blog/2012/07/29/switch-within-the-app-mac/</link><pubDate>Sun, 29 Jul 2012 23:21:00 +0900</pubDate><guid>http://gam0022.net/blog/2012/07/29/switch-within-the-app-mac/</guid><description>&lt;p&gt;Macでは、Comand + tabなどで、アプリケーション単位の切り替えができますが、
+&lt;p&gt;Macを1週間しか使ってないせいか、通知センターの有無くらいしか違いがわからない…&lt;/p&gt;</description></item><item><title>Mac(Lion)でアプリケーション内でウィンドウを切り替える方法</title><link>https://gam0022.net/blog/2012/07/29/switch-within-the-app-mac/</link><pubDate>Sun, 29 Jul 2012 23:21:00 +0900</pubDate><guid>https://gam0022.net/blog/2012/07/29/switch-within-the-app-mac/</guid><description>&lt;p&gt;Macでは、Comand + tabなどで、アプリケーション単位の切り替えができますが、
 同一アプリケーションで複数のウィンドウを開いているときに、
 どうやってウィンドウを切り替えるのかがわかりませんでした。&lt;/p&gt;
 &lt;p&gt;調べてみると、OSの標準機能で同一アプリケーション内のウィンドウを切り替える機能がありました。&lt;/p&gt;
@@ -70,9 +70,9 @@
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="次のウィンドウを操作対象にする"
-srcset="http://gam0022.net/blog/2012/07/29/switch-within-the-app-mac/2012.7.29_toggle_windows_hu_784cdcf3d3cbc98b.webp 320w, http://gam0022.net/blog/2012/07/29/switch-within-the-app-mac/2012.7.29_toggle_windows_hu_af13def5ec906a58.webp 480w, http://gam0022.net/blog/2012/07/29/switch-within-the-app-mac/2012.7.29_toggle_windows_hu_a71b6228f1588a55.webp 748w"
+srcset="https://gam0022.net/blog/2012/07/29/switch-within-the-app-mac/2012.7.29_toggle_windows_hu_784cdcf3d3cbc98b.webp 320w, https://gam0022.net/blog/2012/07/29/switch-within-the-app-mac/2012.7.29_toggle_windows_hu_af13def5ec906a58.webp 480w, https://gam0022.net/blog/2012/07/29/switch-within-the-app-mac/2012.7.29_toggle_windows_hu_a71b6228f1588a55.webp 748w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2012/07/29/switch-within-the-app-mac/2012.7.29_toggle_windows_hu_784cdcf3d3cbc98b.webp"
+src="https://gam0022.net/blog/2012/07/29/switch-within-the-app-mac/2012.7.29_toggle_windows_hu_784cdcf3d3cbc98b.webp"
 width="748"
 height="678"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -82,7 +82,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;p&gt;このような機能があるので、これに任意のショートカットを割り当てれば良いです。&lt;/p&gt;
 &lt;p&gt;私の場合、&lt;code&gt;option + tab&lt;/code&gt;に割り当てることにしました。&lt;/p&gt;
 &lt;p&gt;これで、Chromeで複数ウィンドウを開いているときなども、
-簡単にウィンドウを切り替えることができるようになりました。&lt;/p&gt;</description></item><item><title>Linux(Ubuntu)からOS Xへ開発環境を移すときにしたこと</title><link>http://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/</link><pubDate>Sat, 28 Jul 2012 00:01:00 +0900</pubDate><guid>http://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/</guid><description>&lt;p&gt;とりあえず次のような感じになりました。&lt;/p&gt;
+簡単にウィンドウを切り替えることができるようになりました。&lt;/p&gt;</description></item><item><title>Linux(Ubuntu)からOS Xへ開発環境を移すときにしたこと</title><link>https://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/</link><pubDate>Sat, 28 Jul 2012 00:01:00 +0900</pubDate><guid>https://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/</guid><description>&lt;p&gt;とりあえず次のような感じになりました。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;ターミナル
 :Terminal.app&lt;/li&gt;
@@ -102,9 +102,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="Terminal.app"
-srcset="http://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/2012.7.28_terminal_hu_c212c4e707f03596.webp 320w, http://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/2012.7.28_terminal_hu_bf2ee45b8d562134.webp 480w, http://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/2012.7.28_terminal_hu_e8bc1d2f876c8cd7.webp 715w"
+srcset="https://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/2012.7.28_terminal_hu_c212c4e707f03596.webp 320w, https://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/2012.7.28_terminal_hu_bf2ee45b8d562134.webp 480w, https://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/2012.7.28_terminal_hu_e8bc1d2f876c8cd7.webp 715w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/2012.7.28_terminal_hu_c212c4e707f03596.webp"
+src="https://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/2012.7.28_terminal_hu_c212c4e707f03596.webp"
 width="715"
 height="502"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;

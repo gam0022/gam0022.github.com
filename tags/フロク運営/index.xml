@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ブログ運営 | gam0022.net</title><link>http://gam0022.net/tags/%E3%83%95%E3%83%AD%E3%82%AF%E9%81%8B%E5%96%B6/</link><atom:link href="http://gam0022.net/tags/%E3%83%95%E3%83%AD%E3%82%AF%E9%81%8B%E5%96%B6/index.xml" rel="self" type="application/rss+xml"/><description>ブログ運営</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 07 May 2022 20:05:08 +0900</lastBuildDate><image><url>http://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>ブログ運営</title><link>http://gam0022.net/tags/%E3%83%95%E3%83%AD%E3%82%AF%E9%81%8B%E5%96%B6/</link></image><item><title>HugoをGitHub Pagesで公開し、2リポジトリ構成の管理を楽にする方法</title><link>http://gam0022.net/blog/2022/05/07/hugo-on-github-pages/</link><pubDate>Sat, 07 May 2022 20:05:08 +0900</pubDate><guid>http://gam0022.net/blog/2022/05/07/hugo-on-github-pages/</guid><description>&lt;p&gt;本サイトのホスト先をConoHa VPSからGitHub Pagesに乗り換えました。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ブログ運営 | gam0022.net</title><link>https://gam0022.net/tags/%E3%83%95%E3%83%AD%E3%82%AF%E9%81%8B%E5%96%B6/</link><atom:link href="https://gam0022.net/tags/%E3%83%95%E3%83%AD%E3%82%AF%E9%81%8B%E5%96%B6/index.xml" rel="self" type="application/rss+xml"/><description>ブログ運営</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 07 May 2022 20:05:08 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>ブログ運営</title><link>https://gam0022.net/tags/%E3%83%95%E3%83%AD%E3%82%AF%E9%81%8B%E5%96%B6/</link></image><item><title>HugoをGitHub Pagesで公開し、2リポジトリ構成の管理を楽にする方法</title><link>https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/</link><pubDate>Sat, 07 May 2022 20:05:08 +0900</pubDate><guid>https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/</guid><description>&lt;p&gt;本サイトのホスト先をConoHa VPSからGitHub Pagesに乗り換えました。&lt;/p&gt;
 &lt;p&gt;実は去年の5月に乗り換えていて、1年ほど運用して方針が固まったので記事にしました。&lt;/p&gt;
 &lt;p&gt;
 &lt;figure &gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="Hugo on GitHub Pages"
-srcset="http://gam0022.net/blog/2022/05/07/hugo-on-github-pages/thumbnail_hu_2c12a4c7778006e.webp 320w, http://gam0022.net/blog/2022/05/07/hugo-on-github-pages/thumbnail_hu_a29ec60c1959089c.webp 480w, http://gam0022.net/blog/2022/05/07/hugo-on-github-pages/thumbnail_hu_b28052d17eb991ee.webp 760w"
+srcset="https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/thumbnail_hu_2c12a4c7778006e.webp 320w, https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/thumbnail_hu_a29ec60c1959089c.webp 480w, https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/thumbnail_hu_b28052d17eb991ee.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2022/05/07/hugo-on-github-pages/thumbnail_hu_2c12a4c7778006e.webp"
+src="https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/thumbnail_hu_2c12a4c7778006e.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -109,9 +109,9 @@ Windowsを利用している人は参考にしてください。&lt;/p&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="GitHub側の設定"
-srcset="http://gam0022.net/blog/2022/05/07/hugo-on-github-pages/github-custom-domain_hu_a4cf38ed37e0ee3a.webp 320w, http://gam0022.net/blog/2022/05/07/hugo-on-github-pages/github-custom-domain_hu_c3a77f79b948d036.webp 480w, http://gam0022.net/blog/2022/05/07/hugo-on-github-pages/github-custom-domain_hu_ff9df9fa550d07b0.webp 760w"
+srcset="https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/github-custom-domain_hu_a4cf38ed37e0ee3a.webp 320w, https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/github-custom-domain_hu_c3a77f79b948d036.webp 480w, https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/github-custom-domain_hu_ff9df9fa550d07b0.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2022/05/07/hugo-on-github-pages/github-custom-domain_hu_a4cf38ed37e0ee3a.webp"
+src="https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/github-custom-domain_hu_a4cf38ed37e0ee3a.webp"
 width="760"
 height="532"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -132,9 +132,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="Google Domain"
-srcset="http://gam0022.net/blog/2022/05/07/hugo-on-github-pages/google-domain_hu_c5a43258032f2120.webp 320w, http://gam0022.net/blog/2022/05/07/hugo-on-github-pages/google-domain_hu_83071c6e17addf7a.webp 480w, http://gam0022.net/blog/2022/05/07/hugo-on-github-pages/google-domain_hu_586b50d64b91ee7c.webp 760w"
+srcset="https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/google-domain_hu_c5a43258032f2120.webp 320w, https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/google-domain_hu_83071c6e17addf7a.webp 480w, https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/google-domain_hu_586b50d64b91ee7c.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2022/05/07/hugo-on-github-pages/google-domain_hu_c5a43258032f2120.webp"
+src="https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/google-domain_hu_c5a43258032f2120.webp"
 width="760"
 height="378"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -149,7 +149,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;p&gt;その点で静的CMS + 適当なサービスにホスティングがブログの持続性（サービス終了のリスク回避）では最強だと考えています。&lt;/p&gt;
 &lt;p&gt;もしGitHub Pagesがサービス終了したとしても、その時はまたVPSにホスティングすれば良いだけです。&lt;/p&gt;
 &lt;p&gt;完全に余談ですが、ドメインは10年更新にしているので、筆者が死亡したとしてもしばらくサイトは消えないと思います。&lt;/p&gt;
-&lt;p&gt;それでは！&lt;/p&gt;</description></item><item><title>お名前.comからGoogleドメインに乗り換えました（2021版）</title><link>http://gam0022.net/blog/2021/05/06/onamae-com-to-google-domain/</link><pubDate>Thu, 06 May 2021 02:00:00 +0900</pubDate><guid>http://gam0022.net/blog/2021/05/06/onamae-com-to-google-domain/</guid><description>&lt;p&gt;当サイト（
+&lt;p&gt;それでは！&lt;/p&gt;</description></item><item><title>お名前.comからGoogleドメインに乗り換えました（2021版）</title><link>https://gam0022.net/blog/2021/05/06/onamae-com-to-google-domain/</link><pubDate>Thu, 06 May 2021 02:00:00 +0900</pubDate><guid>https://gam0022.net/blog/2021/05/06/onamae-com-to-google-domain/</guid><description>&lt;p&gt;当サイト（
 ）のドメイン管理の事業者を
 から
 に移管しました。&lt;/p&gt;
@@ -158,9 +158,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="お名前.comからGoogleドメインに移管"
-srcset="http://gam0022.net/blog/2021/05/06/onamae-com-to-google-domain/transfer_hu_71adda362b0eb03b.webp 320w, http://gam0022.net/blog/2021/05/06/onamae-com-to-google-domain/transfer_hu_6b753c146676fa60.webp 480w, http://gam0022.net/blog/2021/05/06/onamae-com-to-google-domain/transfer_hu_896cea53ba79cb94.webp 760w"
+srcset="https://gam0022.net/blog/2021/05/06/onamae-com-to-google-domain/transfer_hu_71adda362b0eb03b.webp 320w, https://gam0022.net/blog/2021/05/06/onamae-com-to-google-domain/transfer_hu_6b753c146676fa60.webp 480w, https://gam0022.net/blog/2021/05/06/onamae-com-to-google-domain/transfer_hu_896cea53ba79cb94.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2021/05/06/onamae-com-to-google-domain/transfer_hu_71adda362b0eb03b.webp"
+src="https://gam0022.net/blog/2021/05/06/onamae-com-to-google-domain/transfer_hu_71adda362b0eb03b.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -266,7 +266,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;p&gt;お名前.comは初年度がありえないほど安いので、ドメインの取得だけお名前.comで行なって、60日経過後に他社に移管することでコストを最小化できそうな気がしています。&lt;/p&gt;
 &lt;h2 id="まとめ"&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;冒頭で述べたとおり、1時間もあればドメインの移管はできました。
-お名前.comの迷惑メールに困っている方は、Googleドメインに乗り換えてみてはいかがでしょうか？&lt;/p&gt;</description></item><item><title>Let's EncryptでHTTPS対応しました</title><link>http://gam0022.net/blog/2017/11/17/https-support/</link><pubDate>Fri, 17 Nov 2017 10:13:23 +0900</pubDate><guid>http://gam0022.net/blog/2017/11/17/https-support/</guid><description>&lt;p&gt;当サイト（
+お名前.comの迷惑メールに困っている方は、Googleドメインに乗り換えてみてはいかがでしょうか？&lt;/p&gt;</description></item><item><title>Let's EncryptでHTTPS対応しました</title><link>https://gam0022.net/blog/2017/11/17/https-support/</link><pubDate>Fri, 17 Nov 2017 10:13:23 +0900</pubDate><guid>https://gam0022.net/blog/2017/11/17/https-support/</guid><description>&lt;p&gt;当サイト（
 ）を
 でHTTPS対応しました。&lt;/p&gt;
 &lt;p&gt;
@@ -274,9 +274,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="HTTP対応"
-srcset="http://gam0022.net/blog/2017/11/17/https-support/2017-11-15-https-support_hu_af92576d3944ec57.webp 320w, http://gam0022.net/blog/2017/11/17/https-support/2017-11-15-https-support_hu_7f62485bd7fb83c1.webp 480w, http://gam0022.net/blog/2017/11/17/https-support/2017-11-15-https-support_hu_fd0e3db20ff3106c.webp 760w"
+srcset="https://gam0022.net/blog/2017/11/17/https-support/2017-11-15-https-support_hu_af92576d3944ec57.webp 320w, https://gam0022.net/blog/2017/11/17/https-support/2017-11-15-https-support_hu_7f62485bd7fb83c1.webp 480w, https://gam0022.net/blog/2017/11/17/https-support/2017-11-15-https-support_hu_fd0e3db20ff3106c.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2017/11/17/https-support/2017-11-15-https-support_hu_af92576d3944ec57.webp"
+src="https://gam0022.net/blog/2017/11/17/https-support/2017-11-15-https-support_hu_af92576d3944ec57.webp"
 width="760"
 height="510"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -407,14 +407,14 @@ nginxの設定変更でHTTP/2対応もできました。
 &lt;p&gt;ページ構成をHTTP/2用に最適化しないと効果は薄いのかもしれません。&lt;/p&gt;
 &lt;h2 id="まとめ"&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;Let&amp;rsquo;s Encrypt(certbot)でHTTPS対応は簡単にできるので、みんやなればいいと思いました。&lt;/p&gt;
-&lt;p&gt;はてなのサービスのHTTPS対応が遅いので、なんとかして欲しいです。&lt;/p&gt;</description></item><item><title>OctopressからHugoへ移行する方法</title><link>http://gam0022.net/blog/2016/09/25/migrated-from-octopress-to-hugo/</link><pubDate>Sun, 25 Sep 2016 12:45:18 +0900</pubDate><guid>http://gam0022.net/blog/2016/09/25/migrated-from-octopress-to-hugo/</guid><description>&lt;p&gt;
+&lt;p&gt;はてなのサービスのHTTPS対応が遅いので、なんとかして欲しいです。&lt;/p&gt;</description></item><item><title>OctopressからHugoへ移行する方法</title><link>https://gam0022.net/blog/2016/09/25/migrated-from-octopress-to-hugo/</link><pubDate>Sun, 25 Sep 2016 12:45:18 +0900</pubDate><guid>https://gam0022.net/blog/2016/09/25/migrated-from-octopress-to-hugo/</guid><description>&lt;p&gt;
 &lt;figure &gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="OctopressからHugoへ移行"
-srcset="http://gam0022.net/blog/2016/09/25/migrated-from-octopress-to-hugo/migrated-from-octopress-to-hugo_hu_8633c661c4f75bc5.webp 320w, http://gam0022.net/blog/2016/09/25/migrated-from-octopress-to-hugo/migrated-from-octopress-to-hugo_hu_96f575b02ee2ea63.webp 480w, http://gam0022.net/blog/2016/09/25/migrated-from-octopress-to-hugo/migrated-from-octopress-to-hugo_hu_aa72a0dedbe14c1d.webp 760w"
+srcset="https://gam0022.net/blog/2016/09/25/migrated-from-octopress-to-hugo/migrated-from-octopress-to-hugo_hu_8633c661c4f75bc5.webp 320w, https://gam0022.net/blog/2016/09/25/migrated-from-octopress-to-hugo/migrated-from-octopress-to-hugo_hu_96f575b02ee2ea63.webp 480w, https://gam0022.net/blog/2016/09/25/migrated-from-octopress-to-hugo/migrated-from-octopress-to-hugo_hu_aa72a0dedbe14c1d.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2016/09/25/migrated-from-octopress-to-hugo/migrated-from-octopress-to-hugo_hu_8633c661c4f75bc5.webp"
+src="https://gam0022.net/blog/2016/09/25/migrated-from-octopress-to-hugo/migrated-from-octopress-to-hugo_hu_8633c661c4f75bc5.webp"
 width="760"
 height="290"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -568,9 +568,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="Disqusのコメントのアーカイブ"
-srcset="http://gam0022.net/blog/2016/09/25/migrated-from-octopress-to-hugo/disqus_comments_hu_1a165ba4eb499d5f.webp 320w, http://gam0022.net/blog/2016/09/25/migrated-from-octopress-to-hugo/disqus_comments_hu_b3643bcdbb30775e.webp 480w, http://gam0022.net/blog/2016/09/25/migrated-from-octopress-to-hugo/disqus_comments_hu_54714b7641c55bb1.webp 760w"
+srcset="https://gam0022.net/blog/2016/09/25/migrated-from-octopress-to-hugo/disqus_comments_hu_1a165ba4eb499d5f.webp 320w, https://gam0022.net/blog/2016/09/25/migrated-from-octopress-to-hugo/disqus_comments_hu_b3643bcdbb30775e.webp 480w, https://gam0022.net/blog/2016/09/25/migrated-from-octopress-to-hugo/disqus_comments_hu_54714b7641c55bb1.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2016/09/25/migrated-from-octopress-to-hugo/disqus_comments_hu_1a165ba4eb499d5f.webp"
+src="https://gam0022.net/blog/2016/09/25/migrated-from-octopress-to-hugo/disqus_comments_hu_1a165ba4eb499d5f.webp"
 width="760"
 height="363"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;

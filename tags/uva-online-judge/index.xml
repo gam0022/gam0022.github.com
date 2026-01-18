@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Uva Online Judge | gam0022.net</title><link>http://gam0022.net/tags/uva-online-judge/</link><atom:link href="http://gam0022.net/tags/uva-online-judge/index.xml" rel="self" type="application/rss+xml"/><description>Uva Online Judge</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 26 Aug 2013 21:34:00 +0900</lastBuildDate><image><url>http://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Uva Online Judge</title><link>http://gam0022.net/tags/uva-online-judge/</link></image><item><title>Programming Challenges 3</title><link>http://gam0022.net/blog/2013/08/26/programming-challenges-3/</link><pubDate>Mon, 26 Aug 2013 21:34:00 +0900</pubDate><guid>http://gam0022.net/blog/2013/08/26/programming-challenges-3/</guid><description>&lt;p&gt;Uva Online Judgeで解いた問題を適当に解説します。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Uva Online Judge | gam0022.net</title><link>https://gam0022.net/tags/uva-online-judge/</link><atom:link href="https://gam0022.net/tags/uva-online-judge/index.xml" rel="self" type="application/rss+xml"/><description>Uva Online Judge</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 26 Aug 2013 21:34:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Uva Online Judge</title><link>https://gam0022.net/tags/uva-online-judge/</link></image><item><title>Programming Challenges 3</title><link>https://gam0022.net/blog/2013/08/26/programming-challenges-3/</link><pubDate>Mon, 26 Aug 2013 21:34:00 +0900</pubDate><guid>https://gam0022.net/blog/2013/08/26/programming-challenges-3/</guid><description>&lt;p&gt;Uva Online Judgeで解いた問題を適当に解説します。&lt;/p&gt;
 &lt;p&gt;3ということで、
 と
 の続きです。&lt;/p&gt;
@@ -201,7 +201,7 @@ $$&lt;h2 id="10167-birthday-cake"&gt;10167 Birthday Cake&lt;/h2&gt;
 &lt;p&gt;この問題では、切り方を $Ax + Ay = 0$ となるような直線で表現する。&lt;/p&gt;
 &lt;p&gt;$ -500 \le A \le 500, -500 \le B \le 500 $という制約があるので、
 $A, B$ の全ての組みわせでも、高々$ 1000 \times 1000 $通りしか無い。&lt;/p&gt;
-&lt;p&gt;よって、総当りで、$A, B$ の組み合わせを求めれば解けた。&lt;/p&gt;</description></item><item><title>Programming Challenges 2</title><link>http://gam0022.net/blog/2013/07/09/programming-challenges-2/</link><pubDate>Tue, 09 Jul 2013 07:00:00 +0900</pubDate><guid>http://gam0022.net/blog/2013/07/09/programming-challenges-2/</guid><description>&lt;p&gt;Uva Online Judgeで解いた問題を適当に解説します。&lt;/p&gt;
+&lt;p&gt;よって、総当りで、$A, B$ の組み合わせを求めれば解けた。&lt;/p&gt;</description></item><item><title>Programming Challenges 2</title><link>https://gam0022.net/blog/2013/07/09/programming-challenges-2/</link><pubDate>Tue, 09 Jul 2013 07:00:00 +0900</pubDate><guid>https://gam0022.net/blog/2013/07/09/programming-challenges-2/</guid><description>&lt;p&gt;Uva Online Judgeで解いた問題を適当に解説します。&lt;/p&gt;
 &lt;p&gt;2ということで、
 の続きです。&lt;/p&gt;
 &lt;h2 id="wheres-waldorf"&gt;Where&amp;rsquo;s Waldorf?&lt;/h2&gt;
@@ -275,7 +275,7 @@ outputの時に hh:mm に計算をして戻すようにした。&lt;/p&gt;
 &lt;p&gt;結論から言うと、一日あたりの罰金が大きい順で案件をソートすれば AC となった。&lt;/p&gt;
 &lt;p&gt;一日あたりの罰金 = 罰金 / 修理に必要な日数 = fine / day&lt;/p&gt;
 &lt;p&gt;初めは、安定ソートでないといけないかと思ったが、不安定なソート(std::sort)でもACとなった。&lt;/p&gt;
-&lt;p&gt;どうして、この方法で答えが導けるか証明は難しいが、感覚的には確かに成り立ちそうである。&lt;/p&gt;</description></item><item><title>Programming Challenges 1</title><link>http://gam0022.net/blog/2013/06/06/programming-challenges-1/</link><pubDate>Thu, 06 Jun 2013 09:14:00 +0900</pubDate><guid>http://gam0022.net/blog/2013/06/06/programming-challenges-1/</guid><description>&lt;p&gt;Uva Online Judgeで解いた問題を適当に解説します。&lt;/p&gt;
+&lt;p&gt;どうして、この方法で答えが導けるか証明は難しいが、感覚的には確かに成り立ちそうである。&lt;/p&gt;</description></item><item><title>Programming Challenges 1</title><link>https://gam0022.net/blog/2013/06/06/programming-challenges-1/</link><pubDate>Thu, 06 Jun 2013 09:14:00 +0900</pubDate><guid>https://gam0022.net/blog/2013/06/06/programming-challenges-1/</guid><description>&lt;p&gt;Uva Online Judgeで解いた問題を適当に解説します。&lt;/p&gt;
 &lt;h2 id="the-3n1-problem"&gt;The 3n+1 Problem&lt;/h2&gt;
 &lt;h3 id="問題"&gt;問題&lt;/h3&gt;
 &lt;p&gt;

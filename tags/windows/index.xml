@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Windows | gam0022.net</title><link>http://gam0022.net/tags/windows/</link><atom:link href="http://gam0022.net/tags/windows/index.xml" rel="self" type="application/rss+xml"/><description>Windows</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 07 May 2022 20:05:08 +0900</lastBuildDate><image><url>http://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Windows</title><link>http://gam0022.net/tags/windows/</link></image><item><title>HugoをGitHub Pagesで公開し、2リポジトリ構成の管理を楽にする方法</title><link>http://gam0022.net/blog/2022/05/07/hugo-on-github-pages/</link><pubDate>Sat, 07 May 2022 20:05:08 +0900</pubDate><guid>http://gam0022.net/blog/2022/05/07/hugo-on-github-pages/</guid><description>&lt;p&gt;本サイトのホスト先をConoHa VPSからGitHub Pagesに乗り換えました。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Windows | gam0022.net</title><link>https://gam0022.net/tags/windows/</link><atom:link href="https://gam0022.net/tags/windows/index.xml" rel="self" type="application/rss+xml"/><description>Windows</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 07 May 2022 20:05:08 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Windows</title><link>https://gam0022.net/tags/windows/</link></image><item><title>HugoをGitHub Pagesで公開し、2リポジトリ構成の管理を楽にする方法</title><link>https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/</link><pubDate>Sat, 07 May 2022 20:05:08 +0900</pubDate><guid>https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/</guid><description>&lt;p&gt;本サイトのホスト先をConoHa VPSからGitHub Pagesに乗り換えました。&lt;/p&gt;
 &lt;p&gt;実は去年の5月に乗り換えていて、1年ほど運用して方針が固まったので記事にしました。&lt;/p&gt;
 &lt;p&gt;
 &lt;figure &gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="Hugo on GitHub Pages"
-srcset="http://gam0022.net/blog/2022/05/07/hugo-on-github-pages/thumbnail_hu_2c12a4c7778006e.webp 320w, http://gam0022.net/blog/2022/05/07/hugo-on-github-pages/thumbnail_hu_a29ec60c1959089c.webp 480w, http://gam0022.net/blog/2022/05/07/hugo-on-github-pages/thumbnail_hu_b28052d17eb991ee.webp 760w"
+srcset="https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/thumbnail_hu_2c12a4c7778006e.webp 320w, https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/thumbnail_hu_a29ec60c1959089c.webp 480w, https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/thumbnail_hu_b28052d17eb991ee.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2022/05/07/hugo-on-github-pages/thumbnail_hu_2c12a4c7778006e.webp"
+src="https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/thumbnail_hu_2c12a4c7778006e.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -109,9 +109,9 @@ Windowsを利用している人は参考にしてください。&lt;/p&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="GitHub側の設定"
-srcset="http://gam0022.net/blog/2022/05/07/hugo-on-github-pages/github-custom-domain_hu_a4cf38ed37e0ee3a.webp 320w, http://gam0022.net/blog/2022/05/07/hugo-on-github-pages/github-custom-domain_hu_c3a77f79b948d036.webp 480w, http://gam0022.net/blog/2022/05/07/hugo-on-github-pages/github-custom-domain_hu_ff9df9fa550d07b0.webp 760w"
+srcset="https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/github-custom-domain_hu_a4cf38ed37e0ee3a.webp 320w, https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/github-custom-domain_hu_c3a77f79b948d036.webp 480w, https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/github-custom-domain_hu_ff9df9fa550d07b0.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2022/05/07/hugo-on-github-pages/github-custom-domain_hu_a4cf38ed37e0ee3a.webp"
+src="https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/github-custom-domain_hu_a4cf38ed37e0ee3a.webp"
 width="760"
 height="532"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -132,9 +132,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="Google Domain"
-srcset="http://gam0022.net/blog/2022/05/07/hugo-on-github-pages/google-domain_hu_c5a43258032f2120.webp 320w, http://gam0022.net/blog/2022/05/07/hugo-on-github-pages/google-domain_hu_83071c6e17addf7a.webp 480w, http://gam0022.net/blog/2022/05/07/hugo-on-github-pages/google-domain_hu_586b50d64b91ee7c.webp 760w"
+srcset="https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/google-domain_hu_c5a43258032f2120.webp 320w, https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/google-domain_hu_83071c6e17addf7a.webp 480w, https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/google-domain_hu_586b50d64b91ee7c.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2022/05/07/hugo-on-github-pages/google-domain_hu_c5a43258032f2120.webp"
+src="https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/google-domain_hu_c5a43258032f2120.webp"
 width="760"
 height="378"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;

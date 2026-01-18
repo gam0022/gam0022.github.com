@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TextMeshPro | gam0022.net</title><link>http://gam0022.net/tags/textmeshpro/</link><atom:link href="http://gam0022.net/tags/textmeshpro/index.xml" rel="self" type="application/rss+xml"/><description>TextMeshPro</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 25 Jun 2019 09:00:00 +0900</lastBuildDate><image><url>http://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>TextMeshPro</title><link>http://gam0022.net/tags/textmeshpro/</link></image><item><title>Unity×レイマーチングによる映像制作の実践手法</title><link>http://gam0022.net/blog/2019/06/25/unity-raymarching/</link><pubDate>Tue, 25 Jun 2019 09:00:00 +0900</pubDate><guid>http://gam0022.net/blog/2019/06/25/unity-raymarching/</guid><description>&lt;p&gt;6/19に開催された
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TextMeshPro | gam0022.net</title><link>https://gam0022.net/tags/textmeshpro/</link><atom:link href="https://gam0022.net/tags/textmeshpro/index.xml" rel="self" type="application/rss+xml"/><description>TextMeshPro</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 25 Jun 2019 09:00:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>TextMeshPro</title><link>https://gam0022.net/tags/textmeshpro/</link></image><item><title>Unity×レイマーチングによる映像制作の実践手法</title><link>https://gam0022.net/blog/2019/06/25/unity-raymarching/</link><pubDate>Tue, 25 Jun 2019 09:00:00 +0900</pubDate><guid>https://gam0022.net/blog/2019/06/25/unity-raymarching/</guid><description>&lt;p&gt;6/19に開催された
 で「Unity×レイマーチングによる映像制作の実践手法」という発表をしました。&lt;/p&gt;
 &lt;script async class="speakerdeck-embed" data-id="daf8218b7458460087137b6f23e938b3" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"&gt;&lt;/script&gt;
 &lt;h2 id="はじめに"&gt;はじめに&lt;/h2&gt;
@@ -27,9 +27,9 @@
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="トンネルの距離関数の設計アプローチ"
-srcset="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.011_hu_d33191418b4c23d1.webp 320w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.011_hu_c5dc96eac7184ab5.webp 480w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.011_hu_f46b8d59c5aa0ee8.webp 760w"
+srcset="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.011_hu_d33191418b4c23d1.webp 320w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.011_hu_c5dc96eac7184ab5.webp 480w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.011_hu_f46b8d59c5aa0ee8.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.011_hu_d33191418b4c23d1.webp"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.011_hu_d33191418b4c23d1.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -42,9 +42,9 @@ IFSと呼ばれる手法でMengerSpongeと呼ばれる有名なフラクタル�
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="IFS（Iterated function system）とは"
-srcset="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.012_hu_deea6d5d6d7adbf9.webp 320w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.012_hu_5f66373ddef0a70e.webp 480w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.012_hu_fd112c12b38f557.webp 760w"
+srcset="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.012_hu_deea6d5d6d7adbf9.webp 320w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.012_hu_5f66373ddef0a70e.webp 480w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.012_hu_fd112c12b38f557.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.012_hu_deea6d5d6d7adbf9.webp"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.012_hu_deea6d5d6d7adbf9.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -60,9 +60,9 @@ forループで空間を操作してから、最後にBoxの距離関数を retu
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="IFS（Iterated function system）のアレンジ"
-srcset="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.013_hu_3a193b013792bef0.webp 320w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.013_hu_86d7eba70ecfccff.webp 480w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.013_hu_90aadb0e41031b68.webp 760w"
+srcset="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.013_hu_3a193b013792bef0.webp 320w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.013_hu_86d7eba70ecfccff.webp 480w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.013_hu_90aadb0e41031b68.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.013_hu_3a193b013792bef0.webp"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.013_hu_3a193b013792bef0.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -75,9 +75,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="foldRotateとは"
-srcset="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.014_hu_69204150db3ac580.webp 320w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.014_hu_9ecf91c436d67414.webp 480w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.014_hu_79973d508f0155ec.webp 760w"
+srcset="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.014_hu_69204150db3ac580.webp 320w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.014_hu_9ecf91c436d67414.webp 480w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.014_hu_79973d508f0155ec.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.014_hu_69204150db3ac580.webp"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.014_hu_69204150db3ac580.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -97,9 +97,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="最終的なコード"
-srcset="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.018_hu_e959ae2d27fa7cf4.webp 320w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.018_hu_8db89b31897faa48.webp 480w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.018_hu_5cd606072959bbaa.webp 760w"
+srcset="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.018_hu_e959ae2d27fa7cf4.webp 320w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.018_hu_8db89b31897faa48.webp 480w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.018_hu_5cd606072959bbaa.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.018_hu_e959ae2d27fa7cf4.webp"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.018_hu_e959ae2d27fa7cf4.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -170,9 +170,9 @@ WORMHOLEではディファードレンダリングを採用しました。&lt;/p
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="ディファードレンダリングを採用"
-srcset="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.021_hu_d94380ed60ac2a7e.webp 320w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.021_hu_8f41d40cbeb21560.webp 480w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.021_hu_452071e798bf1a72.webp 760w"
+srcset="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.021_hu_d94380ed60ac2a7e.webp 320w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.021_hu_8f41d40cbeb21560.webp 480w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.021_hu_452071e798bf1a72.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.021_hu_d94380ed60ac2a7e.webp"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.021_hu_d94380ed60ac2a7e.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -189,9 +189,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="ディファードレンダリングを採用した3つの理由"
-srcset="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.022_hu_cc1d03a639bc880b.webp 320w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.022_hu_539b15d11972a1ad.webp 480w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.022_hu_5c55144b7c049d62.webp 760w"
+srcset="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.022_hu_cc1d03a639bc880b.webp 320w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.022_hu_539b15d11972a1ad.webp 480w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.022_hu_5c55144b7c049d62.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.022_hu_cc1d03a639bc880b.webp"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.022_hu_cc1d03a639bc880b.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -210,9 +210,9 @@ WORMHOLEでもuRaymarchingを利用しています。&lt;/p&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="ディファードレンダリングのライティングをカスタマイズ"
-srcset="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.023_hu_22cb757dc338799d.webp 320w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.023_hu_f4749f39f272b05.webp 480w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.023_hu_32bf7dda73c5485a.webp 760w"
+srcset="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.023_hu_22cb757dc338799d.webp 320w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.023_hu_f4749f39f272b05.webp 480w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.023_hu_32bf7dda73c5485a.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.023_hu_22cb757dc338799d.webp"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.023_hu_22cb757dc338799d.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -234,9 +234,9 @@ Emissiveは自発光（自分が放つ光の強さ）のパラメーターです
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="TextMeshProとは？"
-srcset="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.028_hu_a89a17df1c66d25d.webp 320w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.028_hu_ae9a5f8f3a98bfee.webp 480w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.028_hu_2179b05a0434cacd.webp 760w"
+srcset="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.028_hu_a89a17df1c66d25d.webp 320w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.028_hu_ae9a5f8f3a98bfee.webp 480w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.028_hu_2179b05a0434cacd.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.028_hu_a89a17df1c66d25d.webp"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.028_hu_a89a17df1c66d25d.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -251,7 +251,7 @@ SDFを使うとフォントを拡大してもジャギが目立たないため�
 &lt;figure &gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;&lt;img alt="TextMeshProの描画の仕組み"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup_p29.gif"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup_p29.gif"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -267,9 +267,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="TextMeshProのシェーダーのカスタマイズ方法"
-srcset="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.031_hu_92e0fd52f3c6a0b1.webp 320w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.031_hu_1eee51d25a0ff24e.webp 480w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.031_hu_b93e9b0de8bcfb2e.webp 760w"
+srcset="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.031_hu_92e0fd52f3c6a0b1.webp 320w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.031_hu_1eee51d25a0ff24e.webp 480w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.031_hu_b93e9b0de8bcfb2e.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.031_hu_92e0fd52f3c6a0b1.webp"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.031_hu_92e0fd52f3c6a0b1.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -285,7 +285,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;figure &gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;&lt;img alt="TextMeshProのシェーダーのカスタマイズ例1"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup_p32.gif"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup_p32.gif"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -298,7 +298,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;figure &gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;&lt;img alt="TextMeshProのシェーダーのカスタマイズ例2"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup_p33.gif"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup_p33.gif"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -329,9 +329,9 @@ SDFテクスチャをフェッチするUVをこのように時間でclampする�
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="Unity Timelineの活用"
-srcset="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.037_hu_ede04f8b854b9c9f.webp 320w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.037_hu_e578a4d8a0d3fd78.webp 480w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.037_hu_b96a7c0a3997d262.webp 760w"
+srcset="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.037_hu_ede04f8b854b9c9f.webp 320w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.037_hu_e578a4d8a0d3fd78.webp 480w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.037_hu_b96a7c0a3997d262.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.037_hu_ede04f8b854b9c9f.webp"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.037_hu_ede04f8b854b9c9f.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -364,9 +364,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="演出のまとめ"
-srcset="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.041_hu_ad8137f438ae28a4.webp 320w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.041_hu_2a37538723777f6.webp 480w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.041_hu_f8d5ab434bdd438.webp 760w"
+srcset="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.041_hu_ad8137f438ae28a4.webp 320w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.041_hu_2a37538723777f6.webp 480w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.041_hu_f8d5ab434bdd438.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.041_hu_ad8137f438ae28a4.webp"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.041_hu_ad8137f438ae28a4.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -390,7 +390,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;figure &gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;&lt;img alt="まとめ"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup_p35.gif"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup_p35.gif"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;

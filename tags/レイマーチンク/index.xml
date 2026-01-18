@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>レイマーチング | gam0022.net</title><link>http://gam0022.net/tags/%E3%83%AC%E3%82%A4%E3%83%9E%E3%83%BC%E3%83%81%E3%83%B3%E3%82%AF/</link><atom:link href="http://gam0022.net/tags/%E3%83%AC%E3%82%A4%E3%83%9E%E3%83%BC%E3%83%81%E3%83%B3%E3%82%AF/index.xml" rel="self" type="application/rss+xml"/><description>レイマーチング</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 16 Apr 2025 09:00:00 +0900</lastBuildDate><image><url>http://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>レイマーチング</title><link>http://gam0022.net/tags/%E3%83%AC%E3%82%A4%E3%83%9E%E3%83%BC%E3%83%81%E3%83%B3%E3%82%AF/</link></image><item><title>draw(tokyo); #2でVJデビュー！（GLSLライブコーディング）</title><link>http://gam0022.net/blog/2025/04/16/draw2/</link><pubDate>Wed, 16 Apr 2025 09:00:00 +0900</pubDate><guid>http://gam0022.net/blog/2025/04/16/draw2/</guid><description>&lt;p&gt;3/22に渋谷のCIRCUS TOKYOでオーディオビジュアルイベント
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>レイマーチング | gam0022.net</title><link>https://gam0022.net/tags/%E3%83%AC%E3%82%A4%E3%83%9E%E3%83%BC%E3%83%81%E3%83%B3%E3%82%AF/</link><atom:link href="https://gam0022.net/tags/%E3%83%AC%E3%82%A4%E3%83%9E%E3%83%BC%E3%83%81%E3%83%B3%E3%82%AF/index.xml" rel="self" type="application/rss+xml"/><description>レイマーチング</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 16 Apr 2025 09:00:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>レイマーチング</title><link>https://gam0022.net/tags/%E3%83%AC%E3%82%A4%E3%83%9E%E3%83%BC%E3%83%81%E3%83%B3%E3%82%AF/</link></image><item><title>draw(tokyo); #2でVJデビュー！（GLSLライブコーディング）</title><link>https://gam0022.net/blog/2025/04/16/draw2/</link><pubDate>Wed, 16 Apr 2025 09:00:00 +0900</pubDate><guid>https://gam0022.net/blog/2025/04/16/draw2/</guid><description>&lt;p&gt;3/22に渋谷のCIRCUS TOKYOでオーディオビジュアルイベント
 が開催されました。&lt;/p&gt;
 &lt;p&gt;私は
 さんのVJとして出演し、Sh4derJockeyを使ったGLSLライブコーディングによるVJを行いました。&lt;/p&gt;
@@ -35,9 +35,9 @@
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="構成図"
-srcset="http://gam0022.net/blog/2025/04/16/draw2/draw2_system_hu_bdf145f67808345e.webp 320w, http://gam0022.net/blog/2025/04/16/draw2/draw2_system_hu_4597d2e482831462.webp 480w, http://gam0022.net/blog/2025/04/16/draw2/draw2_system_hu_154a8aab7a333e03.webp 760w"
+srcset="https://gam0022.net/blog/2025/04/16/draw2/draw2_system_hu_bdf145f67808345e.webp 320w, https://gam0022.net/blog/2025/04/16/draw2/draw2_system_hu_4597d2e482831462.webp 480w, https://gam0022.net/blog/2025/04/16/draw2/draw2_system_hu_154a8aab7a333e03.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2025/04/16/draw2/draw2_system_hu_bdf145f67808345e.webp"
+src="https://gam0022.net/blog/2025/04/16/draw2/draw2_system_hu_bdf145f67808345e.webp"
 width="760"
 height="438"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -158,9 +158,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="KORG_KONTROL_EDITOR"
-srcset="http://gam0022.net/blog/2025/04/16/draw2/KORG_KONTROL_EDITOR_hu_2125df59f6df8bca.webp 320w, http://gam0022.net/blog/2025/04/16/draw2/KORG_KONTROL_EDITOR_hu_89c37e8ccf21be9b.webp 480w, http://gam0022.net/blog/2025/04/16/draw2/KORG_KONTROL_EDITOR_hu_e9ebf8d269f8f02d.webp 760w"
+srcset="https://gam0022.net/blog/2025/04/16/draw2/KORG_KONTROL_EDITOR_hu_2125df59f6df8bca.webp 320w, https://gam0022.net/blog/2025/04/16/draw2/KORG_KONTROL_EDITOR_hu_89c37e8ccf21be9b.webp 480w, https://gam0022.net/blog/2025/04/16/draw2/KORG_KONTROL_EDITOR_hu_e9ebf8d269f8f02d.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2025/04/16/draw2/KORG_KONTROL_EDITOR_hu_2125df59f6df8bca.webp"
+src="https://gam0022.net/blog/2025/04/16/draw2/KORG_KONTROL_EDITOR_hu_2125df59f6df8bca.webp"
 width="760"
 height="309"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -228,7 +228,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;h2 id="写真"&gt;写真&lt;/h2&gt;
 &lt;p&gt;友人に撮影してもらったVJ中の写真です。&lt;/p&gt;
 &lt;p&gt;
-&lt;/p&gt;</description></item><item><title>SESSIONS 2024参加記録（セミナー登壇・ShaderJam解説・Realtime Graphics）</title><link>http://gam0022.net/blog/2024/12/11/sessions2024-summary/</link><pubDate>Wed, 11 Dec 2024 23:30:00 +0900</pubDate><guid>http://gam0022.net/blog/2024/12/11/sessions2024-summary/</guid><description>&lt;p&gt;これは
+&lt;/p&gt;</description></item><item><title>SESSIONS 2024参加記録（セミナー登壇・ShaderJam解説・Realtime Graphics）</title><link>https://gam0022.net/blog/2024/12/11/sessions2024-summary/</link><pubDate>Wed, 11 Dec 2024 23:30:00 +0900</pubDate><guid>https://gam0022.net/blog/2024/12/11/sessions2024-summary/</guid><description>&lt;p&gt;これは
 の11日目の記事です。&lt;/p&gt;
 &lt;h2 id="はじめに"&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;2024年11月16日～17日に日本科学未来館で開催された
@@ -294,7 +294,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;p&gt;会場の雰囲気や臨場感を直接肌で感じることができ、オフラインイベントの特別な魅力を再認識することができました。&lt;/p&gt;
 &lt;p&gt;参加者との交流を通じて、作品に対する感想やアイデアの交換を行い、新たな視点やインスピレーションを得ることができました。また、会場の音響や再生環境が例年より大幅に改善されていた点も非常に良かったです。&lt;/p&gt;
 &lt;p&gt;さらに、今年から刷新された応募カテゴリーにより、ProcessingやジェネVJなど多様な分野の参加者が集まり、例年以上の盛り上がりを感じることができました。&lt;/p&gt;
-&lt;p&gt;SESSIONS 2024の運営や準備をしてくださったオーガナイザーの皆さん、そして参加者の皆さん、本当にありがとうございました。&lt;/p&gt;</description></item><item><title>SESSIONS 2024のRealtime Graphicsコンペティションで3位入賞しました（グラフィックス解説）</title><link>http://gam0022.net/blog/2024/12/02/sessions2024-guardian/</link><pubDate>Mon, 02 Dec 2024 22:00:00 +0900</pubDate><guid>http://gam0022.net/blog/2024/12/02/sessions2024-guardian/</guid><description>&lt;p&gt;これは
+&lt;p&gt;SESSIONS 2024の運営や準備をしてくださったオーガナイザーの皆さん、そして参加者の皆さん、本当にありがとうございました。&lt;/p&gt;</description></item><item><title>SESSIONS 2024のRealtime Graphicsコンペティションで3位入賞しました（グラフィックス解説）</title><link>https://gam0022.net/blog/2024/12/02/sessions2024-guardian/</link><pubDate>Mon, 02 Dec 2024 22:00:00 +0900</pubDate><guid>https://gam0022.net/blog/2024/12/02/sessions2024-guardian/</guid><description>&lt;p&gt;これは
 の2日目の記事です。&lt;/p&gt;
 &lt;h2 id="はじめに"&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;2024年11月16日～17日に日本科学未来館で開催された
@@ -441,7 +441,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;p&gt;実際に参加者と話をしたり、作品についての感想やアイデアを交換したりすることで、新たな視点やインスピレーションを得ることができました。&lt;/p&gt;
 &lt;p&gt;また、会場の音響や再生環境が例年より大幅に改善されていた点も非常に良かったです。&lt;/p&gt;
 &lt;p&gt;今年から刷新された応募カテゴリーにより、ProcessingやジェネVJ界隈の人々も参加し、例年以上の盛り上がりを感じました。&lt;/p&gt;
-&lt;p&gt;SESSIONS 2024の運営や準備をしてくださったオーガナイザーの皆さん、そして参加者の皆さん、本当にありがとうございました！&lt;/p&gt;</description></item><item><title>レイトレ合宿10でポータルをテーマにしたアニメーションを作成しました</title><link>http://gam0022.net/blog/2024/10/23/rtcamp10/</link><pubDate>Wed, 23 Oct 2024 00:50:00 +0900</pubDate><guid>http://gam0022.net/blog/2024/10/23/rtcamp10/</guid><description>&lt;p&gt;10月11日(金)～10月13日(日)に熱海の初島で開催された
+&lt;p&gt;SESSIONS 2024の運営や準備をしてくださったオーガナイザーの皆さん、そして参加者の皆さん、本当にありがとうございました！&lt;/p&gt;</description></item><item><title>レイトレ合宿10でポータルをテーマにしたアニメーションを作成しました</title><link>https://gam0022.net/blog/2024/10/23/rtcamp10/</link><pubDate>Wed, 23 Oct 2024 00:50:00 +0900</pubDate><guid>https://gam0022.net/blog/2024/10/23/rtcamp10/</guid><description>&lt;p&gt;10月11日(金)～10月13日(日)に熱海の初島で開催された
 に参加しました。&lt;/p&gt;
 &lt;p&gt;私はポータルをテーマにしたアニメーションを作成しました。&lt;/p&gt;
 &lt;p&gt;前半はプリミティブな屋内シーン、後半はレイマーチングを用いた複雑なジオメトリーの屋外シーンと、対照的な2つのシーンを作成しました。&lt;/p&gt;
@@ -660,7 +660,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;花弁が貝殻になってるこっちの方が分かりやすそう &lt;a href="https://t.co/YWI1Z9Prcd"&gt;pic.twitter.com/YWI1Z9Prcd&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1845730786382950722?ref_src=twsrc%5Etfw"&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;MOA美術館、建築も見応えがあった &lt;a href="https://t.co/jFNCj0huYF"&gt;pic.twitter.com/jFNCj0huYF&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1845758201222123645?ref_src=twsrc%5Etfw"&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;NEW ガッパ &lt;a href="https://t.co/bxMCkvFFSJ"&gt;pic.twitter.com/bxMCkvFFSJ&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1845761915714462109?ref_src=twsrc%5Etfw"&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
-&lt;p&gt;初島は東京からアクセスが良く、海がとても綺麗だったので、また行きたいと思いました。&lt;/p&gt;</description></item><item><title>新千歳空港国際アニメーション映画祭のNEW CHITOSE 30 Seconds部門に『Transcendental Cube』が入選しました</title><link>http://gam0022.net/blog/2024/10/21/airport-anifes2024-nc30s/</link><pubDate>Mon, 21 Oct 2024 13:10:00 +0900</pubDate><guid>http://gam0022.net/blog/2024/10/21/airport-anifes2024-nc30s/</guid><description>&lt;p&gt;私（
+&lt;p&gt;初島は東京からアクセスが良く、海がとても綺麗だったので、また行きたいと思いました。&lt;/p&gt;</description></item><item><title>新千歳空港国際アニメーション映画祭のNEW CHITOSE 30 Seconds部門に『Transcendental Cube』が入選しました</title><link>https://gam0022.net/blog/2024/10/21/airport-anifes2024-nc30s/</link><pubDate>Mon, 21 Oct 2024 13:10:00 +0900</pubDate><guid>https://gam0022.net/blog/2024/10/21/airport-anifes2024-nc30s/</guid><description>&lt;p&gt;私（
 ）と
 さんが共同で制作した作品『Transcendental Cube』が、新千歳空港国際アニメーション映画祭のNEW CHITOSE 30 Seconds部門に入選しました！&lt;/p&gt;
 &lt;ul&gt;
@@ -684,7 +684,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>『WebGL 総本山 + normalize.fm あわせて１３周年感謝祭』でGLSLライブコーディングしました</title><link>http://gam0022.net/blog/2024/10/21/livecoding-sn13/</link><pubDate>Mon, 21 Oct 2024 13:00:20 +0900</pubDate><guid>http://gam0022.net/blog/2024/10/21/livecoding-sn13/</guid><description>&lt;p&gt;
+&lt;/ul&gt;</description></item><item><title>『WebGL 総本山 + normalize.fm あわせて１３周年感謝祭』でGLSLライブコーディングしました</title><link>https://gam0022.net/blog/2024/10/21/livecoding-sn13/</link><pubDate>Mon, 21 Oct 2024 13:00:20 +0900</pubDate><guid>https://gam0022.net/blog/2024/10/21/livecoding-sn13/</guid><description>&lt;p&gt;
 の夜の部のShader JamsでGLSLのシェーダーライブコーディングしました。&lt;/p&gt;
 &lt;p&gt;#normalizeFM のロゴの形状だけを使って4つのシーンを作りました。&lt;/p&gt;
 &lt;p&gt;音楽も
@@ -703,7 +703,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;blockquote class="twitter-tweet"&gt;&lt;p lang="zxx" dir="ltr"&gt;&lt;a href="https://t.co/NO3pktKtGD"&gt;pic.twitter.com/NO3pktKtGD&lt;/a&gt;&lt;/p&gt;&amp;mdash; Renard (@Renard_VRC) &lt;a href="https://twitter.com/Renard_VRC/status/1840061611895337291?ref_src=twsrc%5Etfw"&gt;September 28, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;h3 id="さいごに"&gt;さいごに&lt;/h3&gt;
 &lt;p&gt;normalize.fmは初回から全話聞いているくらい熱烈なファンだったので、ライブコーディングのお誘いをいただき、大変光栄でした！とても楽しかったです！&lt;/p&gt;
-&lt;p&gt;イベントにご参加いただいた方々、ありがとうございました！&lt;/p&gt;</description></item><item><title>映画館でGLSLライブコーディングをしました（第10回新千歳空港国際アニメーション映画祭）</title><link>http://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/</link><pubDate>Mon, 20 Nov 2023 10:50:40 +0900</pubDate><guid>http://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/</guid><description>&lt;h2 id="更新履歴"&gt;更新履歴&lt;/h2&gt;
+&lt;p&gt;イベントにご参加いただいた方々、ありがとうございました！&lt;/p&gt;</description></item><item><title>映画館でGLSLライブコーディングをしました（第10回新千歳空港国際アニメーション映画祭）</title><link>https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/</link><pubDate>Mon, 20 Nov 2023 10:50:40 +0900</pubDate><guid>https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/</guid><description>&lt;h2 id="更新履歴"&gt;更新履歴&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;2023-12-29 YouTube動画を埋め込みました&lt;/li&gt;
 &lt;/ul&gt;
@@ -715,9 +715,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="GLSLライブコーディング@第10回新千歳空港国際アニメーション映画祭"
-srcset="http://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0197.MP4_snapshot_17.56.475_hu_dc7dc8260b85037a.webp 320w, http://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0197.MP4_snapshot_17.56.475_hu_8f27c39df6bc14b9.webp 480w, http://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0197.MP4_snapshot_17.56.475_hu_57fb85f1025d1d6e.webp 760w"
+srcset="https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0197.MP4_snapshot_17.56.475_hu_dc7dc8260b85037a.webp 320w, https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0197.MP4_snapshot_17.56.475_hu_8f27c39df6bc14b9.webp 480w, https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0197.MP4_snapshot_17.56.475_hu_57fb85f1025d1d6e.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0197.MP4_snapshot_17.56.475_hu_dc7dc8260b85037a.webp"
+src="https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0197.MP4_snapshot_17.56.475_hu_dc7dc8260b85037a.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -754,9 +754,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="映画館で上映されたWORMHOLE"
-srcset="http://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_13.14.026_hu_53d3e61dbe492eb3.webp 320w, http://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_13.14.026_hu_3e1c66a364a8d77b.webp 480w, http://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_13.14.026_hu_653036949b076fd4.webp 760w"
+srcset="https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_13.14.026_hu_53d3e61dbe492eb3.webp 320w, https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_13.14.026_hu_3e1c66a364a8d77b.webp 480w, https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_13.14.026_hu_653036949b076fd4.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_13.14.026_hu_53d3e61dbe492eb3.webp"
+src="https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_13.14.026_hu_53d3e61dbe492eb3.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -772,9 +772,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="映画館で上映された2nd Stage BOSS"
-srcset="http://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_46.17.407_hu_f8815976fff79fe7.webp 320w, http://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_46.17.407_hu_b5583b99825ef53e.webp 480w, http://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_46.17.407_hu_44fb9511011ff3b0.webp 760w"
+srcset="https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_46.17.407_hu_f8815976fff79fe7.webp 320w, https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_46.17.407_hu_b5583b99825ef53e.webp 480w, https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_46.17.407_hu_44fb9511011ff3b0.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_46.17.407_hu_f8815976fff79fe7.webp"
+src="https://gam0022.net/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_46.17.407_hu_f8815976fff79fe7.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -835,7 +835,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 も楽しかったです。
 コンペティションは投票で順位が決まるので、デモシーンに通じるものを感じました。&lt;/p&gt;
 &lt;p&gt;新千歳空港国際も商業施設が充実していて驚きました。
-会期中は空港内のホテルに滞在していたので、3日くらい空港から外に一歩も出なかったのですが、飽きることなく楽しめました。空港の温泉も露天風呂があって良かったです。&lt;/p&gt;</description></item><item><title>TDF 16ms #0（2023）のGLSL Graphics Compoで3位入賞しました</title><link>http://gam0022.net/blog/2023/10/30/tdf16ms0/</link><pubDate>Mon, 30 Oct 2023 10:00:00 +0900</pubDate><guid>http://gam0022.net/blog/2023/10/30/tdf16ms0/</guid><description>&lt;p&gt;2023年10月22日にオンライン（YouTube配信）で開催された
+会期中は空港内のホテルに滞在していたので、3日くらい空港から外に一歩も出なかったのですが、飽きることなく楽しめました。空港の温泉も露天風呂があって良かったです。&lt;/p&gt;</description></item><item><title>TDF 16ms #0（2023）のGLSL Graphics Compoで3位入賞しました</title><link>https://gam0022.net/blog/2023/10/30/tdf16ms0/</link><pubDate>Mon, 30 Oct 2023 10:00:00 +0900</pubDate><guid>https://gam0022.net/blog/2023/10/30/tdf16ms0/</guid><description>&lt;p&gt;2023年10月22日にオンライン（YouTube配信）で開催された
 に参加し、GLSL Graphics Compo部門で3位をいただきました！&lt;/p&gt;
 &lt;p&gt;作品のタイトルは『Infinite Keys』で、ゲーミングキーボードをモチーフにしました。&lt;/p&gt;
 &lt;div class="movie-wrap"&gt;
@@ -863,7 +863,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;p&gt;
 &lt;/p&gt;
 &lt;p&gt;
-&lt;/p&gt;</description></item><item><title>レイトレ合宿9で4次元立方体をテーマにしたアニメーションを作成しました</title><link>http://gam0022.net/blog/2023/09/20/rtcamp9/</link><pubDate>Wed, 20 Sep 2023 12:00:00 +0900</pubDate><guid>http://gam0022.net/blog/2023/09/20/rtcamp9/</guid><description>&lt;p&gt;9月1日(金)～9月3日(日)に
+&lt;/p&gt;</description></item><item><title>レイトレ合宿9で4次元立方体をテーマにしたアニメーションを作成しました</title><link>https://gam0022.net/blog/2023/09/20/rtcamp9/</link><pubDate>Wed, 20 Sep 2023 12:00:00 +0900</pubDate><guid>https://gam0022.net/blog/2023/09/20/rtcamp9/</guid><description>&lt;p&gt;9月1日(金)～9月3日(日)に
 で開催された
 に参加しました。&lt;/p&gt;
 &lt;p&gt;4次元空間上で回転してから、それを3次元に投影することで、内外が入れ替わるような不思議なループアニメーションをテーマにしました。&lt;/p&gt;
@@ -915,9 +915,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="アピールポイント"
-srcset="http://gam0022.net/blog/2023/09/20/rtcamp9/slide_2p_hu_eb34f2971d9a724e.webp 320w, http://gam0022.net/blog/2023/09/20/rtcamp9/slide_2p_hu_dc783fa625183db3.webp 480w, http://gam0022.net/blog/2023/09/20/rtcamp9/slide_2p_hu_8b96476e2fe94df5.webp 760w"
+srcset="https://gam0022.net/blog/2023/09/20/rtcamp9/slide_2p_hu_eb34f2971d9a724e.webp 320w, https://gam0022.net/blog/2023/09/20/rtcamp9/slide_2p_hu_dc783fa625183db3.webp 480w, https://gam0022.net/blog/2023/09/20/rtcamp9/slide_2p_hu_8b96476e2fe94df5.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2023/09/20/rtcamp9/slide_2p_hu_eb34f2971d9a724e.webp"
+src="https://gam0022.net/blog/2023/09/20/rtcamp9/slide_2p_hu_eb34f2971d9a724e.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -939,9 +939,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="基本機能"
-srcset="http://gam0022.net/blog/2023/09/20/rtcamp9/slide_3p_hu_303208bf4dd7ff0e.webp 320w, http://gam0022.net/blog/2023/09/20/rtcamp9/slide_3p_hu_c73be9b5d61e5820.webp 480w, http://gam0022.net/blog/2023/09/20/rtcamp9/slide_3p_hu_a7ee4e8dc50b423e.webp 760w"
+srcset="https://gam0022.net/blog/2023/09/20/rtcamp9/slide_3p_hu_303208bf4dd7ff0e.webp 320w, https://gam0022.net/blog/2023/09/20/rtcamp9/slide_3p_hu_c73be9b5d61e5820.webp 480w, https://gam0022.net/blog/2023/09/20/rtcamp9/slide_3p_hu_a7ee4e8dc50b423e.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2023/09/20/rtcamp9/slide_3p_hu_303208bf4dd7ff0e.webp"
+src="https://gam0022.net/blog/2023/09/20/rtcamp9/slide_3p_hu_303208bf4dd7ff0e.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -986,9 +986,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="レンダラーの出力設定"
-srcset="http://gam0022.net/blog/2023/09/20/rtcamp9/slide_4p_hu_e64b934abe31cb76.webp 320w, http://gam0022.net/blog/2023/09/20/rtcamp9/slide_4p_hu_414ece044cc9b801.webp 480w, http://gam0022.net/blog/2023/09/20/rtcamp9/slide_4p_hu_1f87a26bdf514712.webp 760w"
+srcset="https://gam0022.net/blog/2023/09/20/rtcamp9/slide_4p_hu_e64b934abe31cb76.webp 320w, https://gam0022.net/blog/2023/09/20/rtcamp9/slide_4p_hu_414ece044cc9b801.webp 480w, https://gam0022.net/blog/2023/09/20/rtcamp9/slide_4p_hu_1f87a26bdf514712.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2023/09/20/rtcamp9/slide_4p_hu_e64b934abe31cb76.webp"
+src="https://gam0022.net/blog/2023/09/20/rtcamp9/slide_4p_hu_e64b934abe31cb76.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -1007,9 +1007,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="超立方体"
-srcset="http://gam0022.net/blog/2023/09/20/rtcamp9/slide_5p_hu_b4df8d6574464788.webp 320w, http://gam0022.net/blog/2023/09/20/rtcamp9/slide_5p_hu_51886b20af19fda8.webp 480w, http://gam0022.net/blog/2023/09/20/rtcamp9/slide_5p_hu_640f4a39056a50ed.webp 760w"
+srcset="https://gam0022.net/blog/2023/09/20/rtcamp9/slide_5p_hu_b4df8d6574464788.webp 320w, https://gam0022.net/blog/2023/09/20/rtcamp9/slide_5p_hu_51886b20af19fda8.webp 480w, https://gam0022.net/blog/2023/09/20/rtcamp9/slide_5p_hu_640f4a39056a50ed.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2023/09/20/rtcamp9/slide_5p_hu_b4df8d6574464788.webp"
+src="https://gam0022.net/blog/2023/09/20/rtcamp9/slide_5p_hu_b4df8d6574464788.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -1025,7 +1025,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;figure &gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;&lt;img alt="Tesseract"
-src="http://gam0022.net/blog/2023/09/20/rtcamp9/Tesseract.gif"
+src="https://gam0022.net/blog/2023/09/20/rtcamp9/Tesseract.gif"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -1036,9 +1036,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="描画の流れ"
-srcset="http://gam0022.net/blog/2023/09/20/rtcamp9/slide_7p_hu_c0016c958f40b018.webp 320w, http://gam0022.net/blog/2023/09/20/rtcamp9/slide_7p_hu_2cb354f45460f96d.webp 480w, http://gam0022.net/blog/2023/09/20/rtcamp9/slide_7p_hu_3f2581408a696425.webp 760w"
+srcset="https://gam0022.net/blog/2023/09/20/rtcamp9/slide_7p_hu_c0016c958f40b018.webp 320w, https://gam0022.net/blog/2023/09/20/rtcamp9/slide_7p_hu_2cb354f45460f96d.webp 480w, https://gam0022.net/blog/2023/09/20/rtcamp9/slide_7p_hu_3f2581408a696425.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2023/09/20/rtcamp9/slide_7p_hu_c0016c958f40b018.webp"
+src="https://gam0022.net/blog/2023/09/20/rtcamp9/slide_7p_hu_c0016c958f40b018.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -1103,9 +1103,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="シーン構成"
-srcset="http://gam0022.net/blog/2023/09/20/rtcamp9/slide_9p_hu_2b31dd38402d62fb.webp 320w, http://gam0022.net/blog/2023/09/20/rtcamp9/slide_9p_hu_33c55e1a8fafb1b8.webp 480w, http://gam0022.net/blog/2023/09/20/rtcamp9/slide_9p_hu_1c08588e6f0bb884.webp 760w"
+srcset="https://gam0022.net/blog/2023/09/20/rtcamp9/slide_9p_hu_2b31dd38402d62fb.webp 320w, https://gam0022.net/blog/2023/09/20/rtcamp9/slide_9p_hu_33c55e1a8fafb1b8.webp 480w, https://gam0022.net/blog/2023/09/20/rtcamp9/slide_9p_hu_1c08588e6f0bb884.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2023/09/20/rtcamp9/slide_9p_hu_2b31dd38402d62fb.webp"
+src="https://gam0022.net/blog/2023/09/20/rtcamp9/slide_9p_hu_2b31dd38402d62fb.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -1119,9 +1119,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="モデリングの試行錯誤"
-srcset="http://gam0022.net/blog/2023/09/20/rtcamp9/slide_11p_hu_98ba756cd94d039f.webp 320w, http://gam0022.net/blog/2023/09/20/rtcamp9/slide_11p_hu_f1a8e3f036012790.webp 480w, http://gam0022.net/blog/2023/09/20/rtcamp9/slide_11p_hu_660f325510c10f59.webp 760w"
+srcset="https://gam0022.net/blog/2023/09/20/rtcamp9/slide_11p_hu_98ba756cd94d039f.webp 320w, https://gam0022.net/blog/2023/09/20/rtcamp9/slide_11p_hu_f1a8e3f036012790.webp 480w, https://gam0022.net/blog/2023/09/20/rtcamp9/slide_11p_hu_660f325510c10f59.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2023/09/20/rtcamp9/slide_11p_hu_98ba756cd94d039f.webp"
+src="https://gam0022.net/blog/2023/09/20/rtcamp9/slide_11p_hu_98ba756cd94d039f.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -1135,9 +1135,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="レイマーチング（Sphere Tracing）の高速化の研究"
-srcset="http://gam0022.net/blog/2023/09/20/rtcamp9/slide_12p_hu_f9023c8adda243ff.webp 320w, http://gam0022.net/blog/2023/09/20/rtcamp9/slide_12p_hu_ba1f2ba520a511e9.webp 480w, http://gam0022.net/blog/2023/09/20/rtcamp9/slide_12p_hu_3d051521a3b769df.webp 760w"
+srcset="https://gam0022.net/blog/2023/09/20/rtcamp9/slide_12p_hu_f9023c8adda243ff.webp 320w, https://gam0022.net/blog/2023/09/20/rtcamp9/slide_12p_hu_ba1f2ba520a511e9.webp 480w, https://gam0022.net/blog/2023/09/20/rtcamp9/slide_12p_hu_3d051521a3b769df.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2023/09/20/rtcamp9/slide_12p_hu_f9023c8adda243ff.webp"
+src="https://gam0022.net/blog/2023/09/20/rtcamp9/slide_12p_hu_f9023c8adda243ff.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -1167,9 +1167,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="[Keinert et al. 14] Enhanced Sphere Tracing"
-srcset="http://gam0022.net/blog/2023/09/20/rtcamp9/slide_13p_hu_8892deaceba09e4c.webp 320w, http://gam0022.net/blog/2023/09/20/rtcamp9/slide_13p_hu_5760767432872661.webp 480w, http://gam0022.net/blog/2023/09/20/rtcamp9/slide_13p_hu_bae9a12a9d435bdd.webp 760w"
+srcset="https://gam0022.net/blog/2023/09/20/rtcamp9/slide_13p_hu_8892deaceba09e4c.webp 320w, https://gam0022.net/blog/2023/09/20/rtcamp9/slide_13p_hu_5760767432872661.webp 480w, https://gam0022.net/blog/2023/09/20/rtcamp9/slide_13p_hu_bae9a12a9d435bdd.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2023/09/20/rtcamp9/slide_13p_hu_8892deaceba09e4c.webp"
+src="https://gam0022.net/blog/2023/09/20/rtcamp9/slide_13p_hu_8892deaceba09e4c.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -1185,9 +1185,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="[Bán&amp;amp;Valasek 18] Accelerating Sphere Tracing"
-srcset="http://gam0022.net/blog/2023/09/20/rtcamp9/slide_14p_hu_dfcd84e915eb9d84.webp 320w, http://gam0022.net/blog/2023/09/20/rtcamp9/slide_14p_hu_31d5c329e1d8ce08.webp 480w, http://gam0022.net/blog/2023/09/20/rtcamp9/slide_14p_hu_e8547aec62165921.webp 760w"
+srcset="https://gam0022.net/blog/2023/09/20/rtcamp9/slide_14p_hu_dfcd84e915eb9d84.webp 320w, https://gam0022.net/blog/2023/09/20/rtcamp9/slide_14p_hu_31d5c329e1d8ce08.webp 480w, https://gam0022.net/blog/2023/09/20/rtcamp9/slide_14p_hu_e8547aec62165921.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2023/09/20/rtcamp9/slide_14p_hu_dfcd84e915eb9d84.webp"
+src="https://gam0022.net/blog/2023/09/20/rtcamp9/slide_14p_hu_dfcd84e915eb9d84.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -1209,9 +1209,9 @@ $$&lt;h4 id="bánvalasek-23-automatic-step-size-relaxation-in-sphere-tracing"&gt
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="[Bán&amp;amp;Valasek 23] Automatic Step Size Relaxation in Sphere Tracing"
-srcset="http://gam0022.net/blog/2023/09/20/rtcamp9/slide_15p_hu_1623f0c35a1ab8ef.webp 320w, http://gam0022.net/blog/2023/09/20/rtcamp9/slide_15p_hu_3d1c4bc5a8378fc4.webp 480w, http://gam0022.net/blog/2023/09/20/rtcamp9/slide_15p_hu_5bf3080ebb95fd35.webp 760w"
+srcset="https://gam0022.net/blog/2023/09/20/rtcamp9/slide_15p_hu_1623f0c35a1ab8ef.webp 320w, https://gam0022.net/blog/2023/09/20/rtcamp9/slide_15p_hu_3d1c4bc5a8378fc4.webp 480w, https://gam0022.net/blog/2023/09/20/rtcamp9/slide_15p_hu_5bf3080ebb95fd35.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2023/09/20/rtcamp9/slide_15p_hu_1623f0c35a1ab8ef.webp"
+src="https://gam0022.net/blog/2023/09/20/rtcamp9/slide_15p_hu_1623f0c35a1ab8ef.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -1233,9 +1233,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="[Bán&amp;amp;Valasek 23] Automatic Step Size Relaxation in Sphere Tracingの結果"
-srcset="http://gam0022.net/blog/2023/09/20/rtcamp9/slide_16p_hu_1fa8335a0ec3b4d6.webp 320w, http://gam0022.net/blog/2023/09/20/rtcamp9/slide_16p_hu_31656d06806103a0.webp 480w, http://gam0022.net/blog/2023/09/20/rtcamp9/slide_16p_hu_571e9efc98c2b7f3.webp 760w"
+srcset="https://gam0022.net/blog/2023/09/20/rtcamp9/slide_16p_hu_1fa8335a0ec3b4d6.webp 320w, https://gam0022.net/blog/2023/09/20/rtcamp9/slide_16p_hu_31656d06806103a0.webp 480w, https://gam0022.net/blog/2023/09/20/rtcamp9/slide_16p_hu_571e9efc98c2b7f3.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2023/09/20/rtcamp9/slide_16p_hu_1fa8335a0ec3b4d6.webp"
+src="https://gam0022.net/blog/2023/09/20/rtcamp9/slide_16p_hu_1fa8335a0ec3b4d6.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -1248,9 +1248,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="[Bán&amp;amp;Valasek 23] Automatic Step Size Relaxation in Sphere Tracingの結果 時間ごと"
-srcset="http://gam0022.net/blog/2023/09/20/rtcamp9/slide_17p_hu_286f3bda37f9fde5.webp 320w, http://gam0022.net/blog/2023/09/20/rtcamp9/slide_17p_hu_8ba7f4036fa18a99.webp 480w, http://gam0022.net/blog/2023/09/20/rtcamp9/slide_17p_hu_c0860d392710d69e.webp 760w"
+srcset="https://gam0022.net/blog/2023/09/20/rtcamp9/slide_17p_hu_286f3bda37f9fde5.webp 320w, https://gam0022.net/blog/2023/09/20/rtcamp9/slide_17p_hu_8ba7f4036fa18a99.webp 480w, https://gam0022.net/blog/2023/09/20/rtcamp9/slide_17p_hu_c0860d392710d69e.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2023/09/20/rtcamp9/slide_17p_hu_286f3bda37f9fde5.webp"
+src="https://gam0022.net/blog/2023/09/20/rtcamp9/slide_17p_hu_286f3bda37f9fde5.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -1263,9 +1263,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="[Bán&amp;amp;Valasek 23] Automatic Step Size Relaxation in Sphere Tracingの結果 Mandelbox"
-srcset="http://gam0022.net/blog/2023/09/20/rtcamp9/slide_18p_hu_92229e1403357bec.webp 320w, http://gam0022.net/blog/2023/09/20/rtcamp9/slide_18p_hu_29a41ac948ac21e9.webp 480w, http://gam0022.net/blog/2023/09/20/rtcamp9/slide_18p_hu_3f20c8a9ec0ab198.webp 760w"
+srcset="https://gam0022.net/blog/2023/09/20/rtcamp9/slide_18p_hu_92229e1403357bec.webp 320w, https://gam0022.net/blog/2023/09/20/rtcamp9/slide_18p_hu_29a41ac948ac21e9.webp 480w, https://gam0022.net/blog/2023/09/20/rtcamp9/slide_18p_hu_3f20c8a9ec0ab198.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2023/09/20/rtcamp9/slide_18p_hu_92229e1403357bec.webp"
+src="https://gam0022.net/blog/2023/09/20/rtcamp9/slide_18p_hu_92229e1403357bec.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -1376,7 +1376,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;blockquote class="twitter-tweet"&gt;&lt;p lang="qme" dir="ltr"&gt;⛩️ &lt;a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#レイトレ合宿&lt;/a&gt; &lt;a href="https://t.co/tGxQ04mL2A"&gt;pic.twitter.com/tGxQ04mL2A&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1697760465529786856?ref_src=twsrc%5Etfw"&gt;September 1, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;瞑想で精神統一🧘 &lt;a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#レイトレ合宿&lt;/a&gt; &lt;a href="https://t.co/1wLEOw6GL1"&gt;pic.twitter.com/1wLEOw6GL1&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1697776870610407885?ref_src=twsrc%5Etfw"&gt;September 2, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;神社Now &lt;a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#レイトレ合宿&lt;/a&gt; &lt;a href="https://t.co/TLUKeayQCB"&gt;pic.twitter.com/TLUKeayQCB&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1698080450391191682?ref_src=twsrc%5Etfw"&gt;September 2, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
-&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;見納めです🙏 &lt;a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#レイトレ合宿&lt;/a&gt; &lt;a href="https://t.co/Bjin2IOgLG"&gt;pic.twitter.com/Bjin2IOgLG&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1698139360858927237?ref_src=twsrc%5Etfw"&gt;September 3, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</description></item><item><title>SESSIONS 2023のGLSL Graphics Compoで準優勝しました（グラフィックス解説）</title><link>http://gam0022.net/blog/2023/05/31/sessions2023-glsl-compo/</link><pubDate>Wed, 31 May 2023 06:49:24 +0900</pubDate><guid>http://gam0022.net/blog/2023/05/31/sessions2023-glsl-compo/</guid><description>&lt;h2 id="はじめに"&gt;はじめに&lt;/h2&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;見納めです🙏 &lt;a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#レイトレ合宿&lt;/a&gt; &lt;a href="https://t.co/Bjin2IOgLG"&gt;pic.twitter.com/Bjin2IOgLG&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1698139360858927237?ref_src=twsrc%5Etfw"&gt;September 3, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</description></item><item><title>SESSIONS 2023のGLSL Graphics Compoで準優勝しました（グラフィックス解説）</title><link>https://gam0022.net/blog/2023/05/31/sessions2023-glsl-compo/</link><pubDate>Wed, 31 May 2023 06:49:24 +0900</pubDate><guid>https://gam0022.net/blog/2023/05/31/sessions2023-glsl-compo/</guid><description>&lt;h2 id="はじめに"&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;2023年4月28日～30日にツインメッセ静岡で開催された
 に参加し、GLSL Graphics Compo部門で2位をいただきました！&lt;/p&gt;
 &lt;p&gt;作品のタイトルは『Transcendental Cube』で、シンプルな立方体が複雑なジオメトリーに変形していく非現実的な様子を、写実的で迫力ある映像で表現することをコンセプトにしました。&lt;/p&gt;
@@ -1699,9 +1699,9 @@ ApproximateLightという独自の手法を用いたグローバルイルミネ�
 &lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;すごい大雑把になりますが、SESSIONS の GLSL Compoで提出した作品についての制作経緯について記事にしました。&lt;a href="https://t.co/EZHDY1ahJ0"&gt;https://t.co/EZHDY1ahJ0&lt;/a&gt;&lt;a href="https://twitter.com/hashtag/glsl?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#glsl&lt;/a&gt;&lt;a href="https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#SESSIONS_Party&lt;/a&gt;&lt;/p&gt;&amp;mdash; 独楽回しeddy (@EKey2210) &lt;a href="https://twitter.com/EKey2210/status/1652660167635501058?ref_src=twsrc%5Etfw"&gt;April 30, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;【補足】&lt;br&gt;・コードには日本語のコメントを書いてあります&lt;br&gt;・ちゃんと壁を通り抜けられないようになっています！&lt;br&gt;・マップはランダムに生成していて、どこまでも続いています！（※浮動小数の精度の許す限り） &lt;a href="https://t.co/ugBcMKUbQL"&gt;pic.twitter.com/ugBcMKUbQL&lt;/a&gt;&lt;/p&gt;&amp;mdash; Kamoshika (@kamoshika_vrc) &lt;a href="https://twitter.com/kamoshika_vrc/status/1652700446614781952?ref_src=twsrc%5Etfw"&gt;April 30, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;&lt;a href="https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#SESSIONS_Party&lt;/a&gt; &lt;br&gt;SESSIONSのGLSL compに海賊放送をモチーフにした作品を提出させて頂きました&lt;a href="https://t.co/DZx5NNzNAJ"&gt;https://t.co/DZx5NNzNAJ&lt;/a&gt; &lt;a href="https://t.co/HrncS23PrC"&gt;pic.twitter.com/HrncS23PrC&lt;/a&gt;&lt;/p&gt;&amp;mdash; KiNaNkomoti (@Kinakomoti2357) &lt;a href="https://twitter.com/Kinakomoti2357/status/1652677355901706240?ref_src=twsrc%5Etfw"&gt;April 30, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
-&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="en" dir="ltr"&gt;Just released S͎E͎A͎W͎A͎L͎L͎ &lt;a href="https://twitter.com/SESSIONS_Party?ref_src=twsrc%5Etfw"&gt;@SESSIONS_Party&lt;/a&gt;, a quick &lt;a href="https://twitter.com/hashtag/BladeRunner2049?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#BladeRunner2049&lt;/a&gt; inspired shader doodle I did a while back. Check out the final version on &lt;a href="https://twitter.com/Shadertoy?ref_src=twsrc%5Etfw"&gt;@Shadertoy&lt;/a&gt; ✨: &lt;a href="https://t.co/ypBZWvp6oD"&gt;https://t.co/ypBZWvp6oD&lt;/a&gt;&lt;a href="https://twitter.com/hashtag/demoscene?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#demoscene&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/shader?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#shader&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/brutalism?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#brutalism&lt;/a&gt; &lt;a href="https://t.co/WczF1MLuDm"&gt;pic.twitter.com/WczF1MLuDm&lt;/a&gt;&lt;/p&gt;&amp;mdash; LJ (@LJ_1102) &lt;a href="https://twitter.com/LJ_1102/status/1653088310988881923?ref_src=twsrc%5Etfw"&gt;May 1, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</description></item><item><title>normalize.fmにゲスト出演しました</title><link>http://gam0022.net/blog/2022/10/20/normalizefm/</link><pubDate>Thu, 20 Oct 2022 10:44:48 +0900</pubDate><guid>http://gam0022.net/blog/2022/10/20/normalizefm/</guid><description>&lt;p&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="en" dir="ltr"&gt;Just released S͎E͎A͎W͎A͎L͎L͎ &lt;a href="https://twitter.com/SESSIONS_Party?ref_src=twsrc%5Etfw"&gt;@SESSIONS_Party&lt;/a&gt;, a quick &lt;a href="https://twitter.com/hashtag/BladeRunner2049?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#BladeRunner2049&lt;/a&gt; inspired shader doodle I did a while back. Check out the final version on &lt;a href="https://twitter.com/Shadertoy?ref_src=twsrc%5Etfw"&gt;@Shadertoy&lt;/a&gt; ✨: &lt;a href="https://t.co/ypBZWvp6oD"&gt;https://t.co/ypBZWvp6oD&lt;/a&gt;&lt;a href="https://twitter.com/hashtag/demoscene?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#demoscene&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/shader?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#shader&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/brutalism?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#brutalism&lt;/a&gt; &lt;a href="https://t.co/WczF1MLuDm"&gt;pic.twitter.com/WczF1MLuDm&lt;/a&gt;&lt;/p&gt;&amp;mdash; LJ (@LJ_1102) &lt;a href="https://twitter.com/LJ_1102/status/1653088310988881923?ref_src=twsrc%5Etfw"&gt;May 1, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</description></item><item><title>normalize.fmにゲスト出演しました</title><link>https://gam0022.net/blog/2022/10/20/normalizefm/</link><pubDate>Thu, 20 Oct 2022 10:44:48 +0900</pubDate><guid>https://gam0022.net/blog/2022/10/20/normalizefm/</guid><description>&lt;p&gt;
 の第032回にゲスト出演させていただきました。&lt;/p&gt;
-&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;&lt;a href="https://twitter.com/hashtag/normalizeFM?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#normalizeFM&lt;/a&gt; の新エピソード公開しました。&lt;br&gt;今回は &lt;a href="https://twitter.com/gam0022?ref_src=twsrc%5Etfw"&gt;@gam0022&lt;/a&gt; さんをゲストに、普段の収録と比較するとかなりテックな話題に寄った感じで、深い技術の話をいろいろうかがいました。&lt;br&gt;&lt;br&gt;032. たゆまぬ努力とキャッチアップ&lt;a href="https://t.co/acML0WOwYQ"&gt;https://t.co/acML0WOwYQ&lt;/a&gt;&lt;/p&gt;&amp;mdash; h_doxas (@h_doxas) &lt;a href="https://twitter.com/h_doxas/status/1582287588978618369?ref_src=twsrc%5Etfw"&gt;October 18, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</description></item><item><title>レイトレ合宿8参加レポート</title><link>http://gam0022.net/blog/2022/10/17/rtcamp8/</link><pubDate>Mon, 17 Oct 2022 10:00:00 +0900</pubDate><guid>http://gam0022.net/blog/2022/10/17/rtcamp8/</guid><description>&lt;p&gt;9月2日(金)～9月4日(日)に沖縄本島で開催された
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;&lt;a href="https://twitter.com/hashtag/normalizeFM?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#normalizeFM&lt;/a&gt; の新エピソード公開しました。&lt;br&gt;今回は &lt;a href="https://twitter.com/gam0022?ref_src=twsrc%5Etfw"&gt;@gam0022&lt;/a&gt; さんをゲストに、普段の収録と比較するとかなりテックな話題に寄った感じで、深い技術の話をいろいろうかがいました。&lt;br&gt;&lt;br&gt;032. たゆまぬ努力とキャッチアップ&lt;a href="https://t.co/acML0WOwYQ"&gt;https://t.co/acML0WOwYQ&lt;/a&gt;&lt;/p&gt;&amp;mdash; h_doxas (@h_doxas) &lt;a href="https://twitter.com/h_doxas/status/1582287588978618369?ref_src=twsrc%5Etfw"&gt;October 18, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</description></item><item><title>レイトレ合宿8参加レポート</title><link>https://gam0022.net/blog/2022/10/17/rtcamp8/</link><pubDate>Mon, 17 Oct 2022 10:00:00 +0900</pubDate><guid>https://gam0022.net/blog/2022/10/17/rtcamp8/</guid><description>&lt;p&gt;9月2日(金)～9月4日(日)に沖縄本島で開催された
 に参加しました。&lt;/p&gt;
 &lt;p&gt;自作のレンダラーでこんな動画を &lt;strong&gt;10分の制限時間&lt;/strong&gt; でレンダリングして5位をいただきました！&lt;/p&gt;
 &lt;div class="movie-wrap"&gt;
@@ -1890,7 +1890,7 @@ SPIR-Vをつかうことで、GPUコードもRustで実装をしたそうです�
 ## 関連商品
 レンダラー名の由来となった楽曲です。プリパラを見てください。
 &lt;iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B06Y3Z1PTK&amp;linkId=e1fef8b2771937a4232c7850b5dca2da"&gt;&lt;/iframe&gt;
---&gt;</description></item><item><title>速度比較！レイマーチングvsレイキャスティング</title><link>http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/</link><pubDate>Mon, 08 Aug 2022 02:12:50 +0900</pubDate><guid>http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/</guid><description>&lt;p&gt;これは
+--&gt;</description></item><item><title>速度比較！レイマーチングvsレイキャスティング</title><link>https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/</link><pubDate>Mon, 08 Aug 2022 02:12:50 +0900</pubDate><guid>https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/</guid><description>&lt;p&gt;これは
 のアドベントカレンダーです。&lt;/p&gt;
 &lt;p&gt;レイマーチングはレイキャスティングと比べて遅いと感じていましたが、なるべく同じ条件で計測した場合に実際どのくらい差があるのか比較してみました。&lt;/p&gt;
 &lt;h2 id="検証内容の概要"&gt;検証内容の概要&lt;/h2&gt;
@@ -1901,9 +1901,9 @@ SPIR-Vをつかうことで、GPUコードもRustで実装をしたそうです�
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="レイマーチング 深度4 300ステップ"
-srcset="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_l300_hu_c51cc392556793f7.webp 320w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_l300_hu_292a6f5768a244b5.webp 480w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_l300_hu_b3dd9ce26b7f8247.webp 760w"
+srcset="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_l300_hu_c51cc392556793f7.webp 320w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_l300_hu_292a6f5768a244b5.webp 480w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_l300_hu_b3dd9ce26b7f8247.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_l300_hu_c51cc392556793f7.webp"
+src="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_l300_hu_c51cc392556793f7.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -1917,9 +1917,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="計測結果の棒グラフ"
-srcset="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/result_graph_hu_6ffa427ea9da64bb.webp 320w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/result_graph_hu_37633a031107e249.webp 480w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/result_graph_hu_892cf10c3c3e1a36.webp 760w"
+srcset="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/result_graph_hu_6ffa427ea9da64bb.webp 320w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/result_graph_hu_37633a031107e249.webp 480w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/result_graph_hu_892cf10c3c3e1a36.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/result_graph_hu_6ffa427ea9da64bb.webp"
+src="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/result_graph_hu_6ffa427ea9da64bb.webp"
 width="760"
 height="470"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -1944,9 +1944,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="レイマーチング 深度1"
-srcset="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i1_s256_hu_b54039b6787efa3e.webp 320w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i1_s256_hu_dd119640f28673fa.webp 480w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i1_s256_hu_d6d0901a391deb2a.webp 760w"
+srcset="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i1_s256_hu_b54039b6787efa3e.webp 320w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i1_s256_hu_dd119640f28673fa.webp 480w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i1_s256_hu_d6d0901a391deb2a.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i1_s256_hu_b54039b6787efa3e.webp"
+src="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i1_s256_hu_b54039b6787efa3e.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -1957,9 +1957,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="レイマーチング 深度2"
-srcset="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i2_s256_hu_eee144c38bc42bd0.webp 320w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i2_s256_hu_cab92e0a4d23cb9.webp 480w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i2_s256_hu_9598bff0bd58c6fd.webp 760w"
+srcset="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i2_s256_hu_eee144c38bc42bd0.webp 320w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i2_s256_hu_cab92e0a4d23cb9.webp 480w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i2_s256_hu_9598bff0bd58c6fd.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i2_s256_hu_eee144c38bc42bd0.webp"
+src="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i2_s256_hu_eee144c38bc42bd0.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -1970,9 +1970,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="レイマーチング 深度3"
-srcset="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i3_s256_hu_22f55b0ab04dffa4.webp 320w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i3_s256_hu_d6e34d35d5a5cf74.webp 480w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i3_s256_hu_b6efff9362f084fc.webp 760w"
+srcset="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i3_s256_hu_22f55b0ab04dffa4.webp 320w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i3_s256_hu_d6e34d35d5a5cf74.webp 480w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i3_s256_hu_b6efff9362f084fc.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i3_s256_hu_22f55b0ab04dffa4.webp"
+src="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i3_s256_hu_22f55b0ab04dffa4.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -1983,9 +1983,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="レイマーチング 深度4"
-srcset="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_hu_c3e79eb280f17d34.webp 320w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_hu_f506434ab34cc8c.webp 480w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_hu_2224ffae53fdc066.webp 760w"
+srcset="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_hu_c3e79eb280f17d34.webp 320w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_hu_f506434ab34cc8c.webp 480w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_hu_2224ffae53fdc066.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_hu_c3e79eb280f17d34.webp"
+src="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_hu_c3e79eb280f17d34.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -1999,9 +1999,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="レイキャスティング 深度1"
-srcset="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i1_s256_hu_596592693018960f.webp 320w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i1_s256_hu_cab65271a56953cc.webp 480w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i1_s256_hu_e3c352e47a0a7e86.webp 760w"
+srcset="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i1_s256_hu_596592693018960f.webp 320w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i1_s256_hu_cab65271a56953cc.webp 480w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i1_s256_hu_e3c352e47a0a7e86.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i1_s256_hu_596592693018960f.webp"
+src="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i1_s256_hu_596592693018960f.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -2012,9 +2012,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="レイキャスティング 深度2"
-srcset="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i2_s256_hu_7aa92e0a2e3c93ca.webp 320w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i2_s256_hu_3e9384cf8db08ffb.webp 480w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i2_s256_hu_baf9f03eb8e52368.webp 760w"
+srcset="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i2_s256_hu_7aa92e0a2e3c93ca.webp 320w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i2_s256_hu_3e9384cf8db08ffb.webp 480w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i2_s256_hu_baf9f03eb8e52368.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i2_s256_hu_7aa92e0a2e3c93ca.webp"
+src="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i2_s256_hu_7aa92e0a2e3c93ca.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -2025,9 +2025,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="レイキャスティング 深度3"
-srcset="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i3_s256_hu_c928aed3d70a316a.webp 320w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i3_s256_hu_c76fea0415e5efe6.webp 480w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i3_s256_hu_6a44acfd34f57a7f.webp 760w"
+srcset="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i3_s256_hu_c928aed3d70a316a.webp 320w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i3_s256_hu_c76fea0415e5efe6.webp 480w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i3_s256_hu_6a44acfd34f57a7f.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i3_s256_hu_c928aed3d70a316a.webp"
+src="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i3_s256_hu_c928aed3d70a316a.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -2038,9 +2038,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="レイキャスティング 深度4"
-srcset="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i4_s256_hu_8e90b967f7f91470.webp 320w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i4_s256_hu_a868d261262b300f.webp 480w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i4_s256_hu_f4c33b5b99bb865.webp 760w"
+srcset="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i4_s256_hu_8e90b967f7f91470.webp 320w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i4_s256_hu_a868d261262b300f.webp 480w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i4_s256_hu_f4c33b5b99bb865.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i4_s256_hu_8e90b967f7f91470.webp"
+src="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i4_s256_hu_8e90b967f7f91470.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -2142,9 +2142,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="計測結果の棒グラフ"
-srcset="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/result_graph_hu_6ffa427ea9da64bb.webp 320w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/result_graph_hu_37633a031107e249.webp 480w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/result_graph_hu_892cf10c3c3e1a36.webp 760w"
+srcset="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/result_graph_hu_6ffa427ea9da64bb.webp 320w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/result_graph_hu_37633a031107e249.webp 480w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/result_graph_hu_892cf10c3c3e1a36.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/result_graph_hu_6ffa427ea9da64bb.webp"
+src="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/result_graph_hu_6ffa427ea9da64bb.webp"
 width="760"
 height="470"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -2238,9 +2238,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="レイマーチング 深度1"
-srcset="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i1_s256_hu_b54039b6787efa3e.webp 320w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i1_s256_hu_dd119640f28673fa.webp 480w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i1_s256_hu_d6d0901a391deb2a.webp 760w"
+srcset="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i1_s256_hu_b54039b6787efa3e.webp 320w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i1_s256_hu_dd119640f28673fa.webp 480w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i1_s256_hu_d6d0901a391deb2a.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i1_s256_hu_b54039b6787efa3e.webp"
+src="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i1_s256_hu_b54039b6787efa3e.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -2252,9 +2252,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="レイマーチング 深度2"
-srcset="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i2_s256_hu_eee144c38bc42bd0.webp 320w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i2_s256_hu_cab92e0a4d23cb9.webp 480w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i2_s256_hu_9598bff0bd58c6fd.webp 760w"
+srcset="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i2_s256_hu_eee144c38bc42bd0.webp 320w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i2_s256_hu_cab92e0a4d23cb9.webp 480w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i2_s256_hu_9598bff0bd58c6fd.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i2_s256_hu_eee144c38bc42bd0.webp"
+src="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i2_s256_hu_eee144c38bc42bd0.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -2266,9 +2266,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="レイマーチング 深度3"
-srcset="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i3_s256_hu_22f55b0ab04dffa4.webp 320w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i3_s256_hu_d6e34d35d5a5cf74.webp 480w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i3_s256_hu_b6efff9362f084fc.webp 760w"
+srcset="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i3_s256_hu_22f55b0ab04dffa4.webp 320w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i3_s256_hu_d6e34d35d5a5cf74.webp 480w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i3_s256_hu_b6efff9362f084fc.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i3_s256_hu_22f55b0ab04dffa4.webp"
+src="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i3_s256_hu_22f55b0ab04dffa4.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -2280,9 +2280,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="レイマーチング 深度4"
-srcset="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_hu_c3e79eb280f17d34.webp 320w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_hu_f506434ab34cc8c.webp 480w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_hu_2224ffae53fdc066.webp 760w"
+srcset="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_hu_c3e79eb280f17d34.webp 320w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_hu_f506434ab34cc8c.webp 480w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_hu_2224ffae53fdc066.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_hu_c3e79eb280f17d34.webp"
+src="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_hu_c3e79eb280f17d34.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -2294,9 +2294,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="レイキャスティング 深度1"
-srcset="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i1_s256_hu_596592693018960f.webp 320w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i1_s256_hu_cab65271a56953cc.webp 480w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i1_s256_hu_e3c352e47a0a7e86.webp 760w"
+srcset="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i1_s256_hu_596592693018960f.webp 320w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i1_s256_hu_cab65271a56953cc.webp 480w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i1_s256_hu_e3c352e47a0a7e86.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i1_s256_hu_596592693018960f.webp"
+src="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i1_s256_hu_596592693018960f.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -2308,9 +2308,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="レイキャスティング 深度2"
-srcset="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i2_s256_hu_7aa92e0a2e3c93ca.webp 320w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i2_s256_hu_3e9384cf8db08ffb.webp 480w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i2_s256_hu_baf9f03eb8e52368.webp 760w"
+srcset="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i2_s256_hu_7aa92e0a2e3c93ca.webp 320w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i2_s256_hu_3e9384cf8db08ffb.webp 480w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i2_s256_hu_baf9f03eb8e52368.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i2_s256_hu_7aa92e0a2e3c93ca.webp"
+src="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i2_s256_hu_7aa92e0a2e3c93ca.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -2322,9 +2322,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="レイキャスティング 深度3"
-srcset="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i3_s256_hu_c928aed3d70a316a.webp 320w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i3_s256_hu_c76fea0415e5efe6.webp 480w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i3_s256_hu_6a44acfd34f57a7f.webp 760w"
+srcset="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i3_s256_hu_c928aed3d70a316a.webp 320w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i3_s256_hu_c76fea0415e5efe6.webp 480w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i3_s256_hu_6a44acfd34f57a7f.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i3_s256_hu_c928aed3d70a316a.webp"
+src="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i3_s256_hu_c928aed3d70a316a.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -2336,9 +2336,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="レイキャスティング 深度4"
-srcset="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i4_s256_hu_8e90b967f7f91470.webp 320w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i4_s256_hu_a868d261262b300f.webp 480w, http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i4_s256_hu_f4c33b5b99bb865.webp 760w"
+srcset="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i4_s256_hu_8e90b967f7f91470.webp 320w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i4_s256_hu_a868d261262b300f.webp 480w, https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i4_s256_hu_f4c33b5b99bb865.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i4_s256_hu_8e90b967f7f91470.webp"
+src="https://gam0022.net/blog/2022/08/08/raymarching-vs-raycasting/raycast_i4_s256_hu_8e90b967f7f91470.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -2400,7 +2400,7 @@ IFSやMod Repetitionと乱数の組み合わせによる非連続な距離関数
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="まとめ"&gt;まとめ&lt;/h2&gt;
-&lt;p&gt;レイマーチングはめちゃくちゃ遅いので、レイトレ合宿のようにレンダリング時間がシビアなら悪手かもしれません。&lt;/p&gt;</description></item><item><title>Tokyo Demo Fest 2021のShader Showdownに参加しました</title><link>http://gam0022.net/blog/2021/12/31/tdf2021-shader-showdown/</link><pubDate>Fri, 31 Dec 2021 00:00:00 +0900</pubDate><guid>http://gam0022.net/blog/2021/12/31/tdf2021-shader-showdown/</guid><description>&lt;p&gt;12月11日～12日にオンラインで開催された
+&lt;p&gt;レイマーチングはめちゃくちゃ遅いので、レイトレ合宿のようにレンダリング時間がシビアなら悪手かもしれません。&lt;/p&gt;</description></item><item><title>Tokyo Demo Fest 2021のShader Showdownに参加しました</title><link>https://gam0022.net/blog/2021/12/31/tdf2021-shader-showdown/</link><pubDate>Fri, 31 Dec 2021 00:00:00 +0900</pubDate><guid>https://gam0022.net/blog/2021/12/31/tdf2021-shader-showdown/</guid><description>&lt;p&gt;12月11日～12日にオンラインで開催された
 （以下、TDF）に参加しました。&lt;/p&gt;
 &lt;p&gt;TDFは、日本国内で唯一のデモパーティです。
 リアルタイムに映像や音楽を生成するプログラムを「デモ」と言い、デモを鑑賞したり完成度を競ったりして楽しむイベントを「デモパーティ」と言います。
@@ -2510,7 +2510,7 @@ TDFのオーガナイザーの方々、Shader Showdownで対戦してくださ�
 &lt;p&gt;トンネルのIFSのモデリングもよく見ると面影が残っています。&lt;/p&gt;
 &lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;情報量を追加（エンコード耐久テスト）&lt;a href="https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#GLSL&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/Raymarching?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#Raymarching&lt;/a&gt; &lt;a href="https://t.co/uBg43zGOk6"&gt;pic.twitter.com/uBg43zGOk6&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1453405601971666944?ref_src=twsrc%5Etfw"&gt;October 27, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;blockquote class="twitter-tweet"&gt;&lt;p lang="en" dir="ltr"&gt;Diamond Variation 🔷 &lt;a href="https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#GLSL&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/Raymarching?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#Raymarching&lt;/a&gt; &lt;a href="https://t.co/IAEhBgdW5s"&gt;pic.twitter.com/IAEhBgdW5s&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1453768374312263683?ref_src=twsrc%5Etfw"&gt;October 28, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
-&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;&lt;a href="https://twitter.com/hashtag/Shadertoy?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#Shadertoy&lt;/a&gt; にポートしました。&lt;br&gt;&lt;br&gt;&amp;quot;Diamond Tunnel&amp;quot; by gam0022&lt;a href="https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#GLSL&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#Shader&lt;/a&gt;&lt;a href="https://t.co/oyyz8mop2x"&gt;https://t.co/oyyz8mop2x&lt;/a&gt; &lt;a href="https://t.co/DXnqCAKY1Z"&gt;pic.twitter.com/DXnqCAKY1Z&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1476576224768331776?ref_src=twsrc%5Etfw"&gt;December 30, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</description></item><item><title>Tokyo Demo Fest 2021のGLSL Graphics Compo優勝作品の解説</title><link>http://gam0022.net/blog/2021/12/20/tdf2021-glsl/</link><pubDate>Mon, 20 Dec 2021 12:00:00 +0900</pubDate><guid>http://gam0022.net/blog/2021/12/20/tdf2021-glsl/</guid><description>&lt;p&gt;これは
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;&lt;a href="https://twitter.com/hashtag/Shadertoy?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#Shadertoy&lt;/a&gt; にポートしました。&lt;br&gt;&lt;br&gt;&amp;quot;Diamond Tunnel&amp;quot; by gam0022&lt;a href="https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#GLSL&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#Shader&lt;/a&gt;&lt;a href="https://t.co/oyyz8mop2x"&gt;https://t.co/oyyz8mop2x&lt;/a&gt; &lt;a href="https://t.co/DXnqCAKY1Z"&gt;pic.twitter.com/DXnqCAKY1Z&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1476576224768331776?ref_src=twsrc%5Etfw"&gt;December 30, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</description></item><item><title>Tokyo Demo Fest 2021のGLSL Graphics Compo優勝作品の解説</title><link>https://gam0022.net/blog/2021/12/20/tdf2021-glsl/</link><pubDate>Mon, 20 Dec 2021 12:00:00 +0900</pubDate><guid>https://gam0022.net/blog/2021/12/20/tdf2021-glsl/</guid><description>&lt;p&gt;これは
 の20日目の記事です。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;12月11日～12日にオンラインで開催された
@@ -2606,9 +2606,9 @@ GLSLのコードからコメントや改行・空白文字を取り除き、処�
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="床の断面"
-srcset="http://gam0022.net/blog/2021/12/20/tdf2021-glsl/floor_graph_hu_611e67dbf7206b0b.webp 320w, http://gam0022.net/blog/2021/12/20/tdf2021-glsl/floor_graph_hu_7b75dcd076341b84.webp 480w, http://gam0022.net/blog/2021/12/20/tdf2021-glsl/floor_graph_hu_ba660508010c87a.webp 760w"
+srcset="https://gam0022.net/blog/2021/12/20/tdf2021-glsl/floor_graph_hu_611e67dbf7206b0b.webp 320w, https://gam0022.net/blog/2021/12/20/tdf2021-glsl/floor_graph_hu_7b75dcd076341b84.webp 480w, https://gam0022.net/blog/2021/12/20/tdf2021-glsl/floor_graph_hu_ba660508010c87a.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2021/12/20/tdf2021-glsl/floor_graph_hu_611e67dbf7206b0b.webp"
+src="https://gam0022.net/blog/2021/12/20/tdf2021-glsl/floor_graph_hu_611e67dbf7206b0b.webp"
 width="760"
 height="742"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -2635,9 +2635,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="扉の台形波"
-srcset="http://gam0022.net/blog/2021/12/20/tdf2021-glsl/smoothPulse_hu_646ecde291536aec.webp 320w, http://gam0022.net/blog/2021/12/20/tdf2021-glsl/smoothPulse_hu_ec25c19eb6367eac.webp 480w, http://gam0022.net/blog/2021/12/20/tdf2021-glsl/smoothPulse_hu_c8e98c25d1b62b30.webp 760w"
+srcset="https://gam0022.net/blog/2021/12/20/tdf2021-glsl/smoothPulse_hu_646ecde291536aec.webp 320w, https://gam0022.net/blog/2021/12/20/tdf2021-glsl/smoothPulse_hu_ec25c19eb6367eac.webp 480w, https://gam0022.net/blog/2021/12/20/tdf2021-glsl/smoothPulse_hu_c8e98c25d1b62b30.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2021/12/20/tdf2021-glsl/smoothPulse_hu_646ecde291536aec.webp"
+src="https://gam0022.net/blog/2021/12/20/tdf2021-glsl/smoothPulse_hu_646ecde291536aec.webp"
 width="760"
 height="746"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -2651,9 +2651,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="smoothPulsePattern.png"
-srcset="http://gam0022.net/blog/2021/12/20/tdf2021-glsl/smoothPulsePattern_hu_865c2f6440c8581.webp 320w, http://gam0022.net/blog/2021/12/20/tdf2021-glsl/smoothPulsePattern_hu_bc85e328a6ff68ee.webp 480w, http://gam0022.net/blog/2021/12/20/tdf2021-glsl/smoothPulsePattern_hu_d95fdcb64e0e72a5.webp 760w"
+srcset="https://gam0022.net/blog/2021/12/20/tdf2021-glsl/smoothPulsePattern_hu_865c2f6440c8581.webp 320w, https://gam0022.net/blog/2021/12/20/tdf2021-glsl/smoothPulsePattern_hu_bc85e328a6ff68ee.webp 480w, https://gam0022.net/blog/2021/12/20/tdf2021-glsl/smoothPulsePattern_hu_d95fdcb64e0e72a5.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2021/12/20/tdf2021-glsl/smoothPulsePattern_hu_865c2f6440c8581.webp"
+src="https://gam0022.net/blog/2021/12/20/tdf2021-glsl/smoothPulsePattern_hu_865c2f6440c8581.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -2930,7 +2930,7 @@ TDFのオーガナイザーの方々、エントリーしてくださったみ�
 &lt;p&gt;
 &lt;/p&gt;
 &lt;h3 id="2021-12-03"&gt;2021-12-03&lt;/h3&gt;
-&lt;p&gt;締切当日はコンパイル時間の削減をがんばっていた。&lt;/p&gt;</description></item><item><title>メガデモ勉強会2021で発表しました</title><link>http://gam0022.net/blog/2021/02/15/demoscene-study-session/</link><pubDate>Mon, 15 Feb 2021 13:26:18 +0900</pubDate><guid>http://gam0022.net/blog/2021/02/15/demoscene-study-session/</guid><description>&lt;p&gt;昨日の2/14（バレンタインデー）に開催された
+&lt;p&gt;締切当日はコンパイル時間の削減をがんばっていた。&lt;/p&gt;</description></item><item><title>メガデモ勉強会2021で発表しました</title><link>https://gam0022.net/blog/2021/02/15/demoscene-study-session/</link><pubDate>Mon, 15 Feb 2021 13:26:18 +0900</pubDate><guid>https://gam0022.net/blog/2021/02/15/demoscene-study-session/</guid><description>&lt;p&gt;昨日の2/14（バレンタインデー）に開催された
 に参加しました。&lt;/p&gt;
 &lt;p&gt;私は「64KBのWebGLデモを実装する技術とデモ制作から得た『学びと発見』」というタイトルで発表を行いました。&lt;/p&gt;
 &lt;p&gt;発表スライドはこちらです。&lt;/p&gt;
@@ -3002,14 +3002,14 @@ TDFのオーガナイザーの方々、エントリーしてくださったみ�
 &lt;li&gt;私がレイマーチングを始めてから5年以上も経過しているのもちょっと驚きでした&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>CGWORLD vol.266（2020年10月号）に「デモシーンを支えるプロシージャル技術」という記事を寄稿しました</title><link>http://gam0022.net/blog/2020/09/13/cgworld-vol266/</link><pubDate>Sun, 13 Sep 2020 20:00:00 +0900</pubDate><guid>http://gam0022.net/blog/2020/09/13/cgworld-vol266/</guid><description>&lt;p&gt;
+&lt;/ul&gt;</description></item><item><title>CGWORLD vol.266（2020年10月号）に「デモシーンを支えるプロシージャル技術」という記事を寄稿しました</title><link>https://gam0022.net/blog/2020/09/13/cgworld-vol266/</link><pubDate>Sun, 13 Sep 2020 20:00:00 +0900</pubDate><guid>https://gam0022.net/blog/2020/09/13/cgworld-vol266/</guid><description>&lt;p&gt;
 &lt;figure &gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="CGWORLD vol.266（2020年10月号）に「デモシーンを支えるプロシージャル技術」という記事を寄稿しました"
-srcset="http://gam0022.net/blog/2020/09/13/cgworld-vol266/Collage_Fotor_hu_6673dbd133b0d126.webp 320w, http://gam0022.net/blog/2020/09/13/cgworld-vol266/Collage_Fotor_hu_65ed164410fb1850.webp 480w, http://gam0022.net/blog/2020/09/13/cgworld-vol266/Collage_Fotor_hu_1db3360cdab07398.webp 760w"
+srcset="https://gam0022.net/blog/2020/09/13/cgworld-vol266/Collage_Fotor_hu_6673dbd133b0d126.webp 320w, https://gam0022.net/blog/2020/09/13/cgworld-vol266/Collage_Fotor_hu_65ed164410fb1850.webp 480w, https://gam0022.net/blog/2020/09/13/cgworld-vol266/Collage_Fotor_hu_1db3360cdab07398.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2020/09/13/cgworld-vol266/Collage_Fotor_hu_6673dbd133b0d126.webp"
+src="https://gam0022.net/blog/2020/09/13/cgworld-vol266/Collage_Fotor_hu_6673dbd133b0d126.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -3041,14 +3041,14 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="Disqusのコメントのアーカイブ"
-srcset="http://gam0022.net/blog/2020/09/13/cgworld-vol266/disqus_comments_hu_73b716ab510005dd.webp 320w, http://gam0022.net/blog/2020/09/13/cgworld-vol266/disqus_comments_hu_91d4032587e491ea.webp 480w, http://gam0022.net/blog/2020/09/13/cgworld-vol266/disqus_comments_hu_5ce81e0fcd66ce51.webp 760w"
+srcset="https://gam0022.net/blog/2020/09/13/cgworld-vol266/disqus_comments_hu_73b716ab510005dd.webp 320w, https://gam0022.net/blog/2020/09/13/cgworld-vol266/disqus_comments_hu_91d4032587e491ea.webp 480w, https://gam0022.net/blog/2020/09/13/cgworld-vol266/disqus_comments_hu_5ce81e0fcd66ce51.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2020/09/13/cgworld-vol266/disqus_comments_hu_73b716ab510005dd.webp"
+src="https://gam0022.net/blog/2020/09/13/cgworld-vol266/disqus_comments_hu_73b716ab510005dd.webp"
 width="760"
 height="532"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;</description></item><item><title>Revision2020 PC 64K Intro 優勝作品『RE: SIMULATED』の技術解説</title><link>http://gam0022.net/blog/2020/04/30/revision2020/</link><pubDate>Thu, 30 Apr 2020 12:00:00 +0900</pubDate><guid>http://gam0022.net/blog/2020/04/30/revision2020/</guid><description>&lt;p&gt;4月10日～4月13日に世界最大のデモパーティ
+&lt;/p&gt;</description></item><item><title>Revision2020 PC 64K Intro 優勝作品『RE: SIMULATED』の技術解説</title><link>https://gam0022.net/blog/2020/04/30/revision2020/</link><pubDate>Thu, 30 Apr 2020 12:00:00 +0900</pubDate><guid>https://gam0022.net/blog/2020/04/30/revision2020/</guid><description>&lt;p&gt;4月10日～4月13日に世界最大のデモパーティ
 に参加しました。&lt;/p&gt;
 &lt;p&gt;Revision 2020内で開催されたコンペのうち、
 という64KBの容量制約のある部門で『RE: SIMULATED by gam0022 &amp;amp; sadakkey』という作品を発表しました。&lt;/p&gt;
@@ -3217,9 +3217,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="chromatiq-editor-emissive"
-srcset="http://gam0022.net/blog/2020/04/30/revision2020/chromatiq-editor-emissive_hu_1fabfd9de2039a90.webp 320w, http://gam0022.net/blog/2020/04/30/revision2020/chromatiq-editor-emissive_hu_cf2bca36fb344a51.webp 480w, http://gam0022.net/blog/2020/04/30/revision2020/chromatiq-editor-emissive_hu_2f67e318f0878de4.webp 515w"
+srcset="https://gam0022.net/blog/2020/04/30/revision2020/chromatiq-editor-emissive_hu_1fabfd9de2039a90.webp 320w, https://gam0022.net/blog/2020/04/30/revision2020/chromatiq-editor-emissive_hu_cf2bca36fb344a51.webp 480w, https://gam0022.net/blog/2020/04/30/revision2020/chromatiq-editor-emissive_hu_2f67e318f0878de4.webp 515w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2020/04/30/revision2020/chromatiq-editor-emissive_hu_1fabfd9de2039a90.webp"
+src="https://gam0022.net/blog/2020/04/30/revision2020/chromatiq-editor-emissive_hu_1fabfd9de2039a90.webp"
 width="515"
 height="204"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -3531,7 +3531,7 @@ GLSLでは関数を引数とするような高階関数は実現できません�
 &lt;p&gt;ともあれ、このたびは優勝作品に選んでいただき、とても光栄に思います。&lt;/p&gt;
 &lt;p&gt;世界中の尊敬するデモチームの方々からいただいたお祝いのコメントも嬉しかったです。わーい！&lt;/p&gt;
 &lt;p&gt;最後に、世界的に大変な状況の中、オンラインでの開催のためにご尽力いただいた皆様に、心より感謝申し上げます。
-とても楽しく充実した3日間を過ごせました。来年はドイツでお会いしましょう！&lt;/p&gt;</description></item><item><title>近未来教育フォーラム2019でシェーダーライブコーディングをしました</title><link>http://gam0022.net/blog/2019/11/29/dhw/</link><pubDate>Fri, 29 Nov 2019 10:36:17 +0900</pubDate><guid>http://gam0022.net/blog/2019/11/29/dhw/</guid><description>&lt;p&gt;2019/11/28にデジタルハリウッド大学で開催された
+とても楽しく充実した3日間を過ごせました。来年はドイツでお会いしましょう！&lt;/p&gt;</description></item><item><title>近未来教育フォーラム2019でシェーダーライブコーディングをしました</title><link>https://gam0022.net/blog/2019/11/29/dhw/</link><pubDate>Fri, 29 Nov 2019 10:36:17 +0900</pubDate><guid>https://gam0022.net/blog/2019/11/29/dhw/</guid><description>&lt;p&gt;2019/11/28にデジタルハリウッド大学で開催された
 の
 「The Real Time Live &amp;amp; Reception リアルタイムグラフィックスの世界とVTuberが牽引する新たな人類」というイベントに登壇しました。&lt;/p&gt;
 &lt;p&gt;
@@ -3576,7 +3576,7 @@ WORMHOLEではシェーダーによるプログラミングによってプロシ
 で来場者の声がリアルタイムに見えるようになっていました。&lt;/p&gt;
 &lt;p&gt;sli.doや懇親会で、メガデモとシェーダーについて「楽しそう！」「自分でも作ってみたい」といった好意的な感想をいただけました！&lt;/p&gt;
 &lt;p&gt;シェーダやレイマーチングや3DCGに少しでも興味を持っていただけたのなら嬉しい限りです。ありがとうございました！&lt;/p&gt;
-&lt;blockquote class="twitter-tweet" data-conversation="none"&gt;&lt;p lang="ja" dir="ltr"&gt;メガデモとシェーダーについて&lt;br&gt;「楽しそう！」「自分でも作ってみたい」&lt;br&gt;といった好意的な感想をいただけて嬉しい限りです☺️&lt;a href="https://twitter.com/hashtag/DHW?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#DHW&lt;/a&gt; &lt;a href="https://t.co/BCkGVOiAdv"&gt;pic.twitter.com/BCkGVOiAdv&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1200068188043501568?ref_src=twsrc%5Etfw"&gt;November 28, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</description></item><item><title>レイトレ合宿7でレイマーチング対応のGPUパストレーサーを実装しました！</title><link>http://gam0022.net/blog/2019/09/18/rtcamp7/</link><pubDate>Wed, 18 Sep 2019 10:15:43 +0900</pubDate><guid>http://gam0022.net/blog/2019/09/18/rtcamp7/</guid><description>&lt;p&gt;9月7日(土)～9月8日(日)に猪苗代湖で開催された
+&lt;blockquote class="twitter-tweet" data-conversation="none"&gt;&lt;p lang="ja" dir="ltr"&gt;メガデモとシェーダーについて&lt;br&gt;「楽しそう！」「自分でも作ってみたい」&lt;br&gt;といった好意的な感想をいただけて嬉しい限りです☺️&lt;a href="https://twitter.com/hashtag/DHW?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#DHW&lt;/a&gt; &lt;a href="https://t.co/BCkGVOiAdv"&gt;pic.twitter.com/BCkGVOiAdv&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1200068188043501568?ref_src=twsrc%5Etfw"&gt;November 28, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</description></item><item><title>レイトレ合宿7でレイマーチング対応のGPUパストレーサーを実装しました！</title><link>https://gam0022.net/blog/2019/09/18/rtcamp7/</link><pubDate>Wed, 18 Sep 2019 10:15:43 +0900</pubDate><guid>https://gam0022.net/blog/2019/09/18/rtcamp7/</guid><description>&lt;p&gt;9月7日(土)～9月8日(日)に猪苗代湖で開催された
 に参加しました。&lt;/p&gt;
 &lt;p&gt;自作のレンダラーでこんな画像を &lt;strong&gt;60秒の制限時間&lt;/strong&gt; でレンダリングして4位をいただきました！&lt;/p&gt;
 &lt;p&gt;
@@ -3637,9 +3637,9 @@ WORMHOLEではシェーダーによるプログラミングによってプロシ
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="実装機能"
-srcset="http://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.003_hu_be05dc640417ca96.webp 320w, http://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.003_hu_a8ea6aeaa64048.webp 480w, http://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.003_hu_4c5bc51db748805b.webp 760w"
+srcset="https://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.003_hu_be05dc640417ca96.webp 320w, https://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.003_hu_a8ea6aeaa64048.webp 480w, https://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.003_hu_4c5bc51db748805b.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.003_hu_be05dc640417ca96.webp"
+src="https://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.003_hu_be05dc640417ca96.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -3688,9 +3688,9 @@ MISは複数のサンプリング戦略を組み合わせることでサンプ�
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="実装機能"
-srcset="http://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.008_hu_5093836b643b71ef.webp 320w, http://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.008_hu_7920f8b255642b4a.webp 480w, http://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.008_hu_5394ec4953523a53.webp 760w"
+srcset="https://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.008_hu_5093836b643b71ef.webp 320w, https://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.008_hu_7920f8b255642b4a.webp 480w, https://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.008_hu_5394ec4953523a53.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.008_hu_5093836b643b71ef.webp"
+src="https://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.008_hu_5093836b643b71ef.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -3708,9 +3708,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="レイマーチングの衝突判定の精度のLOD 1/2"
-srcset="http://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.009_hu_7ac64ef8b2e39817.webp 320w, http://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.009_hu_fb21aa677c2b9ab5.webp 480w, http://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.009_hu_b3144e3392738a6e.webp 760w"
+srcset="https://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.009_hu_7ac64ef8b2e39817.webp 320w, https://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.009_hu_fb21aa677c2b9ab5.webp 480w, https://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.009_hu_b3144e3392738a6e.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.009_hu_7ac64ef8b2e39817.webp"
+src="https://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.009_hu_7ac64ef8b2e39817.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -3730,9 +3730,9 @@ Distance Estimatorは有限のイテレーション回数では表面に漸近�
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="レイマーチングの衝突判定の精度のLOD 2/2"
-srcset="http://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.010_hu_aa0d4a7f435a65f8.webp 320w, http://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.010_hu_fbebc45594601f2b.webp 480w, http://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.010_hu_a49898ae8dfacb47.webp 760w"
+srcset="https://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.010_hu_aa0d4a7f435a65f8.webp 320w, https://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.010_hu_fbebc45594601f2b.webp 480w, https://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.010_hu_a49898ae8dfacb47.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.010_hu_aa0d4a7f435a65f8.webp"
+src="https://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.010_hu_aa0d4a7f435a65f8.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -3750,9 +3750,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="1回のlaunchでなるべくたくさんサンプリングする戦略"
-srcset="http://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.011_hu_71a675f49f44f97a.webp 320w, http://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.011_hu_49d66bb3c689cd0f.webp 480w, http://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.011_hu_7220ac9bbc507c01.webp 760w"
+srcset="https://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.011_hu_71a675f49f44f97a.webp 320w, https://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.011_hu_49d66bb3c689cd0f.webp 480w, https://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.011_hu_7220ac9bbc507c01.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.011_hu_71a675f49f44f97a.webp"
+src="https://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.011_hu_71a675f49f44f97a.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -3768,9 +3768,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="Deep Learning Denoising"
-srcset="http://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.012_hu_244895bcdd563bae.webp 320w, http://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.012_hu_30e43299f195f29e.webp 480w, http://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.012_hu_2fe00854d3a20d46.webp 760w"
+srcset="https://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.012_hu_244895bcdd563bae.webp 320w, https://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.012_hu_30e43299f195f29e.webp 480w, https://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.012_hu_2fe00854d3a20d46.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.012_hu_244895bcdd563bae.webp"
+src="https://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.012_hu_244895bcdd563bae.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -3792,9 +3792,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="RT_BUFFER_GPU_LOCAL による最適化"
-srcset="http://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.013_hu_8f584ced0687ddb5.webp 320w, http://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.013_hu_2a520127e2f30033.webp 480w, http://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.013_hu_8ba30a15ea2f35d4.webp 760w"
+srcset="https://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.013_hu_8f584ced0687ddb5.webp 320w, https://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.013_hu_2a520127e2f30033.webp 480w, https://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.013_hu_8ba30a15ea2f35d4.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.013_hu_8f584ced0687ddb5.webp"
+src="https://gam0022.net/blog/2019/09/18/rtcamp7/redflash_rtcamp7.013_hu_8f584ced0687ddb5.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -3858,7 +3858,7 @@ DCCツールから直接シーンを出力する形式だと、距離関数の�
 &lt;p&gt;レイトレ合宿は自身の成長や糧となる機会を与えてくれる、とても良い合宿勉強会だなと改めて感じました。&lt;/p&gt;
 &lt;p&gt;レイトレ合宿を毎年主催してくださっている
 さんと
-さん、その他の参加者のみなさん、本当にありがとうございました！&lt;/p&gt;</description></item><item><title>NVIDIA® OptiX上で『レイマーチング×パストレーシング』による物理ベースレンダラーを実装した</title><link>http://gam0022.net/blog/2019/08/05/optix-raymarching-pathtracing/</link><pubDate>Mon, 05 Aug 2019 12:10:23 +0900</pubDate><guid>http://gam0022.net/blog/2019/08/05/optix-raymarching-pathtracing/</guid><description>&lt;p&gt;これは
+さん、その他の参加者のみなさん、本当にありがとうございました！&lt;/p&gt;</description></item><item><title>NVIDIA® OptiX上で『レイマーチング×パストレーシング』による物理ベースレンダラーを実装した</title><link>https://gam0022.net/blog/2019/08/05/optix-raymarching-pathtracing/</link><pubDate>Mon, 05 Aug 2019 12:10:23 +0900</pubDate><guid>https://gam0022.net/blog/2019/08/05/optix-raymarching-pathtracing/</guid><description>&lt;p&gt;これは
 アドベントカレンダーの記事です。&lt;/p&gt;
 &lt;p&gt;NVIDIA® OptiX上で『レイマーチング×パストレーシング』による物理ベースレンダラーを開発しました。&lt;/p&gt;
 &lt;p&gt;レイとオブジェクトの交差判定をレイマーチングで行い、ライティングをパストレーシングをするという、レイマーチングとパストレーシングのハイブリッドなレンダリングを実現しました。&lt;/p&gt;
@@ -4090,7 +4090,7 @@ Now change it as you like.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Unity×レイマーチングによる映像制作の実践手法</title><link>http://gam0022.net/blog/2019/06/25/unity-raymarching/</link><pubDate>Tue, 25 Jun 2019 09:00:00 +0900</pubDate><guid>http://gam0022.net/blog/2019/06/25/unity-raymarching/</guid><description>&lt;p&gt;6/19に開催された
+&lt;/ul&gt;</description></item><item><title>Unity×レイマーチングによる映像制作の実践手法</title><link>https://gam0022.net/blog/2019/06/25/unity-raymarching/</link><pubDate>Tue, 25 Jun 2019 09:00:00 +0900</pubDate><guid>https://gam0022.net/blog/2019/06/25/unity-raymarching/</guid><description>&lt;p&gt;6/19に開催された
 で「Unity×レイマーチングによる映像制作の実践手法」という発表をしました。&lt;/p&gt;
 &lt;script async class="speakerdeck-embed" data-id="daf8218b7458460087137b6f23e938b3" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"&gt;&lt;/script&gt;
 &lt;h2 id="はじめに"&gt;はじめに&lt;/h2&gt;
@@ -4119,9 +4119,9 @@ Now change it as you like.&lt;/p&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="トンネルの距離関数の設計アプローチ"
-srcset="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.011_hu_d33191418b4c23d1.webp 320w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.011_hu_c5dc96eac7184ab5.webp 480w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.011_hu_f46b8d59c5aa0ee8.webp 760w"
+srcset="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.011_hu_d33191418b4c23d1.webp 320w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.011_hu_c5dc96eac7184ab5.webp 480w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.011_hu_f46b8d59c5aa0ee8.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.011_hu_d33191418b4c23d1.webp"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.011_hu_d33191418b4c23d1.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -4134,9 +4134,9 @@ IFSと呼ばれる手法でMengerSpongeと呼ばれる有名なフラクタル�
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="IFS（Iterated function system）とは"
-srcset="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.012_hu_deea6d5d6d7adbf9.webp 320w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.012_hu_5f66373ddef0a70e.webp 480w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.012_hu_fd112c12b38f557.webp 760w"
+srcset="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.012_hu_deea6d5d6d7adbf9.webp 320w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.012_hu_5f66373ddef0a70e.webp 480w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.012_hu_fd112c12b38f557.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.012_hu_deea6d5d6d7adbf9.webp"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.012_hu_deea6d5d6d7adbf9.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -4152,9 +4152,9 @@ forループで空間を操作してから、最後にBoxの距離関数を retu
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="IFS（Iterated function system）のアレンジ"
-srcset="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.013_hu_3a193b013792bef0.webp 320w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.013_hu_86d7eba70ecfccff.webp 480w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.013_hu_90aadb0e41031b68.webp 760w"
+srcset="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.013_hu_3a193b013792bef0.webp 320w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.013_hu_86d7eba70ecfccff.webp 480w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.013_hu_90aadb0e41031b68.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.013_hu_3a193b013792bef0.webp"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.013_hu_3a193b013792bef0.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -4167,9 +4167,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="foldRotateとは"
-srcset="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.014_hu_69204150db3ac580.webp 320w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.014_hu_9ecf91c436d67414.webp 480w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.014_hu_79973d508f0155ec.webp 760w"
+srcset="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.014_hu_69204150db3ac580.webp 320w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.014_hu_9ecf91c436d67414.webp 480w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.014_hu_79973d508f0155ec.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.014_hu_69204150db3ac580.webp"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.014_hu_69204150db3ac580.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -4189,9 +4189,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="最終的なコード"
-srcset="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.018_hu_e959ae2d27fa7cf4.webp 320w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.018_hu_8db89b31897faa48.webp 480w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.018_hu_5cd606072959bbaa.webp 760w"
+srcset="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.018_hu_e959ae2d27fa7cf4.webp 320w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.018_hu_8db89b31897faa48.webp 480w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.018_hu_5cd606072959bbaa.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.018_hu_e959ae2d27fa7cf4.webp"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.018_hu_e959ae2d27fa7cf4.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -4262,9 +4262,9 @@ WORMHOLEではディファードレンダリングを採用しました。&lt;/p
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="ディファードレンダリングを採用"
-srcset="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.021_hu_d94380ed60ac2a7e.webp 320w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.021_hu_8f41d40cbeb21560.webp 480w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.021_hu_452071e798bf1a72.webp 760w"
+srcset="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.021_hu_d94380ed60ac2a7e.webp 320w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.021_hu_8f41d40cbeb21560.webp 480w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.021_hu_452071e798bf1a72.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.021_hu_d94380ed60ac2a7e.webp"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.021_hu_d94380ed60ac2a7e.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -4281,9 +4281,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="ディファードレンダリングを採用した3つの理由"
-srcset="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.022_hu_cc1d03a639bc880b.webp 320w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.022_hu_539b15d11972a1ad.webp 480w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.022_hu_5c55144b7c049d62.webp 760w"
+srcset="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.022_hu_cc1d03a639bc880b.webp 320w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.022_hu_539b15d11972a1ad.webp 480w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.022_hu_5c55144b7c049d62.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.022_hu_cc1d03a639bc880b.webp"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.022_hu_cc1d03a639bc880b.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -4302,9 +4302,9 @@ WORMHOLEでもuRaymarchingを利用しています。&lt;/p&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="ディファードレンダリングのライティングをカスタマイズ"
-srcset="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.023_hu_22cb757dc338799d.webp 320w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.023_hu_f4749f39f272b05.webp 480w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.023_hu_32bf7dda73c5485a.webp 760w"
+srcset="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.023_hu_22cb757dc338799d.webp 320w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.023_hu_f4749f39f272b05.webp 480w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.023_hu_32bf7dda73c5485a.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.023_hu_22cb757dc338799d.webp"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.023_hu_22cb757dc338799d.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -4326,9 +4326,9 @@ Emissiveは自発光（自分が放つ光の強さ）のパラメーターです
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="TextMeshProとは？"
-srcset="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.028_hu_a89a17df1c66d25d.webp 320w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.028_hu_ae9a5f8f3a98bfee.webp 480w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.028_hu_2179b05a0434cacd.webp 760w"
+srcset="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.028_hu_a89a17df1c66d25d.webp 320w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.028_hu_ae9a5f8f3a98bfee.webp 480w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.028_hu_2179b05a0434cacd.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.028_hu_a89a17df1c66d25d.webp"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.028_hu_a89a17df1c66d25d.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -4343,7 +4343,7 @@ SDFを使うとフォントを拡大してもジャギが目立たないため�
 &lt;figure &gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;&lt;img alt="TextMeshProの描画の仕組み"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup_p29.gif"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup_p29.gif"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -4359,9 +4359,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="TextMeshProのシェーダーのカスタマイズ方法"
-srcset="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.031_hu_92e0fd52f3c6a0b1.webp 320w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.031_hu_1eee51d25a0ff24e.webp 480w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.031_hu_b93e9b0de8bcfb2e.webp 760w"
+srcset="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.031_hu_92e0fd52f3c6a0b1.webp 320w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.031_hu_1eee51d25a0ff24e.webp 480w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.031_hu_b93e9b0de8bcfb2e.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.031_hu_92e0fd52f3c6a0b1.webp"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.031_hu_92e0fd52f3c6a0b1.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -4377,7 +4377,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;figure &gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;&lt;img alt="TextMeshProのシェーダーのカスタマイズ例1"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup_p32.gif"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup_p32.gif"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -4390,7 +4390,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;figure &gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;&lt;img alt="TextMeshProのシェーダーのカスタマイズ例2"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup_p33.gif"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup_p33.gif"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -4421,9 +4421,9 @@ SDFテクスチャをフェッチするUVをこのように時間でclampする�
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="Unity Timelineの活用"
-srcset="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.037_hu_ede04f8b854b9c9f.webp 320w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.037_hu_e578a4d8a0d3fd78.webp 480w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.037_hu_b96a7c0a3997d262.webp 760w"
+srcset="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.037_hu_ede04f8b854b9c9f.webp 320w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.037_hu_e578a4d8a0d3fd78.webp 480w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.037_hu_b96a7c0a3997d262.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.037_hu_ede04f8b854b9c9f.webp"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.037_hu_ede04f8b854b9c9f.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -4456,9 +4456,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="演出のまとめ"
-srcset="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.041_hu_ad8137f438ae28a4.webp 320w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.041_hu_2a37538723777f6.webp 480w, http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.041_hu_f8d5ab434bdd438.webp 760w"
+srcset="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.041_hu_ad8137f438ae28a4.webp 320w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.041_hu_2a37538723777f6.webp 480w, https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.041_hu_f8d5ab434bdd438.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.041_hu_ad8137f438ae28a4.webp"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup.041_hu_ad8137f438ae28a4.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -4482,12 +4482,12 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;figure &gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;&lt;img alt="まとめ"
-src="http://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup_p35.gif"
+src="https://gam0022.net/blog/2019/06/25/unity-raymarching/klab_tech_meetup_p35.gif"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;リアルな質感も、複雑な形状も、カッコいい演出も、どれもシェーダーで実現できます。&lt;/p&gt;
-&lt;p&gt;短いコードだけで多彩な表現ができるため、映像作成においては &lt;strong&gt;シェーダーは最強の道具&lt;/strong&gt; だと言えるでしょう。&lt;/p&gt;</description></item><item><title>UnityエンジニアによるShader勉強会！に登壇しました</title><link>http://gam0022.net/blog/2019/06/20/klab-tech-meetup4/</link><pubDate>Thu, 20 Jun 2019 10:04:11 +0900</pubDate><guid>http://gam0022.net/blog/2019/06/20/klab-tech-meetup4/</guid><description>&lt;p&gt;6/19に開催された
+&lt;p&gt;短いコードだけで多彩な表現ができるため、映像作成においては &lt;strong&gt;シェーダーは最強の道具&lt;/strong&gt; だと言えるでしょう。&lt;/p&gt;</description></item><item><title>UnityエンジニアによるShader勉強会！に登壇しました</title><link>https://gam0022.net/blog/2019/06/20/klab-tech-meetup4/</link><pubDate>Thu, 20 Jun 2019 10:04:11 +0900</pubDate><guid>https://gam0022.net/blog/2019/06/20/klab-tech-meetup4/</guid><description>&lt;p&gt;6/19に開催された
 で「Unity×レイマーチングによる映像制作の実践手法」という発表をしました。&lt;/p&gt;
 &lt;script async class="speakerdeck-embed" data-id="daf8218b7458460087137b6f23e938b3" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"&gt;&lt;/script&gt;
 &lt;p&gt;&lt;strong&gt;（06/25追記）&lt;/strong&gt; 発表内容をブログ向けに編集・要約して別記事にまとめました。
@@ -4531,7 +4531,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;p&gt;ご参加いただいた皆さま、本当にありがとうございました！&lt;/p&gt;
 &lt;p&gt;
 &lt;/p&gt;
-&lt;p&gt;懇親会中のライブコーディングの様子&lt;/p&gt;</description></item><item><title>先頭にコピペするだけ！Shadertoy → GLSL Sandbox / NEORT の移植用ヘッダーコードの紹介</title><link>http://gam0022.net/blog/2019/03/04/porting-from-shadertoy-to-glslsandbox/</link><pubDate>Mon, 04 Mar 2019 09:01:07 +0900</pubDate><guid>http://gam0022.net/blog/2019/03/04/porting-from-shadertoy-to-glslsandbox/</guid><description>&lt;p&gt;更新履歴&lt;/p&gt;
+&lt;p&gt;懇親会中のライブコーディングの様子&lt;/p&gt;</description></item><item><title>先頭にコピペするだけ！Shadertoy → GLSL Sandbox / NEORT の移植用ヘッダーコードの紹介</title><link>https://gam0022.net/blog/2019/03/04/porting-from-shadertoy-to-glslsandbox/</link><pubDate>Mon, 04 Mar 2019 09:01:07 +0900</pubDate><guid>https://gam0022.net/blog/2019/03/04/porting-from-shadertoy-to-glslsandbox/</guid><description>&lt;p&gt;更新履歴&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;2021-11-16 backbufferとマウスの対応&lt;/li&gt;
 &lt;li&gt;2023-05-02 twigl(classic 300es)について追記&lt;/li&gt;
@@ -4625,7 +4625,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;p&gt;次はコンパイルエラーを避けるための前方宣言です。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;mainImage&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;out&lt;/span&gt; &lt;span class="n"&gt;vec4&lt;/span&gt; &lt;span class="n"&gt;fragColor&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;vec2&lt;/span&gt; &lt;span class="n"&gt;fragCoord&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;GLSLではC言語と同様に、別の関数から呼び出される前に関数を定義するか、前方宣言する必要があります。&lt;/p&gt;</description></item><item><title>GLSL Compoに役立つ！GLSL Sandbox互換のVSCode拡張『Shader Toy』の紹介</title><link>http://gam0022.net/blog/2018/12/24/vscode-glslsandbox/</link><pubDate>Mon, 24 Dec 2018 23:59:59 +0900</pubDate><guid>http://gam0022.net/blog/2018/12/24/vscode-glslsandbox/</guid><description>&lt;p&gt;これは
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;GLSLではC言語と同様に、別の関数から呼び出される前に関数を定義するか、前方宣言する必要があります。&lt;/p&gt;</description></item><item><title>GLSL Compoに役立つ！GLSL Sandbox互換のVSCode拡張『Shader Toy』の紹介</title><link>https://gam0022.net/blog/2018/12/24/vscode-glslsandbox/</link><pubDate>Mon, 24 Dec 2018 23:59:59 +0900</pubDate><guid>https://gam0022.net/blog/2018/12/24/vscode-glslsandbox/</guid><description>&lt;p&gt;これは
 の24日目の記事です。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;みなさんはGLSL Sandboxのシェーダーをローカルで編集したりgitで管理したいと思ったことはありませんか？&lt;/p&gt;
@@ -4653,9 +4653,9 @@ GLSL Compo優勝作品）をVSCode上で動作させた様子です。&lt;/p&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="install"
-srcset="http://gam0022.net/blog/2018/12/24/vscode-glslsandbox/install_hu_a5353c7e09258719.webp 320w, http://gam0022.net/blog/2018/12/24/vscode-glslsandbox/install_hu_2eb2d485b7b1a687.webp 379w"
+srcset="https://gam0022.net/blog/2018/12/24/vscode-glslsandbox/install_hu_a5353c7e09258719.webp 320w, https://gam0022.net/blog/2018/12/24/vscode-glslsandbox/install_hu_2eb2d485b7b1a687.webp 379w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2018/12/24/vscode-glslsandbox/install_hu_a5353c7e09258719.webp"
+src="https://gam0022.net/blog/2018/12/24/vscode-glslsandbox/install_hu_a5353c7e09258719.webp"
 width="379"
 height="301"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -4764,7 +4764,7 @@ stevensonaさんありがとうございます🙏&lt;/p&gt;
 &lt;td style="text-align: left"&gt;0〜1&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</description></item><item><title>Tokyo Demo Fest 2018のDemo Compo優勝作品の解説（グラフィック編）</title><link>http://gam0022.net/blog/2018/12/12/tdf2018/</link><pubDate>Wed, 12 Dec 2018 09:49:52 +0900</pubDate><guid>http://gam0022.net/blog/2018/12/12/tdf2018/</guid><description>&lt;p&gt;これは
+&lt;/table&gt;</description></item><item><title>Tokyo Demo Fest 2018のDemo Compo優勝作品の解説（グラフィック編）</title><link>https://gam0022.net/blog/2018/12/12/tdf2018/</link><pubDate>Wed, 12 Dec 2018 09:49:52 +0900</pubDate><guid>https://gam0022.net/blog/2018/12/12/tdf2018/</guid><description>&lt;p&gt;これは
 の12日目の記事です。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;12月1日～12月2日に秋葉原で開催された
@@ -4978,7 +4978,7 @@ High Definition Render Pipeline（HDRP）とレイマーチングを組み合わ
 &lt;li&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;作品の感想をYouTubeやpouet.netでいただけると泣いて喜びます。&lt;/p&gt;</description></item><item><title>メガデモ勉強会!2018で発表しました</title><link>http://gam0022.net/blog/2018/03/16/demoscene-study-session/</link><pubDate>Fri, 16 Mar 2018 10:14:35 +0900</pubDate><guid>http://gam0022.net/blog/2018/03/16/demoscene-study-session/</guid><description>&lt;p&gt;3/10（土）に開催された
+&lt;p&gt;作品の感想をYouTubeやpouet.netでいただけると泣いて喜びます。&lt;/p&gt;</description></item><item><title>メガデモ勉強会!2018で発表しました</title><link>https://gam0022.net/blog/2018/03/16/demoscene-study-session/</link><pubDate>Fri, 16 Mar 2018 10:14:35 +0900</pubDate><guid>https://gam0022.net/blog/2018/03/16/demoscene-study-session/</guid><description>&lt;p&gt;3/10（土）に開催された
 で発表しました。&lt;/p&gt;
 &lt;p&gt;発表タイトルは「もっと綺麗で写実的な絵作りをしたい！レイマーチング向けのシェーディング技術」です。&lt;/p&gt;
 &lt;p&gt;発表の概要はこんな感じです。&lt;/p&gt;
@@ -5045,7 +5045,7 @@ sin波や矩形波といった単純な波形をベースにして、本物の�
 懇親会では、以前の自分の発表でレイマーチングを知って、卒業制作にレイマーチングを使ったという学生とお話しました。
 自分の活動を通して何かを得た人もいるということに嬉しくなりました。&lt;/p&gt;
 &lt;p&gt;メガデモ制作のモチベーションが高まってきたので、今年の10〜11月のTDFに向けて頑張りたいです！&lt;/p&gt;
-&lt;p&gt;運営の方々、発表者の方々、会場を提供していただいたさくらインターネット様、ご参加いただいた方々、ありがとうございました！&lt;/p&gt;</description></item><item><title>Unityでメガデモ制作に挑戦（uRaymarchingとTimelineを試す）</title><link>http://gam0022.net/blog/2017/12/25/unity-demoscene/</link><pubDate>Mon, 25 Dec 2017 09:30:11 +0900</pubDate><guid>http://gam0022.net/blog/2017/12/25/unity-demoscene/</guid><description>&lt;p&gt;これは
+&lt;p&gt;運営の方々、発表者の方々、会場を提供していただいたさくらインターネット様、ご参加いただいた方々、ありがとうございました！&lt;/p&gt;</description></item><item><title>Unityでメガデモ制作に挑戦（uRaymarchingとTimelineを試す）</title><link>https://gam0022.net/blog/2017/12/25/unity-demoscene/</link><pubDate>Mon, 25 Dec 2017 09:30:11 +0900</pubDate><guid>https://gam0022.net/blog/2017/12/25/unity-demoscene/</guid><description>&lt;p&gt;これは
 21日目の記事です。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;
@@ -5140,9 +5140,9 @@ Boxから上から見たときに多角形になる柱を生成しました。&l
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="timeline"
-srcset="http://gam0022.net/blog/2017/12/25/unity-demoscene/timeline_hu_d5e5d90c9e783f68.webp 320w, http://gam0022.net/blog/2017/12/25/unity-demoscene/timeline_hu_9f151549606c549d.webp 480w, http://gam0022.net/blog/2017/12/25/unity-demoscene/timeline_hu_1e4e0f396940f9e.webp 760w"
+srcset="https://gam0022.net/blog/2017/12/25/unity-demoscene/timeline_hu_d5e5d90c9e783f68.webp 320w, https://gam0022.net/blog/2017/12/25/unity-demoscene/timeline_hu_9f151549606c549d.webp 480w, https://gam0022.net/blog/2017/12/25/unity-demoscene/timeline_hu_1e4e0f396940f9e.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2017/12/25/unity-demoscene/timeline_hu_d5e5d90c9e783f68.webp"
+src="https://gam0022.net/blog/2017/12/25/unity-demoscene/timeline_hu_d5e5d90c9e783f68.webp"
 width="760"
 height="495"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -5269,7 +5269,7 @@ Recorder trackをタイムラインに追加すると、エディター再生時
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;今回のデモ用のファイルは
-のディレクトリにあります。&lt;/p&gt;</description></item><item><title>正解するカドの「カド」をレイマーチングでリアルタイム描画する</title><link>http://gam0022.net/blog/2017/06/30/raymarching-kado/</link><pubDate>Fri, 30 Jun 2017 04:33:31 +0900</pubDate><guid>http://gam0022.net/blog/2017/06/30/raymarching-kado/</guid><description>&lt;p&gt;今夜はアニメ
+のディレクトリにあります。&lt;/p&gt;</description></item><item><title>正解するカドの「カド」をレイマーチングでリアルタイム描画する</title><link>https://gam0022.net/blog/2017/06/30/raymarching-kado/</link><pubDate>Fri, 30 Jun 2017 04:33:31 +0900</pubDate><guid>https://gam0022.net/blog/2017/06/30/raymarching-kado/</guid><description>&lt;p&gt;今夜はアニメ
 の最終回ですね。&lt;/p&gt;
 &lt;p&gt;フラクタル図形（カド）や折り紙（ワム）が重要な要素になっていて、個人的にとても刺さるアニメでした。&lt;/p&gt;
 &lt;p&gt;最終回は楽しみですが、今日で終わってしまうと思うと寂しくも感じます。&lt;/p&gt;
@@ -5380,9 +5380,9 @@ Pixel Ratioを2xにすると、綺麗な結果になりますが、描画の負�
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="CGWORLDの記事のリファレンス画像"
-srcset="http://gam0022.net/blog/2017/06/30/raymarching-kado/reference_hu_4a74391576233f37.webp 320w, http://gam0022.net/blog/2017/06/30/raymarching-kado/reference_hu_387fd4c3d9cd71c7.webp 480w, http://gam0022.net/blog/2017/06/30/raymarching-kado/reference_hu_afbbc4c74bc2fdce.webp 760w"
+srcset="https://gam0022.net/blog/2017/06/30/raymarching-kado/reference_hu_4a74391576233f37.webp 320w, https://gam0022.net/blog/2017/06/30/raymarching-kado/reference_hu_387fd4c3d9cd71c7.webp 480w, https://gam0022.net/blog/2017/06/30/raymarching-kado/reference_hu_afbbc4c74bc2fdce.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2017/06/30/raymarching-kado/reference_hu_4a74391576233f37.webp"
+src="https://gam0022.net/blog/2017/06/30/raymarching-kado/reference_hu_4a74391576233f37.webp"
 width="760"
 height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -5410,7 +5410,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;p&gt;自分&lt;/p&gt;
 &lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;&lt;a href="https://twitter.com/hashtag/%E6%AD%A3%E8%A7%A3%E3%81%99%E3%82%8B%E3%82%AB%E3%83%89?src=hash"&gt;#正解するカド&lt;/a&gt; の「カド」を &lt;a href="https://twitter.com/hashtag/WebGL?src=hash"&gt;#WebGL&lt;/a&gt; のレイマーチングでリアルタイムに描画しました！いい感じに仕上がったので、徹夜した甲斐がありました！今晩の最終話が楽しみです！ &lt;a href="https://twitter.com/hashtag/threejs?src=hash"&gt;#threejs&lt;/a&gt;&lt;a href="https://t.co/pMRREywdyy"&gt;https://t.co/pMRREywdyy&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/880562345990275072"&gt;2017年6月29日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</description></item><item><title>距離関数のfold（折りたたみ）による形状設計</title><link>http://gam0022.net/blog/2017/03/02/raymarching-fold/</link><pubDate>Thu, 02 Mar 2017 23:24:26 +0900</pubDate><guid>http://gam0022.net/blog/2017/03/02/raymarching-fold/</guid><description>&lt;p&gt;
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</description></item><item><title>距離関数のfold（折りたたみ）による形状設計</title><link>https://gam0022.net/blog/2017/03/02/raymarching-fold/</link><pubDate>Thu, 02 Mar 2017 23:24:26 +0900</pubDate><guid>https://gam0022.net/blog/2017/03/02/raymarching-fold/</guid><description>&lt;p&gt;
 とは、距離関数と呼ばれる数式で定義したシーンに対して、レイの衝突判定を行って絵を出す手法です。&lt;/p&gt;
 &lt;p&gt;この距離関数に対し、fold（折りたたみ）の操作を行うと、万華鏡のような美しい形状や、フラクタルのような複雑な形状の設計が可能です。&lt;/p&gt;
 &lt;p&gt;先日のTokyoDemoFest2017でも、このfoldを用いた作品を投稿しました。&lt;/p&gt;
@@ -5436,9 +5436,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="Gの鏡文字"
-srcset="http://gam0022.net/blog/2017/03/02/raymarching-fold/mirror2_hu_a040825d9d4704b4.webp 320w, http://gam0022.net/blog/2017/03/02/raymarching-fold/mirror2_hu_650add22e1355fb.webp 480w, http://gam0022.net/blog/2017/03/02/raymarching-fold/mirror2_hu_c9e3a1bc7aeeb49b.webp 760w"
+srcset="https://gam0022.net/blog/2017/03/02/raymarching-fold/mirror2_hu_a040825d9d4704b4.webp 320w, https://gam0022.net/blog/2017/03/02/raymarching-fold/mirror2_hu_650add22e1355fb.webp 480w, https://gam0022.net/blog/2017/03/02/raymarching-fold/mirror2_hu_c9e3a1bc7aeeb49b.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2017/03/02/raymarching-fold/mirror2_hu_a040825d9d4704b4.webp"
+src="https://gam0022.net/blog/2017/03/02/raymarching-fold/mirror2_hu_a040825d9d4704b4.webp"
 width="760"
 height="427"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -5462,9 +5462,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="YZ平面にfoldしたBox"
-srcset="http://gam0022.net/blog/2017/03/02/raymarching-fold/fold-1_hu_6d9bc63832a8c432.webp 320w, http://gam0022.net/blog/2017/03/02/raymarching-fold/fold-1_hu_d97aa230c32f1c9c.webp 480w, http://gam0022.net/blog/2017/03/02/raymarching-fold/fold-1_hu_cb3f2edcc633e9a9.webp 682w"
+srcset="https://gam0022.net/blog/2017/03/02/raymarching-fold/fold-1_hu_6d9bc63832a8c432.webp 320w, https://gam0022.net/blog/2017/03/02/raymarching-fold/fold-1_hu_d97aa230c32f1c9c.webp 480w, https://gam0022.net/blog/2017/03/02/raymarching-fold/fold-1_hu_cb3f2edcc633e9a9.webp 682w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2017/03/02/raymarching-fold/fold-1_hu_6d9bc63832a8c432.webp"
+src="https://gam0022.net/blog/2017/03/02/raymarching-fold/fold-1_hu_6d9bc63832a8c432.webp"
 width="682"
 height="512"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -5499,9 +5499,9 @@ foldXの中身も一緒で、引数と返り値の型がvec2からvec3になっ�
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="再帰的なfold"
-srcset="http://gam0022.net/blog/2017/03/02/raymarching-fold/fold-2_hu_d71937014d275a4b.webp 320w, http://gam0022.net/blog/2017/03/02/raymarching-fold/fold-2_hu_7ff85c39fb7e2708.webp 480w, http://gam0022.net/blog/2017/03/02/raymarching-fold/fold-2_hu_517cb6c58f5fabd8.webp 682w"
+srcset="https://gam0022.net/blog/2017/03/02/raymarching-fold/fold-2_hu_d71937014d275a4b.webp 320w, https://gam0022.net/blog/2017/03/02/raymarching-fold/fold-2_hu_7ff85c39fb7e2708.webp 480w, https://gam0022.net/blog/2017/03/02/raymarching-fold/fold-2_hu_517cb6c58f5fabd8.webp 682w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2017/03/02/raymarching-fold/fold-2_hu_d71937014d275a4b.webp"
+src="https://gam0022.net/blog/2017/03/02/raymarching-fold/fold-2_hu_d71937014d275a4b.webp"
 width="682"
 height="512"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -5635,7 +5635,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;h2 id="コメントアーカイブ"&gt;コメント（アーカイブ）&lt;/h2&gt;
 &lt;p&gt;※Disqusのコメントをクローズしたため、アーカイブとして画像を残しました。&lt;/p&gt;
 &lt;!-- ![Disqusのコメントのアーカイブ](disqus_comments.png) --&gt;
-&lt;img src="disqus_comments.png" alt="Disqusのコメントのアーカイブ"&gt;</description></item><item><title>#TokyoDemoFest 2017 の GLSL Graphics Compo で3位入賞！</title><link>http://gam0022.net/blog/2017/02/24/tdf2017/</link><pubDate>Fri, 24 Feb 2017 10:13:11 +0900</pubDate><guid>http://gam0022.net/blog/2017/02/24/tdf2017/</guid><description>&lt;p&gt;2017年2月18日(土)・19日(日)の2日間に開催された
+&lt;img src="disqus_comments.png" alt="Disqusのコメントのアーカイブ"&gt;</description></item><item><title>#TokyoDemoFest 2017 の GLSL Graphics Compo で3位入賞！</title><link>https://gam0022.net/blog/2017/02/24/tdf2017/</link><pubDate>Fri, 24 Feb 2017 10:13:11 +0900</pubDate><guid>https://gam0022.net/blog/2017/02/24/tdf2017/</guid><description>&lt;p&gt;2017年2月18日(土)・19日(日)の2日間に開催された
 に参加しました。&lt;/p&gt;
 &lt;p&gt;去年に引き続き、2回目の参加でした。去年の記事はこちらです。&lt;/p&gt;
 &lt;ul&gt;
@@ -5752,9 +5752,9 @@ foldについては、去年のTDFで
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="ノーマルマップを使ったマテリアル"
-srcset="http://gam0022.net/blog/2017/02/24/tdf2017/normal_hu_a03a2850709cddbc.webp 320w, http://gam0022.net/blog/2017/02/24/tdf2017/normal_hu_c2b63cb8645a4fc.webp 480w, http://gam0022.net/blog/2017/02/24/tdf2017/normal_hu_2fd0952753e145c4.webp 512w"
+srcset="https://gam0022.net/blog/2017/02/24/tdf2017/normal_hu_a03a2850709cddbc.webp 320w, https://gam0022.net/blog/2017/02/24/tdf2017/normal_hu_c2b63cb8645a4fc.webp 480w, https://gam0022.net/blog/2017/02/24/tdf2017/normal_hu_2fd0952753e145c4.webp 512w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2017/02/24/tdf2017/normal_hu_a03a2850709cddbc.webp"
+src="https://gam0022.net/blog/2017/02/24/tdf2017/normal_hu_a03a2850709cddbc.webp"
 width="512"
 height="512"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -5813,14 +5813,14 @@ Automaton
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="どんなフレンズの作品に会えるかな？"
-srcset="http://gam0022.net/blog/2017/02/24/tdf2017/friends_hu_c527ea82c2d2629d.webp 320w, http://gam0022.net/blog/2017/02/24/tdf2017/friends_hu_ccd43a10a12f40a1.webp 480w, http://gam0022.net/blog/2017/02/24/tdf2017/friends_hu_8faa172ee96c113d.webp 760w"
+srcset="https://gam0022.net/blog/2017/02/24/tdf2017/friends_hu_c527ea82c2d2629d.webp 320w, https://gam0022.net/blog/2017/02/24/tdf2017/friends_hu_ccd43a10a12f40a1.webp 480w, https://gam0022.net/blog/2017/02/24/tdf2017/friends_hu_8faa172ee96c113d.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2017/02/24/tdf2017/friends_hu_c527ea82c2d2629d.webp"
+src="https://gam0022.net/blog/2017/02/24/tdf2017/friends_hu_c527ea82c2d2629d.webp"
 width="760"
 height="439"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;/div&gt;&lt;/figure&gt;
-TDFのオープニングセレモニーの様子&lt;/p&gt;</description></item><item><title>GPUをつかったリアルタイムなレイトレーシング</title><link>http://gam0022.net/blog/2016/04/09/qiita-raymarching/</link><pubDate>Sat, 09 Apr 2016 18:03:00 +0900</pubDate><guid>http://gam0022.net/blog/2016/04/09/qiita-raymarching/</guid><description>&lt;p&gt;Qiitaに「GPUをつかったリアルタイムなレイトレーシング」の記事を2つ投稿しました。&lt;/p&gt;
+TDFのオープニングセレモニーの様子&lt;/p&gt;</description></item><item><title>GPUをつかったリアルタイムなレイトレーシング</title><link>https://gam0022.net/blog/2016/04/09/qiita-raymarching/</link><pubDate>Sat, 09 Apr 2016 18:03:00 +0900</pubDate><guid>https://gam0022.net/blog/2016/04/09/qiita-raymarching/</guid><description>&lt;p&gt;Qiitaに「GPUをつかったリアルタイムなレイトレーシング」の記事を2つ投稿しました。&lt;/p&gt;
 &lt;p&gt;実際に動作するものはコチラです。WebGLなのでブラウザでそのまま動作します。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vim | gam0022.net</title><link>http://gam0022.net/tags/vim/</link><atom:link href="http://gam0022.net/tags/vim/index.xml" rel="self" type="application/rss+xml"/><description>Vim</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 28 Jul 2012 00:01:00 +0900</lastBuildDate><image><url>http://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Vim</title><link>http://gam0022.net/tags/vim/</link></image><item><title>Linux(Ubuntu)からOS Xへ開発環境を移すときにしたこと</title><link>http://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/</link><pubDate>Sat, 28 Jul 2012 00:01:00 +0900</pubDate><guid>http://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/</guid><description>&lt;p&gt;とりあえず次のような感じになりました。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vim | gam0022.net</title><link>https://gam0022.net/tags/vim/</link><atom:link href="https://gam0022.net/tags/vim/index.xml" rel="self" type="application/rss+xml"/><description>Vim</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 28 Jul 2012 00:01:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Vim</title><link>https://gam0022.net/tags/vim/</link></image><item><title>Linux(Ubuntu)からOS Xへ開発環境を移すときにしたこと</title><link>https://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/</link><pubDate>Sat, 28 Jul 2012 00:01:00 +0900</pubDate><guid>https://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/</guid><description>&lt;p&gt;とりあえず次のような感じになりました。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;ターミナル
 :Terminal.app&lt;/li&gt;
@@ -18,9 +18,9 @@
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="Terminal.app"
-srcset="http://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/2012.7.28_terminal_hu_c212c4e707f03596.webp 320w, http://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/2012.7.28_terminal_hu_bf2ee45b8d562134.webp 480w, http://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/2012.7.28_terminal_hu_e8bc1d2f876c8cd7.webp 715w"
+srcset="https://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/2012.7.28_terminal_hu_c212c4e707f03596.webp 320w, https://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/2012.7.28_terminal_hu_bf2ee45b8d562134.webp 480w, https://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/2012.7.28_terminal_hu_e8bc1d2f876c8cd7.webp 715w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="http://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/2012.7.28_terminal_hu_c212c4e707f03596.webp"
+src="https://gam0022.net/blog/2012/07/28/customize-terminap-dot-app-and-vim-on-lion-mac/2012.7.28_terminal_hu_c212c4e707f03596.webp"
 width="715"
 height="502"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
