@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gnuplot | gam0022.net</title>
+    <link>http://localhost:1313/tags/gnuplot/</link>
+      <atom:link href="http://localhost:1313/tags/gnuplot/index.xml" rel="self" type="application/rss+xml" />
+    <description>Gnuplot</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 31 Dec 2012 17:02:00 +0900</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
+      <title>Gnuplot</title>
+      <link>http://localhost:1313/tags/gnuplot/</link>
+    </image>
+    
+    <item>
+      <title>gnuplotでCSVファイルを読み込む方法とmultiplotの注意点</title>
+      <link>http://localhost:1313/blog/2012/12/31/gnuplot-tips/</link>
+      <pubDate>Mon, 31 Dec 2012 17:02:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2012/12/31/gnuplot-tips/</guid>
+      <description>&lt;p&gt;シュミレーション物理とかいう授業で、
+座標のデータ(天体の膨張のシュミレーションらしい)をCSV形式に出力して
+それをエクセルで分散図として表示する課題があったのですが、
+あえてgnuplotでやってみました。&lt;/p&gt;
+&lt;h2 id=&#34;gnuplotでcsvファイルを読み込む方法&#34;&gt;gnuplotでCSVファイルを読み込む方法&lt;/h2&gt;
+&lt;p&gt;通常、gnuplotではスペースで区切ったデータしか読み取れませんが、
+次のように設定すれば、CSV形式のファイルもplotできます。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set datafile separator &amp;#34;,&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;次のようにすれば、TSV形式でも読み取れると思います。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set datafile separator &amp;#34;\t&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;multiplotの注意点&#34;&gt;multiplotの注意点&lt;/h2&gt;
+&lt;p&gt;multiplotを使えば、複数のグラフを並んで表示できます。
+MatLabのsubplotのような機能です。
+便利な機能なのですが、グラフをファイルに出力するときに注意点があります。&lt;/p&gt;
+&lt;p&gt;次のように、&lt;code&gt;set multiplot&lt;/code&gt;を使う前に、&lt;code&gt;set out&lt;/code&gt;を使ってください。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set terminal postscript eps
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set out &amp;#34;img1.eps&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set multiplot layout 1,2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;replot
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;さもないと、次のようなエラーになってしまいます。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set out &amp;#34;img1.eps&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ^
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;plot&amp;#34;, line 9: you can&amp;#39;t change the output in multiplot mode
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;以上のことを踏まえて正しくgnuplotを使いましょう。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set datafile separator &amp;#34;,&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set size square
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set xr[40:60]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set yr[40:60]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set terminal postscript eps
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set out &amp;#34;img1.eps&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set multiplot layout 1,2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;plot &amp;#34;before.csv&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;plot &amp;#34;after.csv&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;replot
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;出力画像&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;gnuplot_test&#34; 
+               srcset=&#34;http://localhost:1313/blog/2012/12/31/gnuplot-tips/2012.12.31_gnuplot_hu_32bcc60f8afb5c6b.webp 320w, http://localhost:1313/blog/2012/12/31/gnuplot-tips/2012.12.31_gnuplot_hu_45cd0cbed2cc085c.webp 360w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2012/12/31/gnuplot-tips/2012.12.31_gnuplot_hu_32bcc60f8afb5c6b.webp&#34;
+               width=&#34;360&#34;
+               height=&#34;252&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

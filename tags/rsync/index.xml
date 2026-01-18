@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rsync | gam0022.net</title>
+    <link>http://localhost:1313/tags/rsync/</link>
+      <atom:link href="http://localhost:1313/tags/rsync/index.xml" rel="self" type="application/rss+xml" />
+    <description>Rsync</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 11 Aug 2012 10:38:00 +0900</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
+      <title>Rsync</title>
+      <link>http://localhost:1313/tags/rsync/</link>
+    </image>
+    
+    <item>
+      <title>カテゴリー名に濁点を含んだ日本語が使えない問題を解決する(Rsyncのiconvオプションを使う)</title>
+      <link>http://localhost:1313/blog/2012/08/11/use-rsync-iconv-option/</link>
+      <pubDate>Sat, 11 Aug 2012 10:38:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2012/08/11/use-rsync-iconv-option/</guid>
+      <description>&lt;p&gt;このブログで、カテゴリーに濁点を含んだ日本語を使うと、カテゴリーの一覧などからカテゴリーのページにリンクしたとき、
+404エラーになってしまう問題が起きました。&lt;/p&gt;
+&lt;p&gt;原因は、このブログの開発環境にありました。&lt;/p&gt;
+&lt;p&gt;このブログは静的コンテンツなのですが、次のような手順でブログを運営しています。
+(Rakefileで自動化されていますが、内部ではこうなっています)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ローカル(Mac OS X)でブログを生成する。&lt;/li&gt;
+&lt;li&gt;サーバ(Ubuntu)にRsyncで生成したブログをアップロードする。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mac OS X では、ファイル名のエンコードに&lt;code&gt;UTF-8-MAC&lt;/code&gt;を使っているので、
+そのままアップロードすると、サーバ上のファイル名も&lt;code&gt;UTF-8-MAC&lt;/code&gt;になります。
+しかし、ファイル自体のエンコードは&lt;code&gt;UTF-8&lt;/code&gt;でURLをパーセントエンコーディングしていないので、
+リンク先が見つからなくなってしまうようです。&lt;/p&gt;
+&lt;p&gt;UTF-8-MAC問題について詳しく知りたい人は、
+などが勉強になるとおもいます。&lt;/p&gt;
+&lt;p&gt;解決方法は簡単で、Rsyncでアップロードするときに、&lt;code&gt;--iconv&lt;/code&gt;オプションを使い、
+ファイル名を&lt;code&gt;UTF-8-MAC&lt;/code&gt;から&lt;code&gt;UTF-8&lt;/code&gt;に変換すれば治ります。&lt;/p&gt;
+&lt;h4 id=&#34;rsyncのバージョンを3にする&#34;&gt;Rsyncのバージョンを3にする&lt;/h4&gt;
+&lt;p&gt;Rsyncの&lt;code&gt;--iconv&lt;/code&gt;オプションが使えるのは、Rsync3からなのでアップデートします。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## brew tap homebrew/dupes #リポジトリを追加（2019/06/20追記。この手順は不要になりました。）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install libiconv &lt;span class=&#34;c1&#34;&gt;#iconvオプションを使うために必須のよう&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install rsync
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;念のため、サーバ側(Ubuntu)のrsync3にします。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;aptitude install rsync
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;rakefileを修正する&#34;&gt;Rakefileを修正する&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;Rakefile&lt;/code&gt;の&lt;code&gt;ok_failed system...&lt;/code&gt;の行を書き換えます。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;desc &lt;span class=&#34;s2&#34;&gt;&amp;#34;Deploy website via rsync&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;task :rsync &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nv&#34;&gt;exclude&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; File.exists?&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;./rsync-exclude&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;exclude&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;--exclude-from &amp;#39;#{File.expand_path(&amp;#39;./rsync-exclude&amp;#39;)}&amp;#39;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  end
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  puts &lt;span class=&#34;s2&#34;&gt;&amp;#34;## Deploying website via Rsync&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;#ok_failed system(&amp;#34;rsync -avze &amp;#39;ssh -p #{ssh_port}&amp;#39; #{exclude} #{&amp;#34;--delete&amp;#34; unless rsync_delete == false} #{public_dir}/ #{ssh_user}:#{document_root}&amp;#34;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  ok_failed system&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;rsync --iconv=UTF-8-MAC,UTF-8 -avze &amp;#39;ssh -p #{ssh_port}&amp;#39; #{exclude} #{&amp;#34;&lt;/span&gt;--delete&lt;span class=&#34;s2&#34;&gt;&amp;#34; unless rsync_delete == false} #{public_dir}/ #{ssh_user}:#{document_root}&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;end
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;完&#34;&gt;完。&lt;/h4&gt;
+&lt;p&gt;これでうまくいきました。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;gam0022@starlight:~/git/gam0022.net&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; $ rake deploy
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;### Deploying website via Rsync&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sending incremental file list
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deleting blog/categories/ゴ/index.html
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deleting blog/categories/ゴ/atom.xml
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deleting blog/categories/ゴ/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;blog/categories/ゴ/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;blog/categories/ゴ/atom.xml
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;blog/categories/ゴ/index.html
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sent &lt;span class=&#34;m&#34;&gt;11206&lt;/span&gt; bytes  received &lt;span class=&#34;m&#34;&gt;138&lt;/span&gt; bytes  7562.67 bytes/sec
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;total size is &lt;span class=&#34;m&#34;&gt;2309599&lt;/span&gt;  speedup is 203.60
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;OK
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;「ゴゴゴゴ…」&lt;/p&gt;
+&lt;h2 id=&#34;コメントアーカイブ&#34;&gt;コメント（アーカイブ）&lt;/h2&gt;
+&lt;p&gt;※Disqusのコメントをクローズしたため、アーカイブとして画像を残しました。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;Disqusのコメントのアーカイブ&#34; 
+               srcset=&#34;http://localhost:1313/blog/2012/08/11/use-rsync-iconv-option/disqus_comments_hu_3b71a278ad5d6cbd.webp 320w, http://localhost:1313/blog/2012/08/11/use-rsync-iconv-option/disqus_comments_hu_65db7281d5c0e500.webp 480w, http://localhost:1313/blog/2012/08/11/use-rsync-iconv-option/disqus_comments_hu_905132d5c92f4775.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2012/08/11/use-rsync-iconv-option/disqus_comments_hu_3b71a278ad5d6cbd.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;302&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Rsyncを使ってOctopressをVPS上で公開する</title>
+      <link>http://localhost:1313/blog/2012/07/23/run-octopress-on-a-vps-using-rsync/</link>
+      <pubDate>Mon, 23 Jul 2012 10:02:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2012/07/23/run-octopress-on-a-vps-using-rsync/</guid>
+      <description>&lt;p&gt;今回もOctopressに関する記事です。&lt;/p&gt;
+&lt;p&gt;先日、Octopressを使ってGithubPages上にブログを運営しましたが、
+気が変わってレンタルしているVPS上で運営したくなりました。&lt;/p&gt;
+&lt;p&gt;Octopressでは&lt;code&gt;rake deploy&lt;/code&gt;を叩くだけでRsyncを使い自分のサーバ上にコンテンツを同期することができるので、
+その方法を紹介したいと思います。&lt;/p&gt;
+&lt;p&gt;Rsyncを使って同期するためには次の2つの作業をする必要があります。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;公開鍵認証を使ってsshでログインできるようにする。&lt;/li&gt;
+&lt;li&gt;サーバ側の&lt;code&gt;~/.ssh/authorized_keys&lt;/code&gt;にローカル側の公開鍵を登録する。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;ここでは、serverという名前のサーバに作成済みのuserというユーザを使って、公開鍵でログインするようにするまでの手順を紹介します。&lt;/p&gt;
+&lt;h2 id=&#34;ローカル側の設定鍵のペアの生成&#34;&gt;ローカル側の設定(鍵のペアの生成)&lt;/h2&gt;
+&lt;p&gt;まず、ローカル側で鍵のペアの生成します。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/.ssh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh-keygen -t rsa &lt;span class=&#34;c1&#34;&gt;# RSAの鍵のペアを生成する。save the keyは空白でOK。パスフレーズは任意のものを指定する。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat id_rsa.pub &lt;span class=&#34;c1&#34;&gt;# 公開鍵はサーバのauthorized_keysに後で登録するので表示しておく&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;サーバ側の設定&#34;&gt;サーバ側の設定&lt;/h2&gt;
+&lt;h3 id=&#34;公開鍵の登録&#34;&gt;公開鍵の登録&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim ~/.ssh/authorized_keys &lt;span class=&#34;c1&#34;&gt;# 上で表示したローカル側のid_rsa.pubを最後の行に追加する。(ファイルがなければ作る)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;sshの設定&#34;&gt;sshの設定&lt;/h3&gt;
+&lt;p&gt;vimなどで、サーバ側の&lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt;を編集します。
+間違った設定をすると最悪sshでログインできなるので注意しましょうw&lt;/p&gt;
+&lt;p&gt;私の場合はこのような感じに&lt;strong&gt;一部を書き換えました。&lt;/strong&gt;
+この記事を書いている私ですが、サーバの設定は初心者なので、あまり信用しないようにしましょうw
+あくまで参考程度で。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AllowUsers user
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RSAAuthentication yes 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PubkeyAuthentication yes 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AuthorizedKeysFile   %h/.ssh/authorized_keys
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;VPS上の設定が終わったら、sshdを再起動します。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/etc/init.d/ssh restart
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;再びローカル側の設定sshのテスト&#34;&gt;再びローカル側の設定(sshのテスト)&lt;/h2&gt;
+&lt;p&gt;以上で公開鍵を使ってsshをする準備が整ったので、テストしてみます。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/.ssh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chmod &lt;span class=&#34;m&#34;&gt;600&lt;/span&gt; id_rsa &lt;span class=&#34;c1&#34;&gt;# パーミションが600でないと「WARNING: UNPROTECTED PRIVATE KEY FILE!」というエラーになる。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh -i id_rsa user@server &lt;span class=&#34;c1&#34;&gt;#これでログインできれば成功。-iで秘密鍵を指定できる。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;octopressの設定&#34;&gt;Octopressの設定&lt;/h2&gt;
+&lt;p&gt;ここまで来れば、あとはOctopressの設定だけです。&lt;code&gt;Rakefile&lt;/code&gt;を編集します。&lt;/p&gt;
+&lt;p&gt;私の場合、GithubPages用にRakeFileを設定してしまったので、書き直します。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;### -- Rsync Deploy config -- ##&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Be sure your public key is listed in your server&amp;#39;s ~/.ssh/authorized_keys file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ssh_user&lt;/span&gt;       &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;user@server&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ssh_port&lt;/span&gt;       &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;1234&amp;#34;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#普通は22ですが、セキュリティ上の理由で(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;document_root&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/var/www/html/&amp;#34;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#htmlの公開用のディレクトリを指定。ServersMan@VPSならこの設定でいいはず。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;rsync_delete&lt;/span&gt;   &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#deploy_default = &amp;#34;push&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;deploy_default&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;rsync&amp;#34;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#rsyncで同期します。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これで設定は終わりです。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;rake deploy&lt;/code&gt;でファイルが同期できたら成功です。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;参考記事
+:
+&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VPS | gam0022.net</title>
+    <link>http://localhost:1313/tags/vps/</link>
+      <atom:link href="http://localhost:1313/tags/vps/index.xml" rel="self" type="application/rss+xml" />
+    <description>VPS</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 14 Nov 2017 01:00:00 +0900</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
+      <title>VPS</title>
+      <link>http://localhost:1313/tags/vps/</link>
+    </image>
+    
+    <item>
+      <title>ServersMan@VPSからConoHaに引っ越しました</title>
+      <link>http://localhost:1313/blog/2017/11/14/move-from-serversman-to-conoha/</link>
+      <pubDate>Tue, 14 Nov 2017 01:00:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2017/11/14/move-from-serversman-to-conoha/</guid>
+      <description>&lt;p&gt;当サイト（
+）を動かしているサーバを
+から
+に乗り換えました。&lt;/p&gt;
+&lt;p&gt;2011/12にServersMan@VPSを契約したので、なんと6年間もお世話になりました。&lt;/p&gt;
+&lt;p&gt;ServersManさん長い間ありがとうございました。ConoHaちゃんよろしくお願いします。&lt;/p&gt;
+&lt;h2 id=&#34;引っ越した理由&#34;&gt;引っ越した理由&lt;/h2&gt;
+&lt;p&gt;結論から言うと、ServersMan@VPSで設定されているTCPのバッファサイズ制限が厳しすぎて、ブログ用のサーバとしての利用が困難になってきたからです。&lt;/p&gt;
+&lt;p&gt;去年頃から記事へのアクセスが増えると、アクセスが非常に遅くなったり、サーバが強制停止してsshすらできない状況が頻発していました。
+特にサーバが停止されると管理画面からサーバを再起動するしかなくなり、非常に困っていました。&lt;/p&gt;
+&lt;p&gt;ServersMan@VPSではOpenVZというサーバ仮想化ソフトが使われています。
+OpneVZのリソース情報は &lt;code&gt;/proc/user_beancounters&lt;/code&gt; から確認できます。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat /proc/user_beancounters
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Version: 2.5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       uid  resource                     held              maxheld              barrier                limit              failcnt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    43120:  kmemsize                 51483085             54714368  9223372036854775807  9223372036854775807                    0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            lockedpages                     0                    0                  256                  256                    0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            privvmpages                156446               413948  9223372036854775807  9223372036854775807                    0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            shmpages                    17174                18182  9223372036854775807  9223372036854775807                    0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            dummy                           0                    0  9223372036854775807  9223372036854775807                    0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            numproc                        60                  132                  480                  480                    0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            physpages                  263585               274847                    0               524288                    0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            vmguarpages                     0                    0  9223372036854775807  9223372036854775807                    0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            oomguarpages                15701                24817                26112  9223372036854775807                    0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            numtcpsock                     17                  161                  360                  360                    0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            numflock                       30                   73                  188                  206                    0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            numpty                          3                   12                   12                   12                    2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            numsiginfo                      0                   30                  192                  192                    0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            tcpsndbuf                  222624              1737856              1720320              2703360            127242887
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            tcprcvbuf                  212992              1211696              1720320              2703360                    0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            othersockbuf               228888               768328              1126080              2097152                    0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            dgramrcvbuf                     0                19320               262144               262144                    0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            numothersock                  129                  360                  360                  360                   68
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            dcachesize               44554051             45815590  9223372036854775807  9223372036854775807                    0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            numfile                      1098                 2485                 9312                 9312                    0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            dummy                           0                    0  9223372036854775807  9223372036854775807                    0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            dummy                           0                    0  9223372036854775807  9223372036854775807                    0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            dummy                           0                    0  9223372036854775807  9223372036854775807                    0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            numiptent                      24                   24                  256                  256                    0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;tcpsndbufのfailcntが127242887となっており、TCPの送信バッファのサイズ制限に引っかかっていました。
+tcpsndbufのlimitは2703360byte = 約2MBで、通常の使用範囲でもすぐに制限に引っかかるような設定でした。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;resource                     held              maxheld              barrier                limit              failcnt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tcpsndbuf                  222624              1737856              1720320              2703360            127242887
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;自分の以外にも
+を発見し、乗り換えることを決意しました。&lt;/p&gt;
+&lt;h2 id=&#34;引っ越し手順&#34;&gt;引っ越し手順&lt;/h2&gt;
+&lt;h3 id=&#34;ブログの引っ越し&#34;&gt;ブログの引っ越し&lt;/h3&gt;
+&lt;p&gt;ブログの引っ越しは特にトラブルもなく完了しました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DTIからお名前.comにドメインの移管
+&lt;ul&gt;
+&lt;li&gt;ドメインの移管はかなり前（今年の3月）に行いました&lt;/li&gt;
+&lt;li&gt;DTIのサービス(UbicName)でドメインを取得しましたが、AレコードにDTIで契約中のサーバのIPアドレスしか選択できないありえない仕様でした…💢&lt;/li&gt;
+&lt;li&gt;当然ながら、お名前.comでは自由にAレコードを設定できます&lt;/li&gt;
+&lt;li&gt;お名前.comへのドメインを移管は、DTIの管理画面から申請できました
+&lt;ul&gt;
+&lt;li&gt;
+し、お名前.comのアカウントを発行してもらえました&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;新サーバ(ConoHa)の契約
+&lt;ul&gt;
+&lt;li&gt;月額900円のメモリ1GBのプランを選択しました&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Webサーバの設定
+&lt;ul&gt;
+&lt;li&gt;旧サーバ(ServersMan)では初期インストールのapacheをそのまま使っていました&lt;/li&gt;
+&lt;li&gt;新サーバでは学習目的でnginxをインストールして設定しました&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;新サーバにコンテンツをデプロイ
+&lt;ul&gt;
+&lt;li&gt;静的CMSのHugoでサイト構築しているので、静的ファイルをrsyncでアップロードするだけでした&lt;/li&gt;
+&lt;li&gt;全く苦労なくできました&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ドメインのAレコードの変更
+&lt;ul&gt;
+&lt;li&gt;旧サーバから新サーバにドメインの割当を変更しました&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;その他の引っ越し&#34;&gt;その他の引っ越し&lt;/h3&gt;
+&lt;p&gt;ブログの他にも、過去に作った
+や
+なども引っ越しました。&lt;/p&gt;
+&lt;p&gt;新サーバで旧サーバ（6年前）の環境を再現しようとしたものの、旧サーバのRubyのバージョンが古すぎてセキュリティ的に危険なのに加えて、C拡張のgemのビルドが失敗したりして、断念しました。&lt;/p&gt;
+&lt;p&gt;最終的にはRubyと依存gemのバージョンを最新版に上げて、コードも修正をして、なんとか新サーバで動かせるようにしました。
+またnginxでCGIを使うには
+が必要でした。&lt;/p&gt;
+&lt;p&gt;ついでにGemfileを書いて、依存gemを管理するようにしました。&lt;/p&gt;
+&lt;h2 id=&#34;まとめ自戒&#34;&gt;まとめ（自戒）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;サーバ選びでは、値段やスペックだけではなく、TCPのバッファ制限なども注意しましょう&lt;/li&gt;
+&lt;li&gt;好きなタイミングでサーバを乗り換えできるように、ドメインは最初からお名前.comで取得しておきましょう
+&lt;ul&gt;
+&lt;li&gt;6年前の自分にはその知識がありませんでした&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;静的CMSは引っ越しが簡単なのでオススメです&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;コメントアーカイブ&#34;&gt;コメント（アーカイブ）&lt;/h2&gt;
+&lt;p&gt;※Disqusのコメントをクローズしたため、アーカイブとして画像を残しました。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;Disqusのコメントのアーカイブ&#34; 
+               srcset=&#34;http://localhost:1313/blog/2017/11/14/move-from-serversman-to-conoha/disqus_comments_hu_1fc5bb9c7e1d1145.webp 320w, http://localhost:1313/blog/2017/11/14/move-from-serversman-to-conoha/disqus_comments_hu_1738986398f96789.webp 480w, http://localhost:1313/blog/2017/11/14/move-from-serversman-to-conoha/disqus_comments_hu_a1d93e2e927f8f97.webp 757w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2017/11/14/move-from-serversman-to-conoha/disqus_comments_hu_1fc5bb9c7e1d1145.webp&#34;
+               width=&#34;757&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Rsyncを使ってOctopressをVPS上で公開する</title>
+      <link>http://localhost:1313/blog/2012/07/23/run-octopress-on-a-vps-using-rsync/</link>
+      <pubDate>Mon, 23 Jul 2012 10:02:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2012/07/23/run-octopress-on-a-vps-using-rsync/</guid>
+      <description>&lt;p&gt;今回もOctopressに関する記事です。&lt;/p&gt;
+&lt;p&gt;先日、Octopressを使ってGithubPages上にブログを運営しましたが、
+気が変わってレンタルしているVPS上で運営したくなりました。&lt;/p&gt;
+&lt;p&gt;Octopressでは&lt;code&gt;rake deploy&lt;/code&gt;を叩くだけでRsyncを使い自分のサーバ上にコンテンツを同期することができるので、
+その方法を紹介したいと思います。&lt;/p&gt;
+&lt;p&gt;Rsyncを使って同期するためには次の2つの作業をする必要があります。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;公開鍵認証を使ってsshでログインできるようにする。&lt;/li&gt;
+&lt;li&gt;サーバ側の&lt;code&gt;~/.ssh/authorized_keys&lt;/code&gt;にローカル側の公開鍵を登録する。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;ここでは、serverという名前のサーバに作成済みのuserというユーザを使って、公開鍵でログインするようにするまでの手順を紹介します。&lt;/p&gt;
+&lt;h2 id=&#34;ローカル側の設定鍵のペアの生成&#34;&gt;ローカル側の設定(鍵のペアの生成)&lt;/h2&gt;
+&lt;p&gt;まず、ローカル側で鍵のペアの生成します。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/.ssh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh-keygen -t rsa &lt;span class=&#34;c1&#34;&gt;# RSAの鍵のペアを生成する。save the keyは空白でOK。パスフレーズは任意のものを指定する。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat id_rsa.pub &lt;span class=&#34;c1&#34;&gt;# 公開鍵はサーバのauthorized_keysに後で登録するので表示しておく&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;サーバ側の設定&#34;&gt;サーバ側の設定&lt;/h2&gt;
+&lt;h3 id=&#34;公開鍵の登録&#34;&gt;公開鍵の登録&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim ~/.ssh/authorized_keys &lt;span class=&#34;c1&#34;&gt;# 上で表示したローカル側のid_rsa.pubを最後の行に追加する。(ファイルがなければ作る)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;sshの設定&#34;&gt;sshの設定&lt;/h3&gt;
+&lt;p&gt;vimなどで、サーバ側の&lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt;を編集します。
+間違った設定をすると最悪sshでログインできなるので注意しましょうw&lt;/p&gt;
+&lt;p&gt;私の場合はこのような感じに&lt;strong&gt;一部を書き換えました。&lt;/strong&gt;
+この記事を書いている私ですが、サーバの設定は初心者なので、あまり信用しないようにしましょうw
+あくまで参考程度で。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AllowUsers user
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RSAAuthentication yes 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PubkeyAuthentication yes 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AuthorizedKeysFile   %h/.ssh/authorized_keys
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;VPS上の設定が終わったら、sshdを再起動します。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/etc/init.d/ssh restart
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;再びローカル側の設定sshのテスト&#34;&gt;再びローカル側の設定(sshのテスト)&lt;/h2&gt;
+&lt;p&gt;以上で公開鍵を使ってsshをする準備が整ったので、テストしてみます。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/.ssh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chmod &lt;span class=&#34;m&#34;&gt;600&lt;/span&gt; id_rsa &lt;span class=&#34;c1&#34;&gt;# パーミションが600でないと「WARNING: UNPROTECTED PRIVATE KEY FILE!」というエラーになる。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh -i id_rsa user@server &lt;span class=&#34;c1&#34;&gt;#これでログインできれば成功。-iで秘密鍵を指定できる。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;octopressの設定&#34;&gt;Octopressの設定&lt;/h2&gt;
+&lt;p&gt;ここまで来れば、あとはOctopressの設定だけです。&lt;code&gt;Rakefile&lt;/code&gt;を編集します。&lt;/p&gt;
+&lt;p&gt;私の場合、GithubPages用にRakeFileを設定してしまったので、書き直します。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;### -- Rsync Deploy config -- ##&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Be sure your public key is listed in your server&amp;#39;s ~/.ssh/authorized_keys file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ssh_user&lt;/span&gt;       &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;user@server&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ssh_port&lt;/span&gt;       &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;1234&amp;#34;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#普通は22ですが、セキュリティ上の理由で(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;document_root&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/var/www/html/&amp;#34;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#htmlの公開用のディレクトリを指定。ServersMan@VPSならこの設定でいいはず。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;rsync_delete&lt;/span&gt;   &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#deploy_default = &amp;#34;push&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;deploy_default&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;rsync&amp;#34;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#rsyncで同期します。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これで設定は終わりです。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;rake deploy&lt;/code&gt;でファイルが同期できたら成功です。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;参考記事
+:
+&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

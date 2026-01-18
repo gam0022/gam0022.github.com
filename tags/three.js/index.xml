@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Three.js | gam0022.net</title>
+    <link>http://localhost:1313/tags/three.js/</link>
+      <atom:link href="http://localhost:1313/tags/three.js/index.xml" rel="self" type="application/rss+xml" />
+    <description>Three.js</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 11 Dec 2017 10:12:08 +0900</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
+      <title>Three.js</title>
+      <link>http://localhost:1313/tags/three.js/</link>
+    </image>
+    
+    <item>
+      <title>カメラ行列からレイトレ用のレイを生成する</title>
+      <link>http://localhost:1313/blog/2017/12/11/get-ray-from-camera-matrix/</link>
+      <pubDate>Mon, 11 Dec 2017 10:12:08 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2017/12/11/get-ray-from-camera-matrix/</guid>
+      <description>&lt;p&gt;これは
+の11日目の記事です。&lt;/p&gt;
+&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
+&lt;p&gt;先日、three.jsの
+で紹介されている
+に関して、2つのPRを送ってマージされました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;内部的なリファクタリングですので、目に見える変化はまったくありません。&lt;/p&gt;
+&lt;p&gt;レイトレーシングやレイマーチングでは、レイを生成する処理が必要です。
+そのレイの生成処理を改良しました。
+上記のPRでは、カメラ行列（モデル行列 + プロジェクション行列の逆行列）からレイの生成するリファクタリングを行いました。&lt;/p&gt;
+&lt;p&gt;レイの生成方法というのはとても奥深いテーマで、さまざまな実装方法があります。
+この記事では、今回のPRに至るまでの試行錯誤をまとめたいと思います。&lt;/p&gt;
+&lt;h2 id=&#34;raymarching--reflect-とは&#34;&gt;raymarching / reflect とは&lt;/h2&gt;
+&lt;p&gt;「raymarching / reflect」は、three.jsによるレイマーチングのGLSL（GPU）実装の技術デモです。&lt;/p&gt;
+&lt;p&gt;無数のオブジェクトの描画はレイマーチングが得意とする表現です。
+レイマーチングでは距離関数を利用してシーンの形状を定義します。
+距離関数にmod関数を適用すると、同じ形状を無限に繰り返す repetition を実現できます。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;three.jsによるレイマーチングのGLSL（GPU）実装の技術デモ: reflect&#34; 
+               srcset=&#34;http://localhost:1313/blog/2017/12/11/get-ray-from-camera-matrix/reflect_hu_b95bcc09efbb8184.webp 320w, http://localhost:1313/blog/2017/12/11/get-ray-from-camera-matrix/reflect_hu_cdcd04a629e4e61f.webp 480w, http://localhost:1313/blog/2017/12/11/get-ray-from-camera-matrix/reflect_hu_ec3efb2158b1cc73.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2017/12/11/get-ray-from-camera-matrix/reflect_hu_b95bcc09efbb8184.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;474&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;私が2年前に実装して、three.jsのexamplesに取り込んでいただきました。その時のPRはこちらです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;解説記事もあるので、もしご興味があればあわせてお読みください。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;要するに、2年前に自分で作った作品を今になって改良しました。&lt;/p&gt;
+&lt;h2 id=&#34;レイの生成方法の試行錯誤&#34;&gt;レイの生成方法の試行錯誤&lt;/h2&gt;
+&lt;p&gt;それでは、カメラ行列からレイを生成するに至った経緯を混じえながら、
+レイの生成方法の試行錯誤について、実装した順番に紹介します。&lt;/p&gt;
+&lt;h3 id=&#34;方法1-glslで全てのカメラ制御を行う&#34;&gt;方法1: GLSLで全てのカメラ制御を行う&lt;/h3&gt;
+&lt;p&gt;2年前の初PR 
+ で実装したのは、マウス座標と経過時間から、フラグメントシェーダ（GLSL）の中でカメラのレイを生成する方法です。&lt;/p&gt;
+&lt;p&gt;シェーダに渡すuniformsは、マウス座標&lt;code&gt;mouse&lt;/code&gt;と、経過時間&lt;code&gt;time&lt;/code&gt;の2つです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;uniform vec2 mouse;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;uniform float time;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以下のGLSLのコードを書きました。レイマーチング（デモシーン）の界隈では最もメジャーな実装かと思います。&lt;/p&gt;
+&lt;p&gt;コード1 
+&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// fragment position
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vec2&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;gl_FragCoord&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xy&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;2.0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;resolution&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;min&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;resolution&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;resolution&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// camera and ray
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vec3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cPos&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;vec3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mouse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mouse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;4.0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;time&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vec3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cDir&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;normalize&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;vec3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vec3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cSide&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cross&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cDir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;vec3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vec3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cUp&lt;/span&gt;   &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cross&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cSide&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cDir&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;targetDepth&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vec3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ray&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;normalize&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cSide&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cUp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cDir&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;targetDepth&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;※オリジナルのコードではY-upの扱いが間違っていたので、記事用に修正を加えています。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cPos&lt;/code&gt;はカメラのワールド座標、&lt;code&gt;ray&lt;/code&gt;はカメラのレイの方向をそれぞれ表します。
+また、カメラのY-upに対応する &lt;code&gt;vec3( 0.0, 1.0 ,0.0 )&lt;/code&gt; とカメラのFOVに対応する &lt;code&gt;float targetDepth = 1.3;&lt;/code&gt; はコード上に埋め混んだ、いわゆるマジックナンバーとしました。&lt;/p&gt;
+&lt;h3 id=&#34;方法2-カメラの座標と向きを渡す&#34;&gt;方法2: カメラの座標と向きを渡す&lt;/h3&gt;
+&lt;p&gt;この方法は2年前の2つ目のPR 
+ で対応しました。&lt;/p&gt;
+&lt;p&gt;方法1でPRを送ったところ、three.jsの作者である
+から
+をいただきました。
+以下に一部を抜粋します。&lt;/p&gt;
+
+
+
+  
+  &lt;blockquote class=&#34;border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6&#34;&gt;
+    &lt;p&gt;However&amp;hellip; I think it would be cool if, instead of passing mouse and time to the shader we would simply pass the camera. I guess for that we have to decompose the camera matrix into position and direction?&lt;/p&gt;
+
+  &lt;/blockquote&gt;
+
+&lt;p&gt;要約すると、GLSL側でカメラの位置や方向を決めずに、three.js側（JavaScript側）でカメラの操作を行うのはどうかという提案でした。
+カメラ操作はthree.jsで行い、シェーダはカメラの情報を受取るようにすれば、three.jsの世界とレイマーチングの世界をより統合できます。&lt;/p&gt;
+&lt;p&gt;そこでシェーダに渡すuniformsを、カメラのワールド座標&lt;code&gt;cameraPos&lt;/code&gt;と、カメラの方向&lt;code&gt;cameraDir&lt;/code&gt;に改めました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;uniform vec3 cameraPos;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;uniform vec3 cameraDir;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;three.jsにはカメラの制御を行う &lt;code&gt;Control&lt;/code&gt; クラスが豊富にあります。
+この変更によって、three.jsの &lt;code&gt;Control&lt;/code&gt; クラスを利用したカメラ制御を実現できるようになります。&lt;/p&gt;
+&lt;p&gt;この変更のあとで、&lt;code&gt;FlyControl&lt;/code&gt; による自由カメラモードを実装しました。&lt;/p&gt;
+&lt;p&gt;次がレイを生成するコードです。
+1つ目のコードとほぼ同じですが、 &lt;code&gt;cPos&lt;/code&gt; と &lt;code&gt;cDir&lt;/code&gt; はthree.jsから送られたuniformの値を代入するように変更しました。&lt;/p&gt;
+&lt;p&gt;コード2.1 
+&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// fragment position
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vec2&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;gl_FragCoord&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xy&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;2.0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;resolution&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;min&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;resolution&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;resolution&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// camera and ray
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vec3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cPos&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cameraPos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vec3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cDir&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cameraDir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vec3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cSide&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cross&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cDir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;vec3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vec3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cUp&lt;/span&gt;   &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cross&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cSide&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cDir&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;targetDepth&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vec3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ray&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;normalize&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cSide&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cUp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cDir&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;targetDepth&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;JavaScriptからシェーダにuniformを渡すコードはこんな感じです。&lt;/p&gt;
+&lt;p&gt;コード2.2 
+&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-JavaScript&#34; data-lang=&#34;JavaScript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;material&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;uniforms&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;cameraPos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;value&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;camera&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;getWorldPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;material&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;uniforms&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;cameraDir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;value&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;camera&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;getWorldDirection&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ワールド空間でのカメラの座標と方向を取得するメソッドはthree.jsに定義されています。便利ですね。&lt;/p&gt;
+&lt;p&gt;だだし、この方法にも問題がありました。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;カメラのFOVやY-upの情報をシェーダに送れない&lt;/li&gt;
+&lt;li&gt;毎フレーム実行する処理の中で、Vector3のインスタンスを生成していて、パフォーマンス的に懸念がある&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;camera.getWorldPosition()&lt;/code&gt; と &lt;code&gt;camera.getWorldDirection()&lt;/code&gt; は &lt;code&gt;Vector3&lt;/code&gt; を &lt;code&gt;new&lt;/code&gt; します&lt;/li&gt;
+&lt;li&gt;インスタンスを大量に生成することで、GCの頻度を高めてしまい、瞬間的にレンダリングを止めてしまう等の懸念があります&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;方法3-カメラ行列の逆行列を渡す&#34;&gt;方法3: カメラ行列の逆行列を渡す&lt;/h3&gt;
+&lt;p&gt;ようやく本題です。今回の2つのPR 
+ と 
+ で対応しました。&lt;/p&gt;
+&lt;p&gt;カメラ行列（モデル行列 + プロジェクション行列の逆行列）から、レイの向きを生成するようにしました。&lt;/p&gt;
+&lt;p&gt;シェーダに渡すuniformsは、カメラのモデル行列（ビュー行列の逆行列）&lt;code&gt;cameraWorldMatrix&lt;/code&gt;と、プロジェクション変換行列の逆行列&lt;code&gt;cameraProjectionMatrixInverse&lt;/code&gt;の2つです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;uniform mat4 cameraWorldMatrix;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;uniform mat4 cameraProjectionMatrixInverse;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;カメラ行列を渡すことで、これまでの実装では実現できなかったカメラのY-upとFOVも同期できるようになりました。
+&lt;code&gt;cameraWorldMatrix&lt;/code&gt;にY-upが、&lt;code&gt;cameraProjectionMatrixInverse&lt;/code&gt;にFOVの情報が含まれています。&lt;/p&gt;
+&lt;p&gt;コード3.1では、まずスクリーン座標から正規化デバイス座標系のレイの方向&lt;code&gt;ndcRay&lt;/code&gt;を求め、
+それを行列変換によってワールド座標系のレイの方向&lt;code&gt;ray&lt;/code&gt;に変換しています。&lt;/p&gt;
+&lt;p&gt;コード3.1 
+&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// screen position
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vec2&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;screenPos&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;gl_FragCoord&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xy&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;2.0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;resolution&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;resolution&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// ray direction in normalized device coordinate
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vec4&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ndcRay&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;vec4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;screenPos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// convert ray direction from normalized device coordinate to world coordinate
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vec3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ray&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cameraWorldMatrix&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cameraProjectionMatrixInverse&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ndcRay&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xyz&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ray&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;normalize&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ray&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// camera position
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vec3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cPos&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cameraPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ここで、ワールド座標からクリッピング座標への座標変換について考えます。&lt;/p&gt;
+&lt;p&gt;コード3.2 ワールド座標 =&amp;gt; クリッピング座標 の変換 を行うGLSLのコード&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// ワールド座標 =&amp;gt; 視点系座標 =&amp;gt; クリッピング座標 の変換
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vec4&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;clipPos&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cameraProjectionMatrix&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cameraViewMatrix&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;vec4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;worldPos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;行列Aの逆行列を利用すると、Aの行列による行列変換の逆変換ができます。&lt;/p&gt;
+&lt;p&gt;$V$をビュー行列（&lt;code&gt;cameraViewMatrix&lt;/code&gt;）、$P$をプロジェクション行列（&lt;code&gt;cameraProjectionMatrix&lt;/code&gt;）とすると、
+逆行列の性質から、$PV$（ワールド座標 =&amp;gt; 視点系座標 =&amp;gt; クリッピング座標）の逆変換は、$V^{-1}P^{-1}$となります。&lt;/p&gt;
+$$
+(PV)^{-1} = V^{-1}P^{-1}
+$$&lt;p&gt;つまり、コード3.1では、&lt;code&gt;cameraViewMatrix&lt;/code&gt; と &lt;code&gt;cameraProjectionMatrix&lt;/code&gt; の逆行列である
+$V^{-1}$（&lt;code&gt;cameraWorldMatrix&lt;/code&gt;）と$P^{-1}$（&lt;code&gt;cameraProjectionMatrixInverse&lt;/code&gt;）を乗算することで、逆変換（クリッピング座標 =&amp;gt; ワールド座標への変換）をしていたのですね。&lt;/p&gt;
+&lt;p&gt;補足しますと、ビュー行列(&lt;code&gt;cameraViewMatrix&lt;/code&gt;)とカメラのモデル行列(&lt;code&gt;cameraWorldMatrix&lt;/code&gt;)はお互いに逆行列の関係にあります（
+）。&lt;/p&gt;
+&lt;p&gt;クリッピング座標系を同次座標のwで除算すると、正規化デバイス座標系に変換できます。
+&lt;code&gt;ndcRay.w = 1.0&lt;/code&gt; と定義すると、クリッピング座標系と正規化デバイス座標系が一致するため、
+今回は&lt;code&gt;正規化デバイス座標系 =&amp;gt; クリッピング座標系&lt;/code&gt; の変換は省略できます。&lt;/p&gt;
+&lt;p&gt;JavaScriptからシェーダにuniformを渡すコードはこんな感じです。
+逆行列の計算はJavaScript（CPU）側で事前に行う実装としました。&lt;/p&gt;
+&lt;p&gt;コード3.3 
+&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cameraWorldMatrix: { value: camera.matrixWorld },
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cameraProjectionMatrixInverse: { value: new THREE.Matrix4().getInverse( camera.projectionMatrix ) }
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;カメラの完全な同期ができただけでなく、さらにパフォーマンス的な改善もできました。
+&lt;code&gt;cameraProjectionMatrixInverse&lt;/code&gt;を再計算するタイミングは &lt;code&gt;camera.projectionMatrix&lt;/code&gt; が更新されたときのみです。
+今回の作品ですと、&lt;code&gt;camera.projectionMatrix&lt;/code&gt; が更新されるのは画面のアスペクト比に変化があったときのみです。
+方法3では毎フレーム実行される処理の中で &lt;code&gt;Vector3&lt;/code&gt; のインスタンスを作成してしまう問題が残りましたが、これも解決できました。&lt;/p&gt;
+&lt;h3 id=&#34;方法4-逆行列を用いずにカメラ行列を渡す&#34;&gt;方法4: 逆行列を用いずに、カメラ行列を渡す&lt;/h3&gt;
+&lt;p&gt;方法3ではプロジェクション行列の逆行列を計算していますが、シェーダ内でカメラ行列を分解すれば、この処理すら省けます。&lt;/p&gt;
+&lt;p&gt;次のコードはCEDECの
+で紹介されていたものです。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;カメラ行列の分解&#34; 
+               srcset=&#34;http://localhost:1313/blog/2017/12/11/get-ray-from-camera-matrix/cedec_hu_c88fa17532b1fcf4.webp 320w, http://localhost:1313/blog/2017/12/11/get-ray-from-camera-matrix/cedec_hu_4aee62fb8e2f90bd.webp 480w, http://localhost:1313/blog/2017/12/11/get-ray-from-camera-matrix/cedec_hu_43ce403dcfbcb1fa.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2017/12/11/get-ray-from-camera-matrix/cedec_hu_c88fa17532b1fcf4.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;355&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Y-upとFOV（&lt;code&gt;focal_length&lt;/code&gt;）も同期できています。&lt;/p&gt;
+&lt;p&gt;今思うと、mrdoobは “decompose the camera matrix” という言葉を使っていたので、この方法を意図していたのかもしれません。&lt;/p&gt;
+&lt;p&gt;今回の例ですと、プロジェクション行列が更新が必要なのは画面のアスペクト比が変わった時だけですし、
+シェーダ内の処理はなるべく単純にしたいので、今回であれば方法3で十分かなと感じています。
+まだ実装していないので、実装したら書き味やパフォーマンスを比較したいです。&lt;/p&gt;
+&lt;!--
+## three.jsへのコントリビュートのすゝめ
+
+最後に「three.jsにOSSコントリビュータしたいなぁ」という人へ向けた文章を残しておきます。
+
+### examplesのマージ基準は緩い
+
+three.jsは2017-12-10時点でGitHubのスター数が37377を超える超人気プロジェクトです。
+
+小さな変更だとしても、three.jsのコントリビュータとして名前を刻めるのは嬉しいものです。
+
+three.jsのライブラリ本体に変更を加えるPRのマージ基準はそれなりに高い印象ですが、
+examplesを変更をするPRのマージ基準はかなり緩いように感じました。
+
+2年前のPRは1日、今回のPRのマージはわずか数時間でマージされてビックリしました！
+
+もしあなたが「こういうexamplesがあれば良いのになぁ」と思ったのなら、three.jsのコントリビュータになるチャンスです！
+
+ただし、examplesの数がむやみに増えすぎるのも、three.js初学者への負担を強いるだけなので、
+全く同じようなexampleを追加するのは避けるべきだと個人的には思います。
+
+### PRを作る時の注意点
+
+あまりにも雑なPRを作るのは、作者たちのレビューの負担になってしまいます。
+
+PRを作る前に [How to contribute to three.js](https://github.com/mrdoob/three.js/wiki/How-to-contribute-to-three.js) を熟読しておきましょう。
+
+特に注意すべきポイントはコードフォーマットです。
+[Mr.doob&#39;s Code Style™](https://github.com/mrdoob/three.js/wiki/Mr.doob%27s-Code-Style%E2%84%A2)は空白と改行が多い、かなり癖が強いコードフォーマットです。
+
+[mrdoobapproves](http://zz85.github.io/mrdoobapproves/)というツールを用いれば、Mr.doob&#39;s Code Styleにオートフォーマットできるので、これを利用するのもオススメです。
+
+### コントリビュートして得たもの
+
+three.jsにコントリビュートして良かったことを紹介します。
+
+#### コードの添削
+
+mrdoobにコードをリファクタリングしてもらいました！
+
+- [More improvements to raymarching example.](https://github.com/mrdoob/three.js/commit/0e12847099cbc4f9597496ce7367771430183d7c#diff-fd09ca29c011c0e4ab932acf6021fdb7)
+  - 毎フレーム実行される処理で `camera.lookAt` を使うと `Vector3` のインスタンスが大量に作られるので、代わりに `camera.rotation.set` を利用
+  - 重複した処理の削除
+- [Replaced FlyControls with OrbitControls](https://github.com/mrdoob/three.js/commit/e2f9a78fe49f0e09bd108e733e54989c4e4ea40c#diff-fd09ca29c011c0e4ab932acf6021fdb7)
+  - `FlyControls` がモバイル未対応だったので、モバイルに対応した `OrbitControls` に置き換え
+
+mrdoobだけでなく、WestLangleyさんとIteeさんにもコードを修正してもらいました（[history](https://github.com/mrdoob/three.js/commits/dev/examples/webgl_raymarching_reflect.html)）。
+
+これぞOSSの醍醐味ですね😊
+
+#### mrdoobを囲んだ飲み会
+
+先日、日本に旅行中のmrdoobを囲んだ、three.js界隈の人たちとの飲み会に呼ばれたので、私も参加しました。
+
+私は英語を話せないのですが、上のレイマーチングのexamplesについてmrdoobに話を振ったら、少しは英語でコミュニケーションできました！
+いつかは普通に英語を話せるようになりたい...！
+
+たぶんPRを送っていなければ、mrdoobに認識されず、そもそも飲み会にも呼ばれなかった可能性が高いので、
+2年前に勇気を出してPRを出して良かったと本当に思います！
+
+これは自慢なのですが、MacBook Airにサインしてもらって、ツーショト写真も撮ってもらえました。
+
+&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Photo with &lt;a href=&#34;https://twitter.com/mrdoob?ref_src=twsrc%5Etfw&#34;&gt;@mrdoob&lt;/a&gt; 🤗 &lt;a href=&#34;https://t.co/hIQC6iLbZS&#34;&gt;pic.twitter.com/hIQC6iLbZS&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ😇 (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/938075608197636096?ref_src=twsrc%5Etfw&#34;&gt;2017年12月5日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I am glad to have a signature written by mrdoob on my MacBook! &lt;a href=&#34;https://t.co/phPyU7JUj6&#34;&gt;pic.twitter.com/phPyU7JUj6&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ😇 (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/938077812719624192?ref_src=twsrc%5Etfw&#34;&gt;2017年12月5日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+--&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;レイを生成する方法は様々ですが、three.jsの &lt;code&gt;Control&lt;/code&gt; クラス等の資産を利用し、
+毎フレーム実行される処理を減らしてパフォーマンスを向上させたいのであれば、カメラ行列からレイを生成する方法をオススメします。&lt;/p&gt;
+&lt;!--
+three.jsに限らず、勇気を出してOSSにコントリビュートすると、良いきっかけが生まれるかもしれません。
+OSSにPRを出すときには、GitHubのWikiやドキュメントから開発マニュアル等を熟読しておくと、スムーズにマージしてもらえる可能性が高まります。
+--&gt;
+&lt;h2 id=&#34;おまけ&#34;&gt;おまけ&lt;/h2&gt;
+&lt;p&gt;今回のPRを送った直後に、日本に旅行中のmrdoobを囲んだthree.js界隈の人たちとの飲み会があったので、参加させていただきました。
+参加者のみなさんありがとうございました。&lt;/p&gt;
+&lt;p&gt;英語はとても苦手なのですが、作品やPRについてmrdoobと少しお話しすることができました。サインまでいただけて大満足です🤗
+勇気を出してPRを送って良かったなと思いました。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Photo with &lt;a href=&#34;https://twitter.com/mrdoob?ref_src=twsrc%5Etfw&#34;&gt;@mrdoob&lt;/a&gt; 🤗 &lt;a href=&#34;https://t.co/hIQC6iLbZS&#34;&gt;pic.twitter.com/hIQC6iLbZS&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ😇 (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/938075608197636096?ref_src=twsrc%5Etfw&#34;&gt;2017年12月5日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I am glad to have a signature written by mrdoob on my MacBook! &lt;a href=&#34;https://t.co/phPyU7JUj6&#34;&gt;pic.twitter.com/phPyU7JUj6&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ😇 (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/938077812719624192?ref_src=twsrc%5Etfw&#34;&gt;2017年12月5日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;hr&gt;
+&lt;p&gt;明日は 
+ さんの記事です。それでは！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>C88のTechBooster本にthree.js(WebGL)の入門記事を書きました</title>
+      <link>http://localhost:1313/blog/2015/08/18/c88-techbooster/</link>
+      <pubDate>Tue, 18 Aug 2015 09:08:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2015/08/18/c88-techbooster/</guid>
+      <description>&lt;p&gt;先日の夏コミ C88 に TechBooster というサークルとして参加しました。
+これによって、コミケ初参加がサークル参加という実績を得ました。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;JavaScriptoon&#34; 
+               srcset=&#34;http://localhost:1313/blog/2015/08/18/c88-techbooster/2015-08-18-c88-techbooster-javascriptoon_hu_7bf6f84bb7db9551.webp 320w, http://localhost:1313/blog/2015/08/18/c88-techbooster/2015-08-18-c88-techbooster-javascriptoon_hu_b6b9da87d24b8183.webp 480w, http://localhost:1313/blog/2015/08/18/c88-techbooster/2015-08-18-c88-techbooster-javascriptoon_hu_f5da3c895f776e8f.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2015/08/18/c88-techbooster/2015-08-18-c88-techbooster-javascriptoon_hu_7bf6f84bb7db9551.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;534&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;私はJavaScriptoon という本の three.js(WebGL)の記事を書きました。
+タイトルは「three.js でお手軽 3DCG 入門」です。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;去年の卒業研究で ブラウザ上で動作する ペーパークラフト用の CAD のようなものを
+three.js を使って開発していたので、その知識を集約させました。&lt;/p&gt;
+&lt;p&gt;内容的にはthree.jsのサンプルコードを実際に動かしながら、
+3DCGが未経験の方でも分かるように基礎から解説するような感じになっております。&lt;/p&gt;
+&lt;p&gt;ちなみに、配置は8/16(3日目) 東地区A-39aでした。
+コミケは初参加で知らなかったのですが、技術書で壁サークルというのはとても珍しいそうですね。&lt;/p&gt;
+&lt;p&gt;
+もしていますので、
+ぜひよろしくおねがいします。(予想以上の注文により現在は売り切れの模様)&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

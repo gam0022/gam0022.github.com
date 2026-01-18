@@ -1,0 +1,868 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SESSIONS | gam0022.net</title>
+    <link>http://localhost:1313/tags/sessions/</link>
+      <atom:link href="http://localhost:1313/tags/sessions/index.xml" rel="self" type="application/rss+xml" />
+    <description>SESSIONS</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 11 Dec 2024 23:30:00 +0900</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
+      <title>SESSIONS</title>
+      <link>http://localhost:1313/tags/sessions/</link>
+    </image>
+    
+    <item>
+      <title>SESSIONS 2024参加記録（セミナー登壇・ShaderJam解説・Realtime Graphics）</title>
+      <link>http://localhost:1313/blog/2024/12/11/sessions2024-summary/</link>
+      <pubDate>Wed, 11 Dec 2024 23:30:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2024/12/11/sessions2024-summary/</guid>
+      <description>&lt;p&gt;これは
+の11日目の記事です。&lt;/p&gt;
+&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
+&lt;p&gt;2024年11月16日～17日に日本科学未来館で開催された
+に参加しました。&lt;/p&gt;
+&lt;p&gt;今回のSESSIONSでは3つのプログラムに携わったので、それぞれ簡単に説明します。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Realtime Graphicsコンペティションに作品提出&lt;/li&gt;
+&lt;li&gt;セミナー登壇&lt;/li&gt;
+&lt;li&gt;Shader Jamの解説&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;なお、SESSIONSの様子は
+でアーカイブされています。&lt;/p&gt;
+&lt;h2 id=&#34;realtime-graphicsコンペティションに作品提出&#34;&gt;Realtime Graphicsコンペティションに作品提出&lt;/h2&gt;
+&lt;p&gt;2日目のRealtime Graphicsコンペティションに『GUARDI▲N』という「特撮」をコンセプトにしたBrowser Demoを投稿して3位をいただきました。&lt;/p&gt;
+&lt;p&gt;2名のチーム制作を行い、映像とストーリーは私（gam0022）が担当し、音楽はHADHADさんが担当しました。&lt;/p&gt;
+&lt;p&gt;詳細については、以下の記事をご覧ください。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&amp;quot;GUARDI▲N&amp;quot; by &lt;a href=&#34;https://twitter.com/gam0022?ref_src=twsrc%5Etfw&#34;&gt;@gam0022&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://twitter.com/katai5plate?ref_src=twsrc%5Etfw&#34;&gt;@katai5plate&lt;/a&gt;&lt;br&gt;&lt;br&gt;3rd Place in Realtime Graphics Competition at &lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; 2024&lt;a href=&#34;https://twitter.com/SESSIONS_Party?ref_src=twsrc%5Etfw&#34;&gt;@SESSIONS_Party&lt;/a&gt; 2024のリアルタイムGraphicsコンポで3位に入賞しました！&lt;br&gt;&lt;br&gt;映像は自作のWebGLエンジンによる24KB制限です。&lt;br&gt;&lt;br&gt;「特撮」をコンセプトにしました。 &lt;a href=&#34;https://t.co/wDVVRXWX26&#34;&gt;pic.twitter.com/wDVVRXWX26&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1858308509856678328?ref_src=twsrc%5Etfw&#34;&gt;November 18, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h2 id=&#34;セミナー登壇レイマーチングの距離関数を極める&#34;&gt;セミナー登壇「レイマーチングの距離関数を極める！」&lt;/h2&gt;
+&lt;p&gt;2日目の朝に「レイマーチングの距離関数を極める！」というセミナーで発表しました。&lt;/p&gt;
+&lt;p&gt;レイマーチングの距離関数のモデリングにおいてハマりがちな罠だったり、あまり知られていなそうなテクニックや小ネタをTwitter（X）で募集し、それらを簡単に解説しました。&lt;/p&gt;
+&lt;p&gt;ネタを提供していただいたみなさん（敬称略: @c5h12 @Kinakomoti2357 @Appletea_VRC @suzuki_ith @butadiene121 @shr_id @kamoshika_vrc）、本当にありがとうございました！&lt;/p&gt;
+&lt;p&gt;距離関数では平行移動や回転のために座標を逆操作する必要があるため、混乱しやすいと思うのですが、距離関数によるモデリングにおいては、 &lt;strong&gt;「オブジェクトそのものではなく、空間の方を操作している」&lt;/strong&gt; という基本を思い出すことが重要ということが、この発表で一番伝えたい点でした。&lt;/p&gt;
+&lt;p&gt;さまざまな話題が出てきましたが、空間を操作しているという基本に立ち返ると、多くの問題の解決の糸口となることが多いと感じています。&lt;/p&gt;
+&lt;p&gt;このセミナーを通じて、参加者の皆さんに少しでも役立つ情報を提供できたなら幸いです。&lt;/p&gt;
+&lt;div class=&#34;google-slide-wrap&#34;&gt;
+&lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vSdXEePaddAxc0hAOjyF3PlfQAXs2NAHn4LOQpQNT8MHLlr2G4Xd-8vDTSqNlT6lVPAM0QGN4rX9bro/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;1440&#34; height=&#34;839&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;動画のアーカイブはこちらです。&lt;/p&gt;
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/UaWxTNwFSBc?si=m6q0CkZebzxocH3N&amp;amp;start=55&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34;  referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreenn&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;セミナー3: 「レイマーチングの距離関数を極める！」の発表資料です！&lt;br&gt;&lt;br&gt;Googleスライド版&lt;a href=&#34;https://t.co/PTyaGZR9kS&#34;&gt;https://t.co/PTyaGZR9kS&lt;/a&gt;&lt;br&gt;&lt;br&gt;Speaker Deck版&lt;a href=&#34;https://t.co/RBhgstXSiD&#34;&gt;https://t.co/RBhgstXSiD&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1858007444896756222?ref_src=twsrc%5Etfw&#34;&gt;November 17, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;shader-jamの解説&#34;&gt;Shader Jamの解説&lt;/h2&gt;
+&lt;p&gt;1日目のShader Jamというイベントの解説とオペレーションの一部を行いました。&lt;/p&gt;
+&lt;p&gt;Shader Jamは大人数でGLSLのシェーダーを書き、1時間ほどの時間でリアルタイムに作品を作っていくイベントです。&lt;/p&gt;
+&lt;p&gt;たくさんのシェーダー作品がリアルタイムに実装され、作り上げられていく様子はまさに圧巻でした。&lt;/p&gt;
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/QfQglocVFTk?si=zbYZrc5mebwt_aIc&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;今回SESSIONSのShader Jamでは国内外から合計13人のGLSLコーダーが参加しました！&lt;/p&gt;
+&lt;p&gt;13人分の初見のシェーダーを瞬時に理解しながらリアルタイムに解説するのは自分にとってはかなり大変でしたが、少しでも来場者の理解の助けになっていたら幸いです。&lt;/p&gt;
+&lt;p&gt;頑張ればもう少し上手に解説できた気もするという反省もありますが、今後もっと経験を積んで、より上手に解説できることを目標にしたいです。&lt;/p&gt;
+&lt;p&gt;どのシェーダーもユニークで素晴らしかったのですが、個人的に印象的だったのはRenardさんのComputeShaderを使ったパーティクルの作品、Kinakomotiさんのパストレーシングの作品、そしてKamoshikaさんのLog-polar Mappingの作品です。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/glsl?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#glsl&lt;/a&gt;&lt;br&gt;Shader Jamで書いたやつ&lt;br&gt;evvvvil,wrighter先生達のコードを見ただけの付け焼刃compute shaderだったけど可能性を感じた &lt;a href=&#34;https://t.co/W2UQViP6bo&#34;&gt;pic.twitter.com/W2UQViP6bo&lt;/a&gt;&lt;/p&gt;&amp;mdash; Renard (@Renard_VRC) &lt;a href=&#34;https://twitter.com/Renard_VRC/status/1857810156131856566?ref_src=twsrc%5Etfw&#34;&gt;November 16, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; &lt;br&gt;Sessionsでshaderjamをやらせて頂きました&lt;br&gt;壁紙製造機(?)shaderです &lt;a href=&#34;https://t.co/ZcA1kcJ7W7&#34;&gt;pic.twitter.com/ZcA1kcJ7W7&lt;/a&gt;&lt;/p&gt;&amp;mdash; kiNaNkomoti (@Kinakomoti2357) &lt;a href=&#34;https://twitter.com/Kinakomoti2357/status/1858192661192245529?ref_src=twsrc%5Etfw&#34;&gt;November 17, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Shader Jamで書いたやつです！&lt;br&gt;歪んだリングを組み合わせた物体をレイマーチングで描画しました。&lt;a href=&#34;https://t.co/zqqXrZLe4m&#34;&gt;https://t.co/zqqXrZLe4m&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GLSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt;&lt;br&gt;&lt;br&gt;(Shader Jamの音は Niko_14さん &lt;a href=&#34;https://twitter.com/himazin917?ref_src=twsrc%5Etfw&#34;&gt;@himazin917&lt;/a&gt; が作ってくださいました！) &lt;a href=&#34;https://t.co/S28qM1Jpgs&#34;&gt;pic.twitter.com/S28qM1Jpgs&lt;/a&gt;&lt;/p&gt;&amp;mdash; Kamoshika (@kamoshika_vrc) &lt;a href=&#34;https://twitter.com/kamoshika_vrc/status/1858848861164630386?ref_src=twsrc%5Etfw&#34;&gt;November 19, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;Shader JamのすべてのGLSLシェーダーはtotetmattさんによってアーカイブされているので、興味があればぜひご覧ください。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;SESSIONS 2024は本当に素晴らしいイベントでした。&lt;/p&gt;
+&lt;p&gt;セミナーの発表やShader Jamの解説など、新たな形でイベントに貢献できたことは貴重な経験となりました。&lt;/p&gt;
+&lt;p&gt;会場の雰囲気や臨場感を直接肌で感じることができ、オフラインイベントの特別な魅力を再認識することができました。&lt;/p&gt;
+&lt;p&gt;参加者との交流を通じて、作品に対する感想やアイデアの交換を行い、新たな視点やインスピレーションを得ることができました。また、会場の音響や再生環境が例年より大幅に改善されていた点も非常に良かったです。&lt;/p&gt;
+&lt;p&gt;さらに、今年から刷新された応募カテゴリーにより、ProcessingやジェネVJなど多様な分野の参加者が集まり、例年以上の盛り上がりを感じることができました。&lt;/p&gt;
+&lt;p&gt;SESSIONS 2024の運営や準備をしてくださったオーガナイザーの皆さん、そして参加者の皆さん、本当にありがとうございました。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SESSIONS 2024のRealtime Graphicsコンペティションで3位入賞しました（グラフィックス解説）</title>
+      <link>http://localhost:1313/blog/2024/12/02/sessions2024-guardian/</link>
+      <pubDate>Mon, 02 Dec 2024 22:00:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2024/12/02/sessions2024-guardian/</guid>
+      <description>&lt;p&gt;これは
+の2日目の記事です。&lt;/p&gt;
+&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
+&lt;p&gt;2024年11月16日～17日に日本科学未来館で開催された
+に参加し、Realtime Graphicsコンペティションで3位をいただきました！&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;SESSIONS 2024では、Realtime Graphicsコンペティションに作品を提出した他、セミナーとShader Jamの解説を行わせていただきました。&lt;/p&gt;
+&lt;p&gt;セミナーとShader Jamについてはこちらの記事で紹介しました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;この記事では、Realtime Graphicsコンペティションの提出作品である『GUARDI▲N』のグラフィックス（主に距離関数によるモデリング）について解説をします。&lt;/p&gt;
+&lt;h2 id=&#34;guardinについて&#34;&gt;GUARDI▲Nについて&lt;/h2&gt;
+&lt;p&gt;『GUARDI▲N』は「特撮」をコンセプトのデモ作品（Browser Demo）です。&lt;/p&gt;
+&lt;p&gt;2人でチーム制作を行い、映像とストーリーは私（gam0022）が担当し、音楽はHADHADさんが担当しました。&lt;/p&gt;
+&lt;p&gt;当初のアイデアは「天使vs悪魔」の映画的なストーリーを持つデモを作りたいというものでしたが、最終的には「特撮」の要素に振り切ることにしました。ガーディアンが天使のリングを持つのは初期設定の名残りです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/T-V3mHlsgzQ?si=1-AUgqum39BhrvsZ&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&amp;quot;GUARDI▲N&amp;quot; by &lt;a href=&#34;https://twitter.com/gam0022?ref_src=twsrc%5Etfw&#34;&gt;@gam0022&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://twitter.com/katai5plate?ref_src=twsrc%5Etfw&#34;&gt;@katai5plate&lt;/a&gt;&lt;br&gt;&lt;br&gt;3rd Place in Realtime Graphics Competition at &lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; 2024&lt;a href=&#34;https://twitter.com/SESSIONS_Party?ref_src=twsrc%5Etfw&#34;&gt;@SESSIONS_Party&lt;/a&gt; 2024のリアルタイムGraphicsコンポで3位に入賞しました！&lt;br&gt;&lt;br&gt;映像は自作のWebGLエンジンによる24KB制限です。&lt;br&gt;&lt;br&gt;「特撮」をコンセプトにしました。 &lt;a href=&#34;https://t.co/wDVVRXWX26&#34;&gt;pic.twitter.com/wDVVRXWX26&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1858308509856678328?ref_src=twsrc%5Etfw&#34;&gt;November 18, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Realtime Graphics Competitionで3位🥉をいただきました！ありがとうございます！&lt;br&gt;&lt;br&gt; &lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; &lt;a href=&#34;https://t.co/jhPsIPW867&#34;&gt;pic.twitter.com/jhPsIPW867&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1858103266183442445?ref_src=twsrc%5Etfw&#34;&gt;November 17, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h2 id=&#34;制作環境&#34;&gt;制作環境&lt;/h2&gt;
+&lt;p&gt;『GUARDI▲N』は自作のWebGLエンジンによるデモです。&lt;/p&gt;
+&lt;p&gt;音声のみ外部ファイル（mp3ファイル）で、映像は24KBのHTMLファイルで構成されています。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;Revision 2020用に開発した「Chromatiq」という名前のシンプルなWebGLエンジンを再利用しました。&lt;/p&gt;
+&lt;p&gt;「Chromatiq」はShadertoyのようなFullScreenQuadにマルチパスな描画ができるとてもシンプルなWebGLエンジンです。&lt;/p&gt;
+&lt;p&gt;イメージとしてはGLSLエディターを排除したスタンドアローンなShadertoyが近いかもしれません。&lt;/p&gt;
+&lt;p&gt;「Chromatiq」の詳細については以下の記事で説明しています。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;4年前からの変更点として、
+から
+に乗り換えました。&lt;/p&gt;
+&lt;p&gt;Tweakpaneの方がスライダーが圧倒的に使い勝手が良く、小数点以下の細かい数字も調整できるため、制作効率が改善しました。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;Tweakpaneは
+で知りました。個人的には超オススメです！&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/normalizeFM?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#normalizeFM&lt;/a&gt; で知ったけど良さそう。&lt;a href=&#34;https://t.co/D5A4eFNZjU&#34;&gt;https://t.co/D5A4eFNZjU&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1751515480735785026?ref_src=twsrc%5Etfw&#34;&gt;January 28, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h2 id=&#34;ビルや街の距離関数&#34;&gt;ビルや街の距離関数&lt;/h2&gt;
+&lt;p&gt;ビルや街の地形の距離関数はMandelboxをベースにしています。&lt;/p&gt;
+&lt;h3 id=&#34;完成カット&#34;&gt;完成カット&lt;/h3&gt;
+&lt;p&gt;当初のコンセプトは「天使vs悪魔」でしたので、空に浮遊する巨大な空中都市をイメージしながらモデリングを行いました。&lt;/p&gt;
+&lt;p&gt;しかし、途中から「特撮」に方向転換したため、天界という設定を残しつつも、「特撮」に合うような現代的なビルのジオメトリーとマテリアルに調整しました。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;unityでの下書き&#34;&gt;Unityでの下書き&lt;/h3&gt;
+&lt;p&gt;ビルのような突起のついたMandelboxをベースに、Unityを使ってパラメーターを調整しながら街の形状に仕上げました。&lt;/p&gt;
+&lt;p&gt;球体でMandelboxの上部を切り取ることで、完成カットの街のような形状にしています。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;制作途中の様子&#34;&gt;制作途中の様子&lt;/h3&gt;
+&lt;p&gt;制作途中の様子です。最初は中東風のジオメトリーでした。途中で鉄と錆を使ったスチームパンク風のマテリアルも試していました。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;マテリアルについても鉄と錆によるスチームパンクのような渋い方向性も試していました。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;ガーディアンの距離関数&#34;&gt;ガーディアンの距離関数&lt;/h2&gt;
+&lt;p&gt;ガーディアンの距離関数はIFS（Iterated Function System）による折りたたみを使用しています。&lt;/p&gt;
+&lt;p&gt;forループ内で空間を適当に回転や並行移動させ、最後にBoxの距離関数を評価しています。&lt;/p&gt;
+&lt;p&gt;このアプローチは『Transcendental Cube』と完全に同じですので、IFSに興味がある方は以下の記事もご覧ください。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;UnityでIFSのパラメーターを調整しながらガーディアンのイメージに近づけていきました。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;制作の最初期には金色と黒色の百式風カラーリングも試しましたが、最終的には白と金色のカラーリングに決定しました。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;モデリングについては、最初期の案がそのまま最終版となりました。&lt;/p&gt;
+&lt;p&gt;最終版には、天使の要素として天使のリングを追加しました。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;戦闘機の距離関数&#34;&gt;戦闘機の距離関数&lt;/h2&gt;
+&lt;p&gt;作品の中盤で怪獣に全滅させられてしまう戦闘機もIFSによる折りたたみを使用しています&lt;/p&gt;
+&lt;p&gt;同じ天界の陣営であるため、雰囲気を統一するために戦闘機とガーディアンに同じIFSのアプローチを採用しました。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;video playsinline=&#34;&#34; loop=&#34;&#34; muted=&#34;&#34; controls=&#34;&#34; autoplay=&#34;&#34; width=&#34;100%&#34; src=&#34;fighter-movie-1.mp4&#34; poster=&#34;fighter-movie-1.jpg&#34;&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;h2 id=&#34;怪獣の距離関数&#34;&gt;怪獣の距離関数&lt;/h2&gt;
+&lt;p&gt;怪獣（ボス）もIFSを使用しています。&lt;/p&gt;
+&lt;p&gt;元の距離関数はガーディアンと同様にBoxですが、Smooth Unionを使って角を丸め、生物の有機的なイメージに近づけました。&lt;/p&gt;
+&lt;p&gt;こちらもUnityでIFSのパラメーターを調整し、怪獣のイメージに仕上げました。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;初期案では目玉がありませんでした。&lt;/p&gt;
+&lt;p&gt;&lt;video playsinline=&#34;&#34; loop=&#34;&#34; muted=&#34;&#34; controls=&#34;&#34; autoplay=&#34;&#34; width=&#34;100%&#34; src=&#34;boss-prototype-1.mp4&#34; poster=&#34;boss-prototype-1.jpg&#34;&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;p&gt;ボスがレーザーで破壊されるアニメーションは、IFSの平行移動のパラメーターで実現しました。&lt;/p&gt;
+&lt;p&gt;&lt;video playsinline=&#34;&#34; loop=&#34;&#34; muted=&#34;&#34; controls=&#34;&#34; autoplay=&#34;&#34; width=&#34;100%&#34; src=&#34;boss-death-1.mp4&#34; poster=&#34;boss-death-1.jpg&#34;&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;h2 id=&#34;距離関数によるモデリングまとめ&#34;&gt;距離関数によるモデリングまとめ&lt;/h2&gt;
+&lt;p&gt;Mandelboxから生み出したビルや街については、個人的にはかなり自信作です。今回のデモで終わらせるのはもったいないので、何か別の作品でもぜひ活用してみたいと考えています。&lt;/p&gt;
+&lt;p&gt;ガーディアン、戦闘機、怪獣の3要素にはいずれもIFS（Iterated Function System）を使用しました。&lt;/p&gt;
+&lt;p&gt;怪獣はよくあるIFS感が強すぎたので、可能ならもうひと工夫が必要だったかもしれません。&lt;/p&gt;
+&lt;p&gt;ここ数年でIFSを多用しているため、次回作では別のアプローチも検討したいと思います。一方で、IFSにはまだ未開拓の可能性があると感じています。&lt;/p&gt;
+&lt;h2 id=&#34;振り返り&#34;&gt;振り返り&lt;/h2&gt;
+&lt;p&gt;かなり短期間の制作スケジュールでしたが、最終的にはなんとか形になったので良かったと思います。&lt;/p&gt;
+&lt;p&gt;10月の前半は
+などで忙しく、SESSIONSへの着手が遅れてしまいました。&lt;/p&gt;
+&lt;p&gt;今回は映像に登場する要素の距離関数によるモデリングを完全に固めてから、最後にカメラワークと演出をつけるという制作フローで映像を制作しました。なんとか最終的には形になりましたが、仕上げの工程の時間がほとんど無くなってしまったのは反省点です。&lt;/p&gt;
+&lt;p&gt;これまでの作品も多少ストーリー性はありましたが、アブストラクトなモデリングが多かったため、特撮という非アブストラクトなテーマで映像を作るのにはかなり苦労しました。『Transcendental Cube』では通常のカメラワークを乱数で生成していましたが、今回はカットごとにカメラワークを調整する必要があったため、過去作品と比べると工数が大幅に増えました。&lt;/p&gt;
+&lt;p&gt;Code Graphics（GLSL Graphics）Compoのように映像を1パスで作成したため（※ポストエフェクトや半透明は別パスにしました）、GLSLが巨大化し、コンパイル時間の増加でイテレーション効率が低下したのも課題でした。&lt;/p&gt;
+&lt;p&gt;ストーリー性のある複雑な作品を作る場合には、3D空間上にオブジェクトを配置し、オブジェクトスペースのレイマーチングを行えるような仕組みを構築するべきだと改めて感じました。&lt;/p&gt;
+&lt;p&gt;今回は音楽が間に合わなかった場合、Code Graphicsで提出する可能性もあったため、1パスで進めることにしました。&lt;/p&gt;
+&lt;p&gt;音楽担当のHADHADさんへの相談も締切直前になってしまいましたが、特撮感のある力強い曲を短期間で作っていただき、とても感謝しています。ありがとうございました🙏&lt;/p&gt;
+&lt;h2 id=&#34;おわりに&#34;&gt;おわりに&lt;/h2&gt;
+&lt;p&gt;SESSIONS 2024は最高のイベントでした！&lt;/p&gt;
+&lt;p&gt;会場の雰囲気や臨場感を肌で直接感じることができ、やはりオフラインイベントには特別な魅力があると再認識できました。&lt;/p&gt;
+&lt;p&gt;実際に参加者と話をしたり、作品についての感想やアイデアを交換したりすることで、新たな視点やインスピレーションを得ることができました。&lt;/p&gt;
+&lt;p&gt;また、会場の音響や再生環境が例年より大幅に改善されていた点も非常に良かったです。&lt;/p&gt;
+&lt;p&gt;今年から刷新された応募カテゴリーにより、ProcessingやジェネVJ界隈の人々も参加し、例年以上の盛り上がりを感じました。&lt;/p&gt;
+&lt;p&gt;SESSIONS 2024の運営や準備をしてくださったオーガナイザーの皆さん、そして参加者の皆さん、本当にありがとうございました！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>新千歳空港国際アニメーション映画祭のNEW CHITOSE 30 Seconds部門に『Transcendental Cube』が入選しました</title>
+      <link>http://localhost:1313/blog/2024/10/21/airport-anifes2024-nc30s/</link>
+      <pubDate>Mon, 21 Oct 2024 13:10:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2024/10/21/airport-anifes2024-nc30s/</guid>
+      <description>&lt;p&gt;私（
+）と 
+ さんが共同で制作した作品『Transcendental Cube』が、新千歳空港国際アニメーション映画祭のNEW CHITOSE 30 Seconds部門に入選しました！&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;全172作品の応募の中から、入選の8作品に選ばれました🎉&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;新千歳空港館内各所のデジタルサイネージで、一ヶ月間（2024年10月5日～11月5日）放映される予定です。&lt;/p&gt;
+&lt;p&gt;もし新千歳空港にお立ち寄りの際には、ぜひご覧ください！映画祭の会期中（11/1～11/5）には私も足を運ぶ予定です。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;新千歳空港国際アニメーション映画祭のNEW CHITOSE 30 Seconds部門に『Transcendental Cube』が入選しました！&lt;a href=&#34;https://twitter.com/sadakkey?ref_src=twsrc%5Etfw&#34;&gt;@sadakkey&lt;/a&gt; さんとの共同制作の作品です。&lt;br&gt;&lt;br&gt;新千歳空港のデジタルサイネージで放映されるそうなので、とても楽しみです！&lt;a href=&#34;https://t.co/4wiMpNdFhY&#34;&gt;https://t.co/4wiMpNdFhY&lt;/a&gt; &lt;a href=&#34;https://t.co/YgJ7QOpIMl&#34;&gt;https://t.co/YgJ7QOpIMl&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1839702676503990629?ref_src=twsrc%5Etfw&#34;&gt;September 27, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;さらに、映画祭の公式のTwitterで私たちの作品を取り上げていただきました！ありがとうございます！&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;30Seconds部門入選作品も毎日放映されてます！✨写真はちょうど良きタイミング。 &lt;a href=&#34;https://t.co/WhSzj5wq41&#34;&gt;https://t.co/WhSzj5wq41&lt;/a&gt;&lt;/p&gt;&amp;mdash; 新千歳空港国際アニメーション映画祭 (@airportanifes) &lt;a href=&#34;https://twitter.com/airportanifes/status/1847816206050611258?ref_src=twsrc%5Etfw&#34;&gt;October 20, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;10/31～1/7に北海道に滞在し、映画祭にも全日程参加しました。そのときに撮影した動画です。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;自分の書いたシェーダーが国際空港で大画面上映される人生は予想できなかった✈️&lt;br&gt;&lt;br&gt;人生は面白い！&lt;a href=&#34;https://twitter.com/hashtag/newchitose2024?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#newchitose2024&lt;/a&gt; &lt;a href=&#34;https://t.co/IhR12znket&#34;&gt;pic.twitter.com/IhR12znket&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1852615568999776340?ref_src=twsrc%5Etfw&#34;&gt;November 2, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h3 id=&#34;正方形でレンダリングしたtranscendental-cube&#34;&gt;正方形でレンダリングした『Transcendental Cube』&lt;/h3&gt;
+&lt;h4 id=&#34;full尺&#34;&gt;Full尺&lt;/h4&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;560&#34; src=&#34;https://www.youtube.com/embed/k5c7hZN_ZWg?si=Ddh8V4YbsgrbTwCp&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;h4 id=&#34;30秒版&#34;&gt;30秒版&lt;/h4&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;560&#34; src=&#34;https://www.youtube.com/embed/dJ9D-YMZDmA?si=NhVeLEz6bkEFs5sP&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;h3 id=&#34;関連記事&#34;&gt;関連記事&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>『WebGL 総本山 &#43; normalize.fm あわせて１３周年感謝祭』でGLSLライブコーディングしました</title>
+      <link>http://localhost:1313/blog/2024/10/21/livecoding-sn13/</link>
+      <pubDate>Mon, 21 Oct 2024 13:00:20 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2024/10/21/livecoding-sn13/</guid>
+      <description>&lt;p&gt;
+の夜の部のShader JamsでGLSLのシェーダーライブコーディングしました。&lt;/p&gt;
+&lt;p&gt;#normalizeFM のロゴの形状だけを使って4つのシーンを作りました。&lt;/p&gt;
+&lt;p&gt;音楽も 
+ さんによるSonic Piのライブコーディングです。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;「WebGL 総本山 + &lt;a href=&#34;https://twitter.com/normalizefm?ref_src=twsrc%5Etfw&#34;&gt;@normalizefm&lt;/a&gt; あわせて１３周年感謝祭」夜の部 Shader Jamsでライブコーディングした作品です！&lt;a href=&#34;https://twitter.com/hashtag/normalizeFM?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#normalizeFM&lt;/a&gt; のロゴの形状だけを使って4つのシーンを作りました！&lt;br&gt;&lt;br&gt;音楽も &lt;a href=&#34;https://twitter.com/himazin917?ref_src=twsrc%5Etfw&#34;&gt;@himazin917&lt;/a&gt; さんによるSonic Piのライブコーディングです！&lt;br&gt;&lt;br&gt;Shadertoy版: &lt;a href=&#34;https://t.co/G2HaBci6pR&#34;&gt;https://t.co/G2HaBci6pR&lt;/a&gt; &lt;a href=&#34;https://t.co/lLPuzrVNQx&#34;&gt;pic.twitter.com/lLPuzrVNQx&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1840262849983328528?ref_src=twsrc%5Etfw&#34;&gt;September 29, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;5人のメンバーによる音と映像のライブコーディングを行い、その一人として参加しました。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;こちら、夜の部のShader Jamsのセットアップをお手伝いしております。&lt;br&gt;&lt;br&gt;Renard &lt;a href=&#34;https://twitter.com/Renard_VRC?ref_src=twsrc%5Etfw&#34;&gt;@Renard_VRC&lt;/a&gt;&lt;br&gt;gam0022 &lt;a href=&#34;https://twitter.com/gam0022?ref_src=twsrc%5Etfw&#34;&gt;@gam0022&lt;/a&gt;&lt;br&gt;kamoshika &lt;a href=&#34;https://twitter.com/kamoshika_vrc?ref_src=twsrc%5Etfw&#34;&gt;@kamoshika_vrc&lt;/a&gt;&lt;br&gt;Niko_14 &lt;a href=&#34;https://twitter.com/himazin917?ref_src=twsrc%5Etfw&#34;&gt;@himazin917&lt;/a&gt;&lt;br&gt;&lt;br&gt;と、doxasユニバースに纏わる豪華なコーダーでセットアップしておりますので、ぜひご来場ください〜〜。 &lt;a href=&#34;https://t.co/VoUodSNfCr&#34;&gt;https://t.co/VoUodSNfCr&lt;/a&gt;&lt;/p&gt;&amp;mdash; 0b5vr (@0b5vr) &lt;a href=&#34;https://twitter.com/0b5vr/status/1825887074001830213?ref_src=twsrc%5Etfw&#34;&gt;August 20, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h3 id=&#34;当日の会場の様子&#34;&gt;当日の会場の様子&lt;/h3&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;zxx&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://t.co/WPfdY3XFzQ&#34;&gt;pic.twitter.com/WPfdY3XFzQ&lt;/a&gt;&lt;/p&gt;&amp;mdash; kiNaNkomoti (@Kinakomoti2357) &lt;a href=&#34;https://twitter.com/Kinakomoti2357/status/1839989373326307782?ref_src=twsrc%5Etfw&#34;&gt;September 28, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;zxx&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://t.co/NO3pktKtGD&#34;&gt;pic.twitter.com/NO3pktKtGD&lt;/a&gt;&lt;/p&gt;&amp;mdash; Renard (@Renard_VRC) &lt;a href=&#34;https://twitter.com/Renard_VRC/status/1840061611895337291?ref_src=twsrc%5Etfw&#34;&gt;September 28, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h3 id=&#34;さいごに&#34;&gt;さいごに&lt;/h3&gt;
+&lt;p&gt;normalize.fmは初回から全話聞いているくらい熱烈なファンだったので、ライブコーディングのお誘いをいただき、大変光栄でした！とても楽しかったです！&lt;/p&gt;
+&lt;p&gt;イベントにご参加いただいた方々、ありがとうございました！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>映画館でGLSLライブコーディングをしました（第10回新千歳空港国際アニメーション映画祭）</title>
+      <link>http://localhost:1313/blog/2023/11/20/livecoding-airport-animefes2023/</link>
+      <pubDate>Mon, 20 Nov 2023 10:50:40 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2023/11/20/livecoding-airport-animefes2023/</guid>
+      <description>&lt;h2 id=&#34;更新履歴&#34;&gt;更新履歴&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;2023-12-29 YouTube動画を埋め込みました&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
+&lt;p&gt;11月2日～11月6日に開催された
+でデモシーンの上映とGLSLのシェーダーライブコーディングをしました。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;GLSLライブコーディング@第10回新千歳空港国際アニメーション映画祭&#34; 
+               srcset=&#34;http://localhost:1313/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0197.MP4_snapshot_17.56.475_hu_dc7dc8260b85037a.webp 320w, http://localhost:1313/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0197.MP4_snapshot_17.56.475_hu_8f27c39df6bc14b9.webp 480w, http://localhost:1313/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0197.MP4_snapshot_17.56.475_hu_57fb85f1025d1d6e.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0197.MP4_snapshot_17.56.475_hu_dc7dc8260b85037a.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;今回のアニメーション映画祭では、
+として2つのプログラムを行いました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;1つ目のプログラムでは、
+さんがデモシーンが生まれた歴史であったり、テクニカルクリエーションやそのイベントであるSESSIONSの説明を行いました。
+デモシーンの歴史について網羅されている資料は少なく、とても貴重な発表だと感じました。&lt;/p&gt;
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/1hOYpema_fg?si=UlFrrGRWBY1NzOod&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;2つ目のプログラムでは、前半は@FL1NEさんが司会を務めながら映画館で国内外のデモシーンの上映を行い、後半は私と
+さんの2人でGLSLのシェーダーライブコーディングを行いました。
+映画館という超大画面＋最高の音響でのライブコーディングは本当に楽しかったです！！
+音楽も
+さんのSonic Piによるライブコーディングの演奏でした。&lt;/p&gt;
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/B_Yst6SSVn0?si=Hzpq6Lqb6ulePhmy&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;デモシーン上映&#34;&gt;デモシーン上映&lt;/h2&gt;
+&lt;p&gt;国内外のデモシーン9作品を上映しました。&lt;/p&gt;
+&lt;p&gt;PCデモから64K Introや4K Introまで幅広くセレクトしました。
+動画の再生ではなく、その場でのexeファイルの実行によるリアルタイムの本当のデモシーンの上映を行いました。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;映画館で上映されたWORMHOLE&#34; 
+               srcset=&#34;http://localhost:1313/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_13.14.026_hu_53d3e61dbe492eb3.webp 320w, http://localhost:1313/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_13.14.026_hu_3e1c66a364a8d77b.webp 480w, http://localhost:1313/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_13.14.026_hu_653036949b076fd4.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_13.14.026_hu_53d3e61dbe492eb3.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;私と
+さんによる作品である
+も上映されました。&lt;/p&gt;
+&lt;p&gt;自分の作品が映画館で上映されているという事実が信じられず、非日常体験だなぁと思いました。&lt;/p&gt;
+&lt;p&gt;2nd Stage BOSSなど個人的に大好きなデモも映画館で見られました！&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;映画館で上映された2nd Stage BOSS&#34; 
+               srcset=&#34;http://localhost:1313/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_46.17.407_hu_f8815976fff79fe7.webp 320w, http://localhost:1313/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_46.17.407_hu_b5583b99825ef53e.webp 480w, http://localhost:1313/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_46.17.407_hu_44fb9511011ff3b0.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2023/11/20/livecoding-airport-animefes2023/C20231104_0193.MP4_snapshot_46.17.407_hu_f8815976fff79fe7.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;glslライブコーディング&#34;&gt;GLSLライブコーディング&lt;/h2&gt;
+&lt;p&gt;Renardと2人でBonzomaticというライブコーディング用のエディターをつかったGLSLライブコーディングを行いました。&lt;/p&gt;
+&lt;p&gt;今回はエキシビションということで一部の関数は持ち込みOKのルールで行いました。
+時間制限はRevisionのShaderShowdownと同じく25分でした。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;25分間のGLSLライブコーディングでした。&lt;br&gt;&lt;br&gt;今回はエキシビションということで一部の関数は持ち込みOKのルールで行いました。&lt;br&gt;&lt;br&gt;トラブルでFFT（サウンドを拾う機能）が動作しなかったのと、時間が足りずにシーン切り替えの実装は間に合わなかったので、動画用にコードを少しだけ修正しています。 &lt;a href=&#34;https://t.co/LQoERgILPG&#34;&gt;pic.twitter.com/LQoERgILPG&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1721025346848653593?ref_src=twsrc%5Etfw&#34;&gt;November 5, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;ライブコーディングの楽しさは雰囲気を知ってもらうことが目標だったので、解説を交えながら、複数のシーンを次々に切り替えていく作戦でいきました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;シーン1: IFSによるトンネルのシーン&lt;/li&gt;
+&lt;li&gt;シーン2: MengerSpongeをベースにして
+風のトンネルのシーン&lt;/li&gt;
+&lt;li&gt;シーン3: Mandelboxのシーン&lt;/li&gt;
+&lt;li&gt;シーン4: シーン3を
+の「カド」風にしたシーン&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;第10回新千歳空港国際アニメーション映画祭で「GLSL ライブコーディング」を行いました。&lt;br&gt;&lt;br&gt;音楽も &lt;a href=&#34;https://twitter.com/himazin917?ref_src=twsrc%5Etfw&#34;&gt;@himazin917&lt;/a&gt; さんのSonic Piによるライブコーディングによる演奏です。&lt;br&gt;&lt;br&gt;映画館という超大画面＋最高の音響でのライブコーディング、本当に楽しかった！！！&lt;a href=&#34;https://twitter.com/hashtag/newchitose2023?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#newchitose2023&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; &lt;a href=&#34;https://t.co/kbpZcDgZq9&#34;&gt;pic.twitter.com/kbpZcDgZq9&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1721024192278409556?ref_src=twsrc%5Etfw&#34;&gt;November 5, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;正解するカドが伝わるのか正直あまり自信がなかったのですが、意外に反応が良かったのでホッとしました。&lt;/p&gt;
+&lt;p&gt;途中でバグらせてしまって時間が足りなくなってしまいましたが、むしろライブ感が演出できて結果的には良かったのかなと思います。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://t.co/GoB6m63pvx&#34;&gt;https://t.co/GoB6m63pvx&lt;/a&gt;&lt;br&gt;第10回新千歳空港国際アニメーション映画祭にて25分にわたるライブコーディングをしました！&lt;br&gt;音楽も &lt;a href=&#34;https://twitter.com/himazin917?ref_src=twsrc%5Etfw&#34;&gt;@himazin917&lt;/a&gt; さんによるライブコーディングです！&lt;br&gt;&lt;br&gt;(本番の録画が出来なかったのでこれは練習の録画ですが、本番でも同じ絵が出せました！)&lt;a href=&#34;https://twitter.com/hashtag/newchitose2023?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#newchitose2023&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; &lt;a href=&#34;https://t.co/LdQnLTYL0x&#34;&gt;pic.twitter.com/LdQnLTYL0x&lt;/a&gt;&lt;/p&gt;&amp;mdash; Renard (@Renardealer) &lt;a href=&#34;https://twitter.com/Renardealer/status/1721195825932743087?ref_src=twsrc%5Etfw&#34;&gt;November 5, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;対戦相手であるRenardさんの作品は素晴らしかったです。
+タイル張りの複数のシーンがおしゃれにトランジションで切り替わり、さらにカメラのアニメーションやトランジションのバーのアニメーションが心地よく、非常に高いクオリティの作品でした！&lt;/p&gt;
+&lt;p&gt;エキシビションだったので順位付けはありませんでした。&lt;/p&gt;
+&lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;
+&lt;p&gt;映画館という最高の環境でデモシーンを上映したり、ライブコーディングを行うことができて、本当に楽しかったです。&lt;/p&gt;
+&lt;p&gt;このような貴重なチャンスをいただけて本当に嬉しく思います。&lt;/p&gt;
+&lt;p&gt;ライブコーディング中に歓声があがったり、プログラム終了後の時間だったり、映画祭の関係者のパーティーでも興味をもってくださった方々からたくさん感想や質問をいただいて、やって良かったと心から思いました。&lt;/p&gt;
+&lt;p&gt;Twitter上でもたくさん感想をいただけて嬉しかったです！&lt;/p&gt;
+&lt;p&gt;映画祭のスタッフの方々、参加者の方々、デモシーンの上映とライブコーディング用にハイエンドPCを手配してくださったツクモ様、本当にありがとうございました！！！&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;上映＋ライブ：「デモシーン」で表現される世界と「ライブコーディング」の世界、後半ライブコーディングは見てて楽しい凄い体験でした。&lt;br&gt;&lt;br&gt;コーディング変更する度に背景映像や音が変わっていくのは圧巻。これは凄い。&lt;br&gt;&lt;br&gt;そして、ここでまさか正解するカドが出てくるとは思わず笑った。まさがさかだよ &lt;a href=&#34;https://t.co/OUJtMax3MB&#34;&gt;pic.twitter.com/OUJtMax3MB&lt;/a&gt;&lt;/p&gt;&amp;mdash; NOG (@NOGjp) &lt;a href=&#34;https://twitter.com/NOGjp/status/1720779213186482574?ref_src=twsrc%5Etfw&#34;&gt;November 4, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;二日目は25アニメ &amp;amp; 1ソフトクリームでした！　ライブコーディングも凄かったです！&lt;/p&gt;&amp;mdash; 南野これ式　コミティアQ38b (@mebaGna) &lt;a href=&#34;https://twitter.com/mebaGna/status/1720783163826565600?ref_src=twsrc%5Etfw&#34;&gt;November 4, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;これ実際に見たんだけどライブコーディングかなり面白かった。25分でMVのようなデモシーンが出来ちゃうの凄い世界だね&lt;/p&gt;&amp;mdash; サチイ (@mg_sachi1) &lt;a href=&#34;https://twitter.com/mg_sachi1/status/1720789301703950827?ref_src=twsrc%5Etfw&#34;&gt;November 4, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;第10回新千歳空港国際アニメーション映画祭」今日の最後は、上映＋ライブ『「デモシーン」で表現される世界と「ライブコーディング」の世界』へ。凄い世界でした。リアルタイムに映像や音楽を生成するプログラムを制作する「デモシーン」をはじめとしたテクニカルクリエーションのイベント「SESSIONS」… &lt;a href=&#34;https://t.co/Sxjt3CsSQS&#34;&gt;pic.twitter.com/Sxjt3CsSQS&lt;/a&gt;&lt;/p&gt;&amp;mdash; 矢倉 あゆみ (@babyish_guide) &lt;a href=&#34;https://twitter.com/babyish_guide/status/1720814720289219035?ref_src=twsrc%5Etfw&#34;&gt;November 4, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;今日の最後の方シアター2でやってた「デモシーン」で表現される世界と⁰「ライブコーディング」の世界、めっっっっっっちゃくちゃ面白かった！！！！！！！👏👏👏👏👏👏&lt;br&gt;面白すぎてそのまま帰りたくなくて、数人でプロント閉店時間まで面白すぎたね…！と語り合いました😂😂&lt;a href=&#34;https://twitter.com/hashtag/newchitose2023?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#newchitose2023&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/SESSIONS?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS&lt;/a&gt;&lt;/p&gt;&amp;mdash; さとうゆか / SATO Yuka (@satoyuka_01) &lt;a href=&#34;https://twitter.com/satoyuka_01/status/1720838739130523962?ref_src=twsrc%5Etfw&#34;&gt;November 4, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;昨日のライブコーディングは良かったよなー。&lt;br&gt;&lt;br&gt;あの環境、絶対楽しいと思うので、家帰ったら構築してみたい。でも解説サイトとかあるんかな？&lt;/p&gt;&amp;mdash; NOG (@NOGjp) &lt;a href=&#34;https://twitter.com/NOGjp/status/1720927272461545735?ref_src=twsrc%5Etfw&#34;&gt;November 4, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;「上映＋ライブ：「デモシーン」で表現される世界と「ライブコーディング」の世界」最高すぎた……！　「メガデモ」の傑作選にくわえ（なんと4KBの作品も！）、コーディングによってリアルタイムで映像を生成する「ライブコーティング」のデモンストレーションも！&lt;a href=&#34;https://twitter.com/hashtag/newchitose2023?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#newchitose2023&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; &lt;a href=&#34;https://t.co/PJbbbyL5Oa&#34;&gt;pic.twitter.com/PJbbbyL5Oa&lt;/a&gt;&lt;/p&gt;&amp;mdash; 田中大裕(Daisuke Tanaka) (@diecoo1025) &lt;a href=&#34;https://twitter.com/diecoo1025/status/1721152668998189144?ref_src=twsrc%5Etfw&#34;&gt;November 5, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;まさか映画祭でライブコーディングを楽しめるとは。。最高でした &lt;a href=&#34;https://t.co/SVbHJnHnS6&#34;&gt;https://t.co/SVbHJnHnS6&lt;/a&gt;&lt;/p&gt;&amp;mdash; Achabox (@achabox) &lt;a href=&#34;https://twitter.com/achabox/status/1721206960912257467?ref_src=twsrc%5Etfw&#34;&gt;November 5, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h3 id=&#34;キーボードが使えないトラブル&#34;&gt;キーボードが使えないトラブル&lt;/h3&gt;
+&lt;p&gt;ライブコーディング用に
+を持ち込んだのに、USBのレシーバーを家に忘れるというミスをしました。
+詰んだかと思われたのですが、Bluetoothでも接続できたのでセーフでした。危なかった！&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ライブコーディングのために愛用の無線キーボードを北海道まで飛行機で持ってきたのに、レシーバーを家に置いてきた😇&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1720386131488133405?ref_src=twsrc%5Etfw&#34;&gt;November 3, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h2 id=&#34;映画祭の感想&#34;&gt;映画祭の感想&lt;/h2&gt;
+&lt;p&gt;映画祭というイベントは初参加だったので、とても新鮮に楽しめました。&lt;/p&gt;
+&lt;p&gt;印象に残ったプログラムは
+です。
+アニメの4話まで上映した後、スタッフトークがあり、制作の裏話を聞くことができました。アニメ放送中で忙しい中のご対応に感謝しかありませんでした。&lt;/p&gt;
+&lt;p&gt;
+の先行上映もありました。
+幻のウイスキー「KOMA」を復活させるために奮闘する話でしたが、人間ドラマもとても良かったです。
+ウイスキーの設定や監修が本格的で解像度が高く、世界にぐっと引き込まれました。
+11月10日から一般の劇場でも公開されています。とても良い作品だったので、ぜひ映画館で見てください。&lt;/p&gt;
+&lt;p&gt;いろんな短編作品が上映される
+や
+も楽しかったです。
+コンペティションは投票で順位が決まるので、デモシーンに通じるものを感じました。&lt;/p&gt;
+&lt;p&gt;新千歳空港国際も商業施設が充実していて驚きました。
+会期中は空港内のホテルに滞在していたので、3日くらい空港から外に一歩も出なかったのですが、飽きることなく楽しめました。空港の温泉も露天風呂があって良かったです。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>TDF 16ms #0（2023）のGLSL Graphics Compoで3位入賞しました</title>
+      <link>http://localhost:1313/blog/2023/10/30/tdf16ms0/</link>
+      <pubDate>Mon, 30 Oct 2023 10:00:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2023/10/30/tdf16ms0/</guid>
+      <description>&lt;p&gt;2023年10月22日にオンライン（YouTube配信）で開催された
+に参加し、GLSL Graphics Compo部門で3位をいただきました！&lt;/p&gt;
+&lt;p&gt;作品のタイトルは『Infinite Keys』で、ゲーミングキーボードをモチーフにしました。&lt;/p&gt;
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/B4ZirkFOdZg&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;以下は『Infinite Keys』の各種リンクです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+ ※高負荷のためRTX3080以上のGPU推奨&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&amp;quot;Infinite Keys&amp;quot; by &lt;a href=&#34;https://twitter.com/gam0022?ref_src=twsrc%5Etfw&#34;&gt;@gam0022&lt;/a&gt;&lt;br&gt;&lt;br&gt;3rd Place in GLSL Graphics Compo at &lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; 16ms #0&lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TokyoDemoFest&lt;/a&gt; 16ms #0 のGLSLグラフィックスコンポで3位に入賞しました！ &lt;a href=&#34;https://t.co/EsJitdiOdV&#34;&gt;pic.twitter.com/EsJitdiOdV&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1716107013154087009?ref_src=twsrc%5Etfw&#34;&gt;October 22, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h2 id=&#34;tdf-16ms-0アーカイブ&#34;&gt;TDF 16ms #0アーカイブ&lt;/h2&gt;
+&lt;p&gt;TDF 16ms #0はYouTubeライブでストリーミングされていたので、アーカイブが残っています。&lt;/p&gt;
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/MmOaXb9ldz8&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;閉会式ではTDF 16msのコンセプトについての説明がありました。「シーンの炎を絶やさない🔥」「持続可能なデモパーティ」の話が興味深かったです。&lt;/p&gt;
+&lt;p&gt;さまざまな試行錯誤をしていただいているオーガナイザーの方々に深く感謝します。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SESSIONS 2023のGLSL Graphics Compoで準優勝しました（グラフィックス解説）</title>
+      <link>http://localhost:1313/blog/2023/05/31/sessions2023-glsl-compo/</link>
+      <pubDate>Wed, 31 May 2023 06:49:24 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2023/05/31/sessions2023-glsl-compo/</guid>
+      <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
+&lt;p&gt;2023年4月28日～30日にツインメッセ静岡で開催された
+に参加し、GLSL Graphics Compo部門で2位をいただきました！&lt;/p&gt;
+&lt;p&gt;作品のタイトルは『Transcendental Cube』で、シンプルな立方体が複雑なジオメトリーに変形していく非現実的な様子を、写実的で迫力ある映像で表現することをコンセプトにしました。&lt;/p&gt;
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/194E3UWj870&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;GLSL Graphics Compoのレギュレーションとして音楽は含められませんが、イベント後の動画用に
+さんに素晴らしい音楽を制作していただきました。この場を借りて、心から感謝の意を表します！&lt;/p&gt;
+&lt;p&gt;以下は『Transcendental Cube』の各種リンクです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+ ※高負荷のためRTX3080以上のGPU推奨&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&amp;quot;Transcendental Cube&amp;quot; &lt;br&gt;&lt;br&gt;2nd place at GLSL Graphics Compo, &lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; 2023 🥈&lt;br&gt;&lt;br&gt;SESSIONS 2023のGLSL Graphics Compoで2位を勝ち取りました！ &lt;a href=&#34;https://t.co/Ra2Y0Ccfpx&#34;&gt;pic.twitter.com/Ra2Y0Ccfpx&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1653096277184503808?ref_src=twsrc%5Etfw&#34;&gt;May 1, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;GLSL Graphics Compo の2位でした！&lt;br&gt;&lt;br&gt; &lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; &lt;a href=&#34;https://t.co/ihD5DfiNz2&#34;&gt;pic.twitter.com/ihD5DfiNz2&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1652527603247616001?ref_src=twsrc%5Etfw&#34;&gt;April 30, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;5月25日に
+が開催され、そこで本作品の技術的な解説を行いました。&lt;/p&gt;
+&lt;p&gt;その発表資料はこちらです。&lt;/p&gt;
+&lt;div class=&#34;google-slide-wrap&#34;&gt;
+&lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vRElQgUpyWO1kAOOvmckhu2PAfVZHoRrIU7S59o8MrSMSQpz4LLBUuK1_X20tGZ8S8eSK9-dSkIyYo3/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;1440&#34; height=&#34;839&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;この記事では、スライドの画像を使用しながら、作品の解説をします。&lt;/p&gt;
+&lt;h2 id=&#34;glsl-graphics-compoとは&#34;&gt;GLSL Graphics Compoとは？&lt;/h2&gt;
+&lt;p&gt;デモシーンの文化に馴染みのない方に向けて、簡単にGLSL Graphics Compoの概要やレギュレーションについて説明します。&lt;/p&gt;
+&lt;p&gt;GLSL Graphics Compoは
+上でリアルタイムで動作するGLSLのシェーダーによるグラフィックスを競うコンポです。
+コンポはコンペティションの意味で、参加者投票によって順位が決まります。&lt;/p&gt;
+&lt;h3 id=&#34;glslシェーダーで映像を作り出す魔法&#34;&gt;GLSLシェーダーで映像を作り出す魔法&lt;/h3&gt;
+&lt;p&gt;GLSLシェーダーを使用して、プログラミングのソースコードだけで映像を作り出すことができるのですが、一般的には想像しづらいかもしれません。&lt;/p&gt;
+&lt;p&gt;具体的なイメージを掴むために、以下の図をご覧ください。GLSLのコードをコメントや改行、空白文字を取り除いて処理の内容で色分けしました。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;この9270文字のGLSLシェーダーに、映像のすべてが実装されています。&lt;/p&gt;
+&lt;p&gt;実は、このシェーダーにはシーンのモデリング、ライティング、カメラワーク、演出のシーケンスがすべて含まれているのです。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3Dモデルやテクスチャなどの外部アセットは一切使用していません。すべての3Dデータやテクスチャは、GLSLのコードからプロシージャルに生成されています。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;もちろん、変数名や関数名を1文字に短縮したり、デバッグ用のコードを削除することで文字数をさらに削減することも可能です。しかし、今回は文字数削減よりも可読性を重視してコーディングしました。&lt;/p&gt;
+&lt;h3 id=&#34;webgl20が利用可能に&#34;&gt;WebGL2.0が利用可能に&lt;/h3&gt;
+&lt;p&gt;SESSIONS 2023では、twiglの&lt;code&gt;classic (300 es)&lt;/code&gt;モードが許可されたので、WebGL2.0の機能も利用できるようになりました！&lt;/p&gt;
+&lt;p&gt;TokyoDemoFest2021ではGLSL Snadboxがレギュレーションとなっており、WebGL1.0の機能しか使えないという制約があったのですが、今回から配列やビット演算などが利用できるようになりました。&lt;/p&gt;
+&lt;p&gt;twiglはWeb上でGLSLのフラグメントシェーダーを編集・実行できるWebGLで実装されたサービスです。&lt;/p&gt;
+&lt;p&gt;類似サービスにはGLSL SnadboxやShadertoyなどがありますが、
+twiglは 
+ と呼ばれる1ツイートに収まる文字数でGLSLのシェーダー作品を作る文化に特化しています。&lt;/p&gt;
+&lt;p&gt;ちなみに今回のGLSL Graphics Compoには文字数の制約はありませんでした。
+そのためか上映時間が3分あるような超大作の作品も複数ありました。
+文字数に制約はありませんが、複雑すぎるGLSLのコードはコンパイルに時間がかかりすぎてChromeがクラッシュするので、GLSLのコンパイル時間が実質的なコードサイズの制限になります。&lt;/p&gt;
+&lt;h3 id=&#34;ローカル上の開発環境の構築&#34;&gt;ローカル上の開発環境の構築&lt;/h3&gt;
+&lt;p&gt;node.jsを使用した自作のWebGLフレームワーク（
+）を活用して、ローカル上の開発環境を構築しました。
+このフレームワークを使うと、VS Codeでシェーダーを編集し、Chromeでホットリロードが可能です。&lt;/p&gt;
+&lt;p&gt;直接twiglやShadertoy上で編集することも可能ですが、ローカル環境を構築するメリットは複数あります。たとえば、コードの自動整形、バージョン管理、時間のシークバーなどが実現できます。&lt;/p&gt;
+&lt;p&gt;また、twiglへのポーティングの作業は、以前の記事で紹介したテンプレートを利用しました。
+chromatiq用のシェーダーのuniform名はShadertoy互換があるため、&lt;code&gt;Shadertoy → twigl (classic 300es)&lt;/code&gt;のテンプレートが利用可能です。
+ポーティングの手順は非常に簡単で、テンプレートのGLSLのコードを先頭にコピー＆ペーストするだけで移植作業が完了します。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;mad-tracingによるライティング&#34;&gt;Mad Tracingによるライティング&lt;/h2&gt;
+&lt;p&gt;ライティングでは次の2つをゴールとしました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Global Illumination&lt;/li&gt;
+&lt;li&gt;Bloom&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;一般的に、Bloomはマルチパスのポストエフェクトとして実装する必要がありますが、
+GLSL Graphics Compoのレギュレーションでは1Passでの実装が必要です。
+そこで、1PassでGIとBloomの両方を実現するためにMad Tracingという手法を利用しました。&lt;/p&gt;
+&lt;p&gt;Mad Tracingは
+さんが開発した手法で、
+という2018年に発表された4K Introのデモではじめて利用されました。&lt;/p&gt;
+&lt;p&gt;Mad Tracingをざっくり説明すると、Path Tracingの亜種のような手法です。
+通常のPath Tracingでは、Bloom効果を実現することはできませんが、Mad TracingではBloom効果も含めて計算することが可能です。&lt;/p&gt;
+&lt;h3 id=&#34;path-tracing&#34;&gt;Path Tracing&lt;/h3&gt;
+&lt;p&gt;Path TracingはGlobal Illuminationを実現可能でフォトリアルなグラフィックスが得意な手法です。&lt;/p&gt;
+&lt;p&gt;下記の図のようにBRDFに応じて確率的に反射方向をサンプリングしてレイを大量に飛ばすことで、光源からの影響を計算します。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;下記はGlossyなマテリアルの球体のレンダリング結果と、そのマテリアルのBRDFの反射方向の分布を示した図です。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;Glossyなマテリアルでは、球体の周囲の映り込みがブラー（ぼかし）されていることが分かります。このブラーは、レイを複数方向にサンプリングし、その結果を平均することで実現されています。&lt;/p&gt;
+&lt;p&gt;難しいことは分からなくても、レイを複数方向に飛ばすことで、ブラー（ぼかし）されるイメージだけ理解できれば問題ありません。&lt;/p&gt;
+&lt;h3 id=&#34;レイマーチングとmad-tracing&#34;&gt;レイマーチングとMad Tracing&lt;/h3&gt;
+&lt;p&gt;Mad TracingではPath Tracingと同じように表面のroughnessに応じてセカンダリレイを飛ばしてGIを計算します。&lt;/p&gt;
+&lt;p&gt;通常のパストレーシングでは物体の表面にヒットしてからセカンダリレイを複数回飛ばすと思いますが、
+Mad Tracingではレイマーチングのステップ中にセカンダリレイを近傍のオブジェクトのroughnessに応じて飛ばします。&lt;/p&gt;
+&lt;p&gt;ここでレイマーチングとMad Tracingのレイの進む様子を示した図を紹介します。&lt;/p&gt;
+&lt;h4 id=&#34;レイマーチングのループの様子&#34;&gt;レイマーチングのループの様子&lt;/h4&gt;
+&lt;p&gt;次の図はレイマーチングのループの様子です。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;レイがRayOriginからスタートして、このようにステップごとにRayDirection方向に進んでいきます。
+レイマーチングを勉強したことがある人ならおそらく見覚えのある図です。&lt;/p&gt;
+&lt;h4 id=&#34;mad-tracingのループの様子&#34;&gt;Mad Tracingのループの様子&lt;/h4&gt;
+&lt;p&gt;そして次の図はMad Tracingのループの様子です。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;Mad Tracingは、レイマーチングのループ中に周囲の空間をサンプリングします。
+レイの先端を &lt;code&gt;ro2（ray origin 2）&lt;/code&gt; として、そこからセカンダリーのレイを発射します。この操作をレイマーチングの各ステップで行います。&lt;/p&gt;
+&lt;p&gt;こうしてレイの周囲の空間からの光源の影響も蓄積することで、Bloomの効果を1Passで実現できます。&lt;/p&gt;
+&lt;p&gt;これによってボリューム感やBloom感のあるライティングを実現できます。その代償として、少々負荷が高い印象です。&lt;/p&gt;
+&lt;h3 id=&#34;mad-tracingのコード解説&#34;&gt;Mad Tracingのコード解説&lt;/h3&gt;
+&lt;p&gt;実際のGLSLのコードを踏まえてMad Tracingのコード解説します。&lt;/p&gt;
+&lt;h4 id=&#34;map関数を2回参照&#34;&gt;map関数を2回参照&lt;/h4&gt;
+&lt;p&gt;単なるレイマーチングにも見えますが、よく見るとmap関数を2回呼び出していることが分かります。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;2つ目のサンプリングであるm2の行は、周囲の空間のサンプリングです。&lt;/p&gt;
+&lt;h4 id=&#34;if分岐なしでbloom用gi用のサンプリングを処理&#34;&gt;if分岐なしでBloom用／GI用のサンプリングを処理&lt;/h4&gt;
+&lt;p&gt;map関数の返り値はvec4になっており、xにdistance（レイから物体表面への最短距離）が格納されています。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;通常のレイマーチングでは&lt;code&gt;distance &amp;lt; eps&lt;/code&gt;になったらレイとオブジェクトが衝突したとみなしてループを抜けますが、Mad Tracingでは衝突後もループを継続します。&lt;/p&gt;
+&lt;p&gt;衝突後にはro2（セカンダリレイの原点）は衝突した点に固定化されるため、Bloom用のサンプリングからPath Tracingのサンプリングにif分岐なしに自動的に切り替わります。&lt;/p&gt;
+&lt;p&gt;このようにしてif分岐なしにBloom用のサンプリングとGI用のサンプリングを両立しているのです。&lt;/p&gt;
+&lt;h4 id=&#34;ボリュームレンダリング&#34;&gt;ボリュームレンダリング&lt;/h4&gt;
+&lt;p&gt;レイマーチングのステップに0.25や0.15の係数を乗算しています。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;これはステップの間隔を小さくしてボリュームレンダリングを行うためです。
+ステップの間隔が大きすぎるとBloomのアーティファクトが発生しやすくなります。
+逆にステップの間隔が小さすぎると負荷が高くなるので、品質と負荷のトレードオフを考慮して係数を決定しました。&lt;/p&gt;
+&lt;h4 id=&#34;アーティファクト防止&#34;&gt;アーティファクト防止&lt;/h4&gt;
+&lt;p&gt;レイのスタート位置に乱数でオフセットを加えることで、ボリュームレンダリングのアーティファクトを防止しています。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;オリジナルのMad Tracingにはない処理ですが、効果が大きかったので追加しました。&lt;/p&gt;
+&lt;h4 id=&#34;コンパイル時間短縮&#34;&gt;コンパイル時間短縮&lt;/h4&gt;
+&lt;p&gt;この処理はGLSLのコンパイル時間短縮が目的です。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;forループがunroll（展開）されるとコンパイル時間が伸びるので、絶対に実行されないifによって強制的にダイナミックループにしてunrollを防ぎます。&lt;/p&gt;
+&lt;p&gt;HLSLでは&lt;code&gt;[unroll]&lt;/code&gt;や&lt;code&gt;[loop]&lt;/code&gt;を明示的に指定が可能ですが、GLSLではこのようなハックが必要となります。&lt;/p&gt;
+&lt;h2 id=&#34;ifsによるモデリング&#34;&gt;IFSによるモデリング&lt;/h2&gt;
+&lt;p&gt;モデリングに関しては、シンプルなCubeをIFS（Iterated Function System）を使用して複雑にしました。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;上の図は、CubeとそれにIFSを適用した結果を示しています。この結果を得るために使用したGLSLのコードは以下の通りです。&lt;/p&gt;
+&lt;p&gt;IFSの理解を深めるためにはコードを確認するのが近道だと思います。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;このコードでは、forループの中でいくつかの空間操作（折りたたみ、平行移動、回転）を行い、その後通常通りにCubeの距離関数を計算しています。&lt;/p&gt;
+&lt;p&gt;IFSについては、
+さんの
+の記事がとても参考になります。&lt;/p&gt;
+&lt;h3 id=&#34;unityを利用したパラメーター調整&#34;&gt;Unityを利用したパラメーター調整&lt;/h3&gt;
+&lt;p&gt;IFSの実装自体は比較的簡単で、forループの中で適切な空間操作を行うだけです。&lt;/p&gt;
+&lt;p&gt;一方、IFSのパラメーターの調整は非常に難しいです。今回紹介したIFSのパラメーターは6次元（平行移動3次元 + 回転3次元）です。
+6次元の広大なパラメーター空間から、美しい絵を描くための適切なパラメーターを見つける必要があります。
+この作業はまさに砂漠からオアシスを見つけるようなものであり、試行錯誤が必要です。&lt;/p&gt;
+&lt;p&gt;また、通常は6次元よりもさらに次元数が増えていくことが一般的です。&lt;/p&gt;
+&lt;p&gt;今回はUnityでパラメーター調整してからGLSLに移植する形でモデリングを行いました。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;Unityで調整しているのは以下のような理由からです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;インスペクターで値の操作がしやすい&lt;/li&gt;
+&lt;li&gt;Undo/Redoができる&lt;/li&gt;
+&lt;li&gt;カメラの操作がしやすい&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;モデリングの試行錯誤&#34;&gt;モデリングの試行錯誤&lt;/h3&gt;
+&lt;p&gt;制作初期（4月15日）の段階では、複雑なジオメトリーでしたが、最終的にはシンプルに落ち着きました。&lt;/p&gt;
+&lt;p&gt;この変更の理由は、Mad Tracingによって得られるライティング情報量の存在です。ジオメトリーの情報量を抑えることで、ライティングもモデリングの情報量がバランスの取れた結果を得ることができると考えました。&lt;/p&gt;
+&lt;p&gt;また、モデリングが複雑になると見た目がごちゃごちゃしてしまい、キビキビと変形させたときのかっこよさも損なわれると感じました。&lt;/p&gt;
+&lt;p&gt;さらに、ライティングとモデリングの情報量が最大限になると、GPU負荷や動画のビットレートなどにも負荷がかかることが予想されました。そのため、最終的な判断として情報量を適切に制御することとしました。&lt;/p&gt;
+&lt;p&gt;これによって、よりバランスの取れた作品を実現することができました。&lt;/p&gt;
+&lt;h4 id=&#34;プロトタイプunity&#34;&gt;プロトタイプ（Unity）&lt;/h4&gt;
+&lt;p&gt;UnityでIFSのパラメーターを試行錯誤している段階では、このようにかなり情報量の多い複雑なジオメトリーでした。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;h4 id=&#34;プロトタイプglsl&#34;&gt;プロトタイプ（GLSL）&lt;/h4&gt;
+&lt;p&gt;最終的にボツになりましたが、このようなモデリングの試作もしていました。ネタ供養です。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;h4 id=&#34;ifsのバリエーション&#34;&gt;IFSのバリエーション&lt;/h4&gt;
+&lt;p&gt;中盤の複雑なIFSのシーンもパラメーター調整のみで実現しました。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;壁面の演出&#34;&gt;壁面の演出&lt;/h2&gt;
+&lt;p&gt;部屋のジオメトリーは非常にシンプルで、装飾のない完全な直方体です。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;このシンプルなデザインは、Mad Tracingによる反射の効果を最大限に活かすために採用しました。&lt;/p&gt;
+&lt;p&gt;床や壁のシンプルなジオメトリーにより、反射の美しさを引き立たせることができます。周囲の光やオブジェクトが壁面に反射されることで、部屋全体に深みと立体感が生まれます。
+さらに、壁面には複数のEmissive（発光）のパターンを取り入れました。壁面の発光パターンにより、部屋の情報量を増やすことができます。
+壁面からの発光パターンは、光のダイナミクスや環境の雰囲気を演出する一方、シンプルなジオメトリーとの対比も生み出します。&lt;/p&gt;
+&lt;p&gt;結果として、シンプルな部屋のジオメトリーと複雑な壁面のEmissiveのパターンとMad Tracingによる反射の効果が組み合わさり、情報量のバランスがとれた空間を実現できたと思います。&lt;/p&gt;
+&lt;h3 id=&#34;ノイズの壁面パターン&#34;&gt;ノイズの壁面パターン&lt;/h3&gt;
+&lt;p&gt;序盤の壁面のパターンは、David Hoskinsさんによる有名なHash without Sineによる疑似乱数です。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;Mad Tracingのアーティファクト防止に利用したhash（擬似的なランダム値を返す関数）関数を再利用しました。&lt;/p&gt;
+&lt;p&gt;uv座標に対してfloorを適用してからhashを呼び出すことで、解像度を下げることができます。この結果、QRコードのような雰囲気にできました。&lt;/p&gt;
+&lt;h3 id=&#34;警告の壁面パターン&#34;&gt;警告の壁面パターン&lt;/h3&gt;
+&lt;p&gt;中盤の警告の壁面パターンでは、六角形のタイルの中心にランダムなマークを描画しました。&lt;/p&gt;
+&lt;p&gt;マークには大きく2種類あります。1つ目はSESSIONSのロゴにも使用されている斜めのストライプのパターンであり、もう1つは2DのIFSによって生成されるパターンです。&lt;/p&gt;
+&lt;p&gt;2DのIFSパターンは、以下のようなコードで生成されています。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;IFSは3DのCubeのモデリングでも使用していましたが、もちろん2Dでも利用できます。&lt;/p&gt;
+&lt;p&gt;IFSの処理は、Cubeの場合とほぼ同じです。折りたたみ、平行移動、回転などの操作を行います。&lt;/p&gt;
+&lt;p&gt;異なる点は、3DではXYZの各軸に対して3回の回転を行っていたのに対し、2Dでは1回の回転で済むことです。&lt;/p&gt;
+&lt;p&gt;IFSのパラメーターは事前に調整され、8つのバリエーションを配列に定義しました。六角形のグリッドごとに乱数を生成し、ランダムにパターンを選択するように設定しました。これにより、パターンのバリエーションが豊かになります。&lt;/p&gt;
+&lt;h4 id=&#34;neort上でのリアル空間展示&#34;&gt;NEORT++上でのリアル空間展示&lt;/h4&gt;
+&lt;p&gt;
+はSESSIONS直後に開催され、タイミングが良かったので参加しました。&lt;/p&gt;
+&lt;p&gt;警告のパターンを取り出してNEORTに移植し、NEORT++の展示室に展示させていただきました。&lt;/p&gt;
+
+
+
+  
+  &lt;blockquote class=&#34;border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6&#34;&gt;
+    &lt;p&gt;デジタルアートの新しい体験について考える東京馬喰町のアートギャラリーNEORT++にて5/6, 7に開催される展示”CURATION FREE #2”の作品を募集します。&lt;/p&gt;
+&lt;p&gt;本展は、昨年末に行われたキュレーションを介さない展示&amp;quot;CURATION FREE&amp;quot;の第二弾です。&lt;/p&gt;
+&lt;p&gt;期間中、NEORTに投稿された作品が東京馬喰町にあるNEORT++の空間に展示されていきます。&lt;/p&gt;
+&lt;p&gt;どんな展示になるか予想ができませんが、表現の多様性を尊重した新しい試みになることを期待します。&lt;/p&gt;
+
+  &lt;/blockquote&gt;
+
+&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Real &amp;quot;Transcendental Cube&amp;quot;&lt;br&gt;&lt;br&gt;&amp;quot;Transcendental Cube&amp;quot; の壁面の演出の一部をNEORTに移植して &lt;a href=&#34;https://twitter.com/hashtag/CURATION_FREE_2?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#CURATION_FREE_2&lt;/a&gt; のday1に展示しました。&lt;br&gt;&lt;br&gt;（同じような動画を連投して申し訳ないですが、前の動画の画質が微妙だったので…）&lt;a href=&#34;https://twitter.com/hashtag/CURATION_FREE_2?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#CURATION_FREE_2&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; &lt;a href=&#34;https://t.co/Un1t8rBc2m&#34;&gt;pic.twitter.com/Un1t8rBc2m&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1654880194287763456?ref_src=twsrc%5Etfw&#34;&gt;May 6, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;NEORT++の展示室もシンプルな直方体でしたので、作品中のような見え方になるのではないかと期待していました。しかし、実際はそんなことはありませんでした。&lt;/p&gt;
+&lt;p&gt;パソコンのディスプレイ上で見たときと、現実世界にプロジェクションされたときの差異が大きく、予想していたような映像体験は残念ながら実現しませんでした。&lt;/p&gt;
+&lt;p&gt;しかし、多くの作品を鑑賞する中で、さまざまな新たな発見がありました。展示された作品が実際にどのような風に見えるのか、そのパターンや効果を少しずつ理解することができました。この経験は非常に有意義なものでした。&lt;/p&gt;
+&lt;p&gt;NEORT++の展示室の環境では思ったような結果にはならなかったのですが、それでもたくさんの作品に触れ、新たな視点やアイデアを得ることができました。今回の経験を活かして今後の自身の制作にも繋げていきたいです。&lt;/p&gt;
+&lt;h2 id=&#34;インスピレーションを得た作品の紹介&#34;&gt;インスピレーションを得た作品の紹介&lt;/h2&gt;
+&lt;p&gt;『Transcendental Cube』は複数の作品からインスピレーションを得ながら、それらを自分の中で組み合わせることで独自のコンセプトを形成しました。以下では、そのインスピレーションを受けた作品を紹介します。&lt;/p&gt;
+&lt;h3 id=&#34;life-by-setchi&#34;&gt;Life by setchi&lt;/h3&gt;
+&lt;p&gt;この作品は、TokyoDemoFest 2018のGLSL Graphics Compoで2位に輝いた作品です。&lt;/p&gt;
+&lt;p&gt;シンプルなジオメトリーが複雑に変形するコンセプトはここから触発されました。&lt;/p&gt;
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/R4tNEFVz5K8&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;delight-by-mercury&#34;&gt;delight by mercury&lt;/h3&gt;
+&lt;p&gt;この作品は、Under Construction 2015のCombined Intro Compoで優勝した作品です。&lt;/p&gt;
+&lt;p&gt;美しいグローバルイルミネーション、音楽と映像の見事な同期、そして鮮やかな展開が特徴です。部屋をシンプルにすることで反射を際立たせるアイデアも、この作品からの影響を受けました。&lt;/p&gt;
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/UnjIMd3kVf4&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;delayed-by-kaneta&#34;&gt;Delayed by kaneta&lt;/h3&gt;
+&lt;p&gt;この作品は、
+の第1回（
+）で発表されました。&lt;/p&gt;
+&lt;p&gt;壁面の発光パターンが床に反射する様子が非常にクールだったので、作品の演出に取り入れました。&lt;/p&gt;
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/Noe4SsARPVo&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;グラフィックス解説のまとめ&#34;&gt;グラフィックス解説のまとめ&lt;/h2&gt;
+&lt;p&gt;本記事では『Transcendental Cube』について、そのグラフィックスについて解説しました。&lt;/p&gt;
+&lt;p&gt;この記事が読者の皆さんの制作に少しでもお役に立てれば幸いです。&lt;/p&gt;
+&lt;h2 id=&#34;sessionsの振り返り&#34;&gt;SESSIONSの振り返り&lt;/h2&gt;
+&lt;p&gt;作品のグラフィックス解説からはテーマが外れてしまいますが、最後にSESSIONSの振り返りを記しておきます。&lt;/p&gt;
+&lt;h3 id=&#34;オフラインパーティーの魅力&#34;&gt;オフラインパーティーの魅力&lt;/h3&gt;
+&lt;p&gt;TokyoDemoFest2018年以来の約5年ぶりのオフライン開催のデモパーティーということで、大勢でデモを鑑賞したり、交流したりと、懐かしくも楽しい時間を過ごせました。&lt;/p&gt;
+&lt;p&gt;オンラインのデモパーティーも素晴らしいものですが、会場の雰囲気や臨場感を直接感じられる点で、やはりオフラインイベントには特別な魅力があると感じています。&lt;/p&gt;
+&lt;p&gt;実際に参加者と話をしたり、作品についての感想やアイデアを交換したりすることで、新たな視点やインスピレーションを得ることができました。&lt;/p&gt;
+&lt;h3 id=&#34;sessionsについて&#34;&gt;SESSIONSについて&lt;/h3&gt;
+&lt;p&gt;SESSIONSは2023年から新たにスタートしたデモパーティーです。&lt;/p&gt;
+
+
+
+  
+  &lt;blockquote class=&#34;border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6&#34;&gt;
+    &lt;p&gt;デモパーティーとはコンピューターを用いたプログラミングやアートに興味のある人々が日本中・世界中から一堂に会し、デモ作品のコンペティション (Compo) やセミナーなどが行われるイベントです。
+パーティという名の通り、勉強会のように堅苦しい感じではなく、みんな賑やかに作品の制作過程を見せ合ったりと参加者同士でのコミュニケーションが盛んに行われます。&lt;/p&gt;
+
+  &lt;/blockquote&gt;
+
+&lt;p&gt;SESSIONSの前身である
+は純粋なデモパーティーに属するものでしたが、SESSIONSはそれとは異なり、デモシーンの枠に囚われず、さまざまなカテゴリーのクリエイティブ作品を募集する「パーティ＆コンペティションイベント」として位置づけられています。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;qme&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; &lt;a href=&#34;https://t.co/aSwiTfSjYH&#34;&gt;pic.twitter.com/aSwiTfSjYH&lt;/a&gt;&lt;/p&gt;&amp;mdash; 蘇摩清良 (@soma_arc) &lt;a href=&#34;https://twitter.com/soma_arc/status/1661693568975794178?ref_src=twsrc%5Etfw&#34;&gt;May 25, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;当日の雰囲気は、アフタームービーからよく伝わってきます。&lt;/p&gt;
+&lt;p&gt;実際に今回のSESSIONSでも、デモシーンに詳しくない参加者も楽しんで参加している姿を目にすることができました。&lt;/p&gt;
+&lt;p&gt;学生や新社会人の若い世代からの参加も多く見られ、これからのSESSIONSの展開が楽しみです！&lt;/p&gt;
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/Xyf5op4-hSs&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;c4-lanとのコラボレーション&#34;&gt;C4 LANとのコラボレーション&lt;/h3&gt;
+&lt;p&gt;今回のSESSIONSは、
+というLANパーティーの会場内で開催されました。&lt;/p&gt;
+&lt;p&gt;C4 LAN全体の様子は、以下のレポートをご覧ください。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;デモパーティーの起源は海外のLANパーティーだと言われていますので、今回C4 LAN内で開催されたことに運命的なものを感じました。SESSIONSは会場エントランスのすぐそばでしたので、デモパーティーをあまり知らないC4 LANの参加者にも時々立ち寄っていただくことがありました。&lt;/p&gt;
+&lt;h3 id=&#34;ハイレベルだったglsl-graphics-compo&#34;&gt;ハイレベルだったGLSL Graphics Compo&lt;/h3&gt;
+&lt;p&gt;
+の通り、GLSL Graphics Compoの応募はなんと15作品もありました。&lt;/p&gt;
+&lt;p&gt;作品の数が多いだけでなく、今年は全体的にレベルが高く、近年のGLSL Graphics Compoのレベルのインフレは狂ってるなと思いました（もちろん良い意味で）。&lt;/p&gt;
+&lt;p&gt;さらに複数のシーンから構成され、上映時間も2〜3分ほどの展開があり、まるでPCデモに匹敵するクオリティの作品も複数ありました。&lt;/p&gt;
+&lt;p&gt;ぜひアーカイブをご覧ください！&lt;/p&gt;
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/F-CbQTcHNrc&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;参加者レポート&#34;&gt;参加者レポート&lt;/h2&gt;
+&lt;p&gt;SESSIONS 2023の参加者のレポートや作品の解説などをまとめました。発見次第、随時追加します。&lt;/p&gt;
+&lt;h3 id=&#34;combined-pc-demo-compo優勝作品の解説&#34;&gt;Combined PC Demo Compo優勝作品の解説&lt;/h3&gt;
+&lt;p&gt;ukonpowerさんによるWebGLを使用した64K IntroがCombined PC Demo Compoで優勝しました。
+このスライドではその制作過程や舞台裏について詳しく解説されています。
+とくにBlenderを使ったワークフローの紹介や音楽制作の秘話など、非常に興味深い内容でした。ぜひチェックしてみてください！&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&amp;quot;ﾃﾞｺﾝﾌﾟﾃｨができるまで&amp;quot;です&lt;a href=&#34;https://t.co/buX0qJg07V&#34;&gt;https://t.co/buX0qJg07V&lt;/a&gt;&lt;br&gt; &lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; &lt;a href=&#34;https://t.co/l8IhsO2wUQ&#34;&gt;pic.twitter.com/l8IhsO2wUQ&lt;/a&gt;&lt;/p&gt;&amp;mdash; ukonpower (@ore_ukonpower) &lt;a href=&#34;https://twitter.com/ore_ukonpower/status/1661713471862636545?ref_src=twsrc%5Etfw&#34;&gt;May 25, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h3 id=&#34;glsl-graphics-compo優勝作品の解説&#34;&gt;GLSL Graphics Compo優勝作品の解説&lt;/h3&gt;
+&lt;p&gt;RenardさんによるGLSL Graphics Compoの優勝作品の解説です。
+ApproximateLightという独自の手法を用いたグローバルイルミネーションの計算や、本記事でも解説したMad Tracingの高速化についても紹介されています。
+詳細な解説がされており、読み応えがあります。ぜひチェックしてみてください！&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt;&lt;br&gt;&lt;br&gt;こちらの作品の解説記事を書きました！&lt;a href=&#34;https://t.co/da1inuwbPc&#34;&gt;https://t.co/da1inuwbPc&lt;/a&gt; &lt;a href=&#34;https://t.co/6ijOcdD2Jp&#34;&gt;https://t.co/6ijOcdD2Jp&lt;/a&gt; &lt;a href=&#34;https://t.co/uN1COyotzY&#34;&gt;pic.twitter.com/uN1COyotzY&lt;/a&gt;&lt;/p&gt;&amp;mdash; Renard (@Renardealer) &lt;a href=&#34;https://twitter.com/Renardealer/status/1658116543073452034?ref_src=twsrc%5Etfw&#34;&gt;May 15, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h3 id=&#34;combined-pc-demo-compo--glsl-graphics-compo&#34;&gt;Combined PC Demo Compo / GLSL Graphics Compo&lt;/h3&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;先日の発表資料です。&lt;br&gt;フラクタルとテセレーション&lt;br&gt; | SESSIONS 2023 After Party&lt;a href=&#34;https://t.co/OpRabk2VKa&#34;&gt;https://t.co/OpRabk2VKa&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt;&lt;/p&gt;&amp;mdash; 蘇摩清良 (@soma_arc) &lt;a href=&#34;https://twitter.com/soma_arc/status/1662817935994540032?ref_src=twsrc%5Etfw&#34;&gt;May 28, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;本日の発表資料（投稿デモの説明）です&lt;br&gt;&lt;br&gt;楽しかった！&lt;a href=&#34;https://t.co/uXKgnPhqza&#34;&gt;https://t.co/uXKgnPhqza&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt;&lt;/p&gt;&amp;mdash; ukeyshima (@ukeyshima) &lt;a href=&#34;https://twitter.com/ukeyshima/status/1661764148802502661?ref_src=twsrc%5Etfw&#34;&gt;May 25, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;初めてPC Demoを作った話｜Saina &lt;a href=&#34;https://twitter.com/SainaKey?ref_src=twsrc%5Etfw&#34;&gt;@SainaKey&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/note?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#note&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/madewithunity?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#madewithunity&lt;/a&gt;&lt;a href=&#34;https://t.co/x5zzLC5VB2&#34;&gt;https://t.co/x5zzLC5VB2&lt;/a&gt;&lt;/p&gt;&amp;mdash; Saina(さいな) (@SainaKey) &lt;a href=&#34;https://twitter.com/SainaKey/status/1652702468474798081?ref_src=twsrc%5Etfw&#34;&gt;April 30, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;SESSIONSに提出したDemoの音楽を解剖します｜蒼空 / sola &lt;a href=&#34;https://twitter.com/sola_117?ref_src=twsrc%5Etfw&#34;&gt;@sola_117&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/note?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#note&lt;/a&gt; &lt;a href=&#34;https://t.co/XplbBpEnOr&#34;&gt;https://t.co/XplbBpEnOr&lt;/a&gt;&lt;/p&gt;&amp;mdash; 蒼空 / sola (@sola_117) &lt;a href=&#34;https://twitter.com/sola_117/status/1653244428134547457?ref_src=twsrc%5Etfw&#34;&gt;May 2, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;すごい大雑把になりますが、SESSIONS の GLSL Compoで提出した作品についての制作経緯について記事にしました。&lt;a href=&#34;https://t.co/EZHDY1ahJ0&#34;&gt;https://t.co/EZHDY1ahJ0&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/glsl?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#glsl&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt;&lt;/p&gt;&amp;mdash; 独楽回しeddy (@EKey2210) &lt;a href=&#34;https://twitter.com/EKey2210/status/1652660167635501058?ref_src=twsrc%5Etfw&#34;&gt;April 30, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;【補足】&lt;br&gt;・コードには日本語のコメントを書いてあります&lt;br&gt;・ちゃんと壁を通り抜けられないようになっています！&lt;br&gt;・マップはランダムに生成していて、どこまでも続いています！（※浮動小数の精度の許す限り） &lt;a href=&#34;https://t.co/ugBcMKUbQL&#34;&gt;pic.twitter.com/ugBcMKUbQL&lt;/a&gt;&lt;/p&gt;&amp;mdash; Kamoshika (@kamoshika_vrc) &lt;a href=&#34;https://twitter.com/kamoshika_vrc/status/1652700446614781952?ref_src=twsrc%5Etfw&#34;&gt;April 30, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/SESSIONS_Party?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SESSIONS_Party&lt;/a&gt; &lt;br&gt;SESSIONSのGLSL compに海賊放送をモチーフにした作品を提出させて頂きました&lt;a href=&#34;https://t.co/DZx5NNzNAJ&#34;&gt;https://t.co/DZx5NNzNAJ&lt;/a&gt; &lt;a href=&#34;https://t.co/HrncS23PrC&#34;&gt;pic.twitter.com/HrncS23PrC&lt;/a&gt;&lt;/p&gt;&amp;mdash; KiNaNkomoti (@Kinakomoti2357) &lt;a href=&#34;https://twitter.com/Kinakomoti2357/status/1652677355901706240?ref_src=twsrc%5Etfw&#34;&gt;April 30, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Just released S͎E͎A͎W͎A͎L͎L͎ &lt;a href=&#34;https://twitter.com/SESSIONS_Party?ref_src=twsrc%5Etfw&#34;&gt;@SESSIONS_Party&lt;/a&gt;, a quick &lt;a href=&#34;https://twitter.com/hashtag/BladeRunner2049?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#BladeRunner2049&lt;/a&gt; inspired shader doodle I did a while back. Check out the final version on &lt;a href=&#34;https://twitter.com/Shadertoy?ref_src=twsrc%5Etfw&#34;&gt;@Shadertoy&lt;/a&gt; ✨: &lt;a href=&#34;https://t.co/ypBZWvp6oD&#34;&gt;https://t.co/ypBZWvp6oD&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/demoscene?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#demoscene&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#shader&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/brutalism?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#brutalism&lt;/a&gt; &lt;a href=&#34;https://t.co/WczF1MLuDm&#34;&gt;pic.twitter.com/WczF1MLuDm&lt;/a&gt;&lt;/p&gt;&amp;mdash; LJ (@LJ_1102) &lt;a href=&#34;https://twitter.com/LJ_1102/status/1653088310988881923?ref_src=twsrc%5Etfw&#34;&gt;May 1, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

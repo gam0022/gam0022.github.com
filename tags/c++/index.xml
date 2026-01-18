@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C&#43;&#43; | gam0022.net</title>
+    <link>http://localhost:1313/tags/c&#43;&#43;/</link>
+      <atom:link href="http://localhost:1313/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    <description>C&#43;&#43;</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 28 Dec 2016 00:03:38 +0900</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
+      <title>C&#43;&#43;</title>
+      <link>http://localhost:1313/tags/c&#43;&#43;/</link>
+    </image>
+    
+    <item>
+      <title>emscripten night !! #2で発表しました</title>
+      <link>http://localhost:1313/blog/2016/12/28/emsn2/</link>
+      <pubDate>Wed, 28 Dec 2016 00:03:38 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2016/12/28/emsn2/</guid>
+      <description>&lt;p&gt;12/21に開催された
+という勉強会に参加して、
+「Emscriptenを使ってブラウザ上でレイトレーシングする」というタイトルで10分間のLT発表を行いました。&lt;/p&gt;
+&lt;p&gt;こちらが発表資料です。&lt;/p&gt;
+&lt;script async class=&#34;speakerdeck-embed&#34; data-slide=&#34;1&#34; data-id=&#34;cec29326e01e463d8c7f6b586069ea4d&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;内容は
+をLT用に再構成したものです。&lt;/p&gt;
+&lt;h2 id=&#34;参加の動機&#34;&gt;参加の動機&lt;/h2&gt;
+&lt;p&gt;主催の 
+ さんからのお誘いがあったのと、Emscriptenを使ってるのはどんな人なんだろうという興味から勇気を出して参加しました。&lt;/p&gt;
+&lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;
+&lt;p&gt;Emscriptenだったら、Webフロントエンドの人も多いのかなーと思っていたら、
+蓋を開けてみたらC++勢やアセンブラ勢、Haskellの人みたいな感じの参加者層で、いい意味で期待を裏切られました！&lt;/p&gt;
+&lt;p&gt;私はC++やアセンブラについて、詳しいわけでないので、断片的にしか理解できない部分もありましたが、濃くて面白い発表が多かったです。&lt;/p&gt;
+&lt;p&gt;個人的にすごい期待しているWebAssemblyについて、Mozilla Japanの清水さんからお話も聞くことができました。&lt;/p&gt;
+&lt;p&gt;WebGL勢としてはスクエニの加島さんの「Unity WebGLを用いた乖離性ミリオンアーサーブラウザ版移植事例」も楽しみにしていました。
+このセッションはSNS NGだったので、現地参加した価値はあったなと感じました。
+2016年の現段階で、WebGLをつかった商業ゲームはかなり珍しいので、大変貴重な事例を聞くことができたと思います。&lt;/p&gt;
+&lt;p&gt;Googleの 
+ さんの発表では、実際のゲーム移植の試行錯誤などの実践的なお話を聞くことができました。
+かなり技術的には高度なことをしていて、すごいなーと思いました。VR対応も熱かったです！&lt;/p&gt;
+&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/JJt6VvQvR8hhiU&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;//www.slideshare.net/toyoshim/oh-java-script-emscripten&#34; title=&#34;Oh! java script 夢の続きを語ろうよ〜emscriptenの逆襲&#34; target=&#34;_blank&#34;&gt;Oh! java script 夢の続きを語ろうよ〜emscriptenの逆襲&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a target=&#34;_blank&#34; href=&#34;//www.slideshare.net/toyoshim&#34;&gt;Takashi Toyoshima&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;
+&lt;p&gt;junji hashimoto さんの発表も良かったです。Emscriptenでデバッグはどうするだろうとは、ずっと疑問に思っていたのですが、予想通りに闇でした…&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+さんの「emscriptenでドメイン層に型と速度を持ち込む」も面白かったです。
+Webフロントエンドでも型が持ち込まれていますが、EmscriptenでWebフロントエンドのドメイン層をC++で実装して、JavaScriptのUIのフレームワーク(React Redux)を組み合わせるお話でした。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;当日の様子&#34;&gt;当日の様子&lt;/h2&gt;
+&lt;p&gt;当日の様子はこちらにまとめられています。気になる方はぜひご覧ください。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

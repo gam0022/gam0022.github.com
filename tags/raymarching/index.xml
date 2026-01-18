@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Raymarching | gam0022.net</title>
+    <link>http://localhost:1313/tags/raymarching/</link>
+      <atom:link href="http://localhost:1313/tags/raymarching/index.xml" rel="self" type="application/rss+xml" />
+    <description>Raymarching</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 07 Aug 2023 10:00:00 +0900</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
+      <title>Raymarching</title>
+      <link>http://localhost:1313/tags/raymarching/</link>
+    </image>
+    
+    <item>
+      <title>『Unityバイブル R5夏号』の「Shader Graphの基本操作から発展的なテクニックまで」を執筆しました</title>
+      <link>http://localhost:1313/blog/2023/08/07/unity-bible/</link>
+      <pubDate>Mon, 07 Aug 2023 10:00:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2023/08/07/unity-bible/</guid>
+      <description>&lt;p&gt;8/29発売の
+のSECTION 01「Shader Graphの基本操作から発展的なテクニックまで」を執筆しました。&lt;/p&gt;
+&lt;!--
+[![『Unityバイブル R5夏号』](thumbnail.jpg)](thumbnail.png)
+--&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;div class=&#34;booklink-box&#34; style=&#34;text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;&#34;&gt;&lt;div class=&#34;booklink-image&#34; style=&#34;float:left;margin:0 15px 10px 0;&#34;&gt;&lt;a href=&#34;https://hb.afl.rakuten.co.jp/hgc/117c8a81.32450c02.117c8a82.14f884ba/yomereba_main_202412192309199444?pc=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F17588439%2F%3Frafcid%3Dwsc_b_bs_1051722217600006323%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F&#34; target=&#34;_blank&#34; &gt;&lt;img src=&#34;https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/5689/9784862465689_1_3.jpg?_ex=200x200&#34; style=&#34;border: none;&#34; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;booklink-info&#34; style=&#34;line-height:120%;zoom: 1;overflow: hidden;&#34;&gt;&lt;div class=&#34;booklink-name&#34; style=&#34;margin-bottom:10px;line-height:120%&#34;&gt;&lt;a href=&#34;https://hb.afl.rakuten.co.jp/hgc/117c8a81.32450c02.117c8a82.14f884ba/yomereba_main_202412192309199444?pc=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F17588439%2F%3Frafcid%3Dwsc_b_bs_1051722217600006323%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F&#34; target=&#34;_blank&#34; &gt;Unityバイブル R5夏号&lt;/a&gt;&lt;div class=&#34;booklink-powered-date&#34; style=&#34;font-size:8pt;margin-top:5px;font-family:verdana;line-height:120%&#34;&gt;posted with &lt;a href=&#34;https://yomereba.com&#34; rel=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;ヨメレバ&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;booklink-detail&#34; style=&#34;margin-bottom:5px;&#34;&gt;kakunpc/室星 亮太/細田 翔/山本 剛史/小林 慶祐/長谷川 孝二 ボーンデジタル 2023年08月29日頃    &lt;/div&gt;&lt;div class=&#34;booklink-link2&#34; style=&#34;margin-top:10px;&#34;&gt;&lt;div class=&#34;shoplinkrakuten&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 -50px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;https://hb.afl.rakuten.co.jp/hgc/117c8a81.32450c02.117c8a82.14f884ba/yomereba_main_202412192309199444?pc=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F17588439%2F%3Frafcid%3Dwsc_b_bs_1051722217600006323%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F&#34; target=&#34;_blank&#34; &gt;楽天ブックスで購入&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;shoplinkamazon&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;https://www.amazon.co.jp/exec/obidos/asin/4862465684/gam00220c-22/&#34; target=&#34;_blank&#34; &gt;Amazonで購入&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;shoplinkkindle&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;https://www.amazon.co.jp/gp/search?keywords=Unity%E3%83%90%E3%82%A4%E3%83%96%E3%83%AB%20R5%E5%A4%8F%E5%8F%B7&amp;__mk_ja_JP=%83J%83%5E%83J%83i&amp;url=node%3D2275256051&amp;tag=gam00220c-22&#34; target=&#34;_blank&#34; &gt;Kindleで購入&lt;/a&gt;&lt;/div&gt;            	  &lt;div class=&#34;shoplinkseven&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 -100px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3737095&amp;pid=891162441&amp;vc_url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3FsearchKeywordFlg%3D1%26keyword%3D9784862465689&amp;vcptn=kaereba&#34; target=&#34;_blank&#34; &gt;7netで購入&lt;img src=&#34;//ad.jp.ap.valuecommerce.com/servlet/atq/gifbanner?sid=3737095&amp;pid=891162441&#34; height=&#34;1&#34; width=&#34;1&#34; border=&#34;0&#34;&gt;&lt;/a&gt;&lt;/div&gt;            	  &lt;div class=&#34;shoplinkkino&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 -350px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3737095&amp;pid=891162443&amp;vc_url=http%3A%2F%2Fwww.kinokuniya.co.jp%2Ff%2Fdsg-01-9784862465689&amp;vcptn=kaereba&#34; target=&#34;_blank&#34; &gt;紀伊國屋書店で購入&lt;img src=&#34;//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3737095&amp;pid=891162443&#34; height=&#34;1&#34; width=&#34;1&#34; border=&#34;0&#34;&gt;&lt;/a&gt;&lt;/div&gt;	  	  	  &lt;div class=&#34;shoplinktoshokan&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 -300px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;http://calil.jp/book/4862465684&#34; target=&#34;_blank&#34; &gt;図書館で探す&lt;/a&gt;&lt;/div&gt;	&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;booklink-footer&#34; style=&#34;clear: left&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&#34;unityバイブル-r5夏号&#34;&gt;Unityバイブル R5夏号&lt;/h3&gt;
+&lt;p&gt;株式会社ボーンデジタルより販売されている「Unityバイブル」シリーズが、年2回の定期刊になりました。&lt;/p&gt;
+&lt;p&gt;本書が最初の定期刊として、8月29日に発売されます。&lt;/p&gt;
+&lt;p&gt;この号では、「10名の著者による至極の10テーマ」が取り上げられています。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;高品質なグラフィックスを表現するためのUniversal RPの各種機能の解説&lt;/li&gt;
+&lt;li&gt;Shader Graphの基本操作から発展的なテクニックまで&lt;/li&gt;
+&lt;li&gt;TimelineでUIとキャラクターの演出をつけてみよう&lt;/li&gt;
+&lt;li&gt;Photon Fusionによるリアルタイムネットワークゲーム&lt;/li&gt;
+&lt;li&gt;Unity Localizationを使ってゲームを多言語化してみよう&lt;/li&gt;
+&lt;li&gt;ゲームプレイの自動テスト&lt;/li&gt;
+&lt;li&gt;.NET向けIDE「JetBrains Rider」の活用【前編】&lt;/li&gt;
+&lt;li&gt;Editor拡張で作業効率を上げよう&lt;/li&gt;
+&lt;li&gt;すぐに使えるゲームサウンド演出&lt;/li&gt;
+&lt;li&gt;VRアプリケーションにおけるVRMアバターの導入&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;前回の
+は1000ページ超えの厚さで「鈍器」とも言われていましたが、本書はテーマを厳選して300ページに凝縮されたボリュームに仕上がりました。
+1テーマあたり約30ページとなり、各テーマの掘り下げも十分です。&lt;/p&gt;
+&lt;h3 id=&#34;shader-graphの基本操作から発展的なテクニックまで&#34;&gt;Shader Graphの基本操作から発展的なテクニックまで&lt;/h3&gt;
+&lt;p&gt;10のテーマのうち、「Shader Graphの基本操作から発展的なテクニックまで」というセクションを私が担当しました。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+
+
+
+  
+  &lt;blockquote class=&#34;border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6&#34;&gt;
+    &lt;p&gt;SDユニティちゃん ©Unity Technologies Japan/UCL&lt;/p&gt;
+
+  &lt;/blockquote&gt;
+
+&lt;p&gt;このセクションでは初心者向けの基本的な使い方から、Custom Functionなどの発展的なテーマまで幅広く扱いました。&lt;/p&gt;
+&lt;p&gt;Shader Graphを使う上で覚えおきたい重要なポイントをピックアップし、30ページにわたって丁寧に解説しています。&lt;/p&gt;
+&lt;p&gt;以下がセクションの見出しです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Shader Graphとは？
+&lt;ul&gt;
+&lt;li&gt;コラム：Shader Graph vs ShaderLab&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Shader Graphの基本画面&lt;/li&gt;
+&lt;li&gt;サンプル1：基本操作とPBRテクスチャ対応シェーダー
+&lt;ul&gt;
+&lt;li&gt;TIPS：Ridirect Nodeでエッジを整理しよう&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;サンプル2：ディゾルブシェーダー
+&lt;ul&gt;
+&lt;li&gt;TIPS：BackboardのCategory機能でプロパティを整理しよう&lt;/li&gt;
+&lt;li&gt;TIPS：Sticky Noteでコメントを残そう&lt;/li&gt;
+&lt;li&gt;TIPS：Group Selectionでノードをまとめよう&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;サンプル3：ToonシェーダーとCustom Function
+&lt;ul&gt;
+&lt;li&gt;TIPS：Sub Graphで機能を再利用しよう&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;サンプル4：プロシージャルテクスチャ&lt;/li&gt;
+&lt;li&gt;サンプル5：ポストエフェクト&lt;/li&gt;
+&lt;li&gt;このセクションのまとめと次のステップ
+&lt;ul&gt;
+&lt;li&gt;シェーダーとデモシーン&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Shader Graphの各機能をバランスよくマスターするための、5つの小規模なサンプルを用意しました。&lt;/p&gt;
+&lt;p&gt;（2023-08-14追記）サンプルコードをGitHubで公開しました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;なるべく複雑にならないようにシンプルに保ちながらも、そこそこの見栄えのするサンプルを目指しました。&lt;/p&gt;
+&lt;p&gt;TIPSでは「Ridirect Node」「BackboardのCategory機能」「Group Selection」「Sub Graph」など覚えておくと作業効率を向上できる機能の使い方なども紹介しました。&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;さいごに、この本の発行部数はAmazonの予約数によって決まるとのことなので、興味を持っていただける方はぜひ予約していただければ幸いです🙇‍♂️&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;ご予約いただいた方はありがとうございました！&lt;/p&gt;
+&lt;div class=&#34;booklink-box&#34; style=&#34;text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;&#34;&gt;&lt;div class=&#34;booklink-image&#34; style=&#34;float:left;margin:0 15px 10px 0;&#34;&gt;&lt;a href=&#34;https://hb.afl.rakuten.co.jp/hgc/117c8a81.32450c02.117c8a82.14f884ba/yomereba_main_202412192309199444?pc=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F17588439%2F%3Frafcid%3Dwsc_b_bs_1051722217600006323%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F&#34; target=&#34;_blank&#34; &gt;&lt;img src=&#34;https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/5689/9784862465689_1_3.jpg?_ex=200x200&#34; style=&#34;border: none;&#34; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;booklink-info&#34; style=&#34;line-height:120%;zoom: 1;overflow: hidden;&#34;&gt;&lt;div class=&#34;booklink-name&#34; style=&#34;margin-bottom:10px;line-height:120%&#34;&gt;&lt;a href=&#34;https://hb.afl.rakuten.co.jp/hgc/117c8a81.32450c02.117c8a82.14f884ba/yomereba_main_202412192309199444?pc=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F17588439%2F%3Frafcid%3Dwsc_b_bs_1051722217600006323%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F&#34; target=&#34;_blank&#34; &gt;Unityバイブル R5夏号&lt;/a&gt;&lt;div class=&#34;booklink-powered-date&#34; style=&#34;font-size:8pt;margin-top:5px;font-family:verdana;line-height:120%&#34;&gt;posted with &lt;a href=&#34;https://yomereba.com&#34; rel=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;ヨメレバ&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;booklink-detail&#34; style=&#34;margin-bottom:5px;&#34;&gt;kakunpc/室星 亮太/細田 翔/山本 剛史/小林 慶祐/長谷川 孝二 ボーンデジタル 2023年08月29日頃    &lt;/div&gt;&lt;div class=&#34;booklink-link2&#34; style=&#34;margin-top:10px;&#34;&gt;&lt;div class=&#34;shoplinkrakuten&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 -50px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;https://hb.afl.rakuten.co.jp/hgc/117c8a81.32450c02.117c8a82.14f884ba/yomereba_main_202412192309199444?pc=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F17588439%2F%3Frafcid%3Dwsc_b_bs_1051722217600006323%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F&#34; target=&#34;_blank&#34; &gt;楽天ブックスで購入&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;shoplinkamazon&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;https://www.amazon.co.jp/exec/obidos/asin/4862465684/gam00220c-22/&#34; target=&#34;_blank&#34; &gt;Amazonで購入&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;shoplinkkindle&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;https://www.amazon.co.jp/gp/search?keywords=Unity%E3%83%90%E3%82%A4%E3%83%96%E3%83%AB%20R5%E5%A4%8F%E5%8F%B7&amp;__mk_ja_JP=%83J%83%5E%83J%83i&amp;url=node%3D2275256051&amp;tag=gam00220c-22&#34; target=&#34;_blank&#34; &gt;Kindleで購入&lt;/a&gt;&lt;/div&gt;            	  &lt;div class=&#34;shoplinkseven&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 -100px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3737095&amp;pid=891162441&amp;vc_url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3FsearchKeywordFlg%3D1%26keyword%3D9784862465689&amp;vcptn=kaereba&#34; target=&#34;_blank&#34; &gt;7netで購入&lt;img src=&#34;//ad.jp.ap.valuecommerce.com/servlet/atq/gifbanner?sid=3737095&amp;pid=891162441&#34; height=&#34;1&#34; width=&#34;1&#34; border=&#34;0&#34;&gt;&lt;/a&gt;&lt;/div&gt;            	  &lt;div class=&#34;shoplinkkino&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 -350px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3737095&amp;pid=891162443&amp;vc_url=http%3A%2F%2Fwww.kinokuniya.co.jp%2Ff%2Fdsg-01-9784862465689&amp;vcptn=kaereba&#34; target=&#34;_blank&#34; &gt;紀伊國屋書店で購入&lt;img src=&#34;//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3737095&amp;pid=891162443&#34; height=&#34;1&#34; width=&#34;1&#34; border=&#34;0&#34;&gt;&lt;/a&gt;&lt;/div&gt;	  	  	  &lt;div class=&#34;shoplinktoshokan&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 -300px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;http://calil.jp/book/4862465684&#34; target=&#34;_blank&#34; &gt;図書館で探す&lt;/a&gt;&lt;/div&gt;	&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;booklink-footer&#34; style=&#34;clear: left&#34;&gt;&lt;/div&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Object Space Raymarching in Unreal Engine 5.2</title>
+      <link>http://localhost:1313/blog/2023/07/31/raymarching-in-ue5/</link>
+      <pubDate>Mon, 31 Jul 2023 10:00:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2023/07/31/raymarching-in-ue5/</guid>
+      <description>&lt;p&gt;これは
+のアドベントカレンダーの記事です。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;あまりレイトレに関連しないテーマですが、レイは飛ばしているので大目に見てください&lt;/li&gt;
+&lt;li&gt;レイトレ合宿ではレンダラーを自作する必要があるため、ゲームエンジンは使えません&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
+&lt;p&gt;Unreal Engine 5.2上でオブジェクトスペースのレイマーチングを実装したので、その解説をします。&lt;/p&gt;
+&lt;p&gt;レイマーチングをノードだけで実装するのは大変なので、MaterialのCustomノードを用いて複雑な処理はHLSLのコードで実装しました。&lt;/p&gt;
+&lt;p&gt;UE（Unreal Engine）のプロジェクトはGitHubに公開しています。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Object Space Raymarching in Unreal Engine 5.2&lt;a href=&#34;https://twitter.com/hashtag/UE5?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#UE5&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/UnrealEngine?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#UnrealEngine&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/UnrealEngine5?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#UnrealEngine5&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt; &lt;a href=&#34;https://t.co/42n2W87HnJ&#34;&gt;pic.twitter.com/42n2W87HnJ&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1684596333209075712?ref_src=twsrc%5Etfw&#34;&gt;July 27, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Randomization of glowing animation borders&lt;a href=&#34;https://twitter.com/hashtag/UE5?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#UE5&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/UnrealEngine?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#UnrealEngine&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/UnrealEngine5?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#UnrealEngine5&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Shader&lt;/a&gt; &lt;a href=&#34;https://t.co/FvLbVtE9Q3&#34;&gt;pic.twitter.com/FvLbVtE9Q3&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1685583942920089600?ref_src=twsrc%5Etfw&#34;&gt;July 30, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h3 id=&#34;読者対象&#34;&gt;読者対象&lt;/h3&gt;
+&lt;p&gt;この記事は以下の読者を対象としています。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1週間前の自分&lt;/li&gt;
+&lt;li&gt;レイマーチングやシェーダーの実装経験はあるが、UEは初心者の方&lt;/li&gt;
+&lt;li&gt;UEのカスタムシェーダーやMaterial Editorに興味がある方&lt;/li&gt;
+&lt;li&gt;UE上でノードでは難しい複雑なシェーダーを実装してみたい人&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;結果&#34;&gt;結果&lt;/h2&gt;
+&lt;p&gt;まずは実装結果を紹介します。&lt;/p&gt;
+&lt;h3 id=&#34;オブジェクトスペースのレイマーチング&#34;&gt;オブジェクトスペースのレイマーチング&lt;/h3&gt;
+&lt;p&gt;オブジェクトスペースのレイマーチングを実装しました。カスタムシェーダーをCubeに適用し、レイマーチングを行います。Cubeをレイマーチングのバウンディングボックスとして使用します。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;オブジェクトスペースにすることで、フルスクリーンのレイマーチングと比較して処理負荷を抑えることができます。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;カメラではなくCubeの表面からレイを飛ばすことで、レイマーチングの衝突判定を少ないイテレーション回数に抑えられる&lt;/li&gt;
+&lt;li&gt;レイマーチングの負荷の高いシェーダーの描画範囲を制限できる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;パラメーターのリアルタイム編集&#34;&gt;パラメーターのリアルタイム編集&lt;/h3&gt;
+&lt;p&gt;レイマーチングによる描画を行っているため、フラクタルのパラメーターをリアルタイムに編集できます。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;▲グローのアニメーションのボーダーを乱数で散らしたバージョン&lt;/p&gt;
+&lt;h3 id=&#34;actorのトランスフォームに追従&#34;&gt;Actorのトランスフォームに追従&lt;/h3&gt;
+&lt;p&gt;オブジェクトスペースのレイマーチングの実装のため、Actor（UnityのGameObjectに相当）のトランスフォームに追従します。&lt;/p&gt;
+&lt;h4 id=&#34;平行移動&#34;&gt;平行移動&lt;/h4&gt;
+&lt;p&gt;平行移動の結果を見ると、UEのレンダリング結果と統合できていることがわかります。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;他のオブジェクトと相互にライティングの影響を受けている&lt;/li&gt;
+&lt;li&gt;床に反射し、ライティング結果が周囲に自然に馴染んでいる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;h4 id=&#34;回転&#34;&gt;回転&lt;/h4&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;h4 id=&#34;拡大縮小&#34;&gt;拡大縮小&lt;/h4&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;実装の解説&#34;&gt;実装の解説&lt;/h2&gt;
+&lt;p&gt;ここからは実装の解説をします。&lt;/p&gt;
+&lt;h3 id=&#34;実装の全体流れ&#34;&gt;実装の全体流れ&lt;/h3&gt;
+&lt;p&gt;以下は実装の流れです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;UE上のHLSL（.ush）シェーダー開発環境の構築
+&lt;ul&gt;
+&lt;li&gt;C++の開発環境のセットアップ&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;AddShaderSourceDirectoryMapping&lt;/code&gt; を使用してシェーダーを配置するディレクトリを登録&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;UE上のレイマーチングの実装
+&lt;ul&gt;
+&lt;li&gt;HLSL（.ush）でレイマーチングを実装&lt;/li&gt;
+&lt;li&gt;MaterialのCustomノードの &lt;code&gt;Include File Paths&lt;/code&gt; にHLSLシェーダー（.ush）を指定し、レイマーチングの関数を呼び出す&lt;/li&gt;
+&lt;li&gt;Customノードの計算結果をResultノードに出力し、ライティング計算はエンジン側に任せる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;発展的な内容
+&lt;ul&gt;
+&lt;li&gt;オブジェクトスペースのレイマーチングに対応&lt;/li&gt;
+&lt;li&gt;レイマーチングの空間にカメラが潜った場合を考慮&lt;/li&gt;
+&lt;li&gt;他のオブジェクトの前後関係の解消&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;hlslushによるシェーダー開発環境の構築&#34;&gt;HLSL（.ush）によるシェーダー開発環境の構築&lt;/h3&gt;
+&lt;p&gt;Unityでは、シェーダーファイル（.shader）をAssetsフォルダーに配置するだけで認識されますが、UEではシェーダーを配置するディレクトリを明示的にエンジンに認識させる必要があります。&lt;/p&gt;
+&lt;p&gt;シェーダーを書くためにC++のコードを記述する必要があるのは面倒ですが、仕方ありませんね。&lt;/p&gt;
+&lt;p&gt;C++の関数である
+を呼び出すことで、エンジンがHLSLシェーダー（.ush）を認識できるようになります。&lt;/p&gt;
+&lt;p&gt;まずは、C++の開発環境を整える必要があります。以下の記事を参考に、UE用のC++の開発環境をセットアップしました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;C++の開発環境をセットアップしたら、次の記事の「普通の方法」を参考にして、AddShaderSourceDirectoryMappingを呼び出してシェーダーを配置するディレクトリをエンジン側に登録します。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;手順を箇条書きにすると以下のようになります。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;C++プロジェクト化&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;プロジェクト名.Build.cs&lt;/code&gt; に &lt;code&gt;RenderCore&lt;/code&gt; への依存関係を追加&lt;/li&gt;
+&lt;li&gt;プロジェクトにモジュール開始と終了の関数を追加&lt;/li&gt;
+&lt;li&gt;モジュール開始のStartupModule()に下記のコードを追加&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;FString&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ShaderDir&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FPaths&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Combine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;FPaths&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ProjectDir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Shaders&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;AddShaderSourceDirectoryMapping&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/Project&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ShaderDir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;このコードにより、プロジェクトの直下にある &lt;code&gt;Shaders&lt;/code&gt; ディレクトリに配置されたHLSLシェーダー（.ush）をエンジン側からIncludeできるようになります。&lt;/p&gt;
+&lt;h4 id=&#34;余談昔のueでhlslの関数定義やincludeは大変だった&#34;&gt;余談：昔のUEでHLSLの関数定義やincludeは大変だった&lt;/h4&gt;
+&lt;p&gt;過去のUEでは、HLSLをIncludeすることができず、Customノードの展開される仕様を利用して、関数定義や#includeをインジェクションする必要があったようです。&lt;/p&gt;
+&lt;p&gt;これは大変ですね。エンジンの改善により、HLSLのシェーダー開発がより使いやすくなったことは、喜ばしい進化と言えるでしょう。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;もんしょさんと話していたのは、カスタムノードをカッコで閉じちゃえば、あとは自由にコード書けちゃうぜ！というネタです。&lt;br&gt;実はこのTweetのマテリアルもこれを使用して書かれています。&lt;a href=&#34;https://t.co/y3P8BkDWyw&#34;&gt;https://t.co/y3P8BkDWyw&lt;/a&gt; &lt;a href=&#34;https://t.co/M4M5WX4u7m&#34;&gt;pic.twitter.com/M4M5WX4u7m&lt;/a&gt;&lt;/p&gt;&amp;mdash; Takuro Kayumi (@TakuroKX) &lt;a href=&#34;https://twitter.com/TakuroKX/status/670292440369094656?ref_src=twsrc%5Etfw&#34;&gt;November 27, 2015&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;material全体&#34;&gt;Material全体&lt;/h3&gt;
+&lt;p&gt;次の画像はMaterialのグラフ全体です。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;このグラフでは、レイマーチングの処理をHLSLで実装し、Customノードから呼び出しています。&lt;/p&gt;
+&lt;p&gt;ノードとしては以下の処理のみ実装しています。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;カメラのレイの生成&lt;/li&gt;
+&lt;li&gt;前後関係の解消のためのPixel Depth Offsetの計算&lt;/li&gt;
+&lt;li&gt;Emissiveのパターン計算&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;また、オブジェクトスペースのレイマーチングを行うための座標系の計算もノードで行われています。レイマーチングのCustomノードの前後にはTransformノードが接続されています。&lt;/p&gt;
+&lt;h3 id=&#34;hlslシェーダーでレイマーチングを実装&#34;&gt;HLSLシェーダーでレイマーチングを実装&lt;/h3&gt;
+&lt;p&gt;MaterialのCustomノードのDetailsからInclude File Pathsを指定し、HLSLファイル（.ush）をインクルードします。&lt;/p&gt;
+&lt;p&gt;このとき「実際のファイルパス」と「Include File Paths」の指定に違いがある点に注意してください。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ファイルパスの例: &lt;code&gt;D:\UnrealProjects\プロジェクト名\Shaders\Raymarching.ush&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Include File Paths: &lt;code&gt;/Project/Raymarching.ush&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;Raymarching.ush&lt;/code&gt; のHLSLコードの実装例は以下の通りです。レイマーチングの基本的な実装方法については説明しません。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#pragma once
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;sdBox&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;q&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;abs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;length&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;q&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;min&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;q&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;q&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;q&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// メンガーのスポンジの距離関数
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dMenger&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;z0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;offset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;scale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inout&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;float4&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ifsPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;float4&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;z&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;float4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;loop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;z&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;abs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xy&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;yx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xz&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;yz&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;z&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;scale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xyz&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;offset&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;scale&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.5&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;offset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;scale&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;offset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;scale&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;ifsPosition&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;length&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;abs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xyz&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.05&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uniformScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerOffst&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inout&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;float4&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ifsPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;pos&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uniformScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dMenger&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerOffst&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ifsPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uniformScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 偏微分から法線を計算
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;calcNormal&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uniformScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerOffst&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inout&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;float4&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ifsPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;eps&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.001&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;normalize&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;eps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uniformScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerOffst&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ifsPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;eps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uniformScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerOffst&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ifsPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;eps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uniformScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerOffst&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ifsPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;eps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uniformScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerOffst&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ifsPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;eps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uniformScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerOffst&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ifsPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;eps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uniformScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerOffst&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ifsPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// Ambient Occlusionを計算
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;calcAO&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uniformScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerOffst&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inout&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;float4&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ifsPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;occ&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sca&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;h&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.01&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.12&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;4.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pos&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;h&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uniformScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerOffst&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ifsPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;occ&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;h&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sca&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;sca&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.95&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;occ&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.35&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;break&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;saturate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;clamp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;3.0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;occ&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.5&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.5&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// エッジを計算
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;calcEdge&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uniformScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerOffst&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inout&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;float4&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ifsPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;edge&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;float2&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;float2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.01&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xyy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uniformScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerOffst&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ifsPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xyy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uniformScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerOffst&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ifsPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d3&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;yxy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uniformScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerOffst&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ifsPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d4&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;yxy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uniformScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerOffst&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ifsPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d5&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;yyx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uniformScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerOffst&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ifsPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d6&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;yyx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uniformScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerOffst&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ifsPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uniformScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerOffst&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ifsPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;2.&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;edge&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;abs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;abs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d3&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d4&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;abs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d5&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d6&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;edge&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;smoothstep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sqrt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;edge&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;2.&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;edge&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 原点にあるサイズが100x100x100のCubeの内部にいるかどうかを判定
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;isInsideCube&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sdBox&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;50&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xxx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;raymarching&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;// Inputs
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;origin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ray&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;raymarchingLoop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uniformScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerOffst&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;// Additional Outpus
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;inout&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inout&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;depth&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inout&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hitPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inout&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;float4&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ifsPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;inout&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;albedo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inout&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;normal&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inout&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ao&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inout&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;emissive&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;// レイマーチング
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;hit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;depth&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// レイの進んだ距離
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;origin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// レイの先端の座標
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// レイマーチングのループカウンター
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;loop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;raymarchingLoop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uniformScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerOffst&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ifsPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;// 最短距離を0に近似できるなら、オブジェクトに衝突したとみなして、ループを抜けます
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;abs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;break&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;depth&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 最短距離だけレイを進めます
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;origin&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ray&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;depth&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// レイの先端の座標を更新します
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;// バウンディングボックスの中にレイが留まっていればヒットしたと判定
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;hit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;isInsideCube&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;hitPosition&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;float4&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;_ifsPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;// ライティングのパラメーター
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;normal&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;calcNormal&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uniformScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerOffst&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;_ifsPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 法線
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;emissive&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;calcEdge&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uniformScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerOffst&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;_ifsPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// エッジ
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;ao&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;calcAO&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;normal&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uniformScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerOffst&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;_ifsPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// AO
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;albedo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;discard&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;customノードのdetails&#34;&gt;CustomノードのDetails&lt;/h3&gt;
+&lt;p&gt;CustomノードのDetailsは以下のように設定します。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;CustomノードのCodeでは、raymarhcing関数を呼び出します。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;albedo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;objectAlbedo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;raymarching&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;origin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ray&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;raymarchingLoop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;uniformScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerOffst&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mengerScale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;hit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;depth&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hitPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ifsPosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;albedo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;normal&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ao&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;emissive&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;albedo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;Inputs&lt;/code&gt;と&lt;code&gt;Additional Outpus&lt;/code&gt;には、&lt;code&gt;Raymarching.ush&lt;/code&gt;の&lt;code&gt;raymarching&lt;/code&gt;関数の全パラメーターを指定します。&lt;/p&gt;
+&lt;p&gt;パラメーターの多い関数なので手間はかかりますが、ミスのないように注意しながら1個1個指定します。&lt;/p&gt;
+&lt;p&gt;注意点として、関数のパラメーターの順序を変更したり、新しいパラメーターを追加すると、ノードの接続情報も再設定する必要があります。&lt;/p&gt;
+&lt;!--
+UEのMaterialのノードの接続は番号（整数のインデックス）で接続情報を保持しているようなので、パラメーターの順序を入れ替えたり、途中にパラメーターを追加すると、ノード上の接続もやり直しになります。
+--&gt;
+&lt;p&gt;繰り返しになりますが、Include File Pathsは実際のファイルパスとは異なる点に留意して、&lt;code&gt;/Project/Raymarching.ush&lt;/code&gt;と指定してください。&lt;/p&gt;
+&lt;h3 id=&#34;material全体のdetails&#34;&gt;Material全体のDetails&lt;/h3&gt;
+&lt;p&gt;Material全体のDetailsは以下のように設定します。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Material Domain: Surface
+&lt;ul&gt;
+&lt;li&gt;レイマーチングはボリュームレダリングの印象があるかもしれませんが、Surfaceで問題ありません&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Blend Mode: Masked
+&lt;ul&gt;
+&lt;li&gt;レイマーチングの衝突判定によって形状をマスクする必要があります&lt;/li&gt;
+&lt;li&gt;このオプションを有効にすることで、Opacity Maskを出力できます
+&lt;ul&gt;
+&lt;li&gt;交差している場合は1、交差していない場合は0を出力します&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Shading Model: Default Lit
+&lt;ul&gt;
+&lt;li&gt;ライティング計算はエンジン側に任せます&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Two Sideded: ON
+&lt;ul&gt;
+&lt;li&gt;カメラがレイマーチングの内部に入った場合に両面描画が必要です&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;materialノード解説カメラのレイの生成&#34;&gt;Materialノード解説：カメラのレイの生成&lt;/h3&gt;
+&lt;p&gt;ここからはノードの解説をします。まずはカメラのレイを生成するためのノードです。&lt;/p&gt;
+&lt;p&gt;次のようなノードでカメラのレイを生成しています。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;レイは2つの3次元ベクトルで定義されます。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;origin: レイの原点&lt;/li&gt;
+&lt;li&gt;ray: レイの向き&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;rayの計算&#34;&gt;rayの計算&lt;/h4&gt;
+&lt;p&gt;レイの方向（ray）はシンプルです。&lt;/p&gt;
+&lt;p&gt;カメラの位置と、描画しようとしているSurfaceの座標（Absolute World Position）の差分（Subtract）から計算できます。&lt;/p&gt;
+&lt;p&gt;正規化（Normalize）してから、Transform Vectorノードでワールドスペースからローカルスペースに変換しています。&lt;/p&gt;
+&lt;p&gt;今回はオブジェクトスペースのレイマーチングのため、レイマーチングのCustomノードに入力する位置や向きはすべてローカルスペースに変換する必要があります。&lt;/p&gt;
+&lt;h4 id=&#34;originの計算&#34;&gt;originの計算&lt;/h4&gt;
+&lt;p&gt;レイの原点（origin）の計算には分岐（DynamicBranch）があります。&lt;/p&gt;
+&lt;p&gt;これはカメラがレイマーチングの空間の内部に潜った場合を考慮しているためです。&lt;/p&gt;
+&lt;p&gt;カメラの位置によってoriginを分岐しています。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;カメラが外部にある場合: origin = Absolute World Position&lt;/li&gt;
+&lt;li&gt;カメラが内部にある場合: origin = カメラの位置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;また、originもローカルスペースにする必要があるため、Transform Positionノードで変換しています。&lt;/p&gt;
+&lt;p&gt;カメラの内部/外部の判定はInsideCubeノードで行われています。これもCustomノードです。&lt;/p&gt;
+&lt;p&gt;Codeには &lt;code&gt;isInsideCube(localPos)&lt;/code&gt; と指定しています。これは&lt;code&gt;Raymarching.ush&lt;/code&gt;で定義された関数です。&lt;/p&gt;
+&lt;p&gt;この分岐によって、カメラがレイマーチングの外部にある場合でも内部にある場合でも、問題なく動作するようになっています。&lt;/p&gt;
+&lt;p&gt;また、「Two Sideded: ON」にしている理由は、カメラがレイマーチングの内部に入っている場合において、Cubeの裏面側でレイマーチングを描画するためです。&lt;/p&gt;
+&lt;p&gt;これによって、以下のGIFアニメーションでは、カメラがレイマーチングの空間の内部に入り込んだ場合でも正常に描画されています。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;materialノード解説resultノードへの出力&#34;&gt;Materialノード解説：Resultノードへの出力&lt;/h3&gt;
+&lt;p&gt;RaymarchingのCustomノードの出力を、それぞれResultノードに接続します。&lt;/p&gt;
+&lt;p&gt;これによりレイマーチングの衝突判定の結果をライティング計算に反映させます。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;hit
+&lt;ul&gt;
+&lt;li&gt;レイマーチングの衝突判定の結果（0なら衝突しなかった、1なら衝突した）です&lt;/li&gt;
+&lt;li&gt;Resultノードの &lt;code&gt;Opacity Mask&lt;/code&gt; に接続することで、レイマーチングがヒットしなかったPixelをdiscardできます&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;normal
+&lt;ul&gt;
+&lt;li&gt;ローカルスペースの法線です&lt;/li&gt;
+&lt;li&gt;ワールドスペースに変換（TransformVector）してから、Resultノードの &lt;code&gt;Normal&lt;/code&gt; に接続します&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ao
+&lt;ul&gt;
+&lt;li&gt;[0-1]のパラメーターなので、そのままResultノードの &lt;code&gt;Ambient Occlusion&lt;/code&gt; に接続します&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;materialノード解説前後関係の解決pixel-depth-offsetの計算&#34;&gt;Materialノード解説：前後関係の解決（Pixel Depth Offsetの計算）&lt;/h3&gt;
+&lt;p&gt;他のオブジェクトと重なった場合でも、前後関係を正しく解決するための工夫について説明します。&lt;/p&gt;
+&lt;p&gt;以下のGIFアニメーションのように、白い球体と重なっている場合でも、前後関係を正しく解決できています。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;UEのMaterialではDepthBufferを直接書き込むことはできませんが、ワールド座標でのDepthの押し込み距離から、Pixel Depth Offsetを計算することで前後関係を解決しています。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;Pixel Depth Offsetは、ワールド空間でのオフセット距離を計算する必要があります。したがって、Raymarchingの衝突点（hit）をTransform Positionノードを使用してワールド座標に変換し、Absolute World Positionとの差分（Subtract）を計算し、その距離（Length）を計算しています。&lt;/p&gt;
+&lt;p&gt;Pixel Depth Offsetでは、カメラの奥方向にのみオフセットできます。逆に手前にオフセットさせることはできません。この制約は、パフォーマンスの向上を目的としています。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;カメラがレイマーチングの内部にある場合、Cubeの裏面のSurfaceからは、衝突点（hit）が手前に来るため、Pixel Depth Offsetはマイナス値となります。
+しかしこのマイナス値は利用できないため、カメラが内部にある場合は、&lt;code&gt;Pixel Depth Offset = 0&lt;/code&gt; となるようにLerpノードで分岐しています&lt;/p&gt;
+&lt;!--
+今回はLerpで分岐を処理しましたが、`Max(0, x)` でも良いと思います。
+--&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;UE5.2でオブジェクトスペースのレイマーチングを実装できた
+&lt;ul&gt;
+&lt;li&gt;Actorに追従し、通常のMeshのようにギズモによりマウスで配置や変形ができる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;エンジンのレンダリング機能とも破綻なく統合できた
+&lt;ul&gt;
+&lt;li&gt;床への反射やグローバルイルミネーションに統合できた&lt;/li&gt;
+&lt;li&gt;Opacity Mask、Pixel Depth Offsetを利用して、他のオブジェクトの前後関係なども解決できた&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ノードとコードの役割分担をうまくできた
+&lt;ul&gt;
+&lt;li&gt;複雑な処理はHLSLによるコードで実装し、Customノードで呼び出す&lt;/li&gt;
+&lt;li&gt;オブジェクトスペースのための座標変換はノードを利用することでシンプルに実装できた&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;UEの細かいTipsについては別記事でまとめる予定
+&lt;ul&gt;
+&lt;li&gt;「Ctrl + 1 + 左クリック」でスカラーの定数ノードを作成できる&lt;/li&gt;
+&lt;li&gt;VS2022プロジェクトの作成に失敗する場合、Source Code Editorを再選択すると解決することがある&lt;/li&gt;
+&lt;li&gt;UnityとUEの座標系やスケールの違いについて&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;参考資料&#34;&gt;参考資料&lt;/h2&gt;
+&lt;p&gt;UE4やUnity上でのレイマーチング実装の前例を以下に紹介します。これらの情報をとても参考にさせていただきました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+
+&lt;ul&gt;
+&lt;li&gt;UE4上でのレイマーチング実装の取り組み&lt;/li&gt;
+&lt;li&gt;当時は Include File Paths が存在しなかったため、Customノードの関数定義に対するハックが必要であったことなどに触れています。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Unity HDRP上でのレイマーチング実装の取り組み&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Unity ビルドインRP・
+上でのレイマーチングの実装の取り組み&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>『Unityゲーム プログラミング・バイブル 2nd Generation』のレイマーチングとTimelineの章を執筆しました</title>
+      <link>http://localhost:1313/blog/2021/06/08/unity-bible2/</link>
+      <pubDate>Tue, 08 Jun 2021 10:30:19 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2021/06/08/unity-bible2/</guid>
+      <description>&lt;p&gt;6/29発売の
+を執筆しました。&lt;/p&gt;
+&lt;!--
+[![『Unityゲーム プログラミング・バイブル 2nd Generation』](Collage_Fotor.jpg)](Collage_Fotor.png)
+--&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;div class=&#34;booklink-box&#34; style=&#34;text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;&#34;&gt;&lt;div class=&#34;booklink-image&#34; style=&#34;float:left;margin:0 15px 10px 0;&#34;&gt;&lt;a href=&#34;https://hb.afl.rakuten.co.jp/hgc/117c8a81.32450c02.117c8a82.14f884ba/yomereba_main_202412192310480768?pc=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F16742438%2F%3Frafcid%3Dwsc_b_bs_1051722217600006323%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F&#34; target=&#34;_blank&#34; &gt;&lt;img src=&#34;https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/5078/9784862465078.jpg?_ex=200x200&#34; style=&#34;border: none;&#34; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;booklink-info&#34; style=&#34;line-height:120%;zoom: 1;overflow: hidden;&#34;&gt;&lt;div class=&#34;booklink-name&#34; style=&#34;margin-bottom:10px;line-height:120%&#34;&gt;&lt;a href=&#34;https://hb.afl.rakuten.co.jp/hgc/117c8a81.32450c02.117c8a82.14f884ba/yomereba_main_202412192310480768?pc=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F16742438%2F%3Frafcid%3Dwsc_b_bs_1051722217600006323%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F&#34; target=&#34;_blank&#34; &gt;Unity ゲーム プログラミング・バイブル 2nd Generation&lt;/a&gt;&lt;div class=&#34;booklink-powered-date&#34; style=&#34;font-size:8pt;margin-top:5px;font-family:verdana;line-height:120%&#34;&gt;posted with &lt;a href=&#34;https://yomereba.com&#34; rel=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;ヨメレバ&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;booklink-detail&#34; style=&#34;margin-bottom:5px;&#34;&gt;森 哲哉/布留川 英一/西森 丈俊/車谷 勇人/一條 貴彰/打田 恭平 ボーンデジタル 2021年06月29日頃    &lt;/div&gt;&lt;div class=&#34;booklink-link2&#34; style=&#34;margin-top:10px;&#34;&gt;&lt;div class=&#34;shoplinkrakuten&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 -50px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;https://hb.afl.rakuten.co.jp/hgc/117c8a81.32450c02.117c8a82.14f884ba/yomereba_main_202412192310480768?pc=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F16742438%2F%3Frafcid%3Dwsc_b_bs_1051722217600006323%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F&#34; target=&#34;_blank&#34; &gt;楽天ブックスで購入&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;shoplinkamazon&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;https://www.amazon.co.jp/exec/obidos/asin/4862465072/gam00220c-22/&#34; target=&#34;_blank&#34; &gt;Amazonで購入&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;shoplinkkindle&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;https://www.amazon.co.jp/gp/search?keywords=Unity%20%E3%82%B2%E3%83%BC%E3%83%A0%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%BB%E3%83%90%E3%82%A4%E3%83%96%E3%83%AB%202nd%20Generation&amp;__mk_ja_JP=%83J%83%5E%83J%83i&amp;url=node%3D2275256051&amp;tag=gam00220c-22&#34; target=&#34;_blank&#34; &gt;Kindleで購入&lt;/a&gt;&lt;/div&gt;            	  &lt;div class=&#34;shoplinkseven&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 -100px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3737095&amp;pid=891162441&amp;vc_url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3FsearchKeywordFlg%3D1%26keyword%3D9784862465078&amp;vcptn=kaereba&#34; target=&#34;_blank&#34; &gt;7netで購入&lt;img src=&#34;//ad.jp.ap.valuecommerce.com/servlet/atq/gifbanner?sid=3737095&amp;pid=891162441&#34; height=&#34;1&#34; width=&#34;1&#34; border=&#34;0&#34;&gt;&lt;/a&gt;&lt;/div&gt;            	  &lt;div class=&#34;shoplinkkino&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 -350px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3737095&amp;pid=891162443&amp;vc_url=http%3A%2F%2Fwww.kinokuniya.co.jp%2Ff%2Fdsg-01-9784862465078&amp;vcptn=kaereba&#34; target=&#34;_blank&#34; &gt;紀伊國屋書店で購入&lt;img src=&#34;//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3737095&amp;pid=891162443&#34; height=&#34;1&#34; width=&#34;1&#34; border=&#34;0&#34;&gt;&lt;/a&gt;&lt;/div&gt;	  	  	  &lt;div class=&#34;shoplinktoshokan&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 -300px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;http://calil.jp/book/4862465072&#34; target=&#34;_blank&#34; &gt;図書館で探す&lt;/a&gt;&lt;/div&gt;	&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;booklink-footer&#34; style=&#34;clear: left&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;『Unityゲーム プログラミング・バイブル 2nd Generation』について、公式ページから紹介文を引用します。&lt;/p&gt;
+
+
+
+  
+  &lt;blockquote class=&#34;border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6&#34;&gt;
+    &lt;p&gt;&lt;strong&gt;Unityのゲーム開発現場で最も使われた決定版書籍が、大幅バージョンアップして登場!&lt;/strong&gt;
+&lt;strong&gt;ゲームの開発現場で即実践できるスキルが身につく!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;本書は、ゲーム開発で最も使われている「Unity」の入門や初級レベルを卒業した方向けの書籍です。ゲームの開発現場で、即実践できるスキルが身につくように、&lt;strong&gt;「37」の最新のトピックを網羅&lt;/strong&gt;しました。&lt;/p&gt;
+&lt;p&gt;本書には、第一線の現場で活躍している23名の著者陣が参加しており、ゲーム開発のノウハウやTipsが満載されています。またほとんどのトピックでは、サンプルゲームがダウンロードでき、実際に動かしながら、実践的に学んでいくことが可能です。&lt;/p&gt;
+&lt;p&gt;Unityでのゲーム開発のさまざまな場面で、すぐに役立つ1冊となっています。&lt;/p&gt;
+
+  &lt;/blockquote&gt;
+
+&lt;!--
+![Unityゲーム プログラミング・バイブル 2nd Generation](Collage_Fotor.jpg)
+--&gt;
+&lt;p&gt;37のトピックのうち、私は次の2つを担当しました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;レイマーチング：基礎から応用まで&lt;/li&gt;
+&lt;li&gt;Timelineによる映像制作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;この記事では私の担当した内容を簡単に紹介します。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;『Unityゲーム プログラミング・バイブル 2nd Generation 』を執筆しました！&lt;br&gt;6/29発売です！&lt;br&gt;&lt;br&gt;・レイマーチング：基礎から応用まで&lt;br&gt;・Timelineによる映像制作&lt;br&gt;&lt;br&gt;の2本を担当しました。&lt;a href=&#34;https://t.co/lYWIxseCON&#34;&gt;https://t.co/lYWIxseCON&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1392725305526161411?ref_src=twsrc%5Etfw&#34;&gt;May 13, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h2 id=&#34;レイマーチング基礎から応用まで&#34;&gt;レイマーチング：基礎から応用まで&lt;/h2&gt;
+&lt;div style=&#34;display: flex;&#34;&gt;
+    &lt;div style=&#34;width: 50%;&#34;&gt;&lt;a href=&#34;11_RaymarchingOpRepeat.jpg&#34;&gt;&lt;img src=&#34;11_RaymarchingOpRepeat.jpg&#34; alt=&#34;サンプル11 距離関数の応用：無限複製編&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
+    &lt;div style=&#34;width: 50%;&#34;&gt;&lt;a href=&#34;13_RaymarchingBoolean2.jpg&#34;&gt;&lt;img src=&#34;13_RaymarchingBoolean2.jpg&#34; alt=&#34;サンプル13 距離関数の応用：無限複製とブーリアン演算の合せ技&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!--
+&lt;div style=&#34;display: flex;&#34;&gt;
+    &lt;div style=&#34;width: 50%;&#34;&gt;
+
+[![サンプル11 距離関数の応用：無限複製編](11_RaymarchingOpRepeat.jpg)](11_RaymarchingOpRepeat.jpg)
+    &lt;/div&gt;
+    &lt;div style=&#34;width: 50%;&#34;&gt;
+
+[![サンプル13 距離関数の応用：無限複製とブーリアン演算の合せ技](13_RaymarchingBoolean2.jpg)](13_RaymarchingBoolean2.jpg)
+&lt;/div&gt;
+&lt;/div&gt;
+--&gt;
+&lt;p&gt;このセクションでは「レイマーチング」という手法により、グラフィックスを描画する仕組みを紹介しました。&lt;/p&gt;
+&lt;p&gt;レイマーチングと似た名前の手法にレイトレーシングがありますが、どちらもレイ、つまり光線をプログラムでシミュレーションしてカメラに映る画像を生成する手法です。&lt;/p&gt;
+&lt;p&gt;レイマーチングでは、距離関数という数式で定義した形状に対して、レイとの交差判定を行うことで照明や反射などの計算を行います。
+そのため、通常のUnityの描画パイプラインではできないような表現が可能になるということが特徴です。&lt;/p&gt;
+&lt;p&gt;このセクションでは、Unityのシェーダーのコードを記述してレイマーチングを実装します。
+レイマーチングの基礎から応用まで解説するために、合計13個のサンプルシーンを用意しました。
+少しずつ処理を加えることで、一歩ずつレベルアップしながら理解を深められるチュートリアル形式のサンプルシーンになっています。&lt;/p&gt;
+&lt;p&gt;サンプルプロジェクトは、筆者のGitHubにて公開しています。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;このセクションで学べることとそのポイントを、以下にまとめておきます。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;レイマーチングのアルゴリズムと本質
+&lt;ul&gt;
+&lt;li&gt;レイマーチングは魔法の道具ではなく、単なる衝突判定の手法&lt;/li&gt;
+&lt;li&gt;数式（距離関数）によるプロシージャルなモデリング手法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;コンピュータグラフィックスの基礎
+&lt;ul&gt;
+&lt;li&gt;レイマーチングが扱う範囲はあくまで衝突判定&lt;/li&gt;
+&lt;li&gt;ライティングは通常のシェーダーとまったく同じように実装する必要がある&lt;/li&gt;
+&lt;li&gt;Unityエンジンのシーンやライティング機能を利用せずに、グラフィックスを描画する一連の流れを学べるため、コンピュータグラッフィックスの学習教材としても有用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;執筆の裏話&#34;&gt;執筆の裏話&lt;/h3&gt;
+&lt;p&gt;執筆の裏話としては作図にレイマーチングを利用しました。&lt;/p&gt;
+&lt;p&gt;よくあるレイトレーシングの原理（スクリーン上のピクセルに対応する向きのレイを飛ばして交差判定）を解説するための図が欲しかったので、レイマーチングで作図しました。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;シェーダーは最強の作図ツールなので、&lt;br&gt;レイトレーシングの原理を説明するための図をUnityシェーダーだけで作りました。 &lt;a href=&#34;https://t.co/VuLBhoqEaY&#34;&gt;pic.twitter.com/VuLBhoqEaY&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1343070779961839617?ref_src=twsrc%5Etfw&#34;&gt;December 27, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;ちゃんとアニメーションもできるように作り込んだのですが、書籍だと静止画になってしまうのが残念ですね。&lt;/p&gt;
+&lt;h2 id=&#34;timelineによる映像制作&#34;&gt;Timelineによる映像制作&lt;/h2&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;このセクションでは、Unityの
+を利用した映像作品の制作について解説しました。&lt;/p&gt;
+&lt;p&gt;このセクションで学べる項目は、以下の通りです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+を利用したレイマーチング&lt;/li&gt;
+&lt;li&gt;Post-processing Stackの導入からビルトインエフェクトの利用、カスタムエフェクトの作成まで&lt;/li&gt;
+&lt;li&gt;Timelineの基本からカスタムトラックの作成まで&lt;/li&gt;
+&lt;li&gt;Cinemachineの基本的な使い方から、Post-processing Stackとの連携まで&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--
+このセクションのサンプルシーンは、以下の各バージョンで作成しています。
+
+- Unity 2020.1.8f1
+- uRaymarching: v2.1.1
+- Post-processing Stack（v2）2.3.0
+- Timeline 1.3.6
+- Cinemachine 2.6.3
+- TextMeshPro 3.0.3
+- Unity Recorder 2.5.2
+--&gt;
+&lt;p&gt;映像の作成のためには、数多くのUnityの機能とAssetを組み合わせる必要があります。&lt;/p&gt;
+&lt;p&gt;それぞれのUnityの機能とAssetにフォーカスを当てた合計12個のサンプルシーンを用意しました。
+サンプルシーンはチュートリアル形式で、一歩ずつレベルアップしながら理解を深められるようになっています。&lt;/p&gt;
+&lt;p&gt;サンプルプロジェクトは、筆者のGitHubで公開しています。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;&lt;img alt=&#34;サンプル12 音楽と同期して演出をブラッシュアップ&#34;
+           src=&#34;http://localhost:1313/blog/2021/06/08/unity-bible2/12_BeatSync.gif&#34;
+           loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;執筆の裏話-1&#34;&gt;執筆の裏話&lt;/h3&gt;
+&lt;p&gt;これも執筆の裏話になりますが、&lt;strong&gt;デモのメイキングを書籍として出版する&lt;/strong&gt; という個人的な試みに今回はチャレンジしました。&lt;/p&gt;
+&lt;p&gt;このツイートが伏線でした。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;RevisionのWriteup先には意外な &amp;quot;媒体&amp;quot; を予定しています&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1379103521409101826?ref_src=twsrc%5Etfw&#34;&gt;April 5, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;サンプルの完成形のデモが『Secret stage BOSS』です。Revision2021のPC Demo Compoで初リリースしました。&lt;/p&gt;
+&lt;p&gt;グラフィックスは私（
+）、サウンドはさだきちさん（
+）が担当しました。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&amp;quot;Secret stage BOSS&amp;quot; by &lt;a href=&#34;https://twitter.com/gam0022?ref_src=twsrc%5Etfw&#34;&gt;@gam0022&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://twitter.com/sadakkey?ref_src=twsrc%5Etfw&#34;&gt;@sadakkey&lt;/a&gt;&lt;br&gt;&lt;br&gt;Our new PC Demo for &lt;a href=&#34;https://twitter.com/hashtag/Revision2021?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Revision2021&lt;/a&gt; (&lt;a href=&#34;https://twitter.com/revision_party?ref_src=twsrc%5Etfw&#34;&gt;@revision_party&lt;/a&gt;)&lt;br&gt;&lt;br&gt;It&amp;#39;s a Massive Greetings to &amp;quot;2nd stage BOSS&amp;quot; &lt;a href=&#34;https://t.co/vVWJJB4cyS&#34;&gt;pic.twitter.com/vVWJJB4cyS&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1378967812463501313?ref_src=twsrc%5Etfw&#34;&gt;April 5, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;『Secret stage BOSS』は
+というデモシーン歴史に残る伝説級のデモのオマージュ作品です。&lt;/p&gt;
+&lt;p&gt;自機やボスが登場するシューティングゲーム風のストーリーを、自分たちなりのビジュアルと音楽のスタイルで再現しました。&lt;/p&gt;
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/srO7IxNckZ8&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;GitHub上でUnityプロジェクトを丸ごと公開しているので、もし興味があれば参考にしてください。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;You can see the source code &amp;amp; Unity project on GitHub!&lt;br&gt;&lt;br&gt;ソースコードとUnityプロジェクトをGitHubで公開しました！&lt;a href=&#34;https://t.co/dQJV35DGKB&#34;&gt;https://t.co/dQJV35DGKB&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1378975301456130049?ref_src=twsrc%5Etfw&#34;&gt;April 5, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h2 id=&#34;おわりに&#34;&gt;おわりに&lt;/h2&gt;
+&lt;p&gt;6年前にレイマーチングと出会ってから、レイマーチングの面白さに魅せられ続け、レイマーチングに関するさまざまな情報を発信してきました。
+今回、Unityの一般ユーザー向けの書籍でレイマーチングについて解説をする機会をいただけたことをとても光栄に思います。
+これまでシェーダーと縁がなかった方にもシェーダーに興味をもってもらえれば幸いです。&lt;/p&gt;
+&lt;p&gt;日本語で書かれたレイマーチングの入門情報はかなり充実してきましたが、その次のステップの情報が不足しているように感じていました。
+本書ではレイマーチングの中級者向けの情報として、距離関数によるモデリングや本格的なライティングまで解説しました。
+レイマーチングで球体のレンダリングはできたけど、その次のステップが分からないという方にぜひ読んでいただきたいです。&lt;/p&gt;
+&lt;p&gt;本書は定価8580円と気軽に購入しづらいかもしれませんが、&lt;strong&gt;フルカラーの1112ページ、扱うテーマの広さ、得られる情報の密度&lt;/strong&gt;を踏まえると妥当（むしろお買い得！）な値段だと思います。
+初版部数はAmazonでの予約数をもとに決まるそうなので、ぜひ
+をお願いします！&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;リアルタイムレンダリング 第4版よりもページ数が多いことに気がついて驚いています。 &lt;a href=&#34;https://t.co/zJGUYOm8XL&#34;&gt;https://t.co/zJGUYOm8XL&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1393040315762634755?ref_src=twsrc%5Etfw&#34;&gt;May 14, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h2 id=&#34;追記2021-08-21&#34;&gt;追記（2021-08-21）&lt;/h2&gt;
+&lt;p&gt;7/29の「Unityゲーム プログラミング・バイブル 2nd Generation 出版記念トーク グラフィックス編」にゲスト出演しました。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;購入リンク&#34;&gt;購入リンク&lt;/h2&gt;
+&lt;div class=&#34;booklink-box&#34; style=&#34;text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;&#34;&gt;&lt;div class=&#34;booklink-image&#34; style=&#34;float:left;margin:0 15px 10px 0;&#34;&gt;&lt;a href=&#34;https://hb.afl.rakuten.co.jp/hgc/117c8a81.32450c02.117c8a82.14f884ba/yomereba_main_202412192310480768?pc=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F16742438%2F%3Frafcid%3Dwsc_b_bs_1051722217600006323%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F&#34; target=&#34;_blank&#34; &gt;&lt;img src=&#34;https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/5078/9784862465078.jpg?_ex=200x200&#34; style=&#34;border: none;&#34; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;booklink-info&#34; style=&#34;line-height:120%;zoom: 1;overflow: hidden;&#34;&gt;&lt;div class=&#34;booklink-name&#34; style=&#34;margin-bottom:10px;line-height:120%&#34;&gt;&lt;a href=&#34;https://hb.afl.rakuten.co.jp/hgc/117c8a81.32450c02.117c8a82.14f884ba/yomereba_main_202412192310480768?pc=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F16742438%2F%3Frafcid%3Dwsc_b_bs_1051722217600006323%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F&#34; target=&#34;_blank&#34; &gt;Unity ゲーム プログラミング・バイブル 2nd Generation&lt;/a&gt;&lt;div class=&#34;booklink-powered-date&#34; style=&#34;font-size:8pt;margin-top:5px;font-family:verdana;line-height:120%&#34;&gt;posted with &lt;a href=&#34;https://yomereba.com&#34; rel=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;ヨメレバ&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;booklink-detail&#34; style=&#34;margin-bottom:5px;&#34;&gt;森 哲哉/布留川 英一/西森 丈俊/車谷 勇人/一條 貴彰/打田 恭平 ボーンデジタル 2021年06月29日頃    &lt;/div&gt;&lt;div class=&#34;booklink-link2&#34; style=&#34;margin-top:10px;&#34;&gt;&lt;div class=&#34;shoplinkrakuten&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 -50px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;https://hb.afl.rakuten.co.jp/hgc/117c8a81.32450c02.117c8a82.14f884ba/yomereba_main_202412192310480768?pc=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F16742438%2F%3Frafcid%3Dwsc_b_bs_1051722217600006323%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F&#34; target=&#34;_blank&#34; &gt;楽天ブックスで購入&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;shoplinkamazon&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;https://www.amazon.co.jp/exec/obidos/asin/4862465072/gam00220c-22/&#34; target=&#34;_blank&#34; &gt;Amazonで購入&lt;/a&gt;&lt;/div&gt;&lt;div class=&#34;shoplinkkindle&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;https://www.amazon.co.jp/gp/search?keywords=Unity%20%E3%82%B2%E3%83%BC%E3%83%A0%20%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%BB%E3%83%90%E3%82%A4%E3%83%96%E3%83%AB%202nd%20Generation&amp;__mk_ja_JP=%83J%83%5E%83J%83i&amp;url=node%3D2275256051&amp;tag=gam00220c-22&#34; target=&#34;_blank&#34; &gt;Kindleで購入&lt;/a&gt;&lt;/div&gt;            	  &lt;div class=&#34;shoplinkseven&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 -100px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3737095&amp;pid=891162441&amp;vc_url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3FsearchKeywordFlg%3D1%26keyword%3D9784862465078&amp;vcptn=kaereba&#34; target=&#34;_blank&#34; &gt;7netで購入&lt;img src=&#34;//ad.jp.ap.valuecommerce.com/servlet/atq/gifbanner?sid=3737095&amp;pid=891162441&#34; height=&#34;1&#34; width=&#34;1&#34; border=&#34;0&#34;&gt;&lt;/a&gt;&lt;/div&gt;            	  &lt;div class=&#34;shoplinkkino&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 -350px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3737095&amp;pid=891162443&amp;vc_url=http%3A%2F%2Fwww.kinokuniya.co.jp%2Ff%2Fdsg-01-9784862465078&amp;vcptn=kaereba&#34; target=&#34;_blank&#34; &gt;紀伊國屋書店で購入&lt;img src=&#34;//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3737095&amp;pid=891162443&#34; height=&#34;1&#34; width=&#34;1&#34; border=&#34;0&#34;&gt;&lt;/a&gt;&lt;/div&gt;	  	  	  &lt;div class=&#34;shoplinktoshokan&#34; style=&#34;margin-right:5px;background: url(&#39;//img.yomereba.com/kz_y.gif&#39;) 0 -300px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;&#34;&gt;&lt;a href=&#34;http://calil.jp/book/4862465072&#34; target=&#34;_blank&#34; &gt;図書館で探す&lt;/a&gt;&lt;/div&gt;	&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;booklink-footer&#34; style=&#34;clear: left&#34;&gt;&lt;/div&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Windows Terminalの背景でレイマーチング</title>
+      <link>http://localhost:1313/blog/2021/03/08/raymarching-in-windows-terminal/</link>
+      <pubDate>Mon, 08 Mar 2021 01:00:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2021/03/08/raymarching-in-windows-terminal/</guid>
+      <description>&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;Windows Terminal 1.6から任意のHLSLのPixel Shadersを実行できるようになったので、Windows Terminalの背景でレイマーチングを実行してみました。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Raymarching in Windows Terminal&lt;br&gt;&lt;br&gt;Windows Terminal 1.6 から任意の Pixel Shaders を実行できるようになったので、Windows Terminal の背景でレイマーチングを実行してみた🎉 これは楽しすぎる🤣 &lt;a href=&#34;https://t.co/WX2JqUZtuL&#34;&gt;pic.twitter.com/WX2JqUZtuL&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1361485111473045505?ref_src=twsrc%5Etfw&#34;&gt;February 16, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;2021-02-16のツイート時点では、Windows Terminal 1.6はまだPreview版なので、GitHubのReleasesページから入手する必要がありました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2021-03-07現在では、Windows Terminal 1.6からPreviewが外れてMicrosoft Storeから入手できるようになりました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Windows TerminalのPixel Shaders機能の詳細については、公式ドキュメントをご覧ください。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;任意のHLSLのシェーダーのファイルを作成して、Windows Terminalのsettings.jsonの &lt;code&gt;experimental.pixelShaderPath&lt;/code&gt; からHLSLファイルのパスを設定するだけで、気軽に任意のシェーダーを実行できます。素晴らしい！&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;profiles&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;defaults&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;experimental.pixelShaderPath&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;C:\\Users\\gam0022\\Dropbox\\windows-terminal\\terminal\\samples\\PixelShaders\\Raymarching.hlsl&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;レイマーチング用のシェーダーはUnityで下書きしたものをWindows Terminal用に移植して実装しました。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Raymarching in Windows Terminal のシェーダーを公開しました。&lt;br&gt;&lt;br&gt;（シェーダー初心者にも優しい）日本語コメントつき！&lt;a href=&#34;https://t.co/GPEpIlHOyD&#34;&gt;https://t.co/GPEpIlHOyD&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1361495940356476929?ref_src=twsrc%5Etfw&#34;&gt;February 16, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;HLSLのエラーの行番号が表示されないので、複雑なシェーダーを書くのはちょっと苦労しました。&lt;/p&gt;
+&lt;p&gt;基本的にはUnityのShaderLab用のプロパティや &lt;code&gt;_LightColor0&lt;/code&gt; などのビルドインのシェーダー変数を定数（static const）として宣言する修正だけで移植できました。&lt;/p&gt;
+&lt;p&gt;Windows Terminal用のPixel Shadersでは、以下のテクスチャのサンプラーや定数が定義されていました。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// The terminal graphics as a texture
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// ターミナルの文字などを含んだターミナルのレンダリング結果のサンプラー
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Texture2D&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;shaderTexture&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;SamplerState&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;samplerState&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// Terminal settings such as the resolution of the texture
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;cbuffer&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PixelShaderSettings&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// The number of seconds since the pixel shader was enabled
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// 秒単位の時間
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Time&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// UI Scale
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// UIのスケール
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Scale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Resolution of the shaderTexture
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// ピクセル単位の背景の解像度
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;float2&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Resolution&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Background color as rgba
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// 背景の色
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;float4&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Background&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;shaderTexture&lt;/code&gt; はターミナルの文字などを含んだターミナルのレンダリング結果のサンプラーになるので、今回は背景に加算合成する形でシェーダーを実装しました（加算合成なので後からレイマーチングを加算しても結果は同じになるため、描画順を気にしなてくて良い）。&lt;/p&gt;
+&lt;h2 id=&#34;hlslのホットリロードでシェーダーライブコーディング環境を実現&#34;&gt;HLSLのホットリロードでシェーダーライブコーディング環境を実現&lt;/h2&gt;
+&lt;p&gt;Windows Terminal 1.6の挙動では、シェーダーを再コンパイルして結果を更新するために以下の手順が必要だったので、ライブコーディングには不向きでした。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;experimental.pixelShaderPath&lt;/code&gt; で指定したHLSLシェーダーに差分を出してファイル保存&lt;/li&gt;
+&lt;li&gt;Windows Terminalの &lt;code&gt;settings.json&lt;/code&gt; の &lt;code&gt;experimental.pixelShaderPath&lt;/code&gt; の値に差分を出してファイル保存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最初の動画ではシェーダーの描画結果をリアルタイムで更新するために、Vimで2つのファイルを同時編集することで、リアルタイムにライブコーディングっぽいことをしていましたが、かなり操作が忙しいので非実用的でした。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Vimの左側ペイン: HLSLのシェーダー&lt;/li&gt;
+&lt;li&gt;Vimの右側ペイン: Windows Terminalのsettings.json&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;そこで、HLSLの更新を検知して、Windows Terminalの &lt;code&gt;settings.json&lt;/code&gt; を書き換えることで、HLSLのホットリロードを実現するスクリプトをnode.jsで実装しました。&lt;/p&gt;
+&lt;p&gt;これによって、Windows Terminalの背景でHLSLシェーダーライブコーディングを実現できるようになりました！&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Windows Terminal 上のHLSLシェーダーライブコーディング環境を実現するスクリプトをGitHubに公開しました！&lt;br&gt;&lt;br&gt;&amp;gt; HLSLの変更を監視して、settings.json を書き換え&lt;a href=&#34;https://t.co/hjB2MqgsSx&#34;&gt;https://t.co/hjB2MqgsSx&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1361706800282656769?ref_src=twsrc%5Etfw&#34;&gt;February 16, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;Windows Terminalの &lt;code&gt;settings.json&lt;/code&gt; に毎回差分を出すために、HLSLファイルをコピーした一時ファイルを作成して、元のファイルのパスと一時ファイルのパスを交互に切り替えて &lt;code&gt;experimental.pixelShaderPath&lt;/code&gt; に設定するような実装としました。&lt;/p&gt;
+&lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;
+&lt;p&gt;Windows TerminalというMicrosoft公式のアプリ上でHLSLシェーダーライブコーディング環境を実現できるのは熱いですね！楽しい！！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

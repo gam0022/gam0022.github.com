@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OCaml | gam0022.net</title>
+    <link>http://localhost:1313/tags/ocaml/</link>
+      <atom:link href="http://localhost:1313/tags/ocaml/index.xml" rel="self" type="application/rss+xml" />
+    <description>OCaml</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 26 Aug 2013 21:31:00 +0900</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
+      <title>OCaml</title>
+      <link>http://localhost:1313/tags/ocaml/</link>
+    </image>
+    
+    <item>
+      <title>OCamlの匿名関数とカリー化</title>
+      <link>http://localhost:1313/blog/2013/08/26/ocaml/</link>
+      <pubDate>Mon, 26 Aug 2013 21:31:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2013/08/26/ocaml/</guid>
+      <description>&lt;p&gt;OCamlの匿名関数とカリー化について記事を書こうと想ったのですが、
+そのままの記事が既に存在したのでリンクを貼っておきます。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

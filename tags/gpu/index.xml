@@ -1,0 +1,2439 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GPU | gam0022.net</title>
+    <link>http://localhost:1313/tags/gpu/</link>
+      <atom:link href="http://localhost:1313/tags/gpu/index.xml" rel="self" type="application/rss+xml" />
+    <description>GPU</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 23 Oct 2024 00:50:00 +0900</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
+      <title>GPU</title>
+      <link>http://localhost:1313/tags/gpu/</link>
+    </image>
+    
+    <item>
+      <title>レイトレ合宿10でポータルをテーマにしたアニメーションを作成しました</title>
+      <link>http://localhost:1313/blog/2024/10/23/rtcamp10/</link>
+      <pubDate>Wed, 23 Oct 2024 00:50:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2024/10/23/rtcamp10/</guid>
+      <description>&lt;p&gt;10月11日(金)～10月13日(日)に熱海の初島で開催された
+に参加しました。&lt;/p&gt;
+&lt;p&gt;私はポータルをテーマにしたアニメーションを作成しました。&lt;/p&gt;
+&lt;p&gt;前半はプリミティブな屋内シーン、後半はレイマーチングを用いた複雑なジオメトリーの屋外シーンと、対照的な2つのシーンを作成しました。&lt;/p&gt;
+&lt;p&gt;水銀のような不思議な球体がポータルで2つのシーンを移動するという、少しストーリー性のあるアニメーションを目指しました。&lt;/p&gt;
+&lt;p&gt;自作のレンダラーで &lt;strong&gt;256秒の制限時間&lt;/strong&gt; でレンダリングして同率6位（22人中）をいただきました！&lt;/p&gt;
+&lt;p&gt;次の動画は合宿運営側で制限時間内にレンダリングしたものです。&lt;/p&gt;
+&lt;p&gt;&lt;video playsinline=&#34;&#34; loop=&#34;&#34; muted=&#34;&#34; controls=&#34;&#34; width=&#34;100%&#34; src=&#34;redflash_gam0022_gpu.mp4&#34; poster=&#34;200.jpg&#34;&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; 10に参加して、同率6位でした！&lt;br&gt;&lt;br&gt;添付の動画は、制限時間256秒で実際にレンダリングされたものです。&lt;br&gt;&lt;br&gt;ポータル用のBSDFを実装し、レンダラー本体のポータル専用処理を最小限に抑えました。&lt;br&gt;&lt;br&gt;今年もレイマーチングとポリゴンが混在するシーンに対応しました！&lt;br&gt;&lt;br&gt;みなさまお疲れ様でした！ &lt;a href=&#34;https://t.co/fzaxSYTA6C&#34;&gt;pic.twitter.com/fzaxSYTA6C&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845357806406283371?ref_src=twsrc%5Etfw&#34;&gt;October 13, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;時間制限なしで、「4K解像度 + 0.5倍速 + 最後のフェードアウト演出あり」でレンダリングした動画をYouTubeにアップロードしました。&lt;/p&gt;
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/AvjOInfFRh0?si=kYcDkfmNEN9tltjV&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;レイトレ合宿とは&#34;&gt;レイトレ合宿とは？&lt;/h2&gt;
+&lt;p&gt;レイトレ合宿は、オフラインレンダリングのオフライン集会です。&lt;/p&gt;
+&lt;p&gt;この合宿の本戦では、参加者が自作のオフラインレンダラーを実装して、参加者同士の投票によって順位を競います。
+参加者は自分の技術力と創造力を駆使して、独自のレンダラーを開発します。&lt;/p&gt;
+&lt;p&gt;毎年レンダリングの制限時間が短縮されるため、その制限の中でどれだけ高品質な動画（もしくは画像）を生成できるかが試されます。&lt;/p&gt;
+&lt;p&gt;合宿は本戦だけでなく、セミナーやレクリエーションも充実しており、参加者同士の交流や知識の共有も行われます。
+セミナーでは最新の研究動向やトレンドが紹介され、レクリエーションではレイトレに関連するユニークな内容が催されます。&lt;/p&gt;
+&lt;p&gt;なお、開催地は毎年ランダムにサンプリングされます。
+去年のお寺での質素な合宿とは対照的に、今年は熱海の初島のリゾートホテルでのラグジュアリーな合宿でした。分散は高そうです。&lt;/p&gt;
+&lt;p&gt;去年のレポートはこちらです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;天候にも恵まれて、島や海の風景はとても綺麗でした。&lt;/p&gt;
+&lt;p&gt;当日の詳細な様子については、
+さんによるレポートがとても参考になります。
+ぜひ合わせて読んでください。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;はてなブログに投稿しました&lt;br&gt;レイトレ合宿10参加記 - TTRS_Yoshiのブログ &lt;a href=&#34;https://t.co/mMWUlTnqWK&#34;&gt;https://t.co/mMWUlTnqWK&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E3%81%AF%E3%81%A6%E3%81%AA%E3%83%96%E3%83%AD%E3%82%B0?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#はてなブログ&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yoshi’s Dreann (@TTRS_Yoshi_CG) &lt;a href=&#34;https://twitter.com/TTRS_Yoshi_CG/status/1846405469507932193?ref_src=twsrc%5Etfw&#34;&gt;October 16, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h2 id=&#34;本戦の自作レンダラーの紹介&#34;&gt;本戦の自作レンダラーの紹介&lt;/h2&gt;
+&lt;p&gt;GPUレンダラーをOptiXで開発しました。レンダラーの名前はredflashです。&lt;/p&gt;
+&lt;p&gt;こちらがレンダラーのプレゼン資料です。&lt;/p&gt;
+&lt;div class=&#34;google-slide-wrap&#34;&gt;
+&lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vTJxINrFwO7x5cMHgml-DDgPCS125yE1vM0-vys5lddcUguCEWK8u4TkFD6qZiSsQPnokoseKHZ4JP6/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;1440&#34; height=&#34;839&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;レンダラーのGitHubリポジトリはこちらです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;本戦の実行環境&#34;&gt;本戦の実行環境&lt;/h3&gt;
+&lt;p&gt;レイトレ合宿10の本戦では、AWSのEC2環境上で自作のレンダラーを実行する必要があります。インスタンスタイプの選択肢は以下の通りです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GPUレンダラーの場合: g5.xlarge（私はこちらを選択）&lt;/li&gt;
+&lt;li&gt;CPUレンダラーの場合: c7i.metal-48xl&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;昨年は2台のインスタンスが利用できましたが、今年はシンプルに1台構成に戻りました。&lt;/p&gt;
+&lt;p&gt;1台に戻った理由は聞いていませんが、レンダラーの実行が複雑すぎたからかもしれません。&lt;/p&gt;
+&lt;p&gt;詳細なレギュレーションは
+に記載があります。&lt;/p&gt;
+&lt;h3 id=&#34;ポータルの実装&#34;&gt;ポータルの実装&lt;/h3&gt;
+&lt;p&gt;今年は「ポータル」をテーマに選びました。&lt;/p&gt;
+&lt;p&gt;他の人と被らなそうな、ビジュアル的にも面白いテーマを選んだつもりでしたが、3位のSamuelさんとテーマが被ってしまったのは予想外でした。&lt;/p&gt;
+&lt;p&gt;ポータルの実装方法としてはシンプルなアプローチを取りました。2つのシーンを用意し、レイがポータルを通過することでシーンをトグルさせるようにしました。&lt;/p&gt;
+&lt;p&gt;ポータル用のBSDFを用意し、シーンの切り替えはBSDF内で行うことで、レンダラー本体のポータル専用処理を最小限に抑えました。&lt;/p&gt;
+&lt;p&gt;箇条書きにすると、以下の流れです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;シーンを2つ用意
+&lt;ul&gt;
+&lt;li&gt;OptiXのSceneGraphを2つ用意&lt;/li&gt;
+&lt;li&gt;scene0（前半の屋内）とscene1（後半の屋外）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;rtPayload構造体にscene_idを定義
+&lt;ul&gt;
+&lt;li&gt;scene_idでトレースするシーンを切り替え&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ポータル用の特殊なBSDFを用意
+&lt;ul&gt;
+&lt;li&gt;レイは直進させる&lt;/li&gt;
+&lt;li&gt;scene_idを0と1で反転させる&lt;/li&gt;
+&lt;li&gt;BSDF実装の補足
+&lt;ul&gt;
+&lt;li&gt;closest_hit 関数の定義は共通&lt;/li&gt;
+&lt;li&gt;BSDFのサンプル方向・pdf計算をCallableProgramで切り替えできる設計&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;この手法はとくに参考にしたものはなく、脳内のアイデアをそのまま実装したところ、2日程度で実現できました。&lt;/p&gt;
+&lt;p&gt;2つのシーン間でレイが接続されているため、外の景色が床のエリアライトとして反映されます。こちらはスライド用にレンダリングした画像です。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;前半の屋内シーンについて&#34;&gt;前半の屋内シーンについて&lt;/h3&gt;
+&lt;p&gt;デノイザーを活用しているとはいえ、ノイズがほとんどない綺麗なレンダリング結果にできました。その点については非常に満足しています。&lt;/p&gt;
+&lt;p&gt;屋内シーンのエリアライトについては、当初
+の利用も検討しましたが、
+通常のパストレーシングでも十分に綺麗にレンダリングできることが分かったため、今回はLTCを使用しませんでした。&lt;/p&gt;
+&lt;p&gt;ポリゴン数の少ないシンプルなシーンにしたため、レイのサンプリング回数を十分に稼ぐことができました。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;部屋のMeshなどはBlenderのGeometry Nodesを使用してPlaneを押し出すことで簡単に作成しました。&lt;/p&gt;
+&lt;p&gt;レイトレ合宿とは関係ありませんが、BlenderのGeometry Nodesを実験していた様子です。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;zh&#34; dir=&#34;ltr&#34;&gt;Blender Geometry Nodes 完全理解！（大嘘） &lt;a href=&#34;https://t.co/jQEeCpACL8&#34;&gt;pic.twitter.com/jQEeCpACL8&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1841129249979449510?ref_src=twsrc%5Etfw&#34;&gt;October 1, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h3 id=&#34;後半の屋外シーンのレイマーチングの高速化について&#34;&gt;後半の屋外シーンのレイマーチングの高速化について&lt;/h3&gt;
+&lt;p&gt;レイマーチングではBVHなどの空間分割による交差判定の高速化ができないため、速度面ではかなり不利です。&lt;/p&gt;
+&lt;p&gt;後半のシーンを屋外にした理由は、屋外シーンなら少ないサンプリングでも高周波ノイズが目立たないだろうという思惑があったためです。&lt;/p&gt;
+&lt;p&gt;昨年実装した
+については、シーンとの相性が悪く、むしろ速度が落ちてしまったため、泣く泣く無効化しました。同著者のレイマーチングに関する新しい論文は今年は出ていないようでした。&lt;/p&gt;
+&lt;p&gt;レイマーチングのプリミティブごとに衝突条件を調整したり、epsを距離に応じてアダプティブに変更したりと地道なチューニングを行った結果、ノイズの少ない結果を得ることができました。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;本戦の感想&#34;&gt;本戦の感想&lt;/h3&gt;
+&lt;p&gt;本戦について、今年も色々なアプローチや切り口に挑戦されている方が多く、個性を感じるレンダラーが多かったです。&lt;/p&gt;
+&lt;p&gt;個人的に印象的だったのは、次の3作品でした。&lt;/p&gt;
+&lt;h4 id=&#34;shockerさんボリュームメトリックコースティクス&#34;&gt;Shockerさん：ボリュームメトリック・コースティクス&lt;/h4&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; 10終わりました～！&lt;br&gt;ボリューメトリック・スペクトラルなLVC-BPTを実装して指向性光源による光の経路の可視化・コースティクスのレンダリングを行いました。&lt;br&gt;1位でした！&lt;a href=&#34;https://t.co/gycurLPqsW&#34;&gt;https://t.co/gycurLPqsW&lt;/a&gt; &lt;a href=&#34;https://t.co/afs0U4TeZ9&#34;&gt;pic.twitter.com/afs0U4TeZ9&lt;/a&gt;&lt;/p&gt;&amp;mdash; Shocker (@Shocker_0x15) &lt;a href=&#34;https://twitter.com/Shocker_0x15/status/1845387260260474924?ref_src=twsrc%5Etfw&#34;&gt;October 13, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h4 id=&#34;shinji-ogakiさんgeometry-processing-nodesによるfur-generator&#34;&gt;Shinji Ogakiさん：Geometry Processing NodesによるFur Generator&lt;/h4&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; (Ray Tracing Camp) is an event where participants use their own renderer to generate animations within 256 seconds, competing on skill and the quality of their work.&lt;br&gt;&lt;br&gt;(&lt;a href=&#34;https://t.co/9Bj44pqBvo&#34;&gt;https://t.co/9Bj44pqBvo&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Here is my submission🙂 &lt;a href=&#34;https://t.co/uMD1wOcrEE&#34;&gt;pic.twitter.com/uMD1wOcrEE&lt;/a&gt;&lt;/p&gt;&amp;mdash; Shinji Ogaki (@ShinjiOgaki) &lt;a href=&#34;https://twitter.com/ShinjiOgaki/status/1846078025273954812?ref_src=twsrc%5Etfw&#34;&gt;October 15, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h4 id=&#34;samuel-huang初参加さんポータルと本格的に作り込まれたエディター環境&#34;&gt;Samuel Huang（初参加！）さん：ポータルと本格的に作り込まれたエディター環境&lt;/h4&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;セミナー&#34;&gt;セミナー&lt;/h2&gt;
+&lt;p&gt;今回のレイトレ合宿10では、参加者全員（&lt;strong&gt;24人！&lt;/strong&gt;）がセミナーを発表をしました。&lt;/p&gt;
+&lt;p&gt;私は「つぶやきGLSL解読！」という内容で発表を行いました。&lt;/p&gt;
+&lt;p&gt;このセミナーでは、GLSLのコードをリアルタイムで編集しながら口頭で解説する形式を取りました。&lt;/p&gt;
+&lt;p&gt;スライド資料は補助的に使っただけなので、スライドの情報だけでは伝わらない部分が多いと思いますが、雰囲気だけでも伝われば幸いです。&lt;/p&gt;
+&lt;div class=&#34;google-slide-wrap&#34;&gt;
+&lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vSFRS9tepyqET4G_WH4masZffHYa-U8BSafrptmwePDqo59U0DMsoztnp3SWENY6DtVxDST-dloZkc7/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;1440&#34; height=&#34;839&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;セミナーの感想&#34;&gt;セミナーの感想&lt;/h3&gt;
+&lt;p&gt;参加者のバックグラウンドもさまざまだったため、さまざまな分野の興味深い話を聞くことができて、非常に楽しかったです。&lt;/p&gt;
+&lt;p&gt;私は以下の3つの発表に票を入れました。&lt;/p&gt;
+&lt;h4 id=&#34;知られざるnanの世界-by-hole-ベストプレゼンター賞&#34;&gt;知られざるNaNの世界 by hole（🏆 ベストプレゼンター賞）&lt;/h4&gt;
+&lt;p&gt;NaN自体は広く知られていますが、詳しい情報については自分も含めてほとんどの人が知らないことが多かったため、非常に楽しめる発表でした。&lt;/p&gt;
+&lt;p&gt;発表中に「へぇ～」と心の中で20回くらい叫んでしまいました。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;レイトレ合宿10でNaNとInfについての話をしました。&lt;br&gt;qNaNとsNaNの違いやNaN-Boxingといった、知ってる人にとっては常識だけど知らない人も多い、みたいな話題を取り上げました。&lt;br&gt;僕自身、まだまだ勉強中なので突っ込みください！&lt;a href=&#34;https://t.co/r05vnreh1h&#34;&gt;https://t.co/r05vnreh1h&lt;/a&gt;&lt;/p&gt;&amp;mdash; hole (@h013) &lt;a href=&#34;https://twitter.com/h013/status/1846092543773356383?ref_src=twsrc%5Etfw&#34;&gt;October 15, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h4 id=&#34;gpu-hash-tableについて-by-nishiki&#34;&gt;GPU Hash Tableについて by Nishiki&lt;/h4&gt;
+&lt;iframe class=&#34;speakerdeck-iframe&#34; frameborder=&#34;0&#34; src=&#34;https://speakerdeck.com/player/554aaceac0f44ec790c18bb7e33366e4&#34; title=&#34;GPU Hash Table | レイトレ合宿10&#34; allowfullscreen=&#34;true&#34; style=&#34;border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;&#34; data-ratio=&#34;1.7777777777777777&#34;&gt;&lt;/iframe&gt;
+&lt;h4 id=&#34;overlapped-multi-view-rendering-by-samuel-huang&#34;&gt;Overlapped Multi-View Rendering by Samuel Huang&lt;/h4&gt;
+&lt;p&gt;ポータルの実装についての発表でした。&lt;/p&gt;
+&lt;p&gt;（スライドは現時点では非公開）&lt;/p&gt;
+&lt;h2 id=&#34;nanを讃える歌-silent-nan&#34;&gt;NaNを讃える歌 &amp;ldquo;Silent NaN&amp;rdquo;&lt;/h2&gt;
+&lt;p&gt;1日目のセミナーの後、唐突に非常に眩しいケミカルライトが配られ、「NaNを讃える歌 &amp;ldquo;Silent NaN&amp;rdquo;」が流れました。&lt;/p&gt;
+&lt;p&gt;ペンライトを振りながらNaNを讃える歌を口ずさむ集団は、異様な光景で非常にシュールでした。&lt;/p&gt;
+&lt;p&gt;それに加えて、曲のクオリティも異常に高く、とても良い曲だなと思いました。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;今回の &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; では &lt;a href=&#34;https://twitter.com/ykozw88?ref_src=twsrc%5Etfw&#34;&gt;@ykozw88&lt;/a&gt; さんといっしょに&amp;quot;AI&amp;quot;の力を借りてNaNを讃える歌 &amp;quot;Silent NaN&amp;quot; をつくりました&lt;a href=&#34;https://t.co/oGPaefork2&#34;&gt;https://t.co/oGPaefork2&lt;/a&gt;&lt;br&gt;&lt;br&gt;&amp;quot;No solution, just a NaN star.&amp;quot;、&amp;quot;Live with ambiguity.&amp;quot;あたりがお気に入りの歌詞です。&lt;/p&gt;&amp;mdash; hole (@h013) &lt;a href=&#34;https://twitter.com/h013/status/1845629474144141809?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;qme&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/7u0dgH8O5h&#34;&gt;pic.twitter.com/7u0dgH8O5h&lt;/a&gt;&lt;/p&gt;&amp;mdash; ハガ (@hagat) &lt;a href=&#34;https://twitter.com/hagat/status/1844748184758944240?ref_src=twsrc%5Etfw&#34;&gt;October 11, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h2 id=&#34;スポンザのジグソーパズル&#34;&gt;スポンザのジグソーパズル&lt;/h2&gt;
+&lt;p&gt;レイトレ合宿では、毎年ユニークなレクリエーションが開催されます。&lt;/p&gt;
+&lt;p&gt;今年のレクリエーションは「Sponzaのジグソーパズル」でした。&lt;/p&gt;
+&lt;p&gt;レクリエーションの内容は直前まで秘密にされていたため、参加者は「一体何が起きるんだろう？」という気持ちで臨むことになりました。&lt;/p&gt;
+&lt;p&gt;昨年は難易度が高すぎる「マテリアル神経衰弱」、過去には本格的な「レイトレ検定」などが開催されました。&lt;/p&gt;
+&lt;p&gt;今年は各チーム3人に分かれ、チーム対抗で「500ピースのSponzaのジグソーパズル」を1時間で組み立てるというものでした。&lt;/p&gt;
+&lt;p&gt;Sponzaは旗の部分は色がついているものの、影など同じような色の領域も多いため、ジグソーパズルとしての難易度は高めです。&lt;/p&gt;
+&lt;p&gt;500ピースのパズルを1時間で組み立てることは不可能だったので、勝敗は完成したピースの数で決めることになりました。&lt;/p&gt;
+&lt;p&gt;私たちのチームと優勝チームのピース数はほぼ同じだったのですが、最終的には私がチーム代表としてじゃんけんをし、敗北しました… 😭&lt;/p&gt;
+&lt;p&gt;今年は惜しいところまで勝ち進めていたので、非常に残念でした。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Sponzaのジグソーパズル🧩難しすぎる😱 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/NBhu0qc5mC&#34;&gt;pic.twitter.com/NBhu0qc5mC&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845004022857511076?ref_src=twsrc%5Etfw&#34;&gt;October 12, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;Yoshi’s Dreamさんは帰宅後に7時間かけて完成させていました！&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Crytek Sponzaパズル(500 pieces)完成！&lt;br&gt;&lt;br&gt;所要時間: 7時間 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/0QxcQ1uvw9&#34;&gt;pic.twitter.com/0QxcQ1uvw9&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yoshi’s Dreann (@TTRS_Yoshi_CG) &lt;a href=&#34;https://twitter.com/TTRS_Yoshi_CG/status/1845715482953072906?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h2 id=&#34;全体の感想&#34;&gt;全体の感想&lt;/h2&gt;
+&lt;p&gt;今年も参加者の方々から多くの刺激を受けることができました！&lt;/p&gt;
+&lt;p&gt;本戦やセミナーで様々な知識を吸収できたことはもちろん、今年のレクリエーションもレイトレに関連したユニークな内容で非常に楽しめました。&lt;/p&gt;
+&lt;p&gt;素晴らしいイベントを開催してくださった運営の方々、そして他の参加者の皆さん、本当にありがとうございました！&lt;/p&gt;
+&lt;h2 id=&#34;初島熱海の観光&#34;&gt;初島～熱海の観光&lt;/h2&gt;
+&lt;p&gt;最後にレイトレ合宿に関する主に私のツイートをまとめます。&lt;/p&gt;
+&lt;p&gt;今回の初島のホテルは、海や夜空の景色が絶景で、料理もとても美味しかったので、最高でした！&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;温泉シャーク♨️🦈 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/F8GEuF5Pr3&#34;&gt;pic.twitter.com/F8GEuF5Pr3&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1844582100910931976?ref_src=twsrc%5Etfw&#34;&gt;October 11, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ラーメンとザンギ食べる &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/LOrmEjZDO6&#34;&gt;pic.twitter.com/LOrmEjZDO6&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1844583043912303040?ref_src=twsrc%5Etfw&#34;&gt;October 11, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;リサとガスパール &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/PPPDzZGGRp&#34;&gt;pic.twitter.com/PPPDzZGGRp&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1844606844532293658?ref_src=twsrc%5Etfw&#34;&gt;October 11, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;部屋が広い！海が見える！ &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/uRpABVdR4W&#34;&gt;pic.twitter.com/uRpABVdR4W&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1844623714387677691?ref_src=twsrc%5Etfw&#34;&gt;October 11, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;絶景を背景にセミナー中🌅 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/vwFIYI12YM&#34;&gt;pic.twitter.com/vwFIYI12YM&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1844653730182144346?ref_src=twsrc%5Etfw&#34;&gt;October 11, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;qme&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/7u0dgH8O5h&#34;&gt;pic.twitter.com/7u0dgH8O5h&lt;/a&gt;&lt;/p&gt;&amp;mdash; ハガ (@hagat) &lt;a href=&#34;https://twitter.com/hagat/status/1844748184758944240?ref_src=twsrc%5Etfw&#34;&gt;October 11, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;zxx&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://t.co/5KWu7oEjOC&#34;&gt;pic.twitter.com/5KWu7oEjOC&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1844883945831399878?ref_src=twsrc%5Etfw&#34;&gt;October 11, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;景色が最高すぎる &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/KBGu7g02oX&#34;&gt;pic.twitter.com/KBGu7g02oX&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1844883584001396974?ref_src=twsrc%5Etfw&#34;&gt;October 11, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;朝食 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/eZ5P1ZPvuT&#34;&gt;pic.twitter.com/eZ5P1ZPvuT&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1844881535188734181?ref_src=twsrc%5Etfw&#34;&gt;October 11, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;昼ごはん &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/9OaLyMUiyj&#34;&gt;pic.twitter.com/9OaLyMUiyj&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1844945037769220497?ref_src=twsrc%5Etfw&#34;&gt;October 12, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;天気が良いので散歩が気持ちいい &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/Yw2LGzJK5G&#34;&gt;pic.twitter.com/Yw2LGzJK5G&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1844945512639889564?ref_src=twsrc%5Etfw&#34;&gt;October 12, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Sponzaのジグソーパズル🧩難しすぎる😱 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/NBhu0qc5mC&#34;&gt;pic.twitter.com/NBhu0qc5mC&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845004022857511076?ref_src=twsrc%5Etfw&#34;&gt;October 12, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;本線開始！ &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/jocWrgrieF&#34;&gt;pic.twitter.com/jocWrgrieF&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845004305322893564?ref_src=twsrc%5Etfw&#34;&gt;October 12, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;アウトドアレイトレ合宿すごすぎる🚣 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/QlcE3a72xX&#34;&gt;pic.twitter.com/QlcE3a72xX&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845027947863998899?ref_src=twsrc%5Etfw&#34;&gt;October 12, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;おはようございます🌞 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/lxNak7HakI&#34;&gt;pic.twitter.com/lxNak7HakI&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845219114056605802?ref_src=twsrc%5Etfw&#34;&gt;October 12, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;続き &lt;a href=&#34;https://t.co/DWUTWcBOSR&#34;&gt;pic.twitter.com/DWUTWcBOSR&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845224386804187525?ref_src=twsrc%5Etfw&#34;&gt;October 12, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;セミナー最終日！ &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/GWcTN1O2RG&#34;&gt;pic.twitter.com/GWcTN1O2RG&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845241098354163949?ref_src=twsrc%5Etfw&#34;&gt;October 12, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;朝食ビュッフェ &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/ObzeXIvnnb&#34;&gt;pic.twitter.com/ObzeXIvnnb&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845251310448410865?ref_src=twsrc%5Etfw&#34;&gt;October 12, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;最後のセミナーが始まっています &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/xSxlsyyKOZ&#34;&gt;pic.twitter.com/xSxlsyyKOZ&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845269552948715541?ref_src=twsrc%5Etfw&#34;&gt;October 13, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;閉会式 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/iRUy14mA6P&#34;&gt;pic.twitter.com/iRUy14mA6P&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845283790358446559?ref_src=twsrc%5Etfw&#34;&gt;October 13, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; 10に参加して、同率6位でした！&lt;br&gt;&lt;br&gt;添付の動画は、制限時間256秒で実際にレンダリングされたものです。&lt;br&gt;&lt;br&gt;ポータル用のBSDFを実装し、レンダラー本体のポータル専用処理を最小限に抑えました。&lt;br&gt;&lt;br&gt;今年もレイマーチングとポリゴンが混在するシーンに対応しました！&lt;br&gt;&lt;br&gt;みなさまお疲れ様でした！ &lt;a href=&#34;https://t.co/fzaxSYTA6C&#34;&gt;pic.twitter.com/fzaxSYTA6C&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845357806406283371?ref_src=twsrc%5Etfw&#34;&gt;October 13, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;6位の賞品です！🎁&lt;br&gt;コンピューターが使えなくなったときに役立ちそう(?)🤔&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/WEz85okmOD&#34;&gt;pic.twitter.com/WEz85okmOD&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845365426429317325?ref_src=twsrc%5Etfw&#34;&gt;October 13, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;qme&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/3k2LmCUYo5&#34;&gt;pic.twitter.com/3k2LmCUYo5&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845305806260142560?ref_src=twsrc%5Etfw&#34;&gt;October 13, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;お昼とおやつ &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/O2WsX58K3q&#34;&gt;pic.twitter.com/O2WsX58K3q&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845349276509159590?ref_src=twsrc%5Etfw&#34;&gt;October 13, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;私は延泊したので、ここからは延長戦です。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;zxx&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://t.co/1O2ZSyXJtZ&#34;&gt;pic.twitter.com/1O2ZSyXJtZ&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845620115456630793?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;バー🍷 &lt;a href=&#34;https://t.co/IsCHTNw7sy&#34;&gt;pic.twitter.com/IsCHTNw7sy&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845620403076751495?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;iPhoneで撮影できるほど星もよく見えました。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;iPhone 14で撮影した星空🌌&lt;br&gt;&lt;br&gt;人工的な光源がなく、空気が綺麗で、天気が良かったので肉眼でも同じくらい星が見えました。&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/rqo99NG0oa&#34;&gt;pic.twitter.com/rqo99NG0oa&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845493218160628192?ref_src=twsrc%5Etfw&#34;&gt;October 13, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;朝食&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; 延長戦 &lt;a href=&#34;https://t.co/H56Q6kh7kr&#34;&gt;pic.twitter.com/H56Q6kh7kr&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845621303103160714?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;zxx&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://t.co/3dcfWDZWkb&#34;&gt;pic.twitter.com/3dcfWDZWkb&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845628814979928105?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;密漁禁止🈲⚠️ &lt;a href=&#34;https://t.co/G6DzzAncXP&#34;&gt;pic.twitter.com/G6DzzAncXP&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845650784169742589?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;写真だと分かりづらいですが、船の通った後の海面が周囲より明るい青色になる現象に気が付きました。
+まだまだCGで再現しきれていないネタは多そうだなという発見がありました。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;さよなら初島👋 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/F5hEMEqeGB&#34;&gt;pic.twitter.com/F5hEMEqeGB&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845653815145754984?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;近距離でカモメを撮影できました。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;qme&#34; dir=&#34;ltr&#34;&gt;🐦 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/JgcEnw60Pz&#34;&gt;pic.twitter.com/JgcEnw60Pz&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845656461252476936?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;スコット本店 &lt;a href=&#34;https://t.co/2Nq2U90dnh&#34;&gt;pic.twitter.com/2Nq2U90dnh&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845681195532853308?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;東京に戻る前にMOA美術館に行きました。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;MOA美術館から初島が見える &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/FPmNJWvpB8&#34;&gt;pic.twitter.com/FPmNJWvpB8&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845693313455985104?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;zxx&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://t.co/4Ub6ZScNN8&#34;&gt;pic.twitter.com/4Ub6ZScNN8&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845716710684557680?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;花弁が貝殻になってるこっちの方が分かりやすそう &lt;a href=&#34;https://t.co/YWI1Z9Prcd&#34;&gt;pic.twitter.com/YWI1Z9Prcd&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845730786382950722?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;MOA美術館、建築も見応えがあった &lt;a href=&#34;https://t.co/jFNCj0huYF&#34;&gt;pic.twitter.com/jFNCj0huYF&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845758201222123645?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;NEW ガッパ &lt;a href=&#34;https://t.co/bxMCkvFFSJ&#34;&gt;pic.twitter.com/bxMCkvFFSJ&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1845761915714462109?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;初島は東京からアクセスが良く、海がとても綺麗だったので、また行きたいと思いました。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>レイトレ合宿9で4次元立方体をテーマにしたアニメーションを作成しました</title>
+      <link>http://localhost:1313/blog/2023/09/20/rtcamp9/</link>
+      <pubDate>Wed, 20 Sep 2023 12:00:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2023/09/20/rtcamp9/</guid>
+      <description>&lt;p&gt;9月1日(金)～9月3日(日)に
+で開催された
+に参加しました。&lt;/p&gt;
+&lt;p&gt;4次元空間上で回転してから、それを3次元に投影することで、内外が入れ替わるような不思議なループアニメーションをテーマにしました。&lt;/p&gt;
+&lt;p&gt;自作のレンダラーで &lt;strong&gt;5分の制限時間&lt;/strong&gt; でレンダリングして4位をいただきました！次の動画は合宿運営側で制限時間内にレンダリングしたものです。&lt;/p&gt;
+&lt;p&gt;&lt;video playsinline=&#34;&#34; loop=&#34;&#34; muted=&#34;&#34; controls=&#34;&#34; width=&#34;100%&#34; src=&#34;gam_crf12.mp4&#34; poster=&#34;218.jpg&#34;&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;p&gt;時間制限なしで4K解像度でレンダリングした動画はYouTubeにアップロードしました。&lt;/p&gt;
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/ohbv8_jCQtc&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;YouTubeの仕様の勉強も兼ねて、ループアニメーションという特性を活かした
+も作成しました。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; 9、4Dをテーマにして4位でした！&lt;br&gt;&lt;br&gt;4次元空間上で回転し、それから3次元に投影することで、内外が入れ替わるような不思議なループアニメーションを制作しました。&lt;br&gt;&lt;br&gt;OptiXで開発した自作レンダラーで300秒以内にレンダリングしました。 &lt;a href=&#34;https://t.co/aP4w23rAYT&#34;&gt;pic.twitter.com/aP4w23rAYT&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1698130408406462644?ref_src=twsrc%5Etfw&#34;&gt;September 3, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h2 id=&#34;お寺で合宿&#34;&gt;お寺で合宿！？&lt;/h2&gt;
+&lt;p&gt;去年のレイトレ8は沖縄のラグジュアリーなホテルでの開催でしたが、今年は対照的に質素にお寺での開催でした。
+運営メンバー曰く、ダイナミックレンジの広さを重視しているそうです！&lt;/p&gt;
+&lt;p&gt;去年のレポートはこちらです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当日の詳細な様子については、
+さんのレポートがとても参考になります。
+ぜひ合わせて読んでください。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; 9の参加レポートを書きました&lt;a href=&#34;https://t.co/f8vi2PbrJC&#34;&gt;https://t.co/f8vi2PbrJC&lt;/a&gt;&lt;/p&gt;&amp;mdash; KiNaNkomoti C102_2日目西か-03b (@Kinakomoti2357) &lt;a href=&#34;https://twitter.com/Kinakomoti2357/status/1703970431546605827?ref_src=twsrc%5Etfw&#34;&gt;September 19, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h2 id=&#34;本戦の実行環境&#34;&gt;本戦の実行環境&lt;/h2&gt;
+&lt;p&gt;レイトレ合宿9の本戦では、AWSを利用してレンダラーを実行する必要があります。インスタンスタイプの選択肢は以下の通りです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CPUレンダラーの場合: c6i.32xlargeを2台&lt;/li&gt;
+&lt;li&gt;GPUレンダラーの場合: g4dn.xlargeを2台（私はこちらを選択）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;今年、新たなルールとして2台のインスタンスを利用できるようになりました。&lt;/p&gt;
+&lt;p&gt;私はフレームを半分に分割して2台のインスタンスを活用する単純な戦略にしました。
+余談ですが、片方のインスタンスで描画が失敗してもバレないようにループは2周するようにしました（笑）。&lt;/p&gt;
+&lt;p&gt;毎年、新しい試みが取り入れられることが、この合宿の魅力の一つだと思います。&lt;/p&gt;
+&lt;h2 id=&#34;自作レンダラーの紹介&#34;&gt;自作レンダラーの紹介&lt;/h2&gt;
+&lt;p&gt;GPUレンダラーをOptiXで開発しました。レンダラーの名前はredflashです。&lt;/p&gt;
+&lt;p&gt;こちらがレンダラーのプレゼン資料です。&lt;/p&gt;
+&lt;div class=&#34;google-slide-wrap&#34;&gt;
+&lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vQbWup2egsNq-4MgXMBmQnp-M9HBHbotYQZq-C2ABcRaQNRqBFs3zgkQVWfrqCUctZlqQzskBRiAEEX/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;1440&#34; height=&#34;839&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;プレゼン資料をベースにしながら、当日話した内容などを文章として補足しながら紹介します。&lt;/p&gt;
+&lt;h3 id=&#34;アピールポイント&#34;&gt;アピールポイント&lt;/h3&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;アピールポイント&#34; 
+               srcset=&#34;http://localhost:1313/blog/2023/09/20/rtcamp9/slide_2p_hu_eb34f2971d9a724e.webp 320w, http://localhost:1313/blog/2023/09/20/rtcamp9/slide_2p_hu_dc783fa625183db3.webp 480w, http://localhost:1313/blog/2023/09/20/rtcamp9/slide_2p_hu_8b96476e2fe94df5.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2023/09/20/rtcamp9/slide_2p_hu_eb34f2971d9a724e.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;アピールポイントは次の2点です。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;4D上の回転を3Dに投影することで、内外が入れ替わる不思議なアニメーション&lt;/li&gt;
+&lt;li&gt;2023年に発表されたばかりのレイマーチングの高速化の論文を実装
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;基本機能&#34;&gt;基本機能&lt;/h3&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;基本機能&#34; 
+               srcset=&#34;http://localhost:1313/blog/2023/09/20/rtcamp9/slide_3p_hu_303208bf4dd7ff0e.webp 320w, http://localhost:1313/blog/2023/09/20/rtcamp9/slide_3p_hu_c73be9b5d61e5820.webp 480w, http://localhost:1313/blog/2023/09/20/rtcamp9/slide_3p_hu_a7ee4e8dc50b423e.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2023/09/20/rtcamp9/slide_3p_hu_303208bf4dd7ff0e.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;レンダラーの基本機能です。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Unidirectional Path Tracing
+&lt;ul&gt;
+&lt;li&gt;implemented in NVIDIA® OptiX 6.5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Materials
+&lt;ul&gt;
+&lt;li&gt;Disney BRDF&lt;/li&gt;
+&lt;li&gt;Lambert Diffuse&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;NEE（Next Event Estimation）&lt;/li&gt;
+&lt;li&gt;MIS（Multiple Importance Sampling）&lt;/li&gt;
+&lt;li&gt;Primitives
+&lt;ul&gt;
+&lt;li&gt;Sphere&lt;/li&gt;
+&lt;li&gt;Mesh&lt;/li&gt;
+&lt;li&gt;Distance Function (Raymarching)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ACES Filmic Tone Mapping&lt;/li&gt;
+&lt;li&gt;Deep Learning Denoising&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;シンプルな単方向のパストレーシングで、NEEやMISサンプリングの効率化をしています。&lt;/p&gt;
+&lt;p&gt;OptiXのカスタムなプリミティブの衝突判定としてレイマーチングを実装し、距離関数によるプリミティブもサポートしています。
+詳しくは過去の記事を参考にしてください。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;余談ですが、昨今のレイトレ合宿では1フレームに使える時間が減っているのため、単方向のパストレーシングが多い印象でした。&lt;/p&gt;
+&lt;h3 id=&#34;レンダラーの出力設定&#34;&gt;レンダラーの出力設定&lt;/h3&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;レンダラーの出力設定&#34; 
+               srcset=&#34;http://localhost:1313/blog/2023/09/20/rtcamp9/slide_4p_hu_e64b934abe31cb76.webp 320w, http://localhost:1313/blog/2023/09/20/rtcamp9/slide_4p_hu_414ece044cc9b801.webp 480w, http://localhost:1313/blog/2023/09/20/rtcamp9/slide_4p_hu_1f87a26bdf514712.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2023/09/20/rtcamp9/slide_4p_hu_e64b934abe31cb76.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;レンダラーの出力設定について、解像度はフルHD（1920x1080）、長さはレギュレーション上の最大の10秒にしました。&lt;/p&gt;
+&lt;p&gt;30FPSで10秒なので、合計300フレームを描画しました。&lt;/p&gt;
+&lt;p&gt;制限時間が300秒（5分）なので、1フレームあたりに使える時間は1秒とかなり短めでしたが、ほとんどノイズが出ない綺麗な結果にできました。&lt;/p&gt;
+&lt;h3 id=&#34;超立方体4次元上の回転&#34;&gt;超立方体（4次元上の回転）&lt;/h3&gt;
+&lt;p&gt;レイトレ合宿で何を作ろうと考えた時、動画の最大の長さが10秒だったので、ループ可能なアニメーションが良さそうだと思いました。&lt;/p&gt;
+&lt;p&gt;ふと、TokyoDemoFest2021のShowdown準決勝で
+さんが
+を作っていたのを思い出して、自分でもやってみました。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;超立方体&#34; 
+               srcset=&#34;http://localhost:1313/blog/2023/09/20/rtcamp9/slide_5p_hu_b4df8d6574464788.webp 320w, http://localhost:1313/blog/2023/09/20/rtcamp9/slide_5p_hu_51886b20af19fda8.webp 480w, http://localhost:1313/blog/2023/09/20/rtcamp9/slide_5p_hu_640f4a39056a50ed.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2023/09/20/rtcamp9/slide_5p_hu_b4df8d6574464788.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;超立方体とは4次元空間上の立方体です。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;4次元の回転を3次元から観測すると、内側と外側がグルグルと入れ替わるようなおもしろいアニメーションになります。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;&lt;img alt=&#34;Tesseract&#34;
+           src=&#34;http://localhost:1313/blog/2023/09/20/rtcamp9/Tesseract.gif&#34;
+           loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;このアニメーションは
+から引用しました。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;描画の流れ&#34; 
+               srcset=&#34;http://localhost:1313/blog/2023/09/20/rtcamp9/slide_7p_hu_c0016c958f40b018.webp 320w, http://localhost:1313/blog/2023/09/20/rtcamp9/slide_7p_hu_2cb354f45460f96d.webp 480w, http://localhost:1313/blog/2023/09/20/rtcamp9/slide_7p_hu_3f2581408a696425.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2023/09/20/rtcamp9/slide_7p_hu_c0016c958f40b018.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;具体的な実装としては、距離関数に与える座標をうまく加工しているだけです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;3次元座標を4次元に変換（逆ステレオ投影）&lt;/li&gt;
+&lt;li&gt;4次元空間上で回転&lt;/li&gt;
+&lt;li&gt;4次元座標を3次元に変換（ステレオ投影）&lt;/li&gt;
+&lt;li&gt;3次元空間上で描画&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以下は、ステレオ投影とその利用例をCUDA C言語で実装したものになります。&lt;/p&gt;
+&lt;p&gt;実際の距離関数はマテリアル分けだったり、複数の距離関数を合成したりと、もう少し複雑になっていますが、分かりやすさ重視でシンプルにしました。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 3次元座標を4次元に変換（逆ステレオ投影）
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;float4&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;inverseStereographic&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;2.0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;make_float4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 4次元座標を3次元に変換（ステレオ投影）
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;stereographic&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;float4&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;make_float3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 距離関数での利用例
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;length&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;// 3Dから4Dに逆ステレオ投影
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;float4&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p4d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inverseStereographic&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;// 4D空間のZW平面上の回転
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;float2&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p4d_zw&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;make_float2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p4d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p4d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;rot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p4d_zw&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;time&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.01&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TAU&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;p4d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p4d_zw&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;p4d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p4d_zw&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;// 4Dから3Dにステレオ変換
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;stereographic&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p4d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;// 3D上で距離関数を評価
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dMenger&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;_MengerUniformScale0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;_MengerOffset0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;_MengerScale0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;_MengerIteration0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;_MengerUniformScale0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;// 空間の歪みを考慮して距離関数をスケール（0.7は係数）
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;length&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;min&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.7&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;4次元から3次元のステレオ投影の幾何学的な理解については、3Blue1Brownの動画にとても助けられました。&lt;/p&gt;
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/94NmanMgR9k?si=S0an_wHu7KWIyVq9&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;シーン構成&#34; 
+               srcset=&#34;http://localhost:1313/blog/2023/09/20/rtcamp9/slide_9p_hu_2b31dd38402d62fb.webp 320w, http://localhost:1313/blog/2023/09/20/rtcamp9/slide_9p_hu_33c55e1a8fafb1b8.webp 480w, http://localhost:1313/blog/2023/09/20/rtcamp9/slide_9p_hu_1c08588e6f0bb884.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2023/09/20/rtcamp9/slide_9p_hu_2b31dd38402d62fb.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;MengerSpongeと呼ばれる有名なフラクタルをベースにしました。外側と内側は2種類のMengerSpongeから構成されます。&lt;/p&gt;
+&lt;p&gt;外側と内側で対照的なマテリアルに設定していて、外側は複雑な金属感、内側はシンプルなサイバー感をイメージしました。&lt;/p&gt;
+&lt;p&gt;アニメーションの途中で部屋を暗くしていますが、サイバー感のあるマテリアルが光ってかっこよくなるように調整を試行錯誤しました。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;モデリングの試行錯誤&#34; 
+               srcset=&#34;http://localhost:1313/blog/2023/09/20/rtcamp9/slide_11p_hu_98ba756cd94d039f.webp 320w, http://localhost:1313/blog/2023/09/20/rtcamp9/slide_11p_hu_f1a8e3f036012790.webp 480w, http://localhost:1313/blog/2023/09/20/rtcamp9/slide_11p_hu_660f325510c10f59.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2023/09/20/rtcamp9/slide_11p_hu_98ba756cd94d039f.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;モデリングはUnity上で行ってパラメーター調整してから、後からCUDAに移植するアプローチをとりました。&lt;/p&gt;
+&lt;p&gt;パラメーター調整はUnity上の方が作業しやすいからです。&lt;/p&gt;
+&lt;h3 id=&#34;レイマーチングの高速化&#34;&gt;レイマーチングの高速化&lt;/h3&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;レイマーチング（Sphere Tracing）の高速化の研究&#34; 
+               srcset=&#34;http://localhost:1313/blog/2023/09/20/rtcamp9/slide_12p_hu_f9023c8adda243ff.webp 320w, http://localhost:1313/blog/2023/09/20/rtcamp9/slide_12p_hu_ba1f2ba520a511e9.webp 480w, http://localhost:1313/blog/2023/09/20/rtcamp9/slide_12p_hu_3d051521a3b769df.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2023/09/20/rtcamp9/slide_12p_hu_f9023c8adda243ff.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;レイマーチングの高速化の論文を3つを調査しました。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+
+&lt;ul&gt;
+&lt;li&gt;@Hirai0827さんによる
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+
+&lt;ul&gt;
+&lt;li&gt;@Hirai0827さんによる
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;この3つの手法の基本的な考え方はどれも共通していて、通常より大きくレイを進めて、進み過ぎたら引き返すというシンプルなものです。&lt;/p&gt;
+&lt;h4 id=&#34;keinert-et-al-14-enhanced-sphere-tracing&#34;&gt;[Keinert et al. 14] Enhanced Sphere Tracing&lt;/h4&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;[Keinert et al. 14] Enhanced Sphere Tracing&#34; 
+               srcset=&#34;http://localhost:1313/blog/2023/09/20/rtcamp9/slide_13p_hu_8892deaceba09e4c.webp 320w, http://localhost:1313/blog/2023/09/20/rtcamp9/slide_13p_hu_5760767432872661.webp 480w, http://localhost:1313/blog/2023/09/20/rtcamp9/slide_13p_hu_bae9a12a9d435bdd.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2023/09/20/rtcamp9/slide_13p_hu_8892deaceba09e4c.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;[Keinert et al. 14] では、レイのステップを $\omega \in[1,2)$ 倍して通常より大きくレイを進めます。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ω&lt;/code&gt; が小さいと効果が薄れてしまい、 &lt;code&gt;ω&lt;/code&gt; が大きすぎると引き返しが発生して効率が悪くなります。&lt;/p&gt;
+&lt;p&gt;そのため、適切な &lt;code&gt;ω&lt;/code&gt; はシーンの形状に応じて手動で調整する必要があります。&lt;/p&gt;
+&lt;p&gt;その他、この論文では「スクリーンスペースを考慮した交差点の選択」「自己交差を防ぐためのεの動的設定」「非連続性の緩和」「凸形状物質における最適化」にも触れられていますが、今回は割愛します。&lt;/p&gt;
+&lt;h4 id=&#34;bánvalasek-18-accelerating-sphere-tracing&#34;&gt;[Bán&amp;amp;Valasek 18] Accelerating Sphere Tracing&lt;/h4&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;[Bán&amp;amp;Valasek 18] Accelerating Sphere Tracing&#34; 
+               srcset=&#34;http://localhost:1313/blog/2023/09/20/rtcamp9/slide_14p_hu_dfcd84e915eb9d84.webp 320w, http://localhost:1313/blog/2023/09/20/rtcamp9/slide_14p_hu_31d5c329e1d8ce08.webp 480w, http://localhost:1313/blog/2023/09/20/rtcamp9/slide_14p_hu_e8547aec62165921.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2023/09/20/rtcamp9/slide_14p_hu_dfcd84e915eb9d84.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;[Bán&amp;amp;Valasek 18] は [Keinert et al. 14] の改良版で、レイを大きく進めるステップを定数ではなく状況に応じて計算します。&lt;/p&gt;
+&lt;p&gt;具体的にはシーンの形状を平面に仮定して次のステップを予測します。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;マーチングループの現在のステップSphere（半径 $r_n$ ）&lt;/li&gt;
+&lt;li&gt;そのSphereに接する平面&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;上の2つにぴったり接する次のステップのSphere（半径 $r\_{n+1}$）を決定し、ステップ $d\_{n+1}$ を求めます。&lt;/p&gt;
+&lt;p&gt;さらに、シーンが平面でないカーブした面を考慮して、ωで調整できるようにします。&lt;/p&gt;
+$$
+d\_{n+1} = r_n + \omega r\_{n+1}, \omega \in(0,1)
+$$&lt;h4 id=&#34;bánvalasek-23-automatic-step-size-relaxation-in-sphere-tracing&#34;&gt;[Bán&amp;amp;Valasek 23] Automatic Step Size Relaxation in Sphere Tracing&lt;/h4&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;[Bán&amp;amp;Valasek 23] Automatic Step Size Relaxation in Sphere Tracing&#34; 
+               srcset=&#34;http://localhost:1313/blog/2023/09/20/rtcamp9/slide_15p_hu_1623f0c35a1ab8ef.webp 320w, http://localhost:1313/blog/2023/09/20/rtcamp9/slide_15p_hu_3d1c4bc5a8378fc4.webp 480w, http://localhost:1313/blog/2023/09/20/rtcamp9/slide_15p_hu_5bf3080ebb95fd35.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2023/09/20/rtcamp9/slide_15p_hu_1623f0c35a1ab8ef.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;[Bán&amp;amp;Valasek 23] は [Bán&amp;amp;Valasek 18] と同じ著者による研究で、平面を仮定する基本的なアプローチはそのままに &lt;code&gt;ω&lt;/code&gt; を自動調整するようにさらに改良したものです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;引き返しが起きない状態が続けばωを大きく
+&lt;ul&gt;
+&lt;li&gt;どのくらい大きくするかは $\beta \in(0,1)$ で調整&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;引き返しが発生したらωをリセット&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;前の2つの手法より良いか同等の結果となっていました。基本アプローチは同じでパラメーター調整の工夫なので、納得できる結果です。&lt;/p&gt;
+&lt;h5 id=&#34;bánvalasek-23-の結果&#34;&gt;[Bán&amp;amp;Valasek 23] の結果&lt;/h5&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;[Bán&amp;amp;Valasek 23] Automatic Step Size Relaxation in Sphere Tracingの結果&#34; 
+               srcset=&#34;http://localhost:1313/blog/2023/09/20/rtcamp9/slide_16p_hu_1fa8335a0ec3b4d6.webp 320w, http://localhost:1313/blog/2023/09/20/rtcamp9/slide_16p_hu_31656d06806103a0.webp 480w, http://localhost:1313/blog/2023/09/20/rtcamp9/slide_16p_hu_571e9efc98c2b7f3.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2023/09/20/rtcamp9/slide_16p_hu_1fa8335a0ec3b4d6.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;今回の提出シーンを使って、同じサンプリング数のレンダリング時間を計測したところ、約1.9倍ほど高速化しました（β=0.2）。&lt;/p&gt;
+&lt;p&gt;ここまで効果があるとは正直驚きでした。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;[Bán&amp;amp;Valasek 23] Automatic Step Size Relaxation in Sphere Tracingの結果 時間ごと&#34; 
+               srcset=&#34;http://localhost:1313/blog/2023/09/20/rtcamp9/slide_17p_hu_286f3bda37f9fde5.webp 320w, http://localhost:1313/blog/2023/09/20/rtcamp9/slide_17p_hu_8ba7f4036fa18a99.webp 480w, http://localhost:1313/blog/2023/09/20/rtcamp9/slide_17p_hu_c0860d392710d69e.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2023/09/20/rtcamp9/slide_17p_hu_286f3bda37f9fde5.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;時系列で見ていくと、歪みの少ないシーンほど効果が高く、歪みの大きいシーンは効果が少し下がるようでした。&lt;/p&gt;
+&lt;p&gt;この理由はシーンの形状に平面を仮定しているのが関係ありそうな気がしました。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;[Bán&amp;amp;Valasek 23] Automatic Step Size Relaxation in Sphere Tracingの結果 Mandelbox&#34; 
+               srcset=&#34;http://localhost:1313/blog/2023/09/20/rtcamp9/slide_18p_hu_92229e1403357bec.webp 320w, http://localhost:1313/blog/2023/09/20/rtcamp9/slide_18p_hu_29a41ac948ac21e9.webp 480w, http://localhost:1313/blog/2023/09/20/rtcamp9/slide_18p_hu_3f20c8a9ec0ab198.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2023/09/20/rtcamp9/slide_18p_hu_92229e1403357bec.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;一方で去年のレイトレ合宿8のシーンで試したところ、むしろ性能が半分ほどに大きく劣化してしまいました。&lt;/p&gt;
+&lt;p&gt;Mandelboxというフラクタルのシーンだったのですが、平面が少なく、曲面で構成されるのが原因かもしれません。&lt;/p&gt;
+&lt;p&gt;まとめると、以下のような傾向がありそうでした。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MengerSpongeのように平面から構成されるフラクタルとは相性が良い&lt;/li&gt;
+&lt;li&gt;Mandelboxのように曲面から構成されるフラクタルとは相性が悪い&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;色んなシーンで検証したわけではないので、あくまで予想ですが、なんとなく納得はできる結果になりました。&lt;/p&gt;
+&lt;h2 id=&#34;セミナーの発表資料&#34;&gt;セミナーの発表資料&lt;/h2&gt;
+&lt;p&gt;45分枠をいただたので、2つのテーマ（20分＋25分）で発表しました。&lt;/p&gt;
+&lt;h3 id=&#34;object-space-raymarching-in-unreal-engine-52&#34;&gt;Object Space Raymarching in Unreal Engine 5.2&lt;/h3&gt;
+&lt;p&gt;レイトレ合宿アドベントカレンダーと同じ内容です。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Unreal Engine 5.2上でオブジェクトスペースのレイマーチングを実装したので、その解説をします。&lt;/p&gt;
+&lt;p&gt;レイマーチングをノードだけで実装するのは大変なので、MaterialのCustomノードを用いて複雑な処理はHLSLのコードで実装しました。&lt;/p&gt;
+&lt;div class=&#34;google-slide-wrap&#34;&gt;
+&lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vQfE3NIpPR3jQ-YISM7paRmMD4Z7-onSKdKK4RGXd8A9K36Wguj9S7zXyo_XCsNB-aFT22gxFyr7Z-c/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;1440&#34; height=&#34;839&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;ifsによるフラクタルのモデリング&#34;&gt;IFSによるフラクタルのモデリング&lt;/h3&gt;
+&lt;p&gt;今回の合宿でも利用したMengerSpongeなどのフラクタルはIFS（Iterated Function System）と呼ばれる手法で距離関数を実装しています。&lt;/p&gt;
+&lt;p&gt;そのIFSについて、現実世界の実例（万華鏡や絞り染め）を用いて説明しました。&lt;/p&gt;
+&lt;div class=&#34;google-slide-wrap&#34;&gt;
+&lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vTeqnJbtD5u15mXPjgFqQJW854Tr24C-8Ie-EQXme_XxQBbnqTsGBFEO6mvNqpptoxOqdhLyKhjIdcF/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;1440&#34; height=&#34;839&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;オススメのセミナー資料&#34;&gt;オススメのセミナー資料&lt;/h2&gt;
+&lt;p&gt;どのセミナーもとても参考になる興味深い内容だったのですが、個人的に印象に残ったセミナーの資料を紹介します。&lt;/p&gt;
+&lt;h3 id=&#34;現代のgpuの実行スタイルとレイトレ-2023-by-shocker_0x15&#34;&gt;現代のGPUの実行スタイルとレイトレ (2023) by @Shocker_0x15&lt;/h3&gt;
+&lt;p&gt;参加者投票によってベストプレゼンター賞にも輝いた 
+ さんによる「現代のGPUの実行スタイルとレイトレ (2023)」です。&lt;/p&gt;
+&lt;iframe class=&#34;speakerdeck-iframe&#34; frameborder=&#34;0&#34; src=&#34;https://speakerdeck.com/player/3183d0c88c5f4de39daaeb464a2690c9&#34; title=&#34;現代のGPUの実行スタイルとレイトレ (2023)&#34; allowfullscreen=&#34;true&#34; style=&#34;border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;&#34; data-ratio=&#34;1.7777777777777777&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;「シェーダーではifが重い」という話はよく耳にしますが、これには古い情報や誤解が混ざっていることがあり、現代のGPUにおいては必ずしも正しいとは言えません。&lt;/p&gt;
+&lt;p&gt;現代のGPUにおいて、if文が性能にどのように影響するかを理解するためには、実行ダイバージェンスの観点からアプローチすることが重要です。
+また、現代のGPUにおける命令実行戦略、データダイバージェンス、キャッシュとメモリの速度の違い、Occupancy（GPUのリソース利用率）、そしてレイトレーシングにおけるダイバージェンスの問題など、さまざまな要因が影響を与えます。&lt;/p&gt;
+&lt;p&gt;残念ながら、このようなトピックに関するまとまった日本語の資料は少ないため、この発表は非常に貴重なものでした。
+シェーダーを扱う開発者は一度は目を通しておきたい発表でした！&lt;/p&gt;
+&lt;h3 id=&#34;00-10-の乱数を得るための本当の方法-by-h013&#34;&gt;[0.0, 1.0) の乱数を得るための“本当の”方法 by @h013&lt;/h3&gt;
+&lt;p&gt;
+さんによる「[0.0, 1.0) の乱数を得るための“本当の”方法」です。&lt;/p&gt;
+&lt;iframe class=&#34;speakerdeck-iframe&#34; frameborder=&#34;0&#34; src=&#34;https://speakerdeck.com/player/b000ac1dfa2d479d83756b0267d3f992&#34; title=&#34;[0.0, 1.0) の乱数を得るための“本当の”方法&#34; allowfullscreen=&#34;true&#34; style=&#34;border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;&#34; data-ratio=&#34;1.7777777777777777&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;code&gt;[0.0, 1.0)&lt;/code&gt; のfloatの乱数を生成する方法は自明ではなく、ほとんどのC++標準ライブラリーの &lt;code&gt;std::generate_canonical&lt;/code&gt; 実装では &lt;code&gt;[0.0, 1.0)&lt;/code&gt; が保証されていないというのは驚きでした。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;[0.0, 1.0)&lt;/code&gt; が保証される方法もパフォーマンス上の問題があったり、最適化の方法がさまざまに考案されていたり、こんなに乱数って奥が深かったんだと思いました。&lt;/p&gt;
+&lt;p&gt;これまで乱数について深く考えたことはなかったのですが、貴重な気づきが得られる発表でした。&lt;/p&gt;
+&lt;h3 id=&#34;volume-expression-ggxmicrofacet-by-kinakomoti2357&#34;&gt;Volume Expression GGX(Microfacet) by @Kinakomoti2357&lt;/h3&gt;
+&lt;p&gt;
+さんによる「Volume Expression GGX(Microfacet)」です。&lt;/p&gt;
+&lt;iframe class=&#34;speakerdeck-iframe&#34; frameborder=&#34;0&#34; src=&#34;https://speakerdeck.com/player/d1ad5e65246047a4a6f87c7a8dbe398f&#34; title=&#34;Volume Expression GGX(Microfacet)&#34; allowfullscreen=&#34;true&#34; style=&#34;border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;&#34; data-ratio=&#34;1.7777777777777777&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;きなこもちさんは
+という本を書いた方で、導入のMicrofacet BRDFの説明が分かりやすかったです。
+レイトレを始めたばかりの人にもオススメできる内容でした。&lt;/p&gt;
+&lt;p&gt;個人的にMultiple-Scatteringの扱いについて気になっていたところだったので参考になりました。&lt;/p&gt;
+&lt;p&gt;本題のGGXのVolumeについても興味深い話だと思いました。&lt;/p&gt;
+&lt;h2 id=&#34;マテリアル神経衰弱&#34;&gt;マテリアル神経衰弱&lt;/h2&gt;
+&lt;p&gt;当日のレクリエーションとしてマテリアル神経衰弱が開催されました。&lt;/p&gt;
+&lt;p&gt;カード216枚もあり、ほとんど同じようなカードが多数存在するため、悪意を感じるような難易度の高さでした。&lt;/p&gt;
+&lt;p&gt;たとえば、同じ色でもplasticやphenolicなどの材質にバリエーションがあり、ほとんど同じにしか見えないが違うカードが多数ありました。&lt;/p&gt;
+&lt;p&gt;その難易度にもかかわらず、優勝チームはなんと3ペアを引き当てていました。すごすぎる…！&lt;/p&gt;
+&lt;p&gt;なお、カードはレイトレ合宿のためだけの特注品だそうです！&lt;/p&gt;
+&lt;p&gt;レクリエーションの内容は直前まで秘密にされていたため、合宿参加者は「一体何が起きるんだろう？」という気持ちで臨むことになりました。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;マテリアル神経衰弱をしました &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/j4KSiKpGfR&#34;&gt;pic.twitter.com/j4KSiKpGfR&lt;/a&gt;&lt;/p&gt;&amp;mdash; hole (@h013) &lt;a href=&#34;https://twitter.com/h013/status/1697830574294249798?ref_src=twsrc%5Etfw&#34;&gt;September 2, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;マテリアル神経衰弱&lt;br&gt;どれも同じにしか見えない🤯&lt;br&gt; &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/DWP1CbosWD&#34;&gt;pic.twitter.com/DWP1CbosWD&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1697832084034003167?ref_src=twsrc%5Etfw&#34;&gt;September 2, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;部屋対抗マテリアル神経衰弱、優勝！！景品はマテリアルトランプ🃏 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/LyNN733b9B&#34;&gt;pic.twitter.com/LyNN733b9B&lt;/a&gt;&lt;/p&gt;&amp;mdash; Nishiki (@yknishidate) &lt;a href=&#34;https://twitter.com/yknishidate/status/1697924033504026778?ref_src=twsrc%5Etfw&#34;&gt;September 2, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; 9終了！今年から運営側でしたが変わらず楽しかったです。皆さまありがとうございました！&lt;br&gt;セミナーではベストに選んで頂きましたが、肝心の本戦に出せなかったので来年はリベンジ。&lt;br&gt;&lt;br&gt;写真はレクリエーション用に作ったMERL BRDFトランプによるハードコア神経衰弱 &lt;a href=&#34;https://t.co/FMioEzeoyp&#34;&gt;pic.twitter.com/FMioEzeoyp&lt;/a&gt;&lt;/p&gt;&amp;mdash; Shocker (@Shocker_0x15) &lt;a href=&#34;https://twitter.com/Shocker_0x15/status/1698268528355553623?ref_src=twsrc%5Etfw&#34;&gt;September 3, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;
+&lt;p&gt;本戦は色々なアプローチに挑戦されている方が多く、多様性がありました。
+1位のうしおさんはボクセル、2位のholeさんはボリュームなど、計算時間的に難易度な高そうなテーマを扱いながら、ノイズがまったく分からない結果だったので印象的でした。&lt;/p&gt;
+&lt;p&gt;去年に引き続き、セミナーは参加者全員で発表しました。参加者のバックグラウンドもさまざまだったので、いろんな分野の興味深い話や深い話を聞くことができて楽しかったです。&lt;/p&gt;
+&lt;p&gt;Yoshi&amp;rsquo;s Dreannさんの
+やうでメガネさんの
+など、気になってはいるものの、なかなか手を出せていない手法についての発表も多く、自分も頑張らねばと思いました。&lt;/p&gt;
+&lt;p&gt;さまざまなグラフィックスAPIにおけるレイトレの話もありました。kugiさんの
+、Nishikiさんの
+、Pentanさんの
+などです。&lt;/p&gt;
+&lt;p&gt;今年は新規の参加者も多かったので、色んな人とお話できるよい機会に恵まれました。&lt;/p&gt;
+&lt;p&gt;レイトレ合宿の運営の方々、その他の参加者のみなさん、本当にありがとうございました！&lt;/p&gt;
+&lt;h2 id=&#34;写真コーナー&#34;&gt;写真コーナー&lt;/h2&gt;
+&lt;p&gt;レイトレ合宿史上初の寺での開催でした。開催地を聞かされた時、お寺で合宿が可能なんだ…という驚きが強かったです。&lt;/p&gt;
+&lt;p&gt;最終日は朝4時からお勤めあったり、3食とも精進料理だったりと、生活リズムが健康的になりました。いい経験になりました。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;お寺の朝は早い &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/jR0ZLg2wmR&#34;&gt;pic.twitter.com/jR0ZLg2wmR&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1697707181465100455?ref_src=twsrc%5Etfw&#34;&gt;September 1, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;朝食🍱 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/y6EHL5ug4e&#34;&gt;pic.twitter.com/y6EHL5ug4e&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1697737461554962700?ref_src=twsrc%5Etfw&#34;&gt;September 1, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;お昼は蕎麦🍜 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/7punHumnK8&#34;&gt;pic.twitter.com/7punHumnK8&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1697813390520139958?ref_src=twsrc%5Etfw&#34;&gt;September 2, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;夜ご飯🍱 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/RqQxodezxn&#34;&gt;pic.twitter.com/RqQxodezxn&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1697967291919683822?ref_src=twsrc%5Etfw&#34;&gt;September 2, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;日の出もとても綺麗でした🌅&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;放射状のライトシャフトすごい🌅 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/GnmDCd9N8Q&#34;&gt;pic.twitter.com/GnmDCd9N8Q&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1698063763306652078?ref_src=twsrc%5Etfw&#34;&gt;September 2, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;日の出🌅 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/EoIqfssRRf&#34;&gt;pic.twitter.com/EoIqfssRRf&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1698071301800526108?ref_src=twsrc%5Etfw&#34;&gt;September 2, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;フリータイム中に境内を散歩したときの写真たちです。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;お寺⛩️で &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/vGSi0BcIBn&#34;&gt;pic.twitter.com/vGSi0BcIBn&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1697463738268520496?ref_src=twsrc%5Etfw&#34;&gt;September 1, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;巨大な杉🌲 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/ljckfAnzUM&#34;&gt;pic.twitter.com/ljckfAnzUM&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1697745934405505036?ref_src=twsrc%5Etfw&#34;&gt;September 1, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;qme&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/oCVmNCFvC2&#34;&gt;pic.twitter.com/oCVmNCFvC2&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1697749270676529499?ref_src=twsrc%5Etfw&#34;&gt;September 1, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;海が見える &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/v9skl7fZnx&#34;&gt;pic.twitter.com/v9skl7fZnx&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1697749447936233824?ref_src=twsrc%5Etfw&#34;&gt;September 1, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;マテリアルとフォントが特徴的 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/ldQbjAjGkz&#34;&gt;pic.twitter.com/ldQbjAjGkz&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1697756752744481206?ref_src=twsrc%5Etfw&#34;&gt;September 1, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;qme&#34; dir=&#34;ltr&#34;&gt;⛩️ &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/tGxQ04mL2A&#34;&gt;pic.twitter.com/tGxQ04mL2A&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1697760465529786856?ref_src=twsrc%5Etfw&#34;&gt;September 1, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;瞑想で精神統一🧘 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/1wLEOw6GL1&#34;&gt;pic.twitter.com/1wLEOw6GL1&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1697776870610407885?ref_src=twsrc%5Etfw&#34;&gt;September 2, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;神社Now &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/TLUKeayQCB&#34;&gt;pic.twitter.com/TLUKeayQCB&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1698080450391191682?ref_src=twsrc%5Etfw&#34;&gt;September 2, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;見納めです🙏 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/Bjin2IOgLG&#34;&gt;pic.twitter.com/Bjin2IOgLG&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1698139360858927237?ref_src=twsrc%5Etfw&#34;&gt;September 3, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>normalize.fmにゲスト出演しました</title>
+      <link>http://localhost:1313/blog/2022/10/20/normalizefm/</link>
+      <pubDate>Thu, 20 Oct 2022 10:44:48 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2022/10/20/normalizefm/</guid>
+      <description>&lt;p&gt;
+の第032回にゲスト出演させていただきました。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/normalizeFM?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#normalizeFM&lt;/a&gt; の新エピソード公開しました。&lt;br&gt;今回は &lt;a href=&#34;https://twitter.com/gam0022?ref_src=twsrc%5Etfw&#34;&gt;@gam0022&lt;/a&gt; さんをゲストに、普段の収録と比較するとかなりテックな話題に寄った感じで、深い技術の話をいろいろうかがいました。&lt;br&gt;&lt;br&gt;032. たゆまぬ努力とキャッチアップ&lt;a href=&#34;https://t.co/acML0WOwYQ&#34;&gt;https://t.co/acML0WOwYQ&lt;/a&gt;&lt;/p&gt;&amp;mdash; h_doxas (@h_doxas) &lt;a href=&#34;https://twitter.com/h_doxas/status/1582287588978618369?ref_src=twsrc%5Etfw&#34;&gt;October 18, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>レイトレ合宿8参加レポート</title>
+      <link>http://localhost:1313/blog/2022/10/17/rtcamp8/</link>
+      <pubDate>Mon, 17 Oct 2022 10:00:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2022/10/17/rtcamp8/</guid>
+      <description>&lt;p&gt;9月2日(金)～9月4日(日)に沖縄本島で開催された
+に参加しました。&lt;/p&gt;
+&lt;p&gt;自作のレンダラーでこんな動画を &lt;strong&gt;10分の制限時間&lt;/strong&gt; でレンダリングして5位をいただきました！&lt;/p&gt;
+&lt;div class=&#34;movie-wrap&#34;&gt;
+&lt;iframe width=&#34;1920&#34; height=&#34;1080&#34; src=&#34;https://www.youtube.com/embed/c7JqEpaR658&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;レイマーチングとポリゴンをハイブリッドに描画できる単方向パストレーシングのレンダラーをOptiXで開発して16人中7位でした。&lt;br&gt;&lt;br&gt;レンダリング時間は10分（1フレーム2秒）だったので、&lt;br&gt;NEEやMISなどサンプリングの高速化も行いました。&lt;br&gt;&lt;br&gt;動画は本戦で実際に出力されたファイルです。&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/LDgKL7gLsY&#34;&gt;pic.twitter.com/LDgKL7gLsY&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1566269176314220544?ref_src=twsrc%5Etfw&#34;&gt;September 4, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;コロナの影響もあり、3年ぶりのレイトレ合宿でした…！&lt;/p&gt;
+&lt;p&gt;台風11号がちょうど沖縄に直撃してしまい、天候には恵まれなかったのは残念でしたが、とても充実した合宿でした。&lt;/p&gt;
+&lt;p&gt;合宿の様子や雰囲気を詳しく知りたい方は、Ki_NaN_komotiさんのブログ記事がオススメです。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;２週間ぐらい経ちましたがレイトレ合宿の参加レポートを書きました&lt;br&gt;&lt;br&gt;レンダラー開発記とレイトレ合宿の様子を書いています&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt;&lt;a href=&#34;https://t.co/Fhtvuz9n2H&#34;&gt;https://t.co/Fhtvuz9n2H&lt;/a&gt;&lt;/p&gt;&amp;mdash; Ki_NaN_komoti (@Kinakomoti2357) &lt;a href=&#34;https://twitter.com/Kinakomoti2357/status/1571122433763184640?ref_src=twsrc%5Etfw&#34;&gt;September 17, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h2 id=&#34;本戦用のレンダラーの解説&#34;&gt;本戦用のレンダラーの解説&lt;/h2&gt;
+&lt;p&gt;こちらが本戦のプレゼン資料です。&lt;/p&gt;
+&lt;div class=&#34;google-slide-wrap&#34;&gt;
+&lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vTTvbJ3UILqFymar8yG4VOomRdeJzfeS8zoehGZruGQCmq8A2cQ4rru3WYfZdi3xRD4PkE3yamqRHjt/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;1440&#34; height=&#34;839&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;GitHubに
+も公開しています。急いで実装したので品質は低いです。&lt;/p&gt;
+&lt;p&gt;
+で開発したRedflashというレンダラーを動画に対応させました。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;前回までにこれらの基本的な機能は実装していました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;単方向のパストレーシング&lt;/li&gt;
+&lt;li&gt;Disney BRDF&lt;/li&gt;
+&lt;li&gt;NEE&lt;/li&gt;
+&lt;li&gt;MIS&lt;/li&gt;
+&lt;li&gt;レイマーチングの衝突判定（OptiXのカスタムプリミティブとして実装）&lt;/li&gt;
+&lt;li&gt;ACES Filmic Tone Mapping&lt;/li&gt;
+&lt;li&gt;Deep Learning Denoising（ディープラーニングによるデノイザー、OptiXを使えば簡単に利用できる）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;今年から静止画部門が廃止されたので、動画部門への対応を行いました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;アニメーション（シーンの動的な更新）&lt;/li&gt;
+&lt;li&gt;動画のための画像の連番出力&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;レンダラーの出力設定&#34;&gt;レンダラーの出力設定&lt;/h3&gt;
+&lt;p&gt;出力解像度の高さ・フレーム数の多さは、分かりやすくアピールポイントになるので、ギリギリを攻めました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;解像度は1920x1080&lt;/li&gt;
+&lt;li&gt;フレーム数は300（30FPS * 10秒）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;制限時間は10分（600秒）なので、1フレームあたりの時間は2秒でした。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;長さは3秒以上10秒以下&lt;/code&gt; というレギュレーションだったので、上限の10秒にしました。&lt;/p&gt;
+&lt;p&gt;パストレーシングの場合はゆったりしたアニメーションの方が映えそうなので、60FPSではなく30FPSにしました。
+普通のPCのモニターのリフレッシュレートは60Hzだと思うので、24FPSなど中途半端なのは選択肢から除外していました。&lt;/p&gt;
+&lt;p&gt;PNGの保存（エンコード＋ファイル保存）と、レンダリングは別スレッドで並列実行するようにしました。
+解像度は2160pにするとPNGのエンコード時間がレンダリングよりもボトルネックになるので1080pを選びました。&lt;/p&gt;
+&lt;p&gt;前回のレイトレ合宿7の本戦の静止画部門では、1フレームに60秒使えました。
+使える時間が30分の1まで急激に短くなったのは大変でした。&lt;/p&gt;
+&lt;p&gt;さらに実行環境（AWSのEC2インスタンス）も大幅にスペックダウンしていたのも痛手でした。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;p3.16xlarge（レイトレ合宿7）&lt;/li&gt;
+&lt;li&gt;g4dn.xlarge（レイトレ合宿8）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;g4dn.xlargeではRTコアが使えるようになったようですが、レイマーチングが主なので自分の場合は恩恵があまりありませんでした…&lt;/p&gt;
+&lt;h3 id=&#34;optixのバージョンについて&#34;&gt;OptiXのバージョンについて&lt;/h3&gt;
+&lt;p&gt;今回は最新のOptiX7でレンダラーを実装しようと思ったのですが、最終的には前回と同じOptiX6で提出しました。&lt;/p&gt;
+&lt;p&gt;
+ではOptiX7で実装をしていました。&lt;/p&gt;
+&lt;p&gt;OptiX7ではなぜかポリゴンとレイマーチングのプリミティブを混在するとパフォーマンスが異常に悪化する問題が発生してしまい、これを解決する方法が見つからず、提出まで時間もなかったので諦めてOptiX6を採用しました。&lt;/p&gt;
+&lt;p&gt;もしパフォーマンスの問題を解決できたとしても、OptiX7はかなり低レイヤーのAPIになっていたので、何かしらのラッパーを開発しないと使うのは大変に思いました。セットアップするだけでもかなり大量のコードの実装が必要でした。&lt;/p&gt;
+&lt;h3 id=&#34;アニメーション要素&#34;&gt;アニメーション要素&lt;/h3&gt;
+&lt;p&gt;10秒の尺に3種類のアニメーション要素を詰め込みました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ライトのアニメーション&lt;/li&gt;
+&lt;li&gt;レイマーチングのパラメーターのアニメーション&lt;/li&gt;
+&lt;li&gt;マテリアルのアニメーション&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;動画の内容もそれぞれのアニメーションの要素を1つ1つ紹介するような感じにしました。&lt;/p&gt;
+&lt;h4 id=&#34;ライトのアニメーション&#34;&gt;ライトのアニメーション&lt;/h4&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;2つのポイントライトをアニメーションしました。&lt;/p&gt;
+&lt;p&gt;OptiX6系では以下のようにmarkDirtyしてからlaunchすることでアクセラレーション構造を更新できました。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;light_group&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;getAcceleration&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;markDirty&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;light_group&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;getContext&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;launch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;top_group_light&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;getAcceleration&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;markDirty&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;top_group_light&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;getContext&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;launch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;シーン内のプリミティブの数が少ないので、このあたりは工夫しなくてもパフォーマンス上の問題はありませんでした。&lt;/p&gt;
+&lt;p&gt;NEE用にライトの情報の構造体の配列（ComputeShaderのStructuredBufferのようなもの）を渡しているので、これも毎フレーム更新が必要でした。&lt;/p&gt;
+&lt;h4 id=&#34;レイマーチングのパラメーターのアニメーション&#34;&gt;レイマーチングのパラメーターのアニメーション&lt;/h4&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;せっかくレイマーチングでフラクタル（Mandelboxの軽量版）を描画しているので、フラクタルのパラメーターをアニメーションさせてみました。&lt;/p&gt;
+&lt;p&gt;CUDAでtimeを受け取るようにして、timeを元にパラメーターをアニメーションしているだけなので、とても簡単に実装できました。&lt;/p&gt;
+&lt;h4 id=&#34;マテリアルのアニメーション&#34;&gt;マテリアルのアニメーション&lt;/h4&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;マテリアルのパラメーターをアニメーション可能にして、ここではEmissiveをアニメーションさせるようにしました。&lt;/p&gt;
+&lt;p&gt;Emissiveのアニメーションが映えるように、MengerSpongeにしました。平面が多いので光の反射が綺麗に見せられるかなと思ってこうなりました。
+roughnessなどひたすら微調整して、最終的に気に入るルックにできました。&lt;/p&gt;
+&lt;p&gt;実装的にはマテリアルのパラメーターを更新する専用のCallable Program（OptiX用語で関数ポインターのようなもの）を定義しました。&lt;/p&gt;
+&lt;p&gt;CUDAの関数で好き勝手にアニメーションできるようにしました。&lt;/p&gt;
+&lt;h3 id=&#34;アダプティブなeps&#34;&gt;アダプティブなeps&lt;/h3&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;前回のレイトレ合宿に引き続き、今回もアダプティブなeps計算をしています。&lt;/p&gt;
+&lt;p&gt;カメラからの距離に応じてレイマーチングの衝突判定につかうepsを変化させることで、実質的なLODのようなことをしています。&lt;/p&gt;
+&lt;p&gt;カメラ距離が変化してもちょうど良い感じのディテールでフラクタルを描画することができました。&lt;/p&gt;
+&lt;h3 id=&#34;デバッグ機能&#34;&gt;デバッグ機能&lt;/h3&gt;
+&lt;h4 id=&#34;wasd機能&#34;&gt;WASD機能&lt;/h4&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;いい感じのカメラアングルを探るためにWASDでカメラを移動できるようにしました。&lt;/p&gt;
+&lt;p&gt;余談ですが、Unityのシーンビューの右クリックでも同じようなことができます。Unityでカメラワークを実装するときもこの機能をよく活用しています。&lt;/p&gt;
+&lt;h4 id=&#34;デバッグ用のレンダラー&#34;&gt;デバッグ用のレンダラー&lt;/h4&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;パストレーシングで描画すると処理が重くてフレーム落ちするのでアニメーションの確認には適しません。&lt;/p&gt;
+&lt;p&gt;アニメーションをリアルタイムに確認できるように、レンダリングの品質を落としたデバッグ用のレンダラーも実装しました。&lt;/p&gt;
+&lt;h3 id=&#34;awsの上限緩和申請は早めにやろう&#34;&gt;AWSの上限緩和申請は早めにやろう&lt;/h3&gt;
+&lt;p&gt;AWSの上限緩和申請（4vCPU）は時間がかかる場合もあるので、提出直前にやるのは良くなかったです。&lt;/p&gt;
+&lt;p&gt;他の参加者からはすぐに申請が通ったという声も聞いたので、自分だけ担当者ガチャに外れただけの可能性はあります。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;AWSの上限緩和申請(4vCPU)、1週間くらいかかったな&lt;br&gt;&lt;br&gt;申請: 2022/08/23 1:49&lt;br&gt;承認: 2022/08/29 10:37&lt;br&gt;&lt;br&gt;もっと事前にやっておくべきだった…&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1564068725212360704?ref_src=twsrc%5Etfw&#34;&gt;August 29, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h2 id=&#34;セミナー資料&#34;&gt;セミナー資料&lt;/h2&gt;
+&lt;p&gt;レイトレ合宿ではセミナーも行われます。&lt;/p&gt;
+&lt;p&gt;今年は参加者全員で発表を行ったので、朝から晩までたくさんのセミナーを聞くことができました。&lt;/p&gt;
+&lt;div class=&#34;google-slide-wrap&#34;&gt;
+&lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vSdZQILhwkXvTsW024mmgc5V0G0sdFY2CQ1a5GtN953__e5drmPzBqVqr1qin2EtZOelzu6cl9IT9M2/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;1440&#34; height=&#34;839&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;私は「レイマーチングのすすめ」という発表をしました。&lt;/p&gt;
+&lt;p&gt;過去資料を参照しながら、レイマーチングについて個人的に意外だと感じる部分や、Shadertoyなどで使わているテクニックについて、広く浅く紹介しました。&lt;/p&gt;
+&lt;p&gt;口頭での説明が前提の発表なので、資料だけでは分かりにくいと思いますが、雰囲気だけでも伝わればと思います。&lt;/p&gt;
+&lt;h2 id=&#34;印象に残った作品&#34;&gt;印象に残った作品&lt;/h2&gt;
+&lt;p&gt;どの作品も工夫があって面白かったのですが、その中でも個人的にかなり印象に残った作品をピックアップしました。&lt;/p&gt;
+&lt;p&gt;たた (@8picoz) さんがRust 100%のGPUレンダラーを開発していて、前々回のレイトレ合宿までは私もRustを使っていたということもあり、個人的にとても参考にしたいと思いました。
+Vulkanのレイトレーシング機能をつかっていて、VulkanではSPIR-Vというシェーダーの中間コードの仕組みが使えるようになっているので、任意の言語でシェーダーを実装できるようになりました。
+SPIR-Vをつかうことで、GPUコードもRustで実装をしたそうです。すごい良さそう！&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;こんな感じの動画をレンダリングして11位でした！ &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/aSEekYHQgr&#34;&gt;pic.twitter.com/aSEekYHQgr&lt;/a&gt;&lt;/p&gt;&amp;mdash; たた (@8picoz) &lt;a href=&#34;https://twitter.com/8picoz/status/1566239120065982465?ref_src=twsrc%5Etfw&#34;&gt;September 4, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;うしお (@ushiostarfish) さんはNeRFで絵を出していました。
+既存の機械学習のライブラリを使わずに、CUDAでスクラッチ実装したとのことだったので、個人的にとても驚きした。
+学習のための写真も自分で苦労して撮影したという裏話も聞けて良かったです。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;一発ネタのNeRFで、もはやレイトレなのか分からなくなってきましたが、思いのほか反響があってよかったです！&lt;br&gt;実装と解説スライドなどこちらにあります&lt;a href=&#34;https://t.co/YdeNXrIYBF&#34;&gt;https://t.co/YdeNXrIYBF&lt;/a&gt;&lt;br&gt;&lt;br&gt;運営の皆さま、今年も大変お疲れ様でございました！大変充実したイベントをありがとうございました！&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt;&lt;/p&gt;&amp;mdash; うしお (@ushiostarfish) &lt;a href=&#34;https://twitter.com/ushiostarfish/status/1568187460596953093?ref_src=twsrc%5Etfw&#34;&gt;September 9, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;Shocker (@Shocker_0x15) さんのNeural Radiance Cachingをボリュームに適用して高速化をしていました。
+他の参加者と差別化できていて、結果も綺麗ですごいと思いました。機械学習の波がレイトレ合宿にも来ているのを感じました。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;3年ぶりの &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; 8でMulti-scatteringな雲の動画をレンダリングして1位を頂きました！&lt;br&gt;普通にやると重すぎて間に合わないのでNeural Radiance Cachingをボリュームに適用して高速化しました。&lt;br&gt;&lt;br&gt;レンダラー紹介スライド&lt;a href=&#34;https://t.co/ry4W70XcgI&#34;&gt;https://t.co/ry4W70XcgI&lt;/a&gt; &lt;a href=&#34;https://t.co/82OFf5rYue&#34;&gt;pic.twitter.com/82OFf5rYue&lt;/a&gt;&lt;/p&gt;&amp;mdash; Shocker (@Shocker_0x15) &lt;a href=&#34;https://twitter.com/Shocker_0x15/status/1566267613440684033?ref_src=twsrc%5Etfw&#34;&gt;September 4, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;hole (@h013) はゴールベースコースティクスを実装していました。分散の発生する処理がほとんどなく、Deterministicに結果が決まるそうで、ノイズがまったくないめちゃくちゃ綺麗な結果でした。
+他の参加者と違うアプローチで差別化ができていて、結果もめちゃくちゃ綺麗でいいなと思いました。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;レイトレ合宿終わりました。皆さんありがとうござました！&lt;br&gt;&lt;br&gt;僕はコースティクスを実装し、こんな感じの動画をレンダリングして４位でした。 &lt;br&gt;&lt;br&gt; &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/NbHutC9KtB&#34;&gt;pic.twitter.com/NbHutC9KtB&lt;/a&gt;&lt;/p&gt;&amp;mdash; hole (@h013) &lt;a href=&#34;https://twitter.com/h013/status/1566238238959759361?ref_src=twsrc%5Etfw&#34;&gt;September 4, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;Shinji Ogaki (@ShinjiOgaki) さんはCPUレンダラーかつデノイズしないという条件で、ノイズがまったくない綺麗な絵を出していて、圧倒的な実装力の違いを見せつけられました。強者の風格をとても感じる作品でした。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;記事はまる一日で3000くらい閲覧があったようなので、合宿に興味がある人が多いのかも？&lt;br&gt;せっかくなので、少し尺の長い動画を載せておきます。&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/generative?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#generative&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/creativecoding?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#creativecoding&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/processing?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#processing&lt;/a&gt; &lt;a href=&#34;https://t.co/RqMLxaUIMX&#34;&gt;pic.twitter.com/RqMLxaUIMX&lt;/a&gt;&lt;/p&gt;&amp;mdash; Shinji Ogaki (@ShinjiOgaki) &lt;a href=&#34;https://twitter.com/ShinjiOgaki/status/1566909271043817472?ref_src=twsrc%5Etfw&#34;&gt;September 5, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;
+&lt;p&gt;年々と制限時間が短くなっているのに、ほとんどの参加者はノイズのない綺麗なレンダリング結果を出していて、参加者のレベルがどんどんインフレしているのを感じました。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;もはやノイズの少ない絵を出すだけでは差別化が難しいので、それぞれの参加者がユニークな切り口で勝負してくるハイレベルな戦いでした。&lt;/p&gt;
+&lt;p&gt;今年のセミナーは参加者全員で発表しました。参加者のバックグラウンドもさまざまだったので、いろんな分野の興味深い話や深い話を聞くことができて楽しかったです。&lt;/p&gt;
+&lt;p&gt;レイトレ合宿の運営の方々、その他の参加者のみなさん、本当にありがとうございました！&lt;/p&gt;
+&lt;h2 id=&#34;写真コーナー&#34;&gt;写真コーナー&lt;/h2&gt;
+&lt;p&gt;天候には恵まれませんでしたが、ホテルがめちゃくちゃ豪華だったり、美味しいご飯を食べたりして沖縄を満喫しました。&lt;/p&gt;
+&lt;p&gt;写真から雰囲気が少しでも伝われば幸いです。&lt;/p&gt;
+&lt;p&gt;ホテルは棟ごと貸し切りをしました！まるでレンダリング用のシーンのようにピカピカなお部屋でした！すごい！&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+&lt;/p&gt;
+&lt;p&gt;沖縄の料理なども堪能しました。合宿自体は2泊でしたが、個人的に延泊して4泊したので料理の写真が多くなっています。&lt;/p&gt;
+&lt;p&gt;しまぶた屋　地酒の飲み比べ
+
+&lt;/p&gt;
+&lt;p&gt;海ぶどう　茶碗蒸し
+
+&lt;/p&gt;
+&lt;p&gt;なかゆくい　ハブ酒
+
+&lt;/p&gt;
+&lt;p&gt;なかゆくい　マンゴーのかき氷
+
+&lt;/p&gt;
+&lt;p&gt;アメリカ食堂
+
+&lt;/p&gt;
+&lt;p&gt;タコライスcafe きじむなぁ
+
+&lt;/p&gt;
+&lt;p&gt;琉球ダイニング 桃香
+
+&lt;/p&gt;
+&lt;p&gt;沖縄のブルーシールアイスクリーム BLUE SEAL
+
+
+
+&lt;/p&gt;
+&lt;p&gt;ステーキハウス88
+
+
+
+&lt;/p&gt;
+&lt;p&gt;土～夢 ごはんカフェ 琉球ガラス村店（ドーム）
+食器がおしゃれ
+
+&lt;/p&gt;
+&lt;p&gt;琉球ガラス村のエントランス
+
+&lt;/p&gt;
+&lt;p&gt;DMMかりゆし水族館
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;/p&gt;
+&lt;p&gt;本戦の景品です。組み立て式の時計でした。グリニッチ天文台で購入したものだそうです。
+
+&lt;/p&gt;
+&lt;!--
+
+## 関連商品
+
+レンダラー名の由来となった楽曲です。プリパラを見てください。
+
+&lt;iframe sandbox=&#34;allow-popups allow-scripts allow-modals allow-forms allow-same-origin&#34; style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=gam00220c-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B06Y3Z1PTK&amp;linkId=e1fef8b2771937a4232c7850b5dca2da&#34;&gt;&lt;/iframe&gt;
+
+--&gt;</description>
+    </item>
+    
+    <item>
+      <title>速度比較！レイマーチングvsレイキャスティング</title>
+      <link>http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/</link>
+      <pubDate>Mon, 08 Aug 2022 02:12:50 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/</guid>
+      <description>&lt;p&gt;これは
+のアドベントカレンダーです。&lt;/p&gt;
+&lt;p&gt;レイマーチングはレイキャスティングと比べて遅いと感じていましたが、なるべく同じ条件で計測した場合に実際どのくらい差があるのか比較してみました。&lt;/p&gt;
+&lt;h2 id=&#34;検証内容の概要&#34;&gt;検証内容の概要&lt;/h2&gt;
+&lt;p&gt;メンガーのスポンジをレイマーチングとレイキャスティングでそれぞれ交差判定を実装し、フラクタルの深度を1～4に変化しながら計測しました。&lt;/p&gt;
+&lt;p&gt;次の画像はレイマーチングによる深度4のメンガーのスポンジです。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;レイマーチング 深度4 300ステップ&#34; 
+               srcset=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_l300_hu_c51cc392556793f7.webp 320w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_l300_hu_292a6f5768a244b5.webp 480w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_l300_hu_b3dd9ce26b7f8247.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_l300_hu_c51cc392556793f7.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;計測結果のサマリー&#34;&gt;計測結果のサマリー&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;先に結果から発表すると、なんとレイマーチングはレイキャスティングの15～20倍くらい遅いようでした。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;ここまで遅いなんてショック😨…&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;計測結果の棒グラフ&#34; 
+               srcset=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/result_graph_hu_6ffa427ea9da64bb.webp 320w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/result_graph_hu_37633a031107e249.webp 480w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/result_graph_hu_892cf10c3c3e1a36.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/result_graph_hu_6ffa427ea9da64bb.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;470&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;256サンプリング時のレンダリング時間（秒）&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;フラクタルの深度&lt;/th&gt;
+          &lt;th style=&#34;text-align: right&#34;&gt;1&lt;/th&gt;
+          &lt;th style=&#34;text-align: right&#34;&gt;2&lt;/th&gt;
+          &lt;th style=&#34;text-align: right&#34;&gt;3&lt;/th&gt;
+          &lt;th style=&#34;text-align: right&#34;&gt;4&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;レイマーチング&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;8.85388秒 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;レイマーチング 深度1&#34; 
+               srcset=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i1_s256_hu_b54039b6787efa3e.webp 320w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i1_s256_hu_dd119640f28673fa.webp 480w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i1_s256_hu_d6d0901a391deb2a.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i1_s256_hu_b54039b6787efa3e.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;9.00077秒 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;レイマーチング 深度2&#34; 
+               srcset=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i2_s256_hu_eee144c38bc42bd0.webp 320w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i2_s256_hu_cab92e0a4d23cb9.webp 480w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i2_s256_hu_9598bff0bd58c6fd.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i2_s256_hu_eee144c38bc42bd0.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;9.14309秒 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;レイマーチング 深度3&#34; 
+               srcset=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i3_s256_hu_22f55b0ab04dffa4.webp 320w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i3_s256_hu_d6e34d35d5a5cf74.webp 480w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i3_s256_hu_b6efff9362f084fc.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i3_s256_hu_22f55b0ab04dffa4.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;9.29724秒 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;レイマーチング 深度4&#34; 
+               srcset=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_hu_c3e79eb280f17d34.webp 320w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_hu_f506434ab34cc8c.webp 480w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_hu_2224ffae53fdc066.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_hu_c3e79eb280f17d34.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;レイキャスティング&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;0.445493秒 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;レイキャスティング 深度1&#34; 
+               srcset=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i1_s256_hu_596592693018960f.webp 320w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i1_s256_hu_cab65271a56953cc.webp 480w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i1_s256_hu_e3c352e47a0a7e86.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i1_s256_hu_596592693018960f.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;0.466056秒 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;レイキャスティング 深度2&#34; 
+               srcset=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i2_s256_hu_7aa92e0a2e3c93ca.webp 320w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i2_s256_hu_3e9384cf8db08ffb.webp 480w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i2_s256_hu_baf9f03eb8e52368.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i2_s256_hu_7aa92e0a2e3c93ca.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;0.50258秒 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;レイキャスティング 深度3&#34; 
+               srcset=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i3_s256_hu_c928aed3d70a316a.webp 320w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i3_s256_hu_c76fea0415e5efe6.webp 480w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i3_s256_hu_6a44acfd34f57a7f.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i3_s256_hu_c928aed3d70a316a.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;0.602458秒 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;レイキャスティング 深度4&#34; 
+               srcset=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i4_s256_hu_8e90b967f7f91470.webp 320w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i4_s256_hu_a868d261262b300f.webp 480w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i4_s256_hu_f4c33b5b99bb865.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i4_s256_hu_8e90b967f7f91470.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;検証内容の詳細&#34;&gt;検証内容の詳細&lt;/h2&gt;
+&lt;h3 id=&#34;検証pcのスペック&#34;&gt;検証PCのスペック&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;OS: Windows 11&lt;/li&gt;
+&lt;li&gt;CPU: Core i7-12700K&lt;/li&gt;
+&lt;li&gt;GPU: GeForce RTX 3080&lt;/li&gt;
+&lt;li&gt;メモリ: 64GB (3200MHz)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;このピカピカ光るPCで検証しました。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;my new gear... &lt;a href=&#34;https://t.co/eS2MbH7OKc&#34;&gt;pic.twitter.com/eS2MbH7OKc&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1546700194305437696?ref_src=twsrc%5Etfw&#34;&gt;July 12, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h3 id=&#34;共通条件&#34;&gt;共通条件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;レンダラーはNVIDIA OptiX 7.5上で実装&lt;/li&gt;
+&lt;li&gt;256サンプリングする時間を計測
+&lt;ul&gt;
+&lt;li&gt;1回のoptixLaunchで256サンプリング&lt;/li&gt;
+&lt;li&gt;Ray generationプログラム（CUDAの関数）の中で256回ループ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;出力解像度は1920x1080&lt;/li&gt;
+&lt;li&gt;計測時間の詳細
+&lt;ul&gt;
+&lt;li&gt;シーンの初期化やBVHの構築は含まない&lt;/li&gt;
+&lt;li&gt;optixLaunchの実行時間を計測&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;シェーディングはパストレーシング
+&lt;ul&gt;
+&lt;li&gt;マテリアルは拡散反射のみ&lt;/li&gt;
+&lt;li&gt;NEEやMISはしないシンプルなパストレーシング&lt;/li&gt;
+&lt;li&gt;反射の最大深度は5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;シーン全体で2つのGAS
+&lt;ul&gt;
+&lt;li&gt;床（巨大なカスタムプリミティブのSphere）のGASが1つ&lt;/li&gt;
+&lt;li&gt;メンガーのスポンジのGASが1つ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;レイマーチング&#34;&gt;レイマーチング&lt;/h3&gt;
+&lt;p&gt;レイマーチングは繰り返しの計算によって数値的に衝突判定を解く手法で、Sphere Tracingとも呼ばれます。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;レイマーチングの最大ステップ回数（マーチングループのループ数）は100&lt;/li&gt;
+&lt;li&gt;Intersectionプログラム（CUDAの関数）としてレイマーチングを実装
+&lt;ul&gt;
+&lt;li&gt;詳細は
+を参照&lt;/li&gt;
+&lt;li&gt;Optix6の内容なので、Optix7対応のために実装を多少修正&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;高速化のためにカメラからレイは飛ばさずに、バウンディングボックス（AABB）からレイを飛ばす
+&lt;ul&gt;
+&lt;li&gt;AABBは最適になるようにギリギリに設定&lt;/li&gt;
+&lt;li&gt;カスタムプリミティブ全体で1つのAABB&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;レイキャスティング&#34;&gt;レイキャスティング&lt;/h3&gt;
+&lt;p&gt;今回のレイキャスティングとは、レイと三角形の解析的な交差判定のことです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;メンガースポンジはHoudiniでモデリング
+&lt;ul&gt;
+&lt;li&gt;詳細は
+を参照&lt;/li&gt;
+&lt;li&gt;フラクタルの深度を指定可能にアップデート（ツイート参照）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Houdiniからobjで出力して自作のレンダラーで読み込み
+&lt;ul&gt;
+&lt;li&gt;OptiX7.xではobjのローダーが無かったので自作…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;OptiXのビルトインの機能で衝突判定
+&lt;ul&gt;
+&lt;li&gt;OptiX上では三角ポリゴンの集合として表現&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;OptiXの機能でGAS（Geometry acceleration structure）を構築
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;RTコアによるレイトレーシングのハードウェアアクセラレーションあり&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;フラクタルの再帰回数を自由に増やせるようになった。&lt;br&gt;HoudiniのTOPs Feedback Loopの良い使用例ですね。 &lt;a href=&#34;https://t.co/yTR60S5vgC&#34;&gt;https://t.co/yTR60S5vgC&lt;/a&gt; &lt;a href=&#34;https://t.co/OifBfoTCFa&#34;&gt;pic.twitter.com/OifBfoTCFa&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1556203400257503232?ref_src=twsrc%5Etfw&#34;&gt;August 7, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h2 id=&#34;結果詳細&#34;&gt;結果詳細&lt;/h2&gt;
+&lt;p&gt;改めて計測結果を見てみましょう。&lt;/p&gt;
+&lt;h3 id=&#34;レンダリング時間&#34;&gt;レンダリング時間&lt;/h3&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;計測結果の棒グラフ&#34; 
+               srcset=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/result_graph_hu_6ffa427ea9da64bb.webp 320w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/result_graph_hu_37633a031107e249.webp 480w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/result_graph_hu_892cf10c3c3e1a36.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/result_graph_hu_6ffa427ea9da64bb.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;470&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;フラクタルの深度&lt;/th&gt;
+          &lt;th style=&#34;text-align: right&#34;&gt;1&lt;/th&gt;
+          &lt;th style=&#34;text-align: right&#34;&gt;2&lt;/th&gt;
+          &lt;th style=&#34;text-align: right&#34;&gt;3&lt;/th&gt;
+          &lt;th style=&#34;text-align: right&#34;&gt;4&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;レイマーチング&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;8.85388&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;9.00077&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;9.14309&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;9.29724&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;レイキャスティング&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;0.445493&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;0.466056&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;0.50258&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;0.602458&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;レンダリング時間以外&#34;&gt;レンダリング時間以外&lt;/h3&gt;
+&lt;p&gt;レンダリング時間以外のデータです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GAS（Geometry Acceleration Structure）の構築時間（秒）
+&lt;ul&gt;
+&lt;li&gt;レイキャスティングのみの結果&lt;/li&gt;
+&lt;li&gt;レイマーチングではAABBはできてもBVHを構築できない&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ポリゴンの頂点数&lt;/li&gt;
+&lt;li&gt;レイマーチングがレイキャスティングの何倍の時間がかかっているか&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;フラクタルの深度&lt;/th&gt;
+          &lt;th style=&#34;text-align: right&#34;&gt;1&lt;/th&gt;
+          &lt;th style=&#34;text-align: right&#34;&gt;2&lt;/th&gt;
+          &lt;th style=&#34;text-align: right&#34;&gt;3&lt;/th&gt;
+          &lt;th style=&#34;text-align: right&#34;&gt;4&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;GASの構築時間（秒）&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;0.0008289&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;0.0010064&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;0.0030907&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;0.0135217&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;ポリゴンの頂点数&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;480&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;9600&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;192000&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;3840000&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;倍率（Raymarching / Raycasting）&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;19.87434146&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;19.31263625&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;18.19230769&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;15.4321795&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;GASの構築は思ったより速いんですね。380万頂点でも0.01秒で完了しているのは驚きです。&lt;/p&gt;
+&lt;p&gt;ポリゴンの頂点数は指数で増加しても描画時間は大きく変わらないので、Acceleration Structureは本当に偉大ですね🙏&lt;/p&gt;
+&lt;p&gt;倍率について、フラクタルの深度が増えればレイマーチングの方が有利だと予想していましたが、予想通りにその傾向はありました。
+ですが、思ったよりも差が縮まらないんだというのが率直な感想です。&lt;/p&gt;
+&lt;h3 id=&#34;レンダリング結果&#34;&gt;レンダリング結果&lt;/h3&gt;
+&lt;p&gt;大きなサイズのレンダリング結果です。&lt;/p&gt;
+&lt;p&gt;異なるアルゴリズムでモデリングしているので、ジオメトリーは完全一致ではありません。&lt;/p&gt;
+&lt;p&gt;記事を書いている途中で発覚しましたが、レイマーチングのステップ回数100では上部の法線とレイの角度が急な箇所でエラーが起きていました。
+サムネではステップ回数300に増やして再レンダリングして15.7267秒でした。&lt;/p&gt;
+&lt;h4 id=&#34;レイマーチング-深度1&#34;&gt;レイマーチング 深度1&lt;/h4&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;レイマーチング 深度1&#34; 
+               srcset=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i1_s256_hu_b54039b6787efa3e.webp 320w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i1_s256_hu_dd119640f28673fa.webp 480w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i1_s256_hu_d6d0901a391deb2a.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i1_s256_hu_b54039b6787efa3e.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h4 id=&#34;レイマーチング-深度2&#34;&gt;レイマーチング 深度2&lt;/h4&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;レイマーチング 深度2&#34; 
+               srcset=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i2_s256_hu_eee144c38bc42bd0.webp 320w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i2_s256_hu_cab92e0a4d23cb9.webp 480w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i2_s256_hu_9598bff0bd58c6fd.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i2_s256_hu_eee144c38bc42bd0.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h4 id=&#34;レイマーチング-深度3&#34;&gt;レイマーチング 深度3&lt;/h4&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;レイマーチング 深度3&#34; 
+               srcset=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i3_s256_hu_22f55b0ab04dffa4.webp 320w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i3_s256_hu_d6e34d35d5a5cf74.webp 480w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i3_s256_hu_b6efff9362f084fc.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i3_s256_hu_22f55b0ab04dffa4.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h4 id=&#34;レイマーチング-深度4&#34;&gt;レイマーチング 深度4&lt;/h4&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;レイマーチング 深度4&#34; 
+               srcset=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_hu_c3e79eb280f17d34.webp 320w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_hu_f506434ab34cc8c.webp 480w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_hu_2224ffae53fdc066.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raymarching_i4_s256_hu_c3e79eb280f17d34.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h4 id=&#34;レイキャスティング-深度1&#34;&gt;レイキャスティング 深度1&lt;/h4&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;レイキャスティング 深度1&#34; 
+               srcset=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i1_s256_hu_596592693018960f.webp 320w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i1_s256_hu_cab65271a56953cc.webp 480w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i1_s256_hu_e3c352e47a0a7e86.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i1_s256_hu_596592693018960f.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h4 id=&#34;レイキャスティング-深度2&#34;&gt;レイキャスティング 深度2&lt;/h4&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;レイキャスティング 深度2&#34; 
+               srcset=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i2_s256_hu_7aa92e0a2e3c93ca.webp 320w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i2_s256_hu_3e9384cf8db08ffb.webp 480w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i2_s256_hu_baf9f03eb8e52368.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i2_s256_hu_7aa92e0a2e3c93ca.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h4 id=&#34;レイキャスティング-深度3&#34;&gt;レイキャスティング 深度3&lt;/h4&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;レイキャスティング 深度3&#34; 
+               srcset=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i3_s256_hu_c928aed3d70a316a.webp 320w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i3_s256_hu_c76fea0415e5efe6.webp 480w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i3_s256_hu_6a44acfd34f57a7f.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i3_s256_hu_c928aed3d70a316a.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h4 id=&#34;レイキャスティング-深度4&#34;&gt;レイキャスティング 深度4&lt;/h4&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;レイキャスティング 深度4&#34; 
+               srcset=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i4_s256_hu_8e90b967f7f91470.webp 320w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i4_s256_hu_a868d261262b300f.webp 480w, http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i4_s256_hu_f4c33b5b99bb865.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2022/08/08/raymarching-vs-raycasting/raycast_i4_s256_hu_8e90b967f7f91470.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;レイマーチングの高速化手法&#34;&gt;レイマーチングの高速化手法&lt;/h2&gt;
+&lt;p&gt;レイマーチングの高速化手法を軽く調べてみました。&lt;/p&gt;
+&lt;p&gt;EnhancedSphereTracingやAccelerating Sphere Tracingはレイマーチングのステップを少し大きく調整してステップ数を減らす手法です。
+IFSやMod Repetitionと乱数の組み合わせによる非連続な距離関数だとうまくいかない気もしていますが、ちゃんと試したことはないので分かりません。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;EnhancedSphereTracing [Benjamin Keinert 2014]
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Accelerating Sphere Tracing [Csaba Bálint 2018]
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cone Marchingは非連続な距離関数でもおそらく適用できそうです。
+低解像度でDepthを計算しておいて、高解像度でDepthを引き継いでレイマーチングをすることで、トータルで距離関数の評価回数をかなり削減できます。
+しかし、プライマリレイにしか適用できないため、パストレーシングでは効果が低そうです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;このあたりはよく読んでいません。自分のための備忘録です。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A Geometric Method for Accelerated Sphere Tracing of Implicit Surfaces [Csaba Bálint 2021]
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;後で読む&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Real-Time Rendering of Complex Fractals
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;Real-Time Renderingの章らしいが、単なるレイマーチングの紹介かもしれない&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Area Lights in Signed Distance Function Scenes
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;衝突判定ではないが気になるのでメモ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;レイマーチングはめちゃくちゃ遅いので、レイトレ合宿のようにレンダリング時間がシビアなら悪手かもしれません。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>レイトレ合宿7でレイマーチング対応のGPUパストレーサーを実装しました！</title>
+      <link>http://localhost:1313/blog/2019/09/18/rtcamp7/</link>
+      <pubDate>Wed, 18 Sep 2019 10:15:43 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2019/09/18/rtcamp7/</guid>
+      <description>&lt;p&gt;9月7日(土)～9月8日(日)に猪苗代湖で開催された
+に参加しました。&lt;/p&gt;
+&lt;p&gt;自作のレンダラーでこんな画像を &lt;strong&gt;60秒の制限時間&lt;/strong&gt; でレンダリングして4位をいただきました！&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;ちなみに4K解像度（3840x2160）です！&lt;/p&gt;
+&lt;p&gt;事前に本番環境で動作確認できなかったこともあり、よく見ると意図しないアーティファクトが発生しているのですが、許容レベルに収まったのはラッキーでした。&lt;/p&gt;
+&lt;h2 id=&#34;レイトレ合宿とは&#34;&gt;レイトレ合宿とは&lt;/h2&gt;
+&lt;p&gt;レイトレ合宿は完全自作のレイトレーサーを走らせて画像の美しさを競うイベントです。&lt;/p&gt;
+&lt;p&gt;参加者はレンダラーを自作する必要がある！というだけで面白いイベントなのですが、レンダリングの制限時間が毎年どんどん短縮されているのも注目ポイントです。&lt;/p&gt;
+&lt;p&gt;
+では制限時間が1時間だったのですが、第7回となる今年は60秒制限でした。&lt;/p&gt;
+&lt;p&gt;この制限時間はレンダラーを起動してから画像を保存するまでの時間なので、シーンの読み込みからレンダリングをすべて含めて60秒で完了させなくてはなりません。&lt;/p&gt;
+&lt;p&gt;そのため、参加者はあらゆる手段をつかって、レンダラーの高速化に本気で取り組む必要があります。&lt;/p&gt;
+&lt;p&gt;パストレーシングの高速化のアプローチとしては、サンプリングを効率化する、BVHなどの構造をつかってシーンとの交差判定を効率化する、ノイズを軽減するためにデノイズを行う、などが挙げられます。&lt;/p&gt;
+&lt;p&gt;パストレーシングを使わないといけないルールは無いのですが、近年のレイトレ合宿ではパストレーシングが人気です。
+今年のレイトレ合宿では、Stochastic Progressive Photon Mappingを実装した
+さん以外は全員パストレーシングだったと記憶しています。&lt;/p&gt;
+&lt;p&gt;また、複数コアのCPU・複数のGPUを利用したり、メモリのキャッシュ効率を上げてマシンスペックを最大限に活かし切るというのも、実はかなり難しい課題だったりします。私は今年は複数のGPUをうまく使えませんでした…&lt;/p&gt;
+&lt;p&gt;参加者はプロダクションレンダラーの開発者やコンピュータグラフィック分野の研究者などのプロの人から、私のように趣味でレンダラーを開発している人まで様々です。&lt;/p&gt;
+&lt;p&gt;レイトレ合宿の参加者のレベルが年々向上していて、特に今年は技術的にもアートセンスにも秀でた作品が多い中、4位と上位に食い込めて本当に嬉しかったです！&lt;/p&gt;
+&lt;h2 id=&#34;前回までのレイトレ合宿の参加レポート&#34;&gt;前回までのレイトレ合宿の参加レポート&lt;/h2&gt;
+&lt;p&gt;ちなみに私は今年で4回目の参加になります。過去の参加レポートはこちらです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;redflash-renderer&#34;&gt;Redflash Renderer&lt;/h2&gt;
+&lt;p&gt;Redflash というGPUレンダラーを開発しました。&lt;/p&gt;
+&lt;p&gt;Redflash は NVIDIA® OptiX 6.0 上で実装したパストレーシングによる物理ベースレンダラーで、ポリゴンと &lt;strong&gt;レイマーチング&lt;/strong&gt; が混在したシーンを一貫した描画ができます。&lt;/p&gt;
+&lt;p&gt;GitHubにソースコードを公開しています。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;こちらはアーティファクトなしの想定のレンダリング結果です。レンダリングは30分です。クリックすると非圧縮形式の画像になります。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;別視点からのレンダリング結果も紹介します。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;発表資料&#34;&gt;発表資料&lt;/h3&gt;
+&lt;p&gt;自作レンダラーの紹介スライドです。&lt;/p&gt;
+&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;ba3966aad908467e8b21249e828c26d0&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;レイトレ合宿の参加者にとっては常識だと思われる箇所の説明を省略してしまったので、ここから簡単に補足解説をします。&lt;/p&gt;
+&lt;h3 id=&#34;neeとmisによるサンプリングの効率化&#34;&gt;NEEとMISによるサンプリングの効率化&lt;/h3&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;実装機能&#34; 
+               srcset=&#34;http://localhost:1313/blog/2019/09/18/rtcamp7/redflash_rtcamp7.003_hu_be05dc640417ca96.webp 320w, http://localhost:1313/blog/2019/09/18/rtcamp7/redflash_rtcamp7.003_hu_a8ea6aeaa64048.webp 480w, http://localhost:1313/blog/2019/09/18/rtcamp7/redflash_rtcamp7.003_hu_4c5bc51db748805b.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2019/09/18/rtcamp7/redflash_rtcamp7.003_hu_be05dc640417ca96.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;この2つは「パストレーシングのサンプリングを効率化する」ための非常に有名なテクニックです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Next Event Estimation (Direct Light Sampling)&lt;/li&gt;
+&lt;li&gt;Multiple Importance Sampling&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Next Event EstimationはよくNEEと省略されて呼ばれます。
+光源が小さいシーンでは、BSDFによる重点的サンプリングだけではなかなか光源にヒットしません。
+そのため、短い計算時間ではノイズだらけの結果になってしまいます。
+また、BSDFの分布と光源の方向が異なる場合、むしろBSDFによる重点的サンプリングによって悪化するケースもありえます。
+そこで、光源の表面上の点を明示的にサンプリングして光転送経路を生成することで、効率的なサンプリングを行うテクニックがNEEです。&lt;/p&gt;
+&lt;p&gt;Multiple Importance SamplingはよくMISと省略されて呼ばれます。
+MISは複数のサンプリング戦略を組み合わせることでサンプリングの効率を向上するテクニックです。
+具体的には「BSDFによる重点的サンプリング」と「NEEによるライトのサンプリング」の2つの戦略の結果を適切なウェイトで組み合わせることで、サンプリングの効率を向上します。
+それぞれのサンプリング戦略が得意な部分だけウェイトを大きくすることで、分散を抑えて効率的にサンプリングができるようになります。
+例えば、光源が大きくてroughnessが大きいような「BSDFによる重点的サンプリング」が得意なケースなら「BSDFによる重点的サンプリング」の重みを大きくして、
+逆に光源が小さくてroughnessが小さいような「NEEによるライトのサンプリング」が得意なケースなら「NEEによるライトのサンプリング」の重みを大きくします。&lt;/p&gt;
+&lt;p&gt;NEEやMISについては、レイトレ合宿の参加者でもある 
+ さんが日本語で詳しく記事を書かれています。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;optixとレイマーチングの統合&#34;&gt;OptiXとレイマーチングの統合&lt;/h3&gt;
+&lt;p&gt;OptiXには独自のプリミティブを定義する仕組みがあるため、OptiXとレイマーチングの統合はそこまで苦労しませんでした。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;IntersectionProgram&lt;/code&gt; と &lt;code&gt;BoundingBoxProgram&lt;/code&gt; としてレイマーチングによる交差判定とAABBの定義をCUDAで実装するだけでできました。&lt;/p&gt;
+&lt;p&gt;詳細はレイトレ合宿アドベントカレンダーの記事で既に紹介しているので、気になる方は読んでみてください。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;衝突判定の高速化&#34;&gt;衝突判定の高速化&lt;/h3&gt;
+&lt;p&gt;BVHの構築はOptiXが自動でやってくれるので、ポリゴンの衝突判定は特に高速化しませんでした。
+なんとOptiX 6.0ではRTXに対応しているので、RTX 2070ではハードウェアをつかって高速化な衝突判定ができました！（が、本番環境はRTX非対応でした…）&lt;/p&gt;
+&lt;p&gt;一方でレイマーチングの衝突判定については自力で行う必要がありました。
+シーン全体を1個の距離関数で表現したため、BVHなどの構造では衝突判定の高速化が難しいためです。&lt;/p&gt;
+&lt;h4 id=&#34;距離関数の軽量化&#34;&gt;距離関数の軽量化&lt;/h4&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;実装機能&#34; 
+               srcset=&#34;http://localhost:1313/blog/2019/09/18/rtcamp7/redflash_rtcamp7.008_hu_5093836b643b71ef.webp 320w, http://localhost:1313/blog/2019/09/18/rtcamp7/redflash_rtcamp7.008_hu_7920f8b255642b4a.webp 480w, http://localhost:1313/blog/2019/09/18/rtcamp7/redflash_rtcamp7.008_hu_5394ec4953523a53.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2019/09/18/rtcamp7/redflash_rtcamp7.008_hu_5093836b643b71ef.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;レイマーチングでは1本をレイを飛ばすごとに数百回も距離関数を評価する必要があります（今回のレンダリング結果は300回）。&lt;/p&gt;
+&lt;p&gt;レイマーチングの負荷は距離関数の複雑さに比例するので、距離関数の軽量化は効果が大きい最適化でした。&lt;/p&gt;
+&lt;p&gt;今回はMandelboxという伝統的なフラクタル図形を距離関数として用いたのですが、
+メジャーなMandelboxの実装では &lt;code&gt;sphereFold&lt;/code&gt; という操作で分岐があったりとGPUには高負荷なものでした。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sphereFold&lt;/code&gt; のどちらの分岐に入るかはMandelboxのパラメータによって決まるので、
+一部のパラメータを削除したり、パラメータの範囲を狭めることで分岐を削除して処理を簡略化しました。&lt;/p&gt;
+&lt;h4 id=&#34;レイマーチングの衝突判定の精度のlod&#34;&gt;レイマーチングの衝突判定の精度のLOD&lt;/h4&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;レイマーチングの衝突判定の精度のLOD 1/2&#34; 
+               srcset=&#34;http://localhost:1313/blog/2019/09/18/rtcamp7/redflash_rtcamp7.009_hu_7ac64ef8b2e39817.webp 320w, http://localhost:1313/blog/2019/09/18/rtcamp7/redflash_rtcamp7.009_hu_fb21aa677c2b9ab5.webp 480w, http://localhost:1313/blog/2019/09/18/rtcamp7/redflash_rtcamp7.009_hu_b3144e3392738a6e.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2019/09/18/rtcamp7/redflash_rtcamp7.009_hu_7ac64ef8b2e39817.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;まず速度面では、カメラに近い部分は細部まで正確に衝突判定をする必要がありますが、遠い部分は大雑把でも問題にならないため、LODが有効でした。&lt;/p&gt;
+&lt;p&gt;品質面でもLODが必要でした。
+Mandelboxの距離関数は厳密には Distance Estimator（距離推定器）と呼ばれるものです。
+通常の距離関数は表面までの距離をぴったりと計算できるのに対して、
+Distance Estimatorは有限のイテレーション回数では表面に漸近しても、距離0になりません。&lt;/p&gt;
+&lt;p&gt;そのため、適当な距離 eps で衝突とみなして計算を打ち切る必要があります。
+また、eps を小さくすると、より細かい detail まで可視化できるのですが、
+遠景まで同じ eps で処理すると高周波成分が現れて、まるでMipMap OFFのような汚い結果となります。&lt;/p&gt;
+&lt;p&gt;このようにレイマーチングの高速化と品質向上の2つの目的ために、衝突判定の精度のLODが必要でした。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;レイマーチングの衝突判定の精度のLOD 2/2&#34; 
+               srcset=&#34;http://localhost:1313/blog/2019/09/18/rtcamp7/redflash_rtcamp7.010_hu_aa0d4a7f435a65f8.webp 320w, http://localhost:1313/blog/2019/09/18/rtcamp7/redflash_rtcamp7.010_hu_fbebc45594601f2b.webp 480w, http://localhost:1313/blog/2019/09/18/rtcamp7/redflash_rtcamp7.010_hu_a49898ae8dfacb47.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2019/09/18/rtcamp7/redflash_rtcamp7.010_hu_aa0d4a7f435a65f8.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;LODはカメラからの距離に応じて動的に eps を決定することで実現しました。&lt;/p&gt;
+&lt;p&gt;レイマーチングではレイを漸近的に進めるため、レイが進んだ距離を必ず計算する必要があります。
+このとき &lt;code&gt;レイが進んだ距離 = カメラからの距離&lt;/code&gt; となるため、eps は簡単に決定できます。&lt;/p&gt;
+&lt;p&gt;具体的にはレイが進んだ距離に定数を乗算したものを eps として扱うようにしました。&lt;/p&gt;
+&lt;p&gt;今回の提出シーンのように同じレイマーチングのオブジェクトの近影〜遠景がひとつのカットで混在していても、綺麗に描画できるようになりました。&lt;/p&gt;
+&lt;p&gt;また、カメラを近づけると実質無限に細部が現れるようになりました（フラクタル図形の特徴）。&lt;/p&gt;
+&lt;h4 id=&#34;1回のlaunchでなるべくたくさんサンプリングする戦略&#34;&gt;1回のlaunchでなるべくたくさんサンプリングする戦略&lt;/h4&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;1回のlaunchでなるべくたくさんサンプリングする戦略&#34; 
+               srcset=&#34;http://localhost:1313/blog/2019/09/18/rtcamp7/redflash_rtcamp7.011_hu_71a675f49f44f97a.webp 320w, http://localhost:1313/blog/2019/09/18/rtcamp7/redflash_rtcamp7.011_hu_49d66bb3c689cd0f.webp 480w, http://localhost:1313/blog/2019/09/18/rtcamp7/redflash_rtcamp7.011_hu_7220ac9bbc507c01.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2019/09/18/rtcamp7/redflash_rtcamp7.011_hu_71a675f49f44f97a.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;OptiXでパストレーシングを実装する場合、通常は1回のlaunchでパストレーシングの1サンプリングを行うように実装するかと思います。&lt;/p&gt;
+&lt;p&gt;ところが、launchにも多少のオーバーヘッドがあるため、手元のPCで実験した結果では、
+&lt;code&gt;sample_per_launch&lt;/code&gt; （1回のlaunchごとのサンプリング回数）を大きくすれば大きくするほど60秒あたりのサンプリング回数を増やすことができました。&lt;/p&gt;
+&lt;p&gt;そこで、最初の4サンプリングでマシンの性能をベンチマークして時間切れにならない最大の sample_per_launch を決定するような戦略をとりました。&lt;/p&gt;
+&lt;h3 id=&#34;deep-learning-denoising&#34;&gt;Deep Learning Denoising&lt;/h3&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;Deep Learning Denoising&#34; 
+               srcset=&#34;http://localhost:1313/blog/2019/09/18/rtcamp7/redflash_rtcamp7.012_hu_244895bcdd563bae.webp 320w, http://localhost:1313/blog/2019/09/18/rtcamp7/redflash_rtcamp7.012_hu_30e43299f195f29e.webp 480w, http://localhost:1313/blog/2019/09/18/rtcamp7/redflash_rtcamp7.012_hu_2fe00854d3a20d46.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2019/09/18/rtcamp7/redflash_rtcamp7.012_hu_244895bcdd563bae.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;ディープラーニングをつかったデノイザーの性能が驚異的に良くて驚きました。&lt;/p&gt;
+&lt;p&gt;左が10spp（sample per pixel）の結果で、右がデノイズした結果です。&lt;/p&gt;
+&lt;p&gt;かなり少ないサンプリング数でも非常に綺麗にデノイズができました。
+特にLucy像の拡散面の部分などは効果が絶大でした。&lt;/p&gt;
+&lt;p&gt;Deep Learning DenoisingはOptiXの標準機能を利用しただけなので、詳細については私は理解していません。&lt;/p&gt;
+&lt;p&gt;レンダリング結果とnormalとalbedoのバッファを与えてやると、綺麗にデノイズした結果を出力してくれました。&lt;/p&gt;
+&lt;p&gt;速度面でも優秀で4K解像度でも
+でデノイズが完了しました。&lt;/p&gt;
+&lt;p&gt;まだリアルタイムレンダリングには速度的には使いづらいかもしれませんが、これまでの Bilateral Filter や Non-local Means Filter を遥かに凌駕する性能なので、改めてレンダリング技術とディープラーニングの親和性の高さを実感しました。&lt;/p&gt;
+&lt;p&gt;これからの時代はグラフィックエンジニアもディープラーニングも勉強しなくては！と思いました。&lt;/p&gt;
+&lt;h4 id=&#34;rt_buffer_gpu_local-による最適化&#34;&gt;RT_BUFFER_GPU_LOCAL による最適化&lt;/h4&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;RT_BUFFER_GPU_LOCAL による最適化&#34; 
+               srcset=&#34;http://localhost:1313/blog/2019/09/18/rtcamp7/redflash_rtcamp7.013_hu_8f584ced0687ddb5.webp 320w, http://localhost:1313/blog/2019/09/18/rtcamp7/redflash_rtcamp7.013_hu_2a520127e2f30033.webp 480w, http://localhost:1313/blog/2019/09/18/rtcamp7/redflash_rtcamp7.013_hu_8ba30a15ea2f35d4.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2019/09/18/rtcamp7/redflash_rtcamp7.013_hu_8f584ced0687ddb5.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Deep Learning Denoising用にalbedoとnormalのバッファを生成したところ、合計で5枚もバッファが必要になりました。
+バッファの読み書きもそれなりに重たい処理なので、対策を行いました。
+createBuffer の第1引数に &lt;code&gt;RT_BUFFER_INPUT_OUTPUT&lt;/code&gt; を指定したところ、なんと13.6%くらい高速化しました。&lt;/p&gt;
+&lt;p&gt;ディスプレイにバッファを同期するかのオプションのようでした。
+ウィンドウにバッファを表示する場合はこのオプションをつけると描画結果が同期されなくなってしまいますが、
+CUIモードで起動するときには同期は不要なので、このオプションを有効にすることで大幅に性能向上できました。&lt;/p&gt;
+&lt;h2 id=&#34;反省スケジュール面が厳しすぎた&#34;&gt;反省：スケジュール面が厳しすぎた&lt;/h2&gt;
+&lt;p&gt;ここまでがレンダラーの紹介でした。ここからは振り返りを書こうと思います。&lt;/p&gt;
+&lt;p&gt;最大の反省点はスケジュール面が厳しすぎたことでした…&lt;/p&gt;
+&lt;p&gt;OptiXのキャッチアップを含めて約一ヶ月で開発したのですが、流石に無理なスケジュールだったと思います。&lt;/p&gt;
+&lt;p&gt;8月は仕事のプロジェクトの追い込み時期とCEDECの登壇準備が重なって、なかなかレンダラー開発の時間を捻出できず、
+睡眠時間と生活を削りすぎたため、体力的にも精神的にもかなり限界でした…&lt;/p&gt;
+&lt;p&gt;そろそろ若さで無茶をカバーできない年齢になってきたので、締め切り直前になって慌てて開発するのではなく、
+日頃から継続的にレンダラーを開発することが大事だろうと思います。&lt;/p&gt;
+&lt;h2 id=&#34;余談シーン作成はunity&#34;&gt;余談：シーン作成はUnity&lt;/h2&gt;
+&lt;p&gt;時間がなくてシーン編集機能を実装できなかったので、
+Unityで事前に距離関数のパラメータ調整や光源の配置を行ってシーンのイメージを固めてから、後からパラメータを自作レンダラーに移植しました。&lt;/p&gt;
+&lt;p&gt;結果的には納得できるシーンを作成できたので、作戦は成功だったと思います。&lt;/p&gt;
+&lt;p&gt;UnityのHDRPでレイマーチングを行うのには
+さんの
+を利用させていただきました。&lt;/p&gt;
+&lt;p&gt;カッコいいシーンを大量に作れたので、ついスクリーンショットをたくさん撮影してしまいました！&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Unity HDRP + Raymarching by &lt;a href=&#34;https://twitter.com/kanetaaaaa?ref_src=twsrc%5Etfw&#34;&gt;@kanetaaaaa&lt;/a&gt; を試してみました！&lt;br&gt;カッコいいシーンが無限に作れてしまう😍&lt;br&gt;これは凄いです🙏&lt;a href=&#34;https://twitter.com/hashtag/unity3d?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#unity3d&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/raymarching?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#raymarching&lt;/a&gt;&lt;a href=&#34;https://t.co/EK6JsHpTBZ&#34;&gt;https://t.co/EK6JsHpTBZ&lt;/a&gt; &lt;a href=&#34;https://t.co/ZueP2hfzet&#34;&gt;pic.twitter.com/ZueP2hfzet&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1163876089489285120?ref_src=twsrc%5Etfw&#34;&gt;August 20, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h2 id=&#34;今後やりたいこと&#34;&gt;今後やりたいこと&lt;/h2&gt;
+&lt;h3 id=&#34;シーン編集機能がほしい&#34;&gt;シーン編集機能がほしい&lt;/h3&gt;
+&lt;p&gt;現状はGUIでカメラ操作だけができます。&lt;/p&gt;
+&lt;p&gt;シーン編集に関して、上で紹介したようなUnityからパラメータを移植する方法だと最終的なルックの確認のイテレーションの高速化がしずらいので、
+Redflash自体にシーン編集機能を実装したいと思っています。&lt;/p&gt;
+&lt;p&gt;距離関数を定義したCUDAファイルのホットリロード機能を実装したり、 CallableProgramをつかって距離関数を差し替え可能にしたいです。&lt;/p&gt;
+&lt;p&gt;他にも距離関数やマテリアルのパラメータをインスペクタで編集するなどは最低限欲しいなと思っています。&lt;/p&gt;
+&lt;p&gt;あとはオブジェクトの配置などをマニピュレーターでできるようにしたいですが、どうしても実装工数がかかるので、どういう感じが良いのか思案しているところです。
+DCCツールから直接シーンを出力する形式だと、距離関数の扱いに困るため、なかなか難しい問題です。&lt;/p&gt;
+&lt;h3 id=&#34;リファクタリング&#34;&gt;リファクタリング&lt;/h3&gt;
+&lt;p&gt;CallableProgramでBSDFを入れ替えられるようにしたり、ファイルを適切に分割したりして、もう少しコードをリファクタリングしたいです。&lt;/p&gt;
+&lt;h3 id=&#34;pngのエンコード時間の短縮&#34;&gt;PNGのエンコード時間の短縮&lt;/h3&gt;
+&lt;p&gt;PNGの保存には 
+ を使わせていただきました。&lt;/p&gt;
+&lt;p&gt;ただし、4K解像度となるとPNGの保存に1.7秒前後の時間が必要でした。&lt;/p&gt;
+&lt;p&gt;制限時間が短くなると、PNGの保存やGPUの初期化に要する時間が相対的に増えて、レンダリングに使える時間がどんどん短くなってしまいます。&lt;/p&gt;
+&lt;p&gt;そのため、PNGの保存やGPU初期化の高速化は、来年以降のレイトレ合宿では重要な課題になるだろうと予想しています。&lt;/p&gt;
+&lt;h3 id=&#34;複数gpu対応&#34;&gt;複数GPU対応&lt;/h3&gt;
+&lt;p&gt;OptiXをつかっても複数のGPUをうまく使ってくれなかったので、独自の仕組みで対応が必要のようでした。&lt;/p&gt;
+&lt;p&gt;単純な解決策として、プロセスを複数起動して最後にレンダリング結果をマージする方法が考えられますが、ちゃんと検証をしたいです。&lt;/p&gt;
+&lt;h3 id=&#34;フルスクラッチgpuレンダラー&#34;&gt;フルスクラッチGPUレンダラー&lt;/h3&gt;
+&lt;p&gt;去年まではGPUインスタンス勢は1人だけだったのですが、今年は7人（レンダラーが動かなかった人も含む）もいました。&lt;/p&gt;
+&lt;p&gt;GPU勢にも、私のようにOptiXなどのレイトレーシング用のフレームワークを使う勢と、フルスクラッチ実装勢で別れていました。&lt;/p&gt;
+&lt;p&gt;フルスクラッチ勢からは「OptiXでは作法がきっちり決められているのがなんとなく嫌だった」「GPU向けのBVH実装をしてみたかった」といった意見を聞きました。&lt;/p&gt;
+&lt;p&gt;たしかにRTXなどの登場によって交差判定がハードウェアに移りつつある今だからこそ、勉強する価値はあるのかもしれません。&lt;/p&gt;
+&lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;
+&lt;p&gt;今年は忙しいからレイトレ合宿に参加できるか怪しいと思っていましたが、なんとかちゃんとレンダラーを提出できて良かったです。&lt;/p&gt;
+&lt;p&gt;思えば「レイマーチングとポリゴンが混在したシーンをパストレーシングしたい」というのは3年前のレイトレ合宿4のときに本当は実現したいテーマでした。&lt;/p&gt;
+&lt;p&gt;当時はレイトレ初心者だったので、ナイーブなパストレーシングで精一杯で高速化方法が分からず、
+普通にレイマーチングを組み合わせたら激重になってしまい、5時間くらいかけないとまともな絵が出ない状態でした。
+結局、パストレーシングを諦めて疑似手法でAOやシャドウを計算してなんとか見れる絵を提出しました…&lt;/p&gt;
+&lt;p&gt;3年間で学んだ知識でようやくやりたいことを実現できて本当に良かったです。過去の自分に勝利できました。&lt;/p&gt;
+&lt;p&gt;レイトレ合宿は自身の成長や糧となる機会を与えてくれる、とても良い合宿勉強会だなと改めて感じました。&lt;/p&gt;
+&lt;p&gt;レイトレ合宿を毎年主催してくださっている
+さんと
+さん、その他の参加者のみなさん、本当にありがとうございました！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

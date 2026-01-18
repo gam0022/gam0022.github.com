@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rails | gam0022.net</title>
+    <link>http://localhost:1313/tags/rails/</link>
+      <atom:link href="http://localhost:1313/tags/rails/index.xml" rel="self" type="application/rss+xml" />
+    <description>Rails</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 15 Jun 2014 06:50:00 +0900</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
+      <title>Rails</title>
+      <link>http://localhost:1313/tags/rails/</link>
+    </image>
+    
+    <item>
+      <title>JavaScriptとCoffeeScriptのメモ</title>
+      <link>http://localhost:1313/blog/2014/06/15/javascript-and-coffeescript/</link>
+      <pubDate>Sun, 15 Jun 2014 06:50:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2014/06/15/javascript-and-coffeescript/</guid>
+      <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
+&lt;p&gt;卒研で 
+ という3DCGのライブラリを使って何か開発することしたので、JavaScript について勉強しました。&lt;/p&gt;
+&lt;p&gt;また、CoffeeScript という、コンパイルするとJavaScriptのコードに変換される言語についても使ってみることにしたので、
+これについても勉強しました。&lt;/p&gt;
+&lt;p&gt;忘れてしまうと勿体無く思うので、備忘録です。&lt;/p&gt;
+&lt;p&gt;この記事では、&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;JavaScriptを勉強する上で重要だと思われる概念&lt;/li&gt;
+&lt;li&gt;CoffeScript の学び方&lt;/li&gt;
+&lt;li&gt;Rails で CoffeeScript を使う時のメモ&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;を紹介します。&lt;/p&gt;
+&lt;h2 id=&#34;javascript-について&#34;&gt;JavaScript について&lt;/h2&gt;
+&lt;p&gt;一般的なオブジェクト指向を使いこなせる人が本格的に JavaScript で開発する前に、次のルールについては抑えておきたいと思いました。
+クロージャーは別としても、どれも他の言語にはない、特異なルールとなっています。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;変数のスコープとクロージャ&lt;/li&gt;
+&lt;li&gt;プロトタイプチェーン(プロトタイプ・ベースのオブジェクト指向)&lt;/li&gt;
+&lt;li&gt;thisキーワードの指す4種類のパターン&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;変数のスコープとクロージャについて&#34;&gt;変数のスコープとクロージャについて&lt;/h3&gt;
+&lt;p&gt;JavaScriptのローカル変数のスコープは関数ごとにしかありません。
+一般的な言語ではブロックごとにスコープを持つので混乱しやすいと思いました。&lt;/p&gt;
+&lt;p&gt;また、スコープチェーンという仕組みによって、関数をネストすると、中の関数から、外の関数のローカル変数を参照できます。&lt;/p&gt;
+&lt;p&gt;そして、関数を返す関数(クロージャ)を作ると、内側の関数(クロージャー)から参照された外の関数のローカル変数は、
+「クロージャの呼び出し元のスコープからは参照できない」かつ「クロージャを抜けても値を保持し続ける」という性質があります。&lt;/p&gt;
+&lt;p&gt;この説明だけだと理解不能だと思うので、コード例などを踏まえながら、
+以下の記事を読んでおくと理解できると思います。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;プロトタイプチェーンプロトタイプベースのオブジェクト指向について&#34;&gt;プロトタイプチェーン(プロトタイプ・ベースのオブジェクト指向)について&lt;/h3&gt;
+&lt;p&gt;JavaScriptでは関数オブジェクトにクラスとしての役割を与えているのですが、
+prototypeプロパティを用いて、複数のインスタンスで同じメソッドを参照したり、
+別のクラスを継承することを実現することができます。&lt;/p&gt;
+&lt;p&gt;また、別の視点から見ると、全てのインスタンスはハッシュオブジェクトです。&lt;/p&gt;
+&lt;p&gt;インスタンスのメンバーはハッシュのキーのことであり、
+メソッドは、prototype プロパティによって複数のハッシュ(インスタンス)から参照できる関数オブジェクトでしかありません。&lt;/p&gt;
+&lt;p&gt;プロトタイプチェーンについては、次の記事が分かりやすかったので、読んでおくと良いと思います。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;thisキーワードの指す4種類のパターンについて&#34;&gt;thisキーワードの指す4種類のパターンについて&lt;/h3&gt;
+&lt;p&gt;一般的な言語では、this は自身のインスタンスを参照するキーワードで変化することありませんが、
+JavaScriptのthisはメソッドの呼び出しのパターンによって変化します。&lt;/p&gt;
+&lt;p&gt;このthisキーワードの指す4種類のパターンについては、次の記事が分かりやすかったので、読んでおくといいと思います。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;coffescript-の学び方&#34;&gt;CoffeScript の学び方&lt;/h2&gt;
+&lt;p&gt;基本的には
+に例がたくさんあるので、それを読んだほうが良い場合が多いです。&lt;/p&gt;
+&lt;p&gt;また、サンプルコードは[load]ボタンで実際に実行したり編集することができるので、いっそう理解が深まると思います。&lt;/p&gt;
+&lt;p&gt;翻訳された、
+も内容が充実していて参考になったのですが、
+1.0.1のものらしくて、最新版の1.7.1からけっこう遅れており、私の気がついた範囲で、1つだけ間違っている箇所があったので、
+次の章で間違いを指摘しておきます。&lt;/p&gt;
+&lt;p&gt;慣れるまでは、出力される JavaScript のコードを確認しながら開発した方が良さそうな認識です。
+(CoffeeScriptで開発しても、デバッグは JavaScript のコードを読むことになります。)&lt;/p&gt;
+&lt;p&gt;また、既存の JavaScriptのコードを手っ取り早く CoffeeScript に移植したいと思った時には、
+
+という JavaScript から CoffeeScript に逆変換してくれるサイトが役立ちます。&lt;/p&gt;
+&lt;h3 id=&#34;coffeescript-のクラスについて&#34;&gt;CoffeeScript のクラスについて&lt;/h3&gt;
+&lt;p&gt;
+の「クラス, 継承, super」の章に、次のコードが紹介されています。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Hoge&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;ss&#34;&gt;someInstanceProp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;hoge&amp;#34;&lt;/span&gt;       &lt;span class=&#34;c1&#34;&gt;# インスタンス変数&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;ss&#34;&gt;someInstanceMethod&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;         &lt;span class=&#34;c1&#34;&gt;# インスタンスメソッド&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;vi&#34;&gt;@callAnotherInstanceMethod&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# インスタンスメソッドを呼ぶ&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;alert&lt;/span&gt; &lt;span class=&#34;vi&#34;&gt;@someInstanceProp&lt;/span&gt;      &lt;span class=&#34;c1&#34;&gt;# ==&amp;gt; &amp;#34;hoge&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;vi&#34;&gt;@someClassProp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;hogehoge&amp;#34;&lt;/span&gt;     &lt;span class=&#34;c1&#34;&gt;# クラス変数&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;vi&#34;&gt;@someClassMethod&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;           &lt;span class=&#34;c1&#34;&gt;# クラスメソッド&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;vi&#34;&gt;@callAnotherClassMethod&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;# 同一クラスのクラスメソッドを呼ぶ&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;alert&lt;/span&gt; &lt;span class=&#34;vi&#34;&gt;@someClassProp&lt;/span&gt;         &lt;span class=&#34;c1&#34;&gt;# ==&amp;gt; &amp;#34;hogehoge&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;しかし、この someInstanceProp はprototypeに保存されるので、インスタンス変数としての使い方は間違いだと思います。&lt;/p&gt;
+&lt;p&gt;例えば、次のように &lt;code&gt;someInstanceProp&lt;/code&gt; に破壊的な操作をすると、他のインスタンスの &lt;code&gt;someInstanceProp&lt;/code&gt; まで影響を与えてしまいます。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Hoge&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;ss&#34;&gt;someInstanceProp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;      &lt;span class=&#34;c1&#34;&gt;# インスタンス変数&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;ss&#34;&gt;someInstanceMethod&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;         &lt;span class=&#34;c1&#34;&gt;# インスタンスメソッド&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;vi&#34;&gt;@callAnotherInstanceMethod&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# インスタンスメソッドを呼ぶ&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;alert&lt;/span&gt; &lt;span class=&#34;vi&#34;&gt;@someInstanceProp&lt;/span&gt;      &lt;span class=&#34;c1&#34;&gt;# ==&amp;gt; &amp;#34;hoge&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;vi&#34;&gt;@someClassProp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;hogehoge&amp;#34;&lt;/span&gt;     &lt;span class=&#34;c1&#34;&gt;# クラス変数&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;vi&#34;&gt;@someClassMethod&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;           &lt;span class=&#34;c1&#34;&gt;# クラスメソッド&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;vi&#34;&gt;@callAnotherClassMethod&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;# 同一クラスのクラスメソッドを呼ぶ&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;alert&lt;/span&gt; &lt;span class=&#34;vi&#34;&gt;@someClassProp&lt;/span&gt;         &lt;span class=&#34;c1&#34;&gt;# ==&amp;gt; &amp;#34;hogehoge&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;h1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;Hoge&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;alert&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;h1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;someInstanceProp&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# =&amp;gt; [1,2,3]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;h1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;someInstanceProp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;reverse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;alert&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;h1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;someInstanceProp&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# =&amp;gt; [3,2,1]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;h2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;Hoge&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;alert&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;h2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;someInstanceProp&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# =&amp;gt; [3,2,1] !他のクラスでの変更の影響を受けている&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
+&lt;/p&gt;
+&lt;h4 id=&#34;正しいsomeinstancepropの定義&#34;&gt;正しいsomeInstancePropの定義&lt;/h4&gt;
+&lt;p&gt;正しい &lt;code&gt;someInstanceProp&lt;/code&gt; の定義はこうです。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Hoge&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;ss&#34;&gt;constructor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;vi&#34;&gt;@someInstanceProp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# インスタンス変数&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;ss&#34;&gt;someInstanceMethod&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;         &lt;span class=&#34;c1&#34;&gt;# インスタンスメソッド&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;vi&#34;&gt;@callAnotherInstanceMethod&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# インスタンスメソッドを呼ぶ&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;alert&lt;/span&gt; &lt;span class=&#34;vi&#34;&gt;@someInstanceProp&lt;/span&gt;      &lt;span class=&#34;c1&#34;&gt;# ==&amp;gt; &amp;#34;hoge&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;vi&#34;&gt;@someClassProp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;hogehoge&amp;#34;&lt;/span&gt;     &lt;span class=&#34;c1&#34;&gt;# クラス変数&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;vi&#34;&gt;@someClassMethod&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;           &lt;span class=&#34;c1&#34;&gt;# クラスメソッド&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;vi&#34;&gt;@callAnotherClassMethod&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;# 同一クラスのクラスメソッドを呼ぶ&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;alert&lt;/span&gt; &lt;span class=&#34;vi&#34;&gt;@someClassProp&lt;/span&gt;         &lt;span class=&#34;c1&#34;&gt;# ==&amp;gt; &amp;#34;hogehoge&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;h1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;Hoge&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;alert&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;h1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;someInstanceProp&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# =&amp;gt; [1,2,3]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;h1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;someInstanceProp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;reverse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;alert&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;h1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;someInstanceProp&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# =&amp;gt; [3,2,1]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;h2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;Hoge&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;alert&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;h2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;someInstanceProp&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# =&amp;gt; [1,2,3]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;補足すると、classのトップレベルでの&lt;code&gt;@var&lt;/code&gt;と、関数内での&lt;code&gt;@var&lt;/code&gt;は意味が違います。&lt;/p&gt;
+&lt;p&gt;前者は&lt;code&gt;ClassName.var&lt;/code&gt;となりますが、後者は&lt;code&gt;this.var&lt;/code&gt;となります。&lt;/p&gt;
+&lt;p&gt;インスタンス変数は、後者の関数内での&lt;code&gt;@var&lt;/code&gt;で定義すると良さそうです。&lt;/p&gt;
+&lt;h2 id=&#34;rails-で-coffeescript-を使う時のメモ&#34;&gt;Rails で CoffeeScript を使う時のメモ&lt;/h2&gt;
+&lt;p&gt;Rails を 使うと、Asset Pipeline で CoffeeScript の自動コンパイル環境ができて楽なのですが、
+Railsのデフォルトの設定だと、出力される JavaScript が無名関数&lt;code&gt;(function(){ }).call(this)&lt;/code&gt;の中に隠されてしまうので、
+class を作っても外部から参照できなくなってしまいます。&lt;/p&gt;
+&lt;p&gt;そういう場合は、&lt;code&gt;bare&lt;/code&gt;オプションを使うと良いです。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;config/environment.rb&lt;/code&gt; の中に &lt;code&gt;Tilt::CoffeeScriptTemplate.default_bare = true&lt;/code&gt;という行を加えると、
+無名関数に囲まれなくなります。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Rails4をPassengerで動かす</title>
+      <link>http://localhost:1313/blog/2013/10/18/run-rails-on-passenger/</link>
+      <pubDate>Fri, 18 Oct 2013 00:13:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2013/10/18/run-rails-on-passenger/</guid>
+      <description>&lt;p&gt;RailsをPassengerを使ってVPSで動かすまでにハマったことなどをメモします。&lt;/p&gt;
+&lt;p&gt;自分用のメモ程度の記事なので、あくまで参考程度にお願いします。&lt;/p&gt;
+&lt;p&gt;Railsのサーバ環境を作るのは難しいというイメージがありましたが、結果的には Passenger の指示通りにやればなんとかなりました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Passenger をインストールする。
+&lt;ul&gt;
+&lt;li&gt;古い情報らしいですが、Passenger のインストールについては、
+が参考になる。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$ gem install passenger&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$ passenger-install-apache2-module&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;上を実行すると、必要なパッケージが足りてないというエラーがでるので、パッケージ管理システムなどを使ってインストールする。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;インストールが成功すると、LoadModule などの設定やvirtualhostの設定のサンプルが表示されるので、メモしておく。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;LoadModule passenger_module /usr/local/rvm/gems/ruby-2.0.0-p247/gems/passenger-4.0.14/buildout/apache2/mod_passenger.so
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PassengerRoot /usr/local/rvm/gems/ruby-2.0.0-p247/gems/passenger-4.0.14
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PassengerDefaultRuby /usr/local/rvm/wrappers/ruby-2.0.0-p247/ruby
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;VirtualHost *:80&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  ServerName www.yourhost.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  # !!! Be sure to point DocumentRoot to &amp;#39;public&amp;#39;!
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  DocumentRoot /somewhere/public
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;lt;Directory /somewhere/public&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    # This relaxes Apache security settings.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    AllowOverride all
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    # MultiViews must be turned off.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Options -MultiViews
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;lt;/Directory&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;/VirtualHost&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;VPSのAレコードの設定をして、サブドメインを使えるようにする。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+ のServerman@VPSのUbicNameでドメインを取っている場合、負荷分散設定というのでDNSレコードを設定できる。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Railsのプロジェクトをサーバの適当な場所に配置する。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Apache の設定。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;念のため、Ubuntuのapache2の場合です。&lt;/li&gt;
+&lt;li&gt;極論から言うと、ちゃんと Include された設定ファイルに Passenger のインストールの時にメモされたものを貼り付けておけば問題ない。&lt;/li&gt;
+&lt;li&gt;私はこのようにしました。
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/etc/apache2/sites-available/default&lt;/code&gt; に &lt;code&gt;VirtualHost&lt;/code&gt; の設定を書く。当然だが、ServerNameやDirectoryは書き換える。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/etc/apache2/mods-available/passenger.load&lt;/code&gt; に &lt;code&gt;LoadModule passenger_module&lt;/code&gt; の行を追加。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/etc/apache2/mods-available/passenger.conf&lt;/code&gt; に &lt;code&gt;PassengerRoot&lt;/code&gt; と &lt;code&gt;PassengerDefaultRuby&lt;/code&gt; の行を追加。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/etc/apache2/mods-enabled/&lt;/code&gt; に上へのシンボリックリンクを貼る。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /etc/apache2/mods-enabled/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ln -s /etc/apache2/mods-available/passenger.load ./passenger.load
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ln -s /etc/apache2/mods-available/passenger.conf ./passenger.conf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Appacheの再起動をする。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;$ sudo /etc/init.d/apache2 restart&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;これで動くはずだったが、ブラウザで動作を確認すると、Passenger がエラーを出していた。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Could not find a JavaScript runtime.&lt;/code&gt; とか言われたら、こうする。
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;gem &#39;therubyracer&#39;&lt;/code&gt; を Gemfileに追加。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$ bundle install&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;ちなみに &lt;code&gt;therubyracer&lt;/code&gt;はすごい容量がでかいので、bundle install にものすごく時間がかかった。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;やっとできたとおもったら、今度は Rails のエラー。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;production用のDBをmigrateしてないだけだった。
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;$ rake db:migrate RAILS_ENV=production&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;とりあえず、これで Rails を Passenger で動かすことが出来ました。めでたしめでたし。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

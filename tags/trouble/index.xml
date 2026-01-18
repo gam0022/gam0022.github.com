@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Trouble | gam0022.net</title>
+    <link>http://localhost:1313/tags/trouble/</link>
+      <atom:link href="http://localhost:1313/tags/trouble/index.xml" rel="self" type="application/rss+xml" />
+    <description>Trouble</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 04 Aug 2012 15:32:00 +0900</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
+      <title>Trouble</title>
+      <link>http://localhost:1313/tags/trouble/</link>
+    </image>
+    
+    <item>
+      <title>Mountain Lionにアップデートしたら、X11が消えた件</title>
+      <link>http://localhost:1313/blog/2012/08/04/x11-is-not-bundled-on-mountain-lion/</link>
+      <pubDate>Sat, 04 Aug 2012 15:32:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2012/08/04/x11-is-not-bundled-on-mountain-lion/</guid>
+      <description>&lt;p&gt;この前Macを使い始めたばかりでしたが、無料でアップデートできると知って、
+Mountain Lionにしてしまいました。&lt;/p&gt;
+&lt;p&gt;しかし、Mountain Lion にしてから困ったことに、
+wineやinkscapeといった、X Window Systemを必要とするアプリケーションがすべて動かなくなってしまいました。&lt;/p&gt;
+&lt;p&gt;調べてみると、Moutain Lionから標準でX11がインストールされなくなったようです。&lt;/p&gt;
+&lt;p&gt;X11の代わりに、OS X用の
+というXウィンドウシステムがあるので、
+これをインストールして再起動すれば、解決します。&lt;/p&gt;
+&lt;p&gt;X11はバグがあるらしいので、Moutain Lionじゃない人もXQuartzに乗り換えてもいいかもしれませんね。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
