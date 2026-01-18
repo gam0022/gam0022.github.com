@@ -1,41 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>GitHub | gam0022.net</title>
-    <link>http://localhost:1313/tags/github/</link>
-      <atom:link href="http://localhost:1313/tags/github/index.xml" rel="self" type="application/rss+xml" />
-    <description>GitHub</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 04 Aug 2013 11:39:00 +0900</lastBuildDate>
-    <image>
-      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
-      <title>GitHub</title>
-      <link>http://localhost:1313/tags/github/</link>
-    </image>
-    
-    <item>
-      <title>Rubyのgitリポジトリ</title>
-      <link>http://localhost:1313/blog/2013/08/04/ruby-git/</link>
-      <pubDate>Sun, 04 Aug 2013 11:39:00 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2013/08/04/ruby-git/</guid>
-      <description>&lt;p&gt;RubyってSubversionで開発してるというイメージしか無かったのですが、GitHubでも最新のソースコードをCloneできました。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/ruby/ruby.git
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GitHub | gam0022.net</title><link>http://gam0022.net/tags/github/</link><atom:link href="http://gam0022.net/tags/github/index.xml" rel="self" type="application/rss+xml"/><description>GitHub</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 04 Aug 2013 11:39:00 +0900</lastBuildDate><image><url>http://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>GitHub</title><link>http://gam0022.net/tags/github/</link></image><item><title>Rubyのgitリポジトリ</title><link>http://gam0022.net/blog/2013/08/04/ruby-git/</link><pubDate>Sun, 04 Aug 2013 11:39:00 +0900</pubDate><guid>http://gam0022.net/blog/2013/08/04/ruby-git/</guid><description>&lt;p&gt;RubyってSubversionで開発してるというイメージしか無かったのですが、GitHubでも最新のソースコードをCloneできました。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git clone https://github.com/ruby/ruby.git
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;公式にリポジトリガイドなるページがあるので、最新のRubyのソースコードを読んでみたい人は参考にしたらいいと思います。&lt;/p&gt;
 &lt;p&gt;
-&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>GitHubのMarkdownでListをNest</title>
-      <link>http://localhost:1313/blog/2013/08/01/github-markdown/</link>
-      <pubDate>Thu, 01 Aug 2013 22:31:00 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2013/08/01/github-markdown/</guid>
-      <description>&lt;p&gt;GitHubでリストや順序リストをネストするときは、インデントをスペース4つにする必要があるみたいです。&lt;/p&gt;
+&lt;/p&gt;</description></item><item><title>GitHubのMarkdownでListをNest</title><link>http://gam0022.net/blog/2013/08/01/github-markdown/</link><pubDate>Thu, 01 Aug 2013 22:31:00 +0900</pubDate><guid>http://gam0022.net/blog/2013/08/01/github-markdown/</guid><description>&lt;p&gt;GitHubでリストや順序リストをネストするときは、インデントをスペース4つにする必要があるみたいです。&lt;/p&gt;
 &lt;p&gt;そうしないと、うまくネストできませんでした。&lt;/p&gt;
-&lt;p&gt;例: 
-&lt;/p&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;p&gt;例:
+&lt;/p&gt;</description></item></channel></rss>

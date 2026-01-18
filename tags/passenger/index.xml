@@ -1,23 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Passenger | gam0022.net</title>
-    <link>http://localhost:1313/tags/passenger/</link>
-      <atom:link href="http://localhost:1313/tags/passenger/index.xml" rel="self" type="application/rss+xml" />
-    <description>Passenger</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 18 Oct 2013 00:13:00 +0900</lastBuildDate>
-    <image>
-      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
-      <title>Passenger</title>
-      <link>http://localhost:1313/tags/passenger/</link>
-    </image>
-    
-    <item>
-      <title>Rails4をPassengerで動かす</title>
-      <link>http://localhost:1313/blog/2013/10/18/run-rails-on-passenger/</link>
-      <pubDate>Fri, 18 Oct 2013 00:13:00 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2013/10/18/run-rails-on-passenger/</guid>
-      <description>&lt;p&gt;RailsをPassengerを使ってVPSで動かすまでにハマったことなどをメモします。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Passenger | gam0022.net</title><link>http://gam0022.net/tags/passenger/</link><atom:link href="http://gam0022.net/tags/passenger/index.xml" rel="self" type="application/rss+xml"/><description>Passenger</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 18 Oct 2013 00:13:00 +0900</lastBuildDate><image><url>http://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Passenger</title><link>http://gam0022.net/tags/passenger/</link></image><item><title>Rails4をPassengerで動かす</title><link>http://gam0022.net/blog/2013/10/18/run-rails-on-passenger/</link><pubDate>Fri, 18 Oct 2013 00:13:00 +0900</pubDate><guid>http://gam0022.net/blog/2013/10/18/run-rails-on-passenger/</guid><description>&lt;p&gt;RailsをPassengerを使ってVPSで動かすまでにハマったことなどをメモします。&lt;/p&gt;
 &lt;p&gt;自分用のメモ程度の記事なので、あくまで参考程度にお願いします。&lt;/p&gt;
 &lt;p&gt;Railsのサーバ環境を作るのは難しいというイメージがありましたが、結果的には Passenger の指示通りにやればなんとかなりました。&lt;/p&gt;
 &lt;ul&gt;
@@ -35,26 +16,26 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;LoadModule passenger_module /usr/local/rvm/gems/ruby-2.0.0-p247/gems/passenger-4.0.14/buildout/apache2/mod_passenger.so
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PassengerRoot /usr/local/rvm/gems/ruby-2.0.0-p247/gems/passenger-4.0.14
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PassengerDefaultRuby /usr/local/rvm/wrappers/ruby-2.0.0-p247/ruby
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;VirtualHost *:80&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  ServerName www.yourhost.com
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  # !!! Be sure to point DocumentRoot to &amp;#39;public&amp;#39;!
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  DocumentRoot /somewhere/public
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;lt;Directory /somewhere/public&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    # This relaxes Apache security settings.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    AllowOverride all
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    # MultiViews must be turned off.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Options -MultiViews
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;lt;/Directory&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;/VirtualHost&amp;gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;LoadModule passenger_module /usr/local/rvm/gems/ruby-2.0.0-p247/gems/passenger-4.0.14/buildout/apache2/mod_passenger.so
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PassengerRoot /usr/local/rvm/gems/ruby-2.0.0-p247/gems/passenger-4.0.14
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PassengerDefaultRuby /usr/local/rvm/wrappers/ruby-2.0.0-p247/ruby
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;lt;VirtualHost *:80&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ServerName www.yourhost.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; # !!! Be sure to point DocumentRoot to &amp;#39;public&amp;#39;!
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; DocumentRoot /somewhere/public
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;Directory /somewhere/public&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; # This relaxes Apache security settings.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; AllowOverride all
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; # MultiViews must be turned off.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Options -MultiViews
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;/Directory&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;lt;/VirtualHost&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;VPSのAレコードの設定をして、サブドメインを使えるようにする。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
- のServerman@VPSのUbicNameでドメインを取っている場合、負荷分散設定というのでDNSレコードを設定できる。&lt;/li&gt;
+のServerman@VPSのUbicNameでドメインを取っている場合、負荷分散設定というのでDNSレコードを設定できる。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -76,9 +57,9 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /etc/apache2/mods-enabled/
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ln -s /etc/apache2/mods-available/passenger.load ./passenger.load
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ln -s /etc/apache2/mods-available/passenger.conf ./passenger.conf
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; /etc/apache2/mods-enabled/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ln -s /etc/apache2/mods-available/passenger.load ./passenger.load
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ln -s /etc/apache2/mods-available/passenger.conf ./passenger.conf
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Appacheの再起動をする。&lt;/p&gt;
@@ -91,7 +72,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;Could not find a JavaScript runtime.&lt;/code&gt; とか言われたら、こうする。
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;gem &#39;therubyracer&#39;&lt;/code&gt; を Gemfileに追加。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gem 'therubyracer'&lt;/code&gt; を Gemfileに追加。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;$ bundle install&lt;/code&gt;
 &lt;ul&gt;
 &lt;li&gt;ちなみに &lt;code&gt;therubyracer&lt;/code&gt;はすごい容量がでかいので、bundle install にものすごく時間がかかった。&lt;/li&gt;
@@ -112,9 +93,4 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;とりあえず、これで Rails を Passenger で動かすことが出来ました。めでたしめでたし。&lt;/p&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;p&gt;とりあえず、これで Rails を Passenger で動かすことが出来ました。めでたしめでたし。&lt;/p&gt;</description></item></channel></rss>

@@ -1,23 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>HSP | gam0022.net</title>
-    <link>http://localhost:1313/tags/hsp/</link>
-      <atom:link href="http://localhost:1313/tags/hsp/index.xml" rel="self" type="application/rss+xml" />
-    <description>HSP</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 11 Dec 2012 12:42:00 +0900</lastBuildDate>
-    <image>
-      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
-      <title>HSP</title>
-      <link>http://localhost:1313/tags/hsp/</link>
-    </image>
-    
-    <item>
-      <title>HSPプログラミングコンテスト2012で秀和システム賞を受賞</title>
-      <link>http://localhost:1313/blog/2012/12/11/hsp-contest2012/</link>
-      <pubDate>Tue, 11 Dec 2012 12:42:00 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2012/12/11/hsp-contest2012/</guid>
-      <description>&lt;p&gt;HSPプログラミングコンテスト2012で秀和システム賞を受賞しました。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>HSP | gam0022.net</title><link>http://gam0022.net/tags/hsp/</link><atom:link href="http://gam0022.net/tags/hsp/index.xml" rel="self" type="application/rss+xml"/><description>HSP</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 11 Dec 2012 12:42:00 +0900</lastBuildDate><image><url>http://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>HSP</title><link>http://gam0022.net/tags/hsp/</link></image><item><title>HSPプログラミングコンテスト2012で秀和システム賞を受賞</title><link>http://gam0022.net/blog/2012/12/11/hsp-contest2012/</link><pubDate>Tue, 11 Dec 2012 12:42:00 +0900</pubDate><guid>http://gam0022.net/blog/2012/12/11/hsp-contest2012/</guid><description>&lt;p&gt;HSPプログラミングコンテスト2012で秀和システム賞を受賞しました。&lt;/p&gt;
 &lt;p&gt;
 &lt;/p&gt;
 &lt;p&gt;入賞作品名はSoar(ソアー)で、女の子を落下しないように操作して、ひたすら上を目指すシンプルなゲームです。&lt;/p&gt;
@@ -35,9 +16,4 @@
 スマートフォン上にも簡単に移植できるようになっているようなので、
 期待が高まります。&lt;/p&gt;
 &lt;p&gt;コンテストの主催者の方、審査員の方、協賛の方、Soarを遊んで下さった方、
-関係者さんに感謝です。来年も参加したいと思います。&lt;/p&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+関係者さんに感謝です。来年も参加したいと思います。&lt;/p&gt;</description></item></channel></rss>

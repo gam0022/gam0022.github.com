@@ -1,25 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>OpenCV | gam0022.net</title>
-    <link>http://localhost:1313/tags/opencv/</link>
-      <atom:link href="http://localhost:1313/tags/opencv/index.xml" rel="self" type="application/rss+xml" />
-    <description>OpenCV</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 04 Aug 2013 12:40:00 +0900</lastBuildDate>
-    <image>
-      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
-      <title>OpenCV</title>
-      <link>http://localhost:1313/tags/opencv/</link>
-    </image>
-    
-    <item>
-      <title>XcodeでopenCVを使う</title>
-      <link>http://localhost:1313/blog/2013/08/04/opencv-on-xcode/</link>
-      <pubDate>Sun, 04 Aug 2013 12:40:00 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2013/08/04/opencv-on-xcode/</guid>
-      <description>&lt;p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>OpenCV | gam0022.net</title><link>http://gam0022.net/tags/opencv/</link><atom:link href="http://gam0022.net/tags/opencv/index.xml" rel="self" type="application/rss+xml"/><description>OpenCV</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 04 Aug 2013 12:40:00 +0900</lastBuildDate><image><url>http://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>OpenCV</title><link>http://gam0022.net/tags/opencv/</link></image><item><title>XcodeでopenCVを使う</title><link>http://gam0022.net/blog/2013/08/04/opencv-on-xcode/</link><pubDate>Sun, 04 Aug 2013 12:40:00 +0900</pubDate><guid>http://gam0022.net/blog/2013/08/04/opencv-on-xcode/</guid><description>&lt;p&gt;
 で
-
 機会があったので、その方法をメモします。&lt;/p&gt;
 &lt;p&gt;バージョンは次の通りです。&lt;/p&gt;
 &lt;dl&gt;
@@ -28,16 +8,11 @@
 &lt;dt&gt;openCV&lt;/dt&gt;
 &lt;dd&gt;2.4.5&lt;/dd&gt;
 &lt;/dl&gt;
-&lt;h2 id=&#34;opencvをインストールする&#34;&gt;openCVをインストールする&lt;/h2&gt;
+&lt;h2 id="opencvをインストールする"&gt;openCVをインストールする&lt;/h2&gt;
 &lt;p&gt;まず、普通にhomebrewでopenCVを入れます。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew tap homebrew/science
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install opencv
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;xcodeでopencvを使えるようにプロジェクトを設定する&#34;&gt;XcodeでopenCVを使えるようにプロジェクトを設定する&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew tap homebrew/science
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install opencv
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="xcodeでopencvを使えるようにプロジェクトを設定する"&gt;XcodeでopenCVを使えるようにプロジェクトを設定する&lt;/h2&gt;
 &lt;p&gt;次のページ通りに設定したら、うまくできました。&lt;/p&gt;
 &lt;p&gt;
-&lt;/p&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;/p&gt;</description></item></channel></rss>

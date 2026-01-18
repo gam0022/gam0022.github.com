@@ -1,196 +1,98 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Keynote | gam0022.net</title>
-    <link>http://localhost:1313/tags/keynote/</link>
-      <atom:link href="http://localhost:1313/tags/keynote/index.xml" rel="self" type="application/rss+xml" />
-    <description>Keynote</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 21 Apr 2014 09:01:00 +0900</lastBuildDate>
-    <image>
-      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
-      <title>Keynote</title>
-      <link>http://localhost:1313/tags/keynote/</link>
-    </image>
-    
-    <item>
-      <title>Keynoteで綺麗な数式を使う</title>
-      <link>http://localhost:1313/blog/2014/04/21/latexit/</link>
-      <pubDate>Mon, 21 Apr 2014 09:01:00 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2014/04/21/latexit/</guid>
-      <description>&lt;p&gt;研究室が始まって、輪講用のスライドをヒイヒイ言いながら作っていた時のことです。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Keynote | gam0022.net</title><link>http://gam0022.net/tags/keynote/</link><atom:link href="http://gam0022.net/tags/keynote/index.xml" rel="self" type="application/rss+xml"/><description>Keynote</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 21 Apr 2014 09:01:00 +0900</lastBuildDate><image><url>http://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Keynote</title><link>http://gam0022.net/tags/keynote/</link></image><item><title>Keynoteで綺麗な数式を使う</title><link>http://gam0022.net/blog/2014/04/21/latexit/</link><pubDate>Mon, 21 Apr 2014 09:01:00 +0900</pubDate><guid>http://gam0022.net/blog/2014/04/21/latexit/</guid><description>&lt;p&gt;研究室が始まって、輪講用のスライドをヒイヒイ言いながら作っていた時のことです。&lt;/p&gt;
 &lt;p&gt;Keynote には、PowerPointの数式エディタ的な機能が無いらしいのです。&lt;/p&gt;
 &lt;p&gt;どうにかして数式を埋め込みたかったので、方法を調べました。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;600 keynoteに数式&#34; 
-               srcset=&#34;http://localhost:1313/blog/2014/04/21/latexit/keynote-1_hu_798945bbc7f199db.webp 320w, http://localhost:1313/blog/2014/04/21/latexit/keynote-1_hu_de41edf4e96db46b.webp 480w, http://localhost:1313/blog/2014/04/21/latexit/keynote-1_hu_ad5a68b777c7a13a.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2014/04/21/latexit/keynote-1_hu_798945bbc7f199db.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;559&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="600 keynoteに数式"
+srcset="http://gam0022.net/blog/2014/04/21/latexit/keynote-1_hu_798945bbc7f199db.webp 320w, http://gam0022.net/blog/2014/04/21/latexit/keynote-1_hu_de41edf4e96db46b.webp 480w, http://gam0022.net/blog/2014/04/21/latexit/keynote-1_hu_ad5a68b777c7a13a.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="http://gam0022.net/blog/2014/04/21/latexit/keynote-1_hu_798945bbc7f199db.webp"
+width="760"
+height="559"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h2 id=&#34;keynote-で数式を埋め込むまで&#34;&gt;Keynote で数式を埋め込むまで&lt;/h2&gt;
+&lt;h2 id="keynote-で数式を埋め込むまで"&gt;Keynote で数式を埋め込むまで&lt;/h2&gt;
 &lt;p&gt;結論から言うと、
- というアプリケーションを利用することにしました。&lt;/p&gt;
-&lt;h3 id=&#34;latexit-を導入&#34;&gt;LaTeXiT を導入&lt;/h3&gt;
+というアプリケーションを利用することにしました。&lt;/p&gt;
+&lt;h3 id="latexit-を導入"&gt;LaTeXiT を導入&lt;/h3&gt;
 &lt;p&gt;
 をダウンロード + インストールする。&lt;/p&gt;
-&lt;h3 id=&#34;latexit-の設定&#34;&gt;LaTeXiT の設定&lt;/h3&gt;
+&lt;h3 id="latexit-の設定"&gt;LaTeXiT の設定&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;which&lt;/code&gt;コマンドを使って、各コマンドのパスを調べて設定します。&lt;/p&gt;
 &lt;p&gt;私の場合はこうしました。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;600 LaTexiTの設定&#34; 
-               srcset=&#34;http://localhost:1313/blog/2014/04/21/latexit/latexit-config_hu_ef254f6a9e866480.webp 320w, http://localhost:1313/blog/2014/04/21/latexit/latexit-config_hu_f1660df7a7b527bf.webp 480w, http://localhost:1313/blog/2014/04/21/latexit/latexit-config_hu_4fc5cc6cf9927e32.webp 680w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2014/04/21/latexit/latexit-config_hu_ef254f6a9e866480.webp&#34;
-               width=&#34;680&#34;
-               height=&#34;591&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="600 LaTexiTの設定"
+srcset="http://gam0022.net/blog/2014/04/21/latexit/latexit-config_hu_ef254f6a9e866480.webp 320w, http://gam0022.net/blog/2014/04/21/latexit/latexit-config_hu_f1660df7a7b527bf.webp 480w, http://gam0022.net/blog/2014/04/21/latexit/latexit-config_hu_4fc5cc6cf9927e32.webp 680w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="http://gam0022.net/blog/2014/04/21/latexit/latexit-config_hu_ef254f6a9e866480.webp"
+width="680"
+height="591"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h3 id=&#34;latexit-で数式を生成&#34;&gt;LaTeXiT で数式を生成&lt;/h3&gt;
+&lt;h3 id="latexit-で数式を生成"&gt;LaTeXiT で数式を生成&lt;/h3&gt;
 &lt;p&gt;LaTeXiT では、普通に LaTex と全く同じように数式が扱えます。&lt;/p&gt;
 &lt;p&gt;式を入力したら、右下の&lt;code&gt;LaTex it!&lt;/code&gt;ボタンでコンパイル(画像化)してくれます。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;600 LaTexiTの使い方&#34; 
-               srcset=&#34;http://localhost:1313/blog/2014/04/21/latexit/latexit-usage_hu_ffd9cc519833eb5d.webp 320w, http://localhost:1313/blog/2014/04/21/latexit/latexit-usage_hu_6ec0c626a2e297b2.webp 480w, http://localhost:1313/blog/2014/04/21/latexit/latexit-usage_hu_8c858e59c18a5317.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2014/04/21/latexit/latexit-usage_hu_ffd9cc519833eb5d.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;567&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="600 LaTexiTの使い方"
+srcset="http://gam0022.net/blog/2014/04/21/latexit/latexit-usage_hu_ffd9cc519833eb5d.webp 320w, http://gam0022.net/blog/2014/04/21/latexit/latexit-usage_hu_6ec0c626a2e297b2.webp 480w, http://gam0022.net/blog/2014/04/21/latexit/latexit-usage_hu_8c858e59c18a5317.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="http://gam0022.net/blog/2014/04/21/latexit/latexit-usage_hu_ffd9cc519833eb5d.webp"
+width="760"
+height="567"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h3 id=&#34;keynote-に貼り付ける&#34;&gt;Keynote に貼り付ける&lt;/h3&gt;
+&lt;h3 id="keynote-に貼り付ける"&gt;Keynote に貼り付ける&lt;/h3&gt;
 &lt;p&gt;様々な形式に出力(クリップボードにコピー)できるのですが、Keynote で使いたい場合は PDF 形式がベクトル画像になるので良さそうです。&lt;/p&gt;
 &lt;p&gt;クリップボードにコピーしたら、Keynote から &lt;code&gt;Command-V&lt;/code&gt; で画像と同じように貼り付けることができます。&lt;/p&gt;
 &lt;p&gt;また、数式を Keynote にドラッグ・アンド・ドロップすることでも貼り付けることができます。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;600 数式のコピー&#34; 
-               srcset=&#34;http://localhost:1313/blog/2014/04/21/latexit/latexit-copy_hu_9be49808be0ec765.webp 320w, http://localhost:1313/blog/2014/04/21/latexit/latexit-copy_hu_d9dc4ec2ac61d9f2.webp 480w, http://localhost:1313/blog/2014/04/21/latexit/latexit-copy_hu_abd24c02c40611e.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2014/04/21/latexit/latexit-copy_hu_9be49808be0ec765.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;567&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="600 数式のコピー"
+srcset="http://gam0022.net/blog/2014/04/21/latexit/latexit-copy_hu_9be49808be0ec765.webp 320w, http://gam0022.net/blog/2014/04/21/latexit/latexit-copy_hu_d9dc4ec2ac61d9f2.webp 480w, http://gam0022.net/blog/2014/04/21/latexit/latexit-copy_hu_abd24c02c40611e.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="http://gam0022.net/blog/2014/04/21/latexit/latexit-copy_hu_9be49808be0ec765.webp"
+width="760"
+height="567"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;ちなみに、デフォルトフォーマットは、&lt;code&gt;LaTeXit&amp;gt; 環境設定 &amp;gt; 一般タブ&lt;/code&gt; から指定できます。&lt;/p&gt;
-&lt;h2 id=&#34;tips&#34;&gt;Tips&lt;/h2&gt;
-&lt;h3 id=&#34;数式番号を任意に指定したい&#34;&gt;数式番号を任意に指定したい&lt;/h3&gt;
+&lt;h2 id="tips"&gt;Tips&lt;/h2&gt;
+&lt;h3 id="数式番号を任意に指定したい"&gt;数式番号を任意に指定したい&lt;/h3&gt;
 &lt;p&gt;数式番号を任意に指定したいなら、&lt;code&gt;setcounter&lt;/code&gt; 環境を使うと良いです。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;\setcounter&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;equation&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;5&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;%数式番号を(6)としたいなら、5(指定したい番号 - 1)を指定
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;equation&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  M(T) = &lt;span class=&#34;k&#34;&gt;\sum&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;_{&lt;/span&gt;e &lt;span class=&#34;k&#34;&gt;\in&lt;/span&gt; T,e &lt;span class=&#34;k&#34;&gt;\not\in&lt;/span&gt; P&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;m(e)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;equation&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-latex" data-lang="latex"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;\setcounter&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;equation&lt;span class="nb"&gt;}{&lt;/span&gt;5&lt;span class="nb"&gt;}&lt;/span&gt; &lt;span class="c"&gt;%数式番号を(6)としたいなら、5(指定したい番号 - 1)を指定
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;\begin&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;equation&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; M(T) = &lt;span class="k"&gt;\sum&lt;/span&gt;&lt;span class="nb"&gt;_{&lt;/span&gt;e &lt;span class="k"&gt;\in&lt;/span&gt; T,e &lt;span class="k"&gt;\not\in&lt;/span&gt; P&lt;span class="nb"&gt;}&lt;/span&gt;m(e)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;equation&lt;span class="nb"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;無事に数式番号を指定できました。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;600 数式番号を指定する&#34; 
-               srcset=&#34;http://localhost:1313/blog/2014/04/21/latexit/latexit-setcounter_hu_1ebd2b28128f4775.webp 320w, http://localhost:1313/blog/2014/04/21/latexit/latexit-setcounter_hu_ca7a0ce73b4db9bf.webp 480w, http://localhost:1313/blog/2014/04/21/latexit/latexit-setcounter_hu_b972d516708bf320.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2014/04/21/latexit/latexit-setcounter_hu_1ebd2b28128f4775.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;426&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="600 数式番号を指定する"
+srcset="http://gam0022.net/blog/2014/04/21/latexit/latexit-setcounter_hu_1ebd2b28128f4775.webp 320w, http://gam0022.net/blog/2014/04/21/latexit/latexit-setcounter_hu_ca7a0ce73b4db9bf.webp 480w, http://gam0022.net/blog/2014/04/21/latexit/latexit-setcounter_hu_b972d516708bf320.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="http://gam0022.net/blog/2014/04/21/latexit/latexit-setcounter_hu_1ebd2b28128f4775.webp"
+width="760"
+height="426"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;h2 id="参考"&gt;参考&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;/ul&gt;</description></item></channel></rss>

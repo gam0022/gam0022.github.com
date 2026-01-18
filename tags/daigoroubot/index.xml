@@ -1,39 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Daigoroubot | gam0022.net</title>
-    <link>http://localhost:1313/tags/daigoroubot/</link>
-      <atom:link href="http://localhost:1313/tags/daigoroubot/index.xml" rel="self" type="application/rss+xml" />
-    <description>Daigoroubot</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 20 Aug 2012 13:28:00 +0900</lastBuildDate>
-    <image>
-      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
-      <title>Daigoroubot</title>
-      <link>http://localhost:1313/tags/daigoroubot/</link>
-    </image>
-    
-    <item>
-      <title>大五郎bot(@daigoroubot)を動かすためのメモ</title>
-      <link>http://localhost:1313/blog/2012/08/20/run-daigoroubot/</link>
-      <pubDate>Mon, 20 Aug 2012 13:28:00 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2012/08/20/run-daigoroubot/</guid>
-      <description>&lt;p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Daigoroubot | gam0022.net</title><link>http://gam0022.net/tags/daigoroubot/</link><atom:link href="http://gam0022.net/tags/daigoroubot/index.xml" rel="self" type="application/rss+xml"/><description>Daigoroubot</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 20 Aug 2012 13:28:00 +0900</lastBuildDate><image><url>http://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Daigoroubot</title><link>http://gam0022.net/tags/daigoroubot/</link></image><item><title>大五郎bot(@daigoroubot)を動かすためのメモ</title><link>http://gam0022.net/blog/2012/08/20/run-daigoroubot/</link><pubDate>Mon, 20 Aug 2012 13:28:00 +0900</pubDate><guid>http://gam0022.net/blog/2012/08/20/run-daigoroubot/</guid><description>&lt;p&gt;
 をMac OS Xで動かすまでのメモです。
 なんて需要が無さそうな記事なんだ!&lt;/p&gt;
-&lt;h3 id=&#34;rubyとgemををインストール&#34;&gt;Rubyとgemををインストール&lt;/h3&gt;
+&lt;h3 id="rubyとgemををインストール"&gt;Rubyとgemををインストール&lt;/h3&gt;
 &lt;p&gt;とりあえず、バージョンは次のような感じで。インストール方法は
 を参考にしてください。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;ruby 1.9.3p194&lt;/li&gt;
 &lt;li&gt;gem 1.8.24&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;required-gems&#34;&gt;required gems&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gem install oauth json sqlite3 twitter tweetstream unicode_math
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;mecabを使えるようにしておく&#34;&gt;MeCabを使えるようにしておく&lt;/h3&gt;
+&lt;h3 id="required-gems"&gt;required gems&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gem install oauth json sqlite3 twitter tweetstream unicode_math
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="mecabを使えるようにしておく"&gt;MeCabを使えるようにしておく&lt;/h3&gt;
 &lt;p&gt;homebrewを導入しているなら、これでok。&lt;/p&gt;
 &lt;p&gt;Mac用のメモですが、Ubuntuなら&lt;code&gt;brew&lt;/code&gt;の代わりに&lt;code&gt;apt-get&lt;/code&gt;など、環境に合わせた適当なパッケージ管理システムにすれば普通に動くと思います。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install mecab mecab-ipadic
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;mecabのrubyバインディングをする&#34;&gt;MeCabのRubyバインディングをする&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install mecab mecab-ipadic
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="mecabのrubyバインディングをする"&gt;MeCabのRubyバインディングをする&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
 からbrewで入れたMeCabと同じバージョンのRubyバインディングをダウンロードする。&lt;/li&gt;
@@ -43,61 +24,49 @@
 &lt;p&gt;もし次のようなエラーが出たら、&lt;code&gt;extconf.rb&lt;/code&gt;を編集する必要があるよう。&lt;/p&gt;
 &lt;p&gt;(参考:
 )&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dyld: lazy symbol binding failed: Symbol not found: __ZN5MeCab12getLastErrorEv
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Referenced from: /Users/kobayashi/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/site_ruby/1.8/i686-darwin10.7.0/MeCab.bundle
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Expected in: flat namespace
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dyld: Symbol not found: __ZN5MeCab12getLastErrorEv
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Referenced from: /Users/kobayashi/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/site_ruby/1.8/i686-darwin10.7.0/MeCab.bundle
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Expected in: flat namespace
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;dyld: lazy symbol binding failed: Symbol not found: __ZN5MeCab12getLastErrorEv
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Referenced from: /Users/kobayashi/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/site_ruby/1.8/i686-darwin10.7.0/MeCab.bundle
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Expected in: flat namespace
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;dyld: Symbol not found: __ZN5MeCab12getLastErrorEv
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Referenced from: /Users/kobayashi/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/site_ruby/1.8/i686-darwin10.7.0/MeCab.bundle
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Expected in: flat namespace
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;extconf.rb&lt;/code&gt; に次のように&lt;code&gt;$LDFLAGS&lt;/code&gt;を追加します。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## extconf.rb
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;require &amp;#39;mkmf&amp;#39;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mecab_config = with_config(&amp;#39;mecab-config&amp;#39;, &amp;#39;mecab-config&amp;#39;)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;use_mecab_config = enable_config(&amp;#39;mecab-config&amp;#39;)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gi&#34;&gt;+$LDFLAGS += &amp;#39; -L&amp;#39; + `#{mecab_config} --libs-only-L`.chomp
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;`mecab-config --libs-only-l`.chomp.split.each { | lib |
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  have_library(lib)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$CFLAGS += &amp;#39; &amp;#39; + `#{mecab_config} --cflags`.chomp
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;have_header(&amp;#39;mecab.h&amp;#39;) &amp;amp;&amp;amp; create_makefile(&amp;#39;MeCab&amp;#39;)
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-diff" data-lang="diff"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;## extconf.rb
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;require &amp;#39;mkmf&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;mecab_config = with_config(&amp;#39;mecab-config&amp;#39;, &amp;#39;mecab-config&amp;#39;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;use_mecab_config = enable_config(&amp;#39;mecab-config&amp;#39;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gi"&gt;+$LDFLAGS += &amp;#39; -L&amp;#39; + `#{mecab_config} --libs-only-L`.chomp
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;`mecab-config --libs-only-l`.chomp.split.each { | lib |
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; have_library(lib)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$CFLAGS += &amp;#39; &amp;#39; + `#{mecab_config} --cflags`.chomp
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;have_header(&amp;#39;mecab.h&amp;#39;) &amp;amp;&amp;amp; create_makefile(&amp;#39;MeCab&amp;#39;)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!--
-
 ここが厄介なので、私自身、嵌りました。
-
 1. まず、[ここ](http://code.google.com/p/mecab/downloads/list)からbrewで入れたMeCabと同じバージョンのRubyバインディングをダウンロードする。
 2. 1.を解凍して、cd。
 3. `extconf.rb`を編集する。
-  `$LDFLAGS = &#39;-L/usr/local/lib&#39;`という行を、`$CFLAGS〜`の次の行に加える。
+`$LDFLAGS = '-L/usr/local/lib'`という行を、`$CFLAGS〜`の次の行に加える。
 4. ```bash
 ruby extconf.rb
 make
 sudo make install
 ```
-
 ちなみに、`extconf.eb`を編集せずにバインディングしたときにRubyからmecabを使うと、次のようなエラーになってしまう。
-
 ```bash
 dyld: NSLinkModule() error
 dyld: Symbol not found: __ZN5MeCab6Tagger6createEiPPc
-  Referenced from: /Users/gam0022/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/site_ruby/1.9.1/x86_64-darwin11.4.0/MeCab.bundle
-  Expected in: flat namespace
-
+Referenced from: /Users/gam0022/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/site_ruby/1.9.1/x86_64-darwin11.4.0/MeCab.bundle
+Expected in: flat namespace
 Trace/BPT trap
 ```
-
 --&gt;
 &lt;p&gt;参考:
-
-&lt;/p&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;/p&gt;</description></item></channel></rss>

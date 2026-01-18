@@ -1,219 +1,108 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Latex | gam0022.net</title>
-    <link>http://localhost:1313/tags/latex/</link>
-      <atom:link href="http://localhost:1313/tags/latex/index.xml" rel="self" type="application/rss+xml" />
-    <description>Latex</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 21 Apr 2014 09:01:00 +0900</lastBuildDate>
-    <image>
-      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
-      <title>Latex</title>
-      <link>http://localhost:1313/tags/latex/</link>
-    </image>
-    
-    <item>
-      <title>Keynoteで綺麗な数式を使う</title>
-      <link>http://localhost:1313/blog/2014/04/21/latexit/</link>
-      <pubDate>Mon, 21 Apr 2014 09:01:00 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2014/04/21/latexit/</guid>
-      <description>&lt;p&gt;研究室が始まって、輪講用のスライドをヒイヒイ言いながら作っていた時のことです。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Latex | gam0022.net</title><link>http://gam0022.net/tags/latex/</link><atom:link href="http://gam0022.net/tags/latex/index.xml" rel="self" type="application/rss+xml"/><description>Latex</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 21 Apr 2014 09:01:00 +0900</lastBuildDate><image><url>http://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Latex</title><link>http://gam0022.net/tags/latex/</link></image><item><title>Keynoteで綺麗な数式を使う</title><link>http://gam0022.net/blog/2014/04/21/latexit/</link><pubDate>Mon, 21 Apr 2014 09:01:00 +0900</pubDate><guid>http://gam0022.net/blog/2014/04/21/latexit/</guid><description>&lt;p&gt;研究室が始まって、輪講用のスライドをヒイヒイ言いながら作っていた時のことです。&lt;/p&gt;
 &lt;p&gt;Keynote には、PowerPointの数式エディタ的な機能が無いらしいのです。&lt;/p&gt;
 &lt;p&gt;どうにかして数式を埋め込みたかったので、方法を調べました。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;600 keynoteに数式&#34; 
-               srcset=&#34;http://localhost:1313/blog/2014/04/21/latexit/keynote-1_hu_798945bbc7f199db.webp 320w, http://localhost:1313/blog/2014/04/21/latexit/keynote-1_hu_de41edf4e96db46b.webp 480w, http://localhost:1313/blog/2014/04/21/latexit/keynote-1_hu_ad5a68b777c7a13a.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2014/04/21/latexit/keynote-1_hu_798945bbc7f199db.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;559&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="600 keynoteに数式"
+srcset="http://gam0022.net/blog/2014/04/21/latexit/keynote-1_hu_798945bbc7f199db.webp 320w, http://gam0022.net/blog/2014/04/21/latexit/keynote-1_hu_de41edf4e96db46b.webp 480w, http://gam0022.net/blog/2014/04/21/latexit/keynote-1_hu_ad5a68b777c7a13a.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="http://gam0022.net/blog/2014/04/21/latexit/keynote-1_hu_798945bbc7f199db.webp"
+width="760"
+height="559"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h2 id=&#34;keynote-で数式を埋め込むまで&#34;&gt;Keynote で数式を埋め込むまで&lt;/h2&gt;
+&lt;h2 id="keynote-で数式を埋め込むまで"&gt;Keynote で数式を埋め込むまで&lt;/h2&gt;
 &lt;p&gt;結論から言うと、
- というアプリケーションを利用することにしました。&lt;/p&gt;
-&lt;h3 id=&#34;latexit-を導入&#34;&gt;LaTeXiT を導入&lt;/h3&gt;
+というアプリケーションを利用することにしました。&lt;/p&gt;
+&lt;h3 id="latexit-を導入"&gt;LaTeXiT を導入&lt;/h3&gt;
 &lt;p&gt;
 をダウンロード + インストールする。&lt;/p&gt;
-&lt;h3 id=&#34;latexit-の設定&#34;&gt;LaTeXiT の設定&lt;/h3&gt;
+&lt;h3 id="latexit-の設定"&gt;LaTeXiT の設定&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;which&lt;/code&gt;コマンドを使って、各コマンドのパスを調べて設定します。&lt;/p&gt;
 &lt;p&gt;私の場合はこうしました。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;600 LaTexiTの設定&#34; 
-               srcset=&#34;http://localhost:1313/blog/2014/04/21/latexit/latexit-config_hu_ef254f6a9e866480.webp 320w, http://localhost:1313/blog/2014/04/21/latexit/latexit-config_hu_f1660df7a7b527bf.webp 480w, http://localhost:1313/blog/2014/04/21/latexit/latexit-config_hu_4fc5cc6cf9927e32.webp 680w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2014/04/21/latexit/latexit-config_hu_ef254f6a9e866480.webp&#34;
-               width=&#34;680&#34;
-               height=&#34;591&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="600 LaTexiTの設定"
+srcset="http://gam0022.net/blog/2014/04/21/latexit/latexit-config_hu_ef254f6a9e866480.webp 320w, http://gam0022.net/blog/2014/04/21/latexit/latexit-config_hu_f1660df7a7b527bf.webp 480w, http://gam0022.net/blog/2014/04/21/latexit/latexit-config_hu_4fc5cc6cf9927e32.webp 680w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="http://gam0022.net/blog/2014/04/21/latexit/latexit-config_hu_ef254f6a9e866480.webp"
+width="680"
+height="591"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h3 id=&#34;latexit-で数式を生成&#34;&gt;LaTeXiT で数式を生成&lt;/h3&gt;
+&lt;h3 id="latexit-で数式を生成"&gt;LaTeXiT で数式を生成&lt;/h3&gt;
 &lt;p&gt;LaTeXiT では、普通に LaTex と全く同じように数式が扱えます。&lt;/p&gt;
 &lt;p&gt;式を入力したら、右下の&lt;code&gt;LaTex it!&lt;/code&gt;ボタンでコンパイル(画像化)してくれます。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;600 LaTexiTの使い方&#34; 
-               srcset=&#34;http://localhost:1313/blog/2014/04/21/latexit/latexit-usage_hu_ffd9cc519833eb5d.webp 320w, http://localhost:1313/blog/2014/04/21/latexit/latexit-usage_hu_6ec0c626a2e297b2.webp 480w, http://localhost:1313/blog/2014/04/21/latexit/latexit-usage_hu_8c858e59c18a5317.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2014/04/21/latexit/latexit-usage_hu_ffd9cc519833eb5d.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;567&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="600 LaTexiTの使い方"
+srcset="http://gam0022.net/blog/2014/04/21/latexit/latexit-usage_hu_ffd9cc519833eb5d.webp 320w, http://gam0022.net/blog/2014/04/21/latexit/latexit-usage_hu_6ec0c626a2e297b2.webp 480w, http://gam0022.net/blog/2014/04/21/latexit/latexit-usage_hu_8c858e59c18a5317.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="http://gam0022.net/blog/2014/04/21/latexit/latexit-usage_hu_ffd9cc519833eb5d.webp"
+width="760"
+height="567"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h3 id=&#34;keynote-に貼り付ける&#34;&gt;Keynote に貼り付ける&lt;/h3&gt;
+&lt;h3 id="keynote-に貼り付ける"&gt;Keynote に貼り付ける&lt;/h3&gt;
 &lt;p&gt;様々な形式に出力(クリップボードにコピー)できるのですが、Keynote で使いたい場合は PDF 形式がベクトル画像になるので良さそうです。&lt;/p&gt;
 &lt;p&gt;クリップボードにコピーしたら、Keynote から &lt;code&gt;Command-V&lt;/code&gt; で画像と同じように貼り付けることができます。&lt;/p&gt;
 &lt;p&gt;また、数式を Keynote にドラッグ・アンド・ドロップすることでも貼り付けることができます。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;600 数式のコピー&#34; 
-               srcset=&#34;http://localhost:1313/blog/2014/04/21/latexit/latexit-copy_hu_9be49808be0ec765.webp 320w, http://localhost:1313/blog/2014/04/21/latexit/latexit-copy_hu_d9dc4ec2ac61d9f2.webp 480w, http://localhost:1313/blog/2014/04/21/latexit/latexit-copy_hu_abd24c02c40611e.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2014/04/21/latexit/latexit-copy_hu_9be49808be0ec765.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;567&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="600 数式のコピー"
+srcset="http://gam0022.net/blog/2014/04/21/latexit/latexit-copy_hu_9be49808be0ec765.webp 320w, http://gam0022.net/blog/2014/04/21/latexit/latexit-copy_hu_d9dc4ec2ac61d9f2.webp 480w, http://gam0022.net/blog/2014/04/21/latexit/latexit-copy_hu_abd24c02c40611e.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="http://gam0022.net/blog/2014/04/21/latexit/latexit-copy_hu_9be49808be0ec765.webp"
+width="760"
+height="567"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;ちなみに、デフォルトフォーマットは、&lt;code&gt;LaTeXit&amp;gt; 環境設定 &amp;gt; 一般タブ&lt;/code&gt; から指定できます。&lt;/p&gt;
-&lt;h2 id=&#34;tips&#34;&gt;Tips&lt;/h2&gt;
-&lt;h3 id=&#34;数式番号を任意に指定したい&#34;&gt;数式番号を任意に指定したい&lt;/h3&gt;
+&lt;h2 id="tips"&gt;Tips&lt;/h2&gt;
+&lt;h3 id="数式番号を任意に指定したい"&gt;数式番号を任意に指定したい&lt;/h3&gt;
 &lt;p&gt;数式番号を任意に指定したいなら、&lt;code&gt;setcounter&lt;/code&gt; 環境を使うと良いです。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;\setcounter&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;equation&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;5&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;%数式番号を(6)としたいなら、5(指定したい番号 - 1)を指定
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;equation&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  M(T) = &lt;span class=&#34;k&#34;&gt;\sum&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;_{&lt;/span&gt;e &lt;span class=&#34;k&#34;&gt;\in&lt;/span&gt; T,e &lt;span class=&#34;k&#34;&gt;\not\in&lt;/span&gt; P&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;m(e)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;equation&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-latex" data-lang="latex"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;\setcounter&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;equation&lt;span class="nb"&gt;}{&lt;/span&gt;5&lt;span class="nb"&gt;}&lt;/span&gt; &lt;span class="c"&gt;%数式番号を(6)としたいなら、5(指定したい番号 - 1)を指定
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;\begin&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;equation&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; M(T) = &lt;span class="k"&gt;\sum&lt;/span&gt;&lt;span class="nb"&gt;_{&lt;/span&gt;e &lt;span class="k"&gt;\in&lt;/span&gt; T,e &lt;span class="k"&gt;\not\in&lt;/span&gt; P&lt;span class="nb"&gt;}&lt;/span&gt;m(e)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;equation&lt;span class="nb"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;無事に数式番号を指定できました。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;600 数式番号を指定する&#34; 
-               srcset=&#34;http://localhost:1313/blog/2014/04/21/latexit/latexit-setcounter_hu_1ebd2b28128f4775.webp 320w, http://localhost:1313/blog/2014/04/21/latexit/latexit-setcounter_hu_ca7a0ce73b4db9bf.webp 480w, http://localhost:1313/blog/2014/04/21/latexit/latexit-setcounter_hu_b972d516708bf320.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2014/04/21/latexit/latexit-setcounter_hu_1ebd2b28128f4775.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;426&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="600 数式番号を指定する"
+srcset="http://gam0022.net/blog/2014/04/21/latexit/latexit-setcounter_hu_1ebd2b28128f4775.webp 320w, http://gam0022.net/blog/2014/04/21/latexit/latexit-setcounter_hu_ca7a0ce73b4db9bf.webp 480w, http://gam0022.net/blog/2014/04/21/latexit/latexit-setcounter_hu_b972d516708bf320.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="http://gam0022.net/blog/2014/04/21/latexit/latexit-setcounter_hu_1ebd2b28128f4775.webp"
+width="760"
+height="426"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;h2 id="参考"&gt;参考&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>LaTexで図をその場に配置する</title>
-      <link>http://localhost:1313/blog/2013/06/09/latex-usepackage-float/</link>
-      <pubDate>Sun, 09 Jun 2013 22:58:00 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2013/06/09/latex-usepackage-float/</guid>
-      <description>&lt;p&gt;LaTexで図をその場に配置する方法ですが、このようにすれば良いようです。&lt;/p&gt;
+&lt;/ul&gt;</description></item><item><title>LaTexで図をその場に配置する</title><link>http://gam0022.net/blog/2013/06/09/latex-usepackage-float/</link><pubDate>Sun, 09 Jun 2013 22:58:00 +0900</pubDate><guid>http://gam0022.net/blog/2013/06/09/latex-usepackage-float/</guid><description>&lt;p&gt;LaTexで図をその場に配置する方法ですが、このようにすれば良いようです。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;プリアンプルに&lt;code&gt;\usepackage{float}&lt;/code&gt;を追加。&lt;/li&gt;
 &lt;li&gt;図を配置するとき、&lt;code&gt;\begin{figure}[H]&lt;/code&gt;のように位置指定する。&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>OctopressでMathJax.rbの導入</title>
-      <link>http://localhost:1313/blog/2013/02/11/fdtd/</link>
-      <pubDate>Mon, 11 Feb 2013 16:23:00 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2013/02/11/fdtd/</guid>
-      <description>&lt;p&gt;
+&lt;/ol&gt;</description></item><item><title>OctopressでMathJax.rbの導入</title><link>http://gam0022.net/blog/2013/02/11/fdtd/</link><pubDate>Mon, 11 Feb 2013 16:23:00 +0900</pubDate><guid>http://gam0022.net/blog/2013/02/11/fdtd/</guid><description>&lt;p&gt;
 という授業で波動関数をシュミレーションする課題がありました。&lt;/p&gt;
 &lt;p&gt;面白かったので忘れないように、&lt;code&gt;MathJax.rb&lt;/code&gt;というプラグインのテストを兼ねてメモすることにしました。&lt;/p&gt;
-&lt;h2 id=&#34;mathjaxrbの導入&#34;&gt;MathJax.rbの導入&lt;/h2&gt;
+&lt;h2 id="mathjaxrbの導入"&gt;MathJax.rbの導入&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;MathJax.rb&lt;/code&gt;の導入には、
 が非常に参考になりました。&lt;/p&gt;
 &lt;ol&gt;
@@ -221,26 +110,26 @@
 をダウンロードして、&lt;code&gt;/plugins/&lt;/code&gt;にコピーする。&lt;/li&gt;
 &lt;li&gt;octopressの場合、&lt;code&gt;_layouts/layout.html&lt;/code&gt;ではなくて、&lt;code&gt;source/_includes/custom/head.html&lt;/code&gt;に次の行を追加する。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## source/_includes/custom/head.html
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;text/javascript&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;## source/_includes/custom/head.html
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;text/javascript&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- more --&gt;
-&lt;h2 id=&#34;mathjaxrbの使い方&#34;&gt;MathJax.rbの使い方&lt;/h2&gt;
+&lt;h2 id="mathjaxrbの使い方"&gt;MathJax.rbの使い方&lt;/h2&gt;
 &lt;p&gt;ブロックの場合、&lt;code&gt;math&lt;/code&gt;と&lt;code&gt;endmath&lt;/code&gt;タグで囲む&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;% math %}
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Simple&lt;span class=&#34;k&#34;&gt;\ &lt;/span&gt;FDTD&lt;span class=&#34;k&#34;&gt;\ &lt;/span&gt;Algorithm&lt;span class=&#34;k&#34;&gt;\ &lt;/span&gt;and&lt;span class=&#34;k&#34;&gt;\ &lt;/span&gt;Devils&lt;span class=&#34;k&#34;&gt;\ &lt;/span&gt;in&lt;span class=&#34;k&#34;&gt;\ &lt;/span&gt;the&lt;span class=&#34;k&#34;&gt;\ &lt;/span&gt;Details &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;eqnarray&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;\psi&lt;/span&gt;(x,t + &lt;span class=&#34;k&#34;&gt;\Delta&lt;/span&gt; t) &lt;span class=&#34;nb&#34;&gt;&amp;amp;&lt;/span&gt;=&lt;span class=&#34;nb&#34;&gt;&amp;amp;&lt;/span&gt; -&lt;span class=&#34;k&#34;&gt;\psi&lt;/span&gt;(x, t - &lt;span class=&#34;k&#34;&gt;\Delta&lt;/span&gt; t) + [2 + &lt;span class=&#34;k&#34;&gt;\frac&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;v&lt;span class=&#34;nb&#34;&gt;^&lt;/span&gt;2&lt;span class=&#34;k&#34;&gt;\Delta&lt;/span&gt; t&lt;span class=&#34;nb&#34;&gt;^&lt;/span&gt;2&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\Delta&lt;/span&gt; x &lt;span class=&#34;nb&#34;&gt;^&lt;/span&gt;2&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; d&lt;span class=&#34;nb&#34;&gt;_&lt;/span&gt;x&lt;span class=&#34;nb&#34;&gt;^&lt;/span&gt;2] &lt;span class=&#34;k&#34;&gt;\psi&lt;/span&gt;(x,t) &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sb&#34;&gt;$$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\psi&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;x, t &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\Delta&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; t&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\psi&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;x,t&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\frac&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{v^&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\Delta&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; t^&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\Delta&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; x ^&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;} d_x^&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\psi&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;x,t&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;$$&lt;/span&gt; -&lt;span class=&#34;k&#34;&gt;\psi&lt;/span&gt;(x, t - &lt;span class=&#34;k&#34;&gt;\Delta&lt;/span&gt; t) + 2&lt;span class=&#34;k&#34;&gt;\psi&lt;/span&gt;(x,t) + &lt;span class=&#34;k&#34;&gt;\frac&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;v&lt;span class=&#34;nb&#34;&gt;^&lt;/span&gt;2&lt;span class=&#34;k&#34;&gt;\Delta&lt;/span&gt; t&lt;span class=&#34;nb&#34;&gt;^&lt;/span&gt;2&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\Delta&lt;/span&gt; x &lt;span class=&#34;nb&#34;&gt;^&lt;/span&gt;2&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                       [ &lt;span class=&#34;k&#34;&gt;\psi&lt;/span&gt;(x - &lt;span class=&#34;k&#34;&gt;\Delta&lt;/span&gt; x, t) + &lt;span class=&#34;k&#34;&gt;\psi&lt;/span&gt;(x + &lt;span class=&#34;k&#34;&gt;\Delta&lt;/span&gt; x, t) - 2 &lt;span class=&#34;k&#34;&gt;\psi&lt;/span&gt;(x, t) ] &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;eqnarray&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;% endmath %}
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-latex" data-lang="latex"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;{&lt;/span&gt;&lt;span class="c"&gt;% math %}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Simple&lt;span class="k"&gt;\ &lt;/span&gt;FDTD&lt;span class="k"&gt;\ &lt;/span&gt;Algorithm&lt;span class="k"&gt;\ &lt;/span&gt;and&lt;span class="k"&gt;\ &lt;/span&gt;Devils&lt;span class="k"&gt;\ &lt;/span&gt;in&lt;span class="k"&gt;\ &lt;/span&gt;the&lt;span class="k"&gt;\ &lt;/span&gt;Details &lt;span class="k"&gt;\\&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;\begin&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;eqnarray&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;\psi&lt;/span&gt;(x,t + &lt;span class="k"&gt;\Delta&lt;/span&gt; t) &lt;span class="nb"&gt;&amp;amp;&lt;/span&gt;=&lt;span class="nb"&gt;&amp;amp;&lt;/span&gt; -&lt;span class="k"&gt;\psi&lt;/span&gt;(x, t - &lt;span class="k"&gt;\Delta&lt;/span&gt; t) + [2 + &lt;span class="k"&gt;\frac&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;v&lt;span class="nb"&gt;^&lt;/span&gt;2&lt;span class="k"&gt;\Delta&lt;/span&gt; t&lt;span class="nb"&gt;^&lt;/span&gt;2&lt;span class="nb"&gt;}{&lt;/span&gt;&lt;span class="k"&gt;\Delta&lt;/span&gt; x &lt;span class="nb"&gt;^&lt;/span&gt;2&lt;span class="nb"&gt;}&lt;/span&gt; d&lt;span class="nb"&gt;_&lt;/span&gt;x&lt;span class="nb"&gt;^&lt;/span&gt;2] &lt;span class="k"&gt;\psi&lt;/span&gt;(x,t) &lt;span class="k"&gt;\\&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="sb"&gt;$$&lt;/span&gt;&lt;span class="nb"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;\psi&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;x, t &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nb"&gt; &lt;/span&gt;&lt;span class="nv"&gt;\Delta&lt;/span&gt;&lt;span class="nb"&gt; t&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="nb"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nb"&gt; &lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="nv"&gt;\psi&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;x,t&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="nb"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nb"&gt; &lt;/span&gt;&lt;span class="nv"&gt;\frac&lt;/span&gt;&lt;span class="nb"&gt;{v^&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="nv"&gt;\Delta&lt;/span&gt;&lt;span class="nb"&gt; t^&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="nb"&gt;}{&lt;/span&gt;&lt;span class="nv"&gt;\Delta&lt;/span&gt;&lt;span class="nb"&gt; x ^&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="nb"&gt;} d_x^&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="nb"&gt; &lt;/span&gt;&lt;span class="nv"&gt;\psi&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;x,t&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="nb"&gt; &lt;/span&gt;&lt;span class="nv"&gt;\\&lt;/span&gt;&lt;span class="nb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s"&gt;$$&lt;/span&gt; -&lt;span class="k"&gt;\psi&lt;/span&gt;(x, t - &lt;span class="k"&gt;\Delta&lt;/span&gt; t) + 2&lt;span class="k"&gt;\psi&lt;/span&gt;(x,t) + &lt;span class="k"&gt;\frac&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;v&lt;span class="nb"&gt;^&lt;/span&gt;2&lt;span class="k"&gt;\Delta&lt;/span&gt; t&lt;span class="nb"&gt;^&lt;/span&gt;2&lt;span class="nb"&gt;}{&lt;/span&gt;&lt;span class="k"&gt;\Delta&lt;/span&gt; x &lt;span class="nb"&gt;^&lt;/span&gt;2&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; [ &lt;span class="k"&gt;\psi&lt;/span&gt;(x - &lt;span class="k"&gt;\Delta&lt;/span&gt; x, t) + &lt;span class="k"&gt;\psi&lt;/span&gt;(x + &lt;span class="k"&gt;\Delta&lt;/span&gt; x, t) - 2 &lt;span class="k"&gt;\psi&lt;/span&gt;(x, t) ] &lt;span class="k"&gt;\\&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;eqnarray&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;{&lt;/span&gt;&lt;span class="c"&gt;% endmath %}
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;インラインの場合、&lt;code&gt;m&lt;/code&gt; と&lt;code&gt;em&lt;/code&gt;タグで囲む(下のコードだと、&lt;code&gt;em&lt;/code&gt;の部分が消えていますが囲んでください)&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1次元の波を {% m %} \psi(x,t) {% em %} という
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;fdtd&#34;&gt;FDTD&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1次元の波を {% m %} \psi(x,t) {% em %} という
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="fdtd"&gt;FDTD&lt;/h2&gt;
 &lt;p&gt;私も詳細はちゃんと理解していませんが、1次元の波を $\psi(x,t)$ という
 座標と時間をパラメータとした関数を使って表すとします。&lt;/p&gt;
 &lt;p&gt;このとき、FDTDというアルゴリズムを当てはまれば、漸化式によって波動関数をシュミレーションできます。&lt;/p&gt;
@@ -252,7 +141,7 @@ $$ = -\psi(x, t - \Delta t) + [2 + \frac{v^2\Delta t^2}{\Delta x ^2} d_x^2] \psi
 &lt;/p&gt;
 $$ = -\psi(x, t - \Delta t) + 2\psi(x,t) + \frac{v^2\Delta t^2}{\Delta x ^2} d_x^2 \psi(x,t) $$&lt;p&gt;
 &lt;/p&gt;
-$$ = -\psi(x, t - \Delta t) + 2\psi(x,t) + \frac{v^2\Delta t^2}{\Delta x ^2} [ \psi(x - \Delta x, t) + \psi(x + \Delta x, t) - 2 \psi(x, t) ] $$&lt;h2 id=&#34;ftdtでシュミレーションした例&#34;&gt;FTDTでシュミレーションした例&lt;/h2&gt;
+$$ = -\psi(x, t - \Delta t) + 2\psi(x,t) + \frac{v^2\Delta t^2}{\Delta x ^2} [ \psi(x - \Delta x, t) + \psi(x + \Delta x, t) - 2 \psi(x, t) ] $$&lt;h2 id="ftdtでシュミレーションした例"&gt;FTDTでシュミレーションした例&lt;/h2&gt;
 &lt;p&gt;授業の課題の条件で計算したので、数字がとても荒いですが、FTDTで波動関数を計算した例を紹介します。&lt;/p&gt;
 &lt;p&gt;問題の条件はこれ。&lt;/p&gt;
 $$\psi(0,0) = \psi(1,0) = 0, \psi(2,0) = sin(\frac{1}{4}\pi), \psi(3,0) = sin(\frac{2}{4}\pi), \psi(4,0) = sin(\frac{3}{4}\pi), \psi(j,0) = 0 for j = 5,6,..,10$$$$\psi(0,1) = \psi(1,1) = \psi(2,1) = 0, \psi(3,1) = sin(\frac{1}{4}\pi), \psi(4,1) = sin(\frac{2}{4}\pi), \psi(5,1) = sin(\frac{3}{4}\pi), \psi(j,0) = 0 for j = 6,7,..,10$$$$v = 1.0, \Delta x = 1, \Delta t = 1$$&lt;p&gt;条件を元に、FTDTの式を整理してみます。&lt;/p&gt;
@@ -269,37 +158,17 @@ $$
 \psi(x,t) = -\psi(x,t-2) + \psi(x-1,t-1) + \psi(x+1,t-1)
 $$&lt;p&gt;上の式を元に計算すると、次のような波形を得られます。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;FTDTで計算した波動関数&#34; 
-               srcset=&#34;http://localhost:1313/blog/2013/02/11/fdtd/2013.02.11_ftdt_hu_e9100b0732bf4aed.webp 320w, http://localhost:1313/blog/2013/02/11/fdtd/2013.02.11_ftdt_hu_79796969cb4a4579.webp 480w, http://localhost:1313/blog/2013/02/11/fdtd/2013.02.11_ftdt_hu_eb8f12c2a6a0faa2.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2013/02/11/fdtd/2013.02.11_ftdt_hu_e9100b0732bf4aed.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;570&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="FTDTで計算した波動関数"
+srcset="http://gam0022.net/blog/2013/02/11/fdtd/2013.02.11_ftdt_hu_e9100b0732bf4aed.webp 320w, http://gam0022.net/blog/2013/02/11/fdtd/2013.02.11_ftdt_hu_79796969cb4a4579.webp 480w, http://gam0022.net/blog/2013/02/11/fdtd/2013.02.11_ftdt_hu_eb8f12c2a6a0faa2.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="http://gam0022.net/blog/2013/02/11/fdtd/2013.02.11_ftdt_hu_e9100b0732bf4aed.webp"
+width="760"
+height="570"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h3 id=&#34;コメント&#34;&gt;コメント&lt;/h3&gt;
-&lt;p&gt;FDTDの記事なのかMathJax.rbの記事なのかわからない&lt;/p&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;h3 id="コメント"&gt;コメント&lt;/h3&gt;
+&lt;p&gt;FDTDの記事なのかMathJax.rbの記事なのかわからない&lt;/p&gt;</description></item></channel></rss>

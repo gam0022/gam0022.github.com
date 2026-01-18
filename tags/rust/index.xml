@@ -1,23 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Rust | gam0022.net</title>
-    <link>http://localhost:1313/tags/rust/</link>
-      <atom:link href="http://localhost:1313/tags/rust/index.xml" rel="self" type="application/rss+xml" />
-    <description>Rust</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 25 Sep 2018 09:08:08 +0900</lastBuildDate>
-    <image>
-      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
-      <title>Rust</title>
-      <link>http://localhost:1313/tags/rust/</link>
-    </image>
-    
-    <item>
-      <title>レイトレ合宿6 参加報告 後編（当日編）</title>
-      <link>http://localhost:1313/blog/2018/09/25/rtcamp6-part2/</link>
-      <pubDate>Tue, 25 Sep 2018 09:08:08 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2018/09/25/rtcamp6-part2/</guid>
-      <description>&lt;p&gt;記事が長くなってしまったので、準備編と当日編の2つの記事に分けました。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rust | gam0022.net</title><link>http://gam0022.net/tags/rust/</link><atom:link href="http://gam0022.net/tags/rust/index.xml" rel="self" type="application/rss+xml"/><description>Rust</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 25 Sep 2018 09:08:08 +0900</lastBuildDate><image><url>http://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Rust</title><link>http://gam0022.net/tags/rust/</link></image><item><title>レイトレ合宿6 参加報告 後編（当日編）</title><link>http://gam0022.net/blog/2018/09/25/rtcamp6-part2/</link><pubDate>Tue, 25 Sep 2018 09:08:08 +0900</pubDate><guid>http://gam0022.net/blog/2018/09/25/rtcamp6-part2/</guid><description>&lt;p&gt;記事が長くなってしまったので、準備編と当日編の2つの記事に分けました。&lt;/p&gt;
 &lt;p&gt;
 の概要や自作レンダラーの紹介や取り組んだことについては前編に詳しく紹介させていただきました。&lt;/p&gt;
 &lt;ul&gt;
@@ -40,33 +21,33 @@
 &lt;li&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;合宿当日の様子&#34;&gt;合宿当日の様子&lt;/h2&gt;
+&lt;h2 id="合宿当日の様子"&gt;合宿当日の様子&lt;/h2&gt;
 &lt;p&gt;バタバタしながらもなんとかレンダラーを提出して合宿当日を迎えることができました。&lt;/p&gt;
 &lt;p&gt;寝坊すると代替の交通手段が確保できない可能性が高かったので、合宿前日はなるべく早く退社して、帰宅後はすぐに寝ました。
 早寝が功を奏してなんとか起床に成功しました。&lt;/p&gt;
-&lt;h3 id=&#34;東京神津島の移動&#34;&gt;東京〜神津島の移動&lt;/h3&gt;
+&lt;h3 id="東京神津島の移動"&gt;東京〜神津島の移動&lt;/h3&gt;
 &lt;p&gt;
 で移動しました✈&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;最前席にきた！ &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/DOJqQwBFhJ&#34;&gt;pic.twitter.com/DOJqQwBFhJ&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1035704588685402113?ref_src=twsrc%5Etfw&#34;&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;und&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/g5Rm6LrejH&#34;&gt;pic.twitter.com/g5Rm6LrejH&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1035724383199748104?ref_src=twsrc%5Etfw&#34;&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ボリュームレンダリングのサンプル &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/vuEUwgqgmv&#34;&gt;pic.twitter.com/vuEUwgqgmv&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1035758402478063616?ref_src=twsrc%5Etfw&#34;&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;最前席にきた！ &lt;a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#レイトレ合宿&lt;/a&gt; &lt;a href="https://t.co/DOJqQwBFhJ"&gt;pic.twitter.com/DOJqQwBFhJ&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1035704588685402113?ref_src=twsrc%5Etfw"&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="und" dir="ltr"&gt;&lt;a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#レイトレ合宿&lt;/a&gt; &lt;a href="https://t.co/g5Rm6LrejH"&gt;pic.twitter.com/g5Rm6LrejH&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1035724383199748104?ref_src=twsrc%5Etfw"&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;ボリュームレンダリングのサンプル &lt;a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#レイトレ合宿&lt;/a&gt; &lt;a href="https://t.co/vuEUwgqgmv"&gt;pic.twitter.com/vuEUwgqgmv&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1035758402478063616?ref_src=twsrc%5Etfw"&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;p&gt;台風の影響で欠便にならないかヒヤヒヤしていたのですが、結果的には天候に恵まれました。
 さらに大型飛行機よりも低空飛行だったので、景色を楽しむことができました！&lt;/p&gt;
 &lt;p&gt;最前列の席だったので、座席のすぐ隣がプロペラで迫力満点でした！&lt;/p&gt;
 &lt;p&gt;ちなみに自分以外の参加者はみんな船で移動したらしく、周りに知らない人しかおらずひとり寂しかったです😢&lt;/p&gt;
 &lt;p&gt;おおよそ一時間くらいで神津島に到着しました！&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;I&amp;#39;m at 神津島 in 神津島村, 東京都 &lt;a href=&#34;https://t.co/hh3q4cPWSz&#34;&gt;https://t.co/hh3q4cPWSz&lt;/a&gt; &lt;a href=&#34;https://t.co/9juUdNb3MA&#34;&gt;pic.twitter.com/9juUdNb3MA&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1035719096753692672?ref_src=twsrc%5Etfw&#34;&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;I&amp;#39;m at 神津島 in 神津島村, 東京都 &lt;a href="https://t.co/hh3q4cPWSz"&gt;https://t.co/hh3q4cPWSz&lt;/a&gt; &lt;a href="https://t.co/9juUdNb3MA"&gt;pic.twitter.com/9juUdNb3MA&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1035719096753692672?ref_src=twsrc%5Etfw"&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;p&gt;飛行機からの神津島の様子です（機内モードでの撮影）。&lt;/p&gt;
 &lt;p&gt;海の青さが深くて綺麗でした🌊&lt;/p&gt;
 &lt;p&gt;東京と違って空気も綺麗で、体に降り注ぐレイ（太陽光）も力強く感じました⚡&lt;/p&gt;
-&lt;h3 id=&#34;ホテルへ移動&#34;&gt;ホテルへ移動&lt;/h3&gt;
+&lt;h3 id="ホテルへ移動"&gt;ホテルへ移動&lt;/h3&gt;
 &lt;p&gt;空港から出ると、ホテルの送迎バスが到着していて、ここでやっと他の合宿参加者と合流できました👪&lt;/p&gt;
 &lt;p&gt;バスを手配してくださった主催者のqさんに感謝です。&lt;/p&gt;
-&lt;h3 id=&#34;温泉&#34;&gt;温泉&lt;/h3&gt;
+&lt;h3 id="温泉"&gt;温泉&lt;/h3&gt;
 &lt;p&gt;ホテルに荷物を預けて、神津島温泉保養センターという温泉に行きました♨&lt;/p&gt;
 &lt;p&gt;移動はレンタル自転車を利用しました🚴🚴🚴&lt;/p&gt;
 &lt;p&gt;移動の途中で
@@ -74,22 +55,22 @@
 xyz600600さんもRustでレンダラーを開発されていて、私の去年のレンダラーのソースコードを参考にしていただけたそうです。
 主にRustの苦労話で盛り上がりました。&lt;/p&gt;
 &lt;p&gt;水着を着用すると入れる露天風呂があって、すぐ隣が海になっていて開放感あふれる感じでした。&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;I&amp;#39;m at 神津島温泉保養センター in Kōzushima Mura, 東京都 &lt;a href=&#34;https://t.co/oWQXbqQJRQ&#34;&gt;https://t.co/oWQXbqQJRQ&lt;/a&gt; &lt;a href=&#34;https://t.co/5lRUI0AmAV&#34;&gt;pic.twitter.com/5lRUI0AmAV&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1035755871148625921?ref_src=twsrc%5Etfw&#34;&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;h3 id=&#34;神津島アクアスロン大会&#34;&gt;神津島アクアスロン大会&lt;/h3&gt;
+&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;I&amp;#39;m at 神津島温泉保養センター in Kōzushima Mura, 東京都 &lt;a href="https://t.co/oWQXbqQJRQ"&gt;https://t.co/oWQXbqQJRQ&lt;/a&gt; &lt;a href="https://t.co/5lRUI0AmAV"&gt;pic.twitter.com/5lRUI0AmAV&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1035755871148625921?ref_src=twsrc%5Etfw"&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;h3 id="神津島アクアスロン大会"&gt;神津島アクアスロン大会&lt;/h3&gt;
 &lt;p&gt;
 がやってました🏊🏃🏄🏅&lt;/p&gt;
 &lt;p&gt;ちなみにアクアスロンで道が一時的に封鎖されるため、タイミングによっては温泉から帰ってこれなくなるところでした😨&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;アクアスロンしてる！ &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; (@ 浜の家 in 神津島村, 東京都) &lt;a href=&#34;https://t.co/2byOXZAfmR&#34;&gt;https://t.co/2byOXZAfmR&lt;/a&gt; &lt;a href=&#34;https://t.co/E8egjFLy7L&#34;&gt;pic.twitter.com/E8egjFLy7L&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1035756231590375424?ref_src=twsrc%5Etfw&#34;&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;h3 id=&#34;レイトレ合宿&#34;&gt;レイトレ合宿&lt;/h3&gt;
+&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;アクアスロンしてる！ &lt;a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#レイトレ合宿&lt;/a&gt; (@ 浜の家 in 神津島村, 東京都) &lt;a href="https://t.co/2byOXZAfmR"&gt;https://t.co/2byOXZAfmR&lt;/a&gt; &lt;a href="https://t.co/E8egjFLy7L"&gt;pic.twitter.com/E8egjFLy7L&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1035756231590375424?ref_src=twsrc%5Etfw"&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;h3 id="レイトレ合宿"&gt;レイトレ合宿&lt;/h3&gt;
 &lt;p&gt;温泉から会議室に徒歩で移動して、いよいよレイトレ合宿のメインイベントが始まりました。&lt;/p&gt;
-&lt;h4 id=&#34;シークレットイベント1-レイトレ検定&#34;&gt;シークレットイベント1: レイトレ検定&lt;/h4&gt;
+&lt;h4 id="シークレットイベント1-レイトレ検定"&gt;シークレットイベント1: レイトレ検定&lt;/h4&gt;
 &lt;p&gt;会議室に入るといきなり「レイトレ検定」と書かれた問題用紙が参加者に配られ、抜き打ちのレイトレ検定試験が始まりました。&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;レイトレ検定 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/Jjgv2SYcsK&#34;&gt;pic.twitter.com/Jjgv2SYcsK&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1035771130114539521?ref_src=twsrc%5Etfw&#34;&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;レイトレ検定ムズイんですけど！ &lt;a href=&#34;https://t.co/UwFNkLOgYf&#34;&gt;pic.twitter.com/UwFNkLOgYf&lt;/a&gt;&lt;/p&gt;&amp;mdash; ハガ (@hagat) &lt;a href=&#34;https://twitter.com/hagat/status/1035771876662890496?ref_src=twsrc%5Etfw&#34;&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;レイトレ検定 &lt;a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#レイトレ合宿&lt;/a&gt; &lt;a href="https://t.co/Jjgv2SYcsK"&gt;pic.twitter.com/Jjgv2SYcsK&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1035771130114539521?ref_src=twsrc%5Etfw"&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;レイトレ検定ムズイんですけど！ &lt;a href="https://t.co/UwFNkLOgYf"&gt;pic.twitter.com/UwFNkLOgYf&lt;/a&gt;&lt;/p&gt;&amp;mdash; ハガ (@hagat) &lt;a href="https://twitter.com/hagat/status/1035771876662890496?ref_src=twsrc%5Etfw"&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;p&gt;レイトレに関する偉人の顔写真を選ぶ問題、サンプリング結果から対応する手法を答える問題、
 レンダリング結果から対応するレンダリング手法を選ぶ問題、
 コーネルボックスを手描きする問題など癖のある問題が多く、非常に楽しませていただきました。&lt;/p&gt;
@@ -99,23 +80,23 @@ xyz600600さんもRustでレンダラーを開発されていて、私の去年�
 から閲覧可能なので、ぜひ見てください！&lt;/p&gt;
 &lt;p&gt;なお、自分は100点中73点、19人中11位、偏差値は49.5と参加者の中では平均的な結果でした😐
 第二回目のレイトレ検定があればもっと良い成績を取れるように頑張りたいです💪&lt;/p&gt;
-&lt;h4 id=&#34;シークレットイベント2-三葉レイちゃんの応援動画&#34;&gt;シークレットイベント2: 三葉レイちゃんの応援動画&lt;/h4&gt;
+&lt;h4 id="シークレットイベント2-三葉レイちゃんの応援動画"&gt;シークレットイベント2: 三葉レイちゃんの応援動画&lt;/h4&gt;
 &lt;p&gt;CG技術系Vtuberの
 から応援の動画をいただきました☘😍
 レイトレのやる気が湧いてきました。ありがとうございます！
 なお、動画は参加者のみの限定公開だそうです！つまり参加者限定特典です🤤&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; に三つ葉レイちゃん（&lt;a href=&#34;https://twitter.com/mitsuba_rei?ref_src=twsrc%5Etfw&#34;&gt;@mitsuba_rei&lt;/a&gt; ）が特別参加！ &lt;br&gt;※コラ画像ではないです &lt;a href=&#34;https://t.co/6AddQoErWP&#34;&gt;pic.twitter.com/6AddQoErWP&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1036171064915554304?ref_src=twsrc%5Etfw&#34;&gt;2018年9月2日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;h4 id=&#34;セミナー&#34;&gt;セミナー&lt;/h4&gt;
+&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;&lt;a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#レイトレ合宿&lt;/a&gt; に三つ葉レイちゃん（&lt;a href="https://twitter.com/mitsuba_rei?ref_src=twsrc%5Etfw"&gt;@mitsuba_rei&lt;/a&gt; ）が特別参加！ &lt;br&gt;※コラ画像ではないです &lt;a href="https://t.co/6AddQoErWP"&gt;pic.twitter.com/6AddQoErWP&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1036171064915554304?ref_src=twsrc%5Etfw"&gt;2018年9月2日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;h4 id="セミナー"&gt;セミナー&lt;/h4&gt;
 &lt;p&gt;今年は2名がセミナーで発表してくださいました。&lt;/p&gt;
-&lt;h5 id=&#34;実装してきたことこれからやってみたいこと-by-zin&#34;&gt;実装してきたこと、これからやってみたいこと by Zin&lt;/h5&gt;
+&lt;h5 id="実装してきたことこれからやってみたいこと-by-zin"&gt;実装してきたこと、これからやってみたいこと by Zin&lt;/h5&gt;
 &lt;p&gt;
 さんはAMDで
 を開発されている方で、プロダクションレンダラーにおけるテストの手法等の貴重なお話を聞くことができました。&lt;/p&gt;
 &lt;p&gt;DCCツールのインテグレーションやレンダラーのテストなどのやりたいとは思っているものの踏み出せていない領域の話だったので、興味深く聞かせていただきました。&lt;/p&gt;
 &lt;p&gt;発表の途中でちょくちょくRadeon ProRenderの宣伝が入っているのが面白かったです。&lt;/p&gt;
-&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;ad4601a67e0e4d65b9fd48a6e7cb95c6&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-&lt;h5 id=&#34;volume-rendering-方程式から大気散乱モデルを導く-by-ishiyama&#34;&gt;Volume Rendering 方程式から大気散乱モデルを導く by ishiyama&lt;/h5&gt;
+&lt;script async class="speakerdeck-embed" data-id="ad4601a67e0e4d65b9fd48a6e7cb95c6" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"&gt;&lt;/script&gt;
+&lt;h5 id="volume-rendering-方程式から大気散乱モデルを導く-by-ishiyama"&gt;Volume Rendering 方程式から大気散乱モデルを導く by ishiyama&lt;/h5&gt;
 &lt;p&gt;ishiyamaさんは今回が合宿へ初参加ということながらセミナーをしてくださいました！&lt;/p&gt;
 &lt;p&gt;Volume Rendering 方程式をちゃんと調べたことがなかったので勉強になりました。&lt;/p&gt;
 &lt;p&gt;現地では発光輝度に吸収係数がかかるのは何故かという話題で盛り上がっていました。
@@ -124,7 +105,7 @@ xyz600600さんもRustでレンダラーを開発されていて、私の去年�
 &lt;li&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;レンダラープレゼン大会&#34;&gt;レンダラープレゼン大会&lt;/h4&gt;
+&lt;h4 id="レンダラープレゼン大会"&gt;レンダラープレゼン大会&lt;/h4&gt;
 &lt;p&gt;いよいよレイトレ合宿のメインイベントである自作のレンダラーのプレゼン大会が始まりました。&lt;/p&gt;
 &lt;p&gt;ちなみに最終提出のレンダリング結果はここで初めて見ることになります。かなり心臓に悪いシステムですね。
 私は想定通りのレンダリング結果が出力されていて、ほっとしました😌&lt;/p&gt;
@@ -133,7 +114,7 @@ xyz600600さんもRustでレンダラーを開発されていて、私の去年�
 Bunnyのワイヤーフレーム化もHoudiniの標準ノードで簡単に実現できるのですが、興味をもってくださった人がいて良かったです。&lt;/p&gt;
 &lt;p&gt;レイトレ合宿では参加者同士の投票によって順位を決定し、最終日に結果発表と表彰式が行われます。&lt;/p&gt;
 &lt;p&gt;今年は過去最大の19人がレンダラーを提出されていました。&lt;/p&gt;
-&lt;h5 id=&#34;上位陣の発表&#34;&gt;上位陣の発表&lt;/h5&gt;
+&lt;h5 id="上位陣の発表"&gt;上位陣の発表&lt;/h5&gt;
 &lt;p&gt;上位陣は今年もレベルが非常に高かったですね。&lt;/p&gt;
 &lt;p&gt;1位のShockerさんはOptixを利用したGPU実装のレンダラーで参加されていました（
 ）。
@@ -158,15 +139,14 @@ Embreeのパフォーマンスは相当高いという意見が参加者内で�
 Velvetのマテリアルをつかった美しい布の見た目も印象的でした。&lt;/p&gt;
 &lt;p&gt;4位のholeさんはボリュームレダリングとプロシージャルなシーン生成をされていました。
 プロシージャルに生成された床の模様がカッコよかったです。
-高速化についてはボリュームレンダリングに頻出の &lt;code&gt;pow, exp, log&lt;/code&gt; を 
+高速化についてはボリュームレンダリングに頻出の &lt;code&gt;pow, exp, log&lt;/code&gt; を
 で置き換えることが効果的だったそうです。&lt;/p&gt;
 &lt;p&gt;5位のPerimさんPerimさんはCGの分野で大活躍されている研究者で
 がSIGGRAPH 2017にアクセプトもされています。
 あいにくPerimさんは海外出張中だったため、本人に替わってqさんがプレゼンを行いました。
-
 というわずか300行のC++で実用的なレンダラーを開発されており、
 そのminptに機能を追加して今回の作品をつくったそうです。&lt;/p&gt;
-&lt;h5 id=&#34;dccツールとの連携&#34;&gt;DCCツールとの連携&lt;/h5&gt;
+&lt;h5 id="dccツールとの連携"&gt;DCCツールとの連携&lt;/h5&gt;
 &lt;p&gt;今年はDCCの連携を行った方が多い印象でした。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Houdini は Ushio さん&lt;/li&gt;
@@ -183,7 +163,7 @@ Velvetのマテリアルをつかった美しい布の見た目も印象的で�
 シーンの完成度を向上することも難しいので、DCCツール連携の重要性は高まっていると感じます。&lt;/p&gt;
 &lt;p&gt;もちろんshinjiさんやholeさんのように一貫してプロシージャルなシーン生成に倒すアプローチも良いと思いますが、
 意図的にシーンをレイアウトしたいのであれば、DCCツール連携が賢い解決策だと個人的には感じました。&lt;/p&gt;
-&lt;h5 id=&#34;初回参加者の方々が強い&#34;&gt;初回参加者の方々が強い&lt;/h5&gt;
+&lt;h5 id="初回参加者の方々が強い"&gt;初回参加者の方々が強い&lt;/h5&gt;
 &lt;p&gt;また、初回参加者の方々が強いのも印象的でした。&lt;/p&gt;
 &lt;p&gt;mizutoriさんはCG分野を研究されている学生で、BSSRDF（表面下化散乱）やNEEやMIS（ただしバグのため未使用）など、比較的難しいことに挑戦されていました。&lt;/p&gt;
 &lt;p&gt;yamaguchiさんも同じ研究室の学生で、諸事情により最終的にはパストレーシングで提出したものの、
@@ -193,7 +173,7 @@ Velvetのマテリアルをつかった美しい布の見た目も印象的で�
 &lt;p&gt;xyz600600さんはRustを習得しつつ、かなり色々やられていて本当にすごいと思いました。
 NEEやMISはもちろんのこと、 同じジオメトリを位置やマテリアルを変えて大量に出すオブジェクトのClone（所謂インスタンシング）までされていました。&lt;/p&gt;
 &lt;p&gt;ishiyamaさんはボリュームレンダリングのGPU実装に挑戦し、さらにセミナーで発表までされていました。&lt;/p&gt;
-&lt;h5 id=&#34;独自テーマで挑戦していて凄い&#34;&gt;独自テーマで挑戦していて凄い&lt;/h5&gt;
+&lt;h5 id="独自テーマで挑戦していて凄い"&gt;独自テーマで挑戦していて凄い&lt;/h5&gt;
 &lt;p&gt;常連メンバーも相変わらず強くて、それぞれ独自のテーマで挑戦されていて面白かったです。&lt;/p&gt;
 &lt;p&gt;qさんはレイトレ合宿の主催者のひとりで、光源が大量にあるシーンに挑戦されていました。&lt;/p&gt;
 &lt;p&gt;pheemaさんは環境マップの重点サンプリングに挑戦されていました。
@@ -209,28 +189,28 @@ NEEやMISはもちろんのこと、 同じジオメトリを位置やマテリ�
 また、Swiftというあまりレイトレ業界では一般的ではない言語を選択されていたので、自力で解決しないといけない問題でおそらく苦労されたのではないかと予想します。
 私も去年からRustで参加しましたが、レイトレ向けのパフォーマンスの高いライブラリを自力で見つける必要があったり、
 並列化やレイトレに使うようなデータ構造の定義であまり参考にできる情報が無くて、地味に時間が取られて苦しみました。&lt;/p&gt;
-&lt;h3 id=&#34;夕食&#34;&gt;夕食&lt;/h3&gt;
+&lt;h3 id="夕食"&gt;夕食&lt;/h3&gt;
 &lt;p&gt;レンダラープレゼン大会の後はホテルに戻って夕食を食べました。&lt;/p&gt;
 &lt;p&gt;ホテルの料理は最高に美味しくてボリュームも満点で大変満足でした。&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ご飯 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/CCVReBZvAw&#34;&gt;pic.twitter.com/CCVReBZvAw&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1035822780489449472?ref_src=twsrc%5Etfw&#34;&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;h3 id=&#34;花火大会&#34;&gt;花火大会&lt;/h3&gt;
+&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;ご飯 &lt;a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#レイトレ合宿&lt;/a&gt; &lt;a href="https://t.co/CCVReBZvAw"&gt;pic.twitter.com/CCVReBZvAw&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1035822780489449472?ref_src=twsrc%5Etfw"&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;h3 id="花火大会"&gt;花火大会&lt;/h3&gt;
 &lt;p&gt;夕食を食べたあとはホテル近くの海岸で花火をしました。&lt;/p&gt;
 &lt;p&gt;Ushioさんが買ってきてくれた花火と運営の方々が買ってきてくれた花火を合わせて、遊びきれないくらい大量の花火で遊びました🎆🎇&lt;/p&gt;
 &lt;p&gt;手持ちの花火から打ち上げ式の花火まで様々な種類の花火で遊びました🔥💣💥📛&lt;/p&gt;
 &lt;p&gt;海岸の風が強くロウソクの炎が消えてしまうというトラブルにも見舞われましたが、
 流体や物理に強い参加者のおかげでなんとかなりました！&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;平成最後の夏 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/jSeeuqNlgt&#34;&gt;pic.twitter.com/jSeeuqNlgt&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1036014799384064002?ref_src=twsrc%5Etfw&#34;&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;平成最後の夏 &lt;a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#レイトレ合宿&lt;/a&gt; &lt;a href="https://t.co/jSeeuqNlgt"&gt;pic.twitter.com/jSeeuqNlgt&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1036014799384064002?ref_src=twsrc%5Etfw"&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;p&gt;残念ながらまともな写真が残っていませんが、平成最後の夏の花火を大いに楽しみました。&lt;/p&gt;
 &lt;p&gt;離島ということもあり、人口的な明かりがほぼ無いので、夜は真っ暗でした。
 もし晴れていれば星が綺麗に見えたのでしょうが、あいにく空が曇っていたのが残念です。&lt;/p&gt;
-&lt;h3 id=&#34;朝食&#34;&gt;朝食&lt;/h3&gt;
+&lt;h3 id="朝食"&gt;朝食&lt;/h3&gt;
 &lt;p&gt;早起きして朝の温泉に浸かった後に朝食を食べました。&lt;/p&gt;
 &lt;p&gt;自分の普段の食生活は崩壊しているので、久々の健康的な朝食に感動しました。&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;朝食 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/dMFiJzGywr&#34;&gt;pic.twitter.com/dMFiJzGywr&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1036019373524185089?ref_src=twsrc%5Etfw&#34;&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;h3 id=&#34;授賞式&#34;&gt;授賞式&lt;/h3&gt;
+&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;朝食 &lt;a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#レイトレ合宿&lt;/a&gt; &lt;a href="https://t.co/dMFiJzGywr"&gt;pic.twitter.com/dMFiJzGywr&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1036019373524185089?ref_src=twsrc%5Etfw"&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;h3 id="授賞式"&gt;授賞式&lt;/h3&gt;
 &lt;p&gt;合宿の最終日の朝にはレイトレ合宿の授賞式が行われました。&lt;/p&gt;
 &lt;p&gt;まずは光線追跡技術大賞2018 (日本レイトレーシング協会)の発表が行われました。
 今年から新しく設けられた賞でMicrosoft DirectX Raytracingが見事入賞に輝きました！
@@ -243,34 +223,34 @@ NEEやMISはもちろんのこと、 同じジオメトリを位置やマテリ�
 ちなみにWikipediaによると、光学用途で使われる「レンズ」の語源は、このレンズマメであり、
 当初作成された凸レンズがレンズマメの形状に似ていたことからこの名前が付いたそうです。&lt;/p&gt;
 &lt;p&gt;なお見事上位に入賞すればレンズキット等の豪華賞品をゲットできます！&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;レイトレ合宿6で提出した作品と拡大したものです。&lt;br&gt;レンズキットをいただきました。&lt;br&gt;運営の皆さまありがとうございました。&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/MNzT2lzl7r&#34;&gt;pic.twitter.com/MNzT2lzl7r&lt;/a&gt;&lt;/p&gt;&amp;mdash; shinji ogaki (@redqueenrender) &lt;a href=&#34;https://twitter.com/redqueenrender/status/1036182395181879296?ref_src=twsrc%5Etfw&#34;&gt;2018年9月2日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;レイトレ合宿6で提出した作品と拡大したものです。&lt;br&gt;レンズキットをいただきました。&lt;br&gt;運営の皆さまありがとうございました。&lt;a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#レイトレ合宿&lt;/a&gt; &lt;a href="https://t.co/MNzT2lzl7r"&gt;pic.twitter.com/MNzT2lzl7r&lt;/a&gt;&lt;/p&gt;&amp;mdash; shinji ogaki (@redqueenrender) &lt;a href="https://twitter.com/redqueenrender/status/1036182395181879296?ref_src=twsrc%5Etfw"&gt;2018年9月2日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;p&gt;また最下位になると幼児👶向けのプログラミングの絵本が貰えます！
 まったくネタに事欠かない合宿ですね。&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;コーデングは赤ちゃんレベルだけど謎の認定を授かった &lt;a href=&#34;https://t.co/8mKLLk3Oyx&#34;&gt;pic.twitter.com/8mKLLk3Oyx&lt;/a&gt;&lt;/p&gt;&amp;mdash; Pentan (@c5h12) &lt;a href=&#34;https://twitter.com/c5h12/status/1036034085074788353?ref_src=twsrc%5Etfw&#34;&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;h4 id=&#34;レイトレーサー&#34;&gt;レイ・トレーサー&lt;/h4&gt;
+&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;コーデングは赤ちゃんレベルだけど謎の認定を授かった &lt;a href="https://t.co/8mKLLk3Oyx"&gt;pic.twitter.com/8mKLLk3Oyx&lt;/a&gt;&lt;/p&gt;&amp;mdash; Pentan (@c5h12) &lt;a href="https://twitter.com/c5h12/status/1036034085074788353?ref_src=twsrc%5Etfw"&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;h4 id="レイトレーサー"&gt;レイ・トレーサー&lt;/h4&gt;
 &lt;p&gt;6位の賞品はPlayStation1本体とPlayStation1ソフトの
 のセットでした。&lt;/p&gt;
 &lt;p&gt;主催のqさんに授与されたのですが、自分は要らないということで、xyz600さんに譲渡されることになりました。&lt;/p&gt;
 &lt;p&gt;xyz600さんとホテルの部屋が一緒だったので、少しだけ遊ばせてもらいました🎮&lt;/p&gt;
 &lt;p&gt;レーシングゲームかと思いきや、まさかの敵の車に体当たりして破壊するゲームでした☠💥🚗&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;亜空間にワープしてしまった😱 &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/MIkMjR2eV9&#34;&gt;pic.twitter.com/MIkMjR2eV9&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1036035766755852288?ref_src=twsrc%5Etfw&#34;&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;亜空間にワープしてしまった😱 &lt;a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#レイトレ合宿&lt;/a&gt; &lt;a href="https://t.co/MIkMjR2eV9"&gt;pic.twitter.com/MIkMjR2eV9&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1036035766755852288?ref_src=twsrc%5Etfw"&gt;2018年9月1日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;p&gt;遊んでいる途中に描画がバグってホラーのようになってしまいました。&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;レイトレーシング完全に理解した &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF6?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿6&lt;/a&gt; &lt;a href=&#34;https://t.co/1vUnG1UxEn&#34;&gt;pic.twitter.com/1vUnG1UxEn&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yuichi Sayama (@xyz600600) &lt;a href=&#34;https://twitter.com/xyz600600/status/1036916836858642432?ref_src=twsrc%5Etfw&#34;&gt;2018年9月4日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;レイトレーシング完全に理解した &lt;a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF6?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#レイトレ合宿6&lt;/a&gt; &lt;a href="https://t.co/1vUnG1UxEn"&gt;pic.twitter.com/1vUnG1UxEn&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yuichi Sayama (@xyz600600) &lt;a href="https://twitter.com/xyz600600/status/1036916836858642432?ref_src=twsrc%5Etfw"&gt;2018年9月4日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;p&gt;xyz600さんは最終的には全クリされたようで凄いです！ちなみに私は1面のボスすら倒せませんでした…&lt;/p&gt;
-&lt;h3 id=&#34;東京までの移動&#34;&gt;東京までの移動&lt;/h3&gt;
+&lt;h3 id="東京までの移動"&gt;東京までの移動&lt;/h3&gt;
 &lt;p&gt;飛行機の予約競争に敗北したので、帰りは大型船で移動しました⛴&lt;/p&gt;
 &lt;p&gt;飛行機なら1時間ほどで移動できますが、大型船は9時間くらいかかります。
 暇すぎたのでプログラミングなどの作業に挑戦しましたが、船の揺れがつよくて吐き気に耐えながらの作業になりました。
 インターネットも使えないので事前に
 やShockerさんの記事やスライドをローカルにダウンロードしておきました。&lt;/p&gt;
 &lt;p&gt;途中で運良くyopioさんと合流できたので、一緒に船の中を散策したり、食堂でご飯を食べたりして過ごしました。&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;大型船で帰ります &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/OB5uvZLfEs&#34;&gt;pic.twitter.com/OB5uvZLfEs&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1036048102950494208?ref_src=twsrc%5Etfw&#34;&gt;2018年9月2日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;大型船で帰ります &lt;a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#レイトレ合宿&lt;/a&gt; &lt;a href="https://t.co/OB5uvZLfEs"&gt;pic.twitter.com/OB5uvZLfEs&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1036048102950494208?ref_src=twsrc%5Etfw"&gt;2018年9月2日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;h2 id="まとめ"&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;私は今年で3回目の参加になりますが、改めてレイトレ合宿は素晴らしいイベントだと思いました。&lt;/p&gt;
 &lt;p&gt;毎年すこしずつルールが進化しているので、毎年新しい技術や知見を得ることができます。
 今年の例を挙げると、GPUレンダラーや論理64コアを以上のWindows環境を扱う際の知見を得ることができました。
@@ -281,23 +261,15 @@ NEEやMISはもちろんのこと、 同じジオメトリを位置やマテリ�
 しかも今年はレイトレ検定や三葉レイちゃんの応援動画など楽しい企画が盛りだくさんでした。
 来年もぜひ参加したいです！&lt;/p&gt;
 &lt;p&gt;レイトレ合宿を運営・企画してくださったqさんとholeさん、レイトレ合宿の参加者のみなさん、本当にありがとうございました！&lt;/p&gt;
-&lt;h2 id=&#34;おまけ制作の過程当日の様子&#34;&gt;おまけ：制作の過程＋当日の様子&lt;/h2&gt;
+&lt;h2 id="おまけ制作の過程当日の様子"&gt;おまけ：制作の過程＋当日の様子&lt;/h2&gt;
 &lt;p&gt;レイトレ合宿6に関連する自分のツイートをモーメントにまとめました。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;!--
-&lt;a class=&#34;twitter-moment&#34; href=&#34;https://twitter.com/i/moments/1039136971442941953?ref_src=twsrc%5Etfw&#34;&gt;レイトレ合宿6&lt;/a&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
---&gt;</description>
-    </item>
-    
-    <item>
-      <title>レイトレ合宿6 参加報告 前編（準備編）</title>
-      <link>http://localhost:1313/blog/2018/09/18/rtcamp6-part1/</link>
-      <pubDate>Tue, 18 Sep 2018 10:08:08 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2018/09/18/rtcamp6-part1/</guid>
-      <description>&lt;p&gt;これはレイトレ合宿6の参加報告の記事の前編です。
+&lt;a class="twitter-moment" href="https://twitter.com/i/moments/1039136971442941953?ref_src=twsrc%5Etfw"&gt;レイトレ合宿6&lt;/a&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+--&gt;</description></item><item><title>レイトレ合宿6 参加報告 前編（準備編）</title><link>http://gam0022.net/blog/2018/09/18/rtcamp6-part1/</link><pubDate>Tue, 18 Sep 2018 10:08:08 +0900</pubDate><guid>http://gam0022.net/blog/2018/09/18/rtcamp6-part1/</guid><description>&lt;p&gt;これはレイトレ合宿6の参加報告の記事の前編です。
 記事が長くなったので、前編と後編の2つに分けました。&lt;/p&gt;
 &lt;p&gt;この記事では前編（準備編）ということで、自作レンダラーに実装した機能や手法の紹介を行います。&lt;/p&gt;
 &lt;p&gt;後編（当日編）はこちらです。&lt;/p&gt;
@@ -330,8 +302,8 @@ SIGGRAPH 2017で発表された研究者など、グラフィック分野の最�
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;こちらは合宿当日のプレゼン資料です。&lt;/p&gt;
-&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;3ea604f4f30248709e316a1cb487f1cd&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-&lt;h2 id=&#34;去年やったこと&#34;&gt;去年やったこと&lt;/h2&gt;
+&lt;script async class="speakerdeck-embed" data-id="3ea604f4f30248709e316a1cb487f1cd" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"&gt;&lt;/script&gt;
+&lt;h2 id="去年やったこと"&gt;去年やったこと&lt;/h2&gt;
 &lt;p&gt;レンダラーとしての基本機能は
 の時点で完成していました。&lt;/p&gt;
 &lt;ul&gt;
@@ -354,7 +326,7 @@ SIGGRAPH 2017で発表された研究者など、グラフィック分野の最�
 &lt;li&gt;薄レンズモデルによる被写界深度（レンズのピンぼけ）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;今年は足りない機能・個人的に実装したかった機能を付け足す形で実装を行いました。&lt;/p&gt;
-&lt;h2 id=&#34;今年やったこと&#34;&gt;今年やったこと&lt;/h2&gt;
+&lt;h2 id="今年やったこと"&gt;今年やったこと&lt;/h2&gt;
 &lt;p&gt;最終的に以下のような機能の実装や作業を行いました。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Rust環境の最新化&lt;/li&gt;
@@ -366,39 +338,39 @@ SIGGRAPH 2017で発表された研究者など、グラフィック分野の最�
 &lt;li&gt;各種トラブルシューティング&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;それぞれについて、簡単に手法の紹介を交えつつ説明していきます。&lt;/p&gt;
-&lt;h3 id=&#34;rust環境の最新化&#34;&gt;Rust環境の最新化&lt;/h3&gt;
+&lt;h3 id="rust環境の最新化"&gt;Rust環境の最新化&lt;/h3&gt;
 &lt;p&gt;Rustは新しい言語だけあって、取り巻く環境の進化も非常に速い印象です。&lt;/p&gt;
 &lt;p&gt;一年前は最新の環境でしたが、すっかり古くなってしまったので、Rust環境の最新化を行いました。&lt;/p&gt;
-&lt;h4 id=&#34;rustコンパイラのバージョンアップ&#34;&gt;Rustコンパイラのバージョンアップ&lt;/h4&gt;
+&lt;h4 id="rustコンパイラのバージョンアップ"&gt;Rustコンパイラのバージョンアップ&lt;/h4&gt;
 &lt;p&gt;初手としてRustのコンパイラを最新化したのは大正解でした。&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Rustのバージョンを上げただけで、自作レンダラーの速度が3.3倍速になってすごい 😆&lt;br&gt;&lt;br&gt;cargo 0.20.0 (a60d185c8 2017-07-13): sampled: 9x4 spp.&lt;br&gt;cargo 1.28.0 (96a2c7d16 2018-07-13): sampled: 30x4 spp.&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1030974212192710656?ref_src=twsrc%5Etfw&#34;&gt;2018年8月19日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;Rustのバージョンを上げただけで、自作レンダラーの速度が3.3倍速になってすごい 😆&lt;br&gt;&lt;br&gt;cargo 0.20.0 (a60d185c8 2017-07-13): sampled: 9x4 spp.&lt;br&gt;cargo 1.28.0 (96a2c7d16 2018-07-13): sampled: 30x4 spp.&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1030974212192710656?ref_src=twsrc%5Etfw"&gt;2018年8月19日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;p&gt;Rustのコンパイラを最新化したところ、コードをまったく書き換えずに3倍速になりました！
 メジャーバージョンを上げると劇的にパフォーマンスが変わることがあるのですね！
 SIMDの最適化などが賢くなったのかなぁという気はしていますが、どういった理由で高速化できたのか詳しい調査はできていません。&lt;/p&gt;
 &lt;p&gt;Rustを最新の安定バージョンに上げる手順は非常に簡単でしたので、備忘録をかねて紹介します。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 最新の安定バージョンに上げる&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ rustup update
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## バージョンの確認&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ rustc -V
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;依存ライブラリのバージョンアップ&#34;&gt;依存ライブラリのバージョンアップ&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;## 最新の安定バージョンに上げる&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$ rustup update
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;## バージョンの確認&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$ rustc -V
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="依存ライブラリのバージョンアップ"&gt;依存ライブラリのバージョンアップ&lt;/h4&gt;
 &lt;p&gt;Rustの高速化に味を占めて依存ライブラリも最新化したのですが、特に速度は変化ありませんでした。&lt;/p&gt;
 &lt;p&gt;ライブラリをバージョンアップする手順も簡単にメモしておきます。
 ここでは Rayon という並列化のライブラリのバージョンを上げる例を紹介します。&lt;/p&gt;
 &lt;p&gt;まず &lt;code&gt;Cargo.toml&lt;/code&gt; を編集します。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gd&#34;&gt;-rayon = &amp;#34;0.8.2&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gi&#34;&gt;+rayon = &amp;#34;1.0&amp;#34;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-diff" data-lang="diff"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gd"&gt;-rayon = &amp;#34;0.8.2&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gi"&gt;+rayon = &amp;#34;1.0&amp;#34;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;そして次のコマンドを叩くと、 &lt;code&gt;Cargo.toml&lt;/code&gt; で指定された中で最新のバージョンに依存ライブラリがアップデートされます。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ cargo update
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;cargo-outdated&#34;&gt;cargo-outdated&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$ cargo update
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id="cargo-outdated"&gt;cargo-outdated&lt;/h5&gt;
 &lt;p&gt;依存ライブラリの最新バージョンを調べるときに &lt;code&gt;cargo-outdated&lt;/code&gt; というツールが役に立ちました。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;次のコマンドからインストールできます。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ cargo install cargo-outdated
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$ cargo install cargo-outdated
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;cargo outdated&lt;/code&gt; を実行すると、&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Project: 現在のバージョン&lt;/li&gt;
@@ -406,66 +378,48 @@ SIMDの最適化などが賢くなったのかなぁという気はしていま�
 &lt;li&gt;Latest: 最新バージョン&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;が一発で分かります。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ cargo outdated
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Name                                  Project  Compat  Latest   Kind    Platform
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;----                                  -------  ------  ------   ----    --------
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;fuchsia-zircon-&amp;gt;bitflags              1.0.4    ---     Removed  Normal  ---
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;fuchsia-zircon-&amp;gt;fuchsia-zircon-sys    0.3.3    ---     Removed  Normal  ---
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rand                                  0.3.22   ---     0.5.5    Normal  ---
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rand-&amp;gt;fuchsia-zircon                  0.3.3    ---     Removed  Normal  cfg&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;target_os&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;fuchsia&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rand-&amp;gt;libc                            0.2.43   ---     Removed  Normal  cfg&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;unix&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rand-&amp;gt;rand                            0.4.3    ---     Removed  Normal  ---
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rand-&amp;gt;winapi                          0.3.5    ---     Removed  Normal  cfg&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;windows&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;winapi-&amp;gt;winapi-i686-pc-windows-gnu    0.4.0    ---     Removed  Normal  i686-pc-windows-gnu
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;winapi-&amp;gt;winapi-x86_64-pc-windows-gnu  0.4.0    ---     Removed  Normal  x86_64-pc-windows-gnu
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;intellij-idea&#34;&gt;IntelliJ IDEA&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$ cargo outdated
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Name Project Compat Latest Kind Platform
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;---- ------- ------ ------ ---- --------
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;fuchsia-zircon-&amp;gt;bitflags 1.0.4 --- Removed Normal ---
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;fuchsia-zircon-&amp;gt;fuchsia-zircon-sys 0.3.3 --- Removed Normal ---
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rand 0.3.22 --- 0.5.5 Normal ---
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rand-&amp;gt;fuchsia-zircon 0.3.3 --- Removed Normal cfg&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;target_os&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;fuchsia&amp;#34;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rand-&amp;gt;libc 0.2.43 --- Removed Normal cfg&lt;span class="o"&gt;(&lt;/span&gt;unix&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rand-&amp;gt;rand 0.4.3 --- Removed Normal ---
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rand-&amp;gt;winapi 0.3.5 --- Removed Normal cfg&lt;span class="o"&gt;(&lt;/span&gt;windows&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;winapi-&amp;gt;winapi-i686-pc-windows-gnu 0.4.0 --- Removed Normal i686-pc-windows-gnu
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;winapi-&amp;gt;winapi-x86_64-pc-windows-gnu 0.4.0 --- Removed Normal x86_64-pc-windows-gnu
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="intellij-idea"&gt;IntelliJ IDEA&lt;/h4&gt;
 &lt;p&gt;去年の参加報告にも書きましたが、IntelliJ IDEAに次のプラグインを入れるとRustの神IDEが完成します。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;IntelliJ IDEAのバージョンも &lt;code&gt;2017.2.3 -&amp;gt; 2018.2.1&lt;/code&gt; に上げました。&lt;/p&gt;
-&lt;h3 id=&#34;next-event-estimationneeの実装&#34;&gt;Next Event Estimation（NEE）の実装&lt;/h3&gt;
+&lt;h3 id="next-event-estimationneeの実装"&gt;Next Event Estimation（NEE）の実装&lt;/h3&gt;
 &lt;p&gt;Next Event Estimation（NEE）と呼ばれるパストレーシングのサンプリングを効率化する手法を実装しました。&lt;/p&gt;
 &lt;p&gt;光源が小さいシーンの場合、BSDFによる重点的サンプリングだけではなかなか光源にヒットしません。
 レイトレ合宿のように制限時間が短い場合はノイズだらけの結果になってしまいます。&lt;/p&gt;
 &lt;p&gt;そこで、光源の表面上の点を明示的にサンプリングして光転送経路を生成します。これがNEEです。&lt;/p&gt;
 &lt;!--
-
-&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Next Event Estimation(NEE)を実装しました。&lt;br&gt;&lt;br&gt;1枚目: NEEなし（100x4 spp）&lt;br&gt;2枚目: NEEあり（100x4 spp）&lt;br&gt;3枚目: リファレンス（NEEなしで時間かけてレンダリング） &lt;a href=&#34;https://t.co/JB9O2agOYO&#34;&gt;pic.twitter.com/JB9O2agOYO&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1032466825731133440?ref_src=twsrc%5Etfw&#34;&gt;2018年8月23日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;NEEをGGXマテリアルに対応させた。&lt;br&gt;複数の光源がある場合はすべての光源に対してNEEするようにした。&lt;br&gt;bsdfは同じインターフェースで計算できるようにしたので、すっきり実装できた。&lt;br&gt;&lt;br&gt;1枚目: NEEなし（20x4 spp）&lt;br&gt;2枚目: NEEあり（20x4 spp）&lt;br&gt;3枚目: リファレンス（NEEな 20000x4spp） &lt;a href=&#34;https://t.co/TJK0OvmArh&#34;&gt;pic.twitter.com/TJK0OvmArh&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1033492848765587456?ref_src=twsrc%5Etfw&#34;&gt;2018年8月25日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
+&lt;blockquote class="twitter-tweet" data-conversation="none" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;Next Event Estimation(NEE)を実装しました。&lt;br&gt;&lt;br&gt;1枚目: NEEなし（100x4 spp）&lt;br&gt;2枚目: NEEあり（100x4 spp）&lt;br&gt;3枚目: リファレンス（NEEなしで時間かけてレンダリング） &lt;a href="https://t.co/JB9O2agOYO"&gt;pic.twitter.com/JB9O2agOYO&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1032466825731133440?ref_src=twsrc%5Etfw"&gt;2018年8月23日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-conversation="none" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;NEEをGGXマテリアルに対応させた。&lt;br&gt;複数の光源がある場合はすべての光源に対してNEEするようにした。&lt;br&gt;bsdfは同じインターフェースで計算できるようにしたので、すっきり実装できた。&lt;br&gt;&lt;br&gt;1枚目: NEEなし（20x4 spp）&lt;br&gt;2枚目: NEEあり（20x4 spp）&lt;br&gt;3枚目: リファレンス（NEEな 20000x4spp） &lt;a href="https://t.co/TJK0OvmArh"&gt;pic.twitter.com/TJK0OvmArh&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1033492848765587456?ref_src=twsrc%5Etfw"&gt;2018年8月25日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 --&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;NEE&#34; 
-               srcset=&#34;http://localhost:1313/blog/2018/09/18/rtcamp6-part1/nee_hu_3a5544c12f957269.webp 320w, http://localhost:1313/blog/2018/09/18/rtcamp6-part1/nee_hu_d3057a23e1842467.webp 480w, http://localhost:1313/blog/2018/09/18/rtcamp6-part1/nee_hu_50e255a686b2744f.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2018/09/18/rtcamp6-part1/nee_hu_3a5544c12f957269.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;570&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="NEE"
+srcset="http://gam0022.net/blog/2018/09/18/rtcamp6-part1/nee_hu_3a5544c12f957269.webp 320w, http://gam0022.net/blog/2018/09/18/rtcamp6-part1/nee_hu_d3057a23e1842467.webp 480w, http://gam0022.net/blog/2018/09/18/rtcamp6-part1/nee_hu_50e255a686b2744f.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="http://gam0022.net/blog/2018/09/18/rtcamp6-part1/nee_hu_3a5544c12f957269.webp"
+width="760"
+height="570"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;同じサンプリング数でNEE実装前とNEE実装後の結果を比較しました。ノイズを劇的に軽減できました！&lt;/p&gt;
 &lt;p&gt;NEEの理論と実装についての詳細については、
@@ -493,7 +447,7 @@ $$$$
 y = \sqrt{1 - z^2}sin \phi \\
 $$$$
 z = z
-$$&lt;h3 id=&#34;処理のリファクタリング&#34;&gt;処理のリファクタリング&lt;/h3&gt;
+$$&lt;h3 id="処理のリファクタリング"&gt;処理のリファクタリング&lt;/h3&gt;
 &lt;p&gt;マテリアル側の次のような関数を持たせるようにリファクタリングしました。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;sample()&lt;/code&gt;
@@ -517,37 +471,22 @@ $$&lt;h3 id=&#34;処理のリファクタリング&#34;&gt;処理のリファク
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;インターフェースを統一できてコードが綺麗になった気がします。&lt;/p&gt;
-&lt;h3 id=&#34;トーンマッピングの実装&#34;&gt;トーンマッピングの実装&lt;/h3&gt;
+&lt;h3 id="トーンマッピングの実装"&gt;トーンマッピングの実装&lt;/h3&gt;
 &lt;p&gt;去年の実装では HDR で計算した結果を LDR に変換するときに単純に &lt;code&gt;clamp(x, 0, 1)&lt;/code&gt; していました。&lt;/p&gt;
 &lt;p&gt;このままでは 1.0 を超える明るい箇所の画素がすべて白色に潰れてしまいます。&lt;/p&gt;
 &lt;p&gt;この問題を解決するためにトーンマッピングを実装しました。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;Tonemap&#34; 
-               srcset=&#34;http://localhost:1313/blog/2018/09/18/rtcamp6-part1/tonemap_hu_b725ee4b57582297.webp 320w, http://localhost:1313/blog/2018/09/18/rtcamp6-part1/tonemap_hu_ecaedda12b2ab682.webp 480w, http://localhost:1313/blog/2018/09/18/rtcamp6-part1/tonemap_hu_ce17230cc5e04d0.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2018/09/18/rtcamp6-part1/tonemap_hu_b725ee4b57582297.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;570&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="Tonemap"
+srcset="http://gam0022.net/blog/2018/09/18/rtcamp6-part1/tonemap_hu_b725ee4b57582297.webp 320w, http://gam0022.net/blog/2018/09/18/rtcamp6-part1/tonemap_hu_ecaedda12b2ab682.webp 480w, http://gam0022.net/blog/2018/09/18/rtcamp6-part1/tonemap_hu_ce17230cc5e04d0.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="http://gam0022.net/blog/2018/09/18/rtcamp6-part1/tonemap_hu_b725ee4b57582297.webp"
+width="760"
+height="570"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;今回はトーンマッピングの中でも最も単純そうな「Reinhard Tonemapping」を実装しました。&lt;/p&gt;
 &lt;p&gt;Reinhard Tonemappingでは&lt;/p&gt;
@@ -561,106 +500,76 @@ $$f(x) = \frac{x}{x + 1} \left(1 + \frac{x}{L_w^2} \right) $$&lt;p&gt;詳しく�
 &lt;li&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;デノイズの実装&#34;&gt;デノイズの実装&lt;/h3&gt;
+&lt;h3 id="デノイズの実装"&gt;デノイズの実装&lt;/h3&gt;
 &lt;p&gt;レイトレ合宿の制限時間は年々短くなっています。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;制限時間&#34; 
-               srcset=&#34;http://localhost:1313/blog/2018/09/18/rtcamp6-part1/time_limit_hu_d61b84c0bbf1c0bd.webp 320w, http://localhost:1313/blog/2018/09/18/rtcamp6-part1/time_limit_hu_3b4c39757b923175.webp 480w, http://localhost:1313/blog/2018/09/18/rtcamp6-part1/time_limit_hu_2b4a94cbb2f4ca42.webp 584w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2018/09/18/rtcamp6-part1/time_limit_hu_d61b84c0bbf1c0bd.webp&#34;
-               width=&#34;584&#34;
-               height=&#34;477&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="制限時間"
+srcset="http://gam0022.net/blog/2018/09/18/rtcamp6-part1/time_limit_hu_d61b84c0bbf1c0bd.webp 320w, http://gam0022.net/blog/2018/09/18/rtcamp6-part1/time_limit_hu_3b4c39757b923175.webp 480w, http://gam0022.net/blog/2018/09/18/rtcamp6-part1/time_limit_hu_2b4a94cbb2f4ca42.webp 584w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="http://gam0022.net/blog/2018/09/18/rtcamp6-part1/time_limit_hu_d61b84c0bbf1c0bd.webp"
+width="584"
+height="477"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;イベント名&lt;/th&gt;
-          &lt;th style=&#34;text-align: right&#34;&gt;制限時間&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="text-align: left"&gt;イベント名&lt;/th&gt;
+&lt;th style="text-align: right"&gt;制限時間&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;
 &lt;/td&gt;
-          &lt;td style=&#34;text-align: right&#34;&gt;1時間&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;
+&lt;td style="text-align: right"&gt;1時間&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;
 &lt;/td&gt;
-          &lt;td style=&#34;text-align: right&#34;&gt;30分&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;
+&lt;td style="text-align: right"&gt;30分&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;
 &lt;/td&gt;
-          &lt;td style=&#34;text-align: right&#34;&gt;15分&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;
+&lt;td style="text-align: right"&gt;15分&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;
 &lt;/td&gt;
-          &lt;td style=&#34;text-align: right&#34;&gt;5分&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;
+&lt;td style="text-align: right"&gt;5分&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;
 &lt;/td&gt;
-          &lt;td style=&#34;text-align: right&#34;&gt;273秒&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;
+&lt;td style="text-align: right"&gt;273秒&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;
 &lt;/td&gt;
-          &lt;td style=&#34;text-align: right&#34;&gt;123秒&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;td style="text-align: right"&gt;123秒&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;さらに出力解像度のハードルも年々上がっていて、今年はほとんどの参加者がフルHDで出力しており、4Kで出力する猛者もいました。&lt;/p&gt;
 &lt;p&gt;制限時間の短縮と高解像度化によって、1ピクセルあたりにかけられるサンプリング数がどんどん少なくなっているため、デノイズの重要性は高まっていると言えるでしょう。&lt;/p&gt;
 &lt;p&gt;今回はデノイズの中でも最も単純そうな「Bilateral Filter」を実装しました。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;Denoise&#34; 
-               srcset=&#34;http://localhost:1313/blog/2018/09/18/rtcamp6-part1/denoise_hu_6e708ed9a55723db.webp 320w, http://localhost:1313/blog/2018/09/18/rtcamp6-part1/denoise_hu_aa039eec5e63e7c9.webp 480w, http://localhost:1313/blog/2018/09/18/rtcamp6-part1/denoise_hu_c1de1af33f42a394.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2018/09/18/rtcamp6-part1/denoise_hu_6e708ed9a55723db.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;570&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="Denoise"
+srcset="http://gam0022.net/blog/2018/09/18/rtcamp6-part1/denoise_hu_6e708ed9a55723db.webp 320w, http://gam0022.net/blog/2018/09/18/rtcamp6-part1/denoise_hu_aa039eec5e63e7c9.webp 480w, http://gam0022.net/blog/2018/09/18/rtcamp6-part1/denoise_hu_c1de1af33f42a394.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="http://gam0022.net/blog/2018/09/18/rtcamp6-part1/denoise_hu_6e708ed9a55723db.webp"
+width="760"
+height="570"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;Bilateral Filterを簡単に解説します。&lt;/p&gt;
 &lt;p&gt;平滑化フィルター（ぼかしフィルター）として有名なアルゴリズム「Gaussian Blur」があります。
@@ -669,32 +578,17 @@ Gaussian Blurは「空間的な重み」に基づいて周囲のピクセルを�
 重みを変化させてエッジ部分を保持するようにしたものがBilateral Filterです。&lt;/p&gt;
 &lt;p&gt;Bilateral Filterでは「空間的な重み」と「ピクセル値の差による重み」を掛け合わせたものを用います。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;Bilateral Filter on a Height Field&#34; 
-               srcset=&#34;http://localhost:1313/blog/2018/09/18/rtcamp6-part1/03_definition_bf_hu_33188ddab8abf8ba.webp 320w, http://localhost:1313/blog/2018/09/18/rtcamp6-part1/03_definition_bf_hu_22180afd0df8f77c.webp 480w, http://localhost:1313/blog/2018/09/18/rtcamp6-part1/03_definition_bf_hu_12c706a25b97fe7e.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2018/09/18/rtcamp6-part1/03_definition_bf_hu_33188ddab8abf8ba.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;569&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="Bilateral Filter on a Height Field"
+srcset="http://gam0022.net/blog/2018/09/18/rtcamp6-part1/03_definition_bf_hu_33188ddab8abf8ba.webp 320w, http://gam0022.net/blog/2018/09/18/rtcamp6-part1/03_definition_bf_hu_22180afd0df8f77c.webp 480w, http://gam0022.net/blog/2018/09/18/rtcamp6-part1/03_definition_bf_hu_12c706a25b97fe7e.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="http://gam0022.net/blog/2018/09/18/rtcamp6-part1/03_definition_bf_hu_33188ddab8abf8ba.webp"
+width="760"
+height="569"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;$G_{\sigma_s}(\|\|p - q\|\|)$ は距離をパラメータとしたガウス関数なので「空間的な重み」となります。&lt;/p&gt;
 &lt;p&gt;$G_{\sigma_r}(|I_p - I_q|)$ は画素値の差をパラメータとしたガウス関数なので「ピクセル値の差による重み」です。&lt;/p&gt;
@@ -702,9 +596,9 @@ Gaussian Blurは「空間的な重み」に基づいて周囲のピクセルを�
 &lt;p&gt;1つ補足すると、上の式の $\sigma_r$ を無限大にするとガウス関数の性質上、「ピクセル値の差による重み」が一様な分布になります。
 つまり$\sigma_r$ を無限大にするとGaussian Blurになります。
 このような知識を念頭に置いておくと、パラメータ調整に役に立つでしょう。&lt;/p&gt;
-&lt;p&gt;上の画像は 
- の 
- という資料の7ページ目から引用しました。&lt;/p&gt;
+&lt;p&gt;上の画像は
+の
+という資料の7ページ目から引用しました。&lt;/p&gt;
 &lt;p&gt;以下のブログの説明も分かりやすかったです。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -716,28 +610,28 @@ Gaussian Blurは「空間的な重み」に基づいて周囲のピクセルを�
 &lt;li&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;houdiniによるシーン作成&#34;&gt;Houdiniによるシーン作成&lt;/h3&gt;
+&lt;h3 id="houdiniによるシーン作成"&gt;Houdiniによるシーン作成&lt;/h3&gt;
 &lt;p&gt;Assetの一部はHoudiniを利用して作成しました。&lt;/p&gt;
-&lt;h4 id=&#34;wired-bunny&#34;&gt;Wired Bunny&lt;/h4&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Wired Bunny &lt;a href=&#34;https://twitter.com/hashtag/Houdini?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Houdini&lt;/a&gt; &lt;a href=&#34;https://t.co/aZO2CHSS31&#34;&gt;pic.twitter.com/aZO2CHSS31&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1033993211566481408?ref_src=twsrc%5Etfw&#34;&gt;2018年8月27日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h4 id="wired-bunny"&gt;Wired Bunny&lt;/h4&gt;
+&lt;blockquote class="twitter-tweet" data-conversation="none" data-lang="ja"&gt;&lt;p lang="en" dir="ltr"&gt;Wired Bunny &lt;a href="https://twitter.com/hashtag/Houdini?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#Houdini&lt;/a&gt; &lt;a href="https://t.co/aZO2CHSS31"&gt;pic.twitter.com/aZO2CHSS31&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1033993211566481408?ref_src=twsrc%5Etfw"&gt;2018年8月27日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;p&gt;HoudiniでStanford Bunnyのモデルをワイヤーフレーム化したメッシュに加工しました。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;PolyWire&lt;/code&gt; というノードを使うことで簡単に実現できます。&lt;/p&gt;
-&lt;h4 id=&#34;額縁&#34;&gt;額縁&lt;/h4&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/Houdini?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Houdini&lt;/a&gt; の Boolean と PolyBevel でつくった額縁 &lt;a href=&#34;https://t.co/ycwK9SJw5K&#34;&gt;pic.twitter.com/ycwK9SJw5K&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1035344499180855297?ref_src=twsrc%5Etfw&#34;&gt;2018年8月31日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h4 id="額縁"&gt;額縁&lt;/h4&gt;
+&lt;blockquote class="twitter-tweet" data-conversation="none" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;&lt;a href="https://twitter.com/hashtag/Houdini?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#Houdini&lt;/a&gt; の Boolean と PolyBevel でつくった額縁 &lt;a href="https://t.co/ycwK9SJw5K"&gt;pic.twitter.com/ycwK9SJw5K&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1035344499180855297?ref_src=twsrc%5Etfw"&gt;2018年8月31日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;p&gt;額縁はBox同士をブーリアン演算で切り抜いた形状を &lt;code&gt;PolyBevel&lt;/code&gt; というノードで角を丸めて作りました。&lt;/p&gt;
-&lt;h4 id=&#34;フラクタルの試作&#34;&gt;フラクタルの試作&lt;/h4&gt;
+&lt;h4 id="フラクタルの試作"&gt;フラクタルの試作&lt;/h4&gt;
 &lt;p&gt;本番では使いませんでしたが、フラクタルも試作しました。&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-cards=&#34;hidden&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/Houdini?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Houdini&lt;/a&gt; でフラクタル図形（Menger Sponge）を作ってみた。&lt;br&gt;少しずつSOPとVEXを理解してきた気がする。 &lt;a href=&#34;https://t.co/Wip7DbkGN8&#34;&gt;pic.twitter.com/Wip7DbkGN8&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/992626756900208640?ref_src=twsrc%5Etfw&#34;&gt;2018年5月5日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;立方体の向きを揃える処理を省くと複雑な形状になって面白い&lt;br&gt;MengerSpongeの亜種になる &lt;a href=&#34;https://twitter.com/hashtag/Houdini?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Houdini&lt;/a&gt; &lt;a href=&#34;https://t.co/OKfd29TtNn&#34;&gt;pic.twitter.com/OKfd29TtNn&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/992639541818286080?ref_src=twsrc%5Etfw&#34;&gt;2018年5月5日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;スケールの計算がバグっていたので修正。&lt;br&gt;良い感じになった。 &lt;a href=&#34;https://twitter.com/hashtag/Houdini?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Houdini&lt;/a&gt; &lt;a href=&#34;https://t.co/4hyjzhwNlc&#34;&gt;pic.twitter.com/4hyjzhwNlc&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1033912181782245376?ref_src=twsrc%5Etfw&#34;&gt;2018年8月27日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Dodecahedron（正十二面体）の Fractal 😉 &lt;a href=&#34;https://twitter.com/hashtag/Houdini?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Houdini&lt;/a&gt; &lt;a href=&#34;https://t.co/26iIRVefLL&#34;&gt;pic.twitter.com/26iIRVefLL&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1033918879175598080?ref_src=twsrc%5Etfw&#34;&gt;2018年8月27日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;h3 id=&#34;windows環境で36コアしか使えない問題&#34;&gt;Windows環境で36コアしか使えない問題&lt;/h3&gt;
+&lt;blockquote class="twitter-tweet" data-cards="hidden" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;&lt;a href="https://twitter.com/hashtag/Houdini?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#Houdini&lt;/a&gt; でフラクタル図形（Menger Sponge）を作ってみた。&lt;br&gt;少しずつSOPとVEXを理解してきた気がする。 &lt;a href="https://t.co/Wip7DbkGN8"&gt;pic.twitter.com/Wip7DbkGN8&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/992626756900208640?ref_src=twsrc%5Etfw"&gt;2018年5月5日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-conversation="none" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;立方体の向きを揃える処理を省くと複雑な形状になって面白い&lt;br&gt;MengerSpongeの亜種になる &lt;a href="https://twitter.com/hashtag/Houdini?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#Houdini&lt;/a&gt; &lt;a href="https://t.co/OKfd29TtNn"&gt;pic.twitter.com/OKfd29TtNn&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/992639541818286080?ref_src=twsrc%5Etfw"&gt;2018年5月5日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;スケールの計算がバグっていたので修正。&lt;br&gt;良い感じになった。 &lt;a href="https://twitter.com/hashtag/Houdini?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#Houdini&lt;/a&gt; &lt;a href="https://t.co/4hyjzhwNlc"&gt;pic.twitter.com/4hyjzhwNlc&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1033912181782245376?ref_src=twsrc%5Etfw"&gt;2018年8月27日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-conversation="none" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;Dodecahedron（正十二面体）の Fractal 😉 &lt;a href="https://twitter.com/hashtag/Houdini?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#Houdini&lt;/a&gt; &lt;a href="https://t.co/26iIRVefLL"&gt;pic.twitter.com/26iIRVefLL&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1033918879175598080?ref_src=twsrc%5Etfw"&gt;2018年8月27日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;h3 id="windows環境で36コアしか使えない問題"&gt;Windows環境で36コアしか使えない問題&lt;/h3&gt;
 &lt;p&gt;今年のレイトレ合宿の本番マシンは72コアを持つEC2インスタンスでした。&lt;/p&gt;
 &lt;p&gt;Windowsの仕様によってシステムに 64コアを超える論理プロセッサーが搭載されていると、
 プロセッサーはプロセッサー・グループに分割されてしまうらしく、私のレンダラーも36コアしか利用できませんでした。
@@ -749,18 +643,12 @@ Gaussian Blurは「空間的な重み」に基づいて周囲のピクセルを�
 &lt;p&gt;C++であれば、 &lt;code&gt;SetThreadGroupAffinity()&lt;/code&gt; でスレッドグループを指定することで対処可能のようでしたが、Rustだと対処困難でした。&lt;/p&gt;
 &lt;p&gt;去年のレイトレ合宿からWindowsとAmazon Linuxの2つから好きなOSを選択できるようにルール改定がありました。
 そこで、急遽Linux用のバイナリを作成してAmazon Linuxで走らせたところ、72コアをフルに利用できるようになりました！&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Linux用のバイナリをクロスコンパイルして72コア使えました ☺️&lt;br&gt;クロスコンパイルが比較的簡単にできるのでRustは神。&lt;a href=&#34;https://t.co/UpqCC66wmV&#34;&gt;https://t.co/UpqCC66wmV&lt;/a&gt; &lt;a href=&#34;https://t.co/hIX2GO4Yn1&#34;&gt;pic.twitter.com/hIX2GO4Yn1&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1034616613234855936?ref_src=twsrc%5Etfw&#34;&gt;2018年8月29日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;Linux用のバイナリをクロスコンパイルして72コア使えました ☺️&lt;br&gt;クロスコンパイルが比較的簡単にできるのでRustは神。&lt;a href="https://t.co/UpqCC66wmV"&gt;https://t.co/UpqCC66wmV&lt;/a&gt; &lt;a href="https://t.co/hIX2GO4Yn1"&gt;pic.twitter.com/hIX2GO4Yn1&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1034616613234855936?ref_src=twsrc%5Etfw"&gt;2018年8月29日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;p&gt;レイトレ合宿のルールには次の文言があります。&lt;/p&gt;
-
-
-
-  
-  &lt;blockquote class=&#34;border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6&#34;&gt;
-    &lt;p&gt;何もインストールしていないまっさらなマシン上で動作するようにしてください。&lt;/p&gt;
-
-  &lt;/blockquote&gt;
-
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;何もインストールしていないまっさらなマシン上で動作するようにしてください。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;これは動的ライブラリに依存せずに動作する必要があることを意味します。&lt;/p&gt;
 &lt;p&gt;Rustで動的ライブラリに依存しないバイナリを作成する場合は &lt;code&gt;x86_64-unknown-linux-musl&lt;/code&gt; を target にしてビルドすればOKです。&lt;/p&gt;
 &lt;p&gt;以下の記事を参考にしてmacOSでLinux用のバイナリをクロスコンパイルして最終提出しました。&lt;/p&gt;
@@ -770,7 +658,7 @@ Gaussian Blurは「空間的な重み」に基づいて周囲のピクセルを�
 &lt;/ul&gt;
 &lt;p&gt;同じくRustで参加された
 によると全く同じ手段で解決されていました。&lt;/p&gt;
-&lt;h3 id=&#34;制限時間や出力解像度のコマンドライン引数対応&#34;&gt;制限時間や出力解像度のコマンドライン引数対応&lt;/h3&gt;
+&lt;h3 id="制限時間や出力解像度のコマンドライン引数対応"&gt;制限時間や出力解像度のコマンドライン引数対応&lt;/h3&gt;
 &lt;p&gt;制限時間や出力解像度をコマンドラインで引数で指定する機能を締切前日くらいに実装しました。&lt;/p&gt;
 &lt;p&gt;こんな基本的な機能をなぜ実装しなかった疑問に思うかもしれませんが、単純に時間的余裕が無かっただけです。&lt;/p&gt;
 &lt;p&gt;本番環境と開発環境ではスペックでは性能差があるため、
@@ -781,44 +669,44 @@ Gaussian Blurは「空間的な重み」に基づいて周囲のピクセルを�
 &lt;li&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## レイトレ合宿6のレギュレーションで実行&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cargo run --release
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 制限時間を1047秒に設定し、60秒ごとに途中結果を出力しながら実行&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cargo run --release -- -t &lt;span class=&#34;m&#34;&gt;1047&lt;/span&gt; -i &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 低解像度・サンプリング数を1で実行&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cargo run --release -- -w &lt;span class=&#34;m&#34;&gt;480&lt;/span&gt; -h &lt;span class=&#34;m&#34;&gt;270&lt;/span&gt; -s &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## デバッグモードで実行（被写界深度の焦点面を可視化）&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cargo run --release -- -d
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## ヘルプを表示&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cargo run --release -- --help
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Usage: hanamaru-renderer &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;options&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Options:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        --help          print this &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt; menu
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -d, --debug         use debug mode
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -w, --width WIDTH   output resolution width
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -h, --height HEIGHT output resolution height
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -s, --sampling SAMPLING
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        sampling limit
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -t, --time TIME     &lt;span class=&#34;nb&#34;&gt;time&lt;/span&gt; limit sec
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -i, --interval INTERVAL
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        report interval se
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;リソースフォークを除外しながら圧縮&#34;&gt;リソースフォークを除外しながら圧縮&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;## レイトレ合宿6のレギュレーションで実行&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cargo run --release
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;## 制限時間を1047秒に設定し、60秒ごとに途中結果を出力しながら実行&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cargo run --release -- -t &lt;span class="m"&gt;1047&lt;/span&gt; -i &lt;span class="m"&gt;60&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;## 低解像度・サンプリング数を1で実行&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cargo run --release -- -w &lt;span class="m"&gt;480&lt;/span&gt; -h &lt;span class="m"&gt;270&lt;/span&gt; -s &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;## デバッグモードで実行（被写界深度の焦点面を可視化）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cargo run --release -- -d
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;## ヘルプを表示&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cargo run --release -- --help
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Usage: hanamaru-renderer &lt;span class="o"&gt;[&lt;/span&gt;options&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Options:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; --help print this &lt;span class="nb"&gt;help&lt;/span&gt; menu
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -d, --debug use debug mode
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -w, --width WIDTH output resolution width
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -h, --height HEIGHT output resolution height
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -s, --sampling SAMPLING
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; sampling limit
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -t, --time TIME &lt;span class="nb"&gt;time&lt;/span&gt; limit sec
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -i, --interval INTERVAL
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; report interval se
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="リソースフォークを除外しながら圧縮"&gt;リソースフォークを除外しながら圧縮&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;tar&lt;/code&gt; コマンドを使ってリソースフォークを除外しながら圧縮する方法を学びました。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ &lt;span class=&#34;nv&#34;&gt;COPYFILE_DISABLE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; tar zcvf 圧縮先.tar.gz --exclude &lt;span class=&#34;s2&#34;&gt;&amp;#34;.DS_Store&amp;#34;&lt;/span&gt; 圧縮元のディレクトリ
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$ &lt;span class="nv"&gt;COPYFILE_DISABLE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; tar zcvf 圧縮先.tar.gz --exclude &lt;span class="s2"&gt;&amp;#34;.DS_Store&amp;#34;&lt;/span&gt; 圧縮元のディレクトリ
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;運営側でレンダラーをスクリプトから自動実行しているそうなのですが、実行ファイルが複数あると自動実行できなくなるそうです。&lt;/p&gt;
 &lt;p&gt;Macのリソースフォークには実行権限がついているので、リソースフォークを除外して圧縮しました。&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Macでtarコマンドを使うときには次のオプションをつけるとリソースフォークが除外されるという知見を得た。&lt;br&gt;COPYFILE_DISABLE=1 tar zcvf 圧縮先.tar.gz --exclude &amp;quot;.DS_Store&amp;quot; 圧縮元のディレクトリ&lt;a href=&#34;https://t.co/mKWLxCZ8Hn&#34;&gt;https://t.co/mKWLxCZ8Hn&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1034968545489113088?ref_src=twsrc%5Etfw&#34;&gt;2018年8月30日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;blockquote class="twitter-tweet" data-conversation="none" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;Macでtarコマンドを使うときには次のオプションをつけるとリソースフォークが除外されるという知見を得た。&lt;br&gt;COPYFILE_DISABLE=1 tar zcvf 圧縮先.tar.gz --exclude &amp;quot;.DS_Store&amp;quot; 圧縮元のディレクトリ&lt;a href="https://t.co/mKWLxCZ8Hn"&gt;https://t.co/mKWLxCZ8Hn&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1034968545489113088?ref_src=twsrc%5Etfw"&gt;2018年8月30日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;h2 id="まとめ"&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;最終的にはなんとか締切に間に合いましたが、来年はもう少し余裕を持って開発したいですね。&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;サブミット完了。&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1035169812698152961?ref_src=twsrc%5Etfw&#34;&gt;2018年8月30日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;サブミット完了。&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1035169812698152961?ref_src=twsrc%5Etfw"&gt;2018年8月30日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;p&gt;業務が忙しかったりSIGGRAPHのために海外出張したりして、今年は準備の着手が遅くなってしまいました（言い訳）。&lt;/p&gt;
 &lt;p&gt;本格的に準備に着手したのはSIGGRAPH帰国後になってしまい、合宿まで残り2週間を切っていました😇
 しかもSIGGRAPH帰国後だったので、時差ボケに苦しみながらの実装でした😵
@@ -826,20 +714,12 @@ Gaussian Blurは「空間的な重み」に基づいて周囲のピクセルを�
 &lt;p&gt;TODO管理としてGitHubの
 を利用しました。
 私がどういう機能を実装しようとして、何を諦めたのか興味がある人は読むと良いでしょう。&lt;/p&gt;
-&lt;h2 id=&#34;合宿当日&#34;&gt;合宿当日&lt;/h2&gt;
+&lt;h2 id="合宿当日"&gt;合宿当日&lt;/h2&gt;
 &lt;p&gt;合宿当日の様子については、後編（当日編）の記事に続きます。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>レイトレ合宿5‽に参加して、Rustでパストレーシングを実装しました！</title>
-      <link>http://localhost:1313/blog/2017/10/02/rtcamp5/</link>
-      <pubDate>Mon, 02 Oct 2017 09:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2017/10/02/rtcamp5/</guid>
-      <description>&lt;p&gt;9月9日(土)～9月10日(日)に諏訪湖で開催された
+&lt;/ul&gt;</description></item><item><title>レイトレ合宿5‽に参加して、Rustでパストレーシングを実装しました！</title><link>http://gam0022.net/blog/2017/10/02/rtcamp5/</link><pubDate>Mon, 02 Oct 2017 09:00:00 +0900</pubDate><guid>http://gam0022.net/blog/2017/10/02/rtcamp5/</guid><description>&lt;p&gt;9月9日(土)～9月10日(日)に諏訪湖で開催された
 に参加しました！&lt;/p&gt;
 &lt;p&gt;レイトレ合宿は完全自作のレイトレーサーを走らせて画像の美しさを競うイベントです。&lt;/p&gt;
 &lt;p&gt;去年に初参加させていただき、今年で2回目の参加になります。去年の参加報告は
@@ -855,17 +735,15 @@ Gaussian Blurは「空間的な重み」に基づいて周囲のピクセルを�
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;こちらは合宿当日のプレゼン資料です。&lt;/p&gt;
-&lt;script async class=&#34;speakerdeck-embed&#34; data-slide=&#34;1&#34; data-id=&#34;6159e679b62d4d87a718fdf97efe5ed8&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;script async class="speakerdeck-embed" data-slide="1" data-id="6159e679b62d4d87a718fdf97efe5ed8" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"&gt;&lt;/script&gt;
 &lt;p&gt;今年もレンダリング分野の最先端で活躍されている方々がたくさん参加されていました。&lt;/p&gt;
 &lt;p&gt;趣味でRedqueenレンダラーを開発し、仕事でAutodeskのArnoldレンダラーを開発されている
 さん、
-
 研究者の
 さんなどが参加されていました。
 他にも
 の
 さん、
-
 の
 さんなど、
 CGの勉強をしたことがあれば必ずお世話になるような有名なサイトの管理人たちも参加されていました。&lt;/p&gt;
@@ -874,7 +752,7 @@ CGの勉強をしたことがあれば必ずお世話になるような有名な
 さんの
 にまとめられています。
 興味がある方はそちらもご覧ください。&lt;/p&gt;
-&lt;h2 id=&#34;hanamaruレンダラーの主な仕様&#34;&gt;Hanamaruレンダラーの主な仕様&lt;/h2&gt;
+&lt;h2 id="hanamaruレンダラーの主な仕様"&gt;Hanamaruレンダラーの主な仕様&lt;/h2&gt;
 &lt;p&gt;ポリゴンとの衝突判定をBVHで高速化したり、薄レンズモデルによる被写界深度を入れたり、IBLしたりしました。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;ポリゴンメッシュに対応
@@ -903,7 +781,7 @@ CGの勉強をしたことがあれば必ずお世話になるような有名な
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;シーンの解説&#34;&gt;シーンの解説&lt;/h2&gt;
+&lt;h2 id="シーンの解説"&gt;シーンの解説&lt;/h2&gt;
 &lt;p&gt;宝石をランタイム時にプロシージャルに配置してシーンを作りました。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;うさぎのモデル
@@ -934,7 +812,7 @@ CGの勉強をしたことがあれば必ずお世話になるような有名な
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;高速化の取り組み&#34;&gt;高速化の取り組み&lt;/h2&gt;
+&lt;h2 id="高速化の取り組み"&gt;高速化の取り組み&lt;/h2&gt;
 &lt;p&gt;今年の合宿では4分33秒以内にレンダリングするルールでしたので、いくつかの高速化に取り組みました。&lt;/p&gt;
 &lt;p&gt;ちなみに出力画像の解像度についてはルールはありませんが、目標を高くするために1980x1080を採用しました。&lt;/p&gt;
 &lt;p&gt;パストレーシング・レイトレーシングの高速化のアプローチはいくつかあります。&lt;/p&gt;
@@ -944,7 +822,7 @@ CGの勉強をしたことがあれば必ずお世話になるような有名な
 &lt;li&gt;並列処理&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;それぞれ何を行ったのか簡単に紹介します。&lt;/p&gt;
-&lt;h3 id=&#34;衝突判定の高速化&#34;&gt;衝突判定の高速化&lt;/h3&gt;
+&lt;h3 id="衝突判定の高速化"&gt;衝突判定の高速化&lt;/h3&gt;
 &lt;p&gt;レイトレの実行時間のほとんどは衝突判定が占めるので、これを高速化するのは効果的です。&lt;/p&gt;
 &lt;p&gt;衝突判定の高速化としてはBVH（Bounding Volume Hierarchy）を実装しました。&lt;/p&gt;
 &lt;p&gt;シーン内のすべてのオブジェクトを総当りで衝突判定せずに、空間分割によって衝突判定の回数を減らします。&lt;/p&gt;
@@ -959,62 +837,47 @@ CGの勉強をしたことがあれば必ずお世話になるような有名な
 &lt;p&gt;お餅さんの記事では、Surface Area Heuristicsという手法で評価関数をつかった領域分割をしていましたが、
 今回は実装の時間が無かったので、領域の最長辺を軸に選んで要素数で2分割する実装にしました。
 単純な分割方法ではありますが、総当りと比較すれば十分に高速化できました。&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;全探索だと251.251 sec&lt;br&gt;軸をランダムに選んでポリゴンを2等分するBVHだと 36.28 sec&lt;br&gt;AABBの最長辺を軸に選んでポリゴンを2等分するBVHだと 28.424 sec&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/896963950947975168&#34;&gt;2017年8月14日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;全探索だと251.251 sec&lt;br&gt;軸をランダムに選んでポリゴンを2等分するBVHだと 36.28 sec&lt;br&gt;AABBの最長辺を軸に選んでポリゴンを2等分するBVHだと 28.424 sec&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/896963950947975168"&gt;2017年8月14日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;p&gt;シーンを構成するオブジェクトとして、ポリゴンメッシュ、球体、立方体の3種類に対応しました。
 シーンを構成するオブジェクトに対してのBVHだけでなく、ポリゴンメッシュを構成するメッシュに対してもBVHを構築しました。&lt;/p&gt;
-&lt;h3 id=&#34;モンテカルロ積分のサンプリングの効率化&#34;&gt;モンテカルロ積分のサンプリングの効率化&lt;/h3&gt;
+&lt;h3 id="モンテカルロ積分のサンプリングの効率化"&gt;モンテカルロ積分のサンプリングの効率化&lt;/h3&gt;
 &lt;p&gt;パストレーシングはレンダリング方程式を
 をつかって解を求める手法です。&lt;/p&gt;
 &lt;p&gt;モンテカルロ積分のサンプリングを効率化すれば、より少ないサンプリング数でノイズの少ない収束した結果を得ることができます。&lt;/p&gt;
 &lt;p&gt;サンプリングの効率化のための手法としては、重点的サンプリング、多重重点的サンプリング、Next Event Estimationなどがあります。&lt;/p&gt;
 &lt;p&gt;詳しくは
 さんの資料を参照してください。&lt;/p&gt;
-&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;5166038931874c0e9ea8517870e78705&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;script async class="speakerdeck-embed" data-id="5166038931874c0e9ea8517870e78705" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"&gt;&lt;/script&gt;
 &lt;p&gt;今回はレンダリング方程式のcos項に比例した重点的サンプリングのみ行いました。&lt;/p&gt;
 &lt;p&gt;レンダリング方程式のcos項に比例した重点的サンプリングを行うと、
 確率密度関数で除算する処理でレンダリング方程式のcos項を打ち消すことができ、パストレーシング実装をシンプルにできます。&lt;/p&gt;
 &lt;p&gt;今回のシーンではIBL光源が支配的なため、cos項に比例した重点的サンプリングのみで少ないサンプリング数でレンダリング結果が収束しましたが、
 光源が小さいシーンだと分散が大きいために収束が遅くなってしまいます。&lt;/p&gt;
 &lt;p&gt;来年までにはNext Event Estimationに挑戦してみたいです。&lt;/p&gt;
-&lt;h3 id=&#34;並列処理&#34;&gt;並列処理&lt;/h3&gt;
+&lt;h3 id="並列処理"&gt;並列処理&lt;/h3&gt;
 &lt;p&gt;並列処理もレイトレにおいては超重要です。&lt;/p&gt;
 &lt;p&gt;今回の実行環境は64コアのCPUなので、並列処理しないと計算リソースを全体の1/64しか使うことができません。&lt;/p&gt;
 &lt;p&gt;Rustの標準ライブラリの&lt;code&gt;std::thread&lt;/code&gt;でも並列化はできるのですが、
 CPUのコア数に応じてスレッドプールを作ったり、適切にスケジューリングする部分はプログラマーが頑張る必要がありました。&lt;/p&gt;
 &lt;p&gt;
 という並列処理のライブラリを利用すれば、面倒なスケジューリングを自動でやってくれそうだったので、これを採用しました。&lt;/p&gt;
-&lt;h4 id=&#34;並列化の戦略&#34;&gt;並列化の戦略&lt;/h4&gt;
+&lt;h4 id="並列化の戦略"&gt;並列化の戦略&lt;/h4&gt;
 &lt;p&gt;並列化の戦略を2通り試しました。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;並列化の戦略&#34; 
-               srcset=&#34;http://localhost:1313/blog/2017/10/02/rtcamp5/pararell_hu_4f0e58a67587a274.webp 320w, http://localhost:1313/blog/2017/10/02/rtcamp5/pararell_hu_4ba176dcc246e567.webp 480w, http://localhost:1313/blog/2017/10/02/rtcamp5/pararell_hu_27b799086205cb23.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2017/10/02/rtcamp5/pararell_hu_4f0e58a67587a274.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;428&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="並列化の戦略"
+srcset="http://gam0022.net/blog/2017/10/02/rtcamp5/pararell_hu_4f0e58a67587a274.webp 320w, http://gam0022.net/blog/2017/10/02/rtcamp5/pararell_hu_4ba176dcc246e567.webp 480w, http://gam0022.net/blog/2017/10/02/rtcamp5/pararell_hu_27b799086205cb23.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="http://gam0022.net/blog/2017/10/02/rtcamp5/pararell_hu_4f0e58a67587a274.webp"
+width="760"
+height="428"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h5 id=&#34;サンプリング数を固定化した並列化&#34;&gt;サンプリング数を固定化した並列化&lt;/h5&gt;
+&lt;h5 id="サンプリング数を固定化した並列化"&gt;サンプリング数を固定化した並列化&lt;/h5&gt;
 &lt;p&gt;まずは開発初期の並列化の戦略を説明します。&lt;/p&gt;
 &lt;p&gt;図の左のように時系列で行(y方向)ごとに処理し、列(x方向)の各ピクセルの計算を並列で行うようにしました。
 各スレッド内で全サンプリングの計算して、最終的な画素値まで決定しました。&lt;/p&gt;
@@ -1022,7 +885,7 @@ CPUのコア数に応じてスレッドプールを作ったり、適切にス�
 サンプリング数を大きくしすぎると4:33の制限時間をオーバーしすぎる心配があり、
 逆に小さくしすぎると計算リソースを使い切れなくなってしまいます。&lt;/p&gt;
 &lt;p&gt;今回のようにレンダリング時間がルールで決まっている場合は、あまり良い戦略ではありませんでした。&lt;/p&gt;
-&lt;h5 id=&#34;サンプリング数を動的に変更できる並列化&#34;&gt;サンプリング数を動的に変更できる並列化&lt;/h5&gt;
+&lt;h5 id="サンプリング数を動的に変更できる並列化"&gt;サンプリング数を動的に変更できる並列化&lt;/h5&gt;
 &lt;p&gt;そこで、開発後半では並列化の戦略を変更しました。&lt;/p&gt;
 &lt;p&gt;図の右のように時系列でサンプリングごとに処理し、全ピクセルの計算を並列で行うようにしました。
 直前の1サンプリングの所要時間から次のサンプリングで時間切れになることを予想したら、その時点でのサンプリング数の結果を出力して終了します。&lt;/p&gt;
@@ -1030,42 +893,42 @@ CPUのコア数に応じてスレッドプールを作ったり、適切にス�
 &lt;p&gt;しかし、この変更によって少しパフォーマンスが低下しました。
 同じサンプリング数で比較すると、計算時間が5%程度増加してしまいました。
 テクスチャをたくさん使ったシーンなので、キャッシュのヒット率が低下したのが原因かもしれません。&lt;/p&gt;
-&lt;h4 id=&#34;rayonによる並列化をしたレンダリングの関数&#34;&gt;Rayonによる並列化をしたレンダリングの関数&lt;/h4&gt;
+&lt;h4 id="rayonによる並列化をしたレンダリングの関数"&gt;Rayonによる並列化をしたレンダリングの関数&lt;/h4&gt;
 &lt;p&gt;これが実際のサンプリング数を動的に変更できる並列化をしたレンダリングの関数です。&lt;/p&gt;
 &lt;p&gt;Rayonでは、&lt;code&gt;iter_mut()&lt;/code&gt;の代わりに&lt;code&gt;par_iter_mut()&lt;/code&gt;でイテレーターを作ると並列処理ができます。&lt;/p&gt;
 &lt;p&gt;元のコードをほとんど変更せずに並列化できるのは素晴らしいですね。&lt;/p&gt;
 &lt;p&gt;同じことを&lt;code&gt;std::thread&lt;/code&gt;で書こうとすると、かなりコードが複雑になると思います。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;fn&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;render&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mut&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;scene&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SceneTrait&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;camera&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;ne&#34;&gt;Camera&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;imgbuf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mut&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ImageBuffer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Rgb&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;u8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Vec&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;u8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;u32&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;resolution&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;ne&#34;&gt;Vector2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;imgbuf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f64&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;imgbuf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f64&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;num_of_pixel&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;imgbuf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;imgbuf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mut&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;accumulation_buf&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;vec&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;ne&#34;&gt;Vector3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zero&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;num_of_pixel&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;usize&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;//&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;NOTICE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sampling&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;is&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;origin&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sampling&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max_sampling&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;accumulation_buf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;par_iter_mut&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;enumerate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;for_each&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pixel&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;u32&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;imgbuf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;u32&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;imgbuf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;frag_coord&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;ne&#34;&gt;Vector2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f64&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;imgbuf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f64&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pixel&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;supersampling&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;scene&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;camera&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;frag_coord&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;resolution&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sampling&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;report_progress&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;accumulation_buf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sampling&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;imgbuf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sampling&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max_sampling&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-gdscript3" data-lang="gdscript3"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;fn&lt;/span&gt; &lt;span class="n"&gt;render&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;mut&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;scene&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;SceneTrait&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;camera&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="ne"&gt;Camera&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;imgbuf&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;mut&lt;/span&gt; &lt;span class="n"&gt;ImageBuffer&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Rgb&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;u8&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Vec&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;u8&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;u32&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;let&lt;/span&gt; &lt;span class="n"&gt;resolution&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="ne"&gt;Vector2&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;imgbuf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;width&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="n"&gt;as&lt;/span&gt; &lt;span class="n"&gt;f64&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;imgbuf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;height&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="n"&gt;as&lt;/span&gt; &lt;span class="n"&gt;f64&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;let&lt;/span&gt; &lt;span class="n"&gt;num_of_pixel&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;imgbuf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;width&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;imgbuf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;height&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;let&lt;/span&gt; &lt;span class="n"&gt;mut&lt;/span&gt; &lt;span class="n"&gt;accumulation_buf&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;vec&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="ne"&gt;Vector3&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;&lt;span class="n"&gt;zero&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="n"&gt;num_of_pixel&lt;/span&gt; &lt;span class="n"&gt;as&lt;/span&gt; &lt;span class="n"&gt;usize&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="n"&gt;NOTICE&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;sampling&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;sampling&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="mf"&gt;1.&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;max_sampling&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;accumulation_buf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;par_iter_mut&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;enumerate&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;for_each&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pixel&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;let&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;as&lt;/span&gt; &lt;span class="n"&gt;u32&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;imgbuf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;width&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;let&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;as&lt;/span&gt; &lt;span class="n"&gt;u32&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;imgbuf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;width&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;let&lt;/span&gt; &lt;span class="n"&gt;frag_coord&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="ne"&gt;Vector2&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="n"&gt;as&lt;/span&gt; &lt;span class="n"&gt;f64&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;imgbuf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;height&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;as&lt;/span&gt; &lt;span class="n"&gt;f64&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pixel&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;supersampling&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;scene&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;camera&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;frag_coord&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;resolution&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sampling&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;});&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;report_progress&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;accumulation_buf&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sampling&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;imgbuf&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;sampling&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;max_sampling&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
 &lt;/p&gt;
-&lt;h2 id=&#34;開発の振り返り&#34;&gt;開発の振り返り&lt;/h2&gt;
+&lt;h2 id="開発の振り返り"&gt;開発の振り返り&lt;/h2&gt;
 &lt;p&gt;開発期間は1ヶ月弱でした。7/30くらいに着手して9/8の締め切りギリギリまで開発していました。&lt;/p&gt;
 &lt;p&gt;最低限のパストレが動くまでは1週間くらい、並列化やポリゴンの衝突判定のBVHによる高速化までは2週間くらいかかりました。&lt;/p&gt;
 &lt;p&gt;シーン調整していくうちに、バグや不具合が見つかったので、後半はシーン構築のための機能を追加しつつ、バグ修正をしていました。&lt;/p&gt;
-&lt;h3 id=&#34;rustについて&#34;&gt;Rustについて&lt;/h3&gt;
+&lt;h3 id="rustについて"&gt;Rustについて&lt;/h3&gt;
 &lt;p&gt;去年はC++で開発したのですが、今年はRustでフルスクラッチで書き直しました。&lt;/p&gt;
 &lt;p&gt;Rustの所有権に慣れるまでは大変でしたが、トータルで見ればC++ではなくRustで開発して良かったと思います。&lt;/p&gt;
-&lt;h4 id=&#34;rustの採用理由&#34;&gt;Rustの採用理由&lt;/h4&gt;
+&lt;h4 id="rustの採用理由"&gt;Rustの採用理由&lt;/h4&gt;
 &lt;p&gt;こんな感じの理由でRustを採用しました。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;実行時のパフォーマンスを重視している
@@ -1091,15 +954,15 @@ CPUのコア数に応じてスレッドプールを作ったり、適切にス�
 &lt;li&gt;弊社(KLab)の社員が2人もRustでレイトレしており、困ったら教えてもらおうと思った
 &lt;ul&gt;
 &lt;li&gt;
- by 
+by
 さん&lt;/li&gt;
 &lt;li&gt;
- by 
+by
 さん&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;rustの学習方法&#34;&gt;Rustの学習方法&lt;/h4&gt;
+&lt;h4 id="rustの学習方法"&gt;Rustの学習方法&lt;/h4&gt;
 &lt;p&gt;Rustについて何も知らなかったので、まずは通勤中に
 を読んでRustの思想を学びました。&lt;/p&gt;
 &lt;p&gt;
@@ -1119,69 +982,54 @@ Rustの予習に1週間かけましたが、いざコードを書いてみると
 &lt;code&gt;cargo run&lt;/code&gt;を叩くだけで、自動的にパッケージをフェッチし、依存関係を解決してビルドと実行ができます。&lt;/p&gt;
 &lt;p&gt;開発前半は通勤中にMacで開発して、開発後半は高スペックなWindowsデスクトップに開発環境を移行しました。
 cargoのおかげでMacもWindowsも同じようにビルドができるので、開発環境を行き来するコストが全くありませんでした。&lt;/p&gt;
-&lt;h4 id=&#34;rustのenum&#34;&gt;Rustのenum&lt;/h4&gt;
+&lt;h4 id="rustのenum"&gt;Rustのenum&lt;/h4&gt;
 &lt;p&gt;Rustの特徴はたくさんあるのですが、
 は良いと思いました。
 Cのenumとは違って、構造体やタプルのような各ヴァリアントに関連するデータを持たせることができるので、マテリアルのタイプの定義に便利でした。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#[derive(Clone, Debug)]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;pub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;enum&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;SurfaceType&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Diffuse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Specular&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Refraction&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;refractive_index&lt;/span&gt;: &lt;span class=&#34;kt&#34;&gt;f64&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;no&#34;&gt;GGX&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;roughness&lt;/span&gt;: &lt;span class=&#34;kt&#34;&gt;f64&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GGXReflection&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;roughness&lt;/span&gt;: &lt;span class=&#34;kt&#34;&gt;f64&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;refractive_index&lt;/span&gt;: &lt;span class=&#34;kt&#34;&gt;f64&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-rust" data-lang="rust"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#[derive(Clone, Debug)]&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;pub&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;enum&lt;/span&gt; &lt;span class="nc"&gt;SurfaceType&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Diffuse&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Specular&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Refraction&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;refractive_index&lt;/span&gt;: &lt;span class="kt"&gt;f64&lt;/span&gt; &lt;span class="p"&gt;},&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="no"&gt;GGX&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;roughness&lt;/span&gt;: &lt;span class="kt"&gt;f64&lt;/span&gt; &lt;span class="p"&gt;},&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;GGXReflection&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;roughness&lt;/span&gt;: &lt;span class="kt"&gt;f64&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;refractive_index&lt;/span&gt;: &lt;span class="kt"&gt;f64&lt;/span&gt; &lt;span class="p"&gt;},&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
 &lt;/p&gt;
 &lt;p&gt;言語組み込みのnull許容型（
 ）もenumで実装されていました。
 &lt;code&gt;Option&amp;lt;T&amp;gt;&lt;/code&gt;を&lt;code&gt;Some(T)&lt;/code&gt;または&lt;code&gt;None&lt;/code&gt;をとるenumにすることでnullチェック漏れをコンパイル時の型のチェックでエラーとして検出できます。
 この仕組はとても賢いですね。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;pub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;enum&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Option&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Some&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-rust" data-lang="rust"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;pub&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;enum&lt;/span&gt; &lt;span class="nb"&gt;Option&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;Some&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;HaskellのMaybeモナドと全く同じ仕組みなので、関数型言語の良いところも取り入れているのかなと思いました。&lt;/p&gt;
 &lt;p&gt;他にも
 も充実していて好感が持てました。&lt;/p&gt;
-&lt;h4 id=&#34;rustのオススメide&#34;&gt;RustのオススメIDE&lt;/h4&gt;
+&lt;h4 id="rustのオススメide"&gt;RustのオススメIDE&lt;/h4&gt;
 &lt;p&gt;個人的にRustの開発環境は
 をインストールするのが最強だと思いました。
 関数定義にジャンプできるのはもちろん、メソッド名の補完やリファクタリングなども普通に使えます。Vimは卒業しました。&lt;/p&gt;
-&lt;h3 id=&#34;デバッグ機能&#34;&gt;デバッグ機能&lt;/h3&gt;
+&lt;h3 id="デバッグ機能"&gt;デバッグ機能&lt;/h3&gt;
 &lt;p&gt;レンダラーがある程度完成したら、シーンの編集作業がメインになっていきます。
 しかし、シーンの確認のためにレンダリング結果を何分も待つのは時間の無駄です。&lt;/p&gt;
 &lt;p&gt;そこで直接照明のみ考慮し、屈折や反射をしない高速なレンダリングのモードを実装しました。&lt;/p&gt;
 &lt;p&gt;その他にも、法線・深度値・焦点面からの距離を表示するデバッグ機能を実装して、シーン編集の効率を向上させました。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;debug&#34; 
-               srcset=&#34;http://localhost:1313/blog/2017/10/02/rtcamp5/debug_hu_c1f5862dc53fb0ad.webp 320w, http://localhost:1313/blog/2017/10/02/rtcamp5/debug_hu_8741b0acdd5d5557.webp 480w, http://localhost:1313/blog/2017/10/02/rtcamp5/debug_hu_185fb7c94bdd9b2a.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2017/10/02/rtcamp5/debug_hu_c1f5862dc53fb0ad.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;428&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="debug"
+srcset="http://gam0022.net/blog/2017/10/02/rtcamp5/debug_hu_c1f5862dc53fb0ad.webp 320w, http://gam0022.net/blog/2017/10/02/rtcamp5/debug_hu_8741b0acdd5d5557.webp 480w, http://gam0022.net/blog/2017/10/02/rtcamp5/debug_hu_185fb7c94bdd9b2a.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="http://gam0022.net/blog/2017/10/02/rtcamp5/debug_hu_c1f5862dc53fb0ad.webp"
+width="760"
+height="428"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;h2 id="まとめ"&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;締め切り駆動開発でしたが、前から試したかったBVHなどを実装できたので良かったです。
 Rustも手ごわかったですが、気合でなんとか習得することができました。&lt;/p&gt;
 &lt;p&gt;合宿のセミナーや雑談などでは、レンダリング分野の最先端で活躍されている方々にレイトレの知見をいただき、モチベーションが高まりました。
@@ -1191,54 +1039,38 @@ Rustも手ごわかったですが、気合でなんとか習得することが�
 &lt;p&gt;運営・企画してくださった
 さん、
 さん、本当にありがとうございました。&lt;/p&gt;
-&lt;h2 id=&#34;おまけ制作の過程&#34;&gt;おまけ：制作の過程&lt;/h2&gt;
+&lt;h2 id="おまけ制作の過程"&gt;おまけ：制作の過程&lt;/h2&gt;
 &lt;p&gt;モチベーション維持のために進捗をTwitterにアップロードするようにしました。&lt;/p&gt;
 &lt;p&gt;徐々にステップアップしていく様子を振り返ることができたので、やってよかったと思います。&lt;/p&gt;
 &lt;!--これまでTwitterのモーメント機能を活用していませんでしたが、ツイートをブログにまとめるときには便利ですね。--&gt;
-&lt;p&gt;&lt;a class=&#34;twitter-moment&#34; href=&#34;https://twitter.com/i/moments/913798905455718401?ref_src=twsrc%5Etfw&#34;&gt;レイトレ合宿5‽&lt;/a&gt; &lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="twitter-moment" href="https://twitter.com/i/moments/913798905455718401?ref_src=twsrc%5Etfw"&gt;レイトレ合宿5‽&lt;/a&gt; &lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
 &lt;p&gt;資料公開したときのツイートです。&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&#34;&gt;#レイトレ合宿&lt;/a&gt; のためにRustで開発したパストレーサの紹介スライドです。 BVHによるポリゴンとの衝突判定を高速化、薄レンズモデルによる被写界深度などしました😆&lt;a href=&#34;https://t.co/itDLyWNpFx&#34;&gt;https://t.co/itDLyWNpFx&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/906817610246848512&#34;&gt;2017年9月10日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-conversation="none" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;&lt;a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash"&gt;#レイトレ合宿&lt;/a&gt; のためにRustで開発したパストレーサの紹介スライドです。 BVHによるポリゴンとの衝突判定を高速化、薄レンズモデルによる被写界深度などしました😆&lt;a href="https://t.co/itDLyWNpFx"&gt;https://t.co/itDLyWNpFx&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/906817610246848512"&gt;2017年9月10日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;!--
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;土日はRustを頑張っていた。&lt;br&gt;鬼門と噂の所有権や借用については、予習してきたので、思ったより苦労せずに済んだ。&lt;br&gt;Rustはスタック領域にメモリ確保するので、structのサイズが事前に分かってないとコンパイルできない仕様に悩まされた(Box&amp;lt;T&amp;gt;で解決)。&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/891665053644054529&#34;&gt;2017年7月30日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Rustで生成した最初の画像&lt;br&gt;image crateが超便利だった。 &lt;a href=&#34;https://t.co/ZCZrg05ms6&#34;&gt;pic.twitter.com/ZCZrg05ms6&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/891665290659889153&#34;&gt;2017年7月30日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;なんとかレイを飛ばすことに成功した図&lt;br&gt;Rust、慣れるまでがやっぱり大変だった...&lt;br&gt;実装1割、コンパイル通すの9割みたいな時間配分ｗ &lt;a href=&#34;https://t.co/bmD8pwaWRR&#34;&gt;pic.twitter.com/bmD8pwaWRR&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/891665866089091072&#34;&gt;2017年7月30日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Planeを実装。&lt;br&gt;スクリーン上のY軸を反転させるのを忘れていて、座標系が何もかもバグってたのを修正。&lt;br&gt;ずっと床が無い状態だったので気がつけなかった…ｗ&lt;br&gt;影もつけた。 &lt;a href=&#34;https://t.co/MKtlNsBHyB&#34;&gt;pic.twitter.com/MKtlNsBHyB&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/891723700139024384&#34;&gt;2017年7月30日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;パストレができるようになった。&lt;br&gt;Rayonで並列処理も実現できた。&lt;br&gt;Macでコード書いていたけど、rustupでWindowsにRustインストールしたら、手直し0でcargo buildでWindows用バイナリ生成できた。Rust良いね。 &lt;a href=&#34;https://t.co/VhIqlu1bqe&#34;&gt;pic.twitter.com/VhIqlu1bqe&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/893725960180187137&#34;&gt;2017年8月5日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;SuperSampling + IBL実装&lt;br&gt;フルスクラッチでCubeTexture実装したことなかったので、画像の向きが滅茶苦茶になるのを治すのに苦労した。&lt;br&gt;Bilinearフィルター実装しないとジャギがやばいね… &lt;a href=&#34;https://t.co/zZIl36eXEV&#34;&gt;pic.twitter.com/zZIl36eXEV&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/893889557027987456&#34;&gt;2017年8月5日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Bilinearフィルターできた。&lt;br&gt;一度もバグらせることなく実装できたので良かった。 &lt;a href=&#34;https://t.co/462rdPWGjP&#34;&gt;pic.twitter.com/462rdPWGjP&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/894090372707606528&#34;&gt;2017年8月6日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;GGXと屈折できた〜&lt;br&gt;右の紫はGGX+屈折の磨りガラスにしているけど、床が単色だから普通の屈折面と区別がつかないw &lt;a href=&#34;https://t.co/jlNaPeWRI6&#34;&gt;pic.twitter.com/jlNaPeWRI6&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/894204969674391552&#34;&gt;2017年8月6日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;テクスチャ対応とガンマ補正した。&lt;br&gt;エイリアシングが酷すぎるが、Mipmapの実装は今回は見送ろうかな &lt;a href=&#34;https://t.co/XMGUbfJ3Ab&#34;&gt;pic.twitter.com/XMGUbfJ3Ab&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/895954424656388097&#34;&gt;2017年8月11日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ポリゴンの衝突判定とobjファイルのローダを実装した。&lt;br&gt;モデルは1000ポリゴンに削ったスタンフォードバニー。&lt;br&gt;ついでに簡単なBVHも実装してポリゴンの衝突判定を高速化してみた。 &lt;a href=&#34;https://t.co/7yWJQnnpyR&#34;&gt;pic.twitter.com/7yWJQnnpyR&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/896963739412340736&#34;&gt;2017年8月14日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;被写界深度（レンズのピンぼけ）をシミュレーションした。&lt;br&gt;薄レンズモデルで、絞り羽根は円形。&lt;br&gt;時間があれば、星型とか六角形とか、面白い絞り羽根も試してみたい。 &lt;a href=&#34;https://t.co/YAkiJwF0WA&#34;&gt;pic.twitter.com/YAkiJwF0WA&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/897685643672920064&#34;&gt;2017年8月16日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
+&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;土日はRustを頑張っていた。&lt;br&gt;鬼門と噂の所有権や借用については、予習してきたので、思ったより苦労せずに済んだ。&lt;br&gt;Rustはスタック領域にメモリ確保するので、structのサイズが事前に分かってないとコンパイルできない仕様に悩まされた(Box&amp;lt;T&amp;gt;で解決)。&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/891665053644054529"&gt;2017年7月30日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-conversation="none" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;Rustで生成した最初の画像&lt;br&gt;image crateが超便利だった。 &lt;a href="https://t.co/ZCZrg05ms6"&gt;pic.twitter.com/ZCZrg05ms6&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/891665290659889153"&gt;2017年7月30日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-conversation="none" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;なんとかレイを飛ばすことに成功した図&lt;br&gt;Rust、慣れるまでがやっぱり大変だった...&lt;br&gt;実装1割、コンパイル通すの9割みたいな時間配分ｗ &lt;a href="https://t.co/bmD8pwaWRR"&gt;pic.twitter.com/bmD8pwaWRR&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/891665866089091072"&gt;2017年7月30日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-conversation="none" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;Planeを実装。&lt;br&gt;スクリーン上のY軸を反転させるのを忘れていて、座標系が何もかもバグってたのを修正。&lt;br&gt;ずっと床が無い状態だったので気がつけなかった…ｗ&lt;br&gt;影もつけた。 &lt;a href="https://t.co/MKtlNsBHyB"&gt;pic.twitter.com/MKtlNsBHyB&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/891723700139024384"&gt;2017年7月30日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-conversation="none" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;パストレができるようになった。&lt;br&gt;Rayonで並列処理も実現できた。&lt;br&gt;Macでコード書いていたけど、rustupでWindowsにRustインストールしたら、手直し0でcargo buildでWindows用バイナリ生成できた。Rust良いね。 &lt;a href="https://t.co/VhIqlu1bqe"&gt;pic.twitter.com/VhIqlu1bqe&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/893725960180187137"&gt;2017年8月5日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-conversation="none" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;SuperSampling + IBL実装&lt;br&gt;フルスクラッチでCubeTexture実装したことなかったので、画像の向きが滅茶苦茶になるのを治すのに苦労した。&lt;br&gt;Bilinearフィルター実装しないとジャギがやばいね… &lt;a href="https://t.co/zZIl36eXEV"&gt;pic.twitter.com/zZIl36eXEV&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/893889557027987456"&gt;2017年8月5日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-conversation="none" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;Bilinearフィルターできた。&lt;br&gt;一度もバグらせることなく実装できたので良かった。 &lt;a href="https://t.co/462rdPWGjP"&gt;pic.twitter.com/462rdPWGjP&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/894090372707606528"&gt;2017年8月6日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-conversation="none" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;GGXと屈折できた〜&lt;br&gt;右の紫はGGX+屈折の磨りガラスにしているけど、床が単色だから普通の屈折面と区別がつかないw &lt;a href="https://t.co/jlNaPeWRI6"&gt;pic.twitter.com/jlNaPeWRI6&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/894204969674391552"&gt;2017年8月6日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-conversation="none" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;テクスチャ対応とガンマ補正した。&lt;br&gt;エイリアシングが酷すぎるが、Mipmapの実装は今回は見送ろうかな &lt;a href="https://t.co/XMGUbfJ3Ab"&gt;pic.twitter.com/XMGUbfJ3Ab&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/895954424656388097"&gt;2017年8月11日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-conversation="none" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;ポリゴンの衝突判定とobjファイルのローダを実装した。&lt;br&gt;モデルは1000ポリゴンに削ったスタンフォードバニー。&lt;br&gt;ついでに簡単なBVHも実装してポリゴンの衝突判定を高速化してみた。 &lt;a href="https://t.co/7yWJQnnpyR"&gt;pic.twitter.com/7yWJQnnpyR&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/896963739412340736"&gt;2017年8月14日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" data-conversation="none" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;被写界深度（レンズのピンぼけ）をシミュレーションした。&lt;br&gt;薄レンズモデルで、絞り羽根は円形。&lt;br&gt;時間があれば、星型とか六角形とか、面白い絞り羽根も試してみたい。 &lt;a href="https://t.co/YAkiJwF0WA"&gt;pic.twitter.com/YAkiJwF0WA&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/897685643672920064"&gt;2017年8月16日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 賞品もいただいたときのツイートです。
-
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;入賞商品の「つかめる水」をいただいました😂&lt;br&gt;来年のシーンは決まりましたね &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash&#34;&gt;#レイトレ合宿&lt;/a&gt; &lt;a href=&#34;https://t.co/VihgAITecy&#34;&gt;pic.twitter.com/VihgAITecy&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/906670183867080704&#34;&gt;2017年9月10日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
---&gt;</description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;入賞商品の「つかめる水」をいただいました😂&lt;br&gt;来年のシーンは決まりましたね &lt;a href="https://twitter.com/hashtag/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E5%90%88%E5%AE%BF?src=hash"&gt;#レイトレ合宿&lt;/a&gt; &lt;a href="https://t.co/VihgAITecy"&gt;pic.twitter.com/VihgAITecy&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/906670183867080704"&gt;2017年9月10日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+--&gt;</description></item></channel></rss>

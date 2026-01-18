@@ -1,23 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>C# | gam0022.net</title>
-    <link>http://localhost:1313/tags/c%23/</link>
-      <atom:link href="http://localhost:1313/tags/c%23/index.xml" rel="self" type="application/rss+xml" />
-    <description>C#</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 22 Jun 2013 23:23:00 +0900</lastBuildDate>
-    <image>
-      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
-      <title>C#</title>
-      <link>http://localhost:1313/tags/c%23/</link>
-    </image>
-    
-    <item>
-      <title>つくばC#勉強会(tkbcsmt)に参加</title>
-      <link>http://localhost:1313/blog/2013/06/22/tkbcsmt/</link>
-      <pubDate>Sat, 22 Jun 2013 23:23:00 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2013/06/22/tkbcsmt/</guid>
-      <description>&lt;p&gt;今日は
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>C# | gam0022.net</title><link>http://gam0022.net/tags/c%23/</link><atom:link href="http://gam0022.net/tags/c%23/index.xml" rel="self" type="application/rss+xml"/><description>C#</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 22 Jun 2013 23:23:00 +0900</lastBuildDate><image><url>http://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>C#</title><link>http://gam0022.net/tags/c%23/</link></image><item><title>つくばC#勉強会(tkbcsmt)に参加</title><link>http://gam0022.net/blog/2013/06/22/tkbcsmt/</link><pubDate>Sat, 22 Jun 2013 23:23:00 +0900</pubDate><guid>http://gam0022.net/blog/2013/06/22/tkbcsmt/</guid><description>&lt;p&gt;今日は
 に参加してきました。&lt;/p&gt;
 &lt;p&gt;期末テスト直前でしたが、C#界隈のすごい人が参加するようだったので、怖いもの見たさに参加してしまいました。&lt;/p&gt;
 &lt;p&gt;会場に着いてみると、人がいっぱいで驚きました、筑波大学生じゃない人がたくさん参加している様子でした。(はるばる陸の孤島までお疲れ様です。)&lt;/p&gt;
@@ -27,9 +8,4 @@
 &lt;p&gt;特に
 の岩永さんの話はあまりC#と関係はなかったのですが、
 自分のキャリアプランを考え直すきっかけになりそうなありがたい話でした。やっぱり余裕は大切ですね。&lt;/p&gt;
-&lt;p&gt;最後に、主催者のねぎさんやその他のスタッフは本当にお疲れ様でした。&lt;/p&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;p&gt;最後に、主催者のねぎさんやその他のスタッフは本当にお疲れ様でした。&lt;/p&gt;</description></item></channel></rss>

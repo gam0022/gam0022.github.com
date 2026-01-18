@@ -1,37 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Contest | gam0022.net</title>
-    <link>http://localhost:1313/tags/contest/</link>
-      <atom:link href="http://localhost:1313/tags/contest/index.xml" rel="self" type="application/rss+xml" />
-    <description>Contest</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Feb 2014 13:55:00 +0900</lastBuildDate>
-    <image>
-      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
-      <title>Contest</title>
-      <link>http://localhost:1313/tags/contest/</link>
-    </image>
-    
-    <item>
-      <title>COJTの成果発表を終えて</title>
-      <link>http://localhost:1313/blog/2014/02/01/cojt/</link>
-      <pubDate>Sat, 01 Feb 2014 13:55:00 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2014/02/01/cojt/</guid>
-      <description>&lt;h2 id=&#34;cojtとは&#34;&gt;COJTとは&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Contest | gam0022.net</title><link>http://gam0022.net/tags/contest/</link><atom:link href="http://gam0022.net/tags/contest/index.xml" rel="self" type="application/rss+xml"/><description>Contest</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Feb 2014 13:55:00 +0900</lastBuildDate><image><url>http://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Contest</title><link>http://gam0022.net/tags/contest/</link></image><item><title>COJTの成果発表を終えて</title><link>http://gam0022.net/blog/2014/02/01/cojt/</link><pubDate>Sat, 01 Feb 2014 13:55:00 +0900</pubDate><guid>http://gam0022.net/blog/2014/02/01/cojt/</guid><description>&lt;h2 id="cojtとは"&gt;COJTとは&lt;/h2&gt;
 &lt;p&gt;1/31に、筑波大学キャンパスOJT(以下COJT)という大学の産学連携の授業の成果発表をしてきました。&lt;/p&gt;
 &lt;p&gt;COJTには、ソフトウェアコースとハードウェアコースがあり、私はソフトウェアコースの方を受講しました。&lt;/p&gt;
 &lt;p&gt;ソフトウェアコースでは、アクセル社のAG4というグラッフィクスLSIで動作するゲームの開発と発表を行いました。&lt;/p&gt;
 &lt;p&gt;ハードウェアコースは、FPGAを使って各自好きな回路を作成したようです。&lt;/p&gt;
-&lt;h2 id=&#34;開発したゲームについて&#34;&gt;開発したゲームについて&lt;/h2&gt;
+&lt;h2 id="開発したゲームについて"&gt;開発したゲームについて&lt;/h2&gt;
 &lt;p&gt;私たちのチームは「大五郎の冒険」という横スクロールアクションゲームを作りました。&lt;/p&gt;
 &lt;p&gt;主人公は「大五郎」という犬で、行方不明になった、飼い主の「えりたん」を探しに冒険する、というストーリでした。&lt;/p&gt;
 &lt;p&gt;知っている人は知っていると思いますが、「大五郎」も「えりたん」もTwitterのBotなので、
 攻撃方法や技は Twitter のお気に入りやリツイートなどをモチーフにしました。&lt;/p&gt;
 &lt;p&gt;スクリーンショットを貼るのが面倒なので、Twitterのツイートを埋め込みます。&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;ja&#34;&gt;&lt;p&gt;【お知らせ】大五郎とえりたんが登場するアクションゲームを作りました！&amp;#10;1/31(金) 4・5限の時間にCOJTルーム(3C203)で遊べます！ぜひ見に来て下さい！ &lt;a href=&#34;https://twitter.com/search?q=%23daigoroubot&amp;amp;src=hash&#34;&gt;#daigoroubot&lt;/a&gt; &lt;a href=&#34;http://t.co/tYAP0cvvwa&#34;&gt;pic.twitter.com/tYAP0cvvwa&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/statuses/428066152917381120&#34;&gt;2014, 1月 28&lt;/a&gt;&lt;/blockquote&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;ja&#34;&gt;&lt;p&gt;【明日】大五郎とえりたんが登場するアクションゲームを作りました！ 1/31(金) 4・5限の時間にCOJTルーム(3C203)で遊べます！ぜひ見に来て下さい！ &lt;a href=&#34;https://twitter.com/search?q=%23daigoroubot&amp;amp;src=hash&#34;&gt;#daigoroubot&lt;/a&gt; &lt;a href=&#34;http://t.co/yMsYfx9TmU&#34;&gt;pic.twitter.com/yMsYfx9TmU&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/statuses/428761820925423616&#34;&gt;2014, 1月 30&lt;/a&gt;&lt;/blockquote&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;ja&#34;&gt;&lt;p&gt;COJTなう！ &lt;a href=&#34;http://t.co/AZNyWpdUSr&#34;&gt;pic.twitter.com/AZNyWpdUSr&lt;/a&gt;&lt;/p&gt;&amp;mdash; atk (@hhelibe0207) &lt;a href=&#34;https://twitter.com/hhelibe0207/statuses/429111570275119105&#34;&gt;2014, 1月 31&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;【お知らせ】大五郎とえりたんが登場するアクションゲームを作りました！&amp;#10;1/31(金) 4・5限の時間にCOJTルーム(3C203)で遊べます！ぜひ見に来て下さい！ &lt;a href="https://twitter.com/search?q=%23daigoroubot&amp;amp;src=hash"&gt;#daigoroubot&lt;/a&gt; &lt;a href="http://t.co/tYAP0cvvwa"&gt;pic.twitter.com/tYAP0cvvwa&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/statuses/428066152917381120"&gt;2014, 1月 28&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;【明日】大五郎とえりたんが登場するアクションゲームを作りました！ 1/31(金) 4・5限の時間にCOJTルーム(3C203)で遊べます！ぜひ見に来て下さい！ &lt;a href="https://twitter.com/search?q=%23daigoroubot&amp;amp;src=hash"&gt;#daigoroubot&lt;/a&gt; &lt;a href="http://t.co/yMsYfx9TmU"&gt;pic.twitter.com/yMsYfx9TmU&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/statuses/428761820925423616"&gt;2014, 1月 30&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;COJTなう！ &lt;a href="http://t.co/AZNyWpdUSr"&gt;pic.twitter.com/AZNyWpdUSr&lt;/a&gt;&lt;/p&gt;&amp;mdash; atk (@hhelibe0207) &lt;a href="https://twitter.com/hhelibe0207/statuses/429111570275119105"&gt;2014, 1月 31&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;p&gt;説明書もあるので、アップロードしておきます。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -39,8 +20,8 @@
 &lt;/ul&gt;
 &lt;p&gt;画面はとてもゆるふわ系で明るい感じですが、難易度は鬼畜です。&lt;/p&gt;
 &lt;p&gt;それを想定して、30回コンティニュー可能にしました。&lt;/p&gt;
-&lt;h2 id=&#34;開発中のこと&#34;&gt;開発中のこと&lt;/h2&gt;
-&lt;h3 id=&#34;全体の流れ&#34;&gt;全体の流れ&lt;/h3&gt;
+&lt;h2 id="開発中のこと"&gt;開発中のこと&lt;/h2&gt;
+&lt;h3 id="全体の流れ"&gt;全体の流れ&lt;/h3&gt;
 &lt;p&gt;大学の後期の授業のプロジェクトだったので、10月から1月の4ヶ月の開発期間でした。&lt;/p&gt;
 &lt;p&gt;4ヶ月というと長いような感じがしますが、この間にAG4での開発を覚えるための課題があったり、
 ゲームの企画を考えたり、冬休みや就活などがあったので、実際に集中して開発できたのは、冬休み明けの1ヶ月くらいでした。&lt;/p&gt;
@@ -49,69 +30,54 @@
 &lt;p&gt;採用されなかった企画の人は、くじ引きで採用された企画の人とペアを組んで開発しました。
 ちなみに、講師の独断と偏見によって、企画は選定は行われました。&lt;/p&gt;
 &lt;p&gt;私の企画は幸いなことに審査を通過して、好きなゲームを開発することができました。&lt;/p&gt;
-&lt;h4 id=&#34;音声収録&#34;&gt;音声収録&lt;/h4&gt;
+&lt;h4 id="音声収録"&gt;音声収録&lt;/h4&gt;
 &lt;p&gt;また、1月の10日に、実際にスタジオまで行って、ゲーム用の音声をプロ声優の
 さんに収録して頂きました。&lt;/p&gt;
 &lt;p&gt;プロの声優さんは、本当にすごかったです。テンションが上がりました。&lt;/p&gt;
 &lt;p&gt;少年から幼女、犬まで、あらゆる役を完璧に演じてしまったので感動しました。&lt;/p&gt;
 &lt;p&gt;この音声収録ができただけでも、この授業を受けた価値があったなと思いました。&lt;/p&gt;
 &lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-full&#34; &gt;
-          &lt;img alt=&#34;音声収録風景&#34; 
-               srcset=&#34;http://localhost:1313/blog/2014/02/01/cojt/voice_hu_848845ec0b3b5eff.webp 320w, http://localhost:1313/blog/2014/02/01/cojt/voice_hu_3b42a6959064955d.webp 480w, http://localhost:1313/blog/2014/02/01/cojt/voice_hu_2529165d1245bf5a.webp 760w&#34;
-               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
-               src=&#34;http://localhost:1313/blog/2014/02/01/cojt/voice_hu_848845ec0b3b5eff.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;570&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="音声収録風景"
+srcset="http://gam0022.net/blog/2014/02/01/cojt/voice_hu_848845ec0b3b5eff.webp 320w, http://gam0022.net/blog/2014/02/01/cojt/voice_hu_3b42a6959064955d.webp 480w, http://gam0022.net/blog/2014/02/01/cojt/voice_hu_2529165d1245bf5a.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="http://gam0022.net/blog/2014/02/01/cojt/voice_hu_848845ec0b3b5eff.webp"
+width="760"
+height="570"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h3 id=&#34;技術的なこと&#34;&gt;技術的なこと&lt;/h3&gt;
+&lt;h3 id="技術的なこと"&gt;技術的なこと&lt;/h3&gt;
 &lt;p&gt;AG4に対応したコンパイラがCしか無くて苦労しました。(しかも古いC89とかの古い規格でした。)&lt;/p&gt;
 &lt;p&gt;動的デバッグもできなかったので、モダンな開発方法に慣れた私にとっては非常に辛いものでした。&lt;/p&gt;
 &lt;p&gt;allocなどで動的にメモリを確保することもできなかったので、Taskシステムというのを私のチームは採用することにしました。&lt;/p&gt;
-&lt;h4 id=&#34;taskシステム&#34;&gt;Taskシステム&lt;/h4&gt;
-&lt;h5 id=&#34;継承&#34;&gt;継承&lt;/h5&gt;
+&lt;h4 id="taskシステム"&gt;Taskシステム&lt;/h4&gt;
+&lt;h5 id="継承"&gt;継承&lt;/h5&gt;
 &lt;p&gt;例えばアクションゲームであれば、自機や敵やブロックを管理するときに、x,y座標やw,hの大きさなどは共通する情報なので、
 これはBaseObjectのフィールドとして保持しておいて、自機ならHPやら弾の数などを派生クラスのフィールドとして保持しておきたい場面があると思います。&lt;/p&gt;
 &lt;p&gt;要するに継承がしたかったわけですが、これは union を使って解決しました。&lt;/p&gt;
 &lt;p&gt;Taskという struct を BaseObject として、Task の中に Data という union 型のフィールドを用意しました。
 union には 派生クラス用のフィールドを保持する PlayerData や EnemyData などの struct を入れることで、継承っぽいことをしました。&lt;/p&gt;
 &lt;p&gt;union の実用的な使い方を生まれて初めて実践したような気がします。&lt;/p&gt;
-&lt;h5 id=&#34;動的確保&#34;&gt;動的確保&lt;/h5&gt;
+&lt;h5 id="動的確保"&gt;動的確保&lt;/h5&gt;
 &lt;p&gt;継承っぽいことをすることで、ゲーム内の全てのオブジェクトを Task という struct で管理できるようになりました。&lt;/p&gt;
 &lt;p&gt;動的確保については、Task 型の配列をあらかじめ配列として十分な数を確保しておいて、
 allocTask() という関数で、未使用な配列の要素のポインタを返すようにます。&lt;/p&gt;
 &lt;p&gt;不要になった Task は、destoryFlag を立てておいて、allocTask() が呼ばれた時に、
 destoryFlag が立った要素を返すようにすれば、簡単なGCっぽいこともできて完璧でした。&lt;/p&gt;
-&lt;h4 id=&#34;github-の-organization&#34;&gt;GitHub の Organization&lt;/h4&gt;
+&lt;h4 id="github-の-organization"&gt;GitHub の Organization&lt;/h4&gt;
 &lt;p&gt;GitHub の Organization を初めてまともに利用しましたが、簡単に利用できました。&lt;/p&gt;
 &lt;p&gt;pull request とかするよりは断然楽だったと思います。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;キャラクターの動き&#34;&gt;キャラクターの動き&lt;/h4&gt;
+&lt;h4 id="キャラクターの動き"&gt;キャラクターの動き&lt;/h4&gt;
 &lt;p&gt;COJTに実際に見学した人しか分からないとは思いますが、大五郎の動きがすごいヌルヌルしていてよく出来ていたと思います。(手前味噌すぎる。)&lt;/p&gt;
 &lt;p&gt;大五郎のモーションについては相方が全部やってくれました。大五郎の3Dモデルを作成して、MMDでモーションを作って、2Dにレンダリングしました。&lt;/p&gt;
-&lt;h2 id=&#34;投票結果&#34;&gt;投票結果&lt;/h2&gt;
+&lt;h2 id="投票結果"&gt;投票結果&lt;/h2&gt;
 &lt;p&gt;成果発表では、見学者の投票によってゲームの順位が決められるのですが、
 私たちのチームは残念ながら上位1,2チームに入賞することはできまんでした。
 (上位1チームは打ち上げ無料、2チームは成績がA+ という特典がありました。)&lt;/p&gt;
@@ -125,20 +91,16 @@ destoryFlag が立った要素を返すようにすれば、簡単なGCっぽい
 楽しんでくれる人も多いだろうという思惑があったのですが、その点に頼りすぎてしまった様な気がします。&lt;/p&gt;
 &lt;p&gt;難易度はものすごく高くしたつもりでしたが、半分くらいの人が最終面までクリアして、エンディングに辿り着いたので、
 その点は想定していたくらいの難易度にできて、とても良かったと思います。&lt;/p&gt;
-&lt;h2 id=&#34;最後に&#34;&gt;最後に&lt;/h2&gt;
+&lt;h2 id="最後に"&gt;最後に&lt;/h2&gt;
 &lt;p&gt;総合的に考えると、COJTを受講して良かったと思います。&lt;/p&gt;
 &lt;p&gt;前に
 というエントリーを書いたので、詳しくはそちらを参照してください。&lt;/p&gt;
 &lt;p&gt;授業の内容というよりは、3編成やTAなどの新しい人脈が増えて良かったという点ですごい価値がありました。&lt;/p&gt;
 &lt;p&gt;ちょっとしたデスマーチ感も個人的にはすごく楽しかったです!!
 レッドブル美味しい!!&lt;/p&gt;
-&lt;h2 id=&#34;他のチームのエントリー&#34;&gt;他のチームのエントリー&lt;/h2&gt;
+&lt;h2 id="他のチームのエントリー"&gt;他のチームのエントリー&lt;/h2&gt;
 &lt;p&gt;1位のチームの人のエントリーです。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;/ul&gt;</description></item></channel></rss>
