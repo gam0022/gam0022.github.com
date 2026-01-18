@@ -1,12 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>発表資料 | gam0022.net</title><link>https://gam0022.net/tags/%E7%99%BA%E8%A1%A8%E8%B3%87%E6%96%99/</link><atom:link href="https://gam0022.net/tags/%E7%99%BA%E8%A1%A8%E8%B3%87%E6%96%99/index.xml" rel="self" type="application/rss+xml"/><description>発表資料</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 15 Feb 2021 13:26:18 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>発表資料</title><link>https://gam0022.net/tags/%E7%99%BA%E8%A1%A8%E8%B3%87%E6%96%99/</link></image><item><title>メガデモ勉強会2021で発表しました</title><link>https://gam0022.net/blog/2021/02/15/demoscene-study-session/</link><pubDate>Mon, 15 Feb 2021 13:26:18 +0900</pubDate><guid>https://gam0022.net/blog/2021/02/15/demoscene-study-session/</guid><description>&lt;p&gt;昨日の2/14（バレンタインデー）に開催された
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>発表資料 | gam0022.net</title>
+    <link>http://localhost:1313/tags/%E7%99%BA%E8%A1%A8%E8%B3%87%E6%96%99/</link>
+      <atom:link href="http://localhost:1313/tags/%E7%99%BA%E8%A1%A8%E8%B3%87%E6%96%99/index.xml" rel="self" type="application/rss+xml" />
+    <description>発表資料</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 15 Feb 2021 13:26:18 +0900</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
+      <title>発表資料</title>
+      <link>http://localhost:1313/tags/%E7%99%BA%E8%A1%A8%E8%B3%87%E6%96%99/</link>
+    </image>
+    
+    <item>
+      <title>メガデモ勉強会2021で発表しました</title>
+      <link>http://localhost:1313/blog/2021/02/15/demoscene-study-session/</link>
+      <pubDate>Mon, 15 Feb 2021 13:26:18 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2021/02/15/demoscene-study-session/</guid>
+      <description>&lt;p&gt;昨日の2/14（バレンタインデー）に開催された
 に参加しました。&lt;/p&gt;
 &lt;p&gt;私は「64KBのWebGLデモを実装する技術とデモ制作から得た『学びと発見』」というタイトルで発表を行いました。&lt;/p&gt;
 &lt;p&gt;発表スライドはこちらです。&lt;/p&gt;
-&lt;iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRd-L7WcWWzcoE9zNpBsJdeMjJf9HelDg1Pto8cFGJTjinejpjZ1mGmzWCZPANJZ0QOCObuVOIdPuy-/embed?start=false&amp;loop=false&amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"&gt;&lt;/iframe&gt;
-&lt;blockquote class="twitter-tweet" data-conversation="none"&gt;&lt;p lang="ja" dir="ltr"&gt;本日の &lt;a href="https://twitter.com/hashtag/%E3%83%A1%E3%82%AC%E3%83%87%E3%83%A2%E5%8B%89%E5%BC%B7%E4%BC%9A?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#メガデモ勉強会&lt;/a&gt; の発表資料です！&lt;br&gt;&lt;br&gt;Revision2020のPC 64K Introで優勝したデモ作品『RE: SIMULATED』を題材にして、効率的なデモ制作に必要なエディタ機能やWebGLのプロジェクトの構成、制作中に直面した問題と解決について解説しました。&lt;br&gt;&lt;br&gt;レイマーチングはいいぞ！&lt;a href="https://t.co/QWHOXHmZqu"&gt;https://t.co/QWHOXHmZqu&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1360889255669633024?ref_src=twsrc%5Etfw"&gt;February 14, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vRd-L7WcWWzcoE9zNpBsJdeMjJf9HelDg1Pto8cFGJTjinejpjZ1mGmzWCZPANJZ0QOCObuVOIdPuy-/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;本日の &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%A1%E3%82%AC%E3%83%87%E3%83%A2%E5%8B%89%E5%BC%B7%E4%BC%9A?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#メガデモ勉強会&lt;/a&gt; の発表資料です！&lt;br&gt;&lt;br&gt;Revision2020のPC 64K Introで優勝したデモ作品『RE: SIMULATED』を題材にして、効率的なデモ制作に必要なエディタ機能やWebGLのプロジェクトの構成、制作中に直面した問題と解決について解説しました。&lt;br&gt;&lt;br&gt;レイマーチングはいいぞ！&lt;a href=&#34;https://t.co/QWHOXHmZqu&#34;&gt;https://t.co/QWHOXHmZqu&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1360889255669633024?ref_src=twsrc%5Etfw&#34;&gt;February 14, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;Revision2020のPC 64K Introで優勝したデモ作品『RE: SIMULATED』を題材にして、効率的なデモ制作に必要なエディタ機能やWebGLのプロジェクトの構成、制作中に直面した問題と解決方法について解説しました。&lt;/p&gt;
 &lt;p&gt;発表の締めとして「CGを学ぶことで世界の解像度を上げるのが楽しい」「レイマーチングはCG入門に最適」という持論について語りました。&lt;/p&gt;
-&lt;h2 id="質疑応答と補足"&gt;質疑応答と補足&lt;/h2&gt;
+&lt;h2 id=&#34;質疑応答と補足&#34;&gt;質疑応答と補足&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;質問1: シェーダーを分割することで容量がどのくらい増えるか？
 &lt;ul&gt;
@@ -52,12 +71,12 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="感想"&gt;感想&lt;/h2&gt;
+&lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;
 &lt;p&gt;かなり久しぶりに日本のデモシーンの人たちとワイワイできて楽しかったです！&lt;/p&gt;
 &lt;p&gt;最後のTokyoDemoFestは2018年の12月なので、もう2年以上も前なんですよね。時間が経つのは早いです。&lt;/p&gt;
 &lt;p&gt;discord上の懇親会では「どうすればライブコーディングを普及できるのか？一般人でも理解できるような実況が必要という仮説」「物理的な会場のクラブの体験とVRの違い」など興味深いお話を聞けて面白かったです。&lt;/p&gt;
 &lt;p&gt;素晴らしいイベントを企画・開催してくださったTDFのオーガナイザーのみなさん、本当にありがとうございました！&lt;/p&gt;
-&lt;h2 id="関連記事"&gt;関連記事&lt;/h2&gt;
+&lt;h2 id=&#34;関連記事&#34;&gt;関連記事&lt;/h2&gt;
 &lt;p&gt;過去の関連登壇や記事のリンクです。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -65,9 +84,14 @@
 &lt;li&gt;
 &lt;/li&gt;
 &lt;li&gt;
+
 &lt;ul&gt;
 &lt;li&gt;この勉強会も5年前のバレンタインデーだったので何かの運命を感じました&lt;/li&gt;
 &lt;li&gt;私がレイマーチングを始めてから5年以上も経過しているのもちょっと驚きでした&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description></item></channel></rss>
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

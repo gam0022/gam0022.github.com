@@ -1,41 +1,71 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Octave | gam0022.net</title><link>https://gam0022.net/tags/octave/</link><atom:link href="https://gam0022.net/tags/octave/index.xml" rel="self" type="application/rss+xml"/><description>Octave</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 06 Sep 2012 19:27:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Octave</title><link>https://gam0022.net/tags/octave/</link></image><item><title>GNU Octave を Mac OS Xにインストールする</title><link>https://gam0022.net/blog/2012/09/06/install-octave-on-mac-os-x/</link><pubDate>Thu, 06 Sep 2012 19:27:00 +0900</pubDate><guid>https://gam0022.net/blog/2012/09/06/install-octave-on-mac-os-x/</guid><description>&lt;p&gt;大学の数値計算法・数理アルゴリズムなどの授業でMatlabを使わないといけないのですが、
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Octave | gam0022.net</title>
+    <link>http://localhost:1313/tags/octave/</link>
+      <atom:link href="http://localhost:1313/tags/octave/index.xml" rel="self" type="application/rss+xml" />
+    <description>Octave</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 06 Sep 2012 19:27:00 +0900</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
+      <title>Octave</title>
+      <link>http://localhost:1313/tags/octave/</link>
+    </image>
+    
+    <item>
+      <title>GNU Octave を Mac OS Xにインストールする</title>
+      <link>http://localhost:1313/blog/2012/09/06/install-octave-on-mac-os-x/</link>
+      <pubDate>Thu, 06 Sep 2012 19:27:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2012/09/06/install-octave-on-mac-os-x/</guid>
+      <description>&lt;p&gt;大学の数値計算法・数理アルゴリズムなどの授業でMatlabを使わないといけないのですが、
 Matlabを買うお金がなかったので、代替ソフトとしてGNU OctaveをMac OS Xに入れました。&lt;/p&gt;
 &lt;p&gt;けっこうハマりどころが多かったのでメモします。&lt;/p&gt;
-&lt;h3 id="gnu-octaveについて"&gt;GNU Octaveについて&lt;/h3&gt;
+&lt;h3 id=&#34;gnu-octaveについて&#34;&gt;GNU Octaveについて&lt;/h3&gt;
 &lt;p&gt;
 からの抜粋です。&lt;/p&gt;
-&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
-&lt;p&gt;GNU Octaveとは、MATLABと互換性を持ったフリーな数値解析ソフトウェアであり、GNUで開発している。
+
+
+
+  
+  &lt;blockquote class=&#34;border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6&#34;&gt;
+    &lt;p&gt;GNU Octaveとは、MATLABと互換性を持ったフリーな数値解析ソフトウェアであり、GNUで開発している。
 MATLABとの互換性を主に目指しており、MATLABの機能の多くをOctaveも持っている。また MATLAB のために書かれたプログラムも修正せずに動作するものが多い。&lt;/p&gt;
-&lt;/blockquote&gt;
+
+  &lt;/blockquote&gt;
+
 &lt;p&gt;
 &lt;/p&gt;
-&lt;h3 id="mountain-lion-にしたらhomebrewがおかしくなった人はこれ"&gt;Mountain Lion にしたらHomebrewがおかしくなった人はこれ&lt;/h3&gt;
+&lt;h3 id=&#34;mountain-lion-にしたらhomebrewがおかしくなった人はこれ&#34;&gt;Mountain Lion にしたらHomebrewがおかしくなった人はこれ&lt;/h3&gt;
 &lt;p&gt;Mountain Lion にしたら、Homebrewがおかしくなった人は、まず次のリンクを参考にしてFixしましょう。&lt;/p&gt;
 &lt;p&gt;
 &lt;/p&gt;
-&lt;h3 id="homebrewでoctaveを入れる"&gt;HomebrewでOctaveを入れる&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;## リポジトリ追加&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew tap free/open
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;## updateしないとうまくいかなかった&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew update
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;## OctaveのコンパイルにFortranのコンパイラが必要&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install gfortran
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;## ようやくOctaveがコンパイルできる&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install octave
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="plotとかでグラフを描けるようにする"&gt;plotとかでグラフを描けるようにする&lt;/h3&gt;
+&lt;h3 id=&#34;homebrewでoctaveを入れる&#34;&gt;HomebrewでOctaveを入れる&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## リポジトリ追加&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew tap free/open
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## updateしないとうまくいかなかった&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## OctaveのコンパイルにFortranのコンパイラが必要&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install gfortran
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## ようやくOctaveがコンパイルできる&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install octave
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;plotとかでグラフを描けるようにする&#34;&gt;plotとかでグラフを描けるようにする&lt;/h3&gt;
 &lt;p&gt;Octave自体には、グラフの描画機能はなく、gnuplotに依存しているのでgnuplotを入れます。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install gnuplot
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install gnuplot
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;次に、&lt;code&gt;GNUTERM&lt;/code&gt;という環境変数を設定します。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;## ~/.bash_profile&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;GNUTERM&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;x11
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## ~/.bash_profile&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;GNUTERM&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;x11
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;次に&lt;code&gt;source ~/.bash_profile&lt;/code&gt;をするかログインし直せばOctaveでplotなどからグラフを描画できるようになります。&lt;/p&gt;
 &lt;p&gt;ちなみに、&lt;code&gt;GNUTERM&lt;/code&gt;を設定しないとこういう感じのエラーになります。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-matlab" data-lang="matlab"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;octave&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;gnuplot&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="n"&gt;terminal&lt;/span&gt; &lt;span class="n"&gt;aqua&lt;/span&gt; &lt;span class="n"&gt;enhanced&lt;/span&gt; &lt;span class="n"&gt;title&lt;/span&gt; &amp;#34;&lt;span class="n"&gt;Figure&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&amp;#34; &lt;span class="nb"&gt;size&lt;/span&gt; &lt;span class="mi"&gt;560&lt;/span&gt; &lt;span class="mi"&gt;420&lt;/span&gt; &lt;span class="n"&gt;font&lt;/span&gt; &amp;#34;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ^
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;unknown&lt;/span&gt; &lt;span class="n"&gt;or&lt;/span&gt; &lt;span class="n"&gt;ambiguous&lt;/span&gt; &lt;span class="n"&gt;terminal&lt;/span&gt; &lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;type&lt;/span&gt; &lt;span class="n"&gt;just&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;set terminal&amp;#39;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-matlab&#34; data-lang=&#34;matlab&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;octave&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;plot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;gnuplot&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;terminal&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;aqua&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;enhanced&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;title&lt;/span&gt; &amp;#34;&lt;span class=&#34;n&#34;&gt;Figure&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&amp;#34; &lt;span class=&#34;nb&#34;&gt;size&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;560&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;420&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;font&lt;/span&gt; &amp;#34;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                      ^
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;         &lt;span class=&#34;n&#34;&gt;line&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;unknown&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;or&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ambiguous&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;terminal&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;just&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;set terminal&amp;#39;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
 &lt;/p&gt;
-&lt;h3 id="まとめ"&gt;まとめ&lt;/h3&gt;
-&lt;p&gt;これで、計算機室のゴミみたいなマシンを使わずとも課題ができます。&lt;/p&gt;</description></item></channel></rss>
+&lt;h3 id=&#34;まとめ&#34;&gt;まとめ&lt;/h3&gt;
+&lt;p&gt;これで、計算機室のゴミみたいなマシンを使わずとも課題ができます。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

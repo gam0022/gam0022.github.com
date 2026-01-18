@@ -1,26 +1,60 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Web | gam0022.net</title><link>https://gam0022.net/tags/web/</link><atom:link href="https://gam0022.net/tags/web/index.xml" rel="self" type="application/rss+xml"/><description>Web</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 07 May 2022 20:05:08 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Web</title><link>https://gam0022.net/tags/web/</link></image><item><title>HugoをGitHub Pagesで公開し、2リポジトリ構成の管理を楽にする方法</title><link>https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/</link><pubDate>Sat, 07 May 2022 20:05:08 +0900</pubDate><guid>https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/</guid><description>&lt;p&gt;本サイトのホスト先をConoHa VPSからGitHub Pagesに乗り換えました。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web | gam0022.net</title>
+    <link>http://localhost:1313/tags/web/</link>
+      <atom:link href="http://localhost:1313/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <description>Web</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 07 May 2022 20:05:08 +0900</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
+      <title>Web</title>
+      <link>http://localhost:1313/tags/web/</link>
+    </image>
+    
+    <item>
+      <title>HugoをGitHub Pagesで公開し、2リポジトリ構成の管理を楽にする方法</title>
+      <link>http://localhost:1313/blog/2022/05/07/hugo-on-github-pages/</link>
+      <pubDate>Sat, 07 May 2022 20:05:08 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2022/05/07/hugo-on-github-pages/</guid>
+      <description>&lt;p&gt;本サイトのホスト先をConoHa VPSからGitHub Pagesに乗り換えました。&lt;/p&gt;
 &lt;p&gt;実は去年の5月に乗り換えていて、1年ほど運用して方針が固まったので記事にしました。&lt;/p&gt;
 &lt;p&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;
-&lt;img alt="Hugo on GitHub Pages"
-srcset="https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/thumbnail_hu_2c12a4c7778006e.webp 320w, https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/thumbnail_hu_a29ec60c1959089c.webp 480w, https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/thumbnail_hu_b28052d17eb991ee.webp 760w"
-sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/thumbnail_hu_2c12a4c7778006e.webp"
-width="760"
-height="428"
-loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;Hugo on GitHub Pages&#34; 
+               srcset=&#34;http://localhost:1313/blog/2022/05/07/hugo-on-github-pages/thumbnail_hu_2c12a4c7778006e.webp 320w, http://localhost:1313/blog/2022/05/07/hugo-on-github-pages/thumbnail_hu_a29ec60c1959089c.webp 480w, http://localhost:1313/blog/2022/05/07/hugo-on-github-pages/thumbnail_hu_b28052d17eb991ee.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2022/05/07/hugo-on-github-pages/thumbnail_hu_2c12a4c7778006e.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h2 id="vpsgithub-pagesの移行理由"&gt;VPS→GitHub Pagesの移行理由&lt;/h2&gt;
+&lt;h2 id=&#34;vpsgithub-pagesの移行理由&#34;&gt;VPS→GitHub Pagesの移行理由&lt;/h2&gt;
 &lt;p&gt;お金です。費用の削減が目的です。&lt;/p&gt;
 &lt;p&gt;ConoHa VPSは月額1000円ほどの固定費がかかっていましたが、GitHub Pagesは無料です。&lt;/p&gt;
 &lt;p&gt;また、VPSだと急にブログにアクセスが増えた場合にスケールしづらい・費用がかかるなどの懸念もありました。&lt;/p&gt;
-&lt;h2 id="hugoをgithub-pagesにホスティングする"&gt;HugoをGitHub Pagesにホスティングする&lt;/h2&gt;
+&lt;h2 id=&#34;hugoをgithub-pagesにホスティングする&#34;&gt;HugoをGitHub Pagesにホスティングする&lt;/h2&gt;
 &lt;p&gt;GitHub Pagesは、GitHubが静的ウェブページのためのウェブホスティングサービスです。
 HTMLやCSSなどの静的ファイルをGitHubのリポジトリにコミットすることで静的サイトを公開できます。&lt;/p&gt;
-&lt;h3 id="2リポジトリ構成とは"&gt;2リポジトリ構成とは&lt;/h3&gt;
+&lt;h3 id=&#34;2リポジトリ構成とは&#34;&gt;2リポジトリ構成とは&lt;/h3&gt;
 &lt;p&gt;GitHub Pagesでは、特定のブランチやディレクトリをサイトのルートとして指定できます。&lt;/p&gt;
 &lt;p&gt;ディレクトリ指定を考慮すると、大きく分けて2つのリポジトリ構成が考えられます。&lt;/p&gt;
 &lt;ol&gt;
@@ -41,55 +75,57 @@ HTMLやCSSなどの静的ファイルをGitHubのリポジトリにコミット�
 &lt;p&gt;具体的には以下の2つのリポジトリ構成にしました。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
+
 &lt;ul&gt;
 &lt;li&gt;Hugoのプロジェクト（記事のマークダウンやHugoテンプレートなど）のリポジトリ&lt;/li&gt;
 &lt;li&gt;
-&lt;ol start="2"&gt;
+&lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;のリポジトリをsubmoduleとして参照&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
+
 &lt;ul&gt;
 &lt;li&gt;Hugoの生成物（HTMLやCSSなどの公開用の静的コンテンツ）のリポジトリ&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id="2リポジトリ構成のcommitをバッチで自動化"&gt;2リポジトリ構成のcommitをバッチで自動化&lt;/h3&gt;
+&lt;h3 id=&#34;2リポジトリ構成のcommitをバッチで自動化&#34;&gt;2リポジトリ構成のcommitをバッチで自動化&lt;/h3&gt;
 &lt;p&gt;2リポジトリ構成ではコミットが面倒という問題がありました。&lt;/p&gt;
 &lt;p&gt;そこで簡単な.batを書いて、バッチを叩くだけで自動的に2リポジトリのcommitとpushができるようにしました。
 Windowsを利用している人は参考にしてください。&lt;/p&gt;
 &lt;p&gt;
 &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bat" data-lang="bat"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;: コミットメッセージ&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Build &lt;/span&gt;&lt;span class="nv"&gt;%date%&lt;/span&gt;&lt;span class="s2"&gt; &lt;/span&gt;&lt;span class="nv"&gt;%time%&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;pushd&lt;/span&gt; public
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;: publicディレクトリを掃除&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git fetch -p
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git checkout -B master origin/master
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;popd&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;: HTMLを生成&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;hugo.exe
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;pushd&lt;/span&gt; public
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;: HTML生成物をコミット&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git add .
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git commit -m &lt;span class="nv"&gt;%msg%&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git push origin HEAD
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;popd&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;: ソースをコミット&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git add .
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git commit -m &lt;span class="nv"&gt;%msg%&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git push origin HEAD
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="カスタムドメインとssl化"&gt;カスタムドメインとSSL化&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bat&#34; data-lang=&#34;bat&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: コミットメッセージ&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;msg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Build &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%date%&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%time%&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;pushd&lt;/span&gt; public
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: publicディレクトリを掃除&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git fetch -p
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout -B master origin/master
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;popd&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: HTMLを生成&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo.exe
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;pushd&lt;/span&gt; public
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: HTML生成物をコミット&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &lt;span class=&#34;nv&#34;&gt;%msg%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push origin HEAD
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;popd&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: ソースをコミット&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &lt;span class=&#34;nv&#34;&gt;%msg%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push origin HEAD
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;カスタムドメインとssl化&#34;&gt;カスタムドメインとSSL化&lt;/h2&gt;
 &lt;p&gt;現在は独自ドメインのSSL化も簡単にできます。以前はCloudFlare等のCDNが必要でしたが、現在はCDNも不要です。&lt;/p&gt;
 &lt;p&gt;独自ドメインのSSL化に必要な設定は2つだけです。&lt;/p&gt;
 &lt;ol&gt;
@@ -99,79 +135,132 @@ Windowsを利用している人は参考にしてください。&lt;/p&gt;
 &lt;p&gt;この記事の情報が古くなっている可能性もあるので、最新の情報は公式マニュアルも参照してください。&lt;/p&gt;
 &lt;p&gt;
 &lt;/p&gt;
-&lt;h3 id="github側の設定"&gt;GitHub側の設定&lt;/h3&gt;
+&lt;h3 id=&#34;github側の設定&#34;&gt;GitHub側の設定&lt;/h3&gt;
 &lt;p&gt;リポジトリの &lt;code&gt;Settings &amp;gt; Pages &amp;gt; Custom domain&lt;/code&gt; からカスタムドメインを指定できます。&lt;/p&gt;
 &lt;p&gt;SSL証明書の更新まで自動的にGitHub Pages側でやってくれるので、本当にこれだけしかやることがないです。&lt;/p&gt;
 &lt;p&gt;SSL化したい場合には、 &lt;code&gt;Enforce HTTPS&lt;/code&gt; にチェックします。&lt;/p&gt;
 &lt;p&gt;マニュアルにも書かれていますが、DNSやHTTPSの変更が伝播するには、最大24時間かかるそうです。&lt;/p&gt;
 &lt;p&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;
-&lt;img alt="GitHub側の設定"
-srcset="https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/github-custom-domain_hu_a4cf38ed37e0ee3a.webp 320w, https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/github-custom-domain_hu_c3a77f79b948d036.webp 480w, https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/github-custom-domain_hu_ff9df9fa550d07b0.webp 760w"
-sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/github-custom-domain_hu_a4cf38ed37e0ee3a.webp"
-width="760"
-height="532"
-loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;GitHub側の設定&#34; 
+               srcset=&#34;http://localhost:1313/blog/2022/05/07/hugo-on-github-pages/github-custom-domain_hu_a4cf38ed37e0ee3a.webp 320w, http://localhost:1313/blog/2022/05/07/hugo-on-github-pages/github-custom-domain_hu_c3a77f79b948d036.webp 480w, http://localhost:1313/blog/2022/05/07/hugo-on-github-pages/github-custom-domain_hu_ff9df9fa550d07b0.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2022/05/07/hugo-on-github-pages/github-custom-domain_hu_a4cf38ed37e0ee3a.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;532&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h3 id="ドメインの管理ページ側のaレコードcnameの設定"&gt;ドメインの管理ページ側のAレコード・CNAMEの設定&lt;/h3&gt;
+&lt;h3 id=&#34;ドメインの管理ページ側のaレコードcnameの設定&#34;&gt;ドメインの管理ページ側のAレコード・CNAMEの設定&lt;/h3&gt;
 &lt;p&gt;CNAMEとAレコードを設定して問題なく運用できています。&lt;/p&gt;
 &lt;p&gt;筆者はあまりネットワークに詳しくないので、間違っていたら教えてください。&lt;/p&gt;
 &lt;p&gt;Aレコード&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;185.199.108.153
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;185.199.109.153
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;185.199.110.153
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;185.199.111.153
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;185.199.108.153
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;185.199.109.153
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;185.199.110.153
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;185.199.111.153
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;CNAME&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gam0022.github.io.
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gam0022.github.io.
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;
-&lt;img alt="Google Domain"
-srcset="https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/google-domain_hu_c5a43258032f2120.webp 320w, https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/google-domain_hu_83071c6e17addf7a.webp 480w, https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/google-domain_hu_586b50d64b91ee7c.webp 760w"
-sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/google-domain_hu_c5a43258032f2120.webp"
-width="760"
-height="378"
-loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;Google Domain&#34; 
+               srcset=&#34;http://localhost:1313/blog/2022/05/07/hugo-on-github-pages/google-domain_hu_c5a43258032f2120.webp 320w, http://localhost:1313/blog/2022/05/07/hugo-on-github-pages/google-domain_hu_83071c6e17addf7a.webp 480w, http://localhost:1313/blog/2022/05/07/hugo-on-github-pages/google-domain_hu_586b50d64b91ee7c.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2022/05/07/hugo-on-github-pages/google-domain_hu_c5a43258032f2120.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;378&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h2 id="まとめ"&gt;まとめ&lt;/h2&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;Hugoのホスト先をVPSからGitHub Pagesに移行して固定費削減できました。&lt;/p&gt;
 &lt;p&gt;VPSではrsyncで即時に反映されていたのが、GitHub Pagesにしてから反映に数分かかるなど細かい不満はありますが、無料で使えているので許容範囲かなと思っています。&lt;/p&gt;
-&lt;h3 id="静的cmsホスティングサービスを選ぶ理由"&gt;静的CMS＋ホスティングサービスを選ぶ理由&lt;/h3&gt;
+&lt;h3 id=&#34;静的cmsホスティングサービスを選ぶ理由&#34;&gt;静的CMS＋ホスティングサービスを選ぶ理由&lt;/h3&gt;
 &lt;p&gt;はてなブログなどのブログサービスへの移行も検討したことも過去にありますが、特定のサービスに依存したくないという考えから現在の構成に落ち着いています。&lt;/p&gt;
 &lt;p&gt;企業やサービスの寿命を考えると、10年後や20年後まで存続しているのか分からないので、特定の企業やサービスにロックインしたくありません。&lt;/p&gt;
 &lt;p&gt;その点で静的CMS + 適当なサービスにホスティングがブログの持続性（サービス終了のリスク回避）では最強だと考えています。&lt;/p&gt;
 &lt;p&gt;もしGitHub Pagesがサービス終了したとしても、その時はまたVPSにホスティングすれば良いだけです。&lt;/p&gt;
 &lt;p&gt;完全に余談ですが、ドメインは10年更新にしているので、筆者が死亡したとしてもしばらくサイトは消えないと思います。&lt;/p&gt;
-&lt;p&gt;それでは！&lt;/p&gt;</description></item><item><title>お名前.comからGoogleドメインに乗り換えました（2021版）</title><link>https://gam0022.net/blog/2021/05/06/onamae-com-to-google-domain/</link><pubDate>Thu, 06 May 2021 02:00:00 +0900</pubDate><guid>https://gam0022.net/blog/2021/05/06/onamae-com-to-google-domain/</guid><description>&lt;p&gt;当サイト（
+&lt;p&gt;それでは！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>お名前.comからGoogleドメインに乗り換えました（2021版）</title>
+      <link>http://localhost:1313/blog/2021/05/06/onamae-com-to-google-domain/</link>
+      <pubDate>Thu, 06 May 2021 02:00:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2021/05/06/onamae-com-to-google-domain/</guid>
+      <description>&lt;p&gt;当サイト（
 ）のドメイン管理の事業者を
 から
 に移管しました。&lt;/p&gt;
 &lt;p&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;
-&lt;img alt="お名前.comからGoogleドメインに移管"
-srcset="https://gam0022.net/blog/2021/05/06/onamae-com-to-google-domain/transfer_hu_71adda362b0eb03b.webp 320w, https://gam0022.net/blog/2021/05/06/onamae-com-to-google-domain/transfer_hu_6b753c146676fa60.webp 480w, https://gam0022.net/blog/2021/05/06/onamae-com-to-google-domain/transfer_hu_896cea53ba79cb94.webp 760w"
-sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="https://gam0022.net/blog/2021/05/06/onamae-com-to-google-domain/transfer_hu_71adda362b0eb03b.webp"
-width="760"
-height="428"
-loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;お名前.comからGoogleドメインに移管&#34; 
+               srcset=&#34;http://localhost:1313/blog/2021/05/06/onamae-com-to-google-domain/transfer_hu_71adda362b0eb03b.webp 320w, http://localhost:1313/blog/2021/05/06/onamae-com-to-google-domain/transfer_hu_6b753c146676fa60.webp 480w, http://localhost:1313/blog/2021/05/06/onamae-com-to-google-domain/transfer_hu_896cea53ba79cb94.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2021/05/06/onamae-com-to-google-domain/transfer_hu_71adda362b0eb03b.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;ドメイン移管は思ったよりもずっと簡単で待ち時間を含めても1時間以内に完了しました。&lt;/p&gt;
 &lt;p&gt;この程度の手間だったら、もっと早くやっておけば良かったです。&lt;/p&gt;
 &lt;p&gt;移管するとドメインの更新日が1年延長されて、Googleドメインに1年分のドメイン費用を支払う形になります。&lt;/p&gt;
 &lt;p&gt;つまり、&lt;strong&gt;お名前.comの更新日はずっと先の日付だろうと問題なく移管できます。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;当サイトのドメインの更新日は2028年で7年後くらいでした。&lt;/p&gt;
-&lt;h2 id="移管手順"&gt;移管手順&lt;/h2&gt;
+&lt;h2 id=&#34;移管手順&#34;&gt;移管手順&lt;/h2&gt;
 &lt;p&gt;せっかくなので簡単に手順をメモしておきます。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;お名前.comでドメインのロック解除
@@ -206,52 +295,52 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;/ol&gt;
 &lt;p&gt;AレコードやAAAAレコードなどのDNS設定も自動で引き継がれていました。&lt;/p&gt;
 &lt;p&gt;サブドメインの設定までは引き継がれなかったので手動で再設定する必要がありました。&lt;/p&gt;
-&lt;blockquote class="twitter-tweet" data-conversation="none"&gt;&lt;p lang="ja" dir="ltr"&gt;お名前comからGoogleドメインに乗り換えた。&lt;br&gt;Aレコードなどの設定は自動で引き継がれており、有能だなぁ。 &lt;a href="https://t.co/utmwAwougz"&gt;pic.twitter.com/utmwAwougz&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1387671139170754563?ref_src=twsrc%5Etfw"&gt;April 29, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
-&lt;h3 id="参考記事"&gt;参考記事&lt;/h3&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;お名前comからGoogleドメインに乗り換えた。&lt;br&gt;Aレコードなどの設定は自動で引き継がれており、有能だなぁ。 &lt;a href=&#34;https://t.co/utmwAwougz&#34;&gt;pic.twitter.com/utmwAwougz&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1387671139170754563?ref_src=twsrc%5Etfw&#34;&gt;April 29, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h3 id=&#34;参考記事&#34;&gt;参考記事&lt;/h3&gt;
 &lt;p&gt;こちらの記事に画像つきで手順が書かれています。この記事が分かりにくかったら参考にすると良いと思います。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="移管した理由"&gt;移管した理由&lt;/h2&gt;
+&lt;h2 id=&#34;移管した理由&#34;&gt;移管した理由&lt;/h2&gt;
 &lt;p&gt;GMO社員の方もこのブログを見ることがあるかもしれないので、お名前.comを解約した理由を記しておきます。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;お名前.comからの迷惑メールが多すぎる&lt;/li&gt;
 &lt;li&gt;UIが使いづらい&lt;/li&gt;
 &lt;li&gt;経済的理由&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id="1-お名前comからの迷惑メールが多すぎる"&gt;1. お名前.comからの迷惑メールが多すぎる&lt;/h3&gt;
+&lt;h3 id=&#34;1-お名前comからの迷惑メールが多すぎる&#34;&gt;1. お名前.comからの迷惑メールが多すぎる&lt;/h3&gt;
 &lt;p&gt;1.は業界では有名な評判ですね。お名前.comからの迷惑メールは本当に多すぎます。&lt;/p&gt;
 &lt;p&gt;
 でしたが、「gam0022.netの期限日を定期的にご確認ください。」というメールが来ました。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;更新日は7年後の2028年でしたが、「お知らせメールの受信設定が無効となっている方にも配信されております。」とのことです。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;温厚な私でも流石にイラッとしました。&lt;/p&gt;
-&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;お知らせメールの受信設定が無効となっている方にも配信されております。&lt;br&gt;&lt;br&gt;じゃあないんだよ &lt;a href="https://t.co/RgkauLvEtX"&gt;pic.twitter.com/RgkauLvEtX&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1387313503879368705?ref_src=twsrc%5Etfw"&gt;April 28, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
-&lt;h3 id="2-uiが使いづらい"&gt;2. UIが使いづらい&lt;/h3&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;お知らせメールの受信設定が無効となっている方にも配信されております。&lt;br&gt;&lt;br&gt;じゃあないんだよ &lt;a href=&#34;https://t.co/RgkauLvEtX&#34;&gt;pic.twitter.com/RgkauLvEtX&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1387313503879368705?ref_src=twsrc%5Etfw&#34;&gt;April 28, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h3 id=&#34;2-uiが使いづらい&#34;&gt;2. UIが使いづらい&lt;/h3&gt;
 &lt;p&gt;2.もひどいと思います。使用頻度のもっとも高いであろうDNS設定がなぜかメニューの深い階層に埋もれていて使いづらいです。
 対照的にGoogleドメインはメニューがシンプルで使いやすいと感じました。&lt;/p&gt;
-&lt;h3 id="3-経済的理由"&gt;3. 経済的理由&lt;/h3&gt;
+&lt;h3 id=&#34;3-経済的理由&#34;&gt;3. 経済的理由&lt;/h3&gt;
 &lt;p&gt;3.については誤差でしたが、1年間の.netのドメインの料金を比較すると、Googleドメインの方が88円だけ節約できました。&lt;/p&gt;
 &lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;サービス名&lt;/th&gt;
-&lt;th style="text-align: right"&gt;1年間の費用（税込）&lt;/th&gt;
-&lt;th style="text-align: right"&gt;1年間の費用（税別）&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;お名前.com&lt;/td&gt;
-&lt;td style="text-align: right"&gt;1628円&lt;/td&gt;
-&lt;td style="text-align: right"&gt;1480円&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Googldドメイン&lt;/td&gt;
-&lt;td style="text-align: right"&gt;1540円&lt;/td&gt;
-&lt;td style="text-align: right"&gt;1400円&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;サービス名&lt;/th&gt;
+          &lt;th style=&#34;text-align: right&#34;&gt;1年間の費用（税込）&lt;/th&gt;
+          &lt;th style=&#34;text-align: right&#34;&gt;1年間の費用（税別）&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;お名前.com&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;1628円&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;1480円&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Googldドメイン&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;1540円&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;1400円&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;補足すると、お名前.comでは初年度は安く、2年目以降に値上がりします。&lt;/p&gt;
 &lt;p&gt;1年目は35円と激安なのですが、2年目以降は上記の更新料がかかります。詳細はこちらを見てください。&lt;/p&gt;
@@ -259,11 +348,15 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;li&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id="お名前comの初年度が激安な件"&gt;お名前.comの初年度が激安な件&lt;/h4&gt;
+&lt;h4 id=&#34;お名前comの初年度が激安な件&#34;&gt;お名前.comの初年度が激安な件&lt;/h4&gt;
 &lt;p&gt;この手法はあまり推奨しないほうが良いと思いますが…&lt;/p&gt;
 &lt;p&gt;ほとんどの
 ようになります。&lt;/p&gt;
 &lt;p&gt;お名前.comは初年度がありえないほど安いので、ドメインの取得だけお名前.comで行なって、60日経過後に他社に移管することでコストを最小化できそうな気がしています。&lt;/p&gt;
-&lt;h2 id="まとめ"&gt;まとめ&lt;/h2&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;冒頭で述べたとおり、1時間もあればドメインの移管はできました。
-お名前.comの迷惑メールに困っている方は、Googleドメインに乗り換えてみてはいかがでしょうか？&lt;/p&gt;</description></item></channel></rss>
+お名前.comの迷惑メールに困っている方は、Googleドメインに乗り換えてみてはいかがでしょうか？&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

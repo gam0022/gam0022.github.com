@@ -1,14 +1,37 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cocot | gam0022.net</title><link>https://gam0022.net/tags/cocot/</link><atom:link href="https://gam0022.net/tags/cocot/index.xml" rel="self" type="application/rss+xml"/><description>Cocot</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 06 Aug 2012 11:18:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Cocot</title><link>https://gam0022.net/tags/cocot/</link></image><item><title>cocotで文字コードが異なるマシンにsshする</title><link>https://gam0022.net/blog/2012/08/06/how-to-use-cocot/</link><pubDate>Mon, 06 Aug 2012 11:18:00 +0900</pubDate><guid>https://gam0022.net/blog/2012/08/06/how-to-use-cocot/</guid><description>&lt;p&gt;私が所属している情報科学類(略称coins)では、24時間いつでもsshできるiMacがあるのですが、文字エンコーディングはEUC-JPです。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cocot | gam0022.net</title>
+    <link>http://localhost:1313/tags/cocot/</link>
+      <atom:link href="http://localhost:1313/tags/cocot/index.xml" rel="self" type="application/rss+xml" />
+    <description>Cocot</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 06 Aug 2012 11:18:00 +0900</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
+      <title>Cocot</title>
+      <link>http://localhost:1313/tags/cocot/</link>
+    </image>
+    
+    <item>
+      <title>cocotで文字コードが異なるマシンにsshする</title>
+      <link>http://localhost:1313/blog/2012/08/06/how-to-use-cocot/</link>
+      <pubDate>Mon, 06 Aug 2012 11:18:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2012/08/06/how-to-use-cocot/</guid>
+      <description>&lt;p&gt;私が所属している情報科学類(略称coins)では、24時間いつでもsshできるiMacがあるのですが、文字エンコーディングはEUC-JPです。&lt;/p&gt;
 &lt;p&gt;一方で私のノートPCの文字エンコーディングはUTF-8なので、
 普通にsshすると文字化けしてひどいことになってしまいます。&lt;/p&gt;
 &lt;p&gt;cocotという端末(tty)とプロセスの間に割り込んで、文字コード変換を行うツールがあるので、これを使うことで文字化けが解消します。&lt;/p&gt;
 &lt;p&gt;OS Xを使っていれば、cocotは普通にhomebrewからインストールできます。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install cocot &lt;span class="c1"&gt;# cocotをインストールする&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install cocot &lt;span class=&#34;c1&#34;&gt;# cocotをインストールする&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;UTF-8環境からEUC-JP環境にsshする場合、次のようにすればいいです。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;## cocot -t コンソール側の文字コード -p プロセス側の文字コード -- 使いたいコマンド&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cocot -t UTF-8 -p EUC-JP -- ssh coins
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## cocot -t コンソール側の文字コード -p プロセス側の文字コード -- 使いたいコマンド&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cocot -t UTF-8 -p EUC-JP -- ssh coins
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;頻繁にsshする場合、次のようにエイリアスを作ればいいかと思います。
 うーむ。エイリアス名は検討の余地がありそうです。(汗)&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;alias&lt;/span&gt; &lt;span class="nv"&gt;sshe&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;cocot -t UTF-8 -p EUC-JP -- ssh&amp;#39;&lt;/span&gt; &lt;span class="c1"&gt;#EUC-JP環境にsshする&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sshe coins
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item></channel></rss>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;sshe&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;cocot -t UTF-8 -p EUC-JP -- ssh&amp;#39;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#EUC-JP環境にsshする&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sshe coins
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

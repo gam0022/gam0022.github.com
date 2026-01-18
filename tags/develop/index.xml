@@ -1,5 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Develop | gam0022.net</title><link>https://gam0022.net/tags/develop/</link><atom:link href="https://gam0022.net/tags/develop/index.xml" rel="self" type="application/rss+xml"/><description>Develop</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 10 Apr 2016 10:37:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Develop</title><link>https://gam0022.net/tags/develop/</link></image><item><title>三谷先生の鉄道模型コースシミュレータにパーマリンク機能を実装</title><link>https://gam0022.net/blog/2016/04/10/railway/</link><pubDate>Sun, 10 Apr 2016 10:37:00 +0900</pubDate><guid>https://gam0022.net/blog/2016/04/10/railway/</guid><description>&lt;p&gt;三谷先生の鉄道模型コースシミュレータにパーマリンク機能を実装という記事をはてなブログに投稿しました。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Develop | gam0022.net</title>
+    <link>http://localhost:1313/tags/develop/</link>
+      <atom:link href="http://localhost:1313/tags/develop/index.xml" rel="self" type="application/rss+xml" />
+    <description>Develop</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 10 Apr 2016 10:37:00 +0900</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
+      <title>Develop</title>
+      <link>http://localhost:1313/tags/develop/</link>
+    </image>
+    
+    <item>
+      <title>三谷先生の鉄道模型コースシミュレータにパーマリンク機能を実装</title>
+      <link>http://localhost:1313/blog/2016/04/10/railway/</link>
+      <pubDate>Sun, 10 Apr 2016 10:37:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2016/04/10/railway/</guid>
+      <description>&lt;p&gt;三谷先生の鉄道模型コースシミュレータにパーマリンク機能を実装という記事をはてなブログに投稿しました。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description></item></channel></rss>
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

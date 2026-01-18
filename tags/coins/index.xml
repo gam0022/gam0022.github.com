@@ -1,19 +1,38 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Coins | gam0022.net</title><link>https://gam0022.net/tags/coins/</link><atom:link href="https://gam0022.net/tags/coins/index.xml" rel="self" type="application/rss+xml"/><description>Coins</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 21 Mar 2013 11:17:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Coins</title><link>https://gam0022.net/tags/coins/</link></image><item><title>coinsの環境を使ってDynamic Forward</title><link>https://gam0022.net/blog/2013/03/21/dynamic-forward/</link><pubDate>Thu, 21 Mar 2013 11:17:00 +0900</pubDate><guid>https://gam0022.net/blog/2013/03/21/dynamic-forward/</guid><description>&lt;p&gt;Twinsなど学内向けのサイトにアクセスするためにLocalForwardを使っている人が多いようですが、
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Coins | gam0022.net</title>
+    <link>http://localhost:1313/tags/coins/</link>
+      <atom:link href="http://localhost:1313/tags/coins/index.xml" rel="self" type="application/rss+xml" />
+    <description>Coins</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 21 Mar 2013 11:17:00 +0900</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
+      <title>Coins</title>
+      <link>http://localhost:1313/tags/coins/</link>
+    </image>
+    
+    <item>
+      <title>coinsの環境を使ってDynamic Forward</title>
+      <link>http://localhost:1313/blog/2013/03/21/dynamic-forward/</link>
+      <pubDate>Thu, 21 Mar 2013 11:17:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2013/03/21/dynamic-forward/</guid>
+      <description>&lt;p&gt;Twinsなど学内向けのサイトにアクセスするためにLocalForwardを使っている人が多いようですが、
 DynamicForwardの方が汎用性が高くて便利なのに、使っている人が少ないような印象を受けるので紹介します。&lt;/p&gt;
 &lt;p&gt;この記事の説明はあまり分かりやすくないので、単純に学外からTwinsを使いたいだけであれば、
 次の記事を参考にすれば良いと思います。&lt;/p&gt;
 &lt;p&gt;
 &lt;/p&gt;
-&lt;h2 id="接続の方法"&gt;接続の方法&lt;/h2&gt;
-&lt;h3 id="1sshの設定をする"&gt;1.sshの設定をする&lt;/h3&gt;
+&lt;h2 id=&#34;接続の方法&#34;&gt;接続の方法&lt;/h2&gt;
+&lt;h3 id=&#34;1sshの設定をする&#34;&gt;1.sshの設定をする&lt;/h3&gt;
 &lt;p&gt;まず、&lt;code&gt;~/.ssh/config&lt;/code&gt;を次のようにします。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;## .ssh/config&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Host coins coins-p
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;HostName www.coins.tsukuba.ac.jp
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;User sxxxxxxx
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Host *-p
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;DynamicForward &lt;span class="m"&gt;1080&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## .ssh/config&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Host coins coins-p
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;HostName www.coins.tsukuba.ac.jp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;User sxxxxxxx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Host *-p
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DynamicForward &lt;span class=&#34;m&#34;&gt;1080&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;上のように設定すると、&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;普通にsshしたいだけならば、&lt;code&gt;ssh coins&lt;/code&gt;&lt;/li&gt;
@@ -22,41 +41,65 @@ DynamicForwardの方が汎用性が高くて便利なのに、使っている人
 &lt;p&gt;となって捗ります。&lt;/p&gt;
 &lt;p&gt;このように、*(アスタリスク)を使って設定を書くと、
 重複してサーバ名などの設定を書かないで済むというちょっとしたテクニックを使っています。&lt;/p&gt;
-&lt;h3 id="2sokcsプロキシを使う"&gt;2.SOKCSプロキシを使う&lt;/h3&gt;
+&lt;h3 id=&#34;2sokcsプロキシを使う&#34;&gt;2.SOKCSプロキシを使う&lt;/h3&gt;
 &lt;p&gt;この設定だと、&lt;code&gt;ssh coins-p&lt;/code&gt;をしたときに、ローカルホストの1080番ポートにSOKCSプロキシサーバを割り当てると、
 学内向けのサイトも普通に見れるようになります。&lt;/p&gt;
 &lt;p&gt;SOKCSプロキシの設定は Mac OS X (山ライオン)ならば、&lt;code&gt;ネットワーク環境設定&lt;/code&gt;から下のスクリーンショットを参考にして行なってください。&lt;/p&gt;
 &lt;p&gt;他の環境の人はググって調べてください。&lt;/p&gt;
 &lt;p&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;
-&lt;img alt="SOKCSプロキシの設定"
-srcset="https://gam0022.net/blog/2013/03/21/dynamic-forward/2013-03-21-dynamic-forward_hu_edac13b3d60cbbe.webp 320w, https://gam0022.net/blog/2013/03/21/dynamic-forward/2013-03-21-dynamic-forward_hu_59a8e1ee066d66e4.webp 480w, https://gam0022.net/blog/2013/03/21/dynamic-forward/2013-03-21-dynamic-forward_hu_24c752f080d3025b.webp 651w"
-sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="https://gam0022.net/blog/2013/03/21/dynamic-forward/2013-03-21-dynamic-forward_hu_edac13b3d60cbbe.webp"
-width="651"
-height="506"
-loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;SOKCSプロキシの設定&#34; 
+               srcset=&#34;http://localhost:1313/blog/2013/03/21/dynamic-forward/2013-03-21-dynamic-forward_hu_edac13b3d60cbbe.webp 320w, http://localhost:1313/blog/2013/03/21/dynamic-forward/2013-03-21-dynamic-forward_hu_59a8e1ee066d66e4.webp 480w, http://localhost:1313/blog/2013/03/21/dynamic-forward/2013-03-21-dynamic-forward_hu_24c752f080d3025b.webp 651w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2013/03/21/dynamic-forward/2013-03-21-dynamic-forward_hu_edac13b3d60cbbe.webp&#34;
+               width=&#34;651&#34;
+               height=&#34;506&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h2 id="切断するとき"&gt;切断するとき&lt;/h2&gt;
+&lt;h2 id=&#34;切断するとき&#34;&gt;切断するとき&lt;/h2&gt;
 &lt;p&gt;切断するときは、次の2つの両方の作業をしてください。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;sshの接続を切る。&lt;/li&gt;
 &lt;li&gt;プロキシの設定を無効にする。&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>タイミングチャートと回路図を比較的楽につくる方法</title><link>https://gam0022.net/blog/2012/12/05/circuit-diagram/</link><pubDate>Wed, 05 Dec 2012 09:08:00 +0900</pubDate><guid>https://gam0022.net/blog/2012/12/05/circuit-diagram/</guid><description>&lt;h2 id="近状報告"&gt;近状報告&lt;/h2&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>タイミングチャートと回路図を比較的楽につくる方法</title>
+      <link>http://localhost:1313/blog/2012/12/05/circuit-diagram/</link>
+      <pubDate>Wed, 05 Dec 2012 09:08:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2012/12/05/circuit-diagram/</guid>
+      <description>&lt;h2 id=&#34;近状報告&#34;&gt;近状報告&lt;/h2&gt;
 &lt;p&gt;久しぶりの更新ですね()&lt;/p&gt;
 &lt;p&gt;今年まで大学が3学期制なので、11/22で2学期が無事に終わり、
 昨日から3学期になりました。&lt;/p&gt;
 &lt;p&gt;10日間の秋休みは日中はバイト、夜はFPSという謎の生活を送っていました()&lt;/p&gt;
-&lt;h2 id="なぜタイミングチャートと回路図"&gt;なぜタイミングチャートと回路図&lt;/h2&gt;
+&lt;h2 id=&#34;なぜタイミングチャートと回路図&#34;&gt;なぜタイミングチャートと回路図&lt;/h2&gt;
 &lt;p&gt;学類の2年次の2学期の必修の授業として論理回路実験というのがあったのですが、
 そのレポートが本当に重かったです。&lt;/p&gt;
 &lt;p&gt;レポートを作成するにあたって、タイミングチャートや回路図を書く必要
 があるのですが、普通にWordのオートシェイプで描くのは困難を極めたので、
 後輩たちに知恵を授けようと思い、この記事を書くに至りました。&lt;/p&gt;
-&lt;h2 id="タイミングチャート"&gt;タイミングチャート&lt;/h2&gt;
+&lt;h2 id=&#34;タイミングチャート&#34;&gt;タイミングチャート&lt;/h2&gt;
 &lt;p&gt;
 を使いましょう。&lt;/p&gt;
 &lt;p&gt;MacでもUNIXでもWindowsでも動作するようです。&lt;/p&gt;
@@ -71,32 +114,47 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;li&gt;LaTex使いにとっては、epsで生成してくれると助かる&lt;/li&gt;
 &lt;li&gt;実体はPerlスクリプトなので、環境を汚さない&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="例"&gt;例&lt;/h3&gt;
+&lt;h3 id=&#34;例&#34;&gt;例&lt;/h3&gt;
 &lt;p&gt;これは実際に課題で使用したタイミングチャートです。&lt;/p&gt;
 &lt;p&gt;まず、次のようにタイミングチャートのソースを書きます。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;s ____~~__~~__~~__~~__~~__~~__~~__~~__
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;x _______~~~~____~~~~____~~~~____~~~~_
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Q1 __________________~~~~~~~~~~~~~~~~~~
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Q2 __________~~~~~~~~~~~~~~~~__________
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;u ________________________________~~__
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;v ____~~______~~______~~______~~______
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;reset ~_~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;s     ____~~__~~__~~__~~__~~__~~__~~__~~__
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;x     _______~~~~____~~~~____~~~~____~~~~_
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Q1    __________________~~~~~~~~~~~~~~~~~~
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Q2    __________~~~~~~~~~~~~~~~~__________
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;u     ________________________________~~__
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;v     ____~~______~~______~~______~~______
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reset ~_~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;tchart.pl&lt;/code&gt;を適当にパスの通った場所に置いて、&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;tchart.pl tc1.tc &amp;gt; tc1.eps&lt;/code&gt;とすれば、次のようなタイミングチャートを簡単に生成できます。&lt;/p&gt;
 &lt;p&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;
-&lt;img alt="タイミングチャート"
-srcset="https://gam0022.net/blog/2012/12/05/circuit-diagram/2012.12.5_tc1_hu_fe17caf868bb4fe2.webp 320w, https://gam0022.net/blog/2012/12/05/circuit-diagram/2012.12.5_tc1_hu_929da8c6871adf78.webp 405w"
-sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="https://gam0022.net/blog/2012/12/05/circuit-diagram/2012.12.5_tc1_hu_fe17caf868bb4fe2.webp"
-width="405"
-height="142"
-loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;タイミングチャート&#34; 
+               srcset=&#34;http://localhost:1313/blog/2012/12/05/circuit-diagram/2012.12.5_tc1_hu_fe17caf868bb4fe2.webp 320w, http://localhost:1313/blog/2012/12/05/circuit-diagram/2012.12.5_tc1_hu_929da8c6871adf78.webp 405w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2012/12/05/circuit-diagram/2012.12.5_tc1_hu_fe17caf868bb4fe2.webp&#34;
+               width=&#34;405&#34;
+               height=&#34;142&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h2 id="回路図"&gt;回路図&lt;/h2&gt;
+&lt;h2 id=&#34;回路図&#34;&gt;回路図&lt;/h2&gt;
 &lt;p&gt;
 を使いましょう。&lt;/p&gt;
 &lt;p&gt;MacとUNIXで動作するようです。元々WindowsのソフトをMac用に移植したらしいので、本家のソフトはWindowsでも動作します。&lt;/p&gt;
@@ -109,28 +167,56 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;/ul&gt;
 &lt;p&gt;次のような回路図を描くことができます。&lt;/p&gt;
 &lt;p&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;
-&lt;img alt="７分周器回路の回路図"
-srcset="https://gam0022.net/blog/2012/12/05/circuit-diagram/2012.12.5_img4_3_hu_9db6114e66669bc0.webp 320w, https://gam0022.net/blog/2012/12/05/circuit-diagram/2012.12.5_img4_3_hu_2f1b8b1e724c8c62.webp 480w, https://gam0022.net/blog/2012/12/05/circuit-diagram/2012.12.5_img4_3_hu_3b3f284a8df9110d.webp 700w"
-sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="https://gam0022.net/blog/2012/12/05/circuit-diagram/2012.12.5_img4_3_hu_9db6114e66669bc0.webp"
-width="700"
-height="500"
-loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;</description></item><item><title>cocotで文字コードが異なるマシンにsshする</title><link>https://gam0022.net/blog/2012/08/06/how-to-use-cocot/</link><pubDate>Mon, 06 Aug 2012 11:18:00 +0900</pubDate><guid>https://gam0022.net/blog/2012/08/06/how-to-use-cocot/</guid><description>&lt;p&gt;私が所属している情報科学類(略称coins)では、24時間いつでもsshできるiMacがあるのですが、文字エンコーディングはEUC-JPです。&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;７分周器回路の回路図&#34; 
+               srcset=&#34;http://localhost:1313/blog/2012/12/05/circuit-diagram/2012.12.5_img4_3_hu_9db6114e66669bc0.webp 320w, http://localhost:1313/blog/2012/12/05/circuit-diagram/2012.12.5_img4_3_hu_2f1b8b1e724c8c62.webp 480w, http://localhost:1313/blog/2012/12/05/circuit-diagram/2012.12.5_img4_3_hu_3b3f284a8df9110d.webp 700w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2012/12/05/circuit-diagram/2012.12.5_img4_3_hu_9db6114e66669bc0.webp&#34;
+               width=&#34;700&#34;
+               height=&#34;500&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>cocotで文字コードが異なるマシンにsshする</title>
+      <link>http://localhost:1313/blog/2012/08/06/how-to-use-cocot/</link>
+      <pubDate>Mon, 06 Aug 2012 11:18:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2012/08/06/how-to-use-cocot/</guid>
+      <description>&lt;p&gt;私が所属している情報科学類(略称coins)では、24時間いつでもsshできるiMacがあるのですが、文字エンコーディングはEUC-JPです。&lt;/p&gt;
 &lt;p&gt;一方で私のノートPCの文字エンコーディングはUTF-8なので、
 普通にsshすると文字化けしてひどいことになってしまいます。&lt;/p&gt;
 &lt;p&gt;cocotという端末(tty)とプロセスの間に割り込んで、文字コード変換を行うツールがあるので、これを使うことで文字化けが解消します。&lt;/p&gt;
 &lt;p&gt;OS Xを使っていれば、cocotは普通にhomebrewからインストールできます。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install cocot &lt;span class="c1"&gt;# cocotをインストールする&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install cocot &lt;span class=&#34;c1&#34;&gt;# cocotをインストールする&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;UTF-8環境からEUC-JP環境にsshする場合、次のようにすればいいです。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;## cocot -t コンソール側の文字コード -p プロセス側の文字コード -- 使いたいコマンド&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cocot -t UTF-8 -p EUC-JP -- ssh coins
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## cocot -t コンソール側の文字コード -p プロセス側の文字コード -- 使いたいコマンド&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cocot -t UTF-8 -p EUC-JP -- ssh coins
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;頻繁にsshする場合、次のようにエイリアスを作ればいいかと思います。
 うーむ。エイリアス名は検討の余地がありそうです。(汗)&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;alias&lt;/span&gt; &lt;span class="nv"&gt;sshe&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;cocot -t UTF-8 -p EUC-JP -- ssh&amp;#39;&lt;/span&gt; &lt;span class="c1"&gt;#EUC-JP環境にsshする&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sshe coins
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item></channel></rss>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;sshe&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;cocot -t UTF-8 -p EUC-JP -- ssh&amp;#39;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#EUC-JP環境にsshする&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sshe coins
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

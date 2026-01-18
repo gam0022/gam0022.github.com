@@ -1,6 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CoffeeScript | gam0022.net</title><link>https://gam0022.net/tags/coffeescript/</link><atom:link href="https://gam0022.net/tags/coffeescript/index.xml" rel="self" type="application/rss+xml"/><description>CoffeeScript</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 15 Jun 2014 06:50:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>CoffeeScript</title><link>https://gam0022.net/tags/coffeescript/</link></image><item><title>JavaScriptとCoffeeScriptのメモ</title><link>https://gam0022.net/blog/2014/06/15/javascript-and-coffeescript/</link><pubDate>Sun, 15 Jun 2014 06:50:00 +0900</pubDate><guid>https://gam0022.net/blog/2014/06/15/javascript-and-coffeescript/</guid><description>&lt;h2 id="はじめに"&gt;はじめに&lt;/h2&gt;
-&lt;p&gt;卒研で
-という3DCGのライブラリを使って何か開発することしたので、JavaScript について勉強しました。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CoffeeScript | gam0022.net</title>
+    <link>http://localhost:1313/tags/coffeescript/</link>
+      <atom:link href="http://localhost:1313/tags/coffeescript/index.xml" rel="self" type="application/rss+xml" />
+    <description>CoffeeScript</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 15 Jun 2014 06:50:00 +0900</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
+      <title>CoffeeScript</title>
+      <link>http://localhost:1313/tags/coffeescript/</link>
+    </image>
+    
+    <item>
+      <title>JavaScriptとCoffeeScriptのメモ</title>
+      <link>http://localhost:1313/blog/2014/06/15/javascript-and-coffeescript/</link>
+      <pubDate>Sun, 15 Jun 2014 06:50:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2014/06/15/javascript-and-coffeescript/</guid>
+      <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
+&lt;p&gt;卒研で 
+ という3DCGのライブラリを使って何か開発することしたので、JavaScript について勉強しました。&lt;/p&gt;
 &lt;p&gt;また、CoffeeScript という、コンパイルするとJavaScriptのコードに変換される言語についても使ってみることにしたので、
 これについても勉強しました。&lt;/p&gt;
 &lt;p&gt;忘れてしまうと勿体無く思うので、備忘録です。&lt;/p&gt;
@@ -11,7 +30,7 @@
 &lt;li&gt;Rails で CoffeeScript を使う時のメモ&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;を紹介します。&lt;/p&gt;
-&lt;h2 id="javascript-について"&gt;JavaScript について&lt;/h2&gt;
+&lt;h2 id=&#34;javascript-について&#34;&gt;JavaScript について&lt;/h2&gt;
 &lt;p&gt;一般的なオブジェクト指向を使いこなせる人が本格的に JavaScript で開発する前に、次のルールについては抑えておきたいと思いました。
 クロージャーは別としても、どれも他の言語にはない、特異なルールとなっています。&lt;/p&gt;
 &lt;ol&gt;
@@ -19,7 +38,7 @@
 &lt;li&gt;プロトタイプチェーン(プロトタイプ・ベースのオブジェクト指向)&lt;/li&gt;
 &lt;li&gt;thisキーワードの指す4種類のパターン&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id="変数のスコープとクロージャについて"&gt;変数のスコープとクロージャについて&lt;/h3&gt;
+&lt;h3 id=&#34;変数のスコープとクロージャについて&#34;&gt;変数のスコープとクロージャについて&lt;/h3&gt;
 &lt;p&gt;JavaScriptのローカル変数のスコープは関数ごとにしかありません。
 一般的な言語ではブロックごとにスコープを持つので混乱しやすいと思いました。&lt;/p&gt;
 &lt;p&gt;また、スコープチェーンという仕組みによって、関数をネストすると、中の関数から、外の関数のローカル変数を参照できます。&lt;/p&gt;
@@ -35,7 +54,7 @@
 &lt;li&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="プロトタイプチェーンプロトタイプベースのオブジェクト指向について"&gt;プロトタイプチェーン(プロトタイプ・ベースのオブジェクト指向)について&lt;/h3&gt;
+&lt;h3 id=&#34;プロトタイプチェーンプロトタイプベースのオブジェクト指向について&#34;&gt;プロトタイプチェーン(プロトタイプ・ベースのオブジェクト指向)について&lt;/h3&gt;
 &lt;p&gt;JavaScriptでは関数オブジェクトにクラスとしての役割を与えているのですが、
 prototypeプロパティを用いて、複数のインスタンスで同じメソッドを参照したり、
 別のクラスを継承することを実現することができます。&lt;/p&gt;
@@ -45,13 +64,13 @@ prototypeプロパティを用いて、複数のインスタンスで同じメ�
 &lt;p&gt;プロトタイプチェーンについては、次の記事が分かりやすかったので、読んでおくと良いと思います。&lt;/p&gt;
 &lt;p&gt;
 &lt;/p&gt;
-&lt;h3 id="thisキーワードの指す4種類のパターンについて"&gt;thisキーワードの指す4種類のパターンについて&lt;/h3&gt;
+&lt;h3 id=&#34;thisキーワードの指す4種類のパターンについて&#34;&gt;thisキーワードの指す4種類のパターンについて&lt;/h3&gt;
 &lt;p&gt;一般的な言語では、this は自身のインスタンスを参照するキーワードで変化することありませんが、
 JavaScriptのthisはメソッドの呼び出しのパターンによって変化します。&lt;/p&gt;
 &lt;p&gt;このthisキーワードの指す4種類のパターンについては、次の記事が分かりやすかったので、読んでおくといいと思います。&lt;/p&gt;
 &lt;p&gt;
 &lt;/p&gt;
-&lt;h2 id="coffescript-の学び方"&gt;CoffeScript の学び方&lt;/h2&gt;
+&lt;h2 id=&#34;coffescript-の学び方&#34;&gt;CoffeScript の学び方&lt;/h2&gt;
 &lt;p&gt;基本的には
 に例がたくさんあるので、それを読んだほうが良い場合が多いです。&lt;/p&gt;
 &lt;p&gt;また、サンプルコードは[load]ボタンで実際に実行したり編集することができるので、いっそう理解が深まると思います。&lt;/p&gt;
@@ -62,73 +81,78 @@ JavaScriptのthisはメソッドの呼び出しのパターンによって変化
 &lt;p&gt;慣れるまでは、出力される JavaScript のコードを確認しながら開発した方が良さそうな認識です。
 (CoffeeScriptで開発しても、デバッグは JavaScript のコードを読むことになります。)&lt;/p&gt;
 &lt;p&gt;また、既存の JavaScriptのコードを手っ取り早く CoffeeScript に移植したいと思った時には、
+
 という JavaScript から CoffeeScript に逆変換してくれるサイトが役立ちます。&lt;/p&gt;
-&lt;h3 id="coffeescript-のクラスについて"&gt;CoffeeScript のクラスについて&lt;/h3&gt;
+&lt;h3 id=&#34;coffeescript-のクラスについて&#34;&gt;CoffeeScript のクラスについて&lt;/h3&gt;
 &lt;p&gt;
 の「クラス, 継承, super」の章に、次のコードが紹介されています。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-ruby" data-lang="ruby"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Hoge&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="ss"&gt;someInstanceProp&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;hoge&amp;#34;&lt;/span&gt; &lt;span class="c1"&gt;# インスタンス変数&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="ss"&gt;someInstanceMethod&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# インスタンスメソッド&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="vi"&gt;@callAnotherInstanceMethod&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;# インスタンスメソッドを呼ぶ&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;alert&lt;/span&gt; &lt;span class="vi"&gt;@someInstanceProp&lt;/span&gt; &lt;span class="c1"&gt;# ==&amp;gt; &amp;#34;hoge&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="vi"&gt;@someClassProp&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;hogehoge&amp;#34;&lt;/span&gt; &lt;span class="c1"&gt;# クラス変数&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="vi"&gt;@someClassMethod&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# クラスメソッド&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="vi"&gt;@callAnotherClassMethod&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;# 同一クラスのクラスメソッドを呼ぶ&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;alert&lt;/span&gt; &lt;span class="vi"&gt;@someClassProp&lt;/span&gt; &lt;span class="c1"&gt;# ==&amp;gt; &amp;#34;hogehoge&amp;#34;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Hoge&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;ss&#34;&gt;someInstanceProp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;hoge&amp;#34;&lt;/span&gt;       &lt;span class=&#34;c1&#34;&gt;# インスタンス変数&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;ss&#34;&gt;someInstanceMethod&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;         &lt;span class=&#34;c1&#34;&gt;# インスタンスメソッド&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;vi&#34;&gt;@callAnotherInstanceMethod&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# インスタンスメソッドを呼ぶ&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;alert&lt;/span&gt; &lt;span class=&#34;vi&#34;&gt;@someInstanceProp&lt;/span&gt;      &lt;span class=&#34;c1&#34;&gt;# ==&amp;gt; &amp;#34;hoge&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;vi&#34;&gt;@someClassProp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;hogehoge&amp;#34;&lt;/span&gt;     &lt;span class=&#34;c1&#34;&gt;# クラス変数&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;vi&#34;&gt;@someClassMethod&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;           &lt;span class=&#34;c1&#34;&gt;# クラスメソッド&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;vi&#34;&gt;@callAnotherClassMethod&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;# 同一クラスのクラスメソッドを呼ぶ&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;alert&lt;/span&gt; &lt;span class=&#34;vi&#34;&gt;@someClassProp&lt;/span&gt;         &lt;span class=&#34;c1&#34;&gt;# ==&amp;gt; &amp;#34;hogehoge&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;しかし、この someInstanceProp はprototypeに保存されるので、インスタンス変数としての使い方は間違いだと思います。&lt;/p&gt;
 &lt;p&gt;例えば、次のように &lt;code&gt;someInstanceProp&lt;/code&gt; に破壊的な操作をすると、他のインスタンスの &lt;code&gt;someInstanceProp&lt;/code&gt; まで影響を与えてしまいます。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-ruby" data-lang="ruby"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Hoge&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="ss"&gt;someInstanceProp&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="c1"&gt;# インスタンス変数&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="ss"&gt;someInstanceMethod&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# インスタンスメソッド&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="vi"&gt;@callAnotherInstanceMethod&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;# インスタンスメソッドを呼ぶ&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;alert&lt;/span&gt; &lt;span class="vi"&gt;@someInstanceProp&lt;/span&gt; &lt;span class="c1"&gt;# ==&amp;gt; &amp;#34;hoge&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="vi"&gt;@someClassProp&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;hogehoge&amp;#34;&lt;/span&gt; &lt;span class="c1"&gt;# クラス変数&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="vi"&gt;@someClassMethod&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# クラスメソッド&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="vi"&gt;@callAnotherClassMethod&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;# 同一クラスのクラスメソッドを呼ぶ&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;alert&lt;/span&gt; &lt;span class="vi"&gt;@someClassProp&lt;/span&gt; &lt;span class="c1"&gt;# ==&amp;gt; &amp;#34;hogehoge&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;h1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kp"&gt;new&lt;/span&gt; &lt;span class="no"&gt;Hoge&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;alert&lt;/span&gt; &lt;span class="n"&gt;h1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;someInstanceProp&lt;/span&gt; &lt;span class="c1"&gt;# =&amp;gt; [1,2,3]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;h1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;someInstanceProp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;reverse&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;alert&lt;/span&gt; &lt;span class="n"&gt;h1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;someInstanceProp&lt;/span&gt; &lt;span class="c1"&gt;# =&amp;gt; [3,2,1]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;h2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kp"&gt;new&lt;/span&gt; &lt;span class="no"&gt;Hoge&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;alert&lt;/span&gt; &lt;span class="n"&gt;h2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;someInstanceProp&lt;/span&gt; &lt;span class="c1"&gt;# =&amp;gt; [3,2,1] !他のクラスでの変更の影響を受けている&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Hoge&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;ss&#34;&gt;someInstanceProp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;      &lt;span class=&#34;c1&#34;&gt;# インスタンス変数&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;ss&#34;&gt;someInstanceMethod&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;         &lt;span class=&#34;c1&#34;&gt;# インスタンスメソッド&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;vi&#34;&gt;@callAnotherInstanceMethod&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# インスタンスメソッドを呼ぶ&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;alert&lt;/span&gt; &lt;span class=&#34;vi&#34;&gt;@someInstanceProp&lt;/span&gt;      &lt;span class=&#34;c1&#34;&gt;# ==&amp;gt; &amp;#34;hoge&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;vi&#34;&gt;@someClassProp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;hogehoge&amp;#34;&lt;/span&gt;     &lt;span class=&#34;c1&#34;&gt;# クラス変数&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;vi&#34;&gt;@someClassMethod&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;           &lt;span class=&#34;c1&#34;&gt;# クラスメソッド&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;vi&#34;&gt;@callAnotherClassMethod&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;# 同一クラスのクラスメソッドを呼ぶ&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;alert&lt;/span&gt; &lt;span class=&#34;vi&#34;&gt;@someClassProp&lt;/span&gt;         &lt;span class=&#34;c1&#34;&gt;# ==&amp;gt; &amp;#34;hogehoge&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;h1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;Hoge&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;alert&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;h1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;someInstanceProp&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# =&amp;gt; [1,2,3]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;h1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;someInstanceProp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;reverse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;alert&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;h1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;someInstanceProp&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# =&amp;gt; [3,2,1]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;h2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;Hoge&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;alert&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;h2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;someInstanceProp&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# =&amp;gt; [3,2,1] !他のクラスでの変更の影響を受けている&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
 &lt;/p&gt;
-&lt;h4 id="正しいsomeinstancepropの定義"&gt;正しいsomeInstancePropの定義&lt;/h4&gt;
+&lt;h4 id=&#34;正しいsomeinstancepropの定義&#34;&gt;正しいsomeInstancePropの定義&lt;/h4&gt;
 &lt;p&gt;正しい &lt;code&gt;someInstanceProp&lt;/code&gt; の定義はこうです。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-ruby" data-lang="ruby"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Hoge&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="ss"&gt;constructor&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="vi"&gt;@someInstanceProp&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="c1"&gt;# インスタンス変数&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="ss"&gt;someInstanceMethod&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# インスタンスメソッド&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="vi"&gt;@callAnotherInstanceMethod&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;# インスタンスメソッドを呼ぶ&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;alert&lt;/span&gt; &lt;span class="vi"&gt;@someInstanceProp&lt;/span&gt; &lt;span class="c1"&gt;# ==&amp;gt; &amp;#34;hoge&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="vi"&gt;@someClassProp&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;hogehoge&amp;#34;&lt;/span&gt; &lt;span class="c1"&gt;# クラス変数&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="vi"&gt;@someClassMethod&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="c1"&gt;# クラスメソッド&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="vi"&gt;@callAnotherClassMethod&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;# 同一クラスのクラスメソッドを呼ぶ&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;alert&lt;/span&gt; &lt;span class="vi"&gt;@someClassProp&lt;/span&gt; &lt;span class="c1"&gt;# ==&amp;gt; &amp;#34;hogehoge&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;h1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kp"&gt;new&lt;/span&gt; &lt;span class="no"&gt;Hoge&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;alert&lt;/span&gt; &lt;span class="n"&gt;h1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;someInstanceProp&lt;/span&gt; &lt;span class="c1"&gt;# =&amp;gt; [1,2,3]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;h1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;someInstanceProp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;reverse&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;alert&lt;/span&gt; &lt;span class="n"&gt;h1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;someInstanceProp&lt;/span&gt; &lt;span class="c1"&gt;# =&amp;gt; [3,2,1]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;h2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kp"&gt;new&lt;/span&gt; &lt;span class="no"&gt;Hoge&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;alert&lt;/span&gt; &lt;span class="n"&gt;h2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;someInstanceProp&lt;/span&gt; &lt;span class="c1"&gt;# =&amp;gt; [1,2,3]&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Hoge&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;ss&#34;&gt;constructor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;vi&#34;&gt;@someInstanceProp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# インスタンス変数&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;ss&#34;&gt;someInstanceMethod&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;         &lt;span class=&#34;c1&#34;&gt;# インスタンスメソッド&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;vi&#34;&gt;@callAnotherInstanceMethod&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# インスタンスメソッドを呼ぶ&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;alert&lt;/span&gt; &lt;span class=&#34;vi&#34;&gt;@someInstanceProp&lt;/span&gt;      &lt;span class=&#34;c1&#34;&gt;# ==&amp;gt; &amp;#34;hoge&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;vi&#34;&gt;@someClassProp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;hogehoge&amp;#34;&lt;/span&gt;     &lt;span class=&#34;c1&#34;&gt;# クラス変数&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;vi&#34;&gt;@someClassMethod&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;           &lt;span class=&#34;c1&#34;&gt;# クラスメソッド&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;vi&#34;&gt;@callAnotherClassMethod&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;# 同一クラスのクラスメソッドを呼ぶ&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;alert&lt;/span&gt; &lt;span class=&#34;vi&#34;&gt;@someClassProp&lt;/span&gt;         &lt;span class=&#34;c1&#34;&gt;# ==&amp;gt; &amp;#34;hogehoge&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;h1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;Hoge&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;alert&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;h1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;someInstanceProp&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# =&amp;gt; [1,2,3]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;h1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;someInstanceProp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;reverse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;alert&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;h1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;someInstanceProp&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# =&amp;gt; [3,2,1]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;h2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;Hoge&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;alert&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;h2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;someInstanceProp&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# =&amp;gt; [1,2,3]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
 &lt;/p&gt;
 &lt;p&gt;補足すると、classのトップレベルでの&lt;code&gt;@var&lt;/code&gt;と、関数内での&lt;code&gt;@var&lt;/code&gt;は意味が違います。&lt;/p&gt;
 &lt;p&gt;前者は&lt;code&gt;ClassName.var&lt;/code&gt;となりますが、後者は&lt;code&gt;this.var&lt;/code&gt;となります。&lt;/p&gt;
 &lt;p&gt;インスタンス変数は、後者の関数内での&lt;code&gt;@var&lt;/code&gt;で定義すると良さそうです。&lt;/p&gt;
-&lt;h2 id="rails-で-coffeescript-を使う時のメモ"&gt;Rails で CoffeeScript を使う時のメモ&lt;/h2&gt;
+&lt;h2 id=&#34;rails-で-coffeescript-を使う時のメモ&#34;&gt;Rails で CoffeeScript を使う時のメモ&lt;/h2&gt;
 &lt;p&gt;Rails を 使うと、Asset Pipeline で CoffeeScript の自動コンパイル環境ができて楽なのですが、
 Railsのデフォルトの設定だと、出力される JavaScript が無名関数&lt;code&gt;(function(){ }).call(this)&lt;/code&gt;の中に隠されてしまうので、
 class を作っても外部から参照できなくなってしまいます。&lt;/p&gt;
 &lt;p&gt;そういう場合は、&lt;code&gt;bare&lt;/code&gt;オプションを使うと良いです。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;config/environment.rb&lt;/code&gt; の中に &lt;code&gt;Tilt::CoffeeScriptTemplate.default_bare = true&lt;/code&gt;という行を加えると、
-無名関数に囲まれなくなります。&lt;/p&gt;</description></item></channel></rss>
+無名関数に囲まれなくなります。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

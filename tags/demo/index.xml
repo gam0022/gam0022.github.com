@@ -1,10 +1,35 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Demo | gam0022.net</title><link>https://gam0022.net/tags/demo/</link><atom:link href="https://gam0022.net/tags/demo/index.xml" rel="self" type="application/rss+xml"/><description>Demo</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 24 Feb 2016 08:19:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Demo</title><link>https://gam0022.net/tags/demo/</link></image><item><title>#TokyoDemoFest 2016 の GLSL Graphics Compo で3位入賞！</title><link>https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/</link><pubDate>Wed, 24 Feb 2016 08:19:00 +0900</pubDate><guid>https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/</guid><description>&lt;h2 id="はじめに"&gt;はじめに&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Demo | gam0022.net</title>
+    <link>http://localhost:1313/tags/demo/</link>
+      <atom:link href="http://localhost:1313/tags/demo/index.xml" rel="self" type="application/rss+xml" />
+    <description>Demo</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 24 Feb 2016 08:19:00 +0900</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
+      <title>Demo</title>
+      <link>http://localhost:1313/tags/demo/</link>
+    </image>
+    
+    <item>
+      <title>#TokyoDemoFest 2016 の GLSL Graphics Compo で3位入賞！</title>
+      <link>http://localhost:1313/blog/2016/02/24/tokyo-demo-fest/</link>
+      <pubDate>Wed, 24 Feb 2016 08:19:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2016/02/24/tokyo-demo-fest/</guid>
+      <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;2016-02-20〜21に開催された
 に参加しました。&lt;/p&gt;
 &lt;p&gt;Tokyo Demo Festとは、このようなイベントです（公式ページからの引用）。&lt;/p&gt;
-&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
-&lt;p&gt;Tokyo Demo Fest は日本で唯一のデモパーティです。 デモパーティは、コンピュータを用いたプログラミングとアートに 興味のある人々が日本中、世界中から一堂に会し、 デモ作品のコンペティションやセミナーなどを行います。 また、イベント開催中は集まった様々な人たちとの交流が深められます。&lt;/p&gt;
-&lt;/blockquote&gt;
+
+
+
+  
+  &lt;blockquote class=&#34;border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6&#34;&gt;
+    &lt;p&gt;Tokyo Demo Fest は日本で唯一のデモパーティです。 デモパーティは、コンピュータを用いたプログラミングとアートに 興味のある人々が日本中、世界中から一堂に会し、 デモ作品のコンペティションやセミナーなどを行います。 また、イベント開催中は集まった様々な人たちとの交流が深められます。&lt;/p&gt;
+
+  &lt;/blockquote&gt;
+
 &lt;p&gt;私は&amp;quot;Carbon&amp;quot;という作品をGLSL Graphics Compoに提出して、3位入賞してきました！&lt;/p&gt;
 &lt;p&gt;さらに、
 の作者であり、
@@ -14,10 +39,10 @@
 オーガナイザーのみなさん、参加者のみなさん、ありがとうございました！&lt;/p&gt;
 &lt;p&gt;全体のレポートについては、
 さんの記事がとても分かりやすいです。&lt;/p&gt;
-&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;WebGL 総本山を更新しました ＞ 超ハイレベルな作品が入り乱れた Tokyo Demo Fest 2016！ 大興奮の２日間をレポート！ - WebGL 総本山 &lt;a href="https://t.co/ZeYrYoLiz2"&gt;https://t.co/ZeYrYoLiz2&lt;/a&gt; &lt;a href="https://t.co/e3XFwpIrCD"&gt;pic.twitter.com/e3XFwpIrCD&lt;/a&gt;&lt;/p&gt;&amp;mdash; h_doxas (@h_doxas) &lt;a href="https://twitter.com/h_doxas/status/701988774117376004"&gt;2016, 2月 23&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;WebGL 総本山を更新しました ＞ 超ハイレベルな作品が入り乱れた Tokyo Demo Fest 2016！ 大興奮の２日間をレポート！ - WebGL 総本山 &lt;a href=&#34;https://t.co/ZeYrYoLiz2&#34;&gt;https://t.co/ZeYrYoLiz2&lt;/a&gt; &lt;a href=&#34;https://t.co/e3XFwpIrCD&#34;&gt;pic.twitter.com/e3XFwpIrCD&lt;/a&gt;&lt;/p&gt;&amp;mdash; h_doxas (@h_doxas) &lt;a href=&#34;https://twitter.com/h_doxas/status/701988774117376004&#34;&gt;2016, 2月 23&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;この記事では、GLSL Graphics Compoで発表した&amp;quot;Carbon&amp;quot;という作品の裏話と、個人的に印象に残った思い出などを話します。&lt;/p&gt;
-&lt;h2 id="carbon-製作秘話"&gt;Carbon 製作秘話&lt;/h2&gt;
+&lt;h2 id=&#34;carbon-製作秘話&#34;&gt;Carbon 製作秘話&lt;/h2&gt;
 &lt;p&gt;Compo（コンポ）とは、一定の制約の中で映像や音楽の作品を製作し、投票によって順位をつけるイベントです。&lt;/p&gt;
 &lt;p&gt;今年のGLSL Graphics Compoでは、
 上で動作する映像作品の順位を競いました。&lt;/p&gt;
@@ -34,57 +59,123 @@
 &lt;/ul&gt;
 &lt;!--[Carbon](carbon-blue.png)--&gt;
 &lt;p&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;
-&lt;img alt="Carbon - Blue"
-srcset="https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-blue_hu_e29fc24110652bbc.webp 320w, https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-blue_hu_24684109b433c015.webp 480w, https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-blue_hu_1d1dfd09a4787772.webp 760w"
-sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-blue_hu_e29fc24110652bbc.webp"
-width="760"
-height="426"
-loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;
-&lt;img alt="Carbon - Green"
-srcset="https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-green_hu_83b3366824008f46.webp 320w, https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-green_hu_3d016326a0af949b.webp 480w, https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-green_hu_e8a9229243fabf6a.webp 760w"
-sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-green_hu_83b3366824008f46.webp"
-width="760"
-height="387"
-loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;
-&lt;img alt="Carbon - Red"
-srcset="https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-red_hu_293b6d8e4e83d725.webp 320w, https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-red_hu_13291e87e3f3f64e.webp 480w, https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-red_hu_ae20ea890d5573f2.webp 760w"
-sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-red_hu_293b6d8e4e83d725.webp"
-width="760"
-height="426"
-loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;
-&lt;img alt="Carbon - Violet"
-srcset="https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-violet_hu_ddc716408a008cae.webp 320w, https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-violet_hu_676fe04f74c2df44.webp 480w, https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-violet_hu_3f31fc1c6bd78481.webp 760w"
-sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="https://gam0022.net/blog/2016/02/24/tokyo-demo-fest/carbon-neo-violet_hu_ddc716408a008cae.webp"
-width="760"
-height="424"
-loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;Carbon - Blue&#34; 
+               srcset=&#34;http://localhost:1313/blog/2016/02/24/tokyo-demo-fest/carbon-neo-blue_hu_e29fc24110652bbc.webp 320w, http://localhost:1313/blog/2016/02/24/tokyo-demo-fest/carbon-neo-blue_hu_24684109b433c015.webp 480w, http://localhost:1313/blog/2016/02/24/tokyo-demo-fest/carbon-neo-blue_hu_1d1dfd09a4787772.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2016/02/24/tokyo-demo-fest/carbon-neo-blue_hu_e29fc24110652bbc.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;426&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;Carbon - Green&#34; 
+               srcset=&#34;http://localhost:1313/blog/2016/02/24/tokyo-demo-fest/carbon-neo-green_hu_83b3366824008f46.webp 320w, http://localhost:1313/blog/2016/02/24/tokyo-demo-fest/carbon-neo-green_hu_3d016326a0af949b.webp 480w, http://localhost:1313/blog/2016/02/24/tokyo-demo-fest/carbon-neo-green_hu_e8a9229243fabf6a.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2016/02/24/tokyo-demo-fest/carbon-neo-green_hu_83b3366824008f46.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;387&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;Carbon - Red&#34; 
+               srcset=&#34;http://localhost:1313/blog/2016/02/24/tokyo-demo-fest/carbon-neo-red_hu_293b6d8e4e83d725.webp 320w, http://localhost:1313/blog/2016/02/24/tokyo-demo-fest/carbon-neo-red_hu_13291e87e3f3f64e.webp 480w, http://localhost:1313/blog/2016/02/24/tokyo-demo-fest/carbon-neo-red_hu_ae20ea890d5573f2.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2016/02/24/tokyo-demo-fest/carbon-neo-red_hu_293b6d8e4e83d725.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;426&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;
+          &lt;img alt=&#34;Carbon - Violet&#34; 
+               srcset=&#34;http://localhost:1313/blog/2016/02/24/tokyo-demo-fest/carbon-neo-violet_hu_ddc716408a008cae.webp 320w, http://localhost:1313/blog/2016/02/24/tokyo-demo-fest/carbon-neo-violet_hu_676fe04f74c2df44.webp 480w, http://localhost:1313/blog/2016/02/24/tokyo-demo-fest/carbon-neo-violet_hu_3f31fc1c6bd78481.webp 760w&#34;
+               sizes=&#34;(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px&#34;
+               src=&#34;http://localhost:1313/blog/2016/02/24/tokyo-demo-fest/carbon-neo-violet_hu_ddc716408a008cae.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;424&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;GLSL Compo に 「Carbon」という作品を出しました！&lt;a href="https://t.co/UOqE3FvFyW"&gt;https://t.co/UOqE3FvFyW&lt;/a&gt;&lt;a href="https://t.co/JxkH3LtI4t"&gt;https://t.co/JxkH3LtI4t&lt;/a&gt;&lt;a href="https://twitter.com/hashtag/TokyoDemoFest?src=hash"&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href="https://t.co/yfkJBzQllD"&gt;pic.twitter.com/yfkJBzQllD&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ@TDF最高だった (@gam0022) &lt;a href="https://twitter.com/gam0022/status/701327225224736768"&gt;2016, 2月 21&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
-&lt;blockquote class="twitter-tweet" data-conversation="none" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;&lt;a href="https://twitter.com/hashtag/TokyoDemoFest?src=hash"&gt;#TokyoDemoFest&lt;/a&gt; の &amp;quot;Carbon&amp;quot; の回路にglow効果をつけたのでスクショ撮り直した。Shadertoyにも反映。&lt;a href="https://t.co/zeIZhsc8zT"&gt;https://t.co/zeIZhsc8zT&lt;/a&gt; &lt;a href="https://t.co/Q4UKTCfAsP"&gt;pic.twitter.com/Q4UKTCfAsP&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ@TDF最高だった (@gam0022) &lt;a href="https://twitter.com/gam0022/status/703612944903372800"&gt;2016年2月27日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
-&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;私の「Carbon」が GLSL Compo で入賞しました👏&lt;br&gt;ありがとうございます！ &lt;a href="https://twitter.com/hashtag/TokyoDemoFest?src=hash"&gt;#TokyoDemoFest&lt;/a&gt;&lt;a href="https://t.co/f7LoEYWzFq"&gt;https://t.co/f7LoEYWzFq&lt;/a&gt; &lt;a href="https://t.co/SIel9DKA6n"&gt;pic.twitter.com/SIel9DKA6n&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ@TDF最高だった (@gam0022) &lt;a href="https://twitter.com/gam0022/status/701362103928487937"&gt;2016年2月21日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;GLSL Compo に 「Carbon」という作品を出しました！&lt;a href=&#34;https://t.co/UOqE3FvFyW&#34;&gt;https://t.co/UOqE3FvFyW&lt;/a&gt;&lt;a href=&#34;https://t.co/JxkH3LtI4t&#34;&gt;https://t.co/JxkH3LtI4t&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://t.co/yfkJBzQllD&#34;&gt;pic.twitter.com/yfkJBzQllD&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ@TDF最高だった (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/701327225224736768&#34;&gt;2016, 2月 21&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&#34;&gt;#TokyoDemoFest&lt;/a&gt; の &amp;quot;Carbon&amp;quot; の回路にglow効果をつけたのでスクショ撮り直した。Shadertoyにも反映。&lt;a href=&#34;https://t.co/zeIZhsc8zT&#34;&gt;https://t.co/zeIZhsc8zT&lt;/a&gt; &lt;a href=&#34;https://t.co/Q4UKTCfAsP&#34;&gt;pic.twitter.com/Q4UKTCfAsP&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ@TDF最高だった (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/703612944903372800&#34;&gt;2016年2月27日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;私の「Carbon」が GLSL Compo で入賞しました👏&lt;br&gt;ありがとうございます！ &lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&#34;&gt;#TokyoDemoFest&lt;/a&gt;&lt;a href=&#34;https://t.co/f7LoEYWzFq&#34;&gt;https://t.co/f7LoEYWzFq&lt;/a&gt; &lt;a href=&#34;https://t.co/SIel9DKA6n&#34;&gt;pic.twitter.com/SIel9DKA6n&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ@TDF最高だった (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/701362103928487937&#34;&gt;2016年2月21日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;今回もレイマーチングによる作品です。&lt;/p&gt;
 &lt;p&gt;距離関数（distance function）は、Mandelboxというフラクタル図形を mod でループさせただけなので、非常にお手軽です。&lt;/p&gt;
 &lt;p&gt;この作品は大会中に頑張って製作しました。製作期間はなんと1日です！
@@ -92,11 +183,11 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 提出期限5分前くらいまでバグが取れずにあたふたしていたのですが、なんとか提出できて本当に嬉しかったです。&lt;/p&gt;
 &lt;p&gt;シェーダはデバッグが難しいので、バグを取るのはけっこう大変です…
 今回も同名の変数を異なるスコープで宣言しているという単純なミスで30分くらい無駄にしました。みなさんは気をつけましょう…&lt;/p&gt;
-&lt;p&gt;実は先週の
+&lt;p&gt;実は先週の 
 の打ち上げの飲み会の際に、Mandelboxというフラクタル図形という名前を聞きました。
 Mandelboxで何か作品を作るということ、完成図のイメージはだいたい決まっていたので、そこまで出戻りなどもなく、1日で完成にこぎつけることができました。&lt;/p&gt;
 &lt;p&gt;わざと0.5秒おきにチカチカ点滅させてます。BPM120の曲を後ろで流すことを想定したためです。&lt;/p&gt;
-&lt;h3 id="実装的な細かい話"&gt;実装的な細かい話&lt;/h3&gt;
+&lt;h3 id=&#34;実装的な細かい話&#34;&gt;実装的な細かい話&lt;/h3&gt;
 &lt;p&gt;実装的な細かい話をすると、
 では、
 &lt;code&gt;sceneColor&lt;/code&gt;という最短距離にある物体表面の色を返す関数を実装をすることで、色分けを実現しました。&lt;/p&gt;
@@ -105,26 +196,26 @@ Mandelboxで何か作品を作るということ、完成図のイメージは�
 背景のMandelboxは普通のPhongシェーディングを行い、空中に漂っている球体は鏡面反射というように、色だけでなく反射の挙動を物体ごとに制御する必要がありました。&lt;/p&gt;
 &lt;p&gt;今回は衝突情報を&lt;code&gt;Intersect&lt;/code&gt;という構造体に格納して、衝突した物体に応じたMaterialに応じて、&lt;code&gt;Intersect.material&lt;/code&gt;にセットするようにしました。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Intersect&lt;/code&gt;の定義はこうしました。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-c" data-lang="c"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="n"&gt;Intersect&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="n"&gt;isHit&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;vec3&lt;/span&gt; &lt;span class="n"&gt;position&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kt"&gt;float&lt;/span&gt; &lt;span class="n"&gt;distance&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;vec3&lt;/span&gt; &lt;span class="n"&gt;normal&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;material&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;vec3&lt;/span&gt; &lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;};&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;CIRCUIT_MATERIAL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;MIRROR_MATERIAL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Intersect&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;kt&#34;&gt;bool&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;isHit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;n&#34;&gt;vec3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;distance&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;n&#34;&gt;vec3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;normal&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;material&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;n&#34;&gt;vec3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;color&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CIRCUIT_MATERIAL&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MIRROR_MATERIAL&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;マーチングループを抜けたあとのシェーディングを行うプログラムで、&lt;code&gt;Intersect.material&lt;/code&gt;を参照し、シェーディング方法を切り替えるような実装としました。
 この方法により、色だけでなく、反射の挙動やシェーディングも物体ごとに制御することを実現しました。&lt;/p&gt;
 &lt;p&gt;衝突情報を構造体に格納するというのは、ちょっと前につくった
 からのアプローチからの継承です。
 &amp;ldquo;gem&amp;quot;はレイトレーシングのGLSL実装作品ですが、レイマーチングにも応用できることを証明できました。&lt;/p&gt;
 &lt;p&gt;ソースコードは可読性重視したので、なんとか読めるレベルになっていると思います。参考にしてください。&lt;/p&gt;
-&lt;h3 id="カメラのデバッグ"&gt;カメラのデバッグ&lt;/h3&gt;
+&lt;h3 id=&#34;カメラのデバッグ&#34;&gt;カメラのデバッグ&lt;/h3&gt;
 &lt;p&gt;カメラのデバッグのために&lt;code&gt;THREE.OrbitControls&lt;/code&gt;を使いたかったので、three.jsで開発やデバッグしました。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -136,10 +227,10 @@ GLSL sandboxと互換性を持たせるために、three.jsで開発したシス
 MandelboxのScaleというパラメータを弄りつつ、直線で壁に衝突しない軌跡を発見できたのは、&lt;code&gt;THREE.OrbitControls&lt;/code&gt;のおかげです。&lt;/p&gt;
 &lt;p&gt;他にもスクショをとるのにも、自作システムが役に立ちました。&lt;/p&gt;
 &lt;p&gt;GLSL sandboxで清書する前に、まずは自作システムで下書きするという方法はオススメです。&lt;/p&gt;
-&lt;h2 id="tdfで出会ったすごい人たち"&gt;TDFで出会った、すごい人たち&lt;/h2&gt;
+&lt;h2 id=&#34;tdfで出会ったすごい人たち&#34;&gt;TDFで出会った、すごい人たち&lt;/h2&gt;
 &lt;p&gt;コミュ症なので、普段はあんまり人に話しかけたりしないのですが、勇気を出して交流してみました。&lt;/p&gt;
 &lt;p&gt;ここからは、TDF（Tokyo Demo Fest）で出会った人たちを紹介します。他己紹介はやったことがないので緊張しますね。&lt;/p&gt;
-&lt;h3 id="doxasさん"&gt;doxasさん&lt;/h3&gt;
+&lt;h3 id=&#34;doxasさん&#34;&gt;doxasさん&lt;/h3&gt;
 &lt;p&gt;先週の
 につづいて、
 さんにお会いしました。&lt;/p&gt;
@@ -154,69 +245,69 @@ MandelboxのScaleというパラメータを弄りつつ、直線で壁に衝突
 もしdoxasさんがいなかったら、今の私はなかったと思います。
 ありがとうございます！&lt;/p&gt;
 &lt;p&gt;そんなdoxasさんの海をテーマにした&amp;quot;The Birth of&amp;hellip;&amp;ldquo;という作品はコチラ！&lt;/p&gt;
-&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;&lt;a href="https://twitter.com/hashtag/tokyodemofest?src=hash"&gt;#tokyodemofest&lt;/a&gt; で出品した WebGL のデモ上げました ＞ &lt;a href="https://t.co/EDxflYxDBF"&gt;https://t.co/EDxflYxDBF&lt;/a&gt;&lt;/p&gt;&amp;mdash; h_doxas (@h_doxas) &lt;a href="https://twitter.com/h_doxas/status/701637606409379842"&gt;2016年2月22日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
-&lt;h3 id="mrdoob"&gt;Mr.Doob&lt;/h3&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/tokyodemofest?src=hash&#34;&gt;#tokyodemofest&lt;/a&gt; で出品した WebGL のデモ上げました ＞ &lt;a href=&#34;https://t.co/EDxflYxDBF&#34;&gt;https://t.co/EDxflYxDBF&lt;/a&gt;&lt;/p&gt;&amp;mdash; h_doxas (@h_doxas) &lt;a href=&#34;https://twitter.com/h_doxas/status/701637606409379842&#34;&gt;2016年2月22日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h3 id=&#34;mrdoob&#34;&gt;Mr.Doob&lt;/h3&gt;
 &lt;p&gt;
 の作者であり、
 の作者でもある
 が、なんと、TDFのために来日していました！&lt;/p&gt;
 &lt;p&gt;ちゃっかり記念撮影と握手させていただきました！&lt;/p&gt;
-&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;&lt;a href="https://twitter.com/mrdoob"&gt;@mrdoob&lt;/a&gt; と記念撮影！ &lt;a href="https://twitter.com/hashtag/TokyoDemoFest?src=hash"&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href="https://t.co/j1xwSKNamz"&gt;pic.twitter.com/j1xwSKNamz&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ@TDF最高だった (@gam0022) &lt;a href="https://twitter.com/gam0022/status/702292595486040064"&gt;2016, 2月 24&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/mrdoob&#34;&gt;@mrdoob&lt;/a&gt; と記念撮影！ &lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&#34;&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href=&#34;https://t.co/j1xwSKNamz&#34;&gt;pic.twitter.com/j1xwSKNamz&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ@TDF最高だった (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/702292595486040064&#34;&gt;2016, 2月 24&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;私は英語が怪しいので、あまりコミュニケーション取れませんでしたが、
 さんに助けていただきました。
 yomotsuさんみたいにかっこ良く英語話せるようになりたいと本気で思いました。&lt;/p&gt;
 &lt;p&gt;
 ことを覚えてくださったようで、本当に嬉しかったです。めっちゃ優しい人でした。&lt;/p&gt;
 &lt;p&gt;そんなMr.Doobのマントルをテーマにした作品&amp;quot;Broken Mantra&amp;quot;はコチラ！&lt;/p&gt;
-&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="en" dir="ltr"&gt;Hacked a quick demo with &lt;a href="https://twitter.com/Lornnn"&gt;@Lornnn&lt;/a&gt;&amp;#39;s Broken Mantra for &lt;a href="https://twitter.com/TokyoDemoFest"&gt;@TokyoDemoFest&lt;/a&gt;. Hope you like it! 😊 &lt;a href="https://t.co/UBqTlEURG9"&gt;https://t.co/UBqTlEURG9&lt;/a&gt; &lt;a href="https://t.co/p68GiA06JT"&gt;pic.twitter.com/p68GiA06JT&lt;/a&gt;&lt;/p&gt;&amp;mdash; Ricardo Cabello (@mrdoob) &lt;a href="https://twitter.com/mrdoob/status/701352090833129472"&gt;2016年2月21日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
-&lt;h3 id="yomotsuさん"&gt;yomotsuさん&lt;/h3&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Hacked a quick demo with &lt;a href=&#34;https://twitter.com/Lornnn&#34;&gt;@Lornnn&lt;/a&gt;&amp;#39;s Broken Mantra for &lt;a href=&#34;https://twitter.com/TokyoDemoFest&#34;&gt;@TokyoDemoFest&lt;/a&gt;. Hope you like it! 😊 &lt;a href=&#34;https://t.co/UBqTlEURG9&#34;&gt;https://t.co/UBqTlEURG9&lt;/a&gt; &lt;a href=&#34;https://t.co/p68GiA06JT&#34;&gt;pic.twitter.com/p68GiA06JT&lt;/a&gt;&lt;/p&gt;&amp;mdash; Ricardo Cabello (@mrdoob) &lt;a href=&#34;https://twitter.com/mrdoob/status/701352090833129472&#34;&gt;2016年2月21日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h3 id=&#34;yomotsuさん&#34;&gt;yomotsuさん&lt;/h3&gt;
 &lt;p&gt;yomotsuさんも#GLSLTechで先週お会いしたばかりでしたが、TDFでもお会いすることができました。&lt;/p&gt;
 &lt;p&gt;中学生の時からyomotsuさんを知っていて、
 には大変お世話になっていました。&lt;/p&gt;
 &lt;p&gt;こんな形で出会えるなんて思っていなかったので、世の中なにがあるのか分かりませんね。&lt;/p&gt;
-&lt;h3 id="fms_catくん"&gt;FMS_Catくん&lt;/h3&gt;
+&lt;h3 id=&#34;fms_catくん&#34;&gt;FMS_Catくん&lt;/h3&gt;
 &lt;p&gt;
 くんのWebGLによるデモも凄かったですね。Demo Compo2位作品です！&lt;/p&gt;
 &lt;p&gt;特に最後のグリッチ効果が良い！グリッチ時の映像と音楽が完全に同期とれていてナイスですね。&lt;/p&gt;
-&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="en" dir="ltr"&gt;[ Type ] on YouTube!! &lt;a href="https://t.co/2Khdm3fpUb"&gt;https://t.co/2Khdm3fpUb&lt;/a&gt;&lt;/p&gt;&amp;mdash; FMS_Cat (@FMS_Cat) &lt;a href="https://twitter.com/FMS_Cat/status/701925327883272192"&gt;2016年2月23日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;[ Type ] on YouTube!! &lt;a href=&#34;https://t.co/2Khdm3fpUb&#34;&gt;https://t.co/2Khdm3fpUb&lt;/a&gt;&lt;/p&gt;&amp;mdash; FMS_Cat (@FMS_Cat) &lt;a href=&#34;https://twitter.com/FMS_Cat/status/701925327883272192&#34;&gt;2016年2月23日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;音楽もWebGLのシェーダで生成して、WebAudioに波形データとして渡して再生しているそうです。&lt;/p&gt;
 &lt;p&gt;映像はレイマーチングで生成して、フォント埋め埋め込むところに謎技術をつかってます。&lt;/p&gt;
 &lt;p&gt;ちなみに、FMS_CatのFMSというのは学科名で、大学を背負って活動してるそうです！&lt;/p&gt;
-&lt;h3 id="gaziyaさん"&gt;gaziyaさん&lt;/h3&gt;
+&lt;h3 id=&#34;gaziyaさん&#34;&gt;gaziyaさん&lt;/h3&gt;
 &lt;p&gt;
 さんもヤバかったです。&lt;/p&gt;
 &lt;p&gt;レイマーチングのテクニックについて、様々なお話を聞きました。&lt;/p&gt;
 &lt;p&gt;foldによる点対称な物体の配置、一部の物体を消すことで不規則にreperationするテクニックを教えていただきました！&lt;/p&gt;
 &lt;p&gt;gaziyaさんの&amp;quot;Dragon&amp;quot;は、GLSL Graphics Compoで見事に1位でした！&lt;/p&gt;
-&lt;script type="text/javascript" src="http://jsdo.it/blogparts/wXzq/js"&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;http://jsdo.it/blogparts/wXzq/js&#34;&gt;&lt;/script&gt;
 &lt;p&gt;未だにこれがレイマーチングによる作品とは信じられません。&lt;/p&gt;
 &lt;p&gt;レイマーチングでは形状を数式で表現するので、この龍のような有機的な形状を表現するのは、不可能だと思っていました。&lt;/p&gt;
 &lt;p&gt;時間を見つけて、じっくりコードを研究させていただきます。&lt;/p&gt;
-&lt;h3 id="soma_arcくん"&gt;soma_arcくん&lt;/h3&gt;
+&lt;h3 id=&#34;soma_arcくん&#34;&gt;soma_arcくん&lt;/h3&gt;
 &lt;p&gt;
 の作品はGLSL Graphics Compoで2位でした。&lt;/p&gt;
-&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;はてなブログに投稿しました &lt;a href="https://twitter.com/hashtag/%E3%81%AF%E3%81%A6%E3%81%AA%E3%83%96%E3%83%AD%E3%82%B0?src=hash"&gt;#はてなブログ&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/TokyoDemoFest?src=hash"&gt;#TokyoDemoFest&lt;/a&gt;&lt;br&gt;TokyoDemoFest2016に参加しました - 心鏡曼荼羅&lt;a href="https://t.co/w5sAirKw9G"&gt;https://t.co/w5sAirKw9G&lt;/a&gt; &lt;a href="https://t.co/A5tGW3evrf"&gt;pic.twitter.com/A5tGW3evrf&lt;/a&gt;&lt;/p&gt;&amp;mdash; 蘇摩清良 (@soma_arc) &lt;a href="https://twitter.com/soma_arc/status/701753713266814977"&gt;2016年2月22日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;はてなブログに投稿しました &lt;a href=&#34;https://twitter.com/hashtag/%E3%81%AF%E3%81%A6%E3%81%AA%E3%83%96%E3%83%AD%E3%82%B0?src=hash&#34;&gt;#はてなブログ&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/TokyoDemoFest?src=hash&#34;&gt;#TokyoDemoFest&lt;/a&gt;&lt;br&gt;TokyoDemoFest2016に参加しました - 心鏡曼荼羅&lt;a href=&#34;https://t.co/w5sAirKw9G&#34;&gt;https://t.co/w5sAirKw9G&lt;/a&gt; &lt;a href=&#34;https://t.co/A5tGW3evrf&#34;&gt;pic.twitter.com/A5tGW3evrf&lt;/a&gt;&lt;/p&gt;&amp;mdash; 蘇摩清良 (@soma_arc) &lt;a href=&#34;https://twitter.com/soma_arc/status/701753713266814977&#34;&gt;2016年2月22日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;少ししかお話しかできませんでしたが、レイマーチング若人が増えてきて、負けていられないなと焦りました。&lt;/p&gt;
-&lt;h3 id="notargsくん"&gt;notargsくん&lt;/h3&gt;
+&lt;h3 id=&#34;notargsくん&#34;&gt;notargsくん&lt;/h3&gt;
 &lt;p&gt;
 は4月からスクエニで働く優秀な学生です。スクエニ羨ましすぎる！！&lt;/p&gt;
 &lt;p&gt;彼のブラウン管風シェーダが本当にすごい。&lt;/p&gt;
-&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;[Unity3D]ブラウン管風シェーダーを作った &lt;a href="https://t.co/9FIgyy528c"&gt;https://t.co/9FIgyy528c&lt;/a&gt;&lt;br&gt;スキャンラインの速度と、残像の長さを指定できる機能を追加しました。&lt;a href="https://twitter.com/hashtag/unity3d?src=hash"&gt;#unity3d&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/CRT?src=hash"&gt;#CRT&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/Shader?src=hash"&gt;#Shader&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%E7%AE%A1%E3%82%B7%E3%82%A7%E3%83%BC%E3%83%80%E3%83%BC?src=hash"&gt;#ブラウン管シェーダー&lt;/a&gt; &lt;a href="https://t.co/Som59KI8nl"&gt;pic.twitter.com/Som59KI8nl&lt;/a&gt;&lt;/p&gt;&amp;mdash; !args (@notargs) &lt;a href="https://twitter.com/notargs/status/686752224391766016"&gt;2016年1月12日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;[Unity3D]ブラウン管風シェーダーを作った &lt;a href=&#34;https://t.co/9FIgyy528c&#34;&gt;https://t.co/9FIgyy528c&lt;/a&gt;&lt;br&gt;スキャンラインの速度と、残像の長さを指定できる機能を追加しました。&lt;a href=&#34;https://twitter.com/hashtag/unity3d?src=hash&#34;&gt;#unity3d&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/CRT?src=hash&#34;&gt;#CRT&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Shader?src=hash&#34;&gt;#Shader&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%E7%AE%A1%E3%82%B7%E3%82%A7%E3%83%BC%E3%83%80%E3%83%BC?src=hash&#34;&gt;#ブラウン管シェーダー&lt;/a&gt; &lt;a href=&#34;https://t.co/Som59KI8nl&#34;&gt;pic.twitter.com/Som59KI8nl&lt;/a&gt;&lt;/p&gt;&amp;mdash; !args (@notargs) &lt;a href=&#34;https://twitter.com/notargs/status/686752224391766016&#34;&gt;2016年1月12日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;さらに飲み会で話を聞くと、アルバイトであの1000万DLを突破したスマフォゲームのコアパートのプログラムを手がけていたそうで、格の違いを見せつけられました＞＜&lt;/p&gt;
-&lt;h3 id="nikqさん"&gt;nikqさん&lt;/h3&gt;
+&lt;h3 id=&#34;nikqさん&#34;&gt;nikqさん&lt;/h3&gt;
 &lt;p&gt;
 さんの同僚の
 さん。&lt;/p&gt;
 &lt;p&gt;リアルタイムなパストレーシングのデモすごかったですね。激戦区のDEMO Compoで3位とってました！&lt;/p&gt;
-&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;&lt;a href="https://t.co/964xXvOEVb"&gt;https://t.co/964xXvOEVb&lt;/a&gt; &lt;a href="https://t.co/hKRspPsCUH"&gt;https://t.co/hKRspPsCUH&lt;/a&gt;&lt;br&gt;pouetにsubmitしたら、間違えてpc64kにしちゃったよね &lt;a href="https://t.co/w5lIYufVt1"&gt;pic.twitter.com/w5lIYufVt1&lt;/a&gt;&lt;/p&gt;&amp;mdash; nikq (@nikq) &lt;a href="https://twitter.com/nikq/status/701549075582160896"&gt;2016年2月21日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
-&lt;h3 id="veloさん"&gt;veloさん&lt;/h3&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://t.co/964xXvOEVb&#34;&gt;https://t.co/964xXvOEVb&lt;/a&gt; &lt;a href=&#34;https://t.co/hKRspPsCUH&#34;&gt;https://t.co/hKRspPsCUH&lt;/a&gt;&lt;br&gt;pouetにsubmitしたら、間違えてpc64kにしちゃったよね &lt;a href=&#34;https://t.co/w5lIYufVt1&#34;&gt;pic.twitter.com/w5lIYufVt1&lt;/a&gt;&lt;/p&gt;&amp;mdash; nikq (@nikq) &lt;a href=&#34;https://twitter.com/nikq/status/701549075582160896&#34;&gt;2016年2月21日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h3 id=&#34;veloさん&#34;&gt;veloさん&lt;/h3&gt;
 &lt;p&gt;スウェーデンの
 の音楽担当の
 さん。&lt;/p&gt;
@@ -226,32 +317,36 @@ yomotsuさんみたいにかっこ良く英語話せるようになりたいと�
 &lt;p&gt;また、Approximateのグラフィックプログラマーの
 を見せてくれました。&lt;/p&gt;
 &lt;p&gt;（自分のひどい英語に根気よく付き合ってくださってありがとうございました＞＜）&lt;/p&gt;
-&lt;h3 id="0x4015--yet11さん"&gt;0x4015 &amp;amp; YET11さん&lt;/h3&gt;
+&lt;h3 id=&#34;0x4015--yet11さん&#34;&gt;0x4015 &amp;amp; YET11さん&lt;/h3&gt;
 &lt;p&gt;&amp;ldquo;2nd stage BOSS&amp;quot;はDEMO Compo 1位の作品です。圧倒的なクオリティの作品です。&lt;/p&gt;
 &lt;p&gt;0x4015さんが映像、YET11さんが音楽の作者さんです。&lt;/p&gt;
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/SFoyJED5A4s" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/SFoyJED5A4s&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;p&gt;こんな凄まじい作品が4K部門なんて信じられないですね。&lt;/p&gt;
 &lt;p&gt;残念なことに、0x4015さんもYET11さんにもお会いできませんでした。来年こそは是非お会いしたい！&lt;/p&gt;
-&lt;h4 id="2nd-stage-bossはレイマーチング作品"&gt;2nd stage BOSSはレイマーチング作品！？&lt;/h4&gt;
+&lt;h4 id=&#34;2nd-stage-bossはレイマーチング作品&#34;&gt;2nd stage BOSSはレイマーチング作品！？&lt;/h4&gt;
 &lt;p&gt;この記事を執筆している途中で知ったのですが、
 さんによると、レイマーチングで実装してるみたいですね。
 i_saintさんが
 、たいへん驚きました。&lt;/p&gt;
-&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;&lt;a href="https://twitter.com/gam0022"&gt;@gam0022&lt;/a&gt; yes です。4k 作品はピクセルシェーダ以外に割く容量がほぼ無いのと、現状レイマーチが最も低容量で綺麗な 3DCG 出す方法なので、GLSL Sandbox とかにポート可能な作品も多いです。 (私もコードの具体的な内容は全然理解できてません！)&lt;/p&gt;&amp;mdash; i-saint (@i_saint) &lt;a href="https://twitter.com/i_saint/status/702862298600198144"&gt;2016年2月25日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/gam0022&#34;&gt;@gam0022&lt;/a&gt; yes です。4k 作品はピクセルシェーダ以外に割く容量がほぼ無いのと、現状レイマーチが最も低容量で綺麗な 3DCG 出す方法なので、GLSL Sandbox とかにポート可能な作品も多いです。 (私もコードの具体的な内容は全然理解できてません！)&lt;/p&gt;&amp;mdash; i-saint (@i_saint) &lt;a href=&#34;https://twitter.com/i_saint/status/702862298600198144&#34;&gt;2016年2月25日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;さらに、Shadertoyにも移植されて、音楽まで含めて完全にWebGLで再現できるようになっていました。&lt;/p&gt;
-&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="en" dir="ltr"&gt;So &lt;a href="https://twitter.com/i_saint"&gt;@i_saint&lt;/a&gt; and I decompiled &amp;quot;Second stage BOSS&amp;quot;, extracted the shaders, and patched it for WebGL. Enjoy! &lt;a href="https://t.co/ezmkRsZ6J5"&gt;https://t.co/ezmkRsZ6J5&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/shadertoy?src=hash"&gt;#shadertoy&lt;/a&gt;&lt;/p&gt;&amp;mdash; Michael Tedder (@_Falken) &lt;a href="https://twitter.com/_Falken/status/702863221409976321"&gt;2016年2月25日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;So &lt;a href=&#34;https://twitter.com/i_saint&#34;&gt;@i_saint&lt;/a&gt; and I decompiled &amp;quot;Second stage BOSS&amp;quot;, extracted the shaders, and patched it for WebGL. Enjoy! &lt;a href=&#34;https://t.co/ezmkRsZ6J5&#34;&gt;https://t.co/ezmkRsZ6J5&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/shadertoy?src=hash&#34;&gt;#shadertoy&lt;/a&gt;&lt;/p&gt;&amp;mdash; Michael Tedder (@_Falken) &lt;a href=&#34;https://twitter.com/_Falken/status/702863221409976321&#34;&gt;2016年2月25日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;また、
 さんから、4KBプロシージャルGFXのテンプレートを教えていただきました。
 このようなテンプレートがあれば、4Kデモのシェーダプログラムに集中できるので、素晴らしいですね。&lt;/p&gt;
-&lt;blockquote class="twitter-tweet" data-lang="ja"&gt;&lt;p lang="ja" dir="ltr"&gt;&lt;a href="https://twitter.com/i_saint"&gt;@i_saint&lt;/a&gt; &lt;a href="https://twitter.com/gam0022"&gt;@gam0022&lt;/a&gt; 最近の向けの説明だとこっちの方が目的のものに近いかもです。 &lt;a href="https://t.co/ylBByZfESf"&gt;https://t.co/ylBByZfESf&lt;/a&gt;&lt;/p&gt;&amp;mdash; kioku@TDF片付け (@kioku_systemk) &lt;a href="https://twitter.com/kioku_systemk/status/702877874462728192"&gt;2016年2月25日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;ja&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/i_saint&#34;&gt;@i_saint&lt;/a&gt; &lt;a href=&#34;https://twitter.com/gam0022&#34;&gt;@gam0022&lt;/a&gt; 最近の向けの説明だとこっちの方が目的のものに近いかもです。 &lt;a href=&#34;https://t.co/ylBByZfESf&#34;&gt;https://t.co/ylBByZfESf&lt;/a&gt;&lt;/p&gt;&amp;mdash; kioku@TDF片付け (@kioku_systemk) &lt;a href=&#34;https://twitter.com/kioku_systemk/status/702877874462728192&#34;&gt;2016年2月25日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;GLSL sandboxへのportが可能であれば、逆に4Kのexeにもport可能なはずなので、来年のTDFでは4K Compoから出してもいいかな、とちょっと考えました。
 しかし、自分には音楽をプロシージャルに作る技術は無いので、冷静に考えたら無謀でしたｗ&lt;/p&gt;
 &lt;p&gt;せっかくシェーダのコードが公開されているので、研究させていただきます！&lt;/p&gt;
 &lt;p&gt;大会が終わった後でも、こんなにもワクワクさせてくれるTDFは本当に最高ですね！&lt;/p&gt;
 &lt;p&gt;いつか自分も、このくらいのデモを作れるようになりたいなぁ…（無理だなぁ）&lt;/p&gt;
-&lt;h2 id="おわりに"&gt;おわりに&lt;/h2&gt;
+&lt;h2 id=&#34;おわりに&#34;&gt;おわりに&lt;/h2&gt;
 &lt;p&gt;興味の近い人と交流するのって、最高に楽しいですね！&lt;/p&gt;
-&lt;p&gt;来年も参加するので、よろしくお願いしますm(_ _)m&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;来年も参加するので、よろしくお願いしますm(_ _)m&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

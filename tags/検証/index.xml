@@ -1,49 +1,91 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>検証 | gam0022.net</title><link>https://gam0022.net/tags/%E6%A4%9C%E8%A8%BC/</link><atom:link href="https://gam0022.net/tags/%E6%A4%9C%E8%A8%BC/index.xml" rel="self" type="application/rss+xml"/><description>検証</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 15 Aug 2024 10:38:57 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>検証</title><link>https://gam0022.net/tags/%E6%A4%9C%E8%A8%BC/</link></image><item><title>LTC（Linearly Transformed Cosines）によるエリアライトのUnity URP実装の解説のスライド共有</title><link>https://gam0022.net/blog/2024/08/15/ltc-shader/</link><pubDate>Thu, 15 Aug 2024 10:38:57 +0900</pubDate><guid>https://gam0022.net/blog/2024/08/15/ltc-shader/</guid><description>&lt;p&gt;昨日、8月14日に
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>検証 | gam0022.net</title>
+    <link>http://localhost:1313/tags/%E6%A4%9C%E8%A8%BC/</link>
+      <atom:link href="http://localhost:1313/tags/%E6%A4%9C%E8%A8%BC/index.xml" rel="self" type="application/rss+xml" />
+    <description>検証</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 15 Aug 2024 10:38:57 +0900</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
+      <title>検証</title>
+      <link>http://localhost:1313/tags/%E6%A4%9C%E8%A8%BC/</link>
+    </image>
+    
+    <item>
+      <title>LTC（Linearly Transformed Cosines）によるエリアライトのUnity URP実装の解説のスライド共有</title>
+      <link>http://localhost:1313/blog/2024/08/15/ltc-shader/</link>
+      <pubDate>Thu, 15 Aug 2024 10:38:57 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2024/08/15/ltc-shader/</guid>
+      <description>&lt;p&gt;昨日、8月14日に
 が開催されました。&lt;/p&gt;
 &lt;p&gt;私は『LTC（Linearly Transformed Cosines）によるエリアライトのUnity URP実装』というタイトルでライトニングトーク（LT）を行いました。&lt;/p&gt;
 &lt;p&gt;Eric HeitzさんがSIGGRAPH 2016で発表した、エリアライトをリアルタイムに計算する手法をURP上で実装したので、その解説をしました。&lt;/p&gt;
 &lt;p&gt;以下に発表資料を共有します。&lt;/p&gt;
-&lt;div class="google-slide-wrap"&gt;
-&lt;iframe src="https://docs.google.com/presentation/d/1OAey5wGU7BIKw7YOpILKz-Ymqv-jysgFeWpvJVVdXm0/embed?start=false&amp;loop=false&amp;delayms=3000" frameborder="0" width="1440" height="839" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"&gt;&lt;/iframe&gt;
+&lt;div class=&#34;google-slide-wrap&#34;&gt;
+&lt;iframe src=&#34;https://docs.google.com/presentation/d/1OAey5wGU7BIKw7YOpILKz-Ymqv-jysgFeWpvJVVdXm0/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;1440&#34; height=&#34;839&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Twitterのスレッドはこちらです。&lt;/p&gt;
-&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;Unity URP上でLTC（Linearly Transformed Cosines）によるエリアライトを実装してみました。&lt;br&gt;&lt;br&gt;パストレーシングと同じようなクオリティのエリアライトがリアルタイムで動作して感動しました！発明された方は偉大！ &lt;a href="https://t.co/usMWcc6BTO"&gt;pic.twitter.com/usMWcc6BTO&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1812296534874284391?ref_src=twsrc%5Etfw"&gt;July 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Unity URP上でLTC（Linearly Transformed Cosines）によるエリアライトを実装してみました。&lt;br&gt;&lt;br&gt;パストレーシングと同じようなクオリティのエリアライトがリアルタイムで動作して感動しました！発明された方は偉大！ &lt;a href=&#34;https://t.co/usMWcc6BTO&#34;&gt;pic.twitter.com/usMWcc6BTO&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1812296534874284391?ref_src=twsrc%5Etfw&#34;&gt;July 14, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;この手法のコアなアイデアは、複雑なBRDF分布を単純なcos分布に線形変換し、cos分布上で解析的に積分するというものです。&lt;/p&gt;
-&lt;p&gt;エリアライトに必要なBRDFの積分を巧妙なトリックで処理しており、とても賢い手法で個人的には非常に感動しました。&lt;/p&gt;</description></item><item><title>学園アイドルマスターの眉毛のShaderをUnityで再現してみた</title><link>https://gam0022.net/blog/2024/05/29/gakumasu-mayuge-shader/</link><pubDate>Wed, 29 May 2024 12:00:43 +0900</pubDate><guid>https://gam0022.net/blog/2024/05/29/gakumasu-mayuge-shader/</guid><description>&lt;p&gt;ここ最近、
+&lt;p&gt;エリアライトに必要なBRDFの積分を巧妙なトリックで処理しており、とても賢い手法で個人的には非常に感動しました。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>学園アイドルマスターの眉毛のShaderをUnityで再現してみた</title>
+      <link>http://localhost:1313/blog/2024/05/29/gakumasu-mayuge-shader/</link>
+      <pubDate>Wed, 29 May 2024 12:00:43 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2024/05/29/gakumasu-mayuge-shader/</guid>
+      <description>&lt;p&gt;ここ最近、
 の鼻や眉毛のシェーダーがTwitter（現X）で話題になっていました。&lt;/p&gt;
-&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;学マス、鼻先の黒い点が横から見た時に消えるよう処理をしている&lt;br&gt;&lt;br&gt;顔面全体の輪郭線を切ってるのもあって横顔で急な黒が浮いて悪目立ちしたり、鼻の頂点が欠けてシルエットの綺麗さが失われてしまうことに対する対処かな &lt;a href="https://t.co/82TiB41IDR"&gt;pic.twitter.com/82TiB41IDR&lt;/a&gt;&lt;/p&gt;&amp;mdash; のすけ (@noske2801) &lt;a href="https://twitter.com/noske2801/status/1791165446764495126?ref_src=twsrc%5Etfw"&gt;May 16, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
-&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;学マス、顔周りでいうと眉毛と目周りが正面からはステンシルして髪より前に見えているが回転させていくと横顔に近づくある程度の角度でフェードアウトしてく。キャラのデザインによっては横から見た時ステンシルしてる眉毛はチラつきが気になったりするのでとても真似したい &lt;a href="https://t.co/8O7WjcbF9w"&gt;pic.twitter.com/8O7WjcbF9w&lt;/a&gt;&lt;/p&gt;&amp;mdash; とれ (@clubnemos) &lt;a href="https://twitter.com/clubnemos/status/1791175839469740474?ref_src=twsrc%5Etfw"&gt;May 16, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;学マス、鼻先の黒い点が横から見た時に消えるよう処理をしている&lt;br&gt;&lt;br&gt;顔面全体の輪郭線を切ってるのもあって横顔で急な黒が浮いて悪目立ちしたり、鼻の頂点が欠けてシルエットの綺麗さが失われてしまうことに対する対処かな &lt;a href=&#34;https://t.co/82TiB41IDR&#34;&gt;pic.twitter.com/82TiB41IDR&lt;/a&gt;&lt;/p&gt;&amp;mdash; のすけ (@noske2801) &lt;a href=&#34;https://twitter.com/noske2801/status/1791165446764495126?ref_src=twsrc%5Etfw&#34;&gt;May 16, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;学マス、顔周りでいうと眉毛と目周りが正面からはステンシルして髪より前に見えているが回転させていくと横顔に近づくある程度の角度でフェードアウトしてく。キャラのデザインによっては横から見た時ステンシルしてる眉毛はチラつきが気になったりするのでとても真似したい &lt;a href=&#34;https://t.co/8O7WjcbF9w&#34;&gt;pic.twitter.com/8O7WjcbF9w&lt;/a&gt;&lt;/p&gt;&amp;mdash; とれ (@clubnemos) &lt;a href=&#34;https://twitter.com/clubnemos/status/1791175839469740474?ref_src=twsrc%5Etfw&#34;&gt;May 16, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;鼻のアウトラインがカメラの角度で消える実装は容易に思いつくのですが（カメラのViewベクトルと頭のforwardベクトルの内積からディゾルブ等）、&lt;/p&gt;
 &lt;p&gt;眉毛が角度でフェードする処理（正面から見ると眉毛が前髪より手前に、横顔に近づくと眉毛がフェードアウトする処理）の実装はすぐには思いつきませんでした。&lt;/p&gt;
 &lt;p&gt;技術的にも面白そうなテーマだと思ったので、Unityで再現することにしました。&lt;/p&gt;
 &lt;p&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;&lt;img alt="mayu.gif"
-src="https://gam0022.net/blog/2024/05/29/gakumasu-mayuge-shader/mayu.gif"
-loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-full&#34; &gt;&lt;img alt=&#34;mayu.gif&#34;
+           src=&#34;http://localhost:1313/blog/2024/05/29/gakumasu-mayuge-shader/mayu.gif&#34;
+           loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h2 id="unity-urp上の再現"&gt;Unity URP上の再現&lt;/h2&gt;
+&lt;h2 id=&#34;unity-urp上の再現&#34;&gt;Unity URP上の再現&lt;/h2&gt;
 &lt;p&gt;Stencilを使うパターンと、Stencilを使わずにDepth Offsetするパターンの2つをUnity URP上で実装しました。&lt;/p&gt;
 &lt;p&gt;プロジェクトファイルはGitHubでも公開しました。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="モデルの準備"&gt;モデルの準備&lt;/h3&gt;
+&lt;h3 id=&#34;モデルの準備&#34;&gt;モデルの準備&lt;/h3&gt;
 &lt;p&gt;
 の3Dモデルを使わせていただきました。&lt;/p&gt;
 &lt;p&gt;眉毛のメッシュが顔のメッシュとマージされていたので、Blenderの練習も兼ねて眉毛を独立したメッシュとして分割しました。&lt;/p&gt;
 &lt;p&gt;Meshを独立させることで、Unity上で独立したパスとして描画ができます。&lt;/p&gt;
-&lt;blockquote class="twitter-tweet" data-conversation="none"&gt;&lt;p lang="ja" dir="ltr"&gt;使わせていただいた3DモデルはSDトーコちゃんです。&lt;a href="https://t.co/0THUJaTto6"&gt;https://t.co/0THUJaTto6&lt;/a&gt;&lt;br&gt;&lt;br&gt;眉毛だけ独立したPassで描画したかったので、Blenderの練習も兼ねて眉毛の部分だけMeshを分割する調整をしました。 &lt;a href="https://t.co/GGSB62osG6"&gt;pic.twitter.com/GGSB62osG6&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1793487696608067731?ref_src=twsrc%5Etfw"&gt;May 23, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
-&lt;h3 id="stencilを使うパターン"&gt;Stencilを使うパターン&lt;/h3&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;使わせていただいた3DモデルはSDトーコちゃんです。&lt;a href=&#34;https://t.co/0THUJaTto6&#34;&gt;https://t.co/0THUJaTto6&lt;/a&gt;&lt;br&gt;&lt;br&gt;眉毛だけ独立したPassで描画したかったので、Blenderの練習も兼ねて眉毛の部分だけMeshを分割する調整をしました。 &lt;a href=&#34;https://t.co/GGSB62osG6&#34;&gt;pic.twitter.com/GGSB62osG6&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1793487696608067731?ref_src=twsrc%5Etfw&#34;&gt;May 23, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h3 id=&#34;stencilを使うパターン&#34;&gt;Stencilを使うパターン&lt;/h3&gt;
 &lt;p&gt;まずはStencilを使うパターンを実装しました。&lt;/p&gt;
-&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;学マスの眉毛シェーダー※をUnity上で再現できた。&lt;br&gt;&lt;br&gt;※正面から見ると眉毛が前髪より手前に、横顔に近づくと眉毛がフェードアウトする処理&lt;br&gt;&lt;br&gt;眉毛でStencilを書き込み、前髪の1Pass目で眉毛ではない領域を不透明描画、前髪の2Pass目で眉毛の上から半透明描画してアルファを制御したら、うまくできた🎉 &lt;a href="https://t.co/DSVmsS66hd"&gt;https://t.co/DSVmsS66hd&lt;/a&gt; &lt;a href="https://t.co/Gvvvq3LqsE"&gt;pic.twitter.com/Gvvvq3LqsE&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1793477397150679423?ref_src=twsrc%5Etfw"&gt;May 23, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;学マスの眉毛シェーダー※をUnity上で再現できた。&lt;br&gt;&lt;br&gt;※正面から見ると眉毛が前髪より手前に、横顔に近づくと眉毛がフェードアウトする処理&lt;br&gt;&lt;br&gt;眉毛でStencilを書き込み、前髪の1Pass目で眉毛ではない領域を不透明描画、前髪の2Pass目で眉毛の上から半透明描画してアルファを制御したら、うまくできた🎉 &lt;a href=&#34;https://t.co/DSVmsS66hd&#34;&gt;https://t.co/DSVmsS66hd&lt;/a&gt; &lt;a href=&#34;https://t.co/Gvvvq3LqsE&#34;&gt;pic.twitter.com/Gvvvq3LqsE&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1793477397150679423?ref_src=twsrc%5Etfw&#34;&gt;May 23, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;眉毛と前髪を特殊なシェーダーにして、前髪は2Passで描画しています。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;眉毛でStencil（今回はStencil値を2）を書き込む&lt;/li&gt;
@@ -52,9 +94,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;/ul&gt;
 &lt;p&gt;前髪の2Pass目を省略すると、眉毛が常に不透明度100%で描画されます。2Pass目によって前髪を眉毛の上からアルファブレンドすることで、眉毛を半透明に見せています。
 2Pass目の前髪のアルファ値が眉毛の透明度、つまり &lt;code&gt;1.0-眉毛の不透明度&lt;/code&gt; になります。&lt;/p&gt;
-&lt;h3 id="depth-offsetするパターン"&gt;Depth Offsetするパターン&lt;/h3&gt;
+&lt;h3 id=&#34;depth-offsetするパターン&#34;&gt;Depth Offsetするパターン&lt;/h3&gt;
 &lt;p&gt;Stencilは使わずにDepth Offsetするパターンでも実装しました。&lt;/p&gt;
-&lt;blockquote class="twitter-tweet" data-conversation="none"&gt;&lt;p lang="ja" dir="ltr"&gt;学マスの眉毛シェーダー、Stencilを使わないパターンもできた🎉&lt;br&gt;&lt;br&gt;眉毛だけ2Passで描画&lt;br&gt;・1Pass目：普通に不透明で描画&lt;br&gt;・2Pass目：View空間上でZ Offsetして前髪より手前に移動した状態でアルファブレンドで描画。アルファを顔の角度でフェード&lt;br&gt;&lt;br&gt;この方法が一番シンプルな気がします！ &lt;a href="https://t.co/r7niDobHzC"&gt;pic.twitter.com/r7niDobHzC&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1794254337205764213?ref_src=twsrc%5Etfw"&gt;May 25, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;学マスの眉毛シェーダー、Stencilを使わないパターンもできた🎉&lt;br&gt;&lt;br&gt;眉毛だけ2Passで描画&lt;br&gt;・1Pass目：普通に不透明で描画&lt;br&gt;・2Pass目：View空間上でZ Offsetして前髪より手前に移動した状態でアルファブレンドで描画。アルファを顔の角度でフェード&lt;br&gt;&lt;br&gt;この方法が一番シンプルな気がします！ &lt;a href=&#34;https://t.co/r7niDobHzC&#34;&gt;pic.twitter.com/r7niDobHzC&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href=&#34;https://twitter.com/gam0022/status/1794254337205764213?ref_src=twsrc%5Etfw&#34;&gt;May 25, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;眉毛だけ2Passで描画しています。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;眉毛1Pass目：普通に不透明で描画&lt;/li&gt;
@@ -72,22 +114,22 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;/ul&gt;
 &lt;p&gt;Depth Offsetは頂点シェーダーでこのような処理をしています。&lt;/p&gt;
 &lt;p&gt;クリッピング空間上のZにしか影響を与えないように実装したので、深度情報のみが変化し、メッシュのシルエットは変化しません。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-c" data-lang="c"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// View空間上でDepth Offset
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// https://zhuanlan.zhihu.com/p/696515379
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;float3&lt;/span&gt; &lt;span class="n"&gt;positionWS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nf"&gt;TransformObjectToWorld&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;input&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;positionOS&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;xyz&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;float3&lt;/span&gt; &lt;span class="n"&gt;positionVS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nf"&gt;mul&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;UNITY_MATRIX_V&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nf"&gt;float4&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;positionWS&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="p"&gt;)).&lt;/span&gt;&lt;span class="n"&gt;xyz&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// View空間上でDepth Offset
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;positionVS&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;_DepthOffset&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;float4&lt;/span&gt; &lt;span class="n"&gt;positionHCS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nf"&gt;TransformWViewToHClip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;positionVS&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;float&lt;/span&gt; &lt;span class="n"&gt;depth&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;positionHCS&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;positionHCS&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;w&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;positionHCS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nf"&gt;TransformObjectToHClip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;input&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;positionOS&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;xyz&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// クリッピング空間上でオフセットされた深度を適用
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;positionHCS&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;depth&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;positionHCS&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;w&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// View空間上でDepth Offset
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// https://zhuanlan.zhihu.com/p/696515379
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;positionWS&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;TransformObjectToWorld&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;positionOS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xyz&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;float3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;positionVS&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;mul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UNITY_MATRIX_V&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;float4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;positionWS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xyz&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// View空間上でDepth Offset
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;positionVS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;_DepthOffset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;float4&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;positionHCS&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;TransformWViewToHClip&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;positionVS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;depth&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;positionHCS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;positionHCS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;output&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;positionHCS&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;TransformObjectToHClip&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;positionOS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xyz&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// クリッピング空間上でオフセットされた深度を適用
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;output&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;positionHCS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;depth&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;output&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;positionHCS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;この記事だけを読むと、前髪に被っている／被っていないで、眉毛の透明度が変化するのが不思議に思ったのですが、こちらのツイートで疑問が解決しました。&lt;/p&gt;
-&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;前髪に隠れるように普通に眉描いて、その後から前髪の上から半透明でもう一度眉描けば、特別な仕組みは要らなそうですが&lt;br&gt;前髪に被ってるところは髪+眉のブレンドで、被ってないところは眉+眉のブレンドだからアルファ値がいくつでも眉の色がそのまま出ます &lt;a href="https://t.co/Dr85ppiivn"&gt;https://t.co/Dr85ppiivn&lt;/a&gt;&lt;/p&gt;&amp;mdash; フィン (@phyn_ndk) &lt;a href="https://twitter.com/phyn_ndk/status/1793637537938113004?ref_src=twsrc%5Etfw"&gt;May 23, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;前髪に隠れるように普通に眉描いて、その後から前髪の上から半透明でもう一度眉描けば、特別な仕組みは要らなそうですが&lt;br&gt;前髪に被ってるところは髪+眉のブレンドで、被ってないところは眉+眉のブレンドだからアルファ値がいくつでも眉の色がそのまま出ます &lt;a href=&#34;https://t.co/Dr85ppiivn&#34;&gt;https://t.co/Dr85ppiivn&lt;/a&gt;&lt;/p&gt;&amp;mdash; フィン (@phyn_ndk) &lt;a href=&#34;https://twitter.com/phyn_ndk/status/1793637537938113004?ref_src=twsrc%5Etfw&#34;&gt;May 23, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;シェーダー側では何か特別な処理をしなくても、眉毛をDepth Offset（もしくはZ Test無効）してアルファブレンドすれば自然に意図した結果になります。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;前髪に被ってるところ
@@ -102,10 +144,14 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;色々と頭を捻りましたが、最終的にはこんなシンプルな仕組みでも同じ効果が得られて、おもしろいなと思いました。&lt;/p&gt;
-&lt;h2 id="考察とまとめ"&gt;考察とまとめ&lt;/h2&gt;
+&lt;h2 id=&#34;考察とまとめ&#34;&gt;考察とまとめ&lt;/h2&gt;
 &lt;p&gt;2パターン実装してみましたが、Depth Offsetするパターンの方が使い勝手の面でも性能面でも優位性がありそうだと思いました。&lt;/p&gt;
 &lt;p&gt;Stencilを使うアプローチでは、キャラクターが複数になったときに、顔が重なると破綻してしまいます。たとえば、キャラクターの頭が重なったときに、奥側のキャラクターの眉毛が手前のキャラクターの頭を貫通するということが起こり得ます。&lt;/p&gt;
 &lt;p&gt;Depth Offsetするパターンでは、こうした問題を回避できます。&lt;/p&gt;
 &lt;p&gt;描画負荷の面でも、眉毛の面積は前髪よりも小さいので、眉毛の方を2PassにするDepth Offsetの方がGPU負荷が低いと予想できます。&lt;/p&gt;
 &lt;p&gt;特殊な眉毛のキャラクターを描画をする機会があれば、DetphOffsetを使ってみたいと思いました。&lt;/p&gt;
-&lt;p&gt;ちなみに、目（眼球）のようにZ Test無効にすると眼球全体が最前面になって見た目が破綻する要素については、Depth Offsetでは難しいので、Stencilを使うしかないと考えています。&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;ちなみに、目（眼球）のようにZ Test無効にすると眼球全体が最前面になって見た目が破綻する要素については、Depth Offsetでは難しいので、Stencilを使うしかないと考えています。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

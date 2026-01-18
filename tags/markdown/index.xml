@@ -1,7 +1,35 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Markdown | gam0022.net</title><link>https://gam0022.net/tags/markdown/</link><atom:link href="https://gam0022.net/tags/markdown/index.xml" rel="self" type="application/rss+xml"/><description>Markdown</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 Aug 2013 22:31:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/icon_hu_75aff166ea775490.png</url><title>Markdown</title><link>https://gam0022.net/tags/markdown/</link></image><item><title>GitHubのMarkdownでListをNest</title><link>https://gam0022.net/blog/2013/08/01/github-markdown/</link><pubDate>Thu, 01 Aug 2013 22:31:00 +0900</pubDate><guid>https://gam0022.net/blog/2013/08/01/github-markdown/</guid><description>&lt;p&gt;GitHubでリストや順序リストをネストするときは、インデントをスペース4つにする必要があるみたいです。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Markdown | gam0022.net</title>
+    <link>http://localhost:1313/tags/markdown/</link>
+      <atom:link href="http://localhost:1313/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <description>Markdown</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 Aug 2013 22:31:00 +0900</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_75aff166ea775490.png</url>
+      <title>Markdown</title>
+      <link>http://localhost:1313/tags/markdown/</link>
+    </image>
+    
+    <item>
+      <title>GitHubのMarkdownでListをNest</title>
+      <link>http://localhost:1313/blog/2013/08/01/github-markdown/</link>
+      <pubDate>Thu, 01 Aug 2013 22:31:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2013/08/01/github-markdown/</guid>
+      <description>&lt;p&gt;GitHubでリストや順序リストをネストするときは、インデントをスペース4つにする必要があるみたいです。&lt;/p&gt;
 &lt;p&gt;そうしないと、うまくネストできませんでした。&lt;/p&gt;
-&lt;p&gt;例:
-&lt;/p&gt;</description></item><item><title>Octopressで定義リストを使う</title><link>https://gam0022.net/blog/2013/05/27/kramdown/</link><pubDate>Mon, 27 May 2013 22:40:00 +0900</pubDate><guid>https://gam0022.net/blog/2013/05/27/kramdown/</guid><description>&lt;h2 id="定義リストを使いたい"&gt;定義リストを使いたい&lt;/h2&gt;
+&lt;p&gt;例: 
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Octopressで定義リストを使う</title>
+      <link>http://localhost:1313/blog/2013/05/27/kramdown/</link>
+      <pubDate>Mon, 27 May 2013 22:40:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2013/05/27/kramdown/</guid>
+      <description>&lt;h2 id=&#34;定義リストを使いたい&#34;&gt;定義リストを使いたい&lt;/h2&gt;
 &lt;p&gt;Markdownは楽で便利なのですが、残念なことに標準ではMarkdownは定義リスト&lt;code&gt;&amp;lt;dl&amp;gt;&lt;/code&gt;を使えません。&lt;/p&gt;
 &lt;p&gt;Markdownでは、HTMLを埋め込めるので、手打ちでHTMLを書くことで対処できますが、
 それだと負けた気分になってしまいます。&lt;/p&gt;
@@ -16,54 +44,58 @@
 &lt;p&gt;両方使ってみたのですが、
 marukuの方は既存のmarkdownをうまく解釈してくれなかったので、
 kramdownを使うことにしました。&lt;/p&gt;
-&lt;h2 id="markdownのパーサの変更方法"&gt;Markdownのパーサの変更方法&lt;/h2&gt;
-&lt;h3 id="_configyml-の-変更"&gt;_config.yml の 変更&lt;/h3&gt;
+&lt;h2 id=&#34;markdownのパーサの変更方法&#34;&gt;Markdownのパーサの変更方法&lt;/h2&gt;
+&lt;h3 id=&#34;_configyml-の-変更&#34;&gt;_config.yml の 変更&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;_config.yml&lt;/code&gt; の &lt;code&gt;markdown&lt;/code&gt; を &lt;code&gt;kramdown&lt;/code&gt; に変更します。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-diff" data-lang="diff"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;## _config.yml
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;code_dir: downloads/code
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; category_dir: blog/categories
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; category_title_prefix: &amp;#34;Category: &amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gd"&gt;-markdown: rdiscount
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gi"&gt;+#markdown: rdiscount
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gi"&gt;+markdown: kramdown
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; paginate: 10 # Posts per page on the blog index
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pagination_dir: blog # Directory base for pagination URLs eg. /blog/page/2/
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="gemfile-の変更"&gt;Gemfile の変更&lt;/h3&gt;
-&lt;p&gt;まず、&lt;code&gt;Gemfile&lt;/code&gt;に&lt;code&gt;gem 'kramdown'&lt;/code&gt;を付け足します。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-diff" data-lang="diff"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;## Gemfile
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; gem &amp;#39;rack&amp;#39;, &amp;#39;~&amp;gt; 1.4.1&amp;#39;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; gem &amp;#39;jekyll&amp;#39;, &amp;#39;~&amp;gt; 0.11.2&amp;#39;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; gem &amp;#39;rdiscount&amp;#39;, &amp;#39;~&amp;gt; 1.6.8&amp;#39;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gi"&gt;+ gem &amp;#39;kramdown&amp;#39;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; gem &amp;#39;pygments.rb&amp;#39;, &amp;#39;~&amp;gt; 0.2.12&amp;#39;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; gem &amp;#39;RedCloth&amp;#39;, &amp;#39;~&amp;gt; 4.2.9&amp;#39;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; gem &amp;#39;haml&amp;#39;, &amp;#39;~&amp;gt; 3.1.6&amp;#39;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## _config.yml
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;code_dir: downloads/code
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; category_dir: blog/categories
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; category_title_prefix: &amp;#34;Category: &amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gd&#34;&gt;-markdown: rdiscount
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gi&#34;&gt;+#markdown: rdiscount
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gi&#34;&gt;+markdown: kramdown
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; paginate: 10          # Posts per page on the blog index
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; pagination_dir: blog  # Directory base for pagination URLs eg. /blog/page/2/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;gemfile-の変更&#34;&gt;Gemfile の変更&lt;/h3&gt;
+&lt;p&gt;まず、&lt;code&gt;Gemfile&lt;/code&gt;に&lt;code&gt;gem &#39;kramdown&#39;&lt;/code&gt;を付け足します。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##  Gemfile
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   gem &amp;#39;rack&amp;#39;, &amp;#39;~&amp;gt; 1.4.1&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   gem &amp;#39;jekyll&amp;#39;, &amp;#39;~&amp;gt; 0.11.2&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   gem &amp;#39;rdiscount&amp;#39;, &amp;#39;~&amp;gt; 1.6.8&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gi&#34;&gt;+  gem &amp;#39;kramdown&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   gem &amp;#39;pygments.rb&amp;#39;, &amp;#39;~&amp;gt; 0.2.12&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   gem &amp;#39;RedCloth&amp;#39;, &amp;#39;~&amp;gt; 4.2.9&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   gem &amp;#39;haml&amp;#39;, &amp;#39;~&amp;gt; 3.1.6&amp;#39;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;次に、&lt;code&gt;bundle install&lt;/code&gt; します。&lt;/p&gt;
-&lt;h3 id="確認"&gt;確認&lt;/h3&gt;
+&lt;h3 id=&#34;確認&#34;&gt;確認&lt;/h3&gt;
 &lt;p&gt;最後に、&lt;code&gt;rake generate&lt;/code&gt;と&lt;code&gt;rake preview&lt;/code&gt;で確認しましょう。&lt;/p&gt;
 &lt;p&gt;ちなみに、&lt;code&gt;kramdown&lt;/code&gt;の定義リストは次のように書きます。&lt;/p&gt;
-&lt;h4 id="定義リストの例"&gt;定義リストの例&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;名前
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;: がむ
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;: gam0022
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;HOGE
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;: * aaa
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;: * bbb
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="プレビュー"&gt;プレビュー&lt;/h4&gt;
+&lt;h4 id=&#34;定義リストの例&#34;&gt;定義リストの例&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;名前
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;: がむ
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;: gam0022
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;HOGE
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;: * aaa
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;: * bbb
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;プレビュー&#34;&gt;プレビュー&lt;/h4&gt;
 &lt;dl&gt;
-&lt;dt&gt;名前&lt;/dt&gt;
-&lt;dd&gt;がむ&lt;/dd&gt;
-&lt;dd&gt;gam0022&lt;/dd&gt;
-&lt;dt&gt;HOGE&lt;/dt&gt;
-&lt;dd&gt;
-&lt;ul&gt;
-&lt;li&gt;aaa&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/dd&gt;
-&lt;dd&gt;
-&lt;ul&gt;
-&lt;li&gt;bbb&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;</description></item></channel></rss>
+  &lt;dt&gt;名前&lt;/dt&gt;
+  &lt;dd&gt;がむ&lt;/dd&gt;
+  &lt;dd&gt;gam0022&lt;/dd&gt;
+  &lt;dt&gt;HOGE&lt;/dt&gt;
+  &lt;dd&gt;
+    &lt;ul&gt;
+      &lt;li&gt;aaa&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/dd&gt;
+  &lt;dd&gt;
+    &lt;ul&gt;
+      &lt;li&gt;bbb&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/dd&gt;
+&lt;/dl&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
