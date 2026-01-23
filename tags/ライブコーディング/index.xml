@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ライブコーディング | gam0022.net</title><link>https://gam0022.net/tags/%E3%83%A9%E3%82%A4%E3%83%96%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0/</link><atom:link href="https://gam0022.net/tags/%E3%83%A9%E3%82%A4%E3%83%96%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0/index.xml" rel="self" type="application/rss+xml"/><description>ライブコーディング</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 31 Dec 2021 00:00:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/authors/gam0022_hu_5765ef871f6c1f2b.png</url><title>ライブコーディング</title><link>https://gam0022.net/tags/%E3%83%A9%E3%82%A4%E3%83%96%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0/</link></image><item><title>Tokyo Demo Fest 2021のShader Showdownに参加しました</title><link>https://gam0022.net/blog/2021/12/31/tdf2021-shader-showdown/</link><pubDate>Fri, 31 Dec 2021 00:00:00 +0900</pubDate><guid>https://gam0022.net/blog/2021/12/31/tdf2021-shader-showdown/</guid><description>&lt;p&gt;12月11日～12日にオンラインで開催された
+（以下、TDF）に参加しました。&lt;/p&gt;
+&lt;p&gt;TDFは、日本国内で唯一のデモパーティです。
+リアルタイムに映像や音楽を生成するプログラムを「デモ」と言い、デモを鑑賞したり完成度を競ったりして楽しむイベントを「デモパーティ」と言います。
+「デモシーン」はデモやデモパーティを中心としたコンピューターのサブカルチャーです。&lt;/p&gt;
+&lt;p&gt;TDFのShader Showdownというイベントに競技者として参加しました。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;また、TDFのGLSL Graphics Compoにも参加したので、こちらは別記事にまとめました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="shader-showdownとは"&gt;Shader Showdownとは&lt;/h2&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;TokyoDemoFestのShader Showdownは、世界的なDemoparty「Revision」と同じレギュレーションで開催します。&lt;br&gt;試合の放映はパーティー当日12/11-12となります。乞うご期待……！ &lt;a href="https://t.co/IlVue5npWz"&gt;pic.twitter.com/IlVue5npWz&lt;/a&gt;&lt;/p&gt;&amp;mdash; Tokyo Demo Fest 2021 (2021/12/11-12) (@TokyoDemoFest) &lt;a href="https://twitter.com/TokyoDemoFest/status/1452275618997886976?ref_src=twsrc%5Etfw"&gt;October 24, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;p&gt;Shader Showdownとは25分間でシェーダーを書き、どちらの作品が良いかを決める競技です。&lt;/p&gt;
+&lt;p&gt;試合中は、一切のドキュメントの参照ができません。当然ながら必要な関数はすべて試合中に実装しないいけません。
+時間が25分しかないので、バグを生み出すと修正する時間はありません。世界的なDemoparty「Revision」に準拠しためちゃくちゃ厳しいレギュレーションでの開催でした。&lt;/p&gt;
+&lt;p&gt;1対1のトーナメント形式で開催され、試合の勝敗は観衆（ビジター）の投票によって決定します。今回は私を含めた8人でトーナメントを行いました。&lt;/p&gt;
+&lt;p&gt;対戦はGLSLのライブコーディングで行われます。
+というアプリを利用し、対戦者の書いているコードやカーソルの位置が共有されます。
+Bonzomaticはシェーダーのライブコーディング専用のアプリです。&lt;/p&gt;
+&lt;p&gt;次の初期状態のサイケなトンネルはBonzomaticのデフォルトのシェーダーです。&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;極座標による疑似3Dのシェーダーで汎用性に乏しいため、自分を含めてほどんどの競技者はまず初期状態のコードはコメントアウトするか消します。本当に無からシェーダーを書いています。&lt;/p&gt;
+&lt;p&gt;ビジターは対戦者が25分の制限時間の中でどのような戦略とアイデアをもってコードを書いていくかをすぐ隣でみているかのように体験できます。&lt;/p&gt;
+&lt;p&gt;詳しいGLSLライブコーディングの知識がなくても楽しめるよう、TDFでは対戦者がどのようなコードを書いているかのリアルタイムな解説があります。&lt;/p&gt;
+&lt;h2 id="ライブコーディングした作品解説"&gt;ライブコーディングした作品解説&lt;/h2&gt;
+&lt;p&gt;今回のTDFのShader Showdownでライブコーディングした作品を簡単に解説します。&lt;/p&gt;
+&lt;p&gt;TDFのShader Showdownの全作品は
+にもアーカイブされています。&lt;/p&gt;
+&lt;h3 id="lightning-tunnel--quarter-final"&gt;Lightning Tunnel | Quarter-Final&lt;/h3&gt;
+&lt;p&gt;準々決勝（Quarter-Final）の作品です。&lt;/p&gt;
+&lt;p&gt;稲妻が轟くトンネルをイメージして作りました。&lt;/p&gt;
+&lt;p&gt;ボリュームレンダリングをしてBloom感を出しています。ボリュームレンダリングの実装が雑なのでアーティファクトが発生しているのですが、むしろ雷の荒々しい感じが再現できて良かったです。&lt;/p&gt;
+&lt;p&gt;時間が余ったのでカメラのFoVのアニメーションをしたのですが、ちょっとワープっぽい効果になりました。&lt;/p&gt;
+&lt;p&gt;モデリングはIFSでやっています。IFSで狙った形状を出すことは困難なので、パラメーターは事前に調整をして暗記しておきました。&lt;/p&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;25分でライブコーディングしたシェーダーです。&lt;br&gt;&lt;br&gt;This shader was coded in 25 minutes.&lt;br&gt;&lt;br&gt;Shader showdown quarter-final at &lt;a href="https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#GLSL&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/Bonzomatic?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#Bonzomatic&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#Shader&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/LiveCoding?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#LiveCoding&lt;/a&gt; &lt;a href="https://t.co/WTw7tHVsbk"&gt;pic.twitter.com/WTw7tHVsbk&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1469562828831195140?ref_src=twsrc%5Etfw"&gt;December 11, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;YouTubeのアーカイブ（Day1の2:15頃）です。&lt;/p&gt;
+&lt;div class="movie-wrap"&gt;
+&lt;iframe width="1920" height="1080" src="https://www.youtube.com/embed/2s9KfMn1J9M?start=8114" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h3 id="vj-feat-niko_14--semi-final"&gt;VJ feat. Niko_14 | Semi-Final&lt;/h3&gt;
+&lt;p&gt;準決勝（Semi-Final）の作品です。&lt;/p&gt;
+&lt;p&gt;
+さんの音楽がとても素晴らしかったので、音楽と同期したVJに挑戦しました。&lt;/p&gt;
+&lt;p&gt;試合の前日に自分の試合の音楽担当はNiko_14さんと聞いたので、そのタイミングでVJをする決意をしました。&lt;/p&gt;
+&lt;p&gt;VJっぽい絵を狙ったことが無かったのですが、ほぼ狙い通りのバキバキな感じにできたので良かったです。
+シェーダーの構成としてはQuarter-Finalとほぼ同じで、IFSとボリュームレンダリングの組み合わせです。
+IFSのパラメーターは適当だったのですが、ちゃんと狙い通りの絵になったので良かったです。&lt;/p&gt;
+&lt;p&gt;色はFFT（音楽の周波数ごとのボリューム）に対応していて、低音が赤、中音が緑、高音が青に対応しています。
+キックの音が支配的だったので、キックに合わせて赤～ピンクっぽいビームが発生しています。&lt;/p&gt;
+&lt;p&gt;Twitterの動画の4秒頃のように、音が切り替わるタイミングでサウンドリアクティブになっているのが分かりやすいと思います。ぜひ音声をONにして再生してください！&lt;/p&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;25分でライブコーディングしたシェーダーです。&lt;br&gt;かっこいい音楽は &lt;a href="https://twitter.com/himazin917?ref_src=twsrc%5Etfw"&gt;@himazin917&lt;/a&gt; さん制作です！&lt;br&gt;&lt;br&gt;This shader was coded in 25 minutes.&lt;br&gt;Sound by &lt;a href="https://twitter.com/himazin917?ref_src=twsrc%5Etfw"&gt;@himazin917&lt;/a&gt;&lt;br&gt;&lt;br&gt;Shader showdown semi-final at &lt;a href="https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#GLSL&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/Bonzomatic?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#Bonzomatic&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#Shader&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/LiveCoding?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#LiveCoding&lt;/a&gt; &lt;a href="https://t.co/HzUpd9le3t"&gt;pic.twitter.com/HzUpd9le3t&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1469924900257562627?ref_src=twsrc%5Etfw"&gt;December 12, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;ShadertoyのSoundcloud連携が機能していないため、音楽はNiko_14さんのものではなく、仮です。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;YouTubeのアーカイブ（Day2の1:41頃）です。&lt;/p&gt;
+&lt;div class="movie-wrap"&gt;
+&lt;iframe width="1920" height="1080" src="https://www.youtube.com/embed/bp37xTVNRrM?start=6086" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;VJっぽいバキバキとした絵の方向性やFFTを用いたサウンドリアクティブなシェーダーはこれまで挑戦したことのないジャンルだったので、新しい方向性を模索する良い経験になりました。&lt;/p&gt;
+&lt;p&gt;Semi-Finalでは
+さんに負けてしまったのですが、試合後のコメントによると反射の処理には
+を参考にしてくださったそうで、めちゃくちゃありがてぇ🙏となりました。&lt;/p&gt;
+&lt;p&gt;Jugem-Tさんも実況による盛り上げありがとうございました！&lt;/p&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;凄い画同士の殴り合いの中BGMもライブコーディングで生成してる(Niko_14氏)とんでもない光景になっててヤバい&lt;br&gt;&lt;br&gt;Shader Showdown準決勝 gam0022氏 vs Kamoshika氏&lt;br&gt;[LIVE]Tokyo Demo Fest 2021 Day2 &lt;a href="https://t.co/648ZNFJTxk"&gt;https://t.co/648ZNFJTxk&lt;/a&gt; &lt;a href="https://twitter.com/YouTube?ref_src=twsrc%5Etfw"&gt;@YouTube&lt;/a&gt;より &lt;a href="https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href="https://t.co/atG6c8hWiK"&gt;pic.twitter.com/atG6c8hWiK&lt;/a&gt;&lt;/p&gt;&amp;mdash; Jugem-T 𓆡作業中 (@Jugem_T) &lt;a href="https://twitter.com/Jugem_T/status/1469892859503734787?ref_src=twsrc%5Etfw"&gt;December 12, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;h2 id="感想"&gt;感想&lt;/h2&gt;
+&lt;p&gt;大変でしたが、楽しかったです。&lt;/p&gt;
+&lt;p&gt;25分でできる範囲はかなり限られてくるので、詰め込める要素を取捨選択して、ミスをしないように実装するのは思っていたより難しく感じました。25分だとデバッグしている余裕はなくバグを生み出した瞬間に敗戦が濃厚になります。
+距離関数も普段はコピペしているので暗記も大変でした。回転行列くらいは導出できるのですが、sdBoxは導出していたら時間がまったく足りません。&lt;/p&gt;
+&lt;p&gt;正直に言うと、まさかここまでレベルの高い戦いになるとは思っておらず、参加者のみなさんが凄すぎてちょっと心が折れそうでした。&lt;/p&gt;
+&lt;p&gt;とくにFinal（決勝）の
+vs
+の戦いは印象深かったです。&lt;/p&gt;
+&lt;p&gt;Kamoshikaさんは蝶、phi16さんはライブゲームと、両者とも &amp;ldquo;生命&amp;rdquo; を誕生させていました。偶然にもテーマが一致していてちょっと面白かったです。&lt;/p&gt;
+&lt;p&gt;とにかく実装量がえげつなく、これをライブコーディングでやるんだ…と驚かされました。
+競技者として参加したことで、25分間でこの量をミスなく実装する困難さは痛いほど理解していたので、なおさら驚かされました。&lt;/p&gt;
+&lt;p&gt;両者ともミスなく作品を仕上げており、まさに決勝戦に相応しい素晴らしい戦いを見せていただきました🙏心の底から感動しました。&lt;/p&gt;
+&lt;p&gt;世界レベルの実力者の方々と戦えて本当に光栄でした！ありがとうございます！&lt;/p&gt;
+&lt;p&gt;Kamoshikaさん&lt;/p&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="en" dir="ltr"&gt;25 minutes live coding at Shader Showdown Final.&lt;a href="https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#GLSL&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#Shader&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/LiveCoding?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#LiveCoding&lt;/a&gt; &lt;a href="https://t.co/WeVq82f50E"&gt;pic.twitter.com/WeVq82f50E&lt;/a&gt;&lt;/p&gt;&amp;mdash; Kamoshika (@kamoshika_vrc) &lt;a href="https://twitter.com/kamoshika_vrc/status/1470360600517971970?ref_src=twsrc%5Etfw"&gt;December 13, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;p&gt;phi16さん&lt;/p&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="und" dir="ltr"&gt;&lt;a href="https://t.co/qluYGj653s"&gt;pic.twitter.com/qluYGj653s&lt;/a&gt;&lt;/p&gt;&amp;mdash; phi16 (@phi16_) &lt;a href="https://twitter.com/phi16_/status/1470104161320849409?ref_src=twsrc%5Etfw"&gt;December 12, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;記録 TDF2021 ShaderShowdown &lt;a href="https://t.co/mMcSoYwh5U"&gt;https://t.co/mMcSoYwh5U&lt;/a&gt;&lt;/p&gt;&amp;mdash; phi16 (@phi16_) &lt;a href="https://twitter.com/phi16_/status/1470415119708753921?ref_src=twsrc%5Etfw"&gt;December 13, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;p&gt;YouTubeのアーカイブ（Day2の4:27頃）です。&lt;/p&gt;
+&lt;p&gt;Finalでは私も実況者の一人として参加しています。&lt;/p&gt;
+&lt;div class="movie-wrap"&gt;
+&lt;iframe width="1920" height="1080" src="https://www.youtube.com/embed/bp37xTVNRrM?start=16030" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;おつかれさまでした！&lt;a href="https://twitter.com/hashtag/TokyoDemoFest?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#TokyoDemoFest&lt;/a&gt; &lt;a href="https://t.co/h2yXCGGBYa"&gt;pic.twitter.com/h2yXCGGBYa&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1469999619409350657?ref_src=twsrc%5Etfw"&gt;December 12, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;p&gt;さいごに、関係者のみなさんに感謝を申し上げます。
+TDFのオーガナイザーの方々、Shader Showdownで対戦してくださったgyaboさん、norargsさん、Kamoshikaさん、0b5vrさん、phi16さん、sp4ghetさん、gazさん、実況のamagiさん、doxasさん、hiraiさんmurasaqiさん、音楽を担当したNiko_14さん、寝る前さん、h0ffman1さん、アーカイブ関連でpsenoghさん、Zavieさん、応援してくださった観戦者みなさん、本当にありがとうございました！&lt;/p&gt;
+&lt;h2 id="練習"&gt;練習&lt;/h2&gt;
+&lt;p&gt;ライブコーディングの練習中の作品です。&lt;/p&gt;
+&lt;p&gt;Quarter-FinalのIFS+ボリュームレンダリングのアプローチは練習中に決めました。&lt;/p&gt;
+&lt;p&gt;トンネルのIFSのモデリングもよく見ると面影が残っています。&lt;/p&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;情報量を追加（エンコード耐久テスト）&lt;a href="https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#GLSL&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/Raymarching?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#Raymarching&lt;/a&gt; &lt;a href="https://t.co/uBg43zGOk6"&gt;pic.twitter.com/uBg43zGOk6&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1453405601971666944?ref_src=twsrc%5Etfw"&gt;October 27, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="en" dir="ltr"&gt;Diamond Variation 🔷 &lt;a href="https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#GLSL&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/Raymarching?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#Raymarching&lt;/a&gt; &lt;a href="https://t.co/IAEhBgdW5s"&gt;pic.twitter.com/IAEhBgdW5s&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1453768374312263683?ref_src=twsrc%5Etfw"&gt;October 28, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;&lt;a href="https://twitter.com/hashtag/Shadertoy?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#Shadertoy&lt;/a&gt; にポートしました。&lt;br&gt;&lt;br&gt;&amp;quot;Diamond Tunnel&amp;quot; by gam0022&lt;a href="https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#GLSL&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/Shader?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#Shader&lt;/a&gt;&lt;a href="https://t.co/oyyz8mop2x"&gt;https://t.co/oyyz8mop2x&lt;/a&gt; &lt;a href="https://t.co/DXnqCAKY1Z"&gt;pic.twitter.com/DXnqCAKY1Z&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1476576224768331776?ref_src=twsrc%5Etfw"&gt;December 30, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</description></item></channel></rss>
