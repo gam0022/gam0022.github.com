@@ -69,9 +69,9 @@ $$&lt;p&gt;各変数の意味は以下の通りです。&lt;/p&gt;
 &lt;div class="flex justify-center "&gt;
 &lt;div class="w-full" &gt;
 &lt;img alt="共通点2：解決策は「サイコロを振ること」だった"
-srcset="https://gam0022.net/blog/2026/03/16/google-and-raytracing/point2_v3_hu_6a9c354aa40f76a.webp 320w, https://gam0022.net/blog/2026/03/16/google-and-raytracing/point2_v3_hu_9bd4436e48d8c610.webp 480w, https://gam0022.net/blog/2026/03/16/google-and-raytracing/point2_v3_hu_82f611fb20026376.webp 760w"
+srcset="https://gam0022.net/blog/2026/03/16/google-and-raytracing/point2_v3_hu_4c72cbdef1e3d6b1.webp 320w, https://gam0022.net/blog/2026/03/16/google-and-raytracing/point2_v3_hu_2e7c066eb4d90f22.webp 480w, https://gam0022.net/blog/2026/03/16/google-and-raytracing/point2_v3_hu_92e394f69c27db7b.webp 760w"
 sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="https://gam0022.net/blog/2026/03/16/google-and-raytracing/point2_v3_hu_6a9c354aa40f76a.webp"
+src="https://gam0022.net/blog/2026/03/16/google-and-raytracing/point2_v3_hu_4c72cbdef1e3d6b1.webp"
 width="760"
 height="424"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
@@ -104,7 +104,20 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;p&gt;パストレーシング（モンテカルロ法を用いたレイトレーシング）においては、ある点で見える明るさを決めるために、周囲のあらゆる方向から来る光（積分）を計算する代わりに、&lt;strong&gt;いくつかの方向をランダムに選び（サンプリング）、その方向から来た光の強さを平均する&lt;/strong&gt; という処理を行います。&lt;/p&gt;
 &lt;p&gt;この&lt;strong&gt;ランダムに選んだ方向&lt;/strong&gt;をさらに追跡していく（そこでもまたランダムに方向を選ぶ）ことで、光の経路（パス）が形成されます。&lt;/p&gt;
 &lt;h3 id="大数の法則試行回数を増やすほど正解に収束する"&gt;大数の法則：試行回数を増やすほど「正解」に収束する&lt;/h3&gt;
-&lt;p&gt;しかし、ここで自然な疑問が生じます。&lt;strong&gt;ランダムに数個の方向を選んで光を計算したら、ノイズだらけのザラザラした画像になってしまうのではないか？&lt;/strong&gt; という問題です。この直感は正しく、実際に、わずか数本の光の経路をランダムに選んだだけでは、昔のテレビの砂嵐のようなノイズに満ちた画像が出力されます。&lt;/p&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="大数の法則：試行回数を増やすほど「正解」に収束する"
+srcset="https://gam0022.net/blog/2026/03/16/google-and-raytracing/law_of_large_numbers_v2_hu_8ff32ebb543898d5.webp 320w, https://gam0022.net/blog/2026/03/16/google-and-raytracing/law_of_large_numbers_v2_hu_3104964da68ce815.webp 480w, https://gam0022.net/blog/2026/03/16/google-and-raytracing/law_of_large_numbers_v2_hu_db31cea9594c0745.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2026/03/16/google-and-raytracing/law_of_large_numbers_v2_hu_8ff32ebb543898d5.webp"
+width="760"
+height="428"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;しかし、ここで自然な疑問が生じます。&lt;strong&gt;ランダムに数個の方向を選んで光を計算したら、ノイズだらけのザラザラした画像になってしまうのではないか？&lt;/strong&gt; という問題です。この直感は正しく、実際に、わずか数本の光の経路をランダムに選んだだけでは、昔のテレビの砂嵐のようなノイズに満ちた画像が出力されます&lt;sup id="fnref:5"&gt;&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref"&gt;5&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
 &lt;p&gt;ところが、ここで非常に興味深い数学の大原則が登場します。それが &lt;strong&gt;大数の法則&lt;/strong&gt; です。1ピクセルあたり数百、数千という膨大な数の光の経路をシミュレートし、その統計を取っていくと、奇跡のようなことが起きます。サイコロを何万回も振るような状態で、振る回数が少ないときは当然ばらつきが出ますが、膨大な回数をこなして平均を取ると、ノイズが次々とスーッと消えていきます。そして最終的に、現実の光の物理法則が示す真の値にピタリと収束します。&lt;/p&gt;
 &lt;p&gt;つまり、一見いい加減に見えるランダムなサンプリングも、圧倒的な数をこなすことで、驚くほどリアルな現実の光景が画面上に浮かび上がってきます。適当に思えるランダム処理が、大数の法則という数学の力によって、実世界の物理法則に見事に収束するという、このメカニズムこそがモンテカルロ法の強みなのです。&lt;/p&gt;
 &lt;p&gt;1ピクセルあたり数百〜数千のパスをシミュレートし、その統計をとることでリアルなCGを実現するこのアプローチは、実のところページランクと全く同じ手法です。すなわち、どちらも &lt;strong&gt;「再帰的な定義」を「確率的なサンプリング」で乗り越えている&lt;/strong&gt; のです。&lt;/p&gt;
@@ -236,7 +249,7 @@ height="424"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;p&gt;2026年の現在、AI技術は急速に進化しています。Google検索にはAIによるセマンティック理解&lt;sup id="fnref:5"&gt;&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref"&gt;5&lt;/a&gt;&lt;/sup&gt;が導入され、レイトレーシングの世界でもAIを用いた強力なデノイジング技術&lt;sup id="fnref:6"&gt;&lt;a href="#fn:6" class="footnote-ref" role="doc-noteref"&gt;6&lt;/a&gt;&lt;/sup&gt;が活用されています。大数の法則による収束を待たずとも、AIが少ないサンプルから「正解」を推測できる時代になりました。&lt;/p&gt;
+&lt;p&gt;2026年の現在、AI技術は急速に進化しています。Google検索にはAIによるセマンティック理解&lt;sup id="fnref:6"&gt;&lt;a href="#fn:6" class="footnote-ref" role="doc-noteref"&gt;6&lt;/a&gt;&lt;/sup&gt;が導入され、レイトレーシングの世界でもAIを用いた強力なデノイジング技術&lt;sup id="fnref:7"&gt;&lt;a href="#fn:7" class="footnote-ref" role="doc-noteref"&gt;7&lt;/a&gt;&lt;/sup&gt;が活用されています。大数の法則による収束を待たずとも、AIが少ないサンプルから「正解」を推測できる時代になりました。&lt;/p&gt;
 &lt;p&gt;しかし、AIは根本の数学を置き換えたわけではありません。AIがどれほど賢く文脈を読み取ったり、ノイズを除去したりできるようになっても、その学習や推論の指標となる定常分布を定義しているのは、今でもこの1998年のアルゴリズムです。&lt;/p&gt;
 &lt;p&gt;一見バラバラに見える情報の海の中に、次に発見される「共通の法則」は何だと思いますか？ あなたが明日手にする新しいテクノロジーの裏側にも、全く別の分野と繋がる「数学の糸」が隠れているのかもしれません。&lt;/p&gt;
 &lt;div class="footnotes" role="doc-endnotes"&gt;
@@ -251,7 +264,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 . SIGGRAPH &amp;lsquo;86&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id="fn:3"&gt;
-&lt;p&gt;ゆるコンピュータ科学ラジオ. (2022).
+&lt;p&gt;ゆるコンピュータ科学ラジオ (2022).
 &amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id="fn:4"&gt;
@@ -259,12 +272,16 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref1:4" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id="fn:5"&gt;
-&lt;p&gt;Google.
+&lt;p&gt;gam0022 (2017).
 &amp;#160;&lt;a href="#fnref:5" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id="fn:6"&gt;
-&lt;p&gt;NVIDIA. (2023).
-.&amp;#160;&lt;a href="#fnref:6" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Google
+&amp;#160;&lt;a href="#fnref:6" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:7"&gt;
+&lt;p&gt;NVIDIA (2023).
+.&amp;#160;&lt;a href="#fnref:7" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</description></item><item><title>慶應大学SFCの講義でシェーダーについて話しました</title><link>https://gam0022.net/blog/2026/01/22/sfc-lecture/</link><pubDate>Thu, 22 Jan 2026 09:30:00 +0900</pubDate><guid>https://gam0022.net/blog/2026/01/22/sfc-lecture/</guid><description>&lt;p&gt;慶應義塾大学 湘南藤沢キャンパス（SFC）の
