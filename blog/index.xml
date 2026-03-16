@@ -55,11 +55,11 @@ $$
 L_o(x, \vec{\omega}_o) = L_e(x, \vec{\omega}_o) + \int_{\Omega} f_r(x, \vec{\omega}_i, \vec{\omega}_o) L_i(x, \vec{\omega}_i) \cos \theta_i d\vec{\omega}_i
 $$&lt;p&gt;各変数の意味は以下の通りです。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;$L_o(x, \vec{\omega}_o)$ ：点 $x$ から方向 $\vec{\omega}_o$ へ放射される輝度&lt;/li&gt;
-&lt;li&gt;$L_e(x, \vec{\omega}_o)$ ：点 $x$ 自体が発する輝度（自発光）&lt;/li&gt;
-&lt;li&gt;$f_r(x, \vec{\omega}_i, \vec{\omega}_o)$ ：BRDF（反射の特性を決める関数）&lt;/li&gt;
-&lt;li&gt;$L_i(x, \vec{\omega}_i)$ ：点 $x$ に方向 $\vec{\omega}_i$ から入射する輝度。これが 「別地点から放射された $L_o$」であることが &lt;strong&gt;再帰を意味する&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;$\cos \theta_i$ ：入射角による減衰&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;$L_o(x, \vec{\omega}_o)$&lt;/strong&gt; ：点 $x$ から方向 $\vec{\omega}_o$ へ放射される輝度&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;$L_e(x, \vec{\omega}_o)$&lt;/strong&gt; ：点 $x$ 自体が発する輝度（自発光）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;$f_r(x, \vec{\omega}_i, \vec{\omega}_o)$&lt;/strong&gt; ：BRDF（反射の特性を決める関数）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;$L_i(x, \vec{\omega}_i)$&lt;/strong&gt; ：点 $x$ に方向 $\vec{\omega}_i$ から入射する輝度。これが 「別地点から放射された $L_o$」であることが再帰を意味する&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;$\cos \theta_i$&lt;/strong&gt; ：入射角による減衰&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;これはページランクと同じように、右辺に左辺がある再帰的な定義です。&lt;/p&gt;
 &lt;h2 id="共通点2解決策はサイコロを振ることだった"&gt;共通点2：解決策は「サイコロを振ること」だった&lt;/h2&gt;
