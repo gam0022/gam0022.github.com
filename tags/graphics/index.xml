@@ -176,6 +176,19 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;p&gt;1998年。ラリー・ペイジ（Larry Page）らによるPageRank論文&lt;sup id="fnref1:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;が発表されたその同じ年、エリック・ヴィーチ（Eric Veach）によるモンテカルロ法を用いたレイトレーシングの集大成となる博士論文&lt;sup id="fnref1:4"&gt;&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref"&gt;4&lt;/a&gt;&lt;/sup&gt;が発表されました。&lt;/p&gt;
 &lt;p&gt;異なる領域で格闘していた研究者たちが、同じ時期に &lt;strong&gt;マルコフ連鎖&lt;/strong&gt; という数学の頂で出会ったのです。&lt;/p&gt;
 &lt;p&gt;マルコフ連鎖とは、ごく簡単に言うと &lt;strong&gt;「現在の状態だけを基に、次の状態が確率的に決まるプロセス」&lt;/strong&gt; です。過去がどうであったかは一切関係ありません。&lt;/p&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="ページランクもピクセルの輝度もピンボールマシンと本質は同じ"
+srcset="https://gam0022.net/blog/2026/03/16/google-and-raytracing/pinball_machine_hu_4e9371f75bf5ddcf.webp 320w, https://gam0022.net/blog/2026/03/16/google-and-raytracing/pinball_machine_hu_4d845813354f4c73.webp 480w, https://gam0022.net/blog/2026/03/16/google-and-raytracing/pinball_machine_hu_fb03593e57b288eb.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2026/03/16/google-and-raytracing/pinball_machine_hu_4e9371f75bf5ddcf.webp"
+width="760"
+height="428"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
 &lt;p&gt;この概念を直感的に理解するため、巨大な &lt;strong&gt;ピンボールマシン&lt;/strong&gt; を想像してみましょう。上から無数のボールを落とすと、ボールが釘に当たって右に行くか左に行くかは確率で決まります。ランダムにカン・カン・カンと跳ね返りながら落ちていきます。&lt;/p&gt;
 &lt;p&gt;そのボールを何百万個も落とし続けたとき、最終的に下にある複数のポケットのどこにどれくらいの割合でボールが積み上がるか。最初はバラバラでも時間が経つと一定の割合に落ち着きます。&lt;/p&gt;
 &lt;p&gt;これを数学の言葉で &lt;strong&gt;定常分布（stationary distribution）&lt;/strong&gt; と呼びます。&lt;/p&gt;
