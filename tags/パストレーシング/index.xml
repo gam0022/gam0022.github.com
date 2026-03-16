@@ -1,4 +1,273 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>パストレーシング | gam0022.net</title><link>https://gam0022.net/tags/%E3%83%91%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%B3%E3%82%B0/</link><atom:link href="https://gam0022.net/tags/%E3%83%91%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%B3%E3%82%B0/index.xml" rel="self" type="application/rss+xml"/><description>パストレーシング</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 23 Oct 2024 00:50:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/authors/gam0022_hu_5765ef871f6c1f2b.png</url><title>パストレーシング</title><link>https://gam0022.net/tags/%E3%83%91%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%B3%E3%82%B0/</link></image><item><title>レイトレ合宿10でポータルをテーマにしたアニメーションを作成しました</title><link>https://gam0022.net/blog/2024/10/23/rtcamp10/</link><pubDate>Wed, 23 Oct 2024 00:50:00 +0900</pubDate><guid>https://gam0022.net/blog/2024/10/23/rtcamp10/</guid><description>&lt;p&gt;10月11日(金)～10月13日(日)に熱海の初島で開催された
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>パストレーシング | gam0022.net</title><link>https://gam0022.net/tags/%E3%83%91%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%B3%E3%82%B0/</link><atom:link href="https://gam0022.net/tags/%E3%83%91%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%B3%E3%82%B0/index.xml" rel="self" type="application/rss+xml"/><description>パストレーシング</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 16 Mar 2026 22:30:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/authors/gam0022_hu_5765ef871f6c1f2b.png</url><title>パストレーシング</title><link>https://gam0022.net/tags/%E3%83%91%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%B3%E3%82%B0/</link></image><item><title>Google検索とレイトレーシング、実は同じ数学で動いていた。1998年に起きた「計算機科学の奇跡」</title><link>https://gam0022.net/blog/2026/03/16/google-and-raytracing/</link><pubDate>Mon, 16 Mar 2026 22:30:00 +0900</pubDate><guid>https://gam0022.net/blog/2026/03/16/google-and-raytracing/</guid><description>&lt;h2 id="全く別物に見える2つの世界を繋ぐ鍵"&gt;全く別物に見える2つの世界を繋ぐ「鍵」&lt;/h2&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="全く別物に見える2つの世界を繋ぐ「鍵」"
+srcset="https://gam0022.net/blog/2026/03/16/google-and-raytracing/p1_46_hu_68b29a6a9a0bff31.webp 320w, https://gam0022.net/blog/2026/03/16/google-and-raytracing/p1_46_hu_510913740b9d555c.webp 480w, https://gam0022.net/blog/2026/03/16/google-and-raytracing/p1_46_hu_f5905c94e87aa758.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2026/03/16/google-and-raytracing/p1_46_hu_68b29a6a9a0bff31.webp"
+width="760"
+height="424"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Google検索の順位を決める &lt;strong&gt;ページランク&lt;/strong&gt; と、最新ゲームや映画を彩る本物のようなリアルな光の表現を生み出す &lt;strong&gt;レイトレーシング&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;一見すると無関係な2つの領域ですが、その根底には &lt;strong&gt;同じ数理アルゴリズム&lt;/strong&gt; が流れています。&lt;/p&gt;
+&lt;p&gt;膨大なWebページ相互参照の網から &lt;strong&gt;重要なページ&lt;/strong&gt; を特定する問題も、3D空間上で無限に反射し続ける光の中で &lt;strong&gt;正確な輝度&lt;/strong&gt; を求める問題も、本質的には同じ構造を持っています。&lt;/p&gt;
+&lt;p&gt;一見バラバラな領域が、一つの「知の体系」へと収束していく。1998年に起きた知的な大いなる合流について、紐解いていきましょう。&lt;/p&gt;
+&lt;h2 id="共通点1終わりのない鶏が先か卵が先かの再帰の迷路"&gt;共通点1：終わりのない「鶏が先か、卵が先か」の再帰の迷路&lt;/h2&gt;
+&lt;p&gt;Googleの &lt;strong&gt;ページランク&lt;/strong&gt; と、光の挙動を記述する &lt;strong&gt;レンダリング方程式&lt;/strong&gt; 。この両者が抱える共通の難問、それは &lt;strong&gt;再帰的な定義（自己参照）&lt;/strong&gt; という数学的な迷宮です。&lt;/p&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="共通点1：終わりのない「鶏が先か、卵が先か」の再帰の迷路"
+srcset="https://gam0022.net/blog/2026/03/16/google-and-raytracing/point1_v3_hu_aa049d3e8be93786.webp 320w, https://gam0022.net/blog/2026/03/16/google-and-raytracing/point1_v3_hu_7be9a2e63a9b0406.webp 480w, https://gam0022.net/blog/2026/03/16/google-and-raytracing/point1_v3_hu_9658180364ea4e00.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2026/03/16/google-and-raytracing/point1_v3_hu_aa049d3e8be93786.webp"
+width="760"
+height="424"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id="googleのページランクのジレンマ"&gt;Googleのページランクのジレンマ&lt;/h3&gt;
+&lt;p&gt;Googleの重要度計算の核となる「ページランク」の考え方はシンプルです。 &lt;strong&gt;「ランクの高いページからリンクされているページは、ランクが高い」&lt;/strong&gt; というものです。&lt;/p&gt;
+&lt;p&gt;しかし、ここに数学的な難問が潜んでいます。ページAのランクを知るには、リンク元であるページBのランクを知る必要があります。しかし、そのページBのランクを知るためには、さらにそのリンク元のランクを知る必要があり……というように、定義が &lt;strong&gt;再帰的（自己参照的）&lt;/strong&gt; になっています。&lt;/p&gt;
+&lt;p&gt;ラリー・ペイジらによるPageRankの元論文&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;にページランクの数学的な定義が記述されています。&lt;/p&gt;
+$$
+R(u) = c \sum_{v \in B_u} \frac{R(v)}{N_v}
+$$&lt;p&gt;各変数の意味は以下の通りです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;$R(u)$&lt;/strong&gt;：ページ $u$ のページランク値&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;$B_u$&lt;/strong&gt;：ページ $u$ にリンクしているページの集合&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;$R(v)$&lt;/strong&gt;：ページ $u$ へリンクしている個々のページ $v$ のページランク。これが &lt;strong&gt;再帰を意味する&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;$N_v$&lt;/strong&gt;：ページ $v$ から出ているリンクの総数&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;$c$&lt;/strong&gt;：全ページのランクの総和を一定に保つための正規化係数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ページランク $R(u)$ （式の左辺）を知るためには、そのページにリンクしている全ページのページランク $R(v)$ （式の右辺）を確定させる必要があります。&lt;/p&gt;
+&lt;p&gt;ウェブ全体という膨大なネットワークにおいて、この巨大な「鶏が先か卵が先か」という連立方程式を厳密に解くことは、計算コストの面で極めて困難です。&lt;/p&gt;
+&lt;h3 id="cgのレンダリング方程式のジレンマ"&gt;CGのレンダリング方程式のジレンマ&lt;/h3&gt;
+&lt;p&gt;一方、CG（コンピュータグラフィックス）のレンダリング計算も、全く同じ &lt;strong&gt;再帰的な定義&lt;/strong&gt; の壁に直面しています。&lt;/p&gt;
+&lt;p&gt;ある地点の明るさ（輝度）を決めるには、周囲のあらゆる方向から届く光を合計しなければなりません。 しかし、その届く光の強さは、「別の場所で反射してきた光」です。 つまり、地点Aの明るさを決めるには地点Bの明るさが必要で、地点Bの明るさを決めるには地点Cの明るさが必要になる……という、無限の連鎖（再帰）が発生します。&lt;/p&gt;
+&lt;p&gt;物理的な光の挙動を示す &lt;strong&gt;レンダリング方程式&lt;/strong&gt; は、ある点 $x$ から出る輝度 $L_o$ を半球上の積分として定義します&lt;sup id="fnref:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+$$
+L_o(x, \vec{\omega}_o) = L_e(x, \vec{\omega}_o) + \int_{\Omega} f_r(x, \vec{\omega}_i, \vec{\omega}_o) L_i(x, \vec{\omega}_i) \cos \theta_i d\vec{\omega}_i
+$$&lt;p&gt;各変数の意味は以下の通りです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$L_o(x, \vec{\omega}_o)$ ：点 $x$ から方向 $\vec{\omega}_o$ へ放射される輝度&lt;/li&gt;
+&lt;li&gt;$L_e(x, \vec{\omega}_o)$ ：点 $x$ 自体が発する輝度（自発光）&lt;/li&gt;
+&lt;li&gt;$f_r(x, \vec{\omega}_i, \vec{\omega}_o)$ ：BRDF（反射の特性を決める関数）&lt;/li&gt;
+&lt;li&gt;$L_i(x, \vec{\omega}_i)$ ：点 $x$ に方向 $\vec{\omega}_i$ から入射する輝度。これが 「別地点から放射された $L_o$」であることが &lt;strong&gt;再帰を意味する&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;$\cos \theta_i$ ：入射角による減衰&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;これはページランクと同じように、右辺に左辺がある再帰的な定義です。&lt;/p&gt;
+&lt;h2 id="共通点2解決策はサイコロを振ることだった"&gt;共通点2：解決策は「サイコロを振ること」だった&lt;/h2&gt;
+&lt;p&gt;この無限の迷路を突破するために導入されたのが、統計的な「ランダムな試行」という、大胆かつ知的な割り切りでした。&lt;/p&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="共通点2：解決策は「サイコロを振ること」だった"
+srcset="https://gam0022.net/blog/2026/03/16/google-and-raytracing/point2_v3_hu_6a9c354aa40f76a.webp 320w, https://gam0022.net/blog/2026/03/16/google-and-raytracing/point2_v3_hu_9bd4436e48d8c610.webp 480w, https://gam0022.net/blog/2026/03/16/google-and-raytracing/point2_v3_hu_82f611fb20026376.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2026/03/16/google-and-raytracing/point2_v3_hu_6a9c354aa40f76a.webp"
+width="760"
+height="424"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id="googleのランダムサーファーモデル"&gt;Googleのランダムサーファーモデル&lt;/h3&gt;
+&lt;p&gt;Googleは、ネットの海を無作為に漂う &lt;strong&gt;ランダムサーファー&lt;/strong&gt; を想定しました。サーファーがリンクをランダムに辿り続け、無限に繰り返した結果として「あるページに滞在している確率」を算出します。&lt;/p&gt;
+&lt;p&gt;直感的な理解を深めるため、PageRankの核心を「交通網や駅の利用者数」に例えて解説したゆるコンピュータ科学ラジオの動画&lt;sup id="fnref:3"&gt;&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref"&gt;3&lt;/a&gt;&lt;/sup&gt;が参考になります。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;新宿駅の例え&lt;/strong&gt;：新宿駅のように多くの路線が乗り入れている場所は、統計的に &lt;strong&gt;常に誰かがいる&lt;/strong&gt; 状態になります。これが &lt;strong&gt;権威あるページ&lt;/strong&gt; の本質です。ランクの高さは、単にリンク数の多さではなく、&lt;strong&gt;統計的に多くのサーファーが訪れる確率&lt;/strong&gt; によって決まります。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;離島の例え&lt;/strong&gt;：2つの島（ページ）が互いに橋（リンク）を架けて行き来していても、外の世界から誰も来なければ、その島の通行量は増えません。
+これは &lt;strong&gt;相互リンクによる不正なランク上げ&lt;/strong&gt; が、ランダムサーファー（＝外から来る人）の視点では無効であることを示します。&lt;/p&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="新宿と離島の例え"
+srcset="https://gam0022.net/blog/2026/03/16/google-and-raytracing/p5_53_hu_afcc536a9e40e89d.webp 320w, https://gam0022.net/blog/2026/03/16/google-and-raytracing/p5_53_hu_b40e809b238e90ed.webp 480w, https://gam0022.net/blog/2026/03/16/google-and-raytracing/p5_53_hu_67c434275dd2a0a6.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2026/03/16/google-and-raytracing/p5_53_hu_afcc536a9e40e89d.webp"
+width="760"
+height="424"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id="cgのモンテカルロ法"&gt;CGのモンテカルロ法&lt;/h3&gt;
+&lt;p&gt;CGの世界では、これを &lt;strong&gt;モンテカルロ法&lt;/strong&gt; と呼びます。あらゆる方向から来る光の積分を真面目に計算する代わりに、いくつかの方向を &lt;strong&gt;ランダムに選び（サンプリング）&lt;/strong&gt;、その平均をとることで近似値を導き出します。&lt;/p&gt;
+&lt;p&gt;モンテカルロ法とは、一言で言えば &lt;strong&gt;乱数を使ったサンプリング（試行）によって、複雑な計算の近似値を求める手法&lt;/strong&gt; です。&lt;/p&gt;
+&lt;p&gt;例えば、ある部屋の平均気温を知りたいとします。厳密に求めるなら、部屋中のすべての点の温度を測定して積分しなければなりませんが、これは不可能です。 そこで、部屋の中で &lt;strong&gt;ランダムに数カ所（サンプリング点）を選び&lt;/strong&gt;、その場所の温度の平均を計算します。サンプリングする地点（サンプル数 $N$ ）を増やせば増やすほど、この平均値は部屋全体の真の平均気温に近づいていきます。&lt;/p&gt;
+&lt;p&gt;モンテカルロ法を用いたレイトレーシング（光輸送シミュレーション）の集大成がエリック・ヴィーチ（Eric Veach）の博士論文&lt;sup id="fnref:4"&gt;&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref"&gt;4&lt;/a&gt;&lt;/sup&gt;に書かれています。&lt;/p&gt;
+&lt;p&gt;パストレーシング（モンテカルロ法を用いたレイトレーシング）においては、ある点で見える明るさを決めるために、周囲のあらゆる方向から来る光（積分）を計算する代わりに、&lt;strong&gt;いくつかの方向をランダムに選び（サンプリング）、その方向から来た光の強さを平均する&lt;/strong&gt; という処理を行います。&lt;/p&gt;
+&lt;p&gt;この&lt;strong&gt;ランダムに選んだ方向&lt;/strong&gt;をさらに追跡していく（そこでもまたランダムに方向を選ぶ）ことで、光の経路（パス）が形成されます。&lt;/p&gt;
+&lt;h3 id="大数の法則試行回数を増やすほど正解に収束する"&gt;大数の法則：試行回数を増やすほど「正解」に収束する&lt;/h3&gt;
+&lt;p&gt;しかし、ここで自然な疑問が生じます。&lt;strong&gt;ランダムに数個の方向を選んで光を計算したら、ノイズだらけのザラザラした画像になってしまうのではないか？&lt;/strong&gt; という問題です。この直感は正しく、実際に、わずか数本の光の経路をランダムに選んだだけでは、昔のテレビの砂嵐のようなノイズに満ちた画像が出力されます。&lt;/p&gt;
+&lt;p&gt;ところが、ここで非常に興味深い数学の大原則が登場します。それが &lt;strong&gt;大数の法則&lt;/strong&gt; です。1ピクセルあたり数百、数千という膨大な数の光の経路をシミュレートし、その統計を取っていくと、奇跡のようなことが起きます。サイコロを何万回も振るような状態で、振る回数が少ないときは当然ばらつきが出ますが、膨大な回数をこなして平均を取ると、ノイズが次々とスーッと消えていきます。そして最終的に、現実の光の物理法則が示す真の値にピタリと収束します。&lt;/p&gt;
+&lt;p&gt;つまり、一見いい加減に見えるランダムなサンプリングも、圧倒的な数をこなすことで、驚くほどリアルな現実の光景が画面上に浮かび上がってきます。適当に思えるランダム処理が、大数の法則という数学の力によって、実世界の物理法則に見事に収束するという、このメカニズムこそがモンテカルロ法の強みなのです。&lt;/p&gt;
+&lt;p&gt;1ピクセルあたり数百〜数千のパスをシミュレートし、その統計をとることでリアルなCGを実現するこのアプローチは、実のところページランクと全く同じ手法です。すなわち、どちらも &lt;strong&gt;「再帰的な定義」を「確率的なサンプリング」で乗り越えている&lt;/strong&gt; のです。&lt;/p&gt;
+&lt;h2 id="共通点3無限の迷路を抜ける仕組み"&gt;共通点3：無限の迷路を抜ける仕組み&lt;/h2&gt;
+&lt;p&gt;再帰的な探索を行う際、どちらのアルゴリズムも &lt;strong&gt;無限ループ（循環参照）&lt;/strong&gt; という共通の課題に直面します。&lt;/p&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="共通点3：無限の迷路"
+srcset="https://gam0022.net/blog/2026/03/16/google-and-raytracing/point3_hu_45f50c78ab70f946.webp 320w, https://gam0022.net/blog/2026/03/16/google-and-raytracing/point3_hu_9775ce79723e9494.webp 480w, https://gam0022.net/blog/2026/03/16/google-and-raytracing/point3_hu_fc67c27b6cc3531b.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2026/03/16/google-and-raytracing/point3_hu_45f50c78ab70f946.webp"
+width="760"
+height="424"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id="googleのダンピングファクター"&gt;Googleのダンピングファクター&lt;/h3&gt;
+&lt;p&gt;ランダムサーファーがウェブを巡回する際、同じページ同士が相互にリンクしていたり、閉じたループの中に迷い込んだりすると、そこから抜け出せなくなる可能性があります。 これを数学的に解決するのが &lt;strong&gt;ダンピングファクター（ $d$ ）&lt;/strong&gt; です。 サーファーはときどき（一定の確率 $1-d$ ）、現在のリンクを辿るのをやめて全く別のページへランダムに &lt;strong&gt;テレポート&lt;/strong&gt; します。 これにより、特定のループに捕らわれずウェブ全体の定常状態を正しく評価できるようになります。&lt;/p&gt;
+&lt;h3 id="cgのロシアンルーレット"&gt;CGのロシアン・ルーレット&lt;/h3&gt;
+&lt;p&gt;同様の仕組みは、パストレーシングの世界にも存在します。反射率の高い壁による「鏡合わせの部屋」のように、光のレイが永久に反射し続けて追跡が終わらない状況を回避するため、 &lt;strong&gt;ロシアン・ルーレット&lt;/strong&gt; という手法が使われます。&lt;/p&gt;
+&lt;p&gt;これは単に「運が悪ければ計算を捨てて終わり」という雑な処理ではありません。 例えば、確率 $P$ で反射を継続し、確率 $1-P$ で打ち切るとします。このとき、生き残ったパスの寄与を &lt;strong&gt;継続確率 $P$ で割る&lt;/strong&gt; ことで、統計的なバランスを取ります。&lt;/p&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="共通点3：ギャンブル"
+srcset="https://gam0022.net/blog/2026/03/16/google-and-raytracing/p9_54_hu_6f5a6e4eba788f7b.webp 320w, https://gam0022.net/blog/2026/03/16/google-and-raytracing/p9_54_hu_aacc7dcb0fd2a93.webp 480w, https://gam0022.net/blog/2026/03/16/google-and-raytracing/p9_54_hu_1ea61c0a9d31ef20.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2026/03/16/google-and-raytracing/p9_54_hu_6f5a6e4eba788f7b.webp"
+width="760"
+height="424"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;この仕組みを理解するため、ギャンブルの例えを考えてみましょう。100人が1,000円分のチップを持ってゲームに参加します。ルールは単純で &lt;strong&gt;「1/2の確率で失敗して0円になるが、勝てば2,000円になる」&lt;/strong&gt; という高リスク・ハイリターンなゲームです。&lt;/p&gt;
+&lt;p&gt;結果として、50人は失敗して0円になり、50人は2,000円を手にします。全体の合計金額は $50 \times 0 + 50 \times 2000 = 100,000$ 円。つまり、1人当たりの平均は依然として $100,000 \div 100 = 1,000$ 円のままです。個人の運命は0か2倍かに明確に分かれていても、&lt;strong&gt;システム全体の統計的なエネルギーはプレイ前と全く変わらない&lt;/strong&gt; のです。&lt;/p&gt;
+&lt;p&gt;この対称性が、光の計算でも完全に成立します。個々の光の粒子が、50%の確率で途中で &lt;strong&gt;消滅&lt;/strong&gt; されても、生き残った光のエネルギーを2倍に &lt;strong&gt;増幅&lt;/strong&gt; することで、画面全体の光のエネルギー総和は &lt;strong&gt;数学的に完璧に保存される&lt;/strong&gt; のです。&lt;/p&gt;
+&lt;p&gt;一見いい加減に見える確率の操作が、全体の辻褄を完璧に合わせているというのは、アルゴリズム設計の真骨頂と言えるでしょう。&lt;/p&gt;
+&lt;h2 id="共通点41998年に起きた計算機科学の奇跡とマルコフ連鎖"&gt;共通点4：1998年に起きた「計算機科学の奇跡」とマルコフ連鎖&lt;/h2&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="共通点4：1998年に起きた「計算機科学の奇跡」とマルコフ連鎖"
+srcset="https://gam0022.net/blog/2026/03/16/google-and-raytracing/p12_57_hu_5be329696625982b.webp 320w, https://gam0022.net/blog/2026/03/16/google-and-raytracing/p12_57_hu_e73f107dc22f6e51.webp 480w, https://gam0022.net/blog/2026/03/16/google-and-raytracing/p12_57_hu_68aa27c8bd36f17d.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2026/03/16/google-and-raytracing/p12_57_hu_5be329696625982b.webp"
+width="760"
+height="424"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;驚くべきは、この2つの領域が「同じ数学的ゴール」に辿り着いた時期です。&lt;/p&gt;
+&lt;p&gt;1998年。ラリー・ペイジらによるPageRank論文&lt;sup id="fnref1:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;が発表されたその同じ年、エリック・ヴィーチ（Eric Veach）によるモンテカルロ法を用いたレイトレーシングの集大成となる論文&lt;sup id="fnref1:4"&gt;&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref"&gt;4&lt;/a&gt;&lt;/sup&gt;が発表されました。&lt;/p&gt;
+&lt;p&gt;異なる領域で格闘していた研究者たちが、同じ時期に &lt;strong&gt;マルコフ連鎖&lt;/strong&gt; という数学の頂で出会ったのです。&lt;/p&gt;
+&lt;p&gt;マルコフ連鎖とは、ごく簡単に言うと &lt;strong&gt;「現在の状態だけを基に、次の状態が確率的に決まるプロセス」&lt;/strong&gt; です。過去がどうであったかは一切関係ありません。&lt;/p&gt;
+&lt;p&gt;この概念を直感的に理解するため、巨大な &lt;strong&gt;ピンボールマシン&lt;/strong&gt; を想像してみましょう。上から無数のボールを落とすと、ボールが釘に当たって右に行くか左に行くかは確率で決まります。ランダムにカン・カン・カンと跳ね返りながら落ちていきます。&lt;/p&gt;
+&lt;p&gt;そのボールを何百万個も落とし続けたとき、最終的に下にある複数のポケットのどこにどれくらいの割合でボールが積み上がるか。最初はバラバラでも時間が経つと一定の割合に落ち着きます。&lt;/p&gt;
+&lt;p&gt;これを数学の言葉で &lt;strong&gt;定常分布（stationary distribution）&lt;/strong&gt; と呼びます。&lt;/p&gt;
+&lt;p&gt;ウェブのリンク構造も、3D空間での光の反射特性も、本質的にはこの巨大なピンボールマシンと同じです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ページランク&lt;/strong&gt; ：ランダムサーファーというボールをウェブに放り込んだ時、最終的にどのページに落ち着く確率が高いか。それが定常分布であり、各ページのランクです。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;パストレーシング&lt;/strong&gt; ：光の粒というボールをシーンに放り込んだ時、反射を重ねながら最終的にどこに集約するか。その分布が各ピクセルの正確な輝度を決定します。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;どちらも &lt;strong&gt;「網目状ネットワークの中にボールを放り込み、確率的に遷移させ続けた結果、何が起こるか」&lt;/strong&gt; という同じ数学的問題なのです。&lt;/p&gt;
+&lt;h2 id="一目でわかる比較まとめ"&gt;一目でわかる比較まとめ&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;項目&lt;/th&gt;
+&lt;th&gt;ページランク (Google)&lt;/th&gt;
+&lt;th&gt;パストレーシング (CG)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;対象&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Web上の情報の重要度&lt;/td&gt;
+&lt;td&gt;3D空間上の光の輝度&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;課題&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;ページランクの再帰的な定義と循環参照&lt;/td&gt;
+&lt;td&gt;レンダリング方程式の再帰的な定義と無限反射&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;解決策&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;ランダムサーファー + テレポート（ダンピングファクター）&lt;/td&gt;
+&lt;td&gt;モンテカルロ法 + ロシアン・ルーレット&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;目的&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;定常状態（重要度）の推定&lt;/td&gt;
+&lt;td&gt;定常状態（輝度）の収束&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;本質&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;ランダムに歩き回った時間＝統計的な重要度&lt;/td&gt;
+&lt;td&gt;ランダムに追跡したパス＝統計的な輝度&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="2つの問題の4つの共通点"
+srcset="https://gam0022.net/blog/2026/03/16/google-and-raytracing/summary_hu_2c0176a159955441.webp 320w, https://gam0022.net/blog/2026/03/16/google-and-raytracing/summary_hu_ccaa732009f42823.webp 480w, https://gam0022.net/blog/2026/03/16/google-and-raytracing/summary_hu_dfde7847c7365a3a.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2026/03/16/google-and-raytracing/summary_hu_2c0176a159955441.webp"
+width="760"
+height="424"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id="ai時代でも1998年のアルゴリズムは生きている"&gt;AI時代でも1998年のアルゴリズムは生きている&lt;/h2&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="AI時代でも1998年のアルゴリズムは生きている"
+srcset="https://gam0022.net/blog/2026/03/16/google-and-raytracing/p13_58_hu_e966414382991df1.webp 320w, https://gam0022.net/blog/2026/03/16/google-and-raytracing/p13_58_hu_2cfd34880a1b1582.webp 480w, https://gam0022.net/blog/2026/03/16/google-and-raytracing/p13_58_hu_4a3decba5a5f28e9.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2026/03/16/google-and-raytracing/p13_58_hu_e966414382991df1.webp"
+width="760"
+height="424"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;2026年の現在、AI技術は急速に進化しています。Google検索にはAIによるセマンティック理解&lt;sup id="fnref:5"&gt;&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref"&gt;5&lt;/a&gt;&lt;/sup&gt;が導入され、レイトレーシングの世界でもAIを用いた強力なデノイジング技術&lt;sup id="fnref:6"&gt;&lt;a href="#fn:6" class="footnote-ref" role="doc-noteref"&gt;6&lt;/a&gt;&lt;/sup&gt;が活用されています。大数の法則による収束を待たずとも、AIが少ないサンプルから「正解」を推測できる時代になりました。&lt;/p&gt;
+&lt;p&gt;しかし、AIは根本の数学を置き換えたわけではありません。AIがどれほど賢く文脈を読み取ったり、ノイズを除去したりできるようになっても、その学習や推論の指標となる定常分布を定義しているのは、今でもこの1998年のアルゴリズムです。&lt;/p&gt;
+&lt;p&gt;一見バラバラに見える情報の海の中に、次に発見される「共通の法則」は何だと思いますか？ あなたが明日手にする新しいテクノロジーの裏側にも、全く別の分野と繋がる「数学の糸」が隠れているのかもしれません。&lt;/p&gt;
+&lt;div class="footnotes" role="doc-endnotes"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;L. Page, S. Brin, R. Motwani &amp;amp; T. Winograd (1998).
+&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref1:1" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;Kajiya, J. T. (1986).
+. SIGGRAPH &amp;lsquo;86&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:3"&gt;
+&lt;p&gt;ゆるコンピュータ科学ラジオ. (2022).
+&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:4"&gt;
+&lt;p&gt;Veach, E. (1998).
+&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref1:4" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:5"&gt;
+&lt;p&gt;Google.
+&amp;#160;&lt;a href="#fnref:5" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:6"&gt;
+&lt;p&gt;NVIDIA. (2023).
+.&amp;#160;&lt;a href="#fnref:6" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description></item><item><title>レイトレ合宿10でポータルをテーマにしたアニメーションを作成しました</title><link>https://gam0022.net/blog/2024/10/23/rtcamp10/</link><pubDate>Wed, 23 Oct 2024 00:50:00 +0900</pubDate><guid>https://gam0022.net/blog/2024/10/23/rtcamp10/</guid><description>&lt;p&gt;10月11日(金)～10月13日(日)に熱海の初島で開催された
 に参加しました。&lt;/p&gt;
 &lt;p&gt;私はポータルをテーマにしたアニメーションを作成しました。&lt;/p&gt;
 &lt;p&gt;前半はプリミティブな屋内シーン、後半はレイマーチングを用いた複雑なジオメトリーの屋外シーンと、対照的な2つのシーンを作成しました。&lt;/p&gt;
