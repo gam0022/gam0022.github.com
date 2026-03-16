@@ -34,7 +34,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;h3 id="googleのページランクのジレンマ"&gt;Googleのページランクのジレンマ&lt;/h3&gt;
 &lt;p&gt;Googleの重要度計算の核となる「ページランク」の考え方はシンプルです。 &lt;strong&gt;「ランクの高いページからリンクされているページは、ランクが高い」&lt;/strong&gt; というものです。&lt;/p&gt;
 &lt;p&gt;しかし、ここに数学的な難問が潜んでいます。ページAのランクを知るには、リンク元であるページBのランクを知る必要があります。しかし、そのページBのランクを知るためには、さらにそのリンク元のランクを知る必要があり……というように、定義が &lt;strong&gt;再帰的（自己参照的）&lt;/strong&gt; になっています。&lt;/p&gt;
-&lt;p&gt;ラリー・ペイジらによるPageRankの元論文&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;にページランクの数学的な定義が記述されています。&lt;/p&gt;
+&lt;p&gt;ラリー・ペイジ（Larry Page）らによるPageRankの元論文&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;にページランクの数学的な定義が記述されています。&lt;/p&gt;
 $$
 R(u) = c \sum_{v \in B_u} \frac{R(v)}{N_v}
 $$&lt;p&gt;各変数の意味は以下の通りです。&lt;/p&gt;
@@ -78,7 +78,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;h3 id="googleのランダムサーファーモデル"&gt;Googleのランダムサーファーモデル&lt;/h3&gt;
-&lt;p&gt;Googleは、ネットの海を無作為に漂う &lt;strong&gt;ランダムサーファー&lt;/strong&gt; を想定しました。サーファーがリンクをランダムに辿り続け、無限に繰り返した結果として「あるページに滞在している確率」を算出します。&lt;/p&gt;
+&lt;p&gt;Googleは、ネットの海を無作為に漂う &lt;strong&gt;ランダムサーファー&lt;/strong&gt; を想定しました。サーファーがリンクをランダムに辿り続け、無限に繰り返した結果として &lt;strong&gt;「あるページに滞在している確率」&lt;/strong&gt; を算出します。&lt;/p&gt;
 &lt;p&gt;直感的な理解を深めるため、PageRankの核心を「交通網や駅の利用者数」に例えて解説したゆるコンピュータ科学ラジオの動画&lt;sup id="fnref:3"&gt;&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref"&gt;3&lt;/a&gt;&lt;/sup&gt;が参考になります。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;新宿駅の例え&lt;/strong&gt;：新宿駅のように多くの路線が乗り入れている場所は、統計的に &lt;strong&gt;常に誰かがいる&lt;/strong&gt; 状態になります。これが &lt;strong&gt;権威あるページ&lt;/strong&gt; の本質です。ランクの高さは、単にリンク数の多さではなく、&lt;strong&gt;統計的に多くのサーファーが訪れる確率&lt;/strong&gt; によって決まります。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;離島の例え&lt;/strong&gt;：2つの島（ページ）が互いに橋（リンク）を架けて行き来していても、外の世界から誰も来なければ、その島の通行量は増えません。
@@ -100,7 +100,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;p&gt;CGの世界では、これを &lt;strong&gt;モンテカルロ法&lt;/strong&gt; と呼びます。あらゆる方向から来る光の積分を真面目に計算する代わりに、いくつかの方向を &lt;strong&gt;ランダムに選び（サンプリング）&lt;/strong&gt;、その平均をとることで近似値を導き出します。&lt;/p&gt;
 &lt;p&gt;モンテカルロ法とは、一言で言えば &lt;strong&gt;乱数を使ったサンプリング（試行）によって、複雑な計算の近似値を求める手法&lt;/strong&gt; です。&lt;/p&gt;
 &lt;p&gt;例えば、ある部屋の平均気温を知りたいとします。厳密に求めるなら、部屋中のすべての点の温度を測定して積分しなければなりませんが、これは不可能です。 そこで、部屋の中で &lt;strong&gt;ランダムに数カ所（サンプリング点）を選び&lt;/strong&gt;、その場所の温度の平均を計算します。サンプリングする地点（サンプル数 $N$ ）を増やせば増やすほど、この平均値は部屋全体の真の平均気温に近づいていきます。&lt;/p&gt;
-&lt;p&gt;モンテカルロ法を用いたレイトレーシング（光輸送シミュレーション）の集大成がエリック・ヴィーチ（Eric Veach）の博士論文&lt;sup id="fnref:4"&gt;&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref"&gt;4&lt;/a&gt;&lt;/sup&gt;に書かれています。&lt;/p&gt;
+&lt;p&gt;モンテカルロ法を用いたレイトレーシング（光輸送シミュレーション）は、ジム・カジヤ（James T. Kajiya）によってその礎が築かれ&lt;sup id="fnref1:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt;、エリック・ヴィーチ（Eric Veach）によって実用的な完成の域へと洗練されました&lt;sup id="fnref:4"&gt;&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref"&gt;4&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
 &lt;p&gt;パストレーシング（モンテカルロ法を用いたレイトレーシング）においては、ある点で見える明るさを決めるために、周囲のあらゆる方向から来る光（積分）を計算する代わりに、&lt;strong&gt;いくつかの方向をランダムに選び（サンプリング）、その方向から来た光の強さを平均する&lt;/strong&gt; という処理を行います。&lt;/p&gt;
 &lt;p&gt;この&lt;strong&gt;ランダムに選んだ方向&lt;/strong&gt;をさらに追跡していく（そこでもまたランダムに方向を選ぶ）ことで、光の経路（パス）が形成されます。&lt;/p&gt;
 &lt;h3 id="大数の法則試行回数を増やすほど正解に収束する"&gt;大数の法則：試行回数を増やすほど「正解」に収束する&lt;/h3&gt;
@@ -117,7 +117,7 @@ height="428"
 loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;p&gt;しかし、ここで自然な疑問が生じます。&lt;strong&gt;ランダムに数個の方向を選んで光を計算したら、ノイズだらけのザラザラした画像になってしまうのではないか？&lt;/strong&gt; という問題です。この直感は正しく、実際に、わずか数本の光の経路をランダムに選んだだけでは、昔のテレビの砂嵐のようなノイズに満ちた画像が出力されます&lt;sup id="fnref:5"&gt;&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref"&gt;5&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+&lt;p&gt;しかし、ここで自然な疑問が生じます。&lt;strong&gt;ランダムに数個の方向を選んで光を計算したら、ノイズだらけのザラザラした画像になってしまうのではないか？&lt;/strong&gt; という問題です。この直感は正しく、実際に、わずか数本の光の経路をランダムに選んだだけでは、昔のテレビの砂嵐のようなノイズに満ちた画像が出力されます（比較画像は筆者自作のレンダラー&lt;sup id="fnref:5"&gt;&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref"&gt;5&lt;/a&gt;&lt;/sup&gt;でレンダリング）。&lt;/p&gt;
 &lt;p&gt;ところが、ここで非常に興味深い数学の大原則が登場します。それが &lt;strong&gt;大数の法則&lt;/strong&gt; です。1ピクセルあたり数百、数千という膨大な数の光の経路をシミュレートし、その統計を取っていくと、奇跡のようなことが起きます。サイコロを何万回も振るような状態で、振る回数が少ないときは当然ばらつきが出ますが、膨大な回数をこなして平均を取ると、ノイズが次々とスーッと消えていきます。そして最終的に、現実の光の物理法則が示す真の値にピタリと収束します。&lt;/p&gt;
 &lt;p&gt;つまり、一見いい加減に見えるランダムなサンプリングも、圧倒的な数をこなすことで、驚くほどリアルな現実の光景が画面上に浮かび上がってきます。適当に思えるランダム処理が、大数の法則という数学の力によって、実世界の物理法則に見事に収束するという、このメカニズムこそがモンテカルロ法の強みなのです。&lt;/p&gt;
 &lt;p&gt;1ピクセルあたり数百〜数千のパスをシミュレートし、その統計をとることでリアルなCGを実現するこのアプローチは、実のところページランクと全く同じ手法です。すなわち、どちらも &lt;strong&gt;「再帰的な定義」を「確率的なサンプリング」で乗り越えている&lt;/strong&gt; のです。&lt;/p&gt;
@@ -173,7 +173,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;驚くべきは、この2つの領域が「同じ数学的ゴール」に辿り着いた時期です。&lt;/p&gt;
-&lt;p&gt;1998年。ラリー・ペイジらによるPageRank論文&lt;sup id="fnref1:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;が発表されたその同じ年、エリック・ヴィーチ（Eric Veach）によるモンテカルロ法を用いたレイトレーシングの集大成となる論文&lt;sup id="fnref1:4"&gt;&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref"&gt;4&lt;/a&gt;&lt;/sup&gt;が発表されました。&lt;/p&gt;
+&lt;p&gt;1998年。ラリー・ペイジ（Larry Page）らによるPageRank論文&lt;sup id="fnref1:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;が発表されたその同じ年、エリック・ヴィーチ（Eric Veach）によるモンテカルロ法を用いたレイトレーシングの集大成となる博士論文&lt;sup id="fnref1:4"&gt;&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref"&gt;4&lt;/a&gt;&lt;/sup&gt;が発表されました。&lt;/p&gt;
 &lt;p&gt;異なる領域で格闘していた研究者たちが、同じ時期に &lt;strong&gt;マルコフ連鎖&lt;/strong&gt; という数学の頂で出会ったのです。&lt;/p&gt;
 &lt;p&gt;マルコフ連鎖とは、ごく簡単に言うと &lt;strong&gt;「現在の状態だけを基に、次の状態が確率的に決まるプロセス」&lt;/strong&gt; です。過去がどうであったかは一切関係ありません。&lt;/p&gt;
 &lt;p&gt;この概念を直感的に理解するため、巨大な &lt;strong&gt;ピンボールマシン&lt;/strong&gt; を想像してみましょう。上から無数のボールを落とすと、ボールが釘に当たって右に行くか左に行くかは確率で決まります。ランダムにカン・カン・カンと跳ね返りながら落ちていきます。&lt;/p&gt;
@@ -261,7 +261,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;/li&gt;
 &lt;li id="fn:2"&gt;
 &lt;p&gt;Kajiya, J. T. (1986).
-. SIGGRAPH &amp;lsquo;86&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+. SIGGRAPH &amp;lsquo;86&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref1:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id="fn:3"&gt;
 &lt;p&gt;ゆるコンピュータ科学ラジオ (2022).
