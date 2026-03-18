@@ -265,6 +265,9 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 &lt;p&gt;2026年の現在、AI技術は急速に進化しています。Google検索にはAIによるセマンティック理解&lt;sup id="fnref:6"&gt;&lt;a href="#fn:6" class="footnote-ref" role="doc-noteref"&gt;6&lt;/a&gt;&lt;/sup&gt;が導入され、レイトレーシングの世界でもAIを用いた強力なデノイジング技術&lt;sup id="fnref:7"&gt;&lt;a href="#fn:7" class="footnote-ref" role="doc-noteref"&gt;7&lt;/a&gt;&lt;/sup&gt;が活用されています。大数の法則による収束を待たずとも、AIが少ないサンプルから「正解」を推測できる時代になりました。&lt;/p&gt;
 &lt;p&gt;しかし、AIは根本の数学を置き換えたわけではありません。AIがどれほど賢く文脈を読み取ったり、ノイズを除去したりできるようになっても、その学習や推論の指標となる「正解」を定義しているのは、今でもこの1998年のアルゴリズムです。&lt;/p&gt;
 &lt;p&gt;一見バラバラに見える情報の海の中に、次に発見される「共通の法則」は何だと思いますか？ あなたが明日手にする新しいテクノロジーの裏側にも、全く別の分野と繋がる「数学の糸」が隠れているのかもしれません。&lt;/p&gt;
+&lt;h2 id="補足と訂正-20260319"&gt;補足と訂正 2026/03/19&lt;/h2&gt;
+&lt;p&gt;ページランクの解説で用いたランダムサーファーモデルは、指標を直感的に正当化するためのモデル（解釈）です。
+実際の実装では乱数シミュレーションではなく、行列の固有ベクトルを計算する決定論的な演算が行われているようです。&lt;/p&gt;
 &lt;div class="footnotes" role="doc-endnotes"&gt;
 &lt;hr&gt;
 &lt;ol&gt;
