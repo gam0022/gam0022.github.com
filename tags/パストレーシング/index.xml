@@ -278,7 +278,7 @@ loading="lazy" data-zoomable /&gt;&lt;/div&gt;
 $$R = cAR$$&lt;ul&gt;
 &lt;li&gt;$c$：固有値に対応する正規化係数&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;この数式において、行列 $A$（移動ルール）を掛けても、ベクトル $R$（滞在比率 = ページランク）の向きが変わらない（＝比率が維持される）状態。これこそが線形代数で言うところの&lt;strong&gt;固有ベクトル&lt;/strong&gt;であり、確率論で言うところの&lt;strong&gt;定常分布&lt;/strong&gt;です。&lt;/p&gt;
+&lt;p&gt;この数式において、行列 $A$（移動ルール）を掛けても、ベクトル $R$（滞在比率 = ページランク）の向きが変わらない（＝比率が維持される）状態、これこそが線形代数で言うところの&lt;strong&gt;固有ベクトル&lt;/strong&gt;であり、確率論で言うところの&lt;strong&gt;定常分布&lt;/strong&gt;です。&lt;/p&gt;
 &lt;p&gt;アプローチは「決定論」と「確率論」で対極にありますが、どちらも &lt;strong&gt;「マルコフ連鎖の定常分布を求めている」&lt;/strong&gt; というゴールは数学的に完全に一致しています。&lt;/p&gt;
 &lt;div class="footnotes" role="doc-endnotes"&gt;
 &lt;hr&gt;
