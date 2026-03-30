@@ -1,4 +1,330 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Math | gam0022.net</title><link>https://gam0022.net/tags/math/</link><atom:link href="https://gam0022.net/tags/math/index.xml" rel="self" type="application/rss+xml"/><description>Math</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 16 Mar 2026 22:30:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/authors/gam0022_hu_5765ef871f6c1f2b.png</url><title>Math</title><link>https://gam0022.net/tags/math/</link></image><item><title>Google検索とレイトレーシング、実は同じ数理アルゴリズムで動いていた。1998年に起きた「計算機科学の奇跡」</title><link>https://gam0022.net/blog/2026/03/16/google-and-raytracing/</link><pubDate>Mon, 16 Mar 2026 22:30:00 +0900</pubDate><guid>https://gam0022.net/blog/2026/03/16/google-and-raytracing/</guid><description>&lt;h2 id="全く別物に見える2つの世界を繋ぐ鍵"&gt;全く別物に見える2つの世界を繋ぐ「鍵」&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Math | gam0022.net</title><link>https://gam0022.net/tags/math/</link><atom:link href="https://gam0022.net/tags/math/index.xml" rel="self" type="application/rss+xml"/><description>Math</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 30 Mar 2026 19:45:15 +0900</lastBuildDate><image><url>https://gam0022.net/media/authors/gam0022_hu_5765ef871f6c1f2b.png</url><title>Math</title><link>https://gam0022.net/tags/math/</link></image><item><title>Google Search and Ray Tracing Were Driven by the Same Mathematical Algorithm: A 1998 Miracle in Computer Science</title><link>https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/</link><pubDate>Mon, 30 Mar 2026 19:45:15 +0900</pubDate><guid>https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/</guid><description>&lt;h2 id="the-key-that-connects-two-worlds-that-seem-unrelated"&gt;The &amp;ldquo;Key&amp;rdquo; That Connects Two Worlds That Seem Unrelated&lt;/h2&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="The &amp;ldquo;Key&amp;rdquo; That Connects Two Worlds That Seem Unrelated"
+srcset="https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/p1_46_en_hu_86944c6582e9cea5.webp 320w, https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/p1_46_en_hu_73c530c6670cf0cc.webp 480w, https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/p1_46_en_hu_c39040447395b5f9.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/p1_46_en_hu_86944c6582e9cea5.webp"
+width="760"
+height="424"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;PageRank&lt;/strong&gt;, which determines Google search rankings, and &lt;strong&gt;ray tracing&lt;/strong&gt;, which produces realistic lighting in modern games and films, may appear to belong to completely different domains.&lt;/p&gt;
+&lt;p&gt;At first glance, they seem unrelated. But underneath, both are powered by the &lt;strong&gt;same mathematical algorithmic structure&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The problem of identifying &lt;strong&gt;important pages&lt;/strong&gt; in a vast web of cross-referenced websites and the problem of computing &lt;strong&gt;accurate radiance&lt;/strong&gt; in endlessly bouncing light within 3D space are fundamentally the same kind of problem.&lt;/p&gt;
+&lt;p&gt;Fields that look disconnected at the surface can converge into one coherent system of knowledge. Let us unpack this remarkable intellectual convergence that happened in 1998.&lt;/p&gt;
+&lt;h2 id="shared-point-1-an-endless-recursive-maze-of-chicken-or-egg"&gt;Shared Point 1: An Endless Recursive Maze of &amp;ldquo;Chicken or Egg?&amp;rdquo;&lt;/h2&gt;
+&lt;p&gt;Google&amp;rsquo;s &lt;strong&gt;PageRank&lt;/strong&gt; and the &lt;strong&gt;rendering equation&lt;/strong&gt; in computer graphics share the same hard core challenge: a &lt;strong&gt;recursive (self-referential) definition&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="Shared Point 1: An Endless Recursive Maze of &amp;ldquo;Chicken or Egg?&amp;rdquo;"
+srcset="https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/point1_v3_en_hu_53532510a5bd828.webp 320w, https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/point1_v3_en_hu_d2294912ef76ad39.webp 480w, https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/point1_v3_en_hu_100d1ff53ca1e17f.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/point1_v3_en_hu_53532510a5bd828.webp"
+width="760"
+height="424"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id="the-pagerank-dilemma"&gt;The PageRank Dilemma&lt;/h3&gt;
+&lt;p&gt;The core idea of PageRank is simple: &lt;strong&gt;&amp;ldquo;A page linked from high-rank pages should also have high rank.&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;But this contains a mathematical trap. To know the rank of page A, you need the rank of page B linking to it. To know page B&amp;rsquo;s rank, you need the ranks of pages linking to B, and so on. The definition becomes &lt;strong&gt;recursive (self-referential)&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The original PageRank paper by Larry Page and others&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt; defines it mathematically as:&lt;/p&gt;
+$$
+R(u) = c \sum_{v \in B_u} \frac{R(v)}{N_v}
+$$&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;$R(u)$&lt;/strong&gt;: PageRank value of page $u$&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;$B_u$&lt;/strong&gt;: Set of pages linking to page $u$&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;$R(v)$&lt;/strong&gt;: PageRank of each linking page $v$ (this is where recursion appears)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;$N_v$&lt;/strong&gt;: Number of outgoing links from page $v$&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;$c$&lt;/strong&gt;: Normalization factor to keep total rank stable&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To compute $R(u)$ on the left side, you need all the $R(v)$ values on the right side.&lt;/p&gt;
+&lt;p&gt;For the entire web graph, solving this massive &amp;ldquo;chicken-and-egg&amp;rdquo; system exactly is extremely expensive computationally.&lt;/p&gt;
+&lt;h3 id="the-rendering-equation-dilemma-in-cg"&gt;The Rendering Equation Dilemma in CG&lt;/h3&gt;
+&lt;p&gt;Computer graphics faces the exact same wall.&lt;/p&gt;
+&lt;p&gt;To determine brightness (radiance) at a point, you must sum light arriving from all directions. But that incoming light is itself light reflected from other points. So to compute point A, you need point B; to compute B, you need C; and the chain continues indefinitely.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;rendering equation&lt;/strong&gt;, which describes physical light transport, defines outgoing radiance $L_o$ from point $x$ as a hemisphere integral&lt;sup id="fnref:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+$$
+L_o(x, \vec{\omega}_o) = L_e(x, \vec{\omega}_o) + \int_{\Omega} f_r(x, \vec{\omega}_i, \vec{\omega}_o) L_i(x, \vec{\omega}_i) \cos \theta_i d\vec{\omega}_i
+$$&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;$L_o(x, \vec{\omega}_o)$&lt;/strong&gt;: Outgoing radiance from point $x$ toward direction $\vec{\omega}_o$&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;$L_e(x, \vec{\omega}_o)$&lt;/strong&gt;: Emitted radiance from point $x$&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;$f_r(x, \vec{\omega}_i, \vec{\omega}_o)$&lt;/strong&gt;: BRDF (reflectance function)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;$L_i(x, \vec{\omega}_i)$&lt;/strong&gt;: Incoming radiance at $x$ from direction $\vec{\omega}_i$ (this is outgoing radiance from another point, hence recursion)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;$\cos \theta_i$&lt;/strong&gt;: Incident-angle attenuation term&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Just like PageRank, the left side appears recursively inside the right side.&lt;/p&gt;
+&lt;h2 id="shared-point-2-the-breakthrough-was-rolling-the-dice"&gt;Shared Point 2: The Breakthrough Was &amp;ldquo;Rolling the Dice&amp;rdquo;&lt;/h2&gt;
+&lt;p&gt;To escape this infinite maze, both fields adopted a bold and elegant compromise: &lt;strong&gt;random trials&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="Shared Point 2: The Breakthrough Was &amp;ldquo;Rolling the Dice&amp;rdquo;"
+srcset="https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/point2_v3_en_hu_bd76ae2f8b331dd8.webp 320w, https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/point2_v3_en_hu_a0a5c326ee40b8fb.webp 480w, https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/point2_v3_en_hu_eedb9c2ba8070a16.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/point2_v3_en_hu_bd76ae2f8b331dd8.webp"
+width="760"
+height="424"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id="googles-random-surfer-model"&gt;Google&amp;rsquo;s Random Surfer Model&lt;/h3&gt;
+&lt;p&gt;Google introduced the &lt;strong&gt;random surfer&lt;/strong&gt; model: imagine a surfer randomly following links forever. Then compute the long-run &lt;strong&gt;probability of being on each page&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;For an intuitive explanation, a Japanese computer science radio episode&lt;sup id="fnref:3"&gt;&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref"&gt;3&lt;/a&gt;&lt;/sup&gt; compares PageRank to traffic flow in train networks.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Shinjuku Station analogy&lt;/strong&gt;: Shinjuku has many train lines, so statistically it almost always has people passing through. This captures the nature of an &lt;strong&gt;authoritative page&lt;/strong&gt;. High rank is not merely &amp;ldquo;many links&amp;rdquo; but &lt;strong&gt;high visitation probability&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Remote islands analogy&lt;/strong&gt;: Even if two islands (pages) are connected to each other, if no one ever comes from the outside world, traffic never grows.
+This shows why &lt;strong&gt;mutual-link manipulation&lt;/strong&gt; does not work well under the random-surfer viewpoint.&lt;/p&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="Shinjuku and remote islands analogy"
+srcset="https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/p5_53_en_hu_8ed7af4c304ef5ce.webp 320w, https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/p5_53_en_hu_864e207aaa89bb98.webp 480w, https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/p5_53_en_hu_3bd9f61d0d50fc0d.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/p5_53_en_hu_8ed7af4c304ef5ce.webp"
+width="760"
+height="424"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id="monte-carlo-in-cg"&gt;Monte Carlo in CG&lt;/h3&gt;
+&lt;p&gt;In computer graphics, this is the &lt;strong&gt;Monte Carlo method&lt;/strong&gt;. Instead of exactly integrating incoming light from every direction, we &lt;strong&gt;randomly sample&lt;/strong&gt; a subset of directions and average them to estimate the integral.&lt;/p&gt;
+&lt;p&gt;In short, Monte Carlo is a method that uses random sampling to approximate otherwise intractable calculations.&lt;/p&gt;
+&lt;p&gt;Suppose you want the average temperature of a room. Exact computation would require measuring temperature at every point and integrating, which is impossible. So you pick &lt;strong&gt;random sample points&lt;/strong&gt; and average them. As the number of samples $N$ increases, the estimate approaches the true room average.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Path tracing&lt;/strong&gt; (ray tracing based on Monte Carlo light transport simulation) was founded by James T. Kajiya&lt;sup id="fnref1:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt; and brought to practical maturity by Eric Veach&lt;sup id="fnref:4"&gt;&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref"&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;In path tracing, rather than integrating all incoming light directions at a point, we &lt;strong&gt;sample a few random directions and average the incoming radiance from those directions&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Following each sampled direction recursively (and sampling again at the next bounce) builds full light paths.&lt;/p&gt;
+&lt;h3 id="law-of-large-numbers-more-trials-closer-to-truth"&gt;Law of Large Numbers: More Trials, Closer to Truth&lt;/h3&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="Law of Large Numbers: More Trials, Closer to Truth"
+srcset="https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/law_of_large_numbers_v3_en_hu_3f671234e2cce71c.webp 320w, https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/law_of_large_numbers_v3_en_hu_7d4a229d268088cf.webp 480w, https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/law_of_large_numbers_v3_en_hu_383331a4ebfcc0ce.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/law_of_large_numbers_v3_en_hu_3f671234e2cce71c.webp"
+width="760"
+height="428"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;A natural question arises: &lt;strong&gt;If we sample only a few random directions, won&amp;rsquo;t the image become noisy and grainy?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;That intuition is correct. With only a few paths, the output looks like old TV static (comparison images in this post were rendered with the author&amp;rsquo;s renderer&lt;sup id="fnref:5"&gt;&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref"&gt;5&lt;/a&gt;&lt;/sup&gt;).&lt;/p&gt;
+&lt;p&gt;But then a powerful principle enters: the &lt;strong&gt;law of large numbers&lt;/strong&gt;. Simulate hundreds or thousands of light paths per pixel and aggregate statistically, and something remarkable happens. Like rolling dice many times, random fluctuations average out. Noise gradually fades away, and the estimate converges to the physically correct value of real light transport.&lt;/p&gt;
+&lt;p&gt;So random sampling may look rough at first, but at large scale it reconstructs surprisingly realistic scenes. This convergence from apparent randomness to physical truth is exactly the strength of Monte Carlo methods.&lt;/p&gt;
+&lt;p&gt;This approach, simulating hundreds to thousands of paths per pixel and relying on statistical convergence, is essentially the same as PageRank. In both cases, &lt;strong&gt;a recursive definition is made tractable through probabilistic sampling&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id="shared-point-3-escaping-the-infinite-maze"&gt;Shared Point 3: Escaping the Infinite Maze&lt;/h2&gt;
+&lt;p&gt;When recursion is involved, both algorithms face another common challenge: &lt;strong&gt;infinite loops (cyclic references)&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="Shared Point 3: Infinite Maze"
+srcset="https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/point3_en_hu_65e2a8cd98ed9fb8.webp 320w, https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/point3_en_hu_7d890c72423e42ca.webp 480w, https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/point3_en_hu_1aa153df97115293.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/point3_en_hu_65e2a8cd98ed9fb8.webp"
+width="760"
+height="424"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id="damping-factor-in-google"&gt;Damping Factor in Google&lt;/h3&gt;
+&lt;p&gt;If a random surfer gets trapped in closed loops or tightly interlinked clusters, they may never leave. The mathematical fix is the &lt;strong&gt;damping factor&lt;/strong&gt;.
+With a fixed probability (often about 15%), the surfer stops following current links and &lt;strong&gt;teleports&lt;/strong&gt; to a random page.
+This prevents lock-in and enables a proper global steady-state ranking.&lt;/p&gt;
+&lt;h3 id="russian-roulette-in-cg"&gt;Russian Roulette in CG&lt;/h3&gt;
+&lt;p&gt;An analogous mechanism exists in path tracing: &lt;strong&gt;Russian roulette&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;In highly reflective scenes (like mirrors facing mirrors), rays could bounce forever. Russian roulette probabilistically terminates paths to keep computation finite.&lt;/p&gt;
+&lt;p&gt;This is not a careless &amp;ldquo;just drop paths&amp;rdquo; trick. If continuation happens with probability $P$ and termination with probability $1-P$, then surviving paths are reweighted by dividing their contribution by $P$ to preserve unbiasedness.&lt;/p&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="Shared Point 3: Gambling Analogy"
+srcset="https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/p9_54_en_hu_cd68d24b4ffdbaad.webp 320w, https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/p9_54_en_hu_d0ea01f5aa2c1fa4.webp 480w, https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/p9_54_en_hu_f403084e5b35d91a.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/p9_54_en_hu_cd68d24b4ffdbaad.webp"
+width="760"
+height="424"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Think of a gambling analogy. 100 players each start with USD 1,000 in chips. Rule: &lt;strong&gt;with 1/2 probability you lose all (USD 0), with 1/2 probability you win and become USD 2,000&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Result: 50 players end at USD 0, 50 at USD 2,000. Total money is $50 \times 0 + 50 \times 2000 = 100,000$, so the average remains $100,000 \div 100 = 1,000$ per player.
+Individual outcomes split dramatically, but &lt;strong&gt;the system-wide expected energy stays exactly conserved&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The same symmetry holds in light transport. Even if 50% of paths are terminated, doubling the contribution of surviving paths preserves total expected light energy over the image.&lt;/p&gt;
+&lt;p&gt;What looks like a rough probabilistic shortcut is, in fact, mathematically precise global accounting.&lt;/p&gt;
+&lt;h2 id="shared-point-4-the-1998-miracle-and-markov-chains"&gt;Shared Point 4: The 1998 &amp;ldquo;Miracle&amp;rdquo; and Markov Chains&lt;/h2&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="Shared Point 4: The 1998 &amp;ldquo;Miracle&amp;rdquo; and Markov Chains"
+srcset="https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/p12_57_en_hu_6be2880a49256ad4.webp 320w, https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/p12_57_en_hu_8445910007c670bd.webp 480w, https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/p12_57_en_hu_39ce7b483dd9a81.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/p12_57_en_hu_6be2880a49256ad4.webp"
+width="760"
+height="424"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;What is striking is when these two fields arrived at the same mathematical destination.&lt;/p&gt;
+&lt;p&gt;In 1998, the PageRank paper by Larry Page and colleagues&lt;sup id="fnref1:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt; and Eric Veach&amp;rsquo;s seminal PhD thesis on Monte Carlo light transport&lt;sup id="fnref1:4"&gt;&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref"&gt;4&lt;/a&gt;&lt;/sup&gt; were published in the same year.&lt;/p&gt;
+&lt;p&gt;Researchers in different domains converged on the same mathematical summit: &lt;strong&gt;Markov chains&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;A Markov chain is, simply put, a process where the next state is determined probabilistically from only the current state, independent of the past.&lt;/p&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="PageRank and pixel radiance are both like a pinball machine"
+srcset="https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/pinball_machine_en_hu_5426643d71482bf7.webp 320w, https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/pinball_machine_en_hu_28c231acbf2a1d87.webp 480w, https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/pinball_machine_en_hu_a1600bf2c8e3f7f0.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/pinball_machine_en_hu_5426643d71482bf7.webp"
+width="760"
+height="428"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;For intuition, imagine a giant &lt;strong&gt;pinball machine&lt;/strong&gt;. Drop many balls from the top. At each peg, whether a ball goes left or right is probabilistic. Balls bounce randomly as they descend.&lt;/p&gt;
+&lt;p&gt;If you keep dropping millions of balls, the occupancy ratio among bottom pockets eventually stabilizes to a fixed proportion.&lt;/p&gt;
+&lt;p&gt;In mathematics, this is the &lt;strong&gt;stationary distribution&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The web link graph and light reflection in 3D scenes are both versions of this same pinball machine.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;PageRank&lt;/strong&gt;: Throw random-surfer balls into the web graph. The long-run probability of ending up at each page is the stationary distribution, i.e., its rank.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Path tracing&lt;/strong&gt;: Throw light-particle balls into the scene. Their distribution after stochastic reflections determines accurate pixel radiance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Both are the same mathematical question: &lt;strong&gt;If we let probabilistic transitions continue over a network, what distribution do we converge to?&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="at-a-glance-comparison"&gt;At-a-Glance Comparison&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Item&lt;/th&gt;
+&lt;th&gt;PageRank (Google)&lt;/th&gt;
+&lt;th&gt;Path Tracing (CG)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Target&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Importance of information on the web&lt;/td&gt;
+&lt;td&gt;Radiance of light in 3D space&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Challenge&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Recursive rank definition and cyclic references&lt;/td&gt;
+&lt;td&gt;Recursive rendering equation and infinite reflections&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Solution&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Random surfer + teleportation (damping factor)&lt;/td&gt;
+&lt;td&gt;Monte Carlo + Russian roulette&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Goal&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Estimate steady-state importance&lt;/td&gt;
+&lt;td&gt;Converge to steady-state radiance&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Essence&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Time spent by random walks = statistical importance&lt;/td&gt;
+&lt;td&gt;Randomly traced paths = statistical radiance&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="Four shared properties between the two problems"
+srcset="https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/summary_en_hu_11e907d8a140f9ed.webp 320w, https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/summary_en_hu_30133f3c93bd5001.webp 480w, https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/summary_en_hu_264ec3d5e3a9e65e.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/summary_en_hu_11e907d8a140f9ed.webp"
+width="760"
+height="424"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id="the-1998-algorithms-still-matter-in-the-ai-era"&gt;The 1998 Algorithms Still Matter in the AI Era&lt;/h2&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="The 1998 Algorithms Still Matter in the AI Era"
+srcset="https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/p13_58_en_hu_dd081996d067eff4.webp 320w, https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/p13_58_en_hu_53fc6ffe8178b2e8.webp 480w, https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/p13_58_en_hu_74fa08085eaa486c.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2026/03/30/google-and-raytracing-en/p13_58_en_hu_dd081996d067eff4.webp"
+width="760"
+height="424"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;As of 2026, AI has advanced rapidly. Google Search incorporates AI-based semantic understanding&lt;sup id="fnref:6"&gt;&lt;a href="#fn:6" class="footnote-ref" role="doc-noteref"&gt;6&lt;/a&gt;&lt;/sup&gt;, and ray tracing workflows use powerful AI denoising methods such as NVIDIA DLSS 3.5 ray reconstruction&lt;sup id="fnref:7"&gt;&lt;a href="#fn:7" class="footnote-ref" role="doc-noteref"&gt;7&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;We now live in an era where AI can infer a plausible answer from fewer samples, without waiting as long for pure law-of-large-numbers convergence.&lt;/p&gt;
+&lt;p&gt;But AI has not replaced the underlying mathematics. No matter how smart models become at interpreting context or removing noise, the definition of &amp;ldquo;ground truth&amp;rdquo; used for learning and inference still depends on these 1998-era algorithms.&lt;/p&gt;
+&lt;p&gt;What other hidden common laws might be waiting in the ocean of seemingly unrelated fields? Behind tomorrow&amp;rsquo;s new technology, another mathematical thread connecting distant domains may already be there.&lt;/p&gt;
+&lt;h2 id="addendum-does-google-actually-roll-dice-in-practice"&gt;Addendum: Does Google Actually &amp;ldquo;Roll Dice&amp;rdquo; in Practice?&lt;/h2&gt;
+&lt;p&gt;So far, we explained PageRank using the random-surfer story of random walking. Technically, an important nuance is needed.&lt;/p&gt;
+&lt;p&gt;The random-surfer model is primarily an &lt;strong&gt;interpretive model&lt;/strong&gt; that helps humans intuitively understand and justify the PageRank metric.&lt;/p&gt;
+&lt;p&gt;In production, Google does not simulate each surfer by rolling literal random dice. Instead, PageRank is typically computed deterministically as an eigenvector problem, often via iterative power methods.&lt;/p&gt;
+&lt;p&gt;In contrast, Monte Carlo sampling is used in CG path tracing because light-path combinations are effectively near-infinite and cannot be realistically flattened into one explicit matrix at web scale.&lt;/p&gt;
+&lt;h3 id="why-does-an-eigenvector-give-a-stay-probability"&gt;Why Does an Eigenvector Give a Stay Probability?&lt;/h3&gt;
+&lt;p&gt;You might wonder: &amp;ldquo;How can matrix math produce probabilities?&amp;rdquo; The key intuition is to view the matrix as &lt;strong&gt;how one step changes the distribution&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Let &lt;strong&gt;$R$&lt;/strong&gt; be a vector whose entries are the proportions of surfers currently staying on each page.
+Multiplying by a matrix simulates this transition: &lt;strong&gt;everyone moves simultaneously from current pages to next pages by following links&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The matrix &lt;strong&gt;$A$&lt;/strong&gt; is a huge square matrix over pages. In the original formulation, if page $u$ links to page $v$, then entry $A_{u,v}$ is assigned $1 / (\text{number of outgoing links from page } u)$. This value represents the transition probability from page $u$ to page $v$.&lt;/p&gt;
+&lt;p&gt;So $A$ is a full description of web-wide transition rules.&lt;/p&gt;
+&lt;p&gt;If we repeatedly multiply by this matrix (repeat transitions), the distribution eventually stops changing and reaches a stable state where another transition leaves proportions unchanged.&lt;/p&gt;
+$$R = cAR$$&lt;ul&gt;
+&lt;li&gt;$c$: normalization factor corresponding to the eigenvalue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this equation, when multiplying by matrix $A$ (transition rule) does not change the direction of vector $R$ (stay ratio/PageRank), that is exactly an &lt;strong&gt;eigenvector&lt;/strong&gt; in linear algebra and a &lt;strong&gt;stationary distribution&lt;/strong&gt; in probability theory.&lt;/p&gt;
+&lt;p&gt;One approach is deterministic, the other explicitly stochastic. But mathematically, both solve the same objective: &lt;strong&gt;finding the stationary distribution of a Markov chain&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id="addendum-2-released-the-youtube-version"&gt;Addendum 2: Released the YouTube version&lt;/h2&gt;
+&lt;div class="movie-wrap"&gt;
+&lt;iframe width="1920" height="1080" src="https://www.youtube.com/embed/QeWBZDQkBSI?si=OQnBBMFcBy2errrm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;div class="footnotes" role="doc-endnotes"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;L. Page, S. Brin, R. Motwani &amp;amp; T. Winograd (1998).
+&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref1:1" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;Kajiya, J. T. (1986).
+. SIGGRAPH &amp;lsquo;86&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref1:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:3"&gt;
+&lt;p&gt;Yuru Computer Science Radio (2022).
+&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:4"&gt;
+&lt;p&gt;Veach, E. (1998).
+&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href="#fnref1:4" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:5"&gt;
+&lt;p&gt;gam0022 (2017).
+&amp;#160;&lt;a href="#fnref:5" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:6"&gt;
+&lt;p&gt;Google.
+&amp;#160;&lt;a href="#fnref:6" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:7"&gt;
+&lt;p&gt;NVIDIA (2023).
+&amp;#160;&lt;a href="#fnref:7" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description></item><item><title>Google検索とレイトレーシング、実は同じ数理アルゴリズムで動いていた。1998年に起きた「計算機科学の奇跡」</title><link>https://gam0022.net/blog/2026/03/16/google-and-raytracing/</link><pubDate>Mon, 16 Mar 2026 22:30:00 +0900</pubDate><guid>https://gam0022.net/blog/2026/03/16/google-and-raytracing/</guid><description>&lt;h2 id="全く別物に見える2つの世界を繋ぐ鍵"&gt;全く別物に見える2つの世界を繋ぐ「鍵」&lt;/h2&gt;
 &lt;p&gt;
 &lt;figure &gt;
 &lt;div class="flex justify-center "&gt;
@@ -280,6 +606,10 @@ $$R = cAR$$&lt;ul&gt;
 &lt;/ul&gt;
 &lt;p&gt;この数式において、行列 $A$（移動ルール）を掛けても、ベクトル $R$（滞在比率 = ページランク）の向きが変わらない（＝比率が維持される）状態、これこそが線形代数で言うところの&lt;strong&gt;固有ベクトル&lt;/strong&gt;であり、確率論で言うところの&lt;strong&gt;定常分布&lt;/strong&gt;です。&lt;/p&gt;
 &lt;p&gt;アプローチは「決定論」と「確率論」で対極にありますが、どちらも &lt;strong&gt;「マルコフ連鎖の定常分布を求めている」&lt;/strong&gt; というゴールは数学的に完全に一致しています。&lt;/p&gt;
+&lt;h2 id="追記2-youtube版も公開しました"&gt;追記2: YouTube版も公開しました&lt;/h2&gt;
+&lt;div class="movie-wrap"&gt;
+&lt;iframe width="1920" height="1080" src="https://www.youtube.com/embed/7Ubhp8c-iIk?si=OQnBBMFcBy2errrm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
 &lt;div class="footnotes" role="doc-endnotes"&gt;
 &lt;hr&gt;
 &lt;ol&gt;
