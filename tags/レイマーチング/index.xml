@@ -1,4 +1,93 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>レイマーチング | gam0022.net</title><link>https://gam0022.net/tags/%E3%83%AC%E3%82%A4%E3%83%9E%E3%83%BC%E3%83%81%E3%83%B3%E3%82%B0/</link><atom:link href="https://gam0022.net/tags/%E3%83%AC%E3%82%A4%E3%83%9E%E3%83%BC%E3%83%81%E3%83%B3%E3%82%B0/index.xml" rel="self" type="application/rss+xml"/><description>レイマーチング</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 22 Jan 2026 09:30:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/authors/gam0022_hu_5765ef871f6c1f2b.png</url><title>レイマーチング</title><link>https://gam0022.net/tags/%E3%83%AC%E3%82%A4%E3%83%9E%E3%83%BC%E3%83%81%E3%83%B3%E3%82%B0/</link></image><item><title>慶應大学SFCの講義でシェーダーについて話しました</title><link>https://gam0022.net/blog/2026/01/22/sfc-lecture/</link><pubDate>Thu, 22 Jan 2026 09:30:00 +0900</pubDate><guid>https://gam0022.net/blog/2026/01/22/sfc-lecture/</guid><description>&lt;p&gt;慶應義塾大学 湘南藤沢キャンパス（SFC）の
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>レイマーチング | gam0022.net</title><link>https://gam0022.net/tags/%E3%83%AC%E3%82%A4%E3%83%9E%E3%83%BC%E3%83%81%E3%83%B3%E3%82%B0/</link><atom:link href="https://gam0022.net/tags/%E3%83%AC%E3%82%A4%E3%83%9E%E3%83%BC%E3%83%81%E3%83%B3%E3%82%B0/index.xml" rel="self" type="application/rss+xml"/><description>レイマーチング</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 26 Apr 2026 01:23:10 +0900</lastBuildDate><image><url>https://gam0022.net/media/authors/gam0022_hu_5765ef871f6c1f2b.png</url><title>レイマーチング</title><link>https://gam0022.net/tags/%E3%83%AC%E3%82%A4%E3%83%9E%E3%83%BC%E3%83%81%E3%83%B3%E3%82%B0/</link></image><item><title>draw(tokyo); #3でGLSLライブコーディングによるVJをしました</title><link>https://gam0022.net/blog/2026/04/26/draw-tokyo3/</link><pubDate>Sun, 26 Apr 2026 01:23:10 +0900</pubDate><guid>https://gam0022.net/blog/2026/04/26/draw-tokyo3/</guid><description>&lt;p&gt;2025/10/12に渋谷の
+でオーディオビジュアルイベント
+が開催されました。&lt;/p&gt;
+&lt;p&gt;
+さんのDJにVJとして出演し、前回の
+に引き続き、Sh4derJockeyを使ったGLSLライブコーディングによるVJを行いました。&lt;/p&gt;
+&lt;p&gt;本記事では、前回からの改善点と当日の振り返りを紹介します。&lt;/p&gt;
+&lt;h2 id="パフォーマンスの動画"&gt;パフォーマンスの動画&lt;/h2&gt;
+&lt;p&gt;本番時のフルバージョンの画面録画です。&lt;/p&gt;
+&lt;div class="movie-wrap"&gt;
+&lt;iframe width="1920" height="1080" src="https://www.youtube.com/embed/jBb7MJO8IgY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;観客の方が撮影してくださったライブ映像です。臨場感や会場の雰囲気が伝わってきます。&lt;/p&gt;
+&lt;div class="movie-wrap"&gt;
+&lt;iframe width="1920" height="1080" src="https://www.youtube.com/embed/_47s5B1Zdf0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;draw(tokyo); #3 at clubasia の画面録画をYouTubeにて公開しました！&lt;br&gt;&lt;br&gt;DJ &lt;a href="https://twitter.com/sadakkey?ref_src=twsrc%5Etfw"&gt;@sadakkey&lt;/a&gt; × VJ &lt;a href="https://twitter.com/gam0022?ref_src=twsrc%5Etfw"&gt;@gam0022&lt;/a&gt;&lt;br&gt;&lt;br&gt;VJは全部GLSLシェーダーです🔥&lt;br&gt;ライブコーディングと事前の作り込みのハイブリッド方式でやりました！&lt;br&gt;&lt;br&gt;FULL版はYouTubeから👇️&lt;a href="https://t.co/Vz5R4LwB3j"&gt;https://t.co/Vz5R4LwB3j&lt;/a&gt; &lt;a href="https://t.co/jdxOFOuHWH"&gt;pic.twitter.com/jdxOFOuHWH&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1977761921735774668?ref_src=twsrc%5Etfw"&gt;October 13, 2025&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;draw(tokyo); #3 at clubasia のライブ映像を公開しました！&lt;br&gt;観客撮影の動画なので、臨場感や会場の雰囲気が伝わってきます🔥&lt;br&gt;&lt;br&gt;DJ &lt;a href="https://twitter.com/sadakkey?ref_src=twsrc%5Etfw"&gt;@sadakkey&lt;/a&gt; × VJ &lt;a href="https://twitter.com/gam0022?ref_src=twsrc%5Etfw"&gt;@gam0022&lt;/a&gt;&lt;br&gt;&lt;br&gt;VJは全部GLSLシェーダーです🔥&lt;a href="https://twitter.com/hashtag/function_draw?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#function_draw&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#GLSL&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/LiveCoding?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#LiveCoding&lt;/a&gt;&lt;br&gt;&lt;br&gt;FULL版はYouTubeから👇&lt;a href="https://t.co/4v5LBpJv2f"&gt;https://t.co/4v5LBpJv2f&lt;/a&gt; &lt;a href="https://t.co/LN4jJNdiSP"&gt;pic.twitter.com/LN4jJNdiSP&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/1980949602183561574?ref_src=twsrc%5Etfw"&gt;October 22, 2025&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;h2 id="drawtokyo-2からの改善点"&gt;draw(tokyo); #2からの改善点&lt;/h2&gt;
+&lt;p&gt;システムの基本構成は
+と同様ですが、シーンやポストエフェクトを追加したほか、いくつかの改善を加えました。&lt;/p&gt;
+&lt;h3 id="midiコントローラーのレイアウト整理"&gt;MIDIコントローラーのレイアウト整理&lt;/h3&gt;
+&lt;p&gt;前回はMIDIコントローラー（
+）のボタン・スライダーの割り当てが整理しきれていない部分がありましたが、今回はカテゴリー別に整理しました。&lt;/p&gt;
+&lt;p&gt;レイアウトを整理したことで、本番中に目当てのボタンをすぐに操作できるようになりました。&lt;/p&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="MIDIコントローラー nanoKONTROL2 のボタン割り当てレイアウト図（カテゴリー単位）"
+srcset="https://gam0022.net/blog/2026/04/26/draw-tokyo3/midi-layout_hu_452fa72313fd89c9.webp 320w, https://gam0022.net/blog/2026/04/26/draw-tokyo3/midi-layout_hu_ad92de798cb3fa79.webp 480w, https://gam0022.net/blog/2026/04/26/draw-tokyo3/midi-layout_hu_e75fba1c859662dc.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2026/04/26/draw-tokyo3/midi-layout_hu_452fa72313fd89c9.webp"
+width="760"
+height="428"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;各ボタンごとの詳細は下の図のようにしました。&lt;/p&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="MIDIコントローラー nanoKONTROL2 のボタン割り当てレイアウト図（詳細）"
+srcset="https://gam0022.net/blog/2026/04/26/draw-tokyo3/midi-detail_hu_1e43a0bab1dc04ce.webp 320w, https://gam0022.net/blog/2026/04/26/draw-tokyo3/midi-detail_hu_9228cbb7916098be.webp 480w, https://gam0022.net/blog/2026/04/26/draw-tokyo3/midi-detail_hu_dceeb1ce5cea96e7.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2026/04/26/draw-tokyo3/midi-detail_hu_1e43a0bab1dc04ce.webp"
+width="760"
+height="428"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;ドロップ前の上昇音などで映像のスピードが加速していく演出については、スライダー1の「BPM調整」で手動でBPMを合わせていました。&lt;/p&gt;
+&lt;p&gt;スライダー0の点滅（ポストエフェクトのカテゴリー）とスライダー1のBPM調整（システムのカテゴリー）が並んでいるのは違和感を覚えるかもしれませんが、この2つは同時に値を上げる調整をすることが多いので、操作性向上のために意図的に隣に配置しました。&lt;/p&gt;
+&lt;h3 id="シーン切り替え時のbeat位相リセット"&gt;シーン切り替え時のbeat位相リセット&lt;/h3&gt;
+&lt;p&gt;draw(tokyo); #2の課題として、beatの位相（開始タイミング）をリセットする機能がなかったので、Sh4derJockeyのtime（時間）をリセットすることでしか音楽と映像のタイミングを合わせる手段がなく、不便でした。&lt;/p&gt;
+&lt;p&gt;Sound2Lightで音楽のBPMは自動取得していますが、位相については自動的に同期させるための仕組みは今回も実装しませんでした。&lt;/p&gt;
+&lt;p&gt;今回はシーンを切り替えると同時にbeatカウンターをリセットする仕組みを追加しました。これにより、曲の切り替わりに合わせてシーンを切り替えることによって位相を合わせることができ、音楽と映像の同期がやりやすくなりました。&lt;/p&gt;
+&lt;h3 id="wormholeなど既知bpmの楽曲への対応"&gt;WORMHOLEなど既知BPMの楽曲への対応&lt;/h3&gt;
+&lt;p&gt;今回のセットでは、さだきちさんと一緒に制作したデモシーン作品「
+」と「
+」の楽曲を使いました。&lt;/p&gt;
+&lt;p&gt;これらの楽曲はBPMが既知なため、Sound2Lightを使ったBPM自動同期を一時的に停止し、事前に決めたBPMに固定する仕組みを用意しました。&lt;/p&gt;
+&lt;p&gt;なぜかこの2曲はSound2LightのBPM検出がうまくいかないという理由もありました。&lt;/p&gt;
+&lt;p&gt;また、楽曲の特定タイミングにbeatカウンターを同期させる専用の仕組みも実装し、曲の展開や盛り上がりに合わせた演出ができるようにしました。&lt;/p&gt;
+&lt;h2 id="まとめ"&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;久しぶりにさだきちさんと一緒に活動できて、とても楽しかったです。&lt;/p&gt;
+&lt;p&gt;とくに、WORMHOLEのdraw(tokyo); #3 versionのアレンジがすごくカッコよくてテンションが上がりました。&lt;/p&gt;
+&lt;p&gt;こちらはWORMHOLEの前後だけ切り取った動画です。&lt;/p&gt;
+&lt;div class="movie-wrap"&gt;
+&lt;iframe width="1920" height="1080" src="https://www.youtube.com/embed/CLAM0C-LpOI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;会場に足を運んでくださった皆さん、クルーやスタッフの方々、そしてさだきちさん、最高のイベントをありがとうございました！&lt;/p&gt;
+&lt;h2 id="スライドによるvj解説"&gt;スライドによるVJ解説&lt;/h2&gt;
+&lt;p&gt;
+のセミナーでGLSL VJについて発表した時のスライドです。&lt;/p&gt;
+&lt;iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/86fbd7dbf7c744abb1f4e9479eabc144" title="GLSLでVJをした話" allowfullscreen="true" allow="web-share" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777"&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="xtwitterの反応"&gt;X（Twitter）の反応&lt;/h2&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;カッコよすぎる&lt;br&gt;&lt;br&gt; &lt;a href="https://twitter.com/hashtag/function_draw?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#function_draw&lt;/a&gt; &lt;a href="https://t.co/GOSSemEskG"&gt;pic.twitter.com/GOSSemEskG&lt;/a&gt;&lt;/p&gt;&amp;mdash; と り🐔 (@t0rry_) &lt;a href="https://twitter.com/t0rry_/status/1977273601373208951?ref_src=twsrc%5Etfw"&gt;October 12, 2025&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;ギュンギュン… &lt;a href="https://twitter.com/hashtag/function_draw?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#function_draw&lt;/a&gt; &lt;a href="https://t.co/IwjU30bRgj"&gt;pic.twitter.com/IwjU30bRgj&lt;/a&gt;&lt;/p&gt;&amp;mdash; sdhizumi / S.Kudo@M3 R-02b (@sdhizumi) &lt;a href="https://twitter.com/sdhizumi/status/1977275916209602690?ref_src=twsrc%5Etfw"&gt;October 12, 2025&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;&lt;a href="https://twitter.com/hashtag/function_draw?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#function_draw&lt;/a&gt; ｳｵｰ &lt;a href="https://t.co/6DHiAmMFZ1"&gt;pic.twitter.com/6DHiAmMFZ1&lt;/a&gt;&lt;/p&gt;&amp;mdash; tktk | てけてけ (@tktk_1) &lt;a href="https://twitter.com/tktk_1/status/1977276118614053139?ref_src=twsrc%5Etfw"&gt;October 12, 2025&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;&lt;a href="https://twitter.com/hashtag/function_draw?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#function_draw&lt;/a&gt;&lt;br&gt;好きなハウス流れて神 &lt;a href="https://t.co/zJmYOg2xsn"&gt;pic.twitter.com/zJmYOg2xsn&lt;/a&gt;&lt;/p&gt;&amp;mdash; Saina(さいな) (@SainaKey) &lt;a href="https://twitter.com/SainaKey/status/1977277582761771254?ref_src=twsrc%5Etfw"&gt;October 12, 2025&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;!-- ## 写真
+[![ライブ当日の様子](20251012_162735233.mp4_snapshot_00.07_[2025.10.21_21.57.46]_trim.jpg)](20251012_162735233.mp4_snapshot_00.07_[2025.10.21_21.57.46]_trim.jpg) --&gt;</description></item><item><title>慶應大学SFCの講義でシェーダーについて話しました</title><link>https://gam0022.net/blog/2026/01/22/sfc-lecture/</link><pubDate>Thu, 22 Jan 2026 09:30:00 +0900</pubDate><guid>https://gam0022.net/blog/2026/01/22/sfc-lecture/</guid><description>&lt;p&gt;慶應義塾大学 湘南藤沢キャンパス（SFC）の
 先生の講義「CGと数学」にゲストとしてお呼びいただき、シェーダーやデモシーンについてお話ししてきました。&lt;/p&gt;
 &lt;p&gt;授業で既にレイマーチングやSDF（Signed Distance Function）を扱っているとのことでしたので、今回はIFS（Iterated Function System）など、より踏み込んだシェーダーテクニックについて解説しました。&lt;/p&gt;
 &lt;p&gt;発表資料は以下からご覧いただけます。SpeakerDeck版は
