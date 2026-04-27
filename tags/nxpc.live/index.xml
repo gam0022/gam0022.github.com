@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>NxPC.Live | gam0022.net</title><link>https://gam0022.net/tags/nxpc.live/</link><atom:link href="https://gam0022.net/tags/nxpc.live/index.xml" rel="self" type="application/rss+xml"/><description>NxPC.Live</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 27 Apr 2026 22:10:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/authors/gam0022_hu_5765ef871f6c1f2b.png</url><title>NxPC.Live</title><link>https://gam0022.net/tags/nxpc.live/</link></image><item><title>NxPC.Live vol.77 NxPC.Lab × draw();でGLSLライブコーディングによるVJをしました</title><link>https://gam0022.net/blog/2026/04/27/nxpclab-x-draw/</link><pubDate>Mon, 27 Apr 2026 22:10:00 +0900</pubDate><guid>https://gam0022.net/blog/2026/04/27/nxpclab-x-draw/</guid><description>&lt;p&gt;2026/3/27に渋谷のCIRCUS TOKYOで
+が開催されました。&lt;/p&gt;
+&lt;p&gt;
+は
+の有志により運営される研究機関です。
+実験の場としてのイベントNxPC.Liveを中心に、レクチャーやワークショップ、ネットラジオなどの活動を行っています。&lt;/p&gt;
+&lt;p&gt;今回はオーディオビジュアルイベント
+とのコラボ回でした。&lt;/p&gt;
+&lt;p&gt;
+さんのDJにVJとして出演し、Sh4derJockeyを使ったGLSLライブコーディングによるVJを行いました。&lt;/p&gt;
+&lt;h2 id="パフォーマンスの動画"&gt;パフォーマンスの動画&lt;/h2&gt;
+&lt;p&gt;完全なライブコーディングではなく、事前に作り込んだシーンを織り交ぜた「ハイブリッド形式」でVJをしました。&lt;/p&gt;
+&lt;p&gt;イベント公式のフル動画（画面録画＋カメラ撮影）です。&lt;/p&gt;
+&lt;div class="movie-wrap"&gt;
+&lt;iframe width="1920" height="1080" src="https://www.youtube.com/embed/SvkKs4JJjkQ?start=8549" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;観客の方が撮影してくださったライブ映像です。臨場感や会場の雰囲気が伝わってきます。&lt;/p&gt;
+&lt;div class="movie-wrap"&gt;
+&lt;iframe width="1920" height="1080" src="https://www.youtube.com/embed/VQnYtLbs3jg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;NxPC.Lab × draw();&lt;br&gt;DJ &lt;a href="https://twitter.com/RIKUPI_vrc?ref_src=twsrc%5Etfw"&gt;@RIKUPI_vrc&lt;/a&gt; × VJ &lt;a href="https://twitter.com/gam0022?ref_src=twsrc%5Etfw"&gt;@gam0022&lt;/a&gt;&lt;br&gt;&lt;br&gt;アーカイブ映像を公開しました！&lt;br&gt;VJは全部GLSLシェーダーです🔥&lt;br&gt;&lt;br&gt;YouTubeでフルバージョンをチェックしてください👇&lt;a href="https://t.co/UTX0ewKEp7"&gt;https://t.co/UTX0ewKEp7&lt;/a&gt;&lt;a href="https://twitter.com/hashtag/function_draw?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#function_draw&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/GLSL?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#GLSL&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/LiveCoding?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#LiveCoding&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/Sh4derJockey?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#Sh4derJockey&lt;/a&gt; &lt;a href="https://t.co/qR5hlN1fmI"&gt;pic.twitter.com/qR5hlN1fmI&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/2040716075227365464?ref_src=twsrc%5Etfw"&gt;April 5, 2026&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;h2 id="システム構成と使用ソフトウェア"&gt;システム構成と使用ソフトウェア&lt;/h2&gt;
+&lt;p&gt;
+のシステム構成をベースとして、新規にシーンを追加したり、ライティング基盤のコードを整理しました。&lt;/p&gt;
+&lt;p&gt;主な使用ソフトウェアです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;GLSLライブコーディングに特化したVJソフト&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;音楽からBPMを自動検出するためのソフトウェア&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;OSCからMIDIにBPM情報を変換するための自作のnode.jsスクリプト&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="windows-11-midiアップデートへの対応"&gt;Windows 11 MIDIアップデートへの対応&lt;/h3&gt;
+&lt;p&gt;本番直前、
+により、
+が動作しなくなるトラブルに遭遇しました。&lt;/p&gt;
+&lt;p&gt;急遽、Microsoft公式の代替ソフトである
+を導入し、なんとか無事に本番を乗り切ることができました。&lt;/p&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;Basic MIDI 1.0 Loopbacksの導入手順&lt;br&gt;&lt;br&gt;Windows Update(KB5074105、KB5077181、KB5077241)でloopMIDIが使えなくなった人は参考にしてください &lt;a href="https://t.co/PShz0DYIZM"&gt;pic.twitter.com/PShz0DYIZM&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/2035420746776977550?ref_src=twsrc%5Etfw"&gt;March 21, 2026&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;h2 id="感想"&gt;感想&lt;/h2&gt;
+&lt;p&gt;RIKUPIさんとはほぼ初対面に近い形での共演かつ、事前の打ち合わせも最低限だったので本番では初めて聴く曲もありましたが、トランスというジャンルのおかげで楽しくVJができました。&lt;/p&gt;
+&lt;p&gt;初見の曲でも、盛り上がりやドロップを感じながら即興でシェーダーを書いていくのはライブコーディングならではの醍醐味だと思います。&lt;/p&gt;
+&lt;p&gt;会場に足を運んでくださった皆さん、クルーやスタッフの方々、そしてRIKUPIさん、最高のイベントをありがとうございました！&lt;/p&gt;
+&lt;h2 id="xtwitterの反応"&gt;X（Twitter）の反応&lt;/h2&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;shaderでこれ作れるのかっこよすぎる &lt;a href="https://t.co/PzJ6PZubgL"&gt;pic.twitter.com/PzJ6PZubgL&lt;/a&gt;&lt;/p&gt;&amp;mdash; Sauth (@s4uth) &lt;a href="https://twitter.com/s4uth/status/2037489524402782335?ref_src=twsrc%5Etfw"&gt;March 27, 2026&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;すごい！ &lt;a href="https://t.co/YVSfShCzn8"&gt;pic.twitter.com/YVSfShCzn8&lt;/a&gt;&lt;/p&gt;&amp;mdash; Celken (@CelkenVRC) &lt;a href="https://twitter.com/CelkenVRC/status/2037493610200154149?ref_src=twsrc%5Etfw"&gt;March 27, 2026&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;我無さんヤバすぎておもろい &lt;a href="https://t.co/bkEX4N0Aa4"&gt;pic.twitter.com/bkEX4N0Aa4&lt;/a&gt;&lt;/p&gt;&amp;mdash; Sijimi / 甲斐ひろあき (@vj_sijimi) &lt;a href="https://twitter.com/vj_sijimi/status/2037497412315689182?ref_src=twsrc%5Etfw"&gt;March 27, 2026&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;圧巻だー&lt;br&gt;ありがとうございます泣 &lt;a href="https://t.co/QChf22lFDY"&gt;pic.twitter.com/QChf22lFDY&lt;/a&gt;&lt;/p&gt;&amp;mdash; rua (@rua_alfalfa) &lt;a href="https://twitter.com/rua_alfalfa/status/2037495805184270679?ref_src=twsrc%5Etfw"&gt;March 27, 2026&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;「NxPC.lab×draw(); &lt;a href="https://twitter.com/function_draw?ref_src=twsrc%5Etfw"&gt;@function_draw&lt;/a&gt; 我夢さん &lt;a href="https://twitter.com/gam0022?ref_src=twsrc%5Etfw"&gt;@gam0022&lt;/a&gt; のVJプレイ。コレを見に来たのだった。相変わらずカッコいい。 &lt;a href="https://t.co/crEXyiWnDm"&gt;pic.twitter.com/crEXyiWnDm&lt;/a&gt;&lt;/p&gt;&amp;mdash; あらⓅ★ (@arapix) &lt;a href="https://twitter.com/arapix/status/2037507673403560339?ref_src=twsrc%5Etfw"&gt;March 27, 2026&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</description></item></channel></rss>
