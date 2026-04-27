@@ -7,6 +7,9 @@
 &lt;p&gt;本記事では、前回からの改善点と当日の振り返りを紹介します。&lt;/p&gt;
 &lt;h2 id="パフォーマンスの動画"&gt;パフォーマンスの動画&lt;/h2&gt;
 &lt;p&gt;本番時のフルバージョンの画面録画です。&lt;/p&gt;
+&lt;p&gt;完全なライブコーディングではなく、事前に作り込んだシーンを織り交ぜた「ハイブリッド形式」でVJをしました。&lt;/p&gt;
+&lt;p&gt;ライブコーディングのハイライトは2曲目（
+）です。GLSLのリアルタイムな書き換えによって、球体の単純な繰り返しから複雑なトンネルにモデリングを作り込むプロセスを実演しました。&lt;/p&gt;
 &lt;div class="movie-wrap"&gt;
 &lt;iframe width="1920" height="1080" src="https://www.youtube.com/embed/jBb7MJO8IgY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
