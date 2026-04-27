@@ -46,6 +46,52 @@
 が動作しなくなるトラブルに遭遇しました。&lt;/p&gt;
 &lt;p&gt;急遽、Microsoft公式の代替ソフトである
 を導入し、なんとか無事に本番を乗り切ることができました。&lt;/p&gt;
+&lt;p&gt;Basic MIDI 1.0 Loopbacksの導入手順です。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Windowsを開発者モードにする
+&lt;ul&gt;
+&lt;li&gt;システム &amp;gt; 詳細設定 &amp;gt; 開発者モードから&lt;/li&gt;
+&lt;li&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="Windowsを開発者モードにする"
+srcset="https://gam0022.net/blog/2026/04/27/nxpclab-x-draw/windows-develop-mode_hu_316997fd1a833845.webp 320w, https://gam0022.net/blog/2026/04/27/nxpclab-x-draw/windows-develop-mode_hu_87f203daa4b6f8fd.webp 480w, https://gam0022.net/blog/2026/04/27/nxpclab-x-draw/windows-develop-mode_hu_cea561848f5b7fc.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2026/04/27/nxpclab-x-draw/windows-develop-mode_hu_316997fd1a833845.webp"
+width="760"
+height="445"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows.MIDI.Services.SDK.Runtime.and.Tools.1.0.16-rc.3.7-x64.exe を実行&lt;/li&gt;
+&lt;li&gt;Windows.MIDI.Services.Basic.MIDI.1.0.Loopback.Preview.1.0.0-preview.1.2-x64.exe を実行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;MIDI Settingsを実行
+&lt;ul&gt;
+&lt;li&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="MIDI 1.0 Loopback Endpointsを作成"
+srcset="https://gam0022.net/blog/2026/04/27/nxpclab-x-draw/midi-loopback_hu_71ddfe1fcacaa39a.webp 320w, https://gam0022.net/blog/2026/04/27/nxpclab-x-draw/midi-loopback_hu_79775c3eb6ddb631.webp 480w, https://gam0022.net/blog/2026/04/27/nxpclab-x-draw/midi-loopback_hu_ff071102160051a6.webp 760w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2026/04/27/nxpclab-x-draw/midi-loopback_hu_71ddfe1fcacaa39a.webp"
+width="760"
+height="402"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;MIDI 1.0 Loopback Endpointsを作成&lt;/li&gt;
+&lt;li&gt;今回は設定をなるべく維持するためにLoopback Nameを &lt;code&gt;loopMIDI&lt;/code&gt; で作成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;Basic MIDI 1.0 Loopbacksの導入手順&lt;br&gt;&lt;br&gt;Windows Update(KB5074105、KB5077181、KB5077241)でloopMIDIが使えなくなった人は参考にしてください &lt;a href="https://t.co/PShz0DYIZM"&gt;pic.twitter.com/PShz0DYIZM&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://twitter.com/gam0022/status/2035420746776977550?ref_src=twsrc%5Etfw"&gt;March 21, 2026&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 &lt;h2 id="感想"&gt;感想&lt;/h2&gt;
 &lt;p&gt;RIKUPIさんとはほぼ初対面に近い形での共演かつ、事前の打ち合わせも最低限だったので本番では初めて聴く曲もありましたが、トランスというジャンルのおかげで楽しくVJができました。&lt;/p&gt;
