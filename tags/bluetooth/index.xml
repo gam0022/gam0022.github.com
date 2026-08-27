@@ -49,6 +49,18 @@
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;midi1monitor&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;一覧から&lt;code&gt;SMC-Mixer-bt&lt;/code&gt;を選び、フェーダーを動かします。&lt;code&gt;Control Change&lt;/code&gt;が表示されれば、SMC-MixerからWinMMポートまでの接続は正常です。&lt;/p&gt;
 &lt;p&gt;ポートは表示されるのに何も受信できない場合は、Sinco Connectorを再起動してから接続し直します。私の環境では、この再起動が最後の解決手順になりました。&lt;/p&gt;
+&lt;h2 id="ボタンをbindするためmidisuite-v137でnoteへ変更する"&gt;ボタンをbindするためMidiSuite V1.3.7でNoteへ変更する&lt;/h2&gt;
+&lt;p&gt;SMC-MixerをUSER／CCモードにすると、初期設定ではボタンもフェーダーと同じ&lt;code&gt;Control Change&lt;/code&gt;として送信されます。さらに、ボタンとフェーダーへ同じCC番号が割り当てられている箇所もありました。&lt;/p&gt;
+&lt;p&gt;Sh4derJockeyは&lt;code&gt;Control Change&lt;/code&gt;をスライダー入力、&lt;code&gt;Note On&lt;/code&gt;／&lt;code&gt;Note Off&lt;/code&gt;をボタン入力として扱うため、このままではボタン欄へbindできません。&lt;/p&gt;
+&lt;p&gt;そこで、
+から旧版の「MidiSuite V1.3.7」をダウンロードしました。新しいMidiSuiteではUSB接続したSMC-Mixerが認識されませんでしたが、V1.3.7では接続できました。&lt;/p&gt;
+&lt;p&gt;SMC-MixerをUSBケーブルでPCへ接続し、MidiSuite V1.3.7で各ボタンの送信形式を&lt;code&gt;CC&lt;/code&gt;から&lt;code&gt;Note&lt;/code&gt;へ変更して、本体へ保存します。NoteとCCは別種のMIDIメッセージなので、フェーダーと同じ番号を使用しても衝突しません。&lt;/p&gt;
+&lt;p&gt;変更後、ボタンを押して離すと、次のメッセージが送信されました。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;90 1c 7f Note On Channel: 1, Note: 28, Velocity: 127
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;90 1c 00 Note On Channel: 1, Note: 28, Velocity: 0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;Note On&lt;/code&gt;のVelocity 0は、MIDIでは実質的な&lt;code&gt;Note Off&lt;/code&gt;として使われる表現です。しかし、元のSh4derJockeyはこれを押下として処理していたため、解放時にも押下回数が増え、最後に離してからの時間も更新されませんでした。&lt;/p&gt;
+&lt;p&gt;そこで、Velocity 0の&lt;code&gt;Note On&lt;/code&gt;を&lt;code&gt;Note Off&lt;/code&gt;として処理するようにSh4derJockeyを修正しました。変更内容は
+で確認できます。&lt;/p&gt;
 &lt;h2 id="sh4derjockeyでbindする"&gt;Sh4derJockeyでbindする&lt;/h2&gt;
 &lt;p&gt;Sh4derJockeyでは、GUIの&lt;code&gt;bind&lt;/code&gt;ボタンを押し続けながらSMC-Mixerのフェーダーやボタンを操作し、その後にマウスボタンを離します。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;bind&lt;/code&gt;を一度クリックしてからコントローラーを操作する方式ではない点に注意が必要です。&lt;/p&gt;
@@ -64,4 +76,4 @@
 &lt;p&gt;途中で入力できなくなった場合は、Sh4derJockeyより先にSinco Connectorを再起動します。&lt;/p&gt;
 &lt;h2 id="まとめ"&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;Windows 11でM-VAVE SMC-MixerをSh4derJockeyからワイヤレス利用するには、Sinco Connectorに加えてBome BMIDI Driverが必要でした。&lt;/p&gt;
-&lt;p&gt;また、Sh4derJockeyに設定するデバイス名はデバイスマネージャーの表示名ではなく、WinMM上の&lt;code&gt;SMC-Mixer-bt&lt;/code&gt;でした。MIDIデバイス名を&lt;code&gt;config.yaml&lt;/code&gt;へ記述し、Sinco Connector、Sh4derJockeyの順に起動することで、フェーダー、ノブ、ボタンをBluetooth MIDI経由でbindできるようになりました。&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;また、Sh4derJockeyに設定するデバイス名はデバイスマネージャーの表示名ではなく、WinMM上の&lt;code&gt;SMC-Mixer-bt&lt;/code&gt;でした。MIDIデバイス名を&lt;code&gt;config.yaml&lt;/code&gt;へ記述し、Sinco Connector、Sh4derJockeyの順に起動することで、フェーダーとノブをBluetooth MIDI経由でbindできるようになりました。ボタンについては、MidiSuite V1.3.7で送信形式をNoteへ変更し、Velocity 0のNote OnをNote Offとして扱うSh4derJockeyの修正を適用することでbindできました。&lt;/p&gt;</description></item></channel></rss>
