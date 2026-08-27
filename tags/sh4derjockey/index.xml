@@ -9,7 +9,7 @@
 &lt;p&gt;Sh4derJockeyではフェーダーやノブを通常のMIDI CCとして扱いたいため、USER／CCモードを使用します。&lt;/p&gt;
 &lt;h2 id="sinco-connectorをインストールする"&gt;Sinco Connectorをインストールする&lt;/h2&gt;
 &lt;p&gt;WindowsでBLE-MIDIを利用するため、
-から「Sinco Connector」をインストールします。&lt;/p&gt;
+の「Other Software」タブから「Sinco Connector」をインストールします。&lt;/p&gt;
 &lt;p&gt;SMC-Mixerの&lt;code&gt;BT&lt;/code&gt;ボタンを長押しすると、青いランプが点滅してBluetooth接続待ちになります。Sinco Connectorを起動し、一覧から&lt;code&gt;SMC-Mixer&lt;/code&gt;を選んで接続します。&lt;/p&gt;
 &lt;p&gt;接続に成功すると、本体の青いランプが点滅から点灯に変わります。&lt;/p&gt;
 &lt;h2 id="sinco-connectorがconnectingの直後にクラッシュする問題"&gt;Sinco ConnectorがConnectingの直後にクラッシュする問題&lt;/h2&gt;
@@ -53,7 +53,7 @@
 &lt;p&gt;SMC-MixerをUSER／CCモードにすると、初期設定ではボタンもフェーダーと同じ&lt;code&gt;Control Change&lt;/code&gt;として送信されます。さらに、ボタンとフェーダーへ同じCC番号が割り当てられている箇所もありました。&lt;/p&gt;
 &lt;p&gt;Sh4derJockeyは&lt;code&gt;Control Change&lt;/code&gt;をスライダー入力、&lt;code&gt;Note On&lt;/code&gt;／&lt;code&gt;Note Off&lt;/code&gt;をボタン入力として扱うため、このままではボタン欄へbindできません。&lt;/p&gt;
 &lt;p&gt;そこで、
-から旧版の「MidiSuite V1.3.7」をダウンロードしました。新しいMidiSuiteではUSB接続したSMC-Mixerが認識されませんでしたが、V1.3.7では接続できました。&lt;/p&gt;
+の「PC Software」タブから旧版の「MidiSuite V1.3.7」をダウンロードしました。新しいMidiSuiteではUSB接続したSMC-Mixerが認識されませんでしたが、V1.3.7では接続できました。&lt;/p&gt;
 &lt;p&gt;SMC-MixerをUSBケーブルでPCへ接続し、MidiSuite V1.3.7で各ボタンの送信形式を&lt;code&gt;CC&lt;/code&gt;から&lt;code&gt;Note&lt;/code&gt;へ変更して、本体へ保存します。NoteとCCは別種のMIDIメッセージなので、フェーダーと同じ番号を使用しても衝突しません。&lt;/p&gt;
 &lt;p&gt;変更後、ボタンを押して離すと、次のメッセージが送信されました。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;90 1c 7f Note On Channel: 1, Note: 28, Velocity: 127
