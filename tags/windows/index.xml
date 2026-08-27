@@ -1,4 +1,70 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Windows | gam0022.net</title><link>https://gam0022.net/tags/windows/</link><atom:link href="https://gam0022.net/tags/windows/index.xml" rel="self" type="application/rss+xml"/><description>Windows</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 07 May 2022 20:05:08 +0900</lastBuildDate><image><url>https://gam0022.net/media/authors/gam0022_hu_ecda64da03fd4c6.webp</url><title>Windows</title><link>https://gam0022.net/tags/windows/</link></image><item><title>HugoをGitHub Pagesで公開し、2リポジトリ構成の管理を楽にする方法</title><link>https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/</link><pubDate>Sat, 07 May 2022 20:05:08 +0900</pubDate><guid>https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/</guid><description>&lt;p&gt;本サイトのホスト先をConoHa VPSからGitHub Pagesに乗り換えました。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Windows | gam0022.net</title><link>https://gam0022.net/tags/windows/</link><atom:link href="https://gam0022.net/tags/windows/index.xml" rel="self" type="application/rss+xml"/><description>Windows</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 28 Aug 2026 01:46:53 +0900</lastBuildDate><image><url>https://gam0022.net/media/authors/gam0022_hu_ecda64da03fd4c6.webp</url><title>Windows</title><link>https://gam0022.net/tags/windows/</link></image><item><title>M-VAVE SMC-MixerをSh4derJockeyでワイヤレス利用する</title><link>https://gam0022.net/blog/2026/08/28/m-vave-smc-mixer-sh4derjockey/</link><pubDate>Fri, 28 Aug 2026 01:46:53 +0900</pubDate><guid>https://gam0022.net/blog/2026/08/28/m-vave-smc-mixer-sh4derjockey/</guid><description>&lt;p&gt;M-VAVE SMC-Mixer（
+によく似た形状のワイヤレス対応のMIDIコントコーラー）をAliExpressで購入したので、Windows 11へBluetooth MIDIで接続し、
+のMIDIコントローラーとしてワイヤレスで利用できるようにしました。&lt;/p&gt;
+&lt;p&gt;Windowsでは専用のBLE-MIDI接続ソフトが必要だったほか、配布されているSinco Connectorだけでは必要なDLLが不足してクラッシュする問題にも遭遇しました。本記事では、実際に接続できた手順とトラブルシューティングをまとめます。&lt;/p&gt;
+&lt;blockquote class="twitter-tweet" data-conversation="none"&gt;&lt;p lang="ja" dir="ltr"&gt;アリエクで買ったMIDIコン（M-VAVE SMC-Mixer）が無事に届きました！&lt;br&gt;&lt;br&gt;中国から発送なのに4日で届いてすごい…&lt;br&gt;&lt;br&gt;電源つけたら光ってかっこいい✨️&lt;br&gt;&lt;br&gt;nanoKONTROL2と並べるとちょうど良さそうなサイズ感でした &lt;a href="https://t.co/8DYq8m32JH"&gt;pic.twitter.com/8DYq8m32JH&lt;/a&gt;&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://x.com/gam0022/status/2092221796804444382?ref_src=twsrc%5Etfw"&gt;August 25, 2026&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.x.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;h2 id="smc-mixerをuserccモードにする"&gt;SMC-MixerをUSER／CCモードにする&lt;/h2&gt;
+&lt;p&gt;SMC-Mixerの電源を入れ、&lt;code&gt;SHIFT&lt;/code&gt;を押しながら右側のボタンを押します。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;SHIFT&lt;/code&gt;を押している間に右側のボタンが点灯すれば、USER／CCモードです。左側が点灯する場合はDAWモードです。&lt;/p&gt;
+&lt;p&gt;Sh4derJockeyではフェーダーやノブを通常のMIDI CCとして扱いたいため、USER／CCモードを使用します。&lt;/p&gt;
+&lt;h2 id="sinco-connectorをインストールする"&gt;Sinco Connectorをインストールする&lt;/h2&gt;
+&lt;p&gt;WindowsでBLE-MIDIを利用するため、
+から「Sinco Connector」をインストールします。&lt;/p&gt;
+&lt;p&gt;SMC-Mixerの&lt;code&gt;BT&lt;/code&gt;ボタンを長押しすると、青いランプが点滅してBluetooth接続待ちになります。Sinco Connectorを起動し、一覧から&lt;code&gt;SMC-Mixer&lt;/code&gt;を選んで接続します。&lt;/p&gt;
+&lt;p&gt;接続に成功すると、本体の青いランプが点滅から点灯に変わります。&lt;/p&gt;
+&lt;h2 id="sinco-connectorがconnectingの直後にクラッシュする問題"&gt;Sinco ConnectorがConnectingの直後にクラッシュする問題&lt;/h2&gt;
+&lt;p&gt;私の環境では、Sinco Connectorで&lt;code&gt;Connecting&lt;/code&gt;と表示された直後にアプリが終了しました。Windowsのイベントログには、次の例外が記録されていました。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;BTMidiConnector.exe
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;System.DllNotFoundException
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;BMIDI.GetPortIndexByName(...)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Sinco Connectorの実行ファイルを調べると、問題のメソッドは次のDLLを呼び出していました。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;bmidilib2.dll!BMIDI_GetPortIndexByName
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;しかし、Sinco Connectorのインストーラーだけでは、&lt;code&gt;bmidilib2.dll&lt;/code&gt;とBomeのバスドライバー&lt;code&gt;bomebus.sys&lt;/code&gt;がインストールされていませんでした。&lt;/p&gt;
+&lt;p&gt;そこで、
+から「BMIDI 2.1.0.44 Stand-Alone Installer」をダウンロードし、管理者としてインストールしました。&lt;/p&gt;
+&lt;p&gt;インストール後はPCを再起動し、さらにSinco Connectorも再起動します。BMIDI Driverを導入しても、起動中のSinco Connectorには反映されません。私の環境でも、Sinco Connectorを再起動することでMIDIメッセージが転送されるようになりました。&lt;/p&gt;
+&lt;p&gt;非公式サイトからDLL単体を入手するのではなく、署名済みドライバーを含むBome公式インストーラーを利用するのが安全です。&lt;/p&gt;
+&lt;h2 id="sh4derjockeyから見えるmidiポート名を確認する"&gt;Sh4derJockeyから見えるMIDIポート名を確認する&lt;/h2&gt;
+&lt;p&gt;デバイスマネージャーでは&lt;code&gt;SMC-Mixer (Bluetooth MIDI IN)&lt;/code&gt;と表示されましたが、Sh4derJockeyが利用するWinMM上の名前は異なっていました。&lt;/p&gt;
+&lt;p&gt;Windows MIDI Servicesの&lt;code&gt;midi1enum&lt;/code&gt;で確認できます。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;midi1enum&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;私の環境では、次の入力ポートが表示されました。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;0 : Default App Loopback (A)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1 : Default App Loopback (B)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2 : SMC-Mixer-bt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;したがって、Sh4derJockeyには&lt;code&gt;SMC-Mixer-bt&lt;/code&gt;を指定します。&lt;/p&gt;
+&lt;h2 id="sh4derjockeyのconfigyamlを設定する"&gt;Sh4derJockeyのconfig.yamlを設定する&lt;/h2&gt;
+&lt;p&gt;MIDIデバイス名は&lt;code&gt;pipeline.yaml&lt;/code&gt;ではなく、プロジェクト直下の&lt;code&gt;config.yaml&lt;/code&gt;へ記述します。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;midi_devices&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="s2"&gt;&amp;#34;SMC-Mixer-bt&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;pipeline.yaml&lt;/code&gt;に&lt;code&gt;midi_devices&lt;/code&gt;を書いても、Sh4derJockeyからは読み込まれません。&lt;/p&gt;
+&lt;p&gt;診断ログを表示しながら起動する場合は、&lt;code&gt;-vv&lt;/code&gt;を付けます。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;Set-Location&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;D:\VJ\draw_tokyo3\draw_tokyo3&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;D:\VJ\sh4der-jockey\target\release\sh4der-jockey.exe&amp;#34;&lt;/span&gt; &lt;span class="n"&gt;-vv&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;接続に成功すると、次のログが表示されます。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Connecting to input port: SMC-Mixer-bt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;このバージョンのSh4derJockeyでは&lt;code&gt;RUST_LOG=info&lt;/code&gt;ではなく、&lt;code&gt;-vv&lt;/code&gt;でInfoログを有効にします。&lt;/p&gt;
+&lt;h2 id="midi入力を確認する"&gt;MIDI入力を確認する&lt;/h2&gt;
+&lt;p&gt;Sh4derJockeyでbindできない場合は、先に&lt;code&gt;midi1monitor&lt;/code&gt;でMIDI入力だけを確認できます。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;midi1monitor&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;一覧から&lt;code&gt;SMC-Mixer-bt&lt;/code&gt;を選び、フェーダーを動かします。&lt;code&gt;Control Change&lt;/code&gt;が表示されれば、SMC-MixerからWinMMポートまでの接続は正常です。&lt;/p&gt;
+&lt;p&gt;ポートは表示されるのに何も受信できない場合は、Sinco Connectorを再起動してから接続し直します。私の環境では、この再起動が最後の解決手順になりました。&lt;/p&gt;
+&lt;h2 id="sh4derjockeyでbindする"&gt;Sh4derJockeyでbindする&lt;/h2&gt;
+&lt;p&gt;Sh4derJockeyでは、GUIの&lt;code&gt;bind&lt;/code&gt;ボタンを押し続けながらSMC-Mixerのフェーダーやボタンを操作し、その後にマウスボタンを離します。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;bind&lt;/code&gt;を一度クリックしてからコントローラーを操作する方式ではない点に注意が必要です。&lt;/p&gt;
+&lt;h2 id="毎回の起動順"&gt;毎回の起動順&lt;/h2&gt;
+&lt;p&gt;最終的に、次の順番で安定して利用できました。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;SMC-Mixerの電源を入れる&lt;/li&gt;
+&lt;li&gt;USER／CCモードを確認する&lt;/li&gt;
+&lt;li&gt;Sinco Connectorを起動してSMC-Mixerへ接続する&lt;/li&gt;
+&lt;li&gt;本体の青いBTランプが点灯したことを確認する&lt;/li&gt;
+&lt;li&gt;Sh4derJockeyを起動する&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;途中で入力できなくなった場合は、Sh4derJockeyより先にSinco Connectorを再起動します。&lt;/p&gt;
+&lt;h2 id="まとめ"&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;Windows 11でM-VAVE SMC-MixerをSh4derJockeyからワイヤレス利用するには、Sinco Connectorに加えてBome BMIDI Driverが必要でした。&lt;/p&gt;
+&lt;p&gt;また、Sh4derJockeyに設定するデバイス名はデバイスマネージャーの表示名ではなく、WinMM上の&lt;code&gt;SMC-Mixer-bt&lt;/code&gt;でした。MIDIデバイス名を&lt;code&gt;config.yaml&lt;/code&gt;へ記述し、Sinco Connector、Sh4derJockeyの順に起動することで、フェーダー、ノブ、ボタンをBluetooth MIDI経由でbindできるようになりました。&lt;/p&gt;</description></item><item><title>HugoをGitHub Pagesで公開し、2リポジトリ構成の管理を楽にする方法</title><link>https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/</link><pubDate>Sat, 07 May 2022 20:05:08 +0900</pubDate><guid>https://gam0022.net/blog/2022/05/07/hugo-on-github-pages/</guid><description>&lt;p&gt;本サイトのホスト先をConoHa VPSからGitHub Pagesに乗り換えました。&lt;/p&gt;
 &lt;p&gt;実は去年の5月に乗り換えていて、1年ほど運用して方針が固まったので記事にしました。&lt;/p&gt;
 &lt;p&gt;
 &lt;figure &gt;
