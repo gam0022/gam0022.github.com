@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="900" viewBox="0 0 1600 900">
+  <title>ファイル名を変えたらEXEが大きくなる？MinimalGLとCrinklerのreuseを調べた</title>
+  <desc>Crinklerの公式アイコンと記事タイトルを配置したサムネイル。</desc>
+  <!-- Official icon: https://github.com/runestubbe/Crinkler/blob/master/source/Crinkler/icon.png -->
+  <defs>
+    <linearGradient id="background" x2="1" y2="1">
+      <stop stop-color="#111e32"/>
+      <stop offset="1" stop-color="#080e19"/>
+    </linearGradient>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="#93b3db" stroke-opacity=".055"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <image x="92" y="96" width="176" height="176" xlink:href="crinkler-icon.png"/>
+  <text x="304" y="212" font-family="Segoe UI, sans-serif" font-size="76" font-weight="600" fill="#f3f6fc">Crinkler</text>
+  <text x="1504" y="125" text-anchor="end" font-family="Consolas, monospace" font-size="28" fill="#899db8">gam0022.net</text>
+  <path d="M96 330H1504" stroke="#3c526d" stroke-width="2"/>
+  <g font-family="Meiryo, sans-serif" fill="#f3f6fc">
+    <text x="90" y="491" font-size="96" font-weight="700">ファイル名を変えたら</text>
+    <text x="90" y="619" font-size="96" font-weight="700">EXEが大きくなる？</text>
+    <text x="96" y="754" font-size="54">MinimalGLとCrinklerの<tspan fill="#00cfff">reuse</tspan>を調べた</text>
+  </g>
+</svg>
