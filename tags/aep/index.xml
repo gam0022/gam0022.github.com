@@ -1,4 +1,113 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AEP | gam0022.net</title><link>https://gam0022.net/tags/aep/</link><atom:link href="https://gam0022.net/tags/aep/index.xml" rel="self" type="application/rss+xml"/><description>AEP</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 24 Nov 2026 19:15:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/authors/gam0022_hu_ecda64da03fd4c6.webp</url><title>AEP</title><link>https://gam0022.net/tags/aep/</link></image><item><title>PC 8K Intro『LTH』の技術解説 | AEP 2026</title><link>https://gam0022.net/blog/2026/11/24/aep2026/</link><pubDate>Tue, 24 Nov 2026 19:15:00 +0900</pubDate><guid>https://gam0022.net/blog/2026/11/24/aep2026/</guid><description>&lt;p&gt;2026年9月27日に秋葉原で開催された
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AEP | gam0022.net</title><link>https://gam0022.net/tags/aep/</link><atom:link href="https://gam0022.net/tags/aep/index.xml" rel="self" type="application/rss+xml"/><description>AEP</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 27 Nov 2026 09:30:00 +0900</lastBuildDate><image><url>https://gam0022.net/media/authors/gam0022_hu_ecda64da03fd4c6.webp</url><title>AEP</title><link>https://gam0022.net/tags/aep/</link></image><item><title>AEP 2026のShaderJamと8K Intro合作に参加しました</title><link>https://gam0022.net/blog/2026/11/27/aep2026-shaderjam/</link><pubDate>Fri, 27 Nov 2026 09:30:00 +0900</pubDate><guid>https://gam0022.net/blog/2026/11/27/aep2026-shaderjam/</guid><description>&lt;p&gt;2026年9月27日に秋葉原で開催された
+に参加しました。&lt;/p&gt;
+&lt;p&gt;今回は、次の3つの形で参加しました。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;複数人でシェーダーをその場で書いて映像を作る &lt;strong&gt;「ShaderJam」&lt;/strong&gt; に参加&lt;/li&gt;
+&lt;li&gt;PC 8K Intro &lt;strong&gt;『LTH』&lt;/strong&gt; を公開&lt;/li&gt;
+&lt;li&gt;PC 8K Intro &lt;strong&gt;『AKIBA ACID EXPERIENCE 8K』&lt;/strong&gt; の合作を公開&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;「PC 8K Intro」は、わずか8KBの実行ファイルから、映像と音楽のすべてを生み出すデモ作品です。
+『LTH』については、別記事で詳しく紹介しています。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;この記事では、ShaderJamと『AKIBA ACID EXPERIENCE 8K』の合作、そしてDJ Timeの感想をまとめます。&lt;/p&gt;
+&lt;h2 id="shaderjam"&gt;ShaderJam&lt;/h2&gt;
+&lt;p&gt;ShaderJamは、複数の参加者が同時にシェーダーを書き、その場で映像を作っていくライブコーディングのイベントです。
+シェーダーは、画面に表示する色や模様などを計算するプログラムで、コードを書き換えると映像もリアルタイムに変化します。
+音楽が流れる中、参加者それぞれのGLSLコードから映像が少しずつ形になっていく過程を楽しめるのが魅力です。&lt;/p&gt;
+&lt;p&gt;今回のShaderJamには9人が参加し、1時間でそれぞれのシェーダーを制作しました。&lt;/p&gt;
+&lt;p&gt;ShaderJam中の音楽は、
+さんによるマシンライブでした。&lt;/p&gt;
+&lt;p&gt;以下は、私が当日制作したシェーダーの動画です。&lt;/p&gt;
+&lt;p&gt;AEPロゴを3D空間に配置し、折りたたんだり、2D・3D空間の両方でポリゴンごとにランダムに動かして変形させたりしました。&lt;/p&gt;
+&lt;div class="movie-wrap"&gt;
+&lt;iframe width="1920" height="1080" src="https://www.youtube.com/embed/jmyL0tUhNX0" title="AEP 2026 ShaderJamで制作したシェーダー" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;今回のShaderJamでは関数の持ち込みが認められていたので、AEPロゴの距離関数は、あらかじめ用意したものを持ち込みました。頑張って暗記して、その場で書いたわけではありません。&lt;/p&gt;
+&lt;p&gt;AEPロゴにIFSを適用して遊んでみよう、という方針だけは決めていました。ただ、事前に練習や検証はしていなかったので、予想以上にGPU負荷が高い作品になってしまいました🔥&lt;/p&gt;
+&lt;p&gt;その後、
+に移植する際に、AEPロゴのSDF（符号付き距離関数）の計算結果をBufferAにキャッシュしたところ、かなり軽量化できました。&lt;/p&gt;
+&lt;p&gt;Shadertoyに移植版を投稿すると、
+さんからコメントをいただき、さらにフォローもしていただきました。これは今年一番嬉しかったです！&lt;/p&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;iq神にShadertoy上でフォローされた！嬉しすぎる！ https://t.co/FmyMkXSwuC&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://x.com/gam0022/status/2104968512993468682?ref_src=twsrc%5Etfw"&gt;September 29, 2026&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.x.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;p&gt;参加者全員の作品と、当日使用したBonzomatic用のGLSLコードは、
+で見ることができます。&lt;/p&gt;
+&lt;p&gt;当日の様子は、以下の公式配信アーカイブでも楽しめます。&lt;/p&gt;
+&lt;div class="movie-wrap"&gt;
+&lt;iframe width="1920" height="1080" src="https://www.youtube.com/embed/Xzkzg0ffF0k?start=5288" title="AEP 2026公式配信アーカイブ：ShaderJam" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h2 id="akiba-acid-experience-8k-by-akiba-shader-squad"&gt;AKIBA ACID EXPERIENCE 8K by AKIBA SHADER SQUAD&lt;/h2&gt;
+&lt;p&gt;『AKIBA ACID EXPERIENCE 8K』は、シェーダーが好きなメンバーが集まり、「AKIBA SHADER SQUAD」として合作したPC 8K Introです。&lt;/p&gt;
+&lt;div class="movie-wrap"&gt;
+&lt;iframe width="1920" height="1080" src="https://www.youtube.com/embed/vsKvB0Z0W38" title="AKIBA ACID EXPERIENCE 8K by AKIBA SHADER SQUAD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;制作メンバーは以下の6名です。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+: Code, Graphics, Music&lt;/li&gt;
+&lt;li&gt;
+: Code, Graphics&lt;/li&gt;
+&lt;li&gt;
+: Code, Graphics&lt;/li&gt;
+&lt;li&gt;
+: Code, Graphics&lt;/li&gt;
+&lt;li&gt;
+: Code, Graphics&lt;/li&gt;
+&lt;li&gt;
+: Code, Graphics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;私は、
+を移植し、アニメーションなどを少し調整して参加しました。
+から登場するシーンです。&lt;/p&gt;
+&lt;p&gt;取りまとめ、フレームワークの実装、GLSLによる音楽、8KBに収めるための最適化などは、0b5vrさんが担当してくださいました。
+かっこいい音楽に合わせて、VJのように複数のシーンが次々と切り替わります。
+多彩なシーンが詰め込まれていて、これがわずか8KBの実行ファイルから生み出されていることに驚かされます。&lt;/p&gt;
+&lt;h2 id="dj-time"&gt;DJ Time&lt;/h2&gt;
+&lt;p&gt;DJ Timeも最高でした！&lt;/p&gt;
+&lt;p&gt;
+さんのマシンライブもめちゃくちゃ良かったです！特に、
+という音楽インターフェースがカッコよくて印象に残りました。&lt;/p&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;このシーケンサーカッコ良すぎる
+#AkibaExecutableParty https://t.co/xdtOnB4z9a&lt;/p&gt;&amp;mdash; がむ (@gam0022) &lt;a href="https://x.com/gam0022/status/2104148849245995093?ref_src=twsrc%5Etfw"&gt;September 27, 2026&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.x.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;p&gt;一緒にデモを制作したことのある
+さんと
+さんもDJとして出演していました🔥&lt;/p&gt;
+&lt;p&gt;馴染みのあるメンバーのDJを、お酒を飲みながら楽しめて最高でした🎉&lt;/p&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="flex justify-center "&gt;
+&lt;div class="w-full" &gt;
+&lt;img alt="AEP 2026のDJ Time出演者告知。foanaさん、kazpulseさん、さだきちさんの紹介"
+srcset="https://gam0022.net/blog/2026/11/27/aep2026-shaderjam/aep2026-dj-lineup_hu_17ad4bb25f8aec5.webp 320w, https://gam0022.net/blog/2026/11/27/aep2026-shaderjam/aep2026-dj-lineup_hu_add1c31298941c6c.webp 480w, https://gam0022.net/blog/2026/11/27/aep2026-shaderjam/aep2026-dj-lineup_hu_4a525d4ee8d8a2c1.webp 730w"
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
+src="https://gam0022.net/blog/2026/11/27/aep2026-shaderjam/aep2026-dj-lineup_hu_17ad4bb25f8aec5.webp"
+width="730"
+height="760"
+loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;出典：
+&lt;/p&gt;
+&lt;h2 id="まとめ"&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;今年はSESSIONSの開催がなかったので、規模は小さくても、実際に集まって作品を楽しめるAEPのようなデモパーティーがあって嬉しかったです。&lt;/p&gt;
+&lt;p&gt;順位を競うコンペティションではなかったこともあり、気負わずに参加できました。&lt;/p&gt;
+&lt;p&gt;ShaderJamでライブコーディングをしたり、PC 8K Introを2作品も提出したり、DJを楽しんだりと、とても充実した一日になりました。&lt;/p&gt;
+&lt;p&gt;みんなで作品を楽しんでいると、「また何か作りたい！」という気持ちになり、制作のモチベーションも上がりました。&lt;/p&gt;
+&lt;p&gt;AEPを開催してくださったSainaさんをはじめ、運営の皆さん、ありがとうございました！&lt;/p&gt;</description></item><item><title>PC 8K Intro『LTH』の技術解説 | AEP 2026</title><link>https://gam0022.net/blog/2026/11/24/aep2026/</link><pubDate>Tue, 24 Nov 2026 19:15:00 +0900</pubDate><guid>https://gam0022.net/blog/2026/11/24/aep2026/</guid><description>&lt;p&gt;2026年9月27日に秋葉原で開催された
 で、『LTH』というPC 8K Introを公開しました。&lt;/p&gt;
 &lt;p&gt;この記事では、LTCによるエリアライトを中心に、描画の構成、音楽との同期、8KBに収めるための工夫について紹介します。&lt;/p&gt;
 &lt;p&gt;2人チームで制作を行い、映像とプログラムは私（
@@ -24,8 +133,18 @@ Windowsの実行ファイル（.exe）の中に、映像と音楽を生成する
 &lt;/li&gt;
 &lt;li&gt;
 &lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;※容量削減のためCrinklerで圧縮しており、ウイルス対策ソフトに誤検知される場合がありますが、安全です&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- [![発光パネルと中央のオブジェクト。床には発光模様が映り込む](ss_v2.png)](ss_v2.png) --&gt;
+&lt;p&gt;AEP全体の感想は別の記事にまとめました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id="minimalglのsointu対応"&gt;MinimalGLのSointu対応&lt;/h2&gt;
 &lt;p&gt;制作には、
 さんが開発した

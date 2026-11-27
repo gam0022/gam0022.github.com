@@ -24,8 +24,18 @@ Windowsの実行ファイル（.exe）の中に、映像と音楽を生成する
 &lt;/li&gt;
 &lt;li&gt;
 &lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;※容量削減のためCrinklerで圧縮しており、ウイルス対策ソフトに誤検知される場合がありますが、安全です&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- [![発光パネルと中央のオブジェクト。床には発光模様が映り込む](ss_v2.png)](ss_v2.png) --&gt;
+&lt;p&gt;AEP全体の感想は別の記事にまとめました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id="minimalglのsointu対応"&gt;MinimalGLのSointu対応&lt;/h2&gt;
 &lt;p&gt;制作には、
 さんが開発した
